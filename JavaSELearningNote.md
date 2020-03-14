@@ -13,10 +13,9 @@
 
 ## 开发环境环境的安装与设置
 ### Eclipse
-
-
+   * Eclipse的安装与设置参见：[]()<br>
 ### IntelliJ IDEA
-
+   * Eclipse的安装与设置参见：[]()<br>
 ### java（自定义）
 ### 三种包管理工具
    * ant
