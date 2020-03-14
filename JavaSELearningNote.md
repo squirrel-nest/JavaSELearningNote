@@ -19,8 +19,14 @@
            >Ant is extremely flexible and does not impose coding conventions or directory layouts to the Java projects which adopt it as a build tool.
            >
            >Software development projects looking for a solution combining build tool and dependency management can use Ant in combination with Apache Ivy.
-      + [Welcome to Apache Maven](http://maven.apache.org/)<br>
-      + [Gradle Build Tool](https://gradle.org/)<br>
+   * Apache Maven
+      + 网址：[Welcome to Apache Maven](http://maven.apache.org/)<br>
+         - >Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+           >
+           >If you think that Maven could help your project, you can find out more information in the "About Maven" section of the navigation: this includes an in-depth description of what Maven is and a list of some of its main features.
+   * Gradle
+      + 网址：[Gradle Build Tool](https://gradle.org/)<br>
+         - >Gradle is an open-source build automation tool focused on flexibility and performance. Gradle build scripts are written using a Groovy or Kotlin DSL. Read about Gradle features to learn what is possible with Gradle.
 ## maven项目创建
 
 
