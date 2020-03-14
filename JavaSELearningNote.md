@@ -8,7 +8,15 @@
      + Preparation for Java Programming Language Certification
    * Creating Graphical User Interfaces
      + 都不学
-## eclipse开发环境
+
+
+
+## 开发环境环境的安装与设置
+### Eclipse
+
+
+### IntelliJ IDEA
+
 ### java（自定义）
 ### 三种包管理工具
    * ant
