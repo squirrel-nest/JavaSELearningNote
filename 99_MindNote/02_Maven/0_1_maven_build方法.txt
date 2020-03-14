@@ -1,0 +1,217 @@
+export PATH=/usr/local/apache-maven-3.0.4/bin:$PATH
+不能用小写  path=/usr/local/apache-maven-3.0.4/bin
+path=C:\cygwin\usr\local\apache-maven-3.0.4\bin
+
+在 /usr/local/hadoop-2.0.0-alpha-src 目录下执行：
+mvn clean install -DskipTests
+
+pachage
+mvn clean package -Pdist -DskipTests -rf :hadoop-hdfs-httpfs -X
+
+
+
+错误后 执行：
+To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+
+
+$ cd hadoop-mapreduce-project
+$ mvn clean install assembly:assembly -Pnative
+
+$ cd hadoop-common-project
+$ mvn clean install assembly:assembly -Pnative
+
+$ cd hadoop-hdfs-project
+$ mvn clean install assembly:assembly -Pnative
+
+
+ant
+ant -autoproxy
+ant -buildfile test.xml
+
+cd D:\TDDOWNLOAD\thrift-0.8.0\thrift-0.8.0\lib\java
+
+
+
+ http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+
+C:\cygwin\root\usr\local\apache-maven-3.0.4\conf
+
+http://creationw.bokee.com/3954057.html
+Maven代理设置
+
+如：
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#     Proxy Setting --add by Creation
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+maven.proxy.host=202.189.126.86
+maven.proxy.port=3128
+
+
+
+
+
+
+
+
+
+具体参考http://www-128.ibm.com/developerworks/cn/java/j-maven/
+
+
+
+
+表 3. 用于远程资源库和本地资源库的特性
+
+maven.repo.remote  用以逗号分隔的 URL 列表指定远程资源库；缺省情况下使用 http://www.ibiblio.org/maven。 
+maven.proxy.host 、 maven.proxy.port 、 maven.proxy.username 和 maven.proxy.password  如果位于防火墙后面并且需要代理认证才能访问因特网，这些设置将派上用场。 
+maven.repo.local  指定已下载的相关资源的高速缓存位置，缺省值为 ${MAVEN_HOME}/repository 。在 UNIX 环境中，为了与多个团队共享资源库目录，可以为开发人员创建一个特殊的组，然后给予这个组对资源库目录的读／写访问权。  
+
+
+ Maven 中的 Ant 任务
+
+Maven 中的 goal 可在其定义中包含任何有效的 Ant 任务，这一点有助于您快速掌握 Maven 以及保护您的 Ant 投入。
+ 
+ 
+
+
+附：building.txt
+
+uild instructions for Hadoop
+
+----------------------------------------------------------------------------------
+Requirements:
+
+* Unix System
+* JDK 1.6
+* Maven 3.0
+* Forrest 0.8 (if generating docs)
+* Findbugs 1.3.9 (if running findbugs)
+* ProtocolBuffer 2.4.1+ (for MapReduce and HDFS)
+* Autotools (if compiling native code)
+* Internet connection for first build (to fetch all Maven and Hadoop dependencies)
+
+----------------------------------------------------------------------------------
+Maven main modules:
+
+  hadoop                            (Main Hadoop project)
+         - hadoop-project           (Parent POM for all Hadoop Maven modules.             )
+                                    (All plugins & dependencies versions are defined here.)
+         - hadoop-project-dist      (Parent POM for modules that generate distributions.)
+         - hadoop-annotations       (Generates the Hadoop doclet used to generated the Javadocs)
+         - hadoop-assemblies        (Maven assemblies used by the different modules)
+         - hadoop-common-project    (Hadoop Common)
+         - hadoop-hdfs-project      (Hadoop HDFS)
+         - hadoop-mapreduce-project (Hadoop MapReduce)
+         - hadoop-tools             (Hadoop tools like Streaming, Distcp, etc.)
+         - hadoop-dist              (Hadoop distribution assembler)
+
+----------------------------------------------------------------------------------
+Where to run Maven from?
+
+  It can be run from any module. The only catch is that if not run from utrunk
+  all modules that are not part of the build run must be installed in the local
+  Maven cache or available in a Maven repository.
+
+----------------------------------------------------------------------------------
+Maven build goals:
+
+ * Clean                     : mvn clean
+ * Compile                   : mvn compile [-Pnative]
+ * Run tests                 : mvn test [-Pnative]
+ * Create JAR                : mvn package
+ * Run findbugs              : mvn compile findbugs:findbugs
+ * Run checkstyle            : mvn compile checkstyle:checkstyle
+ * Install JAR in M2 cache   : mvn install
+ * Deploy JAR to Maven repo  : mvn deploy
+ * Run clover                : mvn test -Pclover [-DcloverLicenseLocation=${user.name}/.clover.license]
+ * Run Rat                   : mvn apache-rat:check
+ * Build javadocs            : mvn javadoc:javadoc
+ * Build distribution        : mvn package [-Pdist][-Pdocs][-Psrc][-Pnative][-Dtar]
+ * Change Hadoop version     : mvn versions:set -DnewVersion=NEWVERSION
+
+ Build options:
+
+  * Use -Pnative to compile/bundle native code
+  * Use -Dsnappy.prefix=(/usr/local) & -Dbundle.snappy=(false) to compile
+    Snappy JNI bindings and to bundle Snappy SO files
+  * Use -Pdocs to generate & bundle the documentation in the distribution (using -Pdist)
+  * Use -Psrc to create a project source TAR.GZ
+  * Use -Dtar to create a TAR with the distribution (using -Pdist)
+
+   Tests options:
+
+  * Use -DskipTests to skip tests when running the following Maven goals:
+    'package',  'install', 'deploy' or 'verify'
+  * -Dtest=<TESTCLASSNAME>,<TESTCLASSNAME#METHODNAME>,....
+  * -Dtest.exclude=<TESTCLASSNAME>
+  * -Dtest.exclude.pattern=**/<TESTCLASSNAME1>.java,**/<TESTCLASSNAME2>.java
+
+----------------------------------------------------------------------------------
+Building distributions:
+
+Create binary distribution without native code and without documentation:
+
+  $ mvn package -Pdist -DskipTests -Dtar
+
+Create binary distribution with native code and with documentation:
+
+  $ mvn package -Pdist,native,docs -DskipTests -Dtar
+
+Create source distribution:
+
+  $ mvn package -Psrc -DskipTests
+
+Create source and binary distributions with native code and documentation:
+
+  $ mvn package -Pdist,native,docs,src -DskipTests -Dtar
+
+Create a local staging version of the website (in /tmp/hadoop-site)
+
+  $ mvn clean site; mvn site:stage -DstagingDirectory=/tmp/hadoop-site
+
+----------------------------------------------------------------------------------
+--
+http://mojo.codehaus.org/exec-maven-plugin/usage.html
+
+
+ mvn exec:exec -Dexec.executable="maven" -Dexec.args="-X myproject:dist"
+mvn install:install-file -Dfile=tools.jar  -DgroupId=com.sun -DartifactId=tools -Dversion=1.6.0 -DgeneratePom=true  -Dpackaging=jar
+
+mvn install:install-file -Dfile=%_jar% -DgroupId=%_gid% -DartifactId=%_aid% -Dversion=%_ver% -Dpackaging=%_pkg%
+
+mvn install:install-file -Dfile=log4j-1.2.17.jar -DgroupId=log4j -DartifactId=log4j -Dversion=1.2.17 -Dpackaging=jar
+
+
+
+          <execution>
+            <id>generate-version</id>
+            <phase>generate-sources</phase>
+            <configuration>
+              <executable>C:\cygwin\root\usr\local\hadoop-2.0.0-alpha-src\hadoop-mapreduce-project\hadoop-yarn\hadoop-yarn-common\scripts\saveVersion.bat</executable>
+              <arguments>
+                <argument>${project.version}</argument>
+                <argument>/usr/local/hadoop-2.0.0-alpha-src/hadoop-mapreduce-project/hadoop-yarn/hadoop-yarn-common/target</argument>
+              </arguments>
+            </configuration>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+          </execution>
+
+
+sh /usr/local/hadoop-2.0.0-alpha-src/hadoop-mapreduce-project/hadoop-yarn/hadoop-yarn-common/scripts/saveVersion.sh %1 %2
+
+
+Failed to execute goal org.apache.maven.plugins:maven-antrun-plugin:1.6:run (create-testdirs) on project hadoop-yarn-common: Error executing ant tasks: C:\cygwin\root\usr\local\hadoop-2.0.0-alpha-src\hadoop-mapreduce-project\hadoop-yarn\hadoop-yarn-common\target\antrun\build-main.xml (????????) -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+
+

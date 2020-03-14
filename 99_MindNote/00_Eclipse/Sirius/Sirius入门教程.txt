@@ -1,0 +1,38 @@
+Sirius入门教程
+http://blog.csdn.net/zhangyangjixu/article/details/51123311
+
+
+
+What is Sirius？
+
+先来看官网的介绍： 
+Sirius is an Eclipse project which allows you to easily create your own graphical modeling workbench by leveraging the Eclipse Modeling technologies, including EMF and GMF.
+
+Sirius has been created by Obeo and Thales to provide a generic workbench for model-based architecture engineering that could be easily tailored to fit specific needs.
+
+Based on a viewpoint approach, Sirius makes it possible to equip teams who have to deal with complex architectures on specific domains. 
+由此我们可以得到几个信息： 
+第一：Sirius是Eclipse Project，也可以说是基于Eclipse插件的一个框架； 
+第二：Sirius和EMF和GMF密不可分，EMF作为一个Eclipse模型框架，而且可以自动生成代码，应用很广泛。 
+那么Sirius到底是什么？ 
+我加入的技术群里曾经有个人说过GMF=GEF+EMF，Sirius相当于对于GMF又抽象了一层，建好模型之后，只需要通过很简单的一些配置就可以生成一个图形编辑器，非常强大。 
+Sirius Overview 如下图所示： 
+这里写图片描述
+
+What Can You Do with Sirius?
+
+先来看一下官方说的： 
+Discover concrete examples of modeling tools created with Sirius for various use-cases: Systems Engineering, Software Development, Business Configuration, etc. 
+考虑到Sirius的主要作用-画图，所以我认为Sirius应用开发主要集中在一下几个方面，通过几个例子予以说明： 
+1. UML Designer是Sirius应用最成功的一个例子，非常强大。由此可见Sirisu可以用来开发一些应用软件，偏IDE 方向。 
+2. Arduino Designer可以通过拖拽生成一些嵌入式应用程序，由此可见，在嵌入式领域，可以开发出一个基于MCU的应用程序的开发工具。 
+3. 报表工具 
+4. DSL（领域特定语言）编辑器。 
+工作原理图如下： 
+这里写图片描述
+最后，附上官方的入门教程： 
+Starter Tutorial：https://wiki.eclipse.org/Sirius/Tutorials/StarterTutorial 
+Advanced Tutorial：https://wiki.eclipse.org/Sirius/Tutorials/AdvancedTutorial 
+Compartments Tutorial：https://wiki.eclipse.org/Sirius/Tutorials/CompartmentsTutorial
+
+注意：本人也是最近刚研究Sirius，由于Sirius的资料及其匮乏，所以打算把本人的学习过程记录下来，如果文中有错误的地方，欢迎指正。

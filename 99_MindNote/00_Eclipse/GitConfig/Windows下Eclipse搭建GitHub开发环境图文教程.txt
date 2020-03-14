@@ -1,0 +1,6 @@
+http://www.linuxidc.com/Linux/2013-06/85372p3.htm
+
+Windows下Eclipse搭建GitHub开发环境图文教程
+
+
+http://www.eclipse.org/egit/download/

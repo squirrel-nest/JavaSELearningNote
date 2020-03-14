@@ -1,0 +1,125 @@
+1.解压目录
+2.修改环境变量MAVEN_HOME:
+	E:\Softwares\Apache\Maven\apache-maven-3.5.0
+3.修改Path(用变量，不用修改)
+C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\NetSarang;C:\app\Administrator\product\11.2.0\dbhome_1\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;%JAVA_HOME%\bin;%MAVEN_HOME%\bin;%MYSQL_HOME%\bin;C:\Program Files (x86)\MySQL\MySQL Utilities\;%ANT_HOME%\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Calibre2\
+
+
+
+---------------------------------------------------------------------------------
+Plugin execution not covered by lifecycle configuration: org.jvnet.jax-ws-co
+
+M2E plugin execution not covered 解决
+
+http://wiki.eclipse.org/M2E_plugin_execution_not_covered
+
+
+解决m2eclipse插件引起的pom.xml校验错误 
+http://www.blogjava.net/diggbag/articles/375156.html
+
+
+1.pom.xml文件报Plugin execution not covered by lifecycle configuration: org.apache.maven.plugins:maven-resources-plugin:2.2:resources (execution: default-resources, phase: process-resources) pom.xml /testMaven-common line 3 Maven Project Build Lifecycle Mapping Problem
+
+2.导致此错误是m2eclipse插件0.12及之前的版本在Eclipse 内执行了一系列的生命周期引起冲突导致的，如果你的maven报此类错误，而又用到了maven-resources-plugin这个插件，那么请按你的项目pom.xml中加上
+
+<plugin>
+      <groupId>org.eclipse.m2e</groupId>
+      <artifactId>lifecycle-mapping</artifactId>
+      <version>1.0.0</version>
+      <configuration>
+        <lifecycleMappingMetadata>
+          <pluginExecutions>
+            <pluginExecution>
+              <pluginExecutionFilter>
+                <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-resources-plugin</artifactId>
+                <versionRange>[1.2,)</versionRange>
+                <goals>
+                <goal>resources</goal>
+                 <goal>testResources</goal>
+                </goals>
+              </pluginExecutionFilter>
+              <action>
+                <ignore />
+              </action>
+            </pluginExecution>
+          </pluginExecutions>
+        </lifecycleMappingMetadata>
+      </configuration>
+    </plugin>
+
+解决冲突，具体原因参看http://wiki.eclipse.org/M2E_plugin_execution_not_covered
+
+
+问题处理：
+
+Java. Warning - Build path specifies execution environment J2SE-1.4
+
+http://stackoverflow.com/questions/3138384/java-warning-build-path-specifies-execution-environment-j2se-1-4
+
+Whether you're using the maven eclipse plugin or m2eclipse, Eclipse's project configuration is derived from the POM, so you need to configure the maven compiler plugin for 1.6 (it defaults to 1.4). Add the following to your project's pom.xml, save, then go to your Eclipse project Properties > Maven > Update Project Configuration:
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>          
+        <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+        </configuration>
+    </plugin>
+</plugins>
+
+
+
+错误处理：
+	        <plugin>
+	          <groupId>org.apache.maven.plugins</groupId>
+	          <artifactId>maven-compiler-plugin</artifactId>
+	          <version>3.5.1</version>
+	          <configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+	          </configuration>
+	        </plugin>
+
+其中：<version>3.1</version> --> <version>3.5.1</version>
+导致下面错误。
+
+Multiple annotations found at this line:
+	- CoreException: Could not get the value for parameter compilerId for plugin execution 
+	 default-compile: PluginResolutionException: Plugin org.apache.maven.plugins:maven-compiler-
+	 plugin:3.5.1 or one of its dependencies could not be resolved: The following artifacts could not 
+	 be resolved: commons-io:commons-io:jar:2.4, org.codehaus.plexus:plexus-compiler-api:jar:2.7, 
+	 org.codehaus.plexus:plexus-compiler-manager:jar:2.7, org.codehaus.plexus:plexus-compiler-
+	 javac:jar:2.7: Failure to transfer commons-io:commons-io:jar:2.4 from https://
+	 repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be 
+	 reattempted until the update interval of central has elapsed or updates are forced. Original 
+	 error: Could not transfer artifact commons-io:commons-io:jar:2.4 from/to central (https://
+	 repo.maven.apache.org/maven2): The operation was cancelled.
+	- Plugin execution not covered by lifecycle configuration: 
+	 org.apache.maven.plugins:maven-compiler-plugin:3.5.1:compile (execution: default-compile, 
+	 phase: compile)
+	- Plugin execution not covered by lifecycle configuration: 
+	 org.apache.maven.plugins:maven-compiler-plugin:3.5.1:testCompile (execution: default-
+	 testCompile, phase: test-compile)
+	- CoreException: Could not get the value for parameter compilerId for plugin execution 
+	 default-testCompile: PluginResolutionException: Plugin org.apache.maven.plugins:maven-
+	 compiler-plugin:3.5.1 or one of its dependencies could not be resolved: The following artifacts 
+	 could not be resolved: commons-io:commons-io:jar:2.4, org.codehaus.plexus:plexus-compiler-
+	 api:jar:2.7, org.codehaus.plexus:plexus-compiler-manager:jar:2.7, org.codehaus.plexus:plexus-
+	 compiler-javac:jar:2.7: Failure to transfer commons-io:commons-io:jar:2.4 from https://
+	 repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be 
+	 reattempted until the update interval of central has elapsed or updates are forced. Original 
+	 error: Could not transfer artifact commons-io:commons-io:jar:2.4 from/to central (https://
+	 repo.maven.apache.org/maven2): The operation was cancelled.
+
+
+解决方法如下:
+http://www.51testing.com/html/18/631118-862473.html
+
+
+It is not a unique issue, happens every now and then (sometimes due to a slow connection and sometimes due to proxy servers now allowing to download)
+
+You can get rid of this by either of the following ways:
+
+1) Force Update:Right Click on the Project in Eclipse -> Maven -> Update Project On this screen select the check box Force Update for Snapshots/Releases

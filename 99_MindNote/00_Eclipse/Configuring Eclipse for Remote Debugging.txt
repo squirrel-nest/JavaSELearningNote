@@ -1,0 +1,3 @@
+http://oreilly.com/pub/a/java/archive/eclipse-jboss-remote-debug.html?page=7
+
+Configuring Eclipse for Remote Debugging

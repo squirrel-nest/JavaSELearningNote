@@ -1,0 +1,7 @@
+http://www.vogella.com/tutorials/EclipseDebugging/article.html
+
+Java Debugging with Eclipse - Tutorial
+
+
+Table of Contents
+1. Overview1.1. What is debugging?1.2. Debugging support in Eclipse2. Prerequisites3. Debugging in Eclipse3.1. Setting Breakpoints3.2. Starting the Debugger3.3. Controlling the program execution3.4. Breakpoints view and deactivating breakpoints3.5. Evaluating variables in the debugger3.6. Changing variable assignments in the debugger3.7. Controlling the display of the variables with Detail Formatter4. Advanced Debugging4.1. Breakpoint properties4.2. Watchpoint4.3. Exception breakpoints4.4. Method breakpoint4.5. Breakpoints for loading classes4.6. Step Filter4.7. Hit Count4.8. Remote debugging4.9. Drop to frame5. Exercise: Create Project for debugging5.1. Create Project5.2. Debugging6. Support free vogella tutorials6.1. Thank you6.2. Questions and Discussion7. Links and Literature7.1. Source Code7.2. Debugging Links7.3. vogella Resources

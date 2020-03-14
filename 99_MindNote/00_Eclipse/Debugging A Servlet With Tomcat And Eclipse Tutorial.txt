@@ -1,0 +1,9 @@
+http://www.wikijava.org/wiki/Debugging_a_servlet_with_tomcat_and_Eclipse_tutorial
+
+Debugging A Servlet With Tomcat And Eclipse Tutorial
+
+http://eclipse.dzone.com/tips/launching-and-debugging-tomcat
+Launching and Debugging Tomcat in Eclipse
+
+https://netbeans.org/kb/docs/websvc/client.html
+Developing JAX-WS Web Service Clients
