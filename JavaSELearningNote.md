@@ -14,3 +14,12 @@
       + [Welcome to Apache Maven](http://maven.apache.org/)<br>
       + [Gradle Build Tool](https://gradle.org/)<br>
 ## maven项目创建
+
+
+## 暂时不学的部分
+   * Trails Covering the Basics
+     + Deployment - 待后面学完，再回头学
+     + Preparation for Java Programming Language Certification
+   * Creating Graphical User Interfaces
+     + 都不学
+
