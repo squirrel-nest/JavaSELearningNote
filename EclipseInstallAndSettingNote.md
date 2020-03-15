@@ -23,4 +23,7 @@
             a. 打开Eclipse，点击导航栏的"Window"-->"Preferences"-->"Ant", 点击：Add Ant Home
             b. set ANT_HOME=E:\Softwares\Apache\Ant\apache-ant-x.x.x
             c. 打开Ant项目 --> 参考：3.Eclipse_升级_项目导入.txt
-            
+      2. Maven plugin
+         + 步骤
+	    a. 网址
+	       - http://maven.apache.org/  --> https://maven.apache.org/ide.html --> http://www.eclipse.org/m2e/ --> 不知是否还是这样。。年代久远了
