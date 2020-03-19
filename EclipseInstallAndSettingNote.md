@@ -27,3 +27,6 @@
          + 步骤
 	    a. 网址
 	       - http://maven.apache.org/  --> https://maven.apache.org/ide.html --> http://www.eclipse.org/m2e/ --> 不知是否还是这样。。年代久远了
+   * Eclipse 与 Git 集成
+      + 参考
+         - [Eclipse Git Tutorial](https://www.vogella.com/tutorials/EclipseGit/article.html)<br>
