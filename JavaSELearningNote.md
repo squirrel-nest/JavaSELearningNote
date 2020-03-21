@@ -43,6 +43,9 @@
      + Preparation for Java Programming Language Certification
    * Creating Graphical User Interfaces
      + 都不学
+ ## 学习习惯
+   * JAVA 与 Kotlin 的对应关系
+     + [Kotlin Learning Note](https://github.com/squirrel-nest/KotlinLearningNote/blob/master/KotlinLearningNote.md)
  ## 学习备忘
    * 远程开发：后续学习
    * tutorial放到tomcat服务器上
