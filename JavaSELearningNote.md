@@ -43,5 +43,6 @@
      + Preparation for Java Programming Language Certification
    * Creating Graphical User Interfaces
      + 都不学
-   * 
+ ## 学习备忘
+   * 远程开发：后续学习
 
