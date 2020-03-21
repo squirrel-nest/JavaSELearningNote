@@ -44,6 +44,7 @@
    * Creating Graphical User Interfaces
      + 都不学
  ## 学习备忘
-   * 远程开发：后续学习* tutorial放到tomcat服务器上
+   * 远程开发：后续学习
+   * tutorial放到tomcat服务器上
    
 
