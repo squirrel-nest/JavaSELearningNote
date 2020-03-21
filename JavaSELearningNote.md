@@ -44,11 +44,12 @@
    * Creating Graphical User Interfaces
      + 都不学
  ## 学习习惯
-   * JAVA 与 Kotlin 的对应关系
-     + [Kotlin Learning Note](https://github.com/squirrel-nest/KotlinLearningNote/blob/master/KotlinLearningNote.md)
+   * 
+     
  ## 学习备忘
    * 远程开发：后续学习
    * tutorial放到tomcat服务器上
    * JAVA document 集成的使用
-   
+   * JAVA 与 Kotlin 的对照学习 - 养成习惯，这样学习Java的同时就能熟悉Kotlin的语法。。。
+     + 笔记参考：+ [Kotlin Learning Note.md](https://github.com/squirrel-nest/KotlinLearningNote/blob/master/KotlinLearningNote.md)
 
