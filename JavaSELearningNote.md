@@ -37,8 +37,11 @@
 
 ## 暂时不学的部分
    * Trails Covering the Basics
+     + Getting Start
+       ["Hello World!" for the NetBeans IDE](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/netbeans.html)
      + Deployment - 待后面学完，再回头学
      + Preparation for Java Programming Language Certification
    * Creating Graphical User Interfaces
      + 都不学
+   * 
 
