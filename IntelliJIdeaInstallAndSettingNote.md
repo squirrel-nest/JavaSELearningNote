@@ -21,4 +21,4 @@
 
 ## IntelliJ IDEA. 快捷键
    * 参考
-      + [IntelliJ IDEA DEFAULT KEYMAP](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)<>
+      + [IntelliJ IDEA DEFAULT KEYMAP](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)<br>
