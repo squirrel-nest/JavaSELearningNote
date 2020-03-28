@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<!-- The SQL in these maps files has purposely been typed with more verbosity than is actually required.
+ For example, many of the selects could have just used SELECT * FROM... instead of listing all of the columns.
+ This is to demonstrate that even complex SQL can be handled and coded and formatted the way SQL was meant
+ to be (i.e. not a bunch of concatenated strings in a Java class). -->
+
+<sqlMap namespace="CustomerInfo">
+    
+    <typeAlias alias="CustomerInfo" type="com.ffcs.util.domain.customerinfomgr.Customer"/>
+    
+    <resultMap id="CustomerInfoResult" class="CustomerInfo">  
+        <result property="customerid"  column="customerid" javaType="java.lang.String" jdbcType="NUMERIC"/>
+        <result property="namecn" column="namecn" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="tradeclsid" column="tradeclsid" javaType="java.lang.Integer" jdbcType="NUMERIC" nullValue="0"/>        
+        <result property="nameen" column="nameen" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        
+        <result property="custcode"  column="custcode" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="custaddr" column="custaddr" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="custgrade" column="custgrade" javaType="java.lang.Integer" jdbcType="NUMERIC" nullValue="0"/>
+        <result property="custlevel" column="custlevel" javaType="java.lang.Integer" jdbcType="NUMERIC" nullValue="0"/>
+        
+        <result property="custtype"  column="custtype" javaType="java.lang.Integer" jdbcType="NUMERIC" nullValue="0"/>
+        <result property="servicelevel" column="servicelevel" javaType="java.lang.Integer" jdbcType="NUMERIC" nullValue="0"/>
+        <result property="creditlevel" column="creditlevel" javaType="java.lang.Integer" jdbcType="NUMERIC" nullValue="0"/>
+        <result property="linkname" column="linkname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        
+        <result property="linkphone"  column="linkphone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="linkmobile" column="linkmobile" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="linkemail" column="linkemail" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="linkfax" column="linkfax" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        
+        <result property="mngrname"  column="mngrname" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="mngrphone" column="mngrphone" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="mngrmobile" column="mngrmobile" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="parentcustomerid" column="parentcustomerid" javaType="java.lang.String" jdbcType="NUMERIC"/>
+        
+        <result property="remark" column="remark" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="regionid" column="regionid" javaType="java.lang.Integer" jdbcType="NUMERIC" nullValue="0"/> 
+        <result property="tnamecn" column="tnamecn" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="rnamecn" column="rnamecn" javaType="java.lang.String" jdbcType="VARCHAR"/> 
+        <result property="parentname" column="parentname" javaType="java.lang.String" jdbcType="VARCHAR"/> 
+        <result property="userid" column="userid" javaType="java.lang.Integer" jdbcType="NUMERIC" nullValue="0"/> 
+        
+        <result property="oldName" column="OldName" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="no" column="No" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="bank" column="Bank" javaType="java.lang.String" jdbcType="VARCHAR"/> 
+        <result property="counts" column="Counts" javaType="java.lang.String" jdbcType="VARCHAR"/> 
+        <result property="fileNO" column="FileNO" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result property="abbrevPY" column="AbbrevPY" javaType="java.lang.String" jdbcType="VARCHAR"/> 
+        <result property="abbrevCN" column="AbbrevCN" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </resultMap>
+    
+    <select id="getCustomerInfoList" resultMap="CustomerInfoResult" parameterClass="Integer">
+        select  c.NAMELAST as OldName,c.CUSTNO as No,c.BANKNAME as Bank,c.COUNTSNO as Counts,c.FileNO as FileNO,
+        c.NAMEENABBR as AbbrevPY,c.NAMECNABBR as AbbrevCN,
+        c.customerid as customerid,
+        to_number(c.customerid) as newid,
+        c.namecn as namecn, 
+        c.tradeclsid as tradeclsid, c.nameen as nameen, 
+        c.custcode as custcode, c.custaddr as custaddr, 
+        c.custgrade as custgrade, c.custlevel as custlevel,
+        c.custtype as custtype, c.servicelevel as servicelevel, 
+        c.creditlevel as creditlevel, 
+        c.linkname as linkname, c.linkphone as linkphone, 
+        c.linkmobile as linkmobile, c.linkemail as linkemail, 
+        c.linkfax as linkfax, 
+        c.mngrname as mngrname, c.mngrphone as mngrphone, 
+        c.mngrmobile as mngrmobile, c.parentcustomerid as parentcustomerid, 
+        c.remark as remark,
+        c.regionid, t.namecn  as tnamecn ,r.namecn as rnamecn, c2.namecn as parentName  ,
+        c.userid  
+        from (((customertbl c left join regiontbl r on c.regionid=r.regionid) 
+        left join customertbl c2  on c.parentcustomerid=c2.customerid ) 
+        left join tradeclstbl  t on c.tradeclsid=t.tradeclsid ) 
+        where                 
+        c.customerid not in (     
+        select distinct t.cstmid from rolecstmtbl t where  t.cstmid not in(    
+        select distinct t.cstmid from rolecstmtbl t 
+        where t.roleid in (select u.roleid from userroletbl u where u.userid=$userid$) and t.idtype =1
+        )                
+        )
+        order by newid asc
+    </select>
+    
+    <select id="getCustomerInfoById" resultMap="CustomerInfoResult" parameterClass="String">
+        select  c.NAMELAST as OldName,c.CUSTNO as No,c.BANKNAME as Bank,c.COUNTSNO as Counts,c.FileNO as FileNO,
+        c.NAMEENABBR as AbbrevPY,c.NAMECNABBR as AbbrevCN,
+        c.customerid as customerid, c.namecn as namecn, 
+        c.tradeclsid as tradeclsid, c.nameen as nameen, 
+        c.custcode as custcode, c.custaddr as custaddr, 
+        c.custgrade as custgrade, c.custlevel as custlevel,
+        c.custtype as custtype, c.servicelevel as servicelevel, 
+        c.creditlevel as creditlevel, 
+        c.linkname as linkname, c.linkphone as linkphone, 
+        c.linkmobile as linkmobile, c.linkemail as linkemail, 
+        c.linkfax as linkfax, 
+        c.mngrname as mngrname, c.mngrphone as mngrphone, 
+        c.mngrmobile as mngrmobile, c.parentcustomerid as parentcustomerid, 
+        c.remark as remark,
+        c.regionid, t.namecn  as tnamecn ,r.namecn as rnamecn, c2.namecn as parentName ,
+        c.userid  
+        from ((customertbl c left join regiontbl r on c.regionid=r.regionid) 
+        left join customertbl c2  on c.parentcustomerid=c2.customerid ) 
+        left join tradeclstbl  t on c.tradeclsid=t.tradeclsid   
+        where  c.customerid=#value# 
+    </select>
+    <!-- oldName , no , bank , counts , fileNO , abbrevPY ,  abbrevCN -->
+    <!-- NAMELAST , CUSTNO , BANKNAME , COUNTSNO , FILENO , NAMEENABBR , NAMECNABBR -->
+    <select id="getCustomerInfoListByTerm" resultMap="CustomerInfoResult" parameterClass="java.util.Map">
+        select  c.NAMELAST as OldName,c.CUSTNO as No,c.BANKNAME as Bank,c.COUNTSNO as Counts,c.FileNO as FileNO,
+        c.NAMEENABBR as AbbrevPY,c.NAMECNABBR as AbbrevCN,
+        c.customerid as customerid, 
+        to_number(c.customerid) as newid,      
+        c.namecn as namecn, 
+        c.tradeclsid as tradeclsid, c.nameen as nameen, 
+        c.custcode as custcode, c.custaddr as custaddr, 
+        c.custgrade as custgrade, c.custlevel as custlevel,
+        c.custtype as custtype, c.servicelevel as servicelevel, 
+        c.creditlevel as creditlevel, 
+        c.linkname as linkname, c.linkphone as linkphone, 
+        c.linkmobile as linkmobile, c.linkemail as linkemail, 
+        c.linkfax as linkfax, 
+        c.mngrname as mngrname, c.mngrphone as mngrphone, 
+        c.mngrmobile as mngrmobile, c.parentcustomerid as parentcustomerid, 
+        c.remark as remark,
+        c.regionid, t.namecn  as tnamecn ,r.namecn as rnamecn, c.parentcustomerid as parentName,
+        c.userid    
+        from (customertbl c left join regiontbl r on c.regionid=r.regionid)   
+        left join tradeclstbl  t on c.tradeclsid=t.tradeclsid     
+        where    
+        1=1 and                    
+        (   exists (    
+        select t.cstmid from rolecstmtbl t 
+        where exists (select u.roleid from userroletbl u where u.userid=$userid$) and t.idtype =1
+        )                
+        or c.userid=$userid1$ )  
+        <isNotNull property="customerid" >
+            and c.customerid =#customerid# 
+        </isNotNull>    
+        <isNotNull property="tradeclsid">
+            and c.tradeclsid = #tradeclsid#  
+        </isNotNull> 
+        <isNotNull property="custcode">
+            and c.custcode like '%$custcode$%'  
+        </isNotNull> 
+        <isNotNull property="custtype" >
+            and c.custtype =#custtype# 
+        </isNotNull>
+        <isNotNull property="linkname">
+            and c.linkname like '%$linkname$%' 
+        </isNotNull>    
+        <isNotNull property="namecn">
+            and c.namecn like '%$namecn$%' 
+        </isNotNull> 
+        <isNotNull property="custlevel">
+            and c.custlevel  = #custlevel#   
+        </isNotNull> 
+        <isNotNull property="regionid" >
+            and c.regionid = #regionid# 
+        </isNotNull> 
+        <isNotNull property="mngrname">
+            and c.mngrname like '%$mngrname$%'  
+        </isNotNull> 
+    </select>
+    
+    <delete id="deleteCustomerInfoById" parameterClass="String" >
+        delete from customertbl where customerid=#value# 
+    </delete>
+    <!-- oldName , no , bank , counts , fileNO , abbrevPY ,  abbrevCN -->
+    <!-- NAMELAST , CUSTNO , BANKNAME , COUNTSNO , FILENO , NAMEENABBR , NAMECNABBR -->
+    <!--是以sequence增加的方式 使Customerid自增的-->
+    <insert id="addCustomerInfo" parameterClass="com.ffcs.util.domain.customerinfomgr.Customer">
+        insert into  customertbl(
+        customerid, namecn, tradeclsid, nameen, custcode, custaddr, 
+        custgrade, custlevel, custtype, servicelevel, creditlevel, 
+        linkname, linkphone, linkmobile, linkemail, linkfax, 
+        mngrname, mngrphone, mngrmobile, parentcustomerid, remark,
+        regionid, userid, NAMELAST , CUSTNO , BANKNAME , COUNTSNO , fileNO , NAMEENABBR ,  NAMECNABBR 
+        )  
+        values(
+        #customerid#, #namecn#, #tradeclsid#, #nameen#, #custcode#, #custaddr#, 
+        #custgrade#, #custlevel#, #custtype#, #servicelevel#, #creditlevel#, 
+        #linkname#, #linkphone#, #linkmobile#, #linkemail#, #linkfax#, 
+        #mngrname#, #mngrphone#, #mngrmobile#, #parentcustomerid#, #remark#,
+        #regionid#, #userid#, #oldName# , #no# , #bank# , #counts# , #fileNO# , #abbrevPY# ,  #abbrevCN# 
+        )  
+    </insert>
+    <!-- oldName , no , bank , counts , fileNO , abbrevPY ,  abbrevCN -->
+    <!-- NAMELAST ,CUSTNO,BANKNAME, COUNTSNO ,FILENO,NAMEENABBR, NAMECNABBR -->
+    <update id="updateCustomerInfoById" parameterClass="com.ffcs.util.domain.customerinfomgr.Customer">
+        update customertbl 
+        set 
+        namecn=#namecn#, tradeclsid=#tradeclsid#, 
+        nameen=#nameen#, custcode=#custcode#, custaddr=#custaddr#, 
+        custgrade=#custgrade#, custlevel=#custlevel#, custtype=#custtype#, 
+        servicelevel=#servicelevel#, creditlevel=#creditlevel#, 
+        linkname=#linkname#, linkphone=#linkphone#, linkmobile=#linkmobile#, 
+        linkemail=#linkemail#, linkfax=#linkfax#, 
+        mngrname=#mngrname#, mngrphone=#mngrphone#, mngrmobile=#mngrmobile#,
+        parentcustomerid=#parentcustomerid#, remark=#remark#,regionid=#regionid#,  
+        NAMELAST=#oldName# , CUSTNO=#no# , BANKNAME=#bank# , COUNTSNO=#counts# , 
+        fileNO=#fileNO# , NAMEENABBR=#abbrevPY# ,  NAMECNABBR= #abbrevCN# 
+        where  customerid=#customerid# 
+    </update>
+    
+    <select id="getMaxCustomerId"  resultClass="String">
+        select customerid from  
+        (select customerid,to_number(customerid) as id from customertbl order by id desc)  
+        where rownum=1 
+    </select>
+    <select id="getCustomerIdByName" resultClass="String" parameterClass="String">
+        select customerid from customertbl where namecn= #value# and rownum=1 
+    </select>  
+    
+    <select id="getCustomerNameById1" resultClass="String" parameterClass="String">
+        select namecn from customertbl where customerid= #value# and rownum=1 
+    </select>
+    
+    <select id="getCustomerName" resultClass="String" parameterClass="String">
+        select namecn from customertbl where namecn like '%$value$%' 
+    </select>
+    <select id="getClildId" resultClass="String" parameterClass="String">
+        select customerid  
+        from customertbl c   
+        Start With c.parentcustomerid =#value#   
+        Connect By Prior c.customerid = c.parentcustomerid  
+    </select>
+    <update id="repleaseCustomerInfo" parameterClass="java.util.Map">
+        update customertbl set $fieldName$=#newValue# where $fieldName2$ like '%$oldValue$%'        
+        <isNotNull property="customerId">
+            and customerid = #customerId#  
+        </isNotNull> 
+    </update>
+</sqlMap>

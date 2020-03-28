@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0049)http://pepsixp.blogdriver.com/pepsixp/366528.html -->
+<HTML><HEAD><TITLE>Structs - 标签库（Logic）--阿姆斯壮</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK">
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Cache-Control content=no-cache>
+<META http-equiv=Expires content=0>
+<META 
+content="Structs - 标签库（Bean）Structs - 标签库（Logic）Tiles的使用（四）－遗补和总结  博客 博客动力 blog blogdriver blogger 中国" 
+name=description>
+<META 
+content="阿姆斯壮 Structs - 标签库（Bean）Structs - 标签库（Logic）Tiles的使用（四）－遗补和总结 博客 博客动力 blog blogdriver blogger 中国" 
+name=keywords><LINK href="Structs - 标签库（Logic）--阿姆斯壮.files/diary.css" 
+type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript 
+src="Structs - 标签库（Logic）--阿姆斯壮.files/UBB.js"></SCRIPT>
+
+<SCRIPT src="Structs - 标签库（Logic）--阿姆斯壮.files/blog.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2912" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=container>
+<DIV id=header>
+<H1 class=title><A 
+href="http://pepsixp.blogdriver.com/pepsixp/index.html">阿姆斯壮</A></H1></DIV>
+<DIV id=category><A title=上一篇 
+href="http://pepsixp.blogdriver.com/pepsixp/365496.html">Structs - 
+标签库（Bean）</A>- -| <A 
+href="http://pepsixp.blogdriver.com/pepsixp/index.html">回首页</A> | <A 
+href="http://pepsixp.blogdriver.com/pepsixp/catalog_2004.html">2004年索引</A> | - 
+-<A title=下一篇 
+href="http://pepsixp.blogdriver.com/pepsixp/380349.html">Tiles的使用（四）－遗补和总结</A></DIV>
+<DIV class=entity>
+<H2 class=diaryTitle>Structs - 标签库（Logic）- -</H2>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<P>
+<P><STRONG><FONT color=#000000>Logic 标签库</FONT></STRONG></P>
+<P><FONT color=#000000>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+此标签库可以分为三种类型：条件、循环、转发/重定向。<BR><BR>一.) 条件类型</FONT></P>
+<OL>
+  <LI>logic:empty和logic:notEmpty<BR>logic:empty标签判断脚本变量是否为null，是否是一个空的字符串(长度为0)，是否是一个空的collection或map(调用isEmpty()方法来判断)。logic:notEmpty标签类似。<BR>
+  <TABLE style="WIDTH: 663px; HEIGHT: 24px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:empty name="myBean"&gt;<BR>&nbsp;&nbsp; The bean is 
+        missing<BR>&nbsp;&lt;/logic:empty&gt;<BR>&nbsp;&lt;logic:notEmpty 
+        name="myBean"&gt;<BR>&nbsp;&nbsp; The bean is not 
+        missing<BR>&nbsp;&lt;/logic:notEmpty&gt;</TD></TR></TBODY></TABLE>上段代码表示当一个名为myBean的bean在所有的scope中都不存在时，输出The 
+  bean is missing；存在的话输出The bean is not 
+  missing。<BR>此标签有三个属性：name、property和scope。<BR>
+  <LI>logic:equal, logic:notEqual, logic:lessThan, 
+  logic:greaterThan,logic:lessEqual, and 
+  logic:greaterEqual<BR>这堆logic:*equal*标签从名字上就能知道意思，它们使用起来有些笨拙。<BR>有如下属性：name、property、scope、value、cookie、header、parameter。<BR>
+  <TABLE style="WIDTH: 664px; HEIGHT: 104px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:equal name="bean" property="doubleProperty" 
+        value="&lt;%= doub1 %&gt;"&gt;<BR>&nbsp;&nbsp;&nbsp; 
+        equal<BR>&nbsp;&lt;/logic:equal&gt;<BR>&nbsp;&lt;logic:greaterEqual 
+        name="bean" property="doubleProperty" value="&lt;%= doub1 
+        %&gt;"&gt;<BR>&nbsp;&nbsp;&nbsp; 
+        greaterEqual<BR>&nbsp;&lt;/logic:greaterEqual&gt;&nbsp;</TD></TR></TBODY></TABLE><BR>
+  <LI>logic:present和logic:notPresent<BR>检查header、request 
+  parameter、cookie、JavaBean或JavaBean 
+  propertie是否存在且不等于null。另外还可以检查当前用户的身份，使用属性user和role。<BR>其它的属性有：name、property、scope、cookie、header、parameter。<BR>
+  <TABLE style="WIDTH: 662px; HEIGHT: 56px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:notPresent name="myBean" &nbsp;property="prop"&nbsp; 
+        scope="page"&gt;<BR>&nbsp;The bean property bean.prop is 
+        present<BR>&nbsp;&lt;/logic:notPresent&gt;</TD></TR></TBODY></TABLE>上段代码检查在page作用域内名为myBean的bean是否有一个prop属性。<BR>
+  <LI>logic:match和logic:notMatch<BR>比较两字符串是否相等，可以比较字符串的开始的、结尾的或其中的某个部分。<BR>location属性：指定从某个位置开始进行比较。<BR>其它的属性有：name、property、scope、value、cookie、header、parameter。<BR>下面的例子是检查浏览器类型：<BR>
+  <TABLE style="WIDTH: 662px; HEIGHT: 104px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:match header="User-Agent" 
+        value="Mozilla"&gt;<BR>&nbsp; 
+        Mozilla!<BR>&nbsp;&lt;/logic:match&gt;<BR>&nbsp;&lt;logic:notMatch 
+        header="User-Agent" value="Mozilla"&gt;<BR>&nbsp; Not Mozilla 
+        :(<BR>&nbsp;&lt;/logic:notMatch&gt;</TD></TR></TBODY></TABLE><BR>检查bean属性是否匹配"hello 
+  world"字符串：<BR>
+  <TABLE style="WIDTH: 661px; HEIGHT: 104px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:match name="bean" property="stringProperty" 
+        value="hello world"&gt;<BR>&nbsp; Hello 
+        World!<BR>&nbsp;&lt;/logic:match&gt;<BR>&nbsp;&lt;logic:notMatch 
+        name="bean" property="stringProperty" value="hello world"&gt;<BR>&nbsp; 
+        I'm so sad and 
+    lonely.<BR>&nbsp;&lt;/logic:notMatch&gt;&nbsp;</TD></TR></TBODY></TABLE><BR>检查名为"name"的请求参数是否是"xyz"的子字符串，但是子字符串必须从"xyz"的索引位置1开始(也就是说子字符串必须是"y"或"yz")：<BR>
+  <TABLE style="WIDTH: 665px; HEIGHT: 56px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:match parameter="name" &nbsp;value="xyz"&nbsp; 
+        location="1"&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The parameter name is 
+        a sub-string of the string xyz from index 
+      1<BR>&nbsp;&lt;/logic:match&gt;</TD></TR></TBODY></TABLE></LI></OL>
+<P><FONT color=#000000>二.) 循环类型</FONT></P>
+<BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+  <P><FONT 
+  color=#000000>logic:iterate<BR>重复嵌套在此标签体内的指定集合的元素，集合必须为如下类型：array&nbsp;、Collection(包括ArrayList和Vector）、Enumeration、Iterator、Map(包括HashMap、Hashtable和TreeMap)。例如：<BR></FONT>
+  <TABLE style="WIDTH: 663px; HEIGHT: 152px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:iterate id="employee" name="department" 
+        property="employees" scope= "request"&gt;<BR>…<BR>&nbsp;&lt;bean:write 
+        name="employee" property="username" /&gt;<BR>…<BR>&nbsp;&lt;bean:write 
+        name="employee" property="name" /&gt;<BR>…<BR>&nbsp;&lt;bean:write 
+        name="employee" property="phone" 
+        /&gt;<BR>…<BR>&nbsp;&lt;/logic:iterate&gt;&nbsp;</TD></TR></TBODY></TABLE><FONT 
+  color=#000000>上面的代码迭代了一个employee的集合，是department属性employees的一个集合，作用域为request。<BR><BR>为了输出第五个到第十个employee，需要使用length和offset属性：<BR></FONT>
+  <TABLE style="WIDTH: 661px; HEIGHT: 152px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:iterate id="employee" name="department" 
+        property="employees" scope= "request" <STRONG>length</STRONG>="10" 
+        <STRONG>offset</STRONG>="5"&gt;<BR>…<BR>&nbsp;&lt;bean:write 
+        name="employee" property="username" /&gt;<BR>…<BR>&nbsp;&lt;bean:write 
+        name="employee" property="name" /&gt;<BR>…<BR>&nbsp;&lt;bean:write 
+        name="employee" property="phone" 
+      /&gt;<BR>…<BR>&nbsp;&lt;/logic:iterate&gt;</TD></TR></TBODY></TABLE><BR>&nbsp;<FONT 
+  color=#000000>你可以定义一个变量保存当前的索引值：&nbsp;&nbsp;&nbsp;&nbsp;</FONT>&nbsp;&nbsp; 
+  <BR>
+  <TABLE style="WIDTH: 662px; HEIGHT: 153px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;ol&gt;<BR>&nbsp;&lt;logic:iterate id="element" name="bean" 
+        property="stringArray" 
+        <STRONG>indexId</STRONG>="index"&gt;<BR>&nbsp;&lt;li&gt;<BR>&nbsp;&lt;em&gt;<BR>&nbsp;&lt;bean:write 
+        name="element"/&gt;<BR>&nbsp;&lt;/em&gt;&amp;nbsp;<BR>&nbsp;[&lt;bean:write 
+        name="index"/&gt;]&lt;/li&gt;<BR>&nbsp;&lt;/logic:iterate&gt;<BR>&nbsp;&lt;/ol&gt;&nbsp;</TD></TR></TBODY></TABLE></P></BLOCKQUOTE>
+<P><FONT color=#000000>三.) 转发/重定向类型</FONT></P>
+<BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+  <P><FONT 
+  color=#000000>logic:forward和logic:redirect<BR>logic:forward标签和jsp:forward标签和相似，但它可以使用global 
+  forward中的一个ActionForward：</FONT>&nbsp; 
+  <TABLE style="WIDTH: 662px; HEIGHT: 24px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:forward name="login" 
+        /&gt;<BR>----------------------------------------------------------------------------------------------------------------------------------<BR>&nbsp;与上面相关的global 
+        forward中的代码：<BR>&nbsp;&lt;global-forwards&gt;<BR>&nbsp;&lt;forward 
+        name="login" 
+      path="/loginForm.jsp"/&gt;<BR>&nbsp;&lt;/global-forwards&gt;</TD></TR></TBODY></TABLE><BR><FONT 
+  color=#000000>logic:redirect标签和上面的标签类似，但它默认调用的方法是response.sendRedirect()，取代了上面的requestDispatcher.forward()。最大的不同是它支持所有html:link标签的属性，所以你能够指</FONT><FONT 
+  color=#000000>定request参数：</FONT><BR>
+  <TABLE style="WIDTH: 663px; HEIGHT: 24px" borderColor=#000000 cellSpacing=1 
+  cellPadding=1 bgColor=#ffffcc border=1>
+    <TBODY>
+    <TR>
+      <TD>&nbsp;&lt;logic:redirect name="login" paramId="employeeId" 
+        paramName="employee" property="id" /&gt;</TD></TR></TBODY></TABLE><BR>提示：1.) 
+  在MVC框架下，不推荐使用这两个标签，你应该是从controller中选择下一个view，而不是从view中选择。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  2.) 在Jsp页面中不要过多的使用logic标签。</P></BLOCKQUOTE>
+<P></P>
+<P class=diaryFoot>- 作者： <A title=pepsixp 
+onclick="window.open('/control/postMessage.b?receiverName=pepsixp&amp;receiver=63310','发送短消息','width=310,height=265')" 
+href="javascript:void(0);">pepsixp</A> 2004年10月18日, 星期一 23:18 </P></DIV>
+<DIV class=operation><A name=trackback>
+<H3>Trackback</H3></A>
+<P class=trackback>你可以使用这个链接引用该篇日志 
+http://publishblog.blogdriver.com/blog/tb.b?diaryID=366528 </P></DIV>
+<DIV class=operation><A name=comment>
+<H3>回复</H3></A></DIV>
+<DIV class=operation>
+<TABLE class=comment cellSpacing=0 cellPadding=0 width=700 border=0>
+  <FORM id=replyForm method=post><INPUT type=hidden value=45741 name=blogID> 
+  <INPUT type=hidden value=366528 name=diaryID> <INPUT type=hidden value=pepsixp 
+  name=blogDomino>
+  <SCRIPT>
+if(getCookie('userID') == null){        
+document.write('<tr><td width="70">发布人：</td>');
+document.write('<td width="150"> <input name="remark.authorNameFUI" type="text" size="20" class="inputStyle" maxlength="20"></td>');
+document.write('<td width="70">邮箱：</td>');
+document.write('<td width="435"> <input name="remark.authorEmail" type="text" size="20" class="inputStyle" maxlength="40"></td>');
+document.write('</tr><tr><td>主　页：</td>');
+document.write('<td colspan="3"> <input name="remark.authorURL" type="text" class="inputStyle" value="HTTP://" size="63" maxlength="40"></td></tr>');
+}else{
+document.write('<input type="hidden" name="remark.authorNameFUI" value="Blogdriver">');
+}
+</SCRIPT>
+   
+  <TBODY>
+  <TR align=left>
+    <TD colSpan=4>评论内容：<BR><TEXTAREA class=textStyle id=remark name=remark.remarkFUI rows=8 cols=60>          </TEXTAREA> 
+    </TD></TR>
+  <TR align=left>
+    <TD colSpan=4>　　　　　　 　　　　　　 <INPUT onclick=reply() type=button value=提交> 　 
+<INPUT type=reset value=重置> </TD></TR></FORM></TBODY></TABLE></DIV></DIV>
+<SCRIPT src="" type=text/javascript></SCRIPT>
+
+<DIV id=footer><A href="http://www.blogdriver.com/jsp/reg/register.jsp"><IMG 
+class=logo src="Structs - 标签库（Logic）--阿姆斯壮.files/logo3.gif" border=0></A><A 
+href="http://www.blogdriver.com/">2003-2004 BLOGDRIVER.COM All rights 
+reserved</A></DIV></BODY></HTML>

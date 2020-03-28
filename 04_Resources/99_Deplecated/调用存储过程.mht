@@ -1,0 +1,703 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA3ILGjtOY=?=
+Subject: =?gb2312?B?tffTw7TmtKK5/bPM?=
+Date: Thu, 12 Jun 2008 15:00:34 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0019_01C8CC9D.11215CB0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18000
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0019_01C8CC9D.11215CB0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/jdbc-callproc.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>=B5=F7=D3=C3=B4=E6=B4=A2=B9=FD=B3=CC</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dgb2312">
+<META content=3D"MSHTML 6.00.6001.18063" name=3DGENERATOR><LINK =
+rev=3DMADE=20
+href=3D"mailto:pgsql-docs@postgresql.org"><LINK=20
+title=3D"PostgreSQL 7.4 =D6=D0=CE=C4=CE=C4=B5=B5 =
+PostgreSQL=D6=D0=B9=FA=D6=C6=D7=F7" href=3D"index.html" rel=3DHOME><LINK =
+
+title=3D"JDBC =BD=D3=BF=DA" href=3D"jdbc.html" rel=3DUP><LINK =
+title=3D=D6=B4=D0=D0=B8=FC=D0=C2 href=3D"jdbc-update.html"=20
+rel=3DPREVIOUS><LINK =
+title=3D=B4=B4=BD=A8=BA=CD=B8=FC=B8=C4=CA=FD=BE=DD=BF=E2=B6=D4=CF=F3 =
+href=3D"jdbc-ddl.html" rel=3DNEXT><LINK=20
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/styles=
+heet.css"=20
+type=3Dtext/css rel=3DSTYLESHEET>
+<META content=3D2005-06-02T08:04:12 name=3Dcreation></HEAD>
+<BODY class=3DSECT1>
+<DIV class=3DNAVHEADER>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+  <TBODY>
+  <TR>
+    <TH vAlign=3Dbottom align=3Dmiddle colSpan=3D5>PostgreSQL 7.4 =
+=D6=D0=CE=C4=CE=C4=B5=B5 <A=20
+      href=3D"http://www.pgsqldb.org/" =
+target=3D_top>PostgreSQL=D6=D0=B9=FA</A>=D6=C6=D7=F7</TH></TR>
+  <TR>
+    <TD vAlign=3Dtop align=3Dleft width=3D"10%"><A=20
+      =
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/jdbc-u=
+pdate.html">Prev</A></TD>
+    <TD vAlign=3Dtop align=3Dleft width=3D"10%"><A=20
+      =
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/jdbc.h=
+tml">Fast=20
+      Backward</A></TD>
+    <TD vAlign=3Dbottom align=3Dmiddle width=3D"60%">Chapter 31. <SPAN=20
+      class=3DACRONYM>JDBC</SPAN> =BD=D3=BF=DA</TD>
+    <TD vAlign=3Dtop align=3Dright width=3D"10%"><A=20
+      =
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/jdbc.h=
+tml">Fast=20
+      Forward</A></TD>
+    <TD vAlign=3Dtop align=3Dright width=3D"10%"><A=20
+      =
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/jdbc-d=
+dl.html">Next</A></TD></TR></TBODY></TABLE>
+<HR align=3Dleft width=3D"100%">
+
+<CENTER>
+<SCRIPT type=3Dtext/javascript><!--
+google_ad_client =3D "pub-2627642070897863";
+/* 728x90, created 5/27/08 */
+google_ad_slot =3D "6410357476";
+google_ad_width =3D 728;
+google_ad_height =3D 90;
+//-->
+</SCRIPT>
+
+<SCRIPT src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js"=20
+type=3Dtext/javascript>
+</SCRIPT>
+</CENTER></DIV>
+<DIV class=3DSECT1>
+<H1 class=3DSECT1><A name=3DJDBC-CALLPROC>31.5. =
+=B5=F7=D3=C3=B4=E6=B4=A2=B9=FD=B3=CC</A></H1>
+<P><SPAN class=3DPRODUCTNAME>PostgreSQL's</SPAN> JDBC =
+=C7=FD=B6=AF=CD=EA=C8=AB=D6=A7=B3=D6=B5=F7=D3=C3 <SPAN=20
+class=3DPRODUCTNAME>PostgreSQL</SPAN> =B4=E6=B4=A2=B9=FD=B3=CC=A1=A3 =
+</P>
+<DIV class=3DEXAMPLE><A name=3DJDBC-CALL-FUNCTION></A>
+<P><B>Example 31-4. =
+=B5=F7=D3=C3=D2=BB=B8=F6=C4=DA=D6=C3=B5=C4=B4=E6=B4=A2=BA=AF=CA=FD</B></P=
+>
+<P>=D5=E2=B8=F6=C0=FD=D7=D3=CF=D4=CA=BE=C1=CB=C8=E7=BA=CE=B5=F7=D3=C3=D2=BB=
+=B8=F6 <SPAN class=3DPRODUCTNAME>PostgreSQL</SPAN> =
+=C4=DA=D6=C3=B5=C4=BA=AF=CA=FD=A3=AC <TT=20
+class=3DCOMMAND>upper</TT>=A3=AC=CB=FC=D6=BB=CA=C7=BC=F2=B5=A5=B5=D8=B0=D1=
+=C4=E3=CC=E1=B9=A9=B5=C4=D7=D6=B4=AE=B2=CE=CA=FD=D7=AA=BB=BB=B3=C9=B4=F3=D0=
+=B4=A1=A3 </P><PRE class=3DPROGRAMLISTING>// =B9=D8=B1=D5=CA=C2=CE=F1
+con.setAutoCommit(false);
+// =B9=FD=B3=CC=B5=F7=D3=C3
+CallableStatement upperProc =3D con.prepareCall("{ ? =3D call upper( ? ) =
+}");
+upperProc.registerOutParameter(1, Types.VARCHAR);
+upperProc.setString(2, "lowercase to uppercase");
+upperProc.execute();
+String upperCased =3D upperProc.getString(1);
+upperProc.close();</PRE>
+<P></P></DIV>
+<DIV class=3DSECT2>
+<H2 class=3DSECT2><A name=3DAEN24297>31.5.1. =CA=B9=D3=C3 <TT=20
+class=3DCLASSNAME>CallableStatement</TT> =BD=D3=BF=DA</A></H2>
+<P>=CB=F9=D3=D0=CA=CA=D3=C3=D3=DA <TT class=3DCLASSNAME>Statement</TT> =
+=BA=CD <TT=20
+class=3DCLASSNAME>PreparedStatement</TT> =
+=B5=C4=D7=A2=D2=E2=CA=C2=CF=EE=B6=BC=CA=CA=D3=C3=D3=DA <TT=20
+class=3DCLASSNAME>CallableStatement</TT>=A3=AC=CD=AC=CA=B1=C4=E3=BB=B9=D0=
+=E8=D2=AA=BF=BC=C2=C7=D2=BB=D0=A9=B6=EE=CD=E2=B5=C4=CF=DE=D6=C6=A3=BA =
+</P>
+<P></P>
+<UL>
+  <LI>
+  =
+<P>=C4=E3=D6=BB=C4=DC=D4=DA=D2=BB=B8=F6=CA=C2=CE=F1=C0=EF=C3=E6=B5=F7=D3=C3=
+=D2=BB=B8=F6=B4=E6=B4=A2=B9=FD=B3=CC=A1=A3 </P></LI></UL></DIV>
+<DIV class=3DSECT2>
+<H2 class=3DSECT2><A name=3DAEN24307>31.5.2. =
+=B4=D3=B8=F6=B4=E6=B4=A2=B9=FD=B3=CC=C0=EF=BB=F1=C8=A1 <TT=20
+class=3DCLASSNAME>ResultSet</TT></A></H2>
+<P><SPAN class=3DPRODUCTNAME>PostgreSQL</SPAN> =
+=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=BF=C9=D2=D4=CD=A8=B9=FD=D2=BB=B8=F6 <TT=20
+class=3DTYPE>refcursor</TT> =D6=B5=B7=B5=BB=D8=BD=E1=B9=FB=BC=AF=A1=A3 =
+</P>
+<P>=D7=F7=CE=AA JDBC =B5=C4=C0=A9=D5=B9=A3=AC<SPAN =
+class=3DPRODUCTNAME>PostgreSQL</SPAN> JDBC =
+=C7=FD=B6=AF=BF=C9=D2=D4=BD=AB <TT=20
+class=3DTYPE>refcursor</TT> =D6=B5=D7=F7=CE=AA <TT =
+class=3DCLASSNAME>ResultSet</TT> =D6=B5=B7=B5=BB=D8=A1=A3 </P>
+<DIV class=3DEXAMPLE><A name=3DGET-REFCURSOR-FROM-FUNCTION-CALL></A>
+<P><B>Example 31-5. =B4=D3=D2=BB=B8=F6=BA=AF=CA=FD=C0=EF=BB=F1=C8=A1 <TT =
+class=3DTYPE>refcursor</TT> =D6=B5 </B></P>
+<P>=D4=DA=B5=F7=D3=C3=D2=BB=B8=F6=B7=B5=BB=D8 <TT =
+class=3DTYPE>refcursor</TT> =
+=B5=C4=BA=AF=CA=FD=CA=B1=A3=AC=C4=E3=B1=D8=D0=EB=B0=D1=B7=B5=BB=D8=C0=E0=D0=
+=CD <TT=20
+class=3DFUNCTION>getObject</TT> =D7=AA=BB=BB=B3=C9 <TT =
+class=3DCLASSNAME>ResultSet</TT>=A1=A3 </P><PRE =
+class=3DPROGRAMLISTING>// =
+=B9=D8=B1=D5=D7=D4=B6=AF=CC=E1=BD=BB=CA=C2=CE=F1
+con.setAutoCommit(false);
+// =B9=FD=B3=CC=B5=F7=D3=C3
+CallableStatement proc =3D con.prepareCall("{ ? =3D call doquery ( ? ) =
+}");
+proc.registerOutParameter(1, Types.Other);
+proc.setInt(2, -1);
+proc.execute();
+ResultSet results =3D (ResultSet) proc.getObject(1);
+while (results.next()) {
+  // =B4=A6=C0=ED=BD=E1=B9=FB=BC=AF
+}
+results.close();
+proc.close();</PRE></DIV>
+<P>=CE=D2=C3=C7=D2=B2=BF=C9=C4=DC=B0=D1=B7=B5=BB=D8=D6=B5 <TT =
+class=3DTYPE>refcursor</TT> =
+=BF=B4=D7=F7=D2=BB=D6=D6=CC=D8=CA=E2=B5=C4=C0=E0=D0=CD=A1=A3 JDBC =
+=C7=FD=B6=AF=CC=E1=B9=A9=C1=CB <TT=20
+class=3DCLASSNAME>org.postgresql.PGRefCursorResultSet</TT> =
+=D3=C3=D3=DA=D5=E2=B8=F6=C4=BF=B5=C4=A1=A3 </P>
+<DIV class=3DEXAMPLE><A name=3DAEN24328></A>
+<P><B>Example 31-6. =B0=D1 <TT class=3DTYPE>refcursor</TT> =
+=B5=B1=D7=F7=B6=C0=C1=A2=B5=C4=C0=E0=D0=CD</B></P><PRE =
+class=3DPROGRAMLISTING>con.setAutoCommit(false);
+CallableStatement proc =3D con.prepareCall("{ ? =3D call doquery ( ? ) =
+}");
+proc.registerOutParameter(1, Types.Other);
+proc.setInt(2, 0);
+org.postgresql.PGRefCursorResultSet refcurs
+    =3D (PGRefCursorResultSet) con.getObject(1);
+String cursorName =3D refcurs.getRefCursor();
+proc.close();</PRE></DIV></DIV></DIV>
+<DIV class=3DNAVFOOTER>
+<HR align=3Dleft width=3D"100%">
+
+<CENTER>
+<SCRIPT type=3Dtext/javascript><!--
+google_ad_client =3D "pub-2627642070897863";
+/* 728x90, created 5/27/08 */
+google_ad_slot =3D "6410357476";
+google_ad_width =3D 728;
+google_ad_height =3D 90;
+//-->
+</SCRIPT>
+
+<SCRIPT src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js"=20
+type=3Dtext/javascript>
+</SCRIPT>
+</CENTER>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop align=3Dleft width=3D"33%"><A=20
+      =
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/jdbc-u=
+pdate.html">Prev</A></TD>
+    <TD vAlign=3Dtop align=3Dmiddle width=3D"34%"><A=20
+      =
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/index.=
+html">Home</A></TD>
+    <TD vAlign=3Dtop align=3Dright width=3D"33%"><A=20
+      =
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/jdbc-d=
+dl.html">Next</A></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop align=3Dleft =
+width=3D"33%">=D6=B4=D0=D0=B8=FC=D0=C2</TD>
+    <TD vAlign=3Dtop align=3Dmiddle width=3D"34%"><A=20
+      =
+href=3D"http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/jdbc.h=
+tml">Up</A></TD>
+    <TD vAlign=3Dtop align=3Dright=20
+width=3D"33%">=B4=B4=BD=A8=BA=CD=B8=FC=B8=C4=CA=FD=BE=DD=BF=E2=B6=D4=CF=F3=
+</TD></TR></TBODY></TABLE></DIV></BODY></HTML>
+
+------=_NextPart_000_0019_01C8CC9D.11215CB0
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://docs.huihoo.com/postgresql/postgresql-doc-7.4-zh_CN/stylesheet.css
+
+BODY {
+	BACKGROUND: #ffffff; COLOR: #000000
+}
+A:link {
+	COLOR: #000066
+}
+A:visited {
+	COLOR: #000099
+}
+A:active {
+	COLOR: #ff0000
+}
+BODY.BOOK H1.TITLE {
+	FONT-SIZE: 250%; COLOR: #020167; FONT-FAMILY: sans-serif; TEXT-ALIGN: =
+center
+}
+BODY.SET H1.TITLE {
+	FONT-SIZE: 250%; COLOR: #020167; FONT-FAMILY: sans-serif; TEXT-ALIGN: =
+center
+}
+BODY.BOOK H3.CORPAUTHOR {
+	FONT-WEIGHT: normal; FONT-STYLE: italic; TEXT-ALIGN: center
+}
+BODY.SET H3.CORPAUTHOR {
+	FONT-WEIGHT: normal; FONT-STYLE: italic; TEXT-ALIGN: center
+}
+BODY.BOOK .COPYRIGHT {
+	TEXT-ALIGN: center
+}
+BODY.SET .COPYRIGHT {
+	TEXT-ALIGN: center
+}
+DIV.EXAMPLE {
+	BORDER-RIGHT: black 0px solid; BORDER-TOP: black 0px solid; =
+PADDING-LEFT: 15px; MARGIN: 0.5ex; BORDER-LEFT: black 2px solid; =
+BORDER-BOTTOM: black 0px solid
+}
+.SET .TOC DL DT {
+	PADDING-BOTTOM: 1.5ex; PADDING-TOP: 1.5ex
+}
+.BOOK .TOC DL DT {
+	PADDING-BOTTOM: 1.5ex; PADDING-TOP: 1.5ex
+}
+.SET .TOC DL DL DT {
+	PADDING-BOTTOM: 0ex; PADDING-TOP: 0ex
+}
+.BOOK .TOC DL DL DT {
+	PADDING-BOTTOM: 0ex; PADDING-TOP: 0ex
+}
+.SCREEN {
+	MARGIN-LEFT: 4ex
+}
+.SYNOPSIS {
+	MARGIN-LEFT: 4ex
+}
+.PROGRAMLISTING {
+	MARGIN-LEFT: 4ex
+}
+.NAVHEADER TH {
+	FONT-STYLE: italic
+}
+.COMMENT {
+	COLOR: red
+}
+
+------=_NextPart_000_0019_01C8CC9D.11215CB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pagead2.googlesyndication.com/pagead/show_ads.js
+
+(function(){=0A=
+var g=3Ddocument,j=3Dnavigator,m=3Dwindow;function aa(){var =
+a=3Dg.cookie,c=3DMath.round((new =
+Date).getTime()/1000),b=3Dm.google_analytics_domain_name,d=3Dtypeof =
+b=3D=3D"undefined"?s("auto"):s(b),e=3Da.indexOf("__utma=3D"+d+".")>-1,f=3D=
+a.indexOf("__utmb=3D"+d)>-1,i=3Da.indexOf("__utmc=3D"+d)>-1,k,n=3D{};if(e=
+){k=3Da.split("__utma=3D"+d+".")[1].split(";")[0].split(".");n.sid=3Df&&i=
+?k[3]+"":(m&&m.gaGlobal&&m.gaGlobal.sid?m.gaGlobal.sid:c+"");n.vid=3Dk[0]=
++"."+k[1];n.from_cookie=3Dtrue;n.dh=3Dd}else{n.sid=3Dm&&m.gaGlobal&&m.gaG=
+lobal.sid?m.gaGlobal.sid:=0A=
+c+"";n.vid=3Dm&&m.gaGlobal&&m.gaGlobal.vid?m.gaGlobal.vid:(u()^ba())*2147=
+483647+"."+c;n.from_cookie=3Dfalse}n.hid=3Dm&&m.gaGlobal&&m.gaGlobal.hid?=
+m.gaGlobal.hid:u();m.gaGlobal=3Dn;return n}function u(){return =
+Math.round(Math.random()*2147483647)}function ba(){var =
+a=3Dg.cookie?g.cookie:"",c=3Dm.history.length,b,d,e=3D[j.appName,j.versio=
+n,j.language?j.language:j.browserLanguage,j.platform,j.userAgent,j.javaEn=
+abled()?1:0].join("");if(m.screen)e+=3Dm.screen.width+"x"+m.screen.height=
++m.screen.colorDepth;else if(m.java){d=3D=0A=
+java.awt.Toolkit.getDefaultToolkit().getScreenSize();e+=3Dd.screen.width+=
+"x"+d.screen.height}e+=3Da;e+=3Dg.referrer?g.referrer:"";b=3De.length;whi=
+le(c>0)e+=3Dc--^b++;return w(e)}function w(a){var =
+c=3D1,b=3D0,d,e;if(!(a=3D=3Dundefined||a=3D=3D"")){c=3D0;for(d=3Da.length=
+-1;d>=3D0;d--){e=3Da.charCodeAt(d);c=3D(c<<6&268435455)+e+(e<<14);b=3Dc&2=
+66338304;c=3Db!=3D0?c^b>>21:c}}return c}function =
+s(a){if(!a||a=3D=3D""||a=3D=3D"none")return =
+1;if("auto"=3D=3Da){a=3Dg.domain;if("www."=3D=3Da.substring(0,4))a=3Da.su=
+bstring(4,a.length)}return w(a)};var =
+ga=3D{google_ad_channel:"channel",google_ad_host:"host",google_ad_host_ti=
+er_id:"ht_id",google_ad_region:"region",google_ad_section:"region",google=
+_ad_type:"ad_type",google_adtest:"adtest",google_alternate_ad_url:"altern=
+ate_ad_url",google_alternate_color:"alt_color",google_bid:"bid",google_ci=
+ty:"gcs",google_color_bg:"color_bg",google_color_border:"color_border",go=
+ogle_color_line:"color_line",google_color_link:"color_link",google_color_=
+text:"color_text",google_color_url:"color_url",google_contents:"contents"=
+,=0A=
+google_country:"gl",google_cust_age:"cust_age",google_cust_ch:"cust_ch",g=
+oogle_cust_gender:"cust_gender",google_cust_id:"cust_id",google_cust_inte=
+rests:"cust_interests",google_cust_job:"cust_job",google_cust_l:"cust_l",=
+google_cust_lh:"cust_lh",google_cust_u_url:"cust_u_url",google_disable_vi=
+deo_autoplay:"disable_video_autoplay",google_ed:"ed",google_encoding:"oe"=
+,google_feedback:"feedback_link",google_flash_version:"flash",google_gl:"=
+gl",google_hints:"hints",google_kw:"kw",google_kw_type:"kw_type",=0A=
+google_language:"hl",google_referrer_url:"ref",google_region:"gr",google_=
+reuse_colors:"reuse_colors",google_safe:"adsafe",google_targeting:"target=
+ing",google_ui_features:"ui"},ha=3D{google_ad_format:"format",google_ad_o=
+utput:"output",google_ad_callback:"callback",google_ad_override:"google_a=
+d_override",google_ad_slot:"slotname",google_analytics_uacct:"ga_wpids",g=
+oogle_correlator:"correlator",google_cpa_choice:"cpa_choice",google_image=
+_size:"image_size",google_last_modified_time:"lmt",google_max_num_ads:"nu=
+m_ads",=0A=
+google_max_radlink_len:"max_radlink_len",google_num_radlinks:"num_radlink=
+s",google_num_radlinks_per_unit:"num_radlinks_per_unit",google_only_ads_w=
+ith_video:"only_ads_with_video",google_page_location:"loc",google_page_ur=
+l:"url",google_rl_dest_url:"rl_dest_url",google_rl_filtering:"rl_filterin=
+g",google_rl_mode:"rl_mode",google_rt:"rt",google_skip:"skip"};function =
+A(a){return ga[a]||ha[a]||null};function =
+E(){}E.prototype.c=3Dfunction(){};E.prototype.e=3Dfunction(){};E.prototyp=
+e.o=3Dfunction(){};var H=3Dnull;function =
+I(){this.b=3Dthis.m();this.g=3Dfalse;if(!this.b){this.g=3Dthis.i();if(!th=
+is.g)H.e("Browser does not allow =
+cookies")}}I.prototype.f=3D"__gads=3D";I.prototype.d=3D"GoogleAdServingTe=
+st=3D";I.prototype.l=3Dfunction(){return =
+this.b};I.prototype.setCookieInfo=3Dfunction(a){this.a=3Da._cookies_[0];i=
+f(this.a!=3Dnull){this.b=3Dthis.a._value_;this.n()}};I.prototype.k=3Dfunc=
+tion(a){var c=3D(new Date).valueOf(),b=3Dnew Date;=0A=
+b.setTime(c+a);return =
+b};I.prototype.j=3Dfunction(a){if(this.b!=3Dnull||!this.g){H.c("Skipping =
+fetch cookie call");return}var =
+c=3D"script",b=3Ddocument.domain,d=3D"http://partner.googleadservices.com=
+/gampad/cookie.js?callback=3D_GA_googleCookieHelper.setCookieInfo&client=3D=
+"+J(a)+"&domain=3D"+J(b);H.c("Issuing a fetch cookie call with <a =
+href=3D'"+d+"'>"+d+"</a>");document.write("<"+c+' =
+src=3D"'+d+'"></'+c+">")};I.prototype.i=3Dfunction(){document.cookie=3Dth=
+is.d+"Good";var a=3Dthis.h(this.d),c=3Da=3D=3D"Good";if(c){var =
+b=3Dthis.k(-1);=0A=
+document.cookie=3Dthis.d+"; expires=3D"+b.toGMTString()}return =
+c};I.prototype.m=3Dfunction(){var =
+a=3Dthis.h(this.f);if(a!=3Dnull)H.c("Read first party cookie: "+a);else =
+H.e("No first party cookie found");return =
+a};I.prototype.h=3Dfunction(a){var =
+c=3Ddocument.cookie,b=3Dc.indexOf(a),d=3Dnull;if(b!=3D-1){var =
+e=3Db+a.length,f=3Dc.indexOf(";",e);if(f=3D=3D-1)f=3Dc.length;d=3Dc.subst=
+ring(e,f)}return =
+d};I.prototype.n=3Dfunction(){if(this.a=3D=3Dnull)H.e("Skipping cookie =
+creation: no cookie info");else if(this.b=3D=3Dnull)H.o("Skipping cookie =
+creation: no cookie value");=0A=
+else{var a=3Dnew Date;a.setTime(1000*this.a._expires_);var =
+c=3Dthis.a._domain_,b=3Dthis.f+this.b+"; expires=3D"+a.toGMTString()+"; =
+path=3D"+this.a._path_+"; domain=3D."+c;document.cookie=3Db;H.c("Written =
+cookie: =
+"+b)}};window.IDICommon=3Dwindow.IDICommon||(function(){return{getHash:fu=
+nction(a){var c=3Da.indexOf("#")+1;return =
+c?a.substr(c):""},htmlEscape:function(a){return/[&<>\"]/.test(a)?a.replac=
+e(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\"/g,"=
+&quot;"):a},makeIframeTag:function(a){var c=3D"<iframe";for(var b in =
+a)c+=3D" "+b+'=3D"'+IDICommon.htmlEscape(a[b])+'"';return =
+c+"></iframe>"},getIframe:function(a,c){try{return =
+a.frames[c]}catch(b){return null}},makeIframeNode:function(a){var =
+c=3Ddocument.createElement("iframe");=0A=
+for(var b in a)c.setAttribute(b,a[b]);return =
+c},appendHiddenIframe:function(a,c){setTimeout(function(){document.body.a=
+ppendChild(IDICommon.makeIframeNode({id:a,name:a,src:c,width:0,height:0,f=
+rameBorder:0}))},0)},writeHiddenIframe:function(a,c){document.write(IDICo=
+mmon.makeIframeTag({id:a,name:a,src:c,width:0,height:0,frameBorder:0}))},=
+splitURIComponent:function(a,c){var =
+b=3D[],d=3Da.length,e=3D0;while(e<d){var =
+f=3Da.substr(e,c),i=3Df.length;if(e+i<d)for(var =
+k=3D1;k<3;++k)if(f.charAt(i-k)=3D=3D"%")f=3Df.substr(0,i-=3D=0A=
+k);b.push(f);e+=3Di}return =
+b},MAX_URL_LENGTH:4095,IDI_DEFAULT_POLLING_INTERVAL:1000}})();window.IDIH=
+ost=3Dwindow.IDIHost||(function(){var =
+a=3Dwindow.location.href.replace(/([^:\/])\/.*$/,"$1/robots.txt"),c=3D"",=
+b=3D{},d=3D{},e=3D{},f=3D{},i=3D{};function k(h,o){for(var q in =
+o)h[q]=3Do[q]}function n(h,o){var q=3Dwindow.frames[h];if(q){var =
+B;while(B=3DIDICommon.getIframe(q,h+"_"+b[h])){try{if(B.location.href=3D=3D=
+"about:blank")break}catch(v){break}e[h]+=3DIDICommon.getHash(B.location.h=
+ref);++b[h]}var =
+t=3De[h].split("$"),C=3Dt.length-1;if(C>0){e[h]=3Dt[C];for(var =
+D=3D0;D<C;++D)o(decodeURIComponent(t[D]),h)}}}function p(h){return c||=0A=
+h.replace(/([^:\/]\/).*$/,"$1ig/idi_relay")}function =
+r(h){window.clearInterval(i[h]);i[h]=3D0}function l(h){a=3Dh}function =
+x(h){c=3Dh}function =
+y(h,o,q){r(h);i[h]=3Dwindow.setInterval(function(){n(h,o)},typeof =
+q=3D=3D"object"&&q.pollingInterval||IDICommon.IDI_DEFAULT_POLLING_INTERVA=
+L)}function O(h,o,q){var B;if(typeof =
+q=3D=3D"object")B=3Dq.moduleRelayUrl;var v=3Dd[h];if(isNaN(v))throw new =
+Error("Invalid module id");else{var t=3Dtypeof =
+B=3D=3D"string"?B:p(f[h]),C=3DencodeURIComponent(o)+"$",D=3DIDICommon.MAX=
+_URL_LENGTH-1-t.length,=0A=
+F=3DIDICommon.splitURIComponent(C,D),P=3DF.length;for(var =
+z=3D0;z<P;++z)IDICommon.appendHiddenIframe(h+"_"+(v+z),t+"#"+F[z]);d[h]+=3D=
+P}}function K(h,o,q,B,v){var =
+t=3D{frameBorder:0,scrolling:"no"},C,D,F,P,z;if(typeof =
+v=3D=3D"object"){C=3Dv.iframeAttrs;D=3Dv.callback;F=3Dv.userPrefs;P=3Dv.p=
+ollingInterval;z=3Dv.parentDivId}if(typeof =
+C=3D=3D"object")k(t,C);k(t,{id:o,name:o,src:h,width:q,height:B});b[o]=3D0=
+;d[o]=3D0;e[o]=3D"";f[o]=3Dh;var Q=3D[];if(typeof =
+F=3D=3D"object")for(var G in =
+F)Q.push(encodeURIComponent(G)+"=3D"+encodeURIComponent(F[G]));=0A=
+if(typeof =
+D=3D=3D"function"){Q.push("idi_hr=3D"+encodeURIComponent(a));window.IDIHo=
+st.registerListener(o,D,v)}if(Q.length){var =
+L=3DQ.join("&");if(t.src.length+1+L.length>IDICommon.MAX_URL_LENGTH){L+=3D=
+"$";var =
+ca=3Dp(h),ra=3DIDICommon.MAX_URL_LENGTH-1-ca.length,da=3DIDICommon.splitU=
+RIComponent(L,ra),ea=3Dda.length;for(var G=3D0;G<ea;++G){var =
+V=3Do+"_"+G,fa=3Dca+"#"+da[G];if(z){var =
+W=3Ddocument.getElementById(z);W.innerHTML+=3DIDICommon.makeIframeTag({id=
+:V,name:V,src:fa,width:0,height:0,frameBorder:0})}else =
+IDICommon.writeHiddenIframe(V,=0A=
+fa)}d[o]+=3Dea;L=3D""}t.src+=3D"#"+L}if(z){var =
+W=3Ddocument.getElementById(z);W.innerHTML+=3DIDICommon.makeIframeTag(t)}=
+else =
+document.write(IDICommon.makeIframeTag(t))}return{setHostRelayUrl:l,setMo=
+duleRelayUrl:x,getModuleRelayUrl:p,registerListener:y,unregisterListener:=
+r,postMessageToModule:O,createModule:K}})();var =
+ia=3Dia||{},M=3Dthis;if(Object.prototype.propertyIsEnumerable);if(!Functi=
+on.prototype.apply)Function.prototype.apply=3Dfunction(a,c){var =
+b=3D[],d,e;if(!a)a=3DM;if(!c)c=3D[];for(var =
+f=3D0;f<c.length;f++)b[f]=3D"args["+f+"]";e=3D"oScope.__applyTemp__.peek(=
+).("+b.join(",")+");";if(!a.__applyTemp__)a.__applyTemp__=3D[];a.__applyT=
+emp__.push(this);d=3Deval(e);a.__applyTemp__.pop();return d};;;var =
+ja=3Dfunction(a,c){var b=3Dc.length;for(var d=3D0;d<b;d++){var =
+e=3Db=3D=3D1?c:c.charAt(d);if(a.charAt(0)=3D=3De&&a.charAt(a.length-1)=3D=
+=3De)return a.substring(1,a.length-1)}return a};var =
+ka,la,ma,na,oa,pa,qa,sa,ta,ua,va,wa,xa=3Dfunction(){var =
+a=3Dfalse,c=3Dfalse,b=3Dfalse,d=3Dfalse,e=3Dfalse,f=3Dfalse,i=3Dfalse,k=3D=
+false,n=3Dfalse,p=3D"";if(M.navigator){var =
+r=3DM.navigator,l=3Dr.userAgent;a=3Dl.indexOf("Opera")=3D=3D0;c=3D!a&&l.i=
+ndexOf("MSIE")!=3D-1;b=3D!a&&l.indexOf("WebKit")!=3D-1;n=3Db&&l.indexOf("=
+Mobile")!=3D-1;d=3D!a&&!b&&r.product=3D=3D"Gecko";e=3Dd&&r.vendor=3D=3D"C=
+amino";var =
+x,y;if(a)x=3DM.opera.version();else{if(d)y=3D/rv\:([^\);]+)(\)|;)/;else =
+if(c)y=3D/MSIE\s+([^\);]+)(\)|;)/;else =
+if(b)y=3D/WebKit\/(\S+)/;if(y){y.test(l);x=3DRegExp.$1}}p=3D=0A=
+r.platform||"";f=3Dp.indexOf("Mac")!=3D-1;i=3Dp.indexOf("Win")!=3D-1;k=3D=
+p.indexOf("Linux")!=3D-1}ka=3Da;la=3Dc;ma=3Dd;na=3De;oa=3Db;pa=3Doa;qa=3D=
+x;sa=3Dp;ta=3Df;ua=3Di;va=3Dk;wa=3Dn};xa();;;;var =
+ya=3Dfunction(a){return typeof =
+a=3D=3D"string"?document.getElementById(a):a},za=3Dya;var =
+Aa=3Dfunction(a){return =
+a.nodeType=3D=3D9?a:a.ownerDocument||a.document};;;var =
+Ba=3Dfunction(a,c){var =
+b=3DAa(a);if(b.defaultView&&b.defaultView.getComputedStyle){var =
+d=3Db.defaultView.getComputedStyle(a,"");if(d)return d[c]}return =
+null};var Ca=3Dfunction(a){var =
+c=3DAa(a),b=3D"";if(c.createTextRange){var =
+d=3Dc.body.createTextRange();d.moveToElementText(a);b=3Dd.queryCommandVal=
+ue("FontName")}if(!b){b=3DBa(a,"fontFamily")||(a.currentStyle?a.currentSt=
+yle.fontFamily:null)||a.style.fontFamily;if(ka&&va)b=3Db.replace(/ =
+\[[^\]]*\]/,"")}var e=3Db.split(",");if(e.length>1)b=3De[0];return =
+ja(b,"\"'")};function N(a){return a!=3Dnull?'"'+a+'"':'""'}function =
+J(a){return typeof =
+encodeURIComponent=3D=3D"function"?encodeURIComponent(a):escape(a)}functi=
+on R(a,c){if(a&&c)window.google_ad_url+=3D"&"+a+"=3D"+c}function =
+S(a){var c=3Dwindow,b=3DA(a),d=3Dc[a];R(b,d)}function =
+T(a,c){if(c)R(a,J(c))}function U(a){var =
+c=3Dwindow,b=3DA(a),d=3Dc[a];T(b,d)}function X(a,c){var =
+b=3Dwindow,d=3DA(a),e=3Db[a];if(d&&e&&typeof =
+e=3D=3D"object")e=3De[c%e.length];R(d,e)}function Da(a,c){var =
+b=3Da.screen,d=3Dnavigator.javaEnabled(),e=3D-c.getTimezoneOffset();if(b)=
+{R("u_h",=0A=
+b.height);R("u_w",b.width);R("u_ah",b.availHeight);R("u_aw",b.availWidth)=
+;R("u_cd",b.colorDepth)}R("u_tz",e);R("u_his",history.length);R("u_java",=
+d);if(navigator.plugins)R("u_nplug",navigator.plugins.length);if(navigato=
+r.mimeTypes)R("u_nmime",navigator.mimeTypes.length)}function =
+Ea(a){if(!a.google_enable_first_party_cookie)return;if(H=3D=3Dnull)H=3Dne=
+w E;if(a._GA_googleCookieHelper=3D=3Dnull)a._GA_googleCookieHelper=3Dnew =
+I;if(!a._google_cookie_fetched){a._google_cookie_fetched=3Dtrue;a._GA_goo=
+gleCookieHelper.j(Y(a.google_ad_client))}}=0A=
+function =
+Y(a){if(a){a=3Da.toLowerCase();if(a.substring(0,3)!=3D"ca-")a=3D"ca-"+a}r=
+eturn a}function =
+Fa(a){if(a){a=3Da.toLowerCase();if(a.substring(0,9)!=3D"dist-aff-")a=3D"d=
+ist-aff-"+a}return a}function Ga(a,c){var =
+b=3Ddocument.getElementById(a);b.style.height=3Dc+"px"}function =
+Ha(a,c,b){window.clearTimeout(b);var =
+d=3D/^google_resize_flash_ad_idi\((\d+)\)/,e=3Da.match(d);if(e)Ga(c,e[1])=
+}function =
+Ia(a,c,b,d){b=3Db.substring(0,2000);b=3Db.replace(/%\w?$/,"");var =
+e=3D"script";if((a.google_ad_output=3D=3D"js"||a.google_ad_output=3D=3D=0A=
+"json_html")&&(a.google_ad_request_done||a.google_radlink_request_done))c=
+.write("<"+e+' language=3D"JavaScript1.1" src=3D'+N(b)+"></"+e+">");else =
+if(a.google_ad_output=3D=3D"html"){if(a.name!=3D"google_ads_frame"){if(d!=
+=3Dnull)c.write('<div =
+id=3D"'+d+'">');if(Ja(a.google_ad_output,a.google_ad_client)){IDIHost.set=
+ModuleRelayUrl("http://pagead2.googlesyndication.com/pagead/idi_relay.htm=
+l");var =
+f=3D0;if(a.google_num_0ad_slots)f+=3Da.google_num_0ad_slots;if(a.google_n=
+um_ad_slots)f+=3Da.google_num_ad_slots;if(a.google_num_sdo_slots)f+=3D=0A=
+a.google_num_sdo_slots;var i=3D"google_inline_div"+f,k=3D"<div =
+id=3D"+N(i)+' =
+style=3D"position:relative;width:'+a.google_ad_width+'px"></div><div =
+style=3D"position:relative;width:'+a.google_ad_width+"px;height:"+a.googl=
+e_ad_height+'px;z-index:-1"></div>';c.write(k);var =
+n=3D"google_frame"+f,p=3Da.setTimeout(function(){IDIHost.unregisterListen=
+er(n)},5000);IDIHost.createModule(b,n,a.google_ad_width,a.google_ad_heigh=
+t,{callback:function(r,l){Ha(r,l,p)},pollingInterval:500,iframeAttrs:{sty=
+le:"position: absolute;left:0px",=0A=
+marginWidth:"0",marginHeight:"0",vspace:"0",hspace:"0",allowTransparency:=
+"true"},parentDivId:i})}else{c.write('<iframe name=3D"google_ads_frame" =
+width=3D'+N(a.google_ad_width)+" height=3D"+N(a.google_ad_height)+" =
+frameborder=3D"+N(a.google_ad_frameborder)+" src=3D"+N(b)+' =
+marginwidth=3D"0" marginheight=3D"0" vspace=3D"0" hspace=3D"0" =
+allowtransparency=3D"true" =
+scrolling=3D"no">');c.write("</iframe>")}if(d!=3Dnull)c.write("</div>")}}=
+else if(a.google_ad_output=3D=3D"textlink")c.write("<"+e+' =
+language=3D"JavaScript1.1" src=3D'+N(b)+=0A=
+"></"+e+">")}function Ka(a){for(var c in ga)a[c]=3Dnull;for(var c in =
+ha){if(c=3D=3D"google_correlator")continue;a[c]=3Dnull}}function =
+La(a){if(a.google_ad_format)return =
+a.google_ad_format.indexOf("_0ads")>0;return =
+a.google_ad_output!=3D"html"&&a.google_num_radlinks>0}function =
+Z(a){return a&&a.indexOf("_sdo")!=3D-1}function Ma(a){var =
+c=3Dnull,b=3Dwindow,d=3Ddocument,e=3Dnew =
+Date,f=3De.getTime(),i=3Db.google_ad_format;if(b.google_cpa_choice!=3Dc){=
+b.google_ad_url=3D"http://pagead2.googlesyndication.com/cpa/ads?";b.googl=
+e_ad_url+=3D=0A=
+"client=3D"+escape(Y(b.google_ad_client));b.google_ad_region=3D"_google_c=
+pa_region_";S("google_cpa_choice");if(typeof =
+d.characterSet!=3D"undefined")T("oe",d.characterSet);else if(typeof =
+d.charset!=3D"undefined")T("oe",d.charset)}else =
+if(Z(i)){b.google_ad_url=3D"http://pagead2.googlesyndication.com/pagead/s=
+do?";b.google_ad_url+=3D"client=3D"+escape(Fa(b.google_ad_client))}else{b=
+.google_ad_url=3D"http://pagead2.googlesyndication.com/pagead/ads?";b.goo=
+gle_ad_url+=3D"client=3D"+escape(Y(b.google_ad_client))}S("google_ad_host=
+");=0A=
+S("google_ad_host_tier_id");var =
+k=3Db.google_num_slots_by_client,n=3Db.google_num_slots_by_channel,p=3Db.=
+google_prev_ad_formats_by_region,r=3Db.google_prev_ad_slotnames_by_region=
+;if(b.google_ad_region=3D=3Dc&&b.google_ad_section!=3Dc)b.google_ad_regio=
+n=3Db.google_ad_section;var =
+l=3Db.google_ad_region=3D=3Dc?"":b.google_ad_region;if(Z(i)){b.google_num=
+_sdo_slots=3Db.google_num_sdo_slots?b.google_num_sdo_slots+1:1;if(b.googl=
+e_num_sdo_slots>4)return false}else =
+if(La(b)){b.google_num_0ad_slots=3Db.google_num_0ad_slots?b.google_num_0a=
+d_slots+=0A=
+1:1;if(b.google_num_0ad_slots>3)return false}else =
+if(b.google_cpa_choice=3D=3Dc){b.google_num_ad_slots=3Db.google_num_ad_sl=
+ots?b.google_num_ad_slots+1:1;if(b.google_num_slots_to_rotate){p[l]=3Dc;r=
+[l]=3Dc;if(b.google_num_slot_to_show=3D=3Dc)b.google_num_slot_to_show=3Df=
+%b.google_num_slots_to_rotate+1;if(b.google_num_slot_to_show!=3Db.google_=
+num_ad_slots)return false}else =
+if(b.google_num_ad_slots>6&&l=3D=3D"")return =
+false}R("dt",e.getTime());S("google_language");if(b.google_country)S("goo=
+gle_country");else S("google_gl");=0A=
+S("google_region");U("google_city");U("google_hints");S("google_safe");S(=
+"google_encoding");S("google_last_modified_time");U("google_alternate_ad_=
+url");S("google_alternate_color");S("google_skip");S("google_targeting");=
+var x=3Db.google_ad_client;if(!k[x]){k[x]=3D1;k.length+=3D1}else =
+k[x]+=3D1;if(p[l])if(!Z(i)){T("prev_fmts",p[l].toLowerCase());if(k.length=
+>1)R("slot",k[x])}if(r[l])T("prev_slotnames",r[l].toLowerCase());if(i&&!b=
+.google_ad_slot){T("format",i.toLowerCase());if(!Z(i))p[l]=3Dp[l]?p[l]+",=
+"+i:i}if(b.google_ad_slot)r[l]=3D=0A=
+r[l]?r[l]+","+b.google_ad_slot:b.google_ad_slot;S("google_max_num_ads");R=
+("output",b.google_ad_output);S("google_adtest");S("google_ad_callback");=
+S("google_ad_slot");U("google_correlator");if(b.google_ad_channel){U("goo=
+gle_ad_channel");var y=3D"",O=3Db.google_ad_channel.split(/[+, =
+]/);for(var K=3D0;K<O.length;K++){var h=3DO[K];if(!n[h])n[h]=3D1;else =
+y+=3Dh+"+"}T("pv_ch",y)}if(b.google_enable_first_party_cookie)T("cookie",=
+b._GA_googleCookieHelper.l());U("google_page_url");X("google_color_bg",f)=
+;X("google_color_text",=0A=
+f);X("google_color_link",f);X("google_color_url",f);X("google_color_borde=
+r",f);X("google_color_line",f);if(b.google_reuse_colors)R("reuse_colors",=
+1);else =
+R("reuse_colors",0);S("google_kw_type");U("google_kw");U("google_contents=
+");S("google_num_radlinks");S("google_max_radlink_len");S("google_rl_filt=
+ering");S("google_rl_mode");S("google_rt");U("google_rl_dest_url");S("goo=
+gle_num_radlinks_per_unit");S("google_ad_type");S("google_image_size");S(=
+"google_ad_region");S("google_feedback");U("google_referrer_url");=0A=
+U("google_page_location");R("frm",b.google_iframing);S("google_bid");S("g=
+oogle_cust_age");S("google_cust_gender");S("google_cust_interests");S("go=
+ogle_cust_id");S("google_cust_job");S("google_cust_u_url");S("google_cust=
+_l");S("google_cust_lh");S("google_cust_ch");S("google_ed");U("google_ui_=
+features");U("google_only_ads_with_video");U("google_disable_video_autopl=
+ay");if(a)T("ff",Ca(a));if(Na(b,d)&&d.body){var =
+o=3Dd.body.scrollHeight,q=3Dd.body.clientHeight;if(q&&o)T("cc",Math.round=
+(q*100/o))}aa();R("ga_vid",=0A=
+b.gaGlobal.vid);R("ga_sid",b.gaGlobal.sid);R("ga_hid",b.gaGlobal.hid);R("=
+ga_fc",b.gaGlobal.from_cookie);U("google_analytics_uacct");S("google_ad_o=
+verride");S("google_flash_version");Da(b,e);return true}function =
+Oa(){var a=3Dwindow,c=3Ddocument;Ea(a);var b;if(Math.random()<0.01){var =
+d=3D"google_temp_span";if(!za(d)){c.write("<span =
+id=3D"+d+"></span>");b=3Dza(d)}}var =
+e=3DMa(b);if(b)b&&b.parentNode?b.parentNode.removeChild(b):null;if(!e)ret=
+urn;Ia(a,c,a.google_ad_url,null);Ka(a)}function Pa(){Oa();return =
+true}function Na(a,=0A=
+c){return a.top.location=3D=3Dc.location}function Qa(a,c){var =
+b=3Dc.documentElement;if(Na(a,c))return =
+false;if(a.google_ad_width&&a.google_ad_height){var =
+d=3D1,e=3D1;if(a.innerHeight){d=3Da.innerWidth;e=3Da.innerHeight}else =
+if(b&&b.clientHeight){d=3Db.clientWidth;e=3Db.clientHeight}else =
+if(c.body){d=3Dc.body.clientWidth;e=3Dc.body.clientHeight}if(e>2*a.google=
+_ad_height||d>2*a.google_ad_width)return false}return true}function =
+Ra(a){var =
+c=3Dwindow,b=3Dnull,d=3Dc.onerror;c.onerror=3Da;if(c.google_ad_frameborde=
+r=3D=3Db)c.google_ad_frameborder=3D=0A=
+0;if(c.google_ad_output=3D=3Db)c.google_ad_output=3D"html";if(Z(c.google_=
+ad_format)){var =
+e=3Dc.google_ad_format.match(/^(\d+)x(\d+)_.*/);if(e){c.google_ad_width=3D=
+parseInt(e[1],10);c.google_ad_height=3DparseInt(e[2],10);c.google_ad_outp=
+ut=3D"html"}}if(c.google_ad_format=3D=3Db&&c.google_ad_output=3D=3D"html"=
+)c.google_ad_format=3Dc.google_ad_width+"x"+c.google_ad_height;Sa(c,docum=
+ent);if(c.google_num_slots_by_channel=3D=3Db)c.google_num_slots_by_channe=
+l=3D[];if(c.google_num_slots_by_client=3D=3Db)c.google_num_slots_by_clien=
+t=3D[];if(c.google_prev_ad_formats_by_region=3D=3D=0A=
+b)c.google_prev_ad_formats_by_region=3D[];if(c.google_prev_ad_slotnames_b=
+y_region=3D=3Db)c.google_prev_ad_slotnames_by_region=3D[];if(c.google_cor=
+relator=3D=3Db)c.google_correlator=3D(new =
+Date).getTime();if(c.google_adslot_loaded=3D=3Db)c.google_adslot_loaded=3D=
+{};if(c.google_adContentsBySlot=3D=3Db)c.google_adContentsBySlot=3D{};if(=
+c.google_flash_version=3D=3Db)c.google_flash_version=3DTa();c.onerror=3Dd=
+}function Ua(a){if(a in $)return $[a];return =
+$[a]=3Dnavigator.userAgent.toLowerCase().indexOf(a)!=3D-1}var =
+$=3D{};function Ja(a,c){if(a!=3D=0A=
+"html")return false;var =
+b=3D{};b["ca-pub-7027491298716603"]=3Dtrue;b["ca-pub-8344185808443527"]=3D=
+true;b["ca-google"]=3Dtrue;return b[Y(c)]!=3Dnull}function Va(a){var =
+c=3D{},b=3Da.split("?"),d=3Db[b.length-1].split("&");for(var =
+e=3D0;e<d.length;e++){var =
+f=3Dd[e].split("=3D");if(f[0])try{c[f[0].toLowerCase()]=3Df.length>1?(win=
+dow.decodeURIComponent?decodeURIComponent(f[1].replace(/\+/g," =
+")):unescape(f[1])):""}catch(i){}}return c}function Wa(){var =
+a=3Dwindow,c=3DVa(document.URL);if(c.google_ad_override){a.google_ad_over=
+ride=3D=0A=
+c.google_ad_override;a.google_adtest=3D"on"}}function =
+Ta(){if(navigator.plugins&&navigator.mimeTypes.length){var =
+a=3Dnavigator.plugins["Shockwave Flash"];if(a&&a.description)return =
+a.description.replace(/([a-zA-Z]|\s)+/,"").replace(/(\s)+r/,".")}else =
+if(navigator.userAgent&&navigator.userAgent.indexOf("Windows =
+CE")>=3D0){var c=3D3,b=3D1;while(b)try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash."+(c+1));c++}catch(d){b=3Dnu=
+ll}return c.toString()}else if(Ua("msie")&&!window.opera){var =
+b=3Dnull;try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.7")}catch(d){var c=3D=0A=
+0;try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");c=3D6;b.AllowScriptAcces=
+s=3D"always"}catch(d){if(c=3D=3D6)return c.toString()}try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash")}catch(d){}}if(b!=3Dnull){v=
+ar c=3Db.GetVariable("$version").split(" ")[1];return =
+c.replace(/,/g,".")}}return"0"}function Xa(a,c){for(var b in =
+c)a["google_"+b]=3Dc[b]}function Ya(a,c){if(!c)return a.location;return =
+a.referrer}function =
+Za(a,c){if(!c&&a.google_referrer_url=3D=3Dnull)return"0";else =
+if(c&&a.google_referrer_url=3D=3D=0A=
+null)return"1";else if(!c&&a.google_referrer_url!=3Dnull)return"2";else =
+if(c&&a.google_referrer_url!=3Dnull)return"3";return"4"}function =
+$a(a,c,b,d){a.page_url=3DYa(b,d);a.page_location=3Dnull}function =
+ab(a,c,b,d){a.page_url=3Dc.google_page_url;a.page_location=3DYa(b,d)||"EM=
+PTY"}function bb(a,c){var =
+b=3D{},d=3DQa(a,c);b.iframing=3DZa(a,d);if(!!a.google_page_url)ab(b,a,c,d=
+);else =
+$a(b,a,c,d);b.last_modified_time=3Dc.location=3D=3Db.page_url?Date.parse(=
+c.lastModified)/1000:null;b.referrer_url=3Dd?a.google_referrer_url:(a.goo=
+gle_page_url&&=0A=
+a.google_referrer_url?a.google_referrer_url:c.referrer);return =
+b}function cb(a){var =
+c=3D{},b=3Da.URL.substring(a.URL.lastIndexOf("http"));c.iframing=3Dnull;c=
+.page_url=3Db;c.page_location=3Da.location;c.last_modified_time=3Dnull;c.=
+referrer_url=3Db;return c}function Sa(a,c){var =
+b;b=3Da.google_page_url=3D=3Dnull&&db[c.domain]?cb(c):bb(a,c);Xa(a,b)}var=
+ db=3D{};db["ad.yieldmanager.com"]=3Dtrue;Wa();Ra(Pa);Oa();=0A=
+})()=0A=
+
+------=_NextPart_000_0019_01C8CC9D.11215CB0--

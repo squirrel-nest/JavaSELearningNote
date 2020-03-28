@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE validation-config SYSTEM "validation-config.dtd">
+<validation-config lang="auto">
+	<form id="resourceObjLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="resourceForm" show-error="alert" show-type="all">
+		<field name="tablename" display-name="自定义表名称" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="tblRelaTBLForm" show-error="alert" show-type="all">
+		<field name="tableid" display-name="关联表名称" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="fieldid" display-name="外键对应关联表字段">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="bldJSPForm" show-error="alert" show-type="all">
+		<field name="jsp_content" display-name="表单代码" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="fieldTBLForm" show-error="alert" show-type="all">
+		<field name="nameen" display-name="英文字段名" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="namecn" display-name="中文字段名" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="fieldlen" display-name="长度" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+</validation-config>

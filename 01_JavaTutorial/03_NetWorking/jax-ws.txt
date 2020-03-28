@@ -1,0 +1,1 @@
+Use Maven to trigger a wsgen & wsimport in a row, using wsdlLocation

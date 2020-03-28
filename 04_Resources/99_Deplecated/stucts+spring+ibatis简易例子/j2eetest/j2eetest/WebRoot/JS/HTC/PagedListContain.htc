@@ -1,0 +1,375 @@
+
+<ATTACH   EVENT="onclick" HANDLER="MouseOnClick" />
+<ATTACH   EVENT="ondblclick" HANDLER="MouseOnDBLClick" />
+<ATTACH   EVENT="onmousemove"  HANDLER="MouseMove">
+<ATTACH   EVENT="onkeypress" HANDLER="KeyPress" />
+<ATTACH   EVENT="onmousedown" HANDLER = "MouseDown"/>
+<ATTACH   EVENT="onmouseup" HANDLER = "MouseUp"/>
+<ATTACH   EVENT="onmouseleave" HANDLER = "MouseLeave"/>
+
+
+<public:method name="getGridData" />
+<public:method name="getRowData" />
+<public:method name="getCellData" />
+<public:method name="getSelectedRecordID" />
+
+<public:method name="sortTable"/>
+
+
+<script language="javascript">
+	var oMainContainer;
+	var oTable;	
+	var currentPage;
+	var pageSize;
+	var totalCount;
+	var maxPageNo;
+	
+	
+	function getGridData(){
+		var oTBody =  getTable().getElementsByTagName("TBODY")[0];
+		var aRows =  oTBody.getElementsByTagName("TR");
+		var gridData = new Array(aRows.length);
+		for(var i = 0 ; i < aRows.length ; i ++){
+			gridData[i] = getRowData(i+1); 
+		}
+		return gridData;
+	}
+
+	function getRowData(rowNum){
+		if(isNaN(rowNum) || rowNum < 1 || rowNum > getTotalCount()){
+			alert("The row is not exist!");
+			return;		
+		}
+		
+		var aCells = getRow(rowNum).getElementsByTagName("TD");
+		var rowData = new Array(aCells.length);
+		for(var i = 0 ; i < aCells.length ; i ++){
+			rowData[i] = aCells[i].innerText; 
+		}
+		return rowData;
+	}
+
+	function getCellData(rowNum , colNum){
+		if(isNaN(rowNum) || rowNum < 1 || rowNum > getTotalCount()){
+			alert("The row is not exist!");
+			return;		
+		}
+		
+		var oCell =  getCell(rowNum , colNum);
+		if(oCell == null){
+			alert("The cell is not exist!");
+			return;		
+		}
+		return oCell.innerText;
+	}
+
+	function getSelectedRecordID(){
+		var aCheck = element.document.getElementsByName(this.id + "_RowCheck");
+		var tmpString = "";
+		for(var i = 0 ; i < aCheck.length ; i++){
+			if(aCheck[i].checked){
+				tmpString += aCheck[i].value;
+				tmpString += ";";
+			}
+		}
+		
+		return tmpString.split(";");
+	}
+	
+	
+	function KeyPress(){
+		var oSrcElement = event.srcElement;
+		switch(event.keyCode){
+		
+			case 13 : 
+					if(oSrcElement.tagName == "INPUT"){
+						if(oSrcElement.id == "Page_DirectGo"){
+							turnPage(oSrcElement);	
+						}
+					}
+					break;
+		
+		}
+	
+	}
+
+	function MouseOnClick(){
+		var oSrcElement = event.srcElement;
+		if(oSrcElement.tagName == "A" && oSrcElement.command != null){
+			var command = oSrcElement.command;
+			if(null != command && command != ""){
+				eval(command + "()");		
+			}
+		}
+	}
+
+	function MouseOnDBLClick(){
+		//whatIdone += "|Mouse on DoubleClick|";
+	}
+	
+
+	function getTable(){
+	
+		if(null == oTable){
+			oTable = this.getElementsByTagName("TABLE")[0];
+		}
+		return oTable;
+	}
+	
+	function getRow(rowNum){
+		if(isNaN(rowNum) || rowNum < 1 || rowNum > getTotalCount()){
+			alert("The row is not exist!");
+			return;		
+		}
+		var targetRow = null;
+		var oTBody =  getTable().getElementsByTagName("TBODY")[0];
+		var aRows =  oTBody.getElementsByTagName("TR");
+		for(var i = 0 ; i < aRows.length ; i++){
+			if (aRows[i].rowid == rowNum){
+				targetRow = aRows[i];
+				break;
+			}
+		}
+		return targetRow;
+	}
+
+	
+	function getCell(rowNum , colNum){
+		var targetCell = null;
+		var aCells = getRow(rowNum).getElementsByTagName("TD");
+		for(var i = 0 ; i < aCells.length ; i++){
+			if (aCells[i].colNum == colNum){
+				targetCell = aCells[i];
+				break;
+			}
+		}
+		return targetCell;
+	}
+
+	
+	
+	function setPageInfo(){
+		
+		var oPageInfo = element.document.getElementsByName(this.id + "_pageInfo");
+		for(var i = 0 ; i < oPageInfo.length ; i++){
+			oPageInfo[i].innerText=getCurrentPage();
+		}
+		
+	}
+	
+	function getCurrentPage(){
+		return parseInt(getTable().currentPage);
+	
+	}
+
+	function getTotalCount(){
+		if(null == totalCount){
+			totalCount = parseInt(getTable().totalCount);
+		}
+		return totalCount;
+	}
+	 
+	function getPageSize(){
+		if(null == pageSize){
+			pageSize = parseInt(getTable().pageSize);
+		}
+		return pageSize;
+	}
+	
+	
+	function getMaxPageNo(){
+		if(null == maxPageNo){
+			maxPageNo = Math.ceil(getTotalCount() / getPageSize());
+		}
+		return maxPageNo;
+	}
+
+	function hideAllRows(){
+		var aTabRows = getTable().getElementsByTagName("TBODY")[0].getElementsByTagName("TR");
+		for(var i = 0 ; i < aTabRows.length ; i++){
+			aTabRows[i].style.display="none";
+		}
+	}
+	
+	function showCurrentPage(iBeginRowIndex , iEndRowIndex){
+		var aTabRows = getTable().getElementsByTagName("TBODY")[0].getElementsByTagName("TR");
+		if(aTabRows != null && aTabRows.length > 0){
+			var offsetBegin = (iBeginRowIndex - aTabRows[0].rowid + 1 > 0) ? iBeginRowIndex - aTabRows[0].rowid + 1 : 0;
+			var offsetEnd = (iEndRowIndex - aTabRows[0].rowid + 1> 0) ? iEndRowIndex - aTabRows[0].rowid + 1: 0;
+			for(var i = offsetBegin ; i < offsetEnd ; i++){
+				
+				aTabRows[i].style.display="block";
+			}
+		}
+	}
+	
+	function sortTable(colNum , order){
+	
+		var iBeginRowIndex = (getCurrentPage() - 1)*getPageSize();
+		var iEndRowIndex = getCurrentPage()*getPageSize()<= getTotalCount() ? getCurrentPage()*getPageSize() : getTotalCount();
+		
+		var oRows = new Array(iEndRowIndex - iBeginRowIndex);
+		var values = new Array(iEndRowIndex - iBeginRowIndex);
+		var indexs = new Array(iEndRowIndex - iBeginRowIndex);
+		
+		for(var i = iBeginRowIndex ; i < iEndRowIndex ; i++){
+			oRows[i - iBeginRowIndex] = new Array();
+			values[i - iBeginRowIndex] = getCell(i + 1 , colNum).innerText; 
+			indexs[i - iBeginRowIndex] = i - iBeginRowIndex;
+		}
+		
+		for(var i = iBeginRowIndex ; i < iEndRowIndex ; i++){
+			var aTDs = getRow(i + 1).getElementsByTagName("TD");
+			for(var j = 0 ; j < aTDs.length ; j ++){
+				oRows[i - iBeginRowIndex][j] = aTDs[j].innerHTML;
+			}
+			
+		}
+
+		for(var i = 0 ; i < values.length - 1 ; i++){
+			var index = i;
+			for(var j = i+1 ; j < values.length ; j++){
+				if(order){
+					if(values[index] > values[j]){
+						index = j;
+					}
+				}else{
+					if(values[index] < values[j]){
+						index = j;
+					}
+				}
+			}
+			
+			if(index != i){
+				var tmp = values[i];
+				values[i] = values[index];
+				values[index] = tmp;
+				
+				indexs[i] += indexs[index];
+				indexs[index] = indexs[i] - indexs[index];
+				indexs[i] -= indexs[index];
+			}
+		}	
+		
+		/*
+		for(var i = 0 ; i < indexs.length ; i++){
+			alert(indexs[i]);
+		}*/
+		
+		
+		
+		for(var i = iBeginRowIndex ; i < iEndRowIndex ; i++){
+			var aTDs = getRow(i + 1).getElementsByTagName("TD");
+			for(var j = 0 ; j < aTDs.length ; j ++){
+				aTDs[j].innerHTML = oRows[indexs[i-iBeginRowIndex]][j];
+			}
+		}
+	}
+	 
+	function page_Fisrt(){
+		var iCurrentPage = getCurrentPage();
+		if(iCurrentPage == 1){
+			return;
+		}
+		hideAllRows();
+		var iBeginRowIndex = 0;
+		var iEndRowIndex = getPageSize() * 1 <= getTotalCount() ? getPageSize() : getTotalCount();
+		//alert(iBeginRowIndex+","+iEndRowIndex);
+		showCurrentPage(iBeginRowIndex,iEndRowIndex);
+		getTable().currentPage = 1;
+		setPageInfo();
+		getTable().checkSelectState();
+	}
+
+	function page_Previous(){
+		var iCurrentPage = getCurrentPage();
+		if(iCurrentPage == 1){
+			return;
+		}
+		hideAllRows();
+		var iBeginRowIndex = (iCurrentPage - 2) * getPageSize();
+		var iEndRowIndex = (iCurrentPage - 1)*getPageSize();
+		//alert(iBeginRowIndex+","+iEndRowIndex);
+		showCurrentPage(iBeginRowIndex,iEndRowIndex);
+		getTable().currentPage = iCurrentPage - 1;
+		setPageInfo();
+		getTable().checkSelectState();
+	}
+
+	function page_Next(){
+		var iCurrentPage = getCurrentPage();
+		if(iCurrentPage * getPageSize() >= getTotalCount()){
+			return;
+		}
+		hideAllRows();
+		var iBeginRowIndex = iCurrentPage * getPageSize();
+		var iEndRowIndex = (iCurrentPage + 1) * getPageSize() <= getTotalCount() ? (iCurrentPage + 1) * getPageSize() : getTotalCount();
+		//alert(iBeginRowIndex+","+iEndRowIndex);
+		showCurrentPage(iBeginRowIndex,iEndRowIndex);
+		getTable().currentPage = iCurrentPage + 1;
+		setPageInfo();
+		getTable().checkSelectState();
+	}
+
+	function page_Last(){
+		var iCurrentPage = getCurrentPage();
+		if(iCurrentPage * getPageSize() >= getTotalCount()){
+			return;
+		}
+		hideAllRows();
+		var iBeginRowIndex = (getMaxPageNo() - 1) * getPageSize();
+		var iEndRowIndex = getTotalCount();
+		//alert(iBeginRowIndex+","+iEndRowIndex);
+		showCurrentPage(iBeginRowIndex,iEndRowIndex);
+		getTable().currentPage = getMaxPageNo();
+		setPageInfo();
+		getTable().checkSelectState();
+	}
+
+	function page_DirectGo(){
+		var oSrcElement = event.srcElement;
+		turnPage(oSrcElement.getElementsByTagName("INPUT")[0]);
+	}
+	
+	function turnPage(oPageNoInput){
+		
+		var targetPage = oPageNoInput.value;
+		
+		if(isNaN(targetPage) || targetPage < 1){
+			alert("Please enter page number!");
+			oPageNoInput.value = "";
+			return;
+		}
+		targetPage = Math.floor(targetPage);
+		if(targetPage > getMaxPageNo()){
+			alert("Page number is too big!");
+			oPageNoInput.value = "";
+			return;
+		}
+		
+		oPageNoInput.value = targetPage;
+		hideAllRows();
+		var iBeginRowIndex = (targetPage - 1) * getPageSize();
+		var iEndRowIndex = targetPage * getPageSize() <= getTotalCount() ? targetPage * getPageSize() : getTotalCount()
+		//alert(iBeginRowIndex+","+iEndRowIndex);
+		showCurrentPage(iBeginRowIndex,iEndRowIndex);
+		getTable().currentPage = targetPage;
+		setPageInfo();
+		getTable().checkSelectState();	
+	}
+	
+	function cancleEvent(){
+	
+		window.event.cancelBubble=true;
+		window.event.returnValue=false;
+	}
+	
+	
+	function resumeEvent(){
+		window.event.cancelBubble=false;
+		window.event.returnValue=true;
+	}
+	
+
+</script>
+	

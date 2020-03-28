@@ -1,0 +1,2 @@
+java命令执行jar包的方式
+http://www.cnblogs.com/adolfmc/archive/2012/10/07/2713562.html

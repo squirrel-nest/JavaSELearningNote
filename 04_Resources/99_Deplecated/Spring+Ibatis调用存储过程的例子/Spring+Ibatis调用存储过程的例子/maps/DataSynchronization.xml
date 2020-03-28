@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="DataSyn">
+       
+    <typeAlias alias="customerSynBase" type="com.ffcs.util.domain.datasynchronization.CustomerSynBase"/>
+    <typeAlias alias="circuitSynBase" type="com.ffcs.util.domain.datasynchronization.CircuitSynBase"/>
+    
+    <parameterMap id="synCustomerBase" class="customerSynBase" >
+        <parameter property="id" jdbcType="NUMERIC" javaType="java.lang.Integer" mode="IN"/>
+        <parameter property="output" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT"/>
+    </parameterMap>
+    
+     <parameterMap id="synCircuitBase" class="circuitSynBase" >
+        <parameter property="id" jdbcType="NUMERIC" javaType="java.lang.Integer" mode="IN"/>
+        <parameter property="property" jdbcType="NUMERIC" javaType="java.lang.Integer" mode="IN"/>
+        <parameter property="output" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT"/>
+    </parameterMap>
+    
+    <procedure id="synDataByCustomID" parameterMap="synCustomerBase" >
+        {call synDataByCustomID(?, ?)}
+    </procedure>   
+       
+    <procedure id="delDataByCustomID" parameterMap="synCustomerBase" >
+        {call delDataByCustomID(?, ?)}
+    </procedure>  
+    
+    <procedure id="synDataByCircuitID" parameterMap="synCircuitBase" >
+        {call synDataByCircuitID(?, ?, ?)}
+    </procedure>   
+   
+    <procedure id="delDataByCircuitID" parameterMap="synCircuitBase" >
+        {call delDataByCircuitID(?, ?, ?)}
+    </procedure>  
+</sqlMap>

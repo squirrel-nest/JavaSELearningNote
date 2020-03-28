@@ -1,0 +1,366 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0060)http://www.javaworld.com.tw/jute/post/print?bid=42&id=194572 -->
+<HTML><HEAD><TITLE>JavaWorld@TW - Tomcat6搭配jsf 1.2還是出問題.......</TITLE>
+<META http-equiv=Expires content=0>
+<META http-equiv=Content-Type content=text/html;charset=UTF-8>
+<STYLE type=text/css>BODY {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Tahoma,Georgia
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Tahoma,Georgia
+}
+H2 {
+	COLOR: #000000; FONT-FAMILY: Tahoma,Georgia
+}
+A {
+	TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #000080; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.text {
+	FONT-SIZE: 12px; FONT-FAMILY: Tahoma,Georgia
+}
+</STYLE>
+
+<SCRIPT language=javascript>
+var imgA = new Array(2);
+imgA[0] = new Image; 
+imgA[1] = new Image;
+imgA[0].src = 'images_zh_TW/icons/icon_print_off.gif';
+imgA[1].src = 'images_zh_TW/icons/icon_print_on.gif';
+</SCRIPT>
+
+<SCRIPT language=javascript>
+function printIt(){
+if (document.layers) {
+window.print() ;  
+ } 
+else {
+var WebBrowser = '<OBJECT ID="WebBrowser1" WIDTH=0 HEIGHT=0 CLASSID="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>';
+document.body.insertAdjacentHTML('beforeEnd', WebBrowser);
+WebBrowser1.ExecWB(6, 2);
+WebBrowser1.outerHTML = '';
+}
+}
+function copyText(obj) {
+var rng = document.body.createTextRange();
+rng.moveToElementText(obj);
+rng.scrollIntoView();
+rng.select();
+rng.execCommand("Copy");
+rng.collapse(false);
+}
+</SCRIPT>
+
+<META content="MSHTML 6.00.6000.16608" name=GENERATOR></HEAD>
+<BODY text=#000000 bgColor=#ffffff><BR clear=all>
+<CENTER>
+<TABLE width="80%" border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <H2>Topic: Tomcat6搭配jsf 1.2還是出問題.......</H2></TD></TR>
+  <TR>
+    <TD align=right><A onmouseover=javascript:imgPrint.src=imgA[1].src 
+      onclick="printIt();return false;" 
+      onmouseout=javascript:imgPrint.src=imgA[0].src 
+      href="http://www.javaworld.com.tw/jute/#"><IMG id=imgPrint 
+      src="JavaWorld@TW%20-%20Tomcat6搭配jsf%201_2還是出問題_______files/icon_print_off.gif" 
+      align=absMiddle border=0 name=imgPrint></A>&nbsp;&nbsp;<A 
+      onmouseover=javascript:imgPrint.src=imgA[1].src 
+      onclick="printIt();return false;" 
+      onmouseout=javascript:imgPrint.src=imgA[0].src 
+      href="http://www.javaworld.com.tw/jute/#"><B>Print this page</B></A> 
+  </TD></TR></TBODY></TABLE>
+<HR width="80%" noShade SIZE=2>
+
+<TABLE width="80%" border=0>
+  <TBODY>
+  <TR>
+    <TD><B>1.Tomcat6搭配jsf 1.2還是出問題.......</B> </TD>
+    <TD align=right><A 
+      href="javascript:copyText(document.all.text194572);"><B>Copy to 
+      clipboard</B></A></TD></TR>
+  <TR>
+    <TD colSpan=2><B>Posted by: </B>RR<BR><B>Posted on: </B>2007-05-29 
+      17:13<BR><BR><SPAN class=javascript id=text194572>爬過站上不少文，還是沒能把tomcat6 + 
+      jsf搞定......<IMG alt=Sad 
+      src="JavaWorld@TW%20-%20Tomcat6搭配jsf%201_2還是出問題_______files/smile_sad.gif" 
+      width=15> <BR><BR>小弟參考良葛格的jsf範例， <BR>專案目錄如下 <BR>tomcat6/webapps/jsf_test 
+      <BR><BR>tomcat6/lib內容如下： <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13<BR>14<BR>15<BR>16<BR>17<BR>18<BR>19<BR>20<BR>21<BR>22<BR>23<BR>24<BR>25<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE>annotations-api.jar
+catalina-ant.jar
+catalina-ha.jar
+catalina-tribes.jar
+catalina.jar
+datatypes.dtd
+el-api.jar
+html_basic.tld
+jasper-el.jar
+jasper-jdt.jar
+jasper.jar
+jsf-api.jar
+jsf-impl.jar
+jsf_core.tld
+jsp-api.jar
+jstl-1.2.jar
+servlet-api.jar
+tomcat-coyote.jar
+tomcat-dbcp.jar
+tomcat-i18n-es.jar
+tomcat-i18n-fr.jar
+tomcat-i18n-ja.jar
+web-facesconfig_1_0.dtd
+web-facesconfig_1_1.dtd
+XMLSchema.dtd
+</PRE></TD></TR></TBODY></TABLE><BR><BR>參考良葛格範例，有這幾個檔案： <BR>UserBean.java： 
+      <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE><FONT class=java-reserved_word><B>package</B></FONT> jsf.bean;
+&nbsp;
+<FONT class=java-reserved_word><B>public</B></FONT> <FONT class=java-reserved_word><B>class</B></FONT> UserBean
+<FONT class=java-bracket>{</FONT>
+  <FONT class=java-reserved_word><B>private</B></FONT> String name;
+&nbsp;
+  <FONT class=java-reserved_word><B>public</B></FONT> <FONT class=java-reserved_word><B>void</B></FONT> setName(String name)
+  <FONT class=java-bracket>{</FONT>this.name=name;<FONT class=java-bracket>}</FONT>
+&nbsp;
+  <FONT class=java-reserved_word><B>public</B></FONT> String getName()
+  <FONT class=java-bracket>{</FONT><FONT class=java-reserved_word><B>return</B></FONT> name;<FONT class=java-bracket>}</FONT>
+<FONT class=java-bracket>}</FONT>
+</PRE></TD></TR></TBODY></TABLE><BR><BR>index.jsp： <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13<BR>14<BR>15<BR>16<BR>17<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE>&lt;%@taglib uri=<FONT class=java-string>"http://java.sun.com/jsf/core"</FONT> prefix=<FONT class=java-string>"f"</FONT> %&gt;
+&lt;%@taglib uri=<FONT class=java-string>"http://java.sun.com/jsf/html"</FONT> prefix=<FONT class=java-string>"h"</FONT> %&gt;
+&lt;%@page contentType=<FONT class=java-string>"text/html;charset=Big5"</FONT>%&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;第一個JSF程式&lt;/title&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+&lt;f:view&gt;
+&lt;h:form&gt;
+  &lt;h3&gt;請輸入您的名稱&lt;/h3&gt;
+  名稱: &lt;h:inputText value=<FONT class=java-string>"#{user.name}"</FONT>/&gt;&lt;p&gt;
+  &lt;h:commandButton value=<FONT class=java-string>"送出"</FONT> action=<FONT class=java-string>"login"</FONT>/&gt;
+&lt;/h:form&gt;
+&lt;/f:view&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE></TD></TR></TBODY></TABLE><BR><BR>welcome.jsp： <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13<BR>14<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE>&lt;%@ taglib uri=<FONT class=java-string>"http://java.sun.com/jsf/core"</FONT> prefix=<FONT class=java-string>"f"</FONT> %&gt;
+&lt;%@ taglib uri=<FONT class=java-string>"http://java.sun.com/jsf/html"</FONT> prefix=<FONT class=java-string>"h"</FONT> %&gt;
+&lt;%@page contentType=<FONT class=java-string>"text/html;charset=Big5"</FONT>%&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;第一個JSF程式&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;f:view&gt;
+  &lt;h:outputText value=<FONT class=java-string>"#{user.name}"</FONT>/&gt; 您好！
+  &lt;h3&gt;歡迎使用 JavaServer Faces！&lt;/h3&gt;
+&lt;/f:view&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE></TD></TR></TBODY></TABLE><BR><BR>faces-config.xml： <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13<BR>14<BR>15<BR>16<BR>17<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE>&lt;?xml version=<FONT class=java-string>"1.0"</FONT>?&gt;
+&lt;!DOCTYPE faces-config PUBLIC <FONT class=java-string>"-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN"</FONT> <FONT class=java-string>"http://java.sun.com/dtd/web-facesconfig_1_0.dtd"</FONT>&gt;
+&lt;faces-config&gt;
+  &lt;navigation-rule&gt;
+    &lt;from-view-id&gt;index.jsp&lt;/from-view-id&gt;
+    &lt;navigation-case&gt;
+      &lt;from-outcome&gt;login&lt;/from-outcome&gt;
+      &lt;to-view-id&gt;/welcome.jsp&lt;/to-view-id&gt;
+    &lt;/navigation-case&gt;
+  &lt;/navigation-rule&gt;
+&nbsp;
+  &lt;managed-bean&gt;
+    &lt;managed-bean-name&gt;user&lt;/managed-bean-name&gt;
+    &lt;managed-bean-class&gt;jsf.bean.UserBean&lt;/managed-bean-class&gt;
+    &lt;managed-bean-scope&gt;session&lt;/managed-bean-scope&gt;
+  &lt;/managed-bean&gt;
+&lt;/faces-config&gt;
+</PRE></TD></TR></TBODY></TABLE><BR><BR>執行http://localhost:8080/jsf_test/index.faces結果為404 
+      <BR><BR>執行http://localhost:8080/jsf_test/index.jsp結果如下： 
+      <BR>執行http://localhost:8080/jsf_test/結果如下： <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13<BR>14<BR>15<BR>16<BR>17<BR>18<BR>19<BR>20<BR>21<BR>22<BR>23<BR>24<BR>25<BR>26<BR>27<BR>28<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE>exception 
+&nbsp;
+org.apache.jasper.JasperException: java.lang.RuntimeException: Cannot find FacesContext
+  org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:541)
+  org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:435)
+  org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:320)
+  org.apache.jasper.servlet.JspServlet.service(JspServlet.java:266)
+  javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+&nbsp;
+root cause 
+&nbsp;
+java.lang.RuntimeException: Cannot find FacesContext
+  javax.faces.webapp.UIComponentClassicTagBase.getFacesContext(UIComponentClassicTagBase.java:1797)
+  javax.faces.webapp.UIComponentClassicTagBase.setJspId(UIComponentClassicTagBase.java:1614)
+  org.apache.jsp.index_jsp._jspx_meth_f_005fview_005f0(index_jsp.java:100)
+  org.apache.jsp.index_jsp._jspService(index_jsp.java:74)
+  org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+  javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+  org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:393)
+  org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:320)
+  org.apache.jasper.servlet.JspServlet.service(JspServlet.java:266)
+  javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+&nbsp;
+note The full stack trace of the root cause is available in the Apache Tomcat/6.0.13 logs.
+&nbsp;
+--------------------------------------------------------------------------------
+&nbsp;
+Apache Tomcat/6.0.13
+</PRE></TD></TR></TBODY></TABLE><BR><BR>小弟是否漏了什麼地方，怎會出現Cannot find 
+      FacesContext ？ <BR>請各位大大鼎力相助，實在受不了IBM WebSphere啟動一次要兩分鐘以上的龜速了...<IMG 
+      alt=Dead 
+      src="JavaWorld@TW%20-%20Tomcat6搭配jsf%201_2還是出問題_______files/smile_dead.gif" 
+      width=15> </SPAN></TD></TR></TBODY></TABLE>
+<HR width="80%" noShade SIZE=2>
+
+<TABLE width="80%" border=0>
+  <TBODY>
+  <TR>
+    <TD><B>2.Re:Tomcat6搭配jsf 1.2還是出問題.......</B> [Re: RR]</TD>
+    <TD align=right><A 
+      href="javascript:copyText(document.all.text194574);"><B>Copy to 
+      clipboard</B></A></TD></TR>
+  <TR>
+    <TD colSpan=2><B>Posted by: </B>koji<BR><B>Posted on: </B>2007-05-29 
+      17:36<BR><BR><SPAN class=javascript id=text194574>你的web.xml? 
+      <BR>該不會是設定/faces/*吧? <BR>那就得打網址 <BR><A class=ilink 
+      href="http://localhost:8080/jsf_test/faces/index.jsp" 
+      target=_blank>http://localhost:8080/jsf_test/faces/index.jsp</A> 
+      <BR><BR>koji </SPAN></TD></TR></TBODY></TABLE>
+<HR width="80%" noShade SIZE=2>
+
+<TABLE width="80%" border=0>
+  <TBODY>
+  <TR>
+    <TD><B>3.Re:Tomcat6搭配jsf 1.2還是出問題.......</B> [Re: RR]</TD>
+    <TD align=right><A 
+      href="javascript:copyText(document.all.text194575);"><B>Copy to 
+      clipboard</B></A></TD></TR>
+  <TR>
+    <TD colSpan=2><B>Posted by: </B>RR<BR><B>Posted on: </B>2007-05-29 
+      17:47<BR><BR><SPAN class=javascript id=text194575>忘了貼出web.xml內容了： <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR>5<BR>6<BR>7<BR>8<BR>9<BR>10<BR>11<BR>12<BR>13<BR>14<BR>15<BR>16<BR>17<BR>18<BR>19<BR>20<BR>21<BR>22<BR>23<BR>24<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE>&lt;?xml version=<FONT class=java-string>"1.0"</FONT> encoding=<FONT class=java-string>"ISO-8859-1"</FONT>?&gt;
+&nbsp;
+&lt;web-app xmlns=<FONT class=java-string>"http://java.sun.com/xml/ns/javaee"</FONT>
+   xmlns:xsi=<FONT class=java-string>"http://www.w3.org/2001/XMLSchema-instance"</FONT>
+   xsi:schemaLocation=<FONT class=java-string>"http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"</FONT>
+   version=<FONT class=java-string>"2.5"</FONT>&gt;
+&nbsp;
+  &lt;servlet id=<FONT class=java-string>"Servlet_1166429601686"</FONT>&gt;
+    &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
+    &lt;load-on-startup&gt;-1&lt;/load-on-startup&gt;
+  &lt;/servlet&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/faces<FONT class=java-comment>/*&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+  &lt;session-config&gt;
+    &lt;session-timeout&gt;30&lt;/session-timeout&gt;
+  &lt;/session-config&gt;
+  &lt;listener&gt;
+    &lt;listener-class&gt;com.sun.faces.config.ConfigureListener&lt;/listener-class&gt;
+  &lt;/listener&gt;
+
+&lt;/web-app&gt;
+</FONT></PRE></TD></TR></TBODY></TABLE><BR><BR>果然如同koji大說的一樣，路徑要多個faces............... 
+      <BR><BR>然後看到大大的圖片下面：愚蠢的藍星人呀~ <BR>:-$頓時有種汗顏的感覺 
+      <BR><BR>非常謝謝大大的提示，終於可以run出第一個jsf頁面了 
+      <BR>不過，我是用Gel寫的，還要想辦法整合進eclipse就是了......... </SPAN></TD></TR></TBODY></TABLE>
+<HR width="80%" noShade SIZE=2>
+
+<TABLE width="80%" border=0>
+  <TBODY>
+  <TR>
+    <TD><B>4.Re:Tomcat6搭配jsf 1.2還是出問題.......</B> [Re: RR]</TD>
+    <TD align=right><A 
+      href="javascript:copyText(document.all.text194576);"><B>Copy to 
+      clipboard</B></A></TD></TR>
+  <TR>
+    <TD colSpan=2><B>Posted by: </B>koji<BR><B>Posted on: </B>2007-05-29 
+      17:55<BR><BR><SPAN class=javascript id=text194576>XD我也是藍星人 <BR><BR>如果你把 
+      <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE>  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/faces<FONT class=java-comment>/*&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+</FONT></PRE></TD></TR></TBODY></TABLE><BR>改成 <BR>
+      <TABLE class=java cellSpacing=1 cellPadding=3 bgColor=#999999 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=left width=1 bgColor=#dddddd><PRE><FONT color=#555555>1<BR>2<BR>3<BR>4<BR></FONT></PRE></TD>
+          <TD vAlign=top align=left bgColor=#ffffff><PRE>  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;*.faces&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+</PRE></TD></TR></TBODY></TABLE><BR>就可以打xxx.faces不用加上/faces/ 
+      <BR>這邊常常會初用jsf忘記 <BR><BR>koji </SPAN></TD></TR></TBODY></TABLE>
+<HR width="80%" noShade SIZE=2>
+
+<TABLE width="80%" border=0>
+  <TBODY>
+  <TR>
+    <TD><B>5.Re:Tomcat6搭配jsf 1.2還是出問題.......</B> [Re: RR]</TD>
+    <TD align=right><A 
+      href="javascript:copyText(document.all.text195105);"><B>Copy to 
+      clipboard</B></A></TD></TR>
+  <TR>
+    <TD colSpan=2><B>Posted by: </B>pxg414<BR><B>Posted on: </B>2007-06-02 
+      17:28<BR><BR><SPAN class=javascript id=text195105>tomcat must be 
+      v6.0.13,各种配置文件的头符合jsf1.2的要求，可以到jsf1.2的下载包中考出相应文件头，在工程的lib中只可存在jsf1.2相关的2个jar和jst1.2l相关的jar。并且编译路径中要tomcat下的el-api.jar. 
+      </SPAN></TD></TR></TBODY></TABLE>
+<HR width="80%" noShade SIZE=2>
+<BR>
+<CENTER><A 
+href="http://www.javaworld.com.tw/jute/index.html">http://www.javaworld.com.tw/jute/index.html</A><BR><BR><A 
+href="http://www.cjsdn.com/" target=_blank><IMG 
+src="JavaWorld@TW%20-%20Tomcat6搭配jsf%201_2還是出問題_______files/powered.gif" 
+border=0></A> <BR><FONT class=text><FONT color=#808080>Powered by <A 
+href="http://www.cjsdn.com/" target=_blank>Powerful JuteForum</A>® Version Jute 
+1.5.8 <BR>Copyright© 2002-2003 Rainman Zhu,Zua,Netboy,Scott. All Rights 
+Reserved.</FONT></FONT> </CENTER></CENTER></BODY></HTML>

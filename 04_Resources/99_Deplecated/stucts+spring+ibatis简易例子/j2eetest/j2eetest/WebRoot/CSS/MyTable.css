@@ -1,0 +1,59 @@
+Table{
+	FONT: 14px verdana,arial,helvetica;
+	border-collapse:collapse;
+}
+
+.THead{
+	
+	background-color: #BBAA99;
+}
+
+
+TR{
+	background-color: #FFFFFF;
+}
+TR.over{
+	background-color: #DDEEFF;
+}
+
+TR.selected{
+	background-color: #AABBFF;
+}
+
+TD {
+	font-size: 14px;
+}
+
+TD.InHead{
+	font-weight: bold;
+	text-align:center;
+}
+
+
+INPUT{
+	FONT: 14px verdana,arial,helvetica;
+	border: 1px solid #bdbdaf;
+	height:20
+}
+
+A {
+	color: #3C3C7E;
+	text-decoration: none;
+	cursor : hand;
+}
+
+A:link {
+	text-decoration: none;
+}
+
+A:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+A:active {
+	text-decoration: underline;
+}
+
+A:visited {
+}

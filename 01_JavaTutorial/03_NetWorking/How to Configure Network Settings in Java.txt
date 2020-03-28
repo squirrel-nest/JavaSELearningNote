@@ -1,0 +1,55 @@
+How to Configure Network Settings in Java
+http://stackabuse.com/how-to-configure-network-settings-in-java/
+
+
+Proxies
+Setting the proxy server and port:
+
+System.setProperty("http.proxyHost", "proxy.example.com");
+
+System.setProperty("http.proxyPort", "80");  
+For an HTTPS proxy, just change 'http' to 'https' for each property.
+
+Or you can just use the system's proxies:
+
+System.setProperty("java.net.useSystemProxies", "true");  
+IP Protocol
+Disabling the IPv6 stack and forcing IPv4:
+
+System.setProperty("java.net.preferIPv4Stack" , "true");  
+Use IPv6 addresses when possible:
+
+System.setProperty("java.net.preferIPv6Addresses" , "true");  
+SOCKS
+Setting a SOCKS proxy:
+
+System.setProperty("socksProxyHost" , "socks.example.com");
+
+System.setProperty("socksProxyPort" , "1080")  
+Specify the SOCKS protocol used by the server:
+
+System.setProperty("socksProxyVersion" , "4");  
+Authenticating with a SOCKSv5 proxy server:
+
+System.setProperty("java.net.socks.username" , "myusername");
+
+System.setProperty("java.net.socks.password" , "mypassword");  
+SSL/Certificates
+Setting a TrustStore that was created with keytool:
+
+System.setProperty("javax.net.ssl.trustStore", "/path/to/truststore");  
+Misc. Properties
+Set the string sent in the User-Agent request header in HTTP requests:
+
+System.setProperty("http.agent", "foobar");  
+Keep in mind that this new string will have "Java/" appended at the end. So the example above would yield "foobar Java/1.6.0" if the current Java version being used is 1.6.0.
+
+Prevent persistent connections:
+
+System.setProperty("http.keepalive", "false");  
+Set the maximum number of idle connections that will be kept alive (http.keepalive must be true):
+
+System.setProperty("http.maxConnections", "5");  
+Set the maximum number of redirects that will be followed for an HTTP request:
+
+System.setProperty("http.maxRedirects", "20");  

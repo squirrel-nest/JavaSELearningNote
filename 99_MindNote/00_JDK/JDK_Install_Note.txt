@@ -1,0 +1,19 @@
+1.网址
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+2.右键：复制链接地址
+3.迅雷下载（注：不能用chrome下载，会出错）
+
+4.修改环境变量JAVA_HOME:
+	JAVA_HOME=C:\Program Files\Java\jdk1.8.0_31
+5.修改Path(用变量，不用修改)
+C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\NetSarang;C:\app\Administrator\product\11.2.0\dbhome_1\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;%JAVA_HOME%\bin;%MAVEN_HOME%\bin;%MYSQL_HOME%\bin;C:\Program Files (x86)\MySQL\MySQL Utilities\;%ANT_HOME%\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Calibre2\
+
+
+
+
+
+
+5.Eclipse更改
+
+linux参考：E:\InstallNotes\LinuxAndUnix\0_Linux\CentOS\2_Note\1_0_Linux_Java\Linux_JDK安装及设置_Note.txt

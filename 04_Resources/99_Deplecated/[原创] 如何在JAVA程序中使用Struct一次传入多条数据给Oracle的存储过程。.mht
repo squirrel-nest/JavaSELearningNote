@@ -1,0 +1,4936 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA3ILGjtOY=?=
+Subject: =?gb2312?B?W9SttLRdIMjnus7U2kpBVkGzzNDy1tDKudPDU3RydWN00ru0zrSryOu24A==?=
+	=?gb2312?B?zPXK/b7duPhPcmFjbGW1xLTmtKK5/bPMoaM=?=
+Date: Thu, 12 Jun 2008 17:52:06 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C8CCB5.074C0AB0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18000
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=123&threadID=44925&messageID=273401
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>[=D4=AD=B4=B4] =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3</TITLE>
+<META http-equiv=3Dcontent-type content=3D"text/html; charset=3DGBK">
+<META=20
+content=3D"BEA =
+Dev2Dev=CC=E1=B9=A9=B5=C4=BC=BC=CA=F5=C8=CB=D4=B1=B5=C4=CC=D6=C2=DB=C9=E7=
+=C7=F8=A3=AC=D5=E2=C0=EF=D3=D0=D7=EE=D0=C2=B5=C4BEA=B5=C4=B2=FA=C6=B7=CE=CA=
+=CC=E2=BD=E2=B4=F0=A3=ACJava=BF=AA=B7=A2=BC=BC=CA=F5=CC=D6=C2=DB=A3=AC=D7=
+=EE=D0=C2=BF=AA=D4=B4=CF=EE=C4=BF=B5=C4=CC=D6=C2=DB=A3=AC=D3=D0BEA=B8=F7=CE=
+=BB=D7=A8=BC=D2=CE=AA=C4=FA=BD=E2=B4=F0=D2=C9=C4=D1=CE=CA=CC=E2=A1=A3=B0=E5=
+=BF=E9=D6=F7=D2=AA=B0=FC=C0=A8=A3=BAWeb Application =
+Development=A1=A2Develop Tools =A1=A2Eclipse=A1=A2Open Source =A1=A2SOA =
+&amp; Web Services =A1=A2BEA WebLogic Server =A1=A2BEA AquaLogic =
+=A1=A2Tuxedo=B5=C8=A1=A3"=20
+name=3Ddescription>
+<META=20
+content=3D"java,java=BF=AA=B7=A2=C2=DB=CC=B3,java=BF=AA=B7=A2=C9=E7=C7=F8=
+,java=D0=CB=C8=A4=C8=A6,Eclipse,Hibernate,spring,webwork,struts,weblogic,=
+=BF=AA=B7=A2=C2=DB=CC=B3,ajax,soa,weblogic =
+server,tuxedo,AquaLogic,Portal,Web Application Development "=20
+name=3Dkeywords>
+<STYLE type=3Dtext/css media=3Dall>@import url( /css/main.css );
+</STYLE>
+
+<STYLE type=3Dtext/css media=3Dall>@import url( /css/custom.css );
+</STYLE>
+<LINK href=3D"http://dev2dev.bea.com.cn/bbs/style.jsp" type=3Dtext/css=20
+rel=3Dstylesheet>
+<SCRIPT language=3DJavaScript1.2=20
+src=3D"http://dev2dev.bea.com.cn/content/scripts/dev2dev_searchform.js"><=
+/SCRIPT>
+<!--  =C8=AB=BE=D6body=B1=EA=C7=A9  -->
+<META content=3D"MSHTML 6.00.6001.18063" name=3DGENERATOR></HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV class=3Dhide><A title=3D"Skip navigation"=20
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#wrap">=CC=F8=B5=BD=B5=BC=BA=BD</A></DI=
+V><!--  =D2=B3=CA=D7  -->
+<DIV id=3Dfloater>
+<DIV class=3Dbuttons>
+<SCRIPT language=3DJavaScript1.1 =
+src=3D"http://dev2dev.bea.com.cn/bbs/userlg.jsp"=20
+type=3Dtext/JavaScript></SCRIPT>
+</DIV>
+<DIV class=3Dsearchbox>
+<SCRIPT language=3DJavaScript type=3Dtext/JavaScript>=0A=
+<!--=0A=
+    outputsearchform();=0A=
+//-->=0A=
+</SCRIPT>
+</DIV></DIV>
+<DIV id=3Dheadergraphic><!-- =CA=D7=B2=BF=D6=F7=CD=BC --><!--=0A=
+  <table width=3D"100%"  border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0">=0A=
+  <tr>=0A=
+    <td class=3D"toptd"><a href=3D"http://dev2dev.bea.com.cn"><img =
+src=3D"/images/header_d2d_text.gif" alt=3D"dev2dev.bea.com.cn" =
+/></a></td>=0A=
+  </tr>=0A=
+  </table>-->
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"72%" border=3D0>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dbottom align=3Dleft><A =
+href=3D"http://dev2dev.bea.com.cn/"><IMG=20
+      height=3D85 alt=3D"BEA Dev2Dev"=20
+      src=3D"http://dev2dev.bea.com/images/header_d2d_text.gif" =
+width=3D205=20
+      border=3D0></A> </TD>
+    <TD vAlign=3Dcenter align=3Dright><A><IMG alt=3D"Oracle and BEA"=20
+      src=3D"http://dev2dev.bea.com/images/oracle_bea.gif"=20
+  border=3D0></A></TD></TR></TBODY></TABLE><!-- =
+=CA=D7=B2=BF=D6=F7=CD=BC=BD=E1=CA=F8 --></DIV>
+<DIV class=3Dblueline><IMG height=3D1 alt=3D""=20
+src=3D"http://dev2dev.bea.com.cn/images/_.gif" width=3D1></DIV><!-- =
+=D2=B3=CA=D7=D6=F7=B5=BC=BA=BD -->
+<DIV id=3Dgraybar>
+<DIV class=3Dtopnav><A =
+href=3D"http://dev2dev.bea.com.cn/">=CA=D7=D2=B3</A> <A=20
+href=3D"http://dev2dev.bea.com.cn/resource/index.html">=D7=CA=D4=B4=D6=D0=
+=D0=C4</A> <A=20
+href=3D"http://dev2dev.bea.com.cn/bbs/school/index.html">dev2dev=D1=A7=CC=
+=C3</A> <A=20
+href=3D"http://dev2dev.bea.com.cn/bbs/index.jsp">=D4=DA=CF=DF=BC=BC=CA=F5=
+=C2=DB=CC=B3</A> <A=20
+href=3D"http://dev2dev.bea.com.cn/blog/">=D7=A8=BC=D2Blog</A> <A=20
+href=3D"http://dev2dev.bea.com.cn/usergroup/index.html">User Group</A> =
+<A=20
+href=3D"http://dev2dev.bea.com.cn/resource/codeshare/index.html">CodeShar=
+e</A>=20
+</DIV></DIV>
+<DIV id=3Ddotdouble001><IMG height=3D3 alt=3D""=20
+src=3D"http://dev2dev.bea.com.cn/images/_.gif" width=3D1></DIV>
+<SCRIPT language=3DJavaScript =
+src=3D"http://dev2dev.bea.com.cn/bbs/utils.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT language=3DJavaScript>=20
+<!--
+var docancelbutton =3D false;
+function checkPostForm(theForm)
+{
+//=C7=EB=BD=AB=CF=C2=C3=E6=B4=FA=C2=EB=CC=ED=BC=D3=B5=BDform=B5=C4=B6=A8=D2=
+=E5=BD=C5=B1=BE=D6=D0
+//   onsubmit=3D"javascript:return Juge(this);"
+//=CF=C2=C3=E6=BC=D3=C8=EB=BC=EC=B2=E2form=D6=D0=B5=C4=B6=D4=CF=F3=D6=B5
+//=C7=EB=B2=BB=D2=AA=C9=BE=B3=FD--begin--=BA=CD--end--=B5=C4=B1=EA=CA=B6
+//--begin--
+	if(!docancelbutton){
+	   if(theForm.subject.value =3D=3D "")
+	   {alert("=C7=EB=CA=E4=C8=EB=B1=EA=CC=E2!");
+		theForm.subject.focus();
+		return (false);=20
+		}
+	   if(theForm.body.value =3D=3D "")
+	   {alert("=C7=EB=CA=E4=C8=EB=C4=DA=C8=DD!");
+		theForm.body.focus();
+		return (false);=20
+		}
+	}
+//--end--
+	return true;
+}
+
+-->
+</SCRIPT>
+
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"98%" align=3Dcenter =
+border=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD width=3D"98%"><SPAN class=3Dbright-breadcrumbs><A=20
+      =
+href=3D"http://dev2dev.bea.com.cn/bbs/index.jspa?categoryID=3D1">=C2=DB=CC=
+=B3=CA=D7=D2=B3</A> &raquo; <A=20
+      =
+href=3D"http://dev2dev.bea.com.cn/bbs/index.jspa?categoryID=3D2">=BC=BC=CA=
+=F5=D7=A8=C7=F8</A> &raquo; <A=20
+      =
+href=3D"http://dev2dev.bea.com.cn/bbs/forum.jspa?forumID=3D123&amp;start=3D=
+0">JDBC=20
+      &amp; Transaction</A> </SPAN>
+      <P><SPAN class=3Dbright-page-title>=D6=F7=CC=E2:</SPAN><SPAN=20
+      style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; WORD-WRAP: =
+break-word">&nbsp;[=D4=AD=B4=B4]=20
+      =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3 </SPAN></P><SPAN=20
+      class=3Dbright-info-message>
+      <SCRIPT src=3D"http://dev2dev.bea.com.cn/adv/bbsadv.js"=20
+      type=3Dtext/JavaScript></SCRIPT>
+      </SPAN></TD>
+    <TD width=3D"1%"><IMG height=3D1=20
+      src=3D"http://dev2dev.bea.com.cn/bbs/images/blank.gif" width=3D10 =
+border=3D0></TD>
+    <TD width=3D"1%">
+      <SCRIPT language=3Djavascript>
+function gotoURL(obj) {
+    var id =3D obj.options[obj.selectedIndex].value;
+    if(id !=3D '') {
+        window.location.href=3D'forum.jspa?forumID=3D'+id+'&start=3D0';
+    }
+}
+function openWin(url,title,p) {
+	window.open(url,title,p);
+}
+</SCRIPT>
+      <SPAN class=3Dbright-account-box>
+      <TABLE class=3Dbright-box cellSpacing=3D0 cellPadding=3D2 =
+width=3D210 border=3D0>
+        <TBODY>
+        <TR>
+          <TH colSpan=3D2>=BB=B6=D3=AD, <I>=BF=CD=C8=CB</I> </TH></TR>
+        <TR>
+          <TD width=3D"1%"><IMG height=3D16=20
+            src=3D"http://dev2dev.bea.com.cn/bbs/images/jifen_bbs.gif" =
+width=3D16=20
+            align=3DabsMiddle border=3D0></TD>
+          <TD width=3D"99%"><A =
+href=3D"http://dev2dev.bea.com.cn/dev2dev.html"=20
+            target=3D_blank>=BB=FD=B7=D6=BD=B1=C0=F8</A> </TD></TR>
+        <TR>
+          <TD width=3D"1%"><A=20
+            href=3D"http://dev2dev.bea.com.cn/bbs/settings.jsp"><IMG =
+height=3D16=20
+            =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/settings-16x16.gif"=20
+            width=3D16 align=3DabsMiddle border=3D0></A></TD>
+          <TD width=3D"99%"><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/settings!default.jspa">=B7=C3=BF=CD=
+=C9=E8=D6=C3</A>=20
+          </TD></TR>
+        <TR>
+          <TD colSpan=3D3>=D7=AA=B5=BD <SELECT =
+onchange=3Djavascript:gotoURL(this); size=3D1=20
+            name=3DtargetForumID> <OPTION value=3D"" =
+selected>[=B8=F9=C0=E0=B1=F0]<OPTION=20
+              value=3D"">[=B0=E6=CE=F1]<OPTION =
+value=3D61>&nbsp;&#8226;&nbsp; =C2=DB=CC=B3=B9=A4=D7=F7=CA=D2<OPTION=20
+              value=3D"">[=B2=FA=C6=B7=D7=A8=C7=F8]<OPTION =
+value=3D4>&nbsp;&#8226;&nbsp; Tuxedo<OPTION=20
+              value=3D142667>&nbsp;&#8226;&nbsp; BEA AquaLogic<OPTION=20
+              value=3D81>&nbsp;&#8226;&nbsp; BEA WebLogic Server<OPTION=20
+              value=3D101>&nbsp;&#8226;&nbsp; BEA WebLogic Portal<OPTION =
+
+              value=3D102>&nbsp;&#8226;&nbsp; BEA WebLogic =
+Integration<OPTION=20
+              value=3D103>&nbsp;&#8226;&nbsp; BEA Workshop<OPTION=20
+              value=3D91755>&nbsp;&#8226;&nbsp; BEA WebLogic RFID<OPTION =
+
+              value=3D126>&nbsp;&#8226;&nbsp; BEA General<OPTION =
+value=3D"">[=BC=BC=CA=F5=D7=A8=C7=F8]<OPTION=20
+              value=3D121>&nbsp;&#8226;&nbsp; Web Application =
+Development<OPTION=20
+              value=3D123>&nbsp;&#8226;&nbsp; JDBC &amp; =
+Transaction<OPTION=20
+              value=3D122>&nbsp;&#8226;&nbsp; EJB Development<OPTION=20
+              value=3D125>&nbsp;&#8226;&nbsp; Design Pattern<OPTION=20
+              value=3D124>&nbsp;&#8226;&nbsp; Develop Tools<OPTION=20
+              value=3D64104>&nbsp;&#8226;&nbsp; Open Source<OPTION=20
+              value=3D97301>&nbsp;&#8226;&nbsp; SOA &amp; Web =
+Services<OPTION=20
+              value=3D"">[=D0=D0=D2=B5=D7=A8=C7=F8]<OPTION =
+value=3D98364>&nbsp;&#8226;&nbsp; Telecom=20
+              Technology<OPTION value=3D"">[BEA=BB=EE=B6=AF]<OPTION=20
+              value=3D156363>&nbsp;&#8226;&nbsp; BEAWorld 2007 =
+=C8=AB=C7=F2=B4=F3=BB=E1=A3=A8=C9=CF=BA=A3=A3=A9<OPTION=20
+              value=3D129220>&nbsp;&#8226;&nbsp; 2007 BEA =
+TMT=B4=B4=D0=C2=B4=F3=C8=FC<OPTION=20
+              value=3D2474>&nbsp;&#8226;&nbsp; =B1=B1=BE=A9 User =
+Group<OPTION=20
+              value=3D11362>&nbsp;&#8226;&nbsp; =C9=CF=BA=A3 User =
+Group<OPTION=20
+              value=3D12177>&nbsp;&#8226;&nbsp; =C7=E0=B5=BA User =
+Group<OPTION=20
+              value=3D12378>&nbsp;&#8226;&nbsp; =BA=BC=D6=DD User =
+Group<OPTION=20
+              value=3D15871>&nbsp;&#8226;&nbsp; =CC=EC=BD=F2 User =
+Group<OPTION=20
+              value=3D29304>&nbsp;&#8226;&nbsp; =B9=E3=D6=DD User =
+Group<OPTION=20
+              value=3D82356>&nbsp;&#8226;&nbsp; =B3=C9=B6=BC User =
+Group<OPTION=20
+              value=3D95869>&nbsp;&#8226;&nbsp; =B3=A4=C9=B3 User =
+Group<OPTION=20
+              value=3D"">[=D0=A1=ED=AC=D2=BB=BB=E1]<OPTION =
+value=3D142>&nbsp;&#8226;&nbsp; =B3=CC=D0=F2=C8=CB=C9=FA<OPTION=20
+              value=3D3738>&nbsp;&#8226;&nbsp; =
+=C0=FA=CA=B7=B5=C4=CC=EC=BF=D5<OPTION =
+value=3D"">[=D6=BB=B6=C1=C0=B8=C4=BF]<OPTION=20
+              value=3D1>&nbsp;&#8226;&nbsp; =
+WebLogic=BF=AA=B7=A2</OPTION></SELECT>=20
+      </TD></TR></TBODY></TABLE></SPAN></TD></TR></TBODY></TABLE><SPAN=20
+class=3Dbright-button>
+<TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=3D0 cellPadding=3D3 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!default.jspa?forumID=3D123"><I=
+MG=20
+            height=3D16 =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/post-16x16.gif"=20
+            width=3D16 border=3D0></A></TD>
+          <TD><SPAN class=3Dbright-button-label><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!default.jspa?forumID=3D123">=B7=
+=A2=D0=C2=CC=FB</A>=20
+            </SPAN></TD></TR></TBODY></TABLE></TD>
+    <TD>
+      <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925"><IMG=20
+            height=3D16 =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/reply-16x16.gif"=20
+            width=3D16 border=3D0></A></TD>
+          <TD><SPAN class=3Dbright-button-label><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925">=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2</A>=20
+            </SPAN></TD></TR></TBODY></TABLE></TD>
+    <TD>
+      <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/search!default.jspa?forumID=3D123&a=
+mp;threadID=3D44925"><IMG=20
+            height=3D16=20
+            =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/search-16x16.gif" width=3D16 =
+
+            border=3D0></A></TD>
+          <TD><SPAN class=3Dbright-button-label><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/search!default.jspa?forumID=3D123&a=
+mp;threadID=3D44925">=CB=D1=CB=F7=C2=DB=CC=B3</A>=20
+            </SPAN></TD></TR></TBODY></TABLE></TD><!-- back to topic-->
+    <TD>
+      <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/forum.jspa?forumID=3D123"><IMG=20
+            height=3D16=20
+            =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/back-to-16x16.gif"=20
+            width=3D16 border=3D0></A></TD>
+          <TD><SPAN class=3Dbright-button-label><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/forum.jspa?forumID=3D123">=B7=B5=BB=
+=D8=B5=BD =D6=F7=CC=E2=20
+            =C1=D0=B1=ED</A> =
+</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE cellSpacing=3D0 cellPadding=3D3 width=3D"98%" align=3Dcenter =
+border=3D0>
+  <TBODY>
+  <TR>
+    <TH colSpan=3D2>=BB=D8=B8=B4: 14 &nbsp; =D2=B3=CA=FD: 1 &nbsp; =
+</TH></TR></TBODY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-odd vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D92040">Andrea=
+s</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 102 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 77 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 5 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 2=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-5-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D265571></A>[=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Nov 12, =
+2007 7:12:56 PM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D265571 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D265571=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D265571&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D265571">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(92040);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=CE=AA=C1=CB=BC=F5=C9=D9=C1=AC=BD=D3Oracle=CA=FD=BE=DD=BF=E2=B5=C4=CA=
+=FD=C1=BF=A3=AC=D0=E8=D2=AA=BD=AB=B6=E0=CC=F5=CA=FD=BE=DD=D7=F7=CE=AA=B1=E4=
+=C1=BF=D2=BB=B4=CE=B4=AB=C8=EBOracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=D6=D0=A1=
+=A3=B7=BD=B7=A8=C8=E7=CF=C2=A3=BA<BR><BR>=B2=BD=D6=E8=D2=BB=A3=BA=B6=A8=D2=
+=E5=B6=D4=CF=F3=C0=E0=D0=CD=A1=A3=20
+                  <BR><BR>CREATE TYPE department_type AS OBJECT (<BR>DNO =
+NUMBER=20
+                  (10),<BR>NAME VARCHAR2 (50),<BR>LOCATION VARCHAR2=20
+                  =
+(50)<BR>);<BR><BR>=B2=BD=D6=E8=B6=FE=A3=BA=B6=A8=D2=E5=D2=BB=B8=F6=B6=D4=CF=
+=F3=C0=E0=D0=CD=B5=C4=CA=FD=D7=E9=B6=D4=CF=F3=A1=A3<BR>CREATE TYPE =
+dept_array=20
+                  AS TABLE OF=20
+                  =
+department_type;<BR><BR>=B2=BD=D6=E8=C8=FD=A3=BA=B6=A8=D2=E5=B4=E6=B4=A2=B9=
+=FD=B3=CC=C0=B4=B2=E5=C8=EB=CA=FD=BE=DD=A1=A3<BR><BR>CREATE OR=20
+                  REPLACE PACKAGE objecttype AS<BR>&nbsp; PROCEDURE=20
+                  insert_object (d dept_array);<BR>END =
+objecttype;<BR><BR>CREATE=20
+                  OR REPLACE PACKAGE BODY objecttype<BR>AS<BR>PROCEDURE=20
+                  insert_object (d dept_array)<BR>AS<BR>BEGIN<BR>FOR i =
+IN=20
+                  d.FIRST..d.LAST<BR>LOOP<BR>INSERT INTO=20
+                  department_teststruct<BR>VALUES=20
+                  (d(i).dno,d(i).name,d(i).location);<BR>END =
+LOOP;<BR>END=20
+                  insert_object; <BR>END=20
+                  =
+objecttype;<BR><BR>=B2=BD=D6=E8=CB=C4=A3=A8=BF=C9=D1=A1=B2=BD=D6=E8=A3=AC=
+=BC=B4=BF=C9=D2=D4=B2=BB=D7=F6=A3=A9=A3=BA=B6=A8=D2=E5=D2=BB=B8=F6Java=20
+                  =
+class=C0=B4=D3=B3=C9=E4=B6=D4=CF=F3=D6=D0=C0=E0=D0=CD=A1=A3<BR><BR>=B2=BD=
+=D6=E8=CE=E5=A3=BA=B6=A8=D2=E5Java=B7=BD=B7=A8=C0=B4=B5=F7=D3=C3=B4=E6=B4=
+=A2=B9=FD=B3=CC=A1=A3 <BR><BR>import=20
+                  java.sql.Connection; <BR>import=20
+                  java.sql.DriverManager;<BR>import=20
+                  oracle.jdbc.OracleCallableStatement;<BR>import=20
+                  oracle.sql.ARRAY;<BR>import=20
+                  oracle.sql.ArrayDescriptor;<BR>import=20
+                  oracle.sql.STRUCT;<BR>import=20
+                  oracle.sql.StructDescriptor;<BR><BR>public class =
+TestStruct=20
+                  ...{<BR>&nbsp;&nbsp;&nbsp; public static void =
+main(String[]=20
+                  args)<BR>&nbsp;&nbsp;&nbsp;=20
+                  =
+...{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;=20
+                  sendStruct();<BR>&nbsp;&nbsp;&nbsp; =
+}<BR>&nbsp;&nbsp;&nbsp;=20
+                  public static void sendStruct() <BR>&nbsp;&nbsp;&nbsp; =
+
+                  ...{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+Connection=20
+                  dbConn =3D =
+null;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  try...{&nbsp;&nbsp;&nbsp;=20
+                  =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  Object[] so1 =3D ...{"10","Accounts","LHR"};=20
+                  =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  Object[] so2 =3D ...{"20","HR","ISB"};=20
+                  =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  OracleCallableStatement callStatement =3D null;=20
+                  =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  =
+Class.forName("oracle.jdbc.driver.OracleDriver");<BR>&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  dbConn =3D=20
+                  =
+DriverManager.getConnection("jdbc:oracle:thin:@ServerName:Port:ORa",=20
+                  "UserName",=20
+                  =
+"Password");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;=20
+                  StructDescriptor st =3D new=20
+                  =
+StructDescriptor("DEPARTMENT_TYPE",dbConn);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  STRUCT s1 =3D new=20
+                  =
+STRUCT(st,dbConn,so1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;=20
+                  STRUCT s2 =3D new=20
+                  =
+STRUCT(st,dbConn,so2);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;=20
+                  STRUCT[] deptArray =3D=20
+                  =
+...{s1,s2};<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;=20
+                  ArrayDescriptor arrayDept =3D=20
+                  ArrayDescriptor.createDescriptor("DEPT_ARRAY",=20
+                  =
+dbConn);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;=20
+                  ARRAY deptArrayObject =3D new ARRAY(arrayDept, dbConn, =
+
+                  deptArray);=20
+                  =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  callStatement =3D=20
+                  (OracleCallableStatement)dbConn.prepareCall("{call=20
+                  =
+insert_object(?)}");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;=20
+                  ((OracleCallableStatement)callStatement).setArray(1,=20
+                  =
+deptArrayObject);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;=20
+                  callStatement.executeUpdate();=20
+                  =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  =
+dbConn.commit();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;=20
+                  callStatement.close();=20
+                  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }=20
+                  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+catch(Exception=20
+                  e)...{=20
+                  =
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  =
+System.out.println(e.toString());<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;=20
+                  }<BR>&nbsp;&nbsp;&nbsp;=20
+                  =
+}<BR>}<BR><BR>jdbc:oracle:thin:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  =
+--Oracle=CA=FD=BE=DD=BF=E2=C7=FD=B6=AF=B1=EA=CA=B6<BR>ServerName:&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;=20
+                  =
+--Oracle=CA=FD=BE=DD=BF=E2=CB=F9=D3=D0=BB=FA=C6=F7=C3=FB=BB=F2IP=B5=D8=D6=
+=B7<BR>1521:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;=20
+                  =
+--=CA=FD=BE=DD=BF=E2=CB=F9=CA=B9=D3=C3=B5=C4=B6=CB=BF=DA=BA=C5<BR>ORa&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;=20
+                  --Oracle=B7=FE=CE=F1=C3=FB&nbsp;&nbsp;&nbsp;&nbsp; =
+<BR><BR>=D7=A2=D2=E2=CA=C2=CF=EE=A3=BA<BR>1=A3=AE=20
+                  =
+=CA=D7=CF=C8=D2=BB=B8=F6=B2=D9=D7=F7=CA=C7=CA=D6=B6=AF=C1=AC=BD=D3Oracle=BD=
+=A8=C1=A2=B6=D4=CF=F3=A3=AC=BD=D3=CF=C2=C0=B4=B5=C4=B2=D9=D7=F7=CA=C7=CD=A8=
+=B9=FDJAVA=B3=CC=D0=F2=BD=A8=C1=A2=CA=FD=BE=DD=BF=E2=C1=AC=BD=D3=C0=B4=CA=
+=B9=D3=C3=B6=D4=CF=F3=A1=A3=C8=E7=B9=FB=C1=BD=B8=F6=B2=D9=D7=F7=CA=B9=D3=C3=
+=CD=AC=D2=BB=B8=F6=D3=C3=BB=A7=BE=CD=C3=BB=D3=D0=CE=CA=CC=E2=A3=AC=C8=E7=B9=
+=FB=CA=C7=B2=BB=CD=AC=B5=C4=D3=C3=BB=A7=C4=C7=C3=B4=D2=AA=C8=B7=B1=A3=B5=DA=
+=B6=FE=B8=F6=B2=D9=D7=F7=A3=A8=BC=B4=CD=A8=B9=FDJava=B3=CC=D0=F2=A3=A9=B5=
+=C4=D3=C3=BB=A7=D3=D0=C8=A8=CF=DE=C0=B4=B2=D9=D7=F7=B5=DA=D2=BB=B8=F6=D3=C3=
+=BB=A7=BD=A8=C1=A2=B5=C4=B6=D4=CF=F3=A1=A3=B5=DA=D2=BB=B8=F6=D3=C3=BB=A7=CE=
+=AA=CB=FC=CC=ED=BC=D3=C8=A8=CF=DE=B5=C4=B7=BD=B7=A8=CA=C7=A3=BA=D4=DA=C3=BF=
+=B8=F6=B6=D4=CF=F3=D6=D0=B4=F3=BC=D2=BF=C9=D2=D4=D5=D2=B5=BD=C8=A8=CF=DE=D2=
+=BB=CF=EE=A3=AC=D5=D2=B5=BD=B6=D4=D3=A6=D3=C3=BB=A7=CC=ED=BC=D3=D6=B4=D0=D0=
+=C8=A8=CF=DE=BC=B4=BF=C9=A1=A3=B6=F8=D4=DA=B3=CC=D0=F2=D6=D0=BE=CD=D0=E8=D2=
+=AA=D7=F6=D2=BB=D0=A9=D0=DE=B8=C4=A1=A3=B4=E6=B4=A2=B9=FD=B3=CC=CD=AC=C0=ED=
+=A1=A3<BR>&nbsp;&nbsp;=20
+                  StructDescriptor st =3D new=20
+                  =
+StructDescriptor("=B5=DA=D2=BB=B8=F6UserName.DEPARTMENT_TYPE",dbConn);<BR=
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  ArrayDescriptor arrayDept =3D=20
+                  =
+ArrayDescriptor.createDescriptor("=B5=DA=D2=BB=B8=F6UserName.DEPT_ARRAY",=
+=20
+                  dbConn);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+callStatement =3D=20
+                  (OracleCallableStatement)dbConn.prepareCall("{call=20
+                  =
+=B5=DA=D2=BB=B8=F6UserName.insert_object(?)}");<BR><BR>=BD=E1=B9=FB=CA=C7=
+Java=D6=D0=CB=E4=C8=BB=D6=BB=CA=C7=D2=BB=B4=CE=D6=B4=D0=D0=C1=AC=BD=D3=CA=
+=FD=BE=DD=BF=E2=A3=AC=B5=AB=CA=C7=C8=B4=D2=BB=B4=CE=B2=E5=C8=EB=C1=BD=CC=F5=
+=CA=FD=BE=DD=A1=A3=CF=A3=CD=FB=C4=DC=B9=BB=B8=F8=D1=B0=D5=D2=C0=E0=CB=C6=BD=
+=E2=BE=F6=B7=BD=B0=B8=B5=C4=D0=D6=B5=DC=BD=E3=C3=C3=CC=E1=B9=A9=D2=BB=B5=E3=
+=B0=EF=D6=FA=A1=A3=D3=D0=CA=B2=C3=B4=BD=A8=D2=E9=BB=F2=D5=DF=D2=E2=BC=FB=BE=
+=A1=B9=DC=C1=F4=D1=D4=A3=AC=D0=BB=D0=BB=A1=A3<BR><BR>=B2=CE=BF=BC=D7=CA=C1=
+=CF=A3=BA<BR>1.=20
+                  =
+=B4=F3=BC=D2=BF=C9=D2=D4=D4=DA=CF=C2=C3=E6=B5=C4=C1=B4=BD=D3=D6=D0=D5=D2=B5=
+=BDjavadoc=CE=C4=BC=FE=C0=B4=BD=F8=D0=D0=CF=C2=D4=D8=A3=AC=D5=E2=CA=C7=D2=
+=BB=B8=F6=B7=C7=B3=A3=D3=D0=D3=C3=B5=C4=CB=B5=C3=F7=CE=C4=B5=B5=A3=AC=D5=E2=
+=B4=CE=CE=D2=D6=F7=D2=AA=D3=C3=B5=BD=C1=CBDriverManager.getConnection=B5=C4=
+=B6=A8=D2=E5=B7=BD=B7=A8=A1=A3=20
+                  =
+<BR>http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/=
+jdbc101020.html<BR><BR><BR>=B8=C3=CC=FB=D3=C9=20
+                  Andreas =D4=DA Nov 12, 2007 7:15 PM=20
+            =B1=E0=BC=AD=B9=FD<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: left">No=20
+                  pains, no gains. I am Andreas Zhang.=20
+          =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><BR><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-even vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D44248">herrap=
+fel</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 579 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 556 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 1 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 111=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2005-1-4 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D265578></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Nov 12, =
+2007 7:50:23 PM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D265578 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D265578=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen0.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D265578&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D265578">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(44248);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>=B2=BB=B4=ED=B5=C4=D7=CA=C1=CF =
+,=B0=EF=B6=A5=D2=BB=B8=F6<BR><BR>=D5=EB=B6=D4STURTS1.1,=20
+            =BB=B9=CA=C71.2=B5=C4<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: =
+left"></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR=
+></TBODY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-odd vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D659"><B>wonde=
+r</B></A>=20
+            [=B0=E6=D6=F7] <BR><BR>=B7=A2=CC=FB=CA=FD: 1,569 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 1,564 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 143 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 274=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2002-8-26 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D265602></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Nov 12, =
+2007 9:39:17 PM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D265602 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D265602=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D265602&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D265602">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(659);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV class=3Dreply>=D2=FD=D3=C3 herrapfel=20
+                  =
+=CB=B5:<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+=B2=BB=B4=ED=B5=C4=D7=CA=C1=CF=20
+                  =
+,=B0=EF=B6=A5=D2=BB=B8=F6<BR><BR>=D5=EB=B6=D4STURTS1.1,=20
+                  =
+=BB=B9=CA=C71.2=B5=C4<BR></DIV><BR>=BA=C7=BA=C7=A3=AC=BF=B4=D7=D0=CF=B8=D0=
+=A9=A3=AC=B2=BB=CA=C7structs=A3=AC=CA=C7struct<BR></TD></TR></TBODY></TAB=
+LE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: =
+left"></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR=
+></TBODY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-even vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D92040">Andrea=
+s</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 102 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 77 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 5 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 2=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-5-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D265720></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Nov 13, =
+2007 4:09:46 PM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D265720 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D265720=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen0.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D265720&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D265720">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(92040);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=BA=C7=BA=C7=A3=AC=CA=C7Struct=A3=AC=B2=BB=CA=C7struts=A1=A3<BR>Struc=
+t=CA=C7Oracle=D6=D0=B5=C4=D2=BB=B8=F6=B6=D4=CF=F3=C0=E0=D0=CD=A1=A3<BR></=
+TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: left">No=20
+                  pains, no gains. I am Andreas Zhang.=20
+          =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-odd vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D92040">Andrea=
+s</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 102 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 77 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 5 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 2=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-5-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D266172></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Nov 16, =
+2007 10:49:07 AM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D266172 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D266172=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D266172&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D266172">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(92040);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=B4=F3=BC=D2=BF=C9=D2=D4=B3=A2=CA=D4=D2=BB=CF=C2=A3=AC=BA=DC=BC=F2=B5=
+=A5=A3=AC=BA=DC=BA=C3=CD=E6=A1=A3<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: left">No=20
+                  pains, no gains. I am Andreas Zhang.=20
+          =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-even vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D98543">lghdub=
+a</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 257 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 261 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 0 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 51=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-10-19 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D267933></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Dec 2, =
+2007 9:37:01 AM=20
+</TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D267933 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D267933=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen0.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D267933&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D267933">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(98543);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=BB=B9=D2=D4=CE=AA=D5=D2=B5=BDstructs=C1=CB=B5=C4,=B0=D7=B8=DF=D0=CB=C1=
+=CB=D2=BB=B3=A1,=B2=BB=B9=FD=BB=B9=CA=C7=D2=AA=D0=BB=D0=BB=C2=A5=D6=F7<BR=
+></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: =
+left"></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR=
+></TBODY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-odd vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D100712">jackl=
+iuhao</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 1 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 1 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 0 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 1 <BR>=D7=A2=B2=E1=CA=B1=BC=E4:=20
+            2007-12-7 <BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT =
+color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+      <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D268586></A>[=C7=F3=D6=FA] Re:=20
+                  [=D4=AD=B4=B4] =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+              =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Dec 7, =
+2007 4:18:37 PM=20
+</TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D268586 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D268586=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D268586&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D268586">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(100712);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>OracleCallableStatement callSt =3D null;<BR>callSt=20
+                  =
+=3D(OracleCallableStatement)con.prepareCall(sqlS);<BR>=B3=F6=C0=E0=D0=CD=D7=
+=AA=BB=BB=B5=C4=D2=EC=B3=A3<BR>call=20
+                  StateD error:java.lang.ClassCastException:=20
+                  =
+org.apache.tomcat.dbcp.dbcp.DelegatingCallableStatement<BR>java.lang.Clas=
+sCastException:=20
+                  =
+org.apache.tomcat.dbcp.dbcp.DelegatingCallableStatement<BR>=C0=CD=B7=B3=B4=
+=F3=BC=D2=BF=B4=BF=B4=CA=C7=D4=F5=C3=B4=BB=D8=CA=C2<BR>=D0=BB=D0=BB=C0=AD=
+<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: =
+left"></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR=
+></TBODY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-even vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D92040">Andrea=
+s</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 102 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 77 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 5 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 2=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-5-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D269521></A>Re: [=C7=F3=D6=FA] Re:=20
+                  [=D4=AD=B4=B4] =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+              =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Dec 18, =
+2007 10:02:49 AM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D269521 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D269521=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen0.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D269521&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D269521">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(92040);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV class=3Dreply>=D2=FD=D3=C3 jackliuhao=20
+                  =
+=CB=B5:<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  OracleCallableStatement callSt =3D null;<BR>callSt=20
+                  =
+=3D(OracleCallableStatement)con.prepareCall(sqlS);<BR>=B3=F6=C0=E0=D0=CD=D7=
+=AA=BB=BB=B5=C4=D2=EC=B3=A3<BR>call=20
+                  StateD error:java.lang.ClassCastException:=20
+                  =
+org.apache.tomcat.dbcp.dbcp.DelegatingCallableStatement<BR>java.lang.Clas=
+sCastException:=20
+                  =
+org.apache.tomcat.dbcp.dbcp.DelegatingCallableStatement<BR>=C0=CD=B7=B3=B4=
+=F3=BC=D2=BF=B4=BF=B4=CA=C7=D4=F5=C3=B4=BB=D8=CA=C2<BR>=D0=BB=D0=BB=C0=AD=
+<BR></DIV><BR><BR><BR>sqlS=CA=C7=B7=F1=B6=A8=D2=E5=D5=FD=C8=B7=A3=BF<BR><=
+/TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: left">No=20
+                  pains, no gains. I am Andreas Zhang.=20
+          =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-odd vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D92040">Andrea=
+s</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 102 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 77 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 5 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 2=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-5-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D272590></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Jan 28, =
+2008 9:45:45 AM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D272590 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D272590=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D272590&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D272590">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(92040);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=CE=D2=B0=D1=D2=BB=D0=A9=CF=E0=B9=D8=B5=C4=C4=DA=C8=DD=D0=B4=C1=CB=CF=
+=C2=C0=B4=CF=A3=CD=FB=B6=D4=B4=F3=BC=D2=D3=D0=B0=EF=D6=FA=A1=A3<BR>1.=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+<A=20
+                  =
+href=3D"http://blog.csdn.net/dutguoyi/archive/2007/11/11/1879416.aspx"=20
+                  =
+target=3D_blank>http://blog.csdn.net/dutguoyi/archive/2007/11/11/1879416.=
+aspx</A><BR>2.=20
+                  =
+=C8=E7=BA=CE=D4=DAOracle=D6=D0=D0=DE=B8=C4Collection=C0=E0=D0=CD=B5=C4=B1=
+=E4=C1=BF=A1=A3<A=20
+                  =
+href=3D"http://blog.csdn.net/dutguoyi/archive/2007/11/23/1899152.aspx"=20
+                  =
+target=3D_blank>http://blog.csdn.net/dutguoyi/archive/2007/11/23/1899152.=
+aspx</A><BR>3.=20
+                  =
+=C8=E7=BA=CE=D4=DAOracle=D6=D0=CF=F2Collection=C0=E0=D0=CD=B5=C4=B1=E4=C1=
+=BF=D6=D0=D6=F0=CC=F5=B2=E5=C8=EB=CA=FD=BE=DD=A1=A3<A=20
+                  =
+href=3D"http://blog.csdn.net/dutguoyi/archive/2007/11/28/1905691.aspx"=20
+                  =
+target=3D_blank>http://blog.csdn.net/dutguoyi/archive/2007/11/28/1905691.=
+aspx</A><BR>4.=20
+                  =
+=C8=E7=BA=CE=D2=D4Collection=B1=E4=C1=BF=D7=F7=CE=AA=CA=FD=BE=DD=D4=B4=C0=
+=B4=CF=F2=CA=FD=BE=DD=B1=ED=D6=D0=B2=E5=C8=EB=CA=FD=BE=DD=A3=AC=BB=F2=D5=DF=
+=B8=FC=D0=C2=CA=FD=BE=DD=A1=A3<A=20
+                  =
+href=3D"http://blog.csdn.net/dutguoyi/archive/2007/12/06/1920859.aspx"=20
+                  =
+target=3D_blank>http://blog.csdn.net/dutguoyi/archive/2007/12/06/1920859.=
+aspx</A><BR><BR><BR>=B8=C3=CC=FB=D3=C9=20
+                  Andreas =D4=DA Jan 28, 2008 9:47 AM=20
+            =B1=E0=BC=AD=B9=FD<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: left">No=20
+                  pains, no gains. I am Andreas Zhang.=20
+          =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-even vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D92040">Andrea=
+s</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 102 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 77 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 5 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 2=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-5-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D272592></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Jan 28, =
+2008 9:51:19 AM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D272592 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D272592=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen0.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D272592&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D272592">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(92040);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=D4=DA=BF=AA=B7=A2=B5=C4=B9=FD=B3=CC=D6=D0=B4=F3=BC=D2=BF=C9=C4=DC=BB=
+=E1=D3=F6=B5=BD=D5=E2=C1=BD=C0=E0=CE=CA=CC=E2=A1=A3<BR>1.=20
+                  =
+=B3=F6=CF=D6java.io.NotSerializableException=B4=ED=CE=F3=A1=A3<A=20
+                  =
+href=3D"http://blog.csdn.net/dutguoyi/archive/2008/01/12/2038989.aspx"=20
+                  =
+target=3D_blank>http://blog.csdn.net/dutguoyi/archive/2008/01/12/2038989.=
+aspx</A><BR>2.=20
+                  =B3=F6=CF=D6=A1=B0executeUpdate, Exception =3D =
+null=A1=B1=D5=E2=D1=F9=B5=C4=B4=ED=CE=F3<A=20
+                  =
+href=3D"http://blog.csdn.net/dutguoyi/archive/2008/01/23/2061861.aspx"=20
+                  =
+target=3D_blank>http://blog.csdn.net/dutguoyi/archive/2008/01/23/2061861.=
+aspx</A><BR><BR><BR>=B8=C3=CC=FB=D3=C9=20
+                  Andreas =D4=DA Jan 28, 2008 9:51 AM=20
+            =B1=E0=BC=AD=B9=FD<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: left">No=20
+                  pains, no gains. I am Andreas Zhang.=20
+          =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-odd vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D25640"><B>whx=
+1977</B></A>=20
+            [=B0=E6=D6=F7] <BR><BR>=B7=A2=CC=FB=CA=FD: 7,169 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 5,742 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 78 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 3,112=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2004-2-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D272601></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Jan 28, =
+2008 11:17:37 AM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D272601 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D272601=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D272601&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D272601">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(25640);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=D7=DC=BD=E1=B5=C4=B2=BB=B4=ED<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: =
+left">=CE=E9=EA=BB=CF=D7=20
+                  =
+RAINBOW<BR>=C5=F3=D3=D1=A3=AC=CE=D2=B0=AE=C4=E3=C3=C7=A3=A1<BR><A=20
+                  href=3D"http://dev2dev.bea.com.cn/blog/whx1977/"=20
+                  =
+target=3D_blank>http://dev2dev.bea.com.cn/blog/whx1977/</A><BR><BR>=D3=D0=
+=CE=CA=CC=E2=CF=C8=BF=B4:<A=20
+                  href=3D"http://edocs.bea.com/"=20
+                  target=3D_blank>http://edocs.bea.com/</A><BR>bea =
+weblogic=20
+                  server=CF=C2=D4=D8<BR><A=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D81&amp;thread=
+ID=3D28193&amp;tstart=3D0"=20
+                  =
+target=3D_blank>http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D81&am=
+p;threadID=3D28193&amp;tstart=3D0</A><BR>BEA=20
+                  AquaLogic User Interaction &amp; BPM &amp; PEP =
+=CF=C2=D4=D8=B5=D8=D6=B7=B4=F3=C8=AB <BR><A=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D142667&amp;th=
+readID=3D45540&amp;messageID=3D270183#270183"=20
+                  =
+target=3D_blank>http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D14266=
+7&amp;threadID=3D45540&amp;messageID=3D270183#270183</A><BR><BR><BR>I=20
+                  LOVE LIFE=A3=A1I LOVE BEA=A3=A1<BR>BECAUSE HERE'S MY =
+LOVELY=20
+                  FRIENDS=A3=A1<BR>DON'T LOOK AROUND,IT'S YOU=A3=A1=20
+            =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-even vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D92040">Andrea=
+s</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 102 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 77 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 5 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 2=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-5-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D272828></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Jan 31, =
+2008 2:52:45 PM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D272828 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D272828=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen0.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D272828&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D272828">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(92040);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV class=3Dreply>=D2=FD=D3=C3 whx1977=20
+                  =
+=CB=B5:<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  =
+=D7=DC=BD=E1=B5=C4=B2=BB=B4=ED<BR></DIV><BR><BR>=D0=BB=D0=BB=A1=A3=D5=E2=B7=
+=BD=C3=E6=B5=C4=BC=BC=CA=F5=D1=D0=BE=BF=D3=C3=C1=CB=CE=D2=D2=BB=B2=BF=B7=D6=
+=BE=AB=C1=A6=A1=A3=CF=A3=CD=FB=B6=D4=BF=C9=C4=DC=D3=C3=B5=BD=B5=C4=D0=D6=B5=
+=DC=CC=E1=B9=A9=B0=EF=D6=FA=A3=AC=C9=D9=D7=DF=CD=E4=C2=B7=A1=A3<BR></TD><=
+/TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: left">No=20
+                  pains, no gains. I am Andreas Zhang.=20
+          =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-odd vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D65450">=B3=AC=
+=BC=B6=B2=CB=C4=F1</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 582 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 549 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 51 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 54=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2006-2-25 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D273094></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Feb 9, =
+2008 10:40:25 AM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D273094 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D273094=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D273094&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D273094">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(65450);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=C4=E3=CD=EA=C8=AB=BF=C9=D2=D4=CA=D4=D2=BB=CF=C2=D6=B1=BD=D3=B2=D9=D7=
+=F7=C1=BD=CC=F5(=BB=F2=D2=BB=B0=D9=CD=F2=CC=F5)=CA=FD=BE=DD=BA=CD=D3=C3st=
+ruct=D2=BB=B4=CE=B4=AB=C1=BD=CC=F5(=BB=F2=D2=BB=B0=D9=CD=F2=CC=F5)=CA=FD=BE=
+=DD<BR>=B5=C4=B2=CE=CA=FD=C8=BB=BA=F3=C8=C3DB=C0=B4=D7=F6=C5=FA=B2=D9=D7=F7=
+=BF=B4=BF=B4=CB=AD=B8=FC=BF=EC.<BR><BR>=BF=C9=D2=D4=BF=CF=B6=A8=D6=B1=BD=D3=
+=B2=D9=D7=F7=B1=C8=C4=E3=D5=E2=B8=F6=B7=BD=B7=A8=B8=FC=BF=EC.=BC=C8=C8=BB=
+=D5=E2=C3=B4=B6=E0=BE=AB=C1=A6=BB=BB=C0=B4=B8=FC=B5=CD=B5=C4=D0=D4=C4=DC,=
+=C4=C7=D3=D0=CA=B2=C3=B4=D2=E2=D2=E5?<BR></TD></TR></TBODY></TABLE><BR><B=
+R>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: =
+left">=B6=C1=C8=FD=C4=EA=CA=E9,=CA=B6=CB=C4=B8=F6=D7=D6,=D4=BB:=CC=EC=CF=C2=
+=B4=F3=C6=BD!=20
+                  =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-even vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D5857">richard=
+luo</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 4,432 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 4,112 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 88 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 37=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2002-11-1 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D273101></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Feb 9, =
+2008 9:11:29 PM=20
+</TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D273101 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D273101=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen0.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D273101&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D273101">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(5857);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                =
+<TD>=D7=DC=BD=E1=B5=C3=B2=BB=B4=ED=A3=AC=CB=E4=C8=BB=B2=BB=D2=BB=B6=A8=CA=
+=B5=D3=C3<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: =
+left"><BR><BR>QQ=C8=BA:&nbsp;=20
+                  3723901 =
+=D2=B5=CE=F1=BC=AF=B3=C9/=B9=A4=D7=F7=C1=F7/BPEL/BEPLJ/BPNM/SOA/ESB/=BF=AA=
+=D4=B4=20
+              =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN><SPAN=20
+class=3Dbright-message-list>
+<TABLE class=3Dbright-box cellSpacing=3D1 cellPadding=3D3 width=3D"98%" =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR class=3Dbright-odd vAlign=3Dtop>
+    <TD width=3D"1%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D180 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A title=3D""=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/profile.jspa?userID=3D92040">Andrea=
+s</A>=20
+            [=C6=D5=CD=A8=D3=C3=BB=A7] <BR><BR>=B7=A2=CC=FB=CA=FD: 102 =
+<BR>=BB=EE=D4=BE=BB=FD=B7=D6: 77 <BR>=BC=BC=CA=F5=BB=FD=B7=D6: 5 =
+<BR>=BF=C9=D3=C3=B1=D2=D6=B5: 2=20
+            <BR>=D7=A2=B2=E1=CA=B1=BC=E4: 2007-5-29 =
+<BR>=D3=C3=BB=A7=D7=B4=CC=AC:<FONT color=3Dgreen>=D5=FD=B3=A3</FONT>=20
+        <BR></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"99%">
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR vAlign=3Dtop>
+          <TD width=3D"99%">
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD><SPAN class=3Dbright-subject><A =
+name=3D273401></A>Re: [=D4=AD=B4=B4]=20
+                  =
+=C8=E7=BA=CE=D4=DAJAVA=B3=CC=D0=F2=D6=D0=CA=B9=D3=C3Struct=D2=BB=B4=CE=B4=
+=AB=C8=EB=B6=E0=CC=F5=CA=FD=BE=DD=B8=F8Oracle=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC=
+=A1=A3=20
+            =
+</SPAN></TD></TR></TBODY></TABLE><BR>=CC=E1=BD=BB=CA=B1=BC=E4: Feb 19, =
+2008 3:37:33 PM=20
+          </TD>
+          <TD width=3D"1%">
+            <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+              <TBODY>
+              <TR>
+                <FORM name=3D273401 action=3Dsend!default.jspa =
+method=3Dpost=20
+                target=3D_blank>
+                <TD vAlign=3Dcenter noWrap><INPUT type=3Dhidden =
+value=3D=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dsubject> <INPUT type=3Dhidden =
+value=3Dconverse,lhbing=20
+                  name=3Dmaster> <INPUT type=3Dhidden=20
+                  =
+value=3D=CC=FB=D7=D3http://dev2dev.bea.com.cn//bbs/thread.jspa?forumID=3D=
+123&amp;threadID=3D44925&amp;messageID=3D273401=C9=EA=C7=EB=BB=FD=B7=D6=20
+                  name=3Dbody> <INPUT type=3Dimage=20
+                  =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif"=20
+                  border=3D0 name=3Dsubmit> </TD></FORM><!--    =
+<td>&nbsp;</td>-->
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D273401&amp;rep=3Dtrue">=D2=FD=D3=C3<!--im=
+g src=3D"/bbs/images/reply-16x16.gif" width=3D"16" height=3D"16" =
+border=3D"0"--></A>=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925&amp;messageID=3D273401">=BB=D8=B8=B4</A>&nbsp;&nbsp;=20
+                </TD>
+                <TD noWrap><A =
+title=3D=B5=E3=BB=F7=B8=F8=D7=F7=D5=DF=B7=A2=D5=BE=C4=DA=CF=FB=CF=A2=20
+                  onclick=3D"sendMessage(92040);return false;"=20
+                  =
+href=3D"http://dev2dev.bea.com.cn/bbs/thread.jspa?forumID=3D123&amp;threa=
+dID=3D44925&amp;messageID=3D273401#">=B7=A2=CF=FB=CF=A2</A>=20
+                </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD class=3Dmessage_content style=3D"BORDER-TOP: #ccc 1px =
+solid"=20
+            colSpan=3D2><BR>
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV class=3Dreply>=D2=FD=D3=C3 =
+=B3=AC=BC=B6=B2=CB=C4=F1=20
+                  =
+=CB=B5:<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  =
+=C4=E3=CD=EA=C8=AB=BF=C9=D2=D4=CA=D4=D2=BB=CF=C2=D6=B1=BD=D3=B2=D9=D7=F7=C1=
+=BD=CC=F5(=BB=F2=D2=BB=B0=D9=CD=F2=CC=F5)=CA=FD=BE=DD=BA=CD=D3=C3struct=D2=
+=BB=B4=CE=B4=AB=C1=BD=CC=F5(=BB=F2=D2=BB=B0=D9=CD=F2=CC=F5)=CA=FD=BE=DD<B=
+R>=B5=C4=B2=CE=CA=FD=C8=BB=BA=F3=C8=C3DB=C0=B4=D7=F6=C5=FA=B2=D9=D7=F7=BF=
+=B4=BF=B4=CB=AD=B8=FC=BF=EC.<BR><BR>=BF=C9=D2=D4=BF=CF=B6=A8=D6=B1=BD=D3=B2=
+=D9=D7=F7=B1=C8=C4=E3=D5=E2=B8=F6=B7=BD=B7=A8=B8=FC=BF=EC.=BC=C8=C8=BB=D5=
+=E2=C3=B4=B6=E0=BE=AB=C1=A6=BB=BB=C0=B4=B8=FC=B5=CD=B5=C4=D0=D4=C4=DC,=C4=
+=C7=D3=D0=CA=B2=C3=B4=D2=E2=D2=E5?<BR></DIV><BR><BR>=D6=B1=BD=D3=B2=D9=D7=
+=F7=C1=BD=CC=F5=A3=BF=CE=D2=B2=BB=CA=C7=BA=DC=C7=E5=B3=FE=D4=F5=C3=B4=D6=B1=
+=BD=D3=B2=D9=D7=F7=C1=BD=CC=F5=A3=AC=CE=D2=C3=C7=CD=A8=B3=A3=D7=F6=B7=A8=CA=
+=C7=D1=AD=BB=B7=B6=E0=CC=F5=A3=AC=B6=D4=B5=A5=CC=F5=BD=F8=D0=D0=B4=A6=C0=ED=
+=A1=A3=CE=D2=B5=C4=D7=F6=B7=A8=CA=C7=CE=AA=C1=CB=BC=F5=C9=D9=C1=AC=BD=D3=CA=
+=FD=BE=DD=BF=E2=B5=C4=B4=CE=CA=FD=A1=A3=B5=B1=C8=BB=C8=E7=B9=FB=C1=AC=BD=D3=
+=B3=D8=C9=E8=D6=C3=BA=CF=C0=ED=B5=C4=BB=B0=B2=EE=B1=F0=BF=C9=C4=DC=B2=BB=B4=
+=F3=A1=A3<BR></TD></TR></TBODY></TABLE><BR><BR>
+            <HR style=3D"COLOR: #cccccc; HEIGHT: 1px" align=3Dleft>
+
+            <TABLE=20
+            style=3D"TABLE-LAYOUT: fixed; WORD-BREAK: break-all; =
+WORD-WRAP: break-word"=20
+            width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV=20
+                  style=3D"PADDING-RIGHT: 4px; PADDING-LEFT: 4px; =
+PADDING-BOTTOM: 4px; WIDTH: 96%; PADDING-TOP: 4px; TEXT-ALIGN: left">No=20
+                  pains, no gains. I am Andreas Zhang.=20
+          =
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE></SPAN>
+<TABLE cellSpacing=3D0 cellPadding=3D3 width=3D"98%" align=3Dcenter =
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD colSpan=3D2>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD noWrap width=3D"1%"><SPAN =
+class=3Dbright-paginator-bottom>=BB=D8=B8=B4: 14=20
+            &nbsp; =D2=B3=CA=FD: 1 &nbsp; </SPAN></TD>
+          <TD align=3Dmiddle width=3D"98%"><!--
+                <table cellpadding=3D"3" cellspacing=3D"2" border=3D"0">
+                <tr>
+                    <td>
+                        <a href=3D"/bbs/forum.jspa?forumID=3D123"
+                         ><img src=3D"/bbs/images/back-to-16x16.gif" =
+width=3D"16" height=3D"16" border=3D"0"></a>
+                    <td>
+                       =20
+                        <span class=3D"bright-button-label">
+                        <a href=3D"/bbs/forum.jspa?forumID=3D123"
+                         >=B7=B5=BB=D8=B5=BD =D6=F7=CC=E2 =
+=C1=D0=B1=ED</a>
+                        </span>
+                    </td>
+                </tr>
+                </table>
+--></TD>
+          <TD noWrap =
+width=3D"1%"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><SPAN=20
+class=3Dbright-button>
+<TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=3D0 cellPadding=3D3 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!default.jspa?forumID=3D123"><I=
+MG=20
+            height=3D16 =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/post-16x16.gif"=20
+            width=3D16 border=3D0></A></TD>
+          <TD><SPAN class=3Dbright-button-label><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!default.jspa?forumID=3D123">=B7=
+=A2=D0=C2=CC=FB</A>=20
+            </SPAN></TD></TR></TBODY></TABLE></TD>
+    <TD>
+      <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925"><IMG=20
+            height=3D16 =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/reply-16x16.gif"=20
+            width=3D16 border=3D0></A></TD>
+          <TD><SPAN class=3Dbright-button-label><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/post!reply.jspa?forumID=3D123&amp;t=
+hreadID=3D44925">=BB=D8=B8=B4=B4=CB=D6=F7=CC=E2</A>=20
+            </SPAN></TD></TR></TBODY></TABLE></TD>
+    <TD>
+      <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/search!default.jspa?forumID=3D123&a=
+mp;threadID=3D44925"><IMG=20
+            height=3D16=20
+            =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/search-16x16.gif" width=3D16 =
+
+            border=3D0></A></TD>
+          <TD><SPAN class=3Dbright-button-label><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/search!default.jspa?forumID=3D123&a=
+mp;threadID=3D44925">=CB=D1=CB=F7=C2=DB=CC=B3</A>=20
+            </SPAN></TD></TR></TBODY></TABLE></TD><!-- back to topic-->
+    <TD>
+      <TABLE cellSpacing=3D2 cellPadding=3D3 border=3D0>
+        <TBODY>
+        <TR>
+          <TD><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/forum.jspa?forumID=3D123"><IMG=20
+            height=3D16=20
+            =
+src=3D"http://dev2dev.bea.com.cn/bbs/images/back-to-16x16.gif"=20
+            width=3D16 border=3D0></A></TD>
+          <TD><SPAN class=3Dbright-button-label><A=20
+            =
+href=3D"http://dev2dev.bea.com.cn/bbs/forum.jspa?forumID=3D123">=B7=B5=BB=
+=D8=B5=BD =D6=F7=CC=E2=20
+            =C1=D0=B1=ED</A>=20
+</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></SPAN><BR><SP=
+AN=20
+class=3Dbright-message-list-footer></SPAN><!--  =CE=C4=CE=B2  -->
+<CENTER>
+<DIV id=3Dfooter><A href=3D"http://dev2dev.bea.com/"=20
+target=3D_blank>dev2dev.bea.com</A>|<A =
+href=3D"mailto:dev2dev@vip.sina.com"=20
+target=3D_blank>=C1=AA=CF=B5dev2dev</A>|<A=20
+href=3D"http://www.bea.com.cn/aboutbea/contactbea/index.jsp"=20
+target=3D_blank>=C1=AA=CF=B5BEA</A>|<A=20
+href=3D"http://dev2dev.bea.com.cn/sitemap.html">=D5=BE=B5=E3=B5=D8=CD=BC<=
+/A>|<A=20
+href=3D"http://dev2dev.bea.com.cn/order/rssfeeds/index.html"=20
+target=3D_blank>RSS</A>|<A =
+href=3D"http://www.bea.com.cn/privacy/index.jsp"=20
+target=3D_blank>=D2=FE=CB=BD=C8=A8=C9=F9=C3=F7</A>&reg;&nbsp;2007 BEA =
+Systems<A href=3D"http://www.bea.com.cn/"=20
+target=3D_blank><IMG alt=3Dbea.com=20
+src=3D"http://dev2dev.bea.com/images/logos/bea_tl_logo_sm.gif"></A></DIV>=
+
+<DIV id=3Dfooter align=3Dcenter><A href=3D"http://www.miibeian.gov.cn/"=20
+target=3D_blank>=B1=B8=B0=B8=D0=F2=BA=C5:=BE=A9ICP=B1=B806030541=BA=C5</A=
+></DIV><!--  =CE=C4=CE=B2=BD=E1=CA=F8  --></CENTER>
+<SCRIPT language=3DJavaScript=20
+src=3D"http://dev2dev.bea.com.cn/adv/sdc_tracking_code.js"=20
+type=3Dtext/javascript></SCRIPT>
+</BODY></HTML>
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com/images/header_d2d_text.gif
+
+R0lGODlhzQBVANUAAMvLy1FRUZGRkZKSkv8FAPLy8tjY2D8/PysrK3Nzc2NjY+Xl5aCgoIODg729
+va+vrxQUFP/Ly/8XFP+vr//y8v/Y2P+Skf/l5f9AP/9SUf8sK/+9vf9jY/+Dg/+hoP90cwAAAP//
+/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAADNAFUAAAb/wJBw
+SCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v+CweEwum8/otHrNbrvf8Lh8Tq/b7/i8fs/v+/+AgYKD
+hIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqRQOtrQsDC0OxiQACt7i3DABu
+Eb5Jtrm4u2cAAAfGBSADQgAgvIgCINPU1SAJBmgRHATd3RwRRtLW1thmAUMB6CEJCdCH4+TWAmYT
+3vfdE0Xx8tT0ZOtCBGiQLcCAd4bGIQxRwEECagnIbOgmYQKFEBcseNtARGGRhg+nRRwTMMCCBA8e
+HEzk8QgACNMcjNFAQEKFIvYIaOg4beGQ/5cxSaYTqKDAymg9kziYdkBMhW4WjmTodmFIyyNLQTQV
+UzIEAwUhjsJLmuTAtGxFDAhQF4CBrCELbsk8cutBCA/dbhrRSCCckKtHzIJAS0QtW7dE4gqYK06A
+3UqAjTCYxoBIAQXy/gmBieCIAcoh+CLh6zdE5CKTQVQecjkzEc6eQUMmi8TZNdaCD9zCPK3BkJCE
+h6SWdeHXEQzdLv6l7VIkbqa7qfkWAlzytLeUTheZFpD3YyELBEP7DGI6EbNgl0ToloHnsyXch3hP
+LF4IefND0F/STiR+CNuasQZTQAiA0Fli03yHRAUS5OWeT9uBsA6ARhQw4BAFHghXgvsxd/+EfyEV
+cEQD1wmRWnCTQSBiEhE0SIA+D8InIXXTrFgEiSC8dSIRKdqYnYdG+FcgMsYUaUxqcy3Q23m3IUFB
+BxTBGKMSQmplpJFIgrdkfk1awp990/zTDzmaYaahkiAwVsQGLmZQlThAFhamEGPOI5+BG6aJyZch
+PCBbndVo5udgJuJpBAXc1CQlnO8lMehqgPozxKBoTaahl3Gmc9ZmMz4B03Rm4SdEBcgR0IFySPAZ
+wKYhXOhpeUKEmsmXtmm46qVMPNQZmsGFQAFyNjFB6zS2GuqEriHwOmumBRQIwnepQUgpEbYZMNlW
+RHygE6pK8Ncsh4U2WsS0P511rSbaPQD/k1aWwXSAjwxlaESBDZi12hAXdFPaEumuiy1D7sL7La4h
+0GsvuiIJk4CzWsGbGgIPrOiAYGou5yy8eGngy8YcG7fcNQoz/C5qxEYsxMRB7WNgjQgD2gC8QuDo
+mhFogpAeEVPhozMB7tX58ohjBpinzZvwUw0EbWHnEm/UBAChEKs+a0SpO9/TszVIIwYM09w9LRC4
+q9SWTCBFwhz22WinrfbabLft9ttwX1INAr1GCAIECZjNREBgGICAqElQg7feShgA+CMgzHLzh0IU
+kADfTyQuRiuRN/64FABADonkITigAADTndTfa7I4EIAC2RQlBFiOG0SnEAMEkHeyKhm0/2Lssw9g
+AFixo27EAwhA3PnpaOm+OOetlk686CEYwMzuAciUOeyyiwiAQwE81jozYe3e+ux4LNNKANkgIEsD
+94aAvNOmF+C343Y5FMIBMiXATOINRPRAU87IlH8IDfDNA9AhIQcwICJ+OwLlJuY+86kveqNLx/UC
+0MBmne8BCzBfAYiEjv/tLywQWEABsje/+t0vegqwywHzIL7Y+WYAlUGAj9YHAAUcpIYM8Bw7HOA3
+YzgAAupr1YoOYIBjNA6IEHCAMeiWo85BoAEVmwUzFDAX9KlPaUGUoA2NoQAGWFGGXzHGAD6HDhXF
+ynnT8VwPrwfEJjYAAbrTA+eUkSwijv9kCHMEwQjt1wpeyLAzAICjK4LIOadN73UtjAXnFnBAM7KC
+GU6D3f2CxBo9ys4VAAjP7sJikFY8YHqFBADl/uM0QVKOc85TBwuH4IADKYCK2wGPAiLCAO59DoAK
+mI4Mm0fAEHSxeUB0RjYeAJZbbpCOvlwNMhYQHMp9JV7ZQN7rkjVLr9iSFweApQHWUcvp/dIAQBzA
+LhMQQxFtM4sQyAYy7zA3tAAvSNN44orqdYDQEap5BwgAEYO4AHXs8xgKUIc6/WkXyW1THS/k2ygT
+cIADPEaa6ovnzwDY0Omoa1L5pOD0+qnPbIxRn7MzQD73KbmJqUNBfVBJMTTnhAIc7g1Bo4wEAxxo
+hkNKwQCEa0NMIWEALI7BfYxYgE/jRtSiGvWoSE2qUpfK1KY69alQjapUp0rVqlr1qljNqla3ylW2
+BQEAOw==
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com/images/oracle_bea.gif
+
+R0lGODlh+AApAOYAAP////8AAFZWVgAAAD09Pf+/v/rX2//Pz+g0TP+vr/8wMP9gYH9/fycnJ/9Q
+UJCQkNZNV+fo6N0AAhYWFv8QEL6+vutQZNIDGP/v7+IGJf+fn+EAHP8gINiHk+YUKtjc2+mzt/Sa
+pOpZWf+Pj9dtd/B3ie04OeYmPeUiJ/9AQPe9xelFRuQXNPGHfNksNcwcLeAAFOqipqqqquCVmcXH
+x/T19PGGlfLd3/JxaPVkW87T0+KCh9M5SP9/f/apsw4PD+AAC+7GxvjL0e5hdPzz9WZmZul3c+5n
+ZelDWvj5+Pbh5P7f4PRWT/7u87jIxvFLTOI9Pv32+tBcaOcYH/75+vBCQNykqP76/PDV1f9wcO/v
+7+mVi/7///n+/uzN0Pbr7fz//+MLHfzn6vP9+vNJReBuZ/z8/f/8/fB1fv7+/v7+/9/g4OdNTuqm
+sPFscO8pMO4zMeq9vwYHB+ihoOyHkfv7+/CckeSsqu7k5v77+/jm5vJxdf56bc8ABs8BEugFGCH5
+BAAAAAAALAAAAAD4ACkAAAf/gACCg4SFhoeIiYqLjI2Oj5CRkpOUiF1YcUE3XIJfN3p1laKjpKWm
+p6ipikk7EC0tUmIAICQtWyBmqrq7vL2+u2BeXlh4AFdSfSY4VR5KIC9QIiY7AGBfnL/Z2tvcuzU7
+IkZ2UkptfW9Mb0BDNy4oTFMsKnh3M0Fn3fn6+/yGXRBhyOA4ciHIDg98yABBIEbFlAVwNtiIA4EN
+lB34+mncyNGUmkEd/DxhUgUGiyZCROB4MsQAAAMiyDzxYQACChRhfHTcybOnIiwzYtzxAoBHlRZM
+YMDQ+bKAECKDDKhwKQQKHA8lAGDzybVrPzAzoLBpIQICkRBMcsBBEMKRnhZH/3zcmLNDide7eLVZ
+uTDliQgYCJqcAWEjxhJIGMQoMYLChZC8kCOj0sMDxRMTQCS01RplK6Q5KKYMaSK5tOlJVZkw+QOk
+RB5SPtxoIH26tm1DeKzcwXJWxBMLPl6ToqIkSBCot5ObBgtBXJkgVwwYoG0qBpQjdpVrzwuGxIUq
+Ro6wAKHrhog3IT5uX991xgUTOVYslAUgSY0k9pOMIuIjwRX2APYkBgRw8FGFBCw8JogAP0wwwQ8E
+1FAJF3Hs4FKAGHJEBRompGPBhYIQMMCIAzQgISVxoMBGdhm2yE8TPoSgAnKDiEiiiZUYgIaCLvao
+TRdWzDBUIjaOiOMkcczAov+PTPLiRUUtlEHCkoQUWeKJkWDhgghRNOmlLnG8gMIROKAwBBWIWHlk
+JAbEAOKXcJJyQ2U5PLFBgkSSOAABgtgXCiJREEGFZ4aY4WchZmihn2QFHAAgBgVEsoYWorSBAh85
+hCGPIlYSsEYRP8jRAANYAiCGDQh44AELSISAgSE0FNFAqBMQwEAEglTwgAyEYKBBCgEEK+yww3Kw
+QKSFAEvsssMqoEEjS3AQrAKvMqKBAxQwu+wCAPQgLLKRFLCAtNoWC8ABFKRAwWGOMFCBKEGwoZob
+bx6i5g96DiDAICqwIAEMGygFgwQn8AgAA/mSOIEOdciw6yAJkFuutg5UK4j/shMvS+0iGAeQxSIH
+KJDxsBS86m2w4DqCgQMjDxupA+Mu0MMj7o5iAE2NWDnABHLki+sS/mawQQYneLDBBhIgwO4Dejqo
+Z4Q0yMArABq0XO7GF1tNbAqKjLBsyoWgq3UACQhycgBgL4KByFp/DADMHGQxc7vvVgKGFsbdwIia
+H8iQrw4AhCCB0DBYgEEIMGSglA0A1GClDBU0oGcFNXywBgAJELvACAV07vnnCfTA9rTVYvz56Z0n
+sIDLiCyRLbEctP56sCn0gPrpg5ydtiKjB8BBDwnc7nm16KaAdSM1U4IHCSJEScIXi1i5bxJ/AzAE
+EEJLBIAQAGcAhAUA6DAB/4k/XG7lA4NgMLsC7DYywuxzY+y+sNwewnKwDow+d7LCUrB7Irp7xNkC
+MIJfJE8Sc0KBCI5wgiH8h1N62lcEqoeAxB2Ncdwb2kIA4ISejUgOgDvfILxGukhkLlglA4D8GvE6
+rhnihAFYVwGG5ShCzBCFNRTgtx4xu2cZsG6R+AIEYECGFdzJYGmKIAAmqCfAVTB7WVHB0bx3gibo
+gAANwCIBIuA4PTFgEKPLISRWF6xnrZAR5HJhr2ZXQABkQVgKKMQbyyiJADYChvX7oSS4AJocrCYD
+TImeEplIIicmLgOIPAELpgiEE7RvEJ/K1xcFAUdKHEBYMzujIm4YAAcYgv+MAVCj+oTVxqwFy2I6
+RJkjzsaBFLjylbCMZQpQGYkDPiIKdKhCDkyABBVohVCGkN4SKXhIoQEBCAKTAApAFAEZCCBhA5gk
+AITltkkIi2uaPISvelgITgZAjFVDYfuuOQk7MuJ+YwvA/iZhy0foaA8hiMIY4gACENAniSSSIDER
+uYETIAEJFggoAoYgixo8QHIjepAXB0HNSpBTfmIbWRx7JbF1mjKUDKVdOXfYCHRqLXaiaOct/0OR
+MpSBB+TJUz6H2UQAPPForqFCGgRxhQcijEQEqICVpFnJSVwyWB9bYcgyRgExulFYHKAlAJYwLB9m
+c5UcZcTZFCDLqqbgfzT/A6IkwBCSozwBAVgQRBQwIKgqDXKfFwRAHkJgA7a25QPj+2AIFyqI0T3y
+EaA0o7DS1zvN0fKnweqBYAc72NGlMK91jOoi8KgNkTqCCzM4BxNQAAPGcQELc9jCDnBRo7O29KUb
+yIoQkDawkzgBX0aS0E5HCEelLoKTKcwmKAOggOC5dnQLcN3IPAlb1yrCnGqbXdn0OAkvvECXKFiH
+VuawAjKhgA4ZAYAwCTkiwCHBgqF9iQcARrAonPZGlFqtIEZZQkckAH4XNcQAj0eIs6VwgOUqG8Y4
+YNRFANe+/fNhLxzbiBhc6gke2MMZuhASFKxAUwYTphaqdz0oAkAJRstA/9I4iNoS5UK8goBhDBeg
+AeF5bgQdw9pTqVYsozJVWMMFQF+ZVbKI4q/DHh7e2TgX488NFY40rvFds0qJlOTADUyxgh9g4AFk
+bqazN9KB3/R0OcENbQMWEEMIjrYB5dKgwhOoQOToOohwprN/ORwxAAowOwqkWIXkbMToPnbedHIN
+vi0r2drSmUJ2apVNKqDNnP7wBoAxrhA6U6jCJCSGE/xraAhY5MAKBoA1IDShFR6RNCE2u7HNkhBi
+PpfECCgIEsZwx4jwZqRubDVHwXlkPlzZ2EopCf5KIgguMAEcTnBkQjy6RHElEfoEIYQTwCAzEpDA
+MVkQyJveyIMjKsJMC1qBgRGsWFsUcEDaMg2AOdNPt8FiNSPm6LtqXatlc8O21dQoCHFVWlvkbvWd
+K/GFELjBBkgcBAMEQO+cfqoBWdx1VGyAhBP4GwE7IoRBsTiqNTyA3gIgwNQAEAgAOw==
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/images/_.gif
+
+R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/blank.gif
+
+R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/jifen_bbs.gif
+
+R0lGODlhEAAQANUAAAAAAP///1K9/xit/4zW/wCMIXv/nLX/xgD/OQDnMQDGKQCUAACEAABrAABK
+APf/9+fn587OzsbGxrW1taWlpZycnJSUlIyMjHt7e3Nzc2tra2NjY1paWlJSUkpKSjk5Of///wAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACAALAAAAAAQABAAAAZ8QJBw
+SCwKAcikUgkCcJ7QaBQ5CViv2MDkggxEOh0JZCzRaMRcQCDzSHg+GoiGYA6k1wGExyoXDPZ3bG5w
+EGUeEnZdGQdufGNjiWqLCm9xCwwNDpFrBpSOj5sbCQWVEJeZmxBgiAGPZBhIFLKyFRUWF7i4GwBN
+S75IRsFEQQA7
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/settings-16x16.gif
+
+R0lGODlhEAAQAMQAAAAAAP////fv9721zpyczjExOXNzhHt7jM7O54yMnEpKUmtrc729xtbW3gBS
+hAApQgBjnACU3iG1/1LG/4TW/wB7tQBKazExMf///wAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEA
+ABgALAAAAAAQABAAAAVXICYCAEaepagCQQA0cJyuAcwgyKAjs3kXicRhuDAQZoBFApC4LC4XkqJH
+MgEEVatqa8JyvyMe+HsabwGUCKQHRqvZ5EnEAecCJPP6GW/RryoQD34rWVshADs=
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/post-16x16.gif
+
+R0lGODlhEAAQAKIAAAAAAP//////Mc5jMc7Ozv///wAAAAAAACH5BAEAAAUALAAAAAAQABAAAANA
+WLrc7uA9MCIDOOPBrQJEGFJdAwYoWXkfkXJVwBYnIFBAarr2jco7GeYHvLiIvxloyCwuTkidUUQl
+KDXYmcSRAAA7
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/reply-16x16.gif
+
+R0lGODlhEAAQAOYAAAAAAP///x4dHi0sLcTCxPLx8urp6s/Oz87NzsvDzeHf4tfW2NDQ0cfHyEBC
+QLW4tQ47ChOKABF6AGp5Z5idlxh8AC2dEimNEV/sPXnnX1uNT5jSizJFLlRxTVRnUCKjABdxADXc
+CyupCj7xEDviDzjUDjLGDUDrETvjEj/lFkf/GUfzHE7/Ilj/LU/jKVX1LlrtNitqG025MiNNGDt9
+Ko74dEp2PzFJK1p2U5e/jTU5NBhdAiKHBDrSDzzUEDJbJS5FJ2+AanuFeDizED2/E6GkoMHEwC+L
+CjFTJHB6bD1WMis0JyAiH+/w7js8Of7+/vX19e/v7+Tk5NPT087OznJycjQ0NBoaGv///wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAFgALAAAAAAQABAAAAeUgFgAg4SFAFiIiABUjI2Nh4mCVAGUlZSQiYsBAJucnpGSlpaYipOj
+n5GaAQJJTJUDS6lUTw1IR0qUCkA8QZkITjtDRD8JRjYfJxCJVxMVPj0lIiARISomHok6EiMkKCkr
+LC0uFx1RiVY3Fi8wGDIxMxwOBqAFRTQZNRoPTVCgkQQ4NuRg4M/fAgpCphT0d6CKlIKBAAA7
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/search-16x16.gif
+
+R0lGODlhEAAQAMQAAAAAAP///wAhOQCM5wBShACc9wBztQA5Wjm1/3vO/6Xe/zm9/2vO/+f3/wBK
+a7Xn//f//4SEhFpaWkpKSkJCQggICP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEA
+ABYALAAAAAAQABAAAAVZoCWOZElOQApM5ghE0CNHQDvBQSAjEVsCkNwjkUAMar+Hjlg8mgDKIdGI
+JEFlU6rphsgOKL5fZED+VlI2FUACWDSqLRGAUFDA4wCHgXFvAQ4GB3E/BwKDcSEAOw==
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/back-to-16x16.gif
+
+R0lGODlhEAAQAKIAAAAAAP//////nM6cMf/OY////wAAAAAAACH5BAEAAAUALAAAAAAQABAAAAM0
+WLrc/nCBOWMBImfQqCfEJg1gaYrXEARmyyke5ToA2RIv85m5bvMPWWnQ8w2OREvMwmwqEgA7
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com/images/logos/bea_tl_logo_sm.gif
+
+R0lGODlhMQAhAMQAAAAAAP///+MCCeozO+6coetSXfKvtPXDx/N/jPfa3ffk6Pzy9vDt7/vx+fj6
+/fD2++3//xkbG/b///v//01OTv7///n6+rCxsfz+/fP++O3q6OLf3/Tz88jIyIqKijIyMiwAAAAA
+MQAhAAAF/2AgjmRpltJxKEGVJNUpz3QwTbEmDEUhFTxDbUirGAoEBESwEyAQTIFiY2ARryLCbiBI
+CAo7yYD7ZB6wxcQhM/lyC4EDgiA6FBIS5gA9+/EGGkBfNBgFCAoICXwlFWBcAhNxVjVtAmeLI22P
+QmgJA3SYDAQGDEcFk50EHIsGXz2YIxVcimgHWwKcEgEWFmgVCJdoUGQiFwDHAGgEAxh8FRZPwR3I
+EWifaBIEo70k08cfV43BJhUYqyMMO2ALJd4A4EQKXTMaHhcXIg56TibuFCLcSJTDISPGiA4X7NX5
+wq8fsg8ekHUQMQFKFAQGA3SIgAyAB433JrYwQKCBDHcdj/+JeBRlR7GUxzwwuIcvAAYNB2g5PPaP
+o0p5TAxkiHLGZ7UPyAJoYCDiwZ8BGbsh+0chqRYmui4GoBagqsoReZpw2gngH1KVFqWEHcQxwkev
+yUYMa3jCX4CzydK2HEQCbtw6PBRI0IDq4NS7SefuhRPgAl5kUTFMINADKlmziYneuCECbge4USeA
+AYPAhgordvEGSMsUyIDSh0GT0MJlT4YeuESkzsxEQYUocGJDJjGGh4MlUQzahRugFZNVWoUfi5oA
+gZC183R39Csiyuso7LZ3DFjCyw6djWHGFOG8JaiI6jcUNGCAvFIP+EV4oFATIGVD6F1AwUcb4HeB
+fbAkqOAGggw2SEMIADs=
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/sqjifen1.gif
+
+R0lGODlhMwAOAIAAAAAjXe7u7iH5BAAAAAAALAAAAAAzAA4AQAJhjI+py80AY0TgyBoqzmZTm2zi
+ckHZ9YGpw7Zu64UnOs21yskdnpfYVNr5cjqFyeb5rYi7h3NpiRl5HZ8U2lvGttZoUZWkNscjXPnE
+fKaxQqKyLA2ri+eZ7minWPf8Pj9QAAA7
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://dev2dev.bea.com.cn/bbs/images/sqjifen0.gif
+
+R0lGODlhMwAOAIAAAAAjXf///yH5BAAAAAAALAAAAAAzAA4AAAJkjI+py+0GWEQzgSoPVpuGC16f
+OIaWxoVm003Ye3oQmqolKM85pOJ8LIPpgB9akdZziXqz5PFZEUI1kQ7HyHMabcXoMGf9eqrI6RMb
+PlOUPp1UnQ57v213lPTI6/frpP8PGChSAAA7
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/css/main.css
+
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.input_sub {
+	BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #ffffff 1px solid; =
+FONT-SIZE: 12px; BACKGROUND-IMAGE: url(/images/sub_bg.gif); BORDER-LEFT: =
+#ffffff 1px solid; COLOR: #033683; LINE-HEIGHT: 18px; BORDER-BOTTOM: =
+#333333 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: =
+24px; TEXT-DECORATION: none
+}
+A IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+.article_pic {
+	TEXT-ALIGN: center
+}
+.tabletitle1 {
+	COLOR: #fff; BACKGROUND-COLOR: #7e7e7e
+}
+.tablebody1 {
+	LINE-HEIGHT: normal; BACKGROUND-COLOR: #fff
+}
+.tablebody2 {
+	LINE-HEIGHT: normal; BACKGROUND-COLOR: #eeeeee
+}
+.tableborder5 {
+	BORDER-RIGHT: #eeeeee 1px solid; BORDER-TOP: #eeeeee 1px solid; =
+MARGIN-LEFT: 10px; BORDER-LEFT: #eeeeee 1px solid; BORDER-BOTTOM: =
+#eeeeee 1px solid; BACKGROUND-COLOR: #d6e0ef
+}
+.normaltextSmall {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: verdana, Arial, =
+Helvetica, sans-serif, fantasy
+}
+.hot {
+	COLOR: #ff0000
+}
+A.hot {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.hot:link {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.hot:visited {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.logored:link {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.logored:visited {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.logored:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.hot:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.reply {
+	BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: =
+#cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: =
+#cccccc 1px dashed; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed; =
+BACKGROUND-COLOR: #e7e7e7
+}
+.reply2 {
+	BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: =
+#cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: =
+#cccccc 1px dashed; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed; =
+BACKGROUND-COLOR: #e7e7e7
+}
+.tabel-general {
+	FONT-SIZE: 12px; LINE-HEIGHT: 16px; TEXT-ALIGN: center
+}
+.tabel-general TH {
+	VERTICAL-ALIGN: middle; COLOR: #555555; LINE-HEIGHT: 16px; HEIGHT: =
+18px; BACKGROUND-COLOR: #d9d8d8; TEXT-ALIGN: center
+}
+.tabel-general TH.left {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #cccccc 1px solid; =
+BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid; =
+BACKGROUND-COLOR: #d9d8d8; TEXT-ALIGN: center
+}
+.tabel-general TH.center {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #cccccc 1px solid; =
+BORDER-BOTTOM: #cccccc 1px solid
+}
+.tabel-general TH.right {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; =
+BORDER-BOTTOM: #cccccc 1px solid
+}
+.tabel-general TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; =
+VERTICAL-ALIGN: top; BORDER-LEFT: #cccccc 1px solid; LINE-HEIGHT: 16px; =
+PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: =
+#ffffff; TEXT-ALIGN: left
+}
+.tabel-general TD.right {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid; =
+TEXT-ALIGN: left
+}
+.tablered {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; =
+BORDER-BOTTOM: 1px solid
+}
+TEXTAREA {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif
+}
+INPUT {
+	FONT-SIZE: 12px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif
+}
+.toptd {
+	BACKGROUND-IMAGE: url(/images/topmain.jpg)
+}
+#headergraphic {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; WIDTH: 799px; PADDING-TOP: 0px; HEIGHT: 85px
+}
+#floater {
+	PADDING-RIGHT: 12px; RIGHT: 0px; POSITION: absolute; TOP: 3px; =
+TEXT-ALIGN: right
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; COLOR: #000; LINE-HEIGHT: 1.7em; PADDING-TOP: 0px; =
+FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: =
+#fff
+}
+.table1 {
+	FONT-SIZE: 12px; VERTICAL-ALIGN: top; FONT-FAMILY: Arial, Verdana, =
+Helvetica, sans-serif
+}
+td1 {
+	FONT-SIZE: 12px; VERTICAL-ALIGN: top; FONT-FAMILY: Arial, Verdana, =
+Helvetica, sans-serif
+}
+.tdbottom {
+	FONT-SIZE: 12px; VERTICAL-ALIGN: bottom; FONT-FAMILY: Arial, Verdana, =
+Helvetica, sans-serif
+}
+.a000000 {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a000000:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a000000:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.a000000:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #0065c9; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0065c9; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #0065c9; TEXT-DECORATION: underline
+}
+.ab:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #0065c9; FONT-FAMILY: Arial, =
+Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.ab:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #0065c9; FONT-FAMILY: Arial, =
+Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.ab:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #0065c9; FONT-FAMILY: Arial, =
+Verdana, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.h2b {
+	FONT-WEIGHT: bold
+}
+.h2bred {
+	FONT-WEIGHT: bold; COLOR: red
+}
+.red A {
+	COLOR: red
+}
+.col777777 {
+	COLOR: #777
+}
+#header {
+	BORDER-RIGHT: #ababab 1px solid; WIDTH: 100%; POSITION: relative; =
+BACKGROUND-COLOR: #f1f1e5
+}
+#dotdouble001 {
+	BACKGROUND-IMAGE: url(/images/dotdouble001.gif); MARGIN-BOTTOM: 10px; =
+WIDTH: 100%; HEIGHT: 3px
+}
+#dot001 {
+	MARGIN-TOP: 10px; BACKGROUND-IMAGE: url(/images/dot001.gif); =
+MARGIN-BOTTOM: 10px; WIDTH: 100%; HEIGHT: 1px
+}
+.uldot002 {
+	LIST-STYLE-IMAGE: =
+url(http://dev2dev.bea.com.cn/minisite/edm/images060315/dot002.gif); =
+MARGIN-BOTTOM: 0px
+}
+.uldot003 {
+	LIST-STYLE-IMAGE: =
+url(http://dev2dev.bea.com.cn/minisite/edm/images060315/dot003.gif); =
+MARGIN-BOTTOM: 0px
+}
+.uldot011 {
+	PADDING-LEFT: 10px; LIST-STYLE-IMAGE: =
+url(http://dev2dev.bea.com.cn/minisite/edm/images060315/dot011.gif); =
+COLOR: #a4a4a4; LINE-HEIGHT: 14px; PADDING-TOP: 8px
+}
+.uldot007 {
+	LIST-STYLE-IMAGE: =
+url(http://dev2dev.bea.com.cn/minisite/edm/images060315/dot007.gif); =
+PADDING-BOTTOM: 0px; LINE-HEIGHT: 14px
+}
+.uldot004 {
+	LIST-STYLE-IMAGE: =
+url(http://dev2dev.bea.com.cn/minisite/edm/images060315/dot004.gif); =
+PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px
+}
+.uldot005 {
+	LIST-STYLE-IMAGE: url(http://dev2dev.bea.com.cn/images/uldot005.gif); =
+PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px
+}
+.beas {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 0px
+}
+.beas2 {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px; MARGIN-LEFT: 10px
+}
+.beasarticl {
+	MARGIN: 5px 20px 10px
+}
+.beasarticlnew {
+	MARGIN: 5px 0px 10px 10px
+}
+.beasarticlnew1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.beasline15 {
+	MARGIN-TOP: 15px; MARGIN-BOTTOM: 15px; MARGIN-LEFT: 10px
+}
+.beas10 {
+	MARGIN-TOP: 15px; MARGIN-BOTTOM: 15px; MARGIN-LEFT: 0px
+}
+.beas5 {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 15px; MARGIN-LEFT: 0px
+}
+.lipdtop5 {
+	MARGIN-LEFT: 0px
+}
+.mag5 {
+	MARGIN: 5px
+}
+#headergraphic {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; WIDTH: auto; PADDING-TOP: 0px; HEIGHT: 86px
+}
+.buttons {
+	FONT-SIZE: 12px; RIGHT: 0px; COLOR: #fff; POSITION: relative
+}
+.buttons A:link {
+	FONT-SIZE: 12px; COLOR: #000; TEXT-DECORATION: none
+}
+.buttons A:visited {
+	FONT-SIZE: 12px; COLOR: #000; TEXT-DECORATION: none
+}
+.buttons A:hover {
+	COLOR: #000; TEXT-DECORATION: underline
+}
+#floater {
+	PADDING-RIGHT: 12px; RIGHT: 0px; POSITION: absolute; TOP: 3px; =
+TEXT-ALIGN: right
+}
+.searchbox {
+	MARGIN-TOP: 6px; FONT-SIZE: 12px; RIGHT: 0px; FONT-FAMILY: Arial, =
+Verdana, Helvetica, sans-serif
+}
+.searchbase {
+	FONT-SIZE: 12px; RIGHT: 0px; FONT-FAMILY: Arial, Verdana, Helvetica, =
+sans-serif
+}
+INPUT.search {
+	FONT-SIZE: 12px; WIDTH: 200px; COLOR: #444; FONT-FAMILY: Arial, =
+Verdana, Helvetica, sans-serif
+}
+.blueline {
+	MARGIN-TOP: 1px; HEIGHT: 2px; BACKGROUND-COLOR: #0066cb
+}
+#graybar {
+	FONT-SIZE: 12px; BACKGROUND: #e6e6e6; COLOR: #333; POSITION: relative; =
+HEIGHT: 25px
+}
+#graybar A:link {
+	FONT-SIZE: 12px; COLOR: #000; TEXT-DECORATION: none
+}
+#graybar A:visited {
+	FONT-SIZE: 12px; COLOR: #000; TEXT-DECORATION: none
+}
+#graybar A:hover {
+	TEXT-DECORATION: underline
+}
+.topnav {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 2px; LEFT: 0px; PADDING-BOTTOM: 0px; =
+MARGIN-LEFT: 8px; PADDING-TOP: 5px; POSITION: relative
+}
+.topnav A {
+	MARGIN-RIGHT: 12px
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: 25px
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BORDER-BOTTOM: #666 1px dotted
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; LINE-HEIGHT: 18px
+}
+.h1b {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: 25px
+}
+.h2bblue {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #0065c9; LINE-HEIGHT: 16px
+}
+.textblue {
+	FONT-SIZE: 12px; COLOR: #0065c9; LINE-HEIGHT: 16px
+}
+.h1b1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: =
+14px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.h2 {
+	FONT-SIZE: 17px; MARGIN: 0px 0px 10px; COLOR: #000
+}
+#col_main H4 {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 20px; =
+TEXT-TRANSFORM: uppercase; COLOR: #e20725; FONT-FAMILY: Verdana, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.col_left H4 {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 20px; =
+TEXT-TRANSFORM: uppercase; COLOR: #e20725; FONT-FAMILY: Verdana, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+#col_main H4 A {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 20px; =
+TEXT-TRANSFORM: uppercase; COLOR: #e20725; FONT-FAMILY: Verdana, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+H4.red {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 20px; =
+TEXT-TRANSFORM: uppercase; COLOR: #e20725; FONT-FAMILY: Verdana, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+H4.red A {
+	FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 20px; =
+TEXT-TRANSFORM: uppercase; COLOR: #e20725; FONT-FAMILY: Verdana, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+#col_main H4.line {
+	FONT-SIZE: 12px; MARGIN: 10px 0px 20px; TEXT-TRANSFORM: uppercase; =
+COLOR: #e20725; BORDER-BOTTOM: #d9d8d8 1px solid; FONT-FAMILY: Verdana, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.col_left H4.line {
+	FONT-SIZE: 12px; MARGIN: 10px 0px 20px; TEXT-TRANSFORM: uppercase; =
+COLOR: #e20725; BORDER-BOTTOM: #d9d8d8 1px solid; FONT-FAMILY: Verdana, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+#col_main H4.line A {
+	FONT-SIZE: 12px; MARGIN: 10px 0px 20px; TEXT-TRANSFORM: uppercase; =
+COLOR: #e20725; BORDER-BOTTOM: #d9d8d8 1px solid; FONT-FAMILY: Verdana, =
+Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.h1 {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+6px; PADDING-TOP: 20px
+}
+.h5 {
+	PADDING-BOTTOM: 3px
+}
+.p10 {
+	PADDING-LEFT: 8px; FONT-WEIGHT: bold
+}
+.heading {
+	MARGIN: 30px 0px 5px
+}
+.bullets UL {
+	PADDING-TOP: 5px
+}
+.bullets LI {
+	LIST-STYLE-IMAGE: url(/images/bullet_.gif)
+}
+.plain UL {
+	PADDING-TOP: 5px
+}
+.plain LI {
+	PADDING-BOTTOM: 2px; MARGIN-LEFT: 0px; PADDING-TOP: 2px; =
+LIST-STYLE-TYPE: none
+}
+.code {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; FONT-SIZE: 11px; =
+PADDING-BOTTOM: 5px; MARGIN-LEFT: 0px; OVERFLOW: auto; WIDTH: 520px; =
+COLOR: #000; PADDING-TOP: 5px; FONT-FAMILY: courier, serif; =
+BACKGROUND-COLOR: #eee
+}
+.codepre {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; FONT-SIZE: 11px; =
+PADDING-BOTTOM: 5px; MARGIN-LEFT: 0px; OVERFLOW: auto; WIDTH: 460px; =
+COLOR: #000; PADDING-TOP: 5px; FONT-FAMILY: courier, serif; =
+BACKGROUND-COLOR: #eee
+}
+#left_nav {
+	BORDER-RIGHT: #f7f7f7 1px solid; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; =
+FONT-SIZE: 12px; BACKGROUND: #f7f7f7; PADDING-BOTTOM: 0px; MARGIN-LEFT: =
+4px; WIDTH: 170px; LINE-HEIGHT: 1.8; PADDING-TOP: 0px; BORDER-BOTTOM: =
+#f7f7f7 1px solid
+}
+.nav_head {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 7px; FONT-WEIGHT: bold; FONT-SIZE: =
+12px; BACKGROUND: #d9d8d8; PADDING-BOTTOM: 4px; MARGIN: 0px 0px 4px; =
+WIDTH: 170px; COLOR: #555; LINE-HEIGHT: 14px; PADDING-TOP: 4px; =
+FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif
+}
+.nav_group {
+	PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.6em
+}
+.nav_header_a {
+	MARGIN-LEFT: 14px
+}
+.nav_group A:link {
+	FONT-SIZE: 12px; COLOR: #555; FONT-FAMILY: Arial, Verdana, Helvetica, =
+sans-serif; TEXT-DECORATION: none
+}
+.nav_group A:visited {
+	FONT-SIZE: 12px; COLOR: #555; FONT-FAMILY: Arial, Verdana, Helvetica, =
+sans-serif; TEXT-DECORATION: none
+}
+.nav_group A:hover {
+	TEXT-DECORATION: underline
+}
+.breadcrumb {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #fff 1px =
+solid; PADDING-LEFT: 15px; FONT-WEIGHT: normal; FONT-SIZE: 12px; =
+PADDING-BOTTOM: 15px; MARGIN: 10px 0px 0px; BORDER-LEFT: #fff 1px solid; =
+COLOR: #333333; BOTTOM: 0px; PADDING-TOP: 10px; BORDER-BOTTOM: #fff 1px =
+solid; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TOP: 0px; =
+TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+.breadcrumb:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #0000cc; FONT-FAMILY: =
+Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.breadcrumb:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: =
+Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.breadcrumb:hover:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #0000cc; FONT-FAMILY: =
+Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.notice {
+	BORDER-RIGHT: #666 1px dashed; PADDING-RIGHT: 8px; BORDER-TOP: #666 1px =
+dashed; MARGIN-TOP: 20px; PADDING-LEFT: 8px; PADDING-BOTTOM: 8px; =
+BORDER-LEFT: #666 1px dashed; PADDING-TOP: 8px; BORDER-BOTTOM: #666 1px =
+dashed; BACKGROUND-COLOR: #e6e6e6
+}
+.hide {
+	DISPLAY: none
+}
+.wrap {
+	MARGIN: 10px; WIDTH: 778px; POSITION: relative
+}
+.wrap_ln {
+	MARGIN-LEFT: 180px; WIDTH: 600px; POSITION: relative
+}
+.featured TD {
+	PADDING-RIGHT: 10px; PADDING-BOTTOM: 8px
+}
+.feature {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+#col_main {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 14px; MARGIN: 0px 20px
+}
+#col_main_left {
+	MARGIN: 0px 20px; WIDTH: 220px
+}
+#col_main_right {
+	MARGIN: 0px 20px; WIDTH: 220px
+}
+#col_main_left {
+	PADDING-RIGHT: 20px
+}
+#col_right {
+	PADDING-LEFT: 8px; MARGIN: 0px 20px; WIDTH: 250px
+}
+#col_right220 {
+	PADDING-LEFT: 8px; MARGIN: 0px 20px; WIDTH: 200px
+}
+.buarticlcontent {
+	FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: 16px; FONT-FAMILY: =
+Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #2069b5; =
+TEXT-DECORATION: none
+}
+.box_gray {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: =
+#d3d3d3 1px solid; MARGIN-TOP: 0px; PADDING-LEFT: 5px; FONT-SIZE: 12px; =
+MARGIN-BOTTOM: 10px; PADDING-BOTTOM: 5px; BORDER-LEFT: #d3d3d3 1px =
+solid; COLOR: #000000; MARGIN-RIGHT: 3px; PADDING-TOP: 10px; =
+BORDER-BOTTOM: #d3d3d3 1px solid; FONT-FAMILY: Arial, =
+"=D0=C2=CB=CE=CC=E5", "=CB=CE=CC=E5"; TEXT-DECORATION: none
+}
+.box_white {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: =
+#d3d3d3 1px solid; MARGIN-TOP: 0px; PADDING-LEFT: 5px; FONT-SIZE: 12px; =
+MARGIN-BOTTOM: 10px; PADDING-BOTTOM: 5px; BORDER-LEFT: #d3d3d3 1px =
+solid; COLOR: #000000; MARGIN-RIGHT: 3px; PADDING-TOP: 10px; =
+BORDER-BOTTOM: #d3d3d3 1px solid; FONT-FAMILY: Arial, =
+"=D0=C2=CB=CE=CC=E5", "=CB=CE=CC=E5"; TEXT-DECORATION: none
+}
+.box_gray3title {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+#d3d3d3 1px solid; MARGIN-TOP: 0px; PADDING-LEFT: 15px; FONT-WEIGHT: =
+bold; FONT-SIZE: 12px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #d3d3d3 1px solid; WIDTH: 220px; COLOR: #000000; =
+LINE-HEIGHT: 14px; MARGIN-RIGHT: 3px; PADDING-TOP: 5px; FONT-FAMILY: =
+Arial, "=D0=C2=CB=CE=CC=E5", "=CB=CE=CC=E5"; BACKGROUND-COLOR: #e4e2e3; =
+TEXT-DECORATION: none
+}
+.box_gray3txt01 {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 10px; MARGIN-TOP: 0px; =
+PADDING-LEFT: 15px; MARGIN-BOTTOM: 12px; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #d3d3d3 1px solid; WIDTH: 220px; MARGIN-RIGHT: 3px; =
+PADDING-TOP: 10px; BORDER-BOTTOM: #d3d3d3 1px solid; BACKGROUND-COLOR: =
+#f4f4f4
+}
+.box_gray3 {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+#d3d3d3 1px solid; MARGIN-TOP: 0px; PADDING-LEFT: 15px; MARGIN-BOTTOM: =
+12px; PADDING-BOTTOM: 5px; BORDER-LEFT: #d3d3d3 1px solid; WIDTH: 220px; =
+MARGIN-RIGHT: 3px; PADDING-TOP: 10px; BORDER-BOTTOM: #d3d3d3 1px solid; =
+BACKGROUND-COLOR: #f4f4f4
+}
+.boxtitle {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+#d3d3d3 1px solid; MARGIN-TOP: 0px; PADDING-LEFT: 15px; FONT-WEIGHT: =
+bold; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 3px; BORDER-LEFT: #d3d3d3 1px =
+solid; WIDTH: 220px; MARGIN-RIGHT: 3px; PADDING-TOP: 3px; BORDER-BOTTOM: =
+#d3d3d3 0px solid; BACKGROUND-COLOR: #e4e4e4
+}
+.box_gray4 {
+	BORDER-RIGHT: #d3d3d3 1px solid; BORDER-TOP: #d3d3d3 0px solid; =
+MARGIN-TOP: 0px; MARGIN-BOTTOM: 12px; PADDING-BOTTOM: 5px; BORDER-LEFT: =
+#d3d3d3 1px solid; WIDTH: 245px; MARGIN-RIGHT: 3px; PADDING-TOP: 10px; =
+BORDER-BOTTOM: #d3d3d3 1px solid; BACKGROUND-COLOR: #f4f4f4; TEXT-ALIGN: =
+center
+}
+.box_gray4 IMG {
+	MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+.box_gray100 {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+#d3d3d3 1px solid; MARGIN-TOP: 0px; PADDING-LEFT: 15px; MARGIN-BOTTOM: =
+12px; PADDING-BOTTOM: 5px; BORDER-LEFT: #d3d3d3 1px solid; WIDTH: 80%; =
+MARGIN-RIGHT: 3px; PADDING-TOP: 10px; BORDER-BOTTOM: #d3d3d3 1px solid; =
+BACKGROUND-COLOR: #f4f4f4
+}
+#aaaaaaa4 {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+#d3d3d3 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 0px =
+10px 12px; BORDER-LEFT: #d3d3d3 1px solid; PADDING-TOP: 10px; =
+BORDER-BOTTOM: #d3d3d3 1px solid; BACKGROUND-COLOR: #f4f4f4
+}
+.box_content {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#d3d3d3 1px solid; PADDING-LEFT: 15px; FLOAT: right; PADDING-BOTTOM: =
+5px; MARGIN: 0px 10px 10px 5px; BORDER-LEFT: #d3d3d3 1px solid; WIDTH: =
+160px; PADDING-TOP: 10px; BORDER-BOTTOM: #d3d3d3 1px solid; HEIGHT: 80px
+}
+.box_gray2 {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+#d3d3d3 1px solid; PADDING-LEFT: 5px; MARGIN-BOTTOM: 12px; =
+PADDING-BOTTOM: 5px; BORDER-LEFT: #d3d3d3 1px solid; PADDING-TOP: 10px; =
+BORDER-BOTTOM: #d3d3d3 1px solid; BACKGROUND-COLOR: #edeef2
+}
+.box_gray {
+	BACKGROUND-COLOR: #f4f4f4
+}
+.graybox {
+	PADDING-RIGHT: 10px; BORDER-TOP: #666 1px dotted; PADDING-LEFT: 10px; =
+PADDING-BOTTOM: 10px; MARGIN: 10px 0px; PADDING-TOP: 10px; =
+BORDER-BOTTOM: #666 1px dotted; BACKGROUND-COLOR: #eee
+}
+.icon {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; =
+PADDING-TOP: 4px
+}
+.title {
+	MARGIN-BOTTOM: 3px
+}
+.leftnav {
+	FLOAT: left; MARGIN-LEFT: 10px; WIDTH: 145px; PADDING-TOP: 2px
+}
+.thumb {
+	MARGIN-BOTTOM: 5px; MARGIN-RIGHT: 5px
+}
+.thumb_right {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 5px; MARGIN-LEFT: 5px
+}
+.blurb {
+	MARGIN-TOP: 6px
+}
+.pullquote {
+	PADDING-RIGHT: 8px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 8px; =
+FONT-WEIGHT: bold; FLOAT: right; PADDING-BOTTOM: 8px; MARGIN: 5px 0px =
+5px 5px; WIDTH: 170px; COLOR: #666; PADDING-TOP: 8px; BORDER-BOTTOM: =
+#999 1px solid; BACKGROUND-COLOR: #eee
+}
+.small {
+	FONT-SIZE: 10px
+}
+#navLeft {
+	FLOAT: left; WIDTH: 145px
+}
+#contentRight {
+	MARGIN: 0px 0px 0px 180px; WIDTH: 560px
+}
+.keywordhighlight {
+	FONT-WEIGHT: bold; BACKGROUND-COLOR: #fff
+}
+.l {
+	FONT-SIZE: 12px
+}
+#footer {
+	FONT-SIZE: 12px; MARGIN: auto; WIDTH: 620px; COLOR: #666
+}
+#footer A {
+	MARGIN-LEFT: 6px; MARGIN-RIGHT: 6px
+}
+#footer A:link {
+	FONT-SIZE: 12px; COLOR: #666; TEXT-DECORATION: none
+}
+#footer A:visited {
+	FONT-SIZE: 12px; COLOR: #666; TEXT-DECORATION: none
+}
+#footer A:hover {
+	TEXT-DECORATION: underline
+}
+.icp A:link {
+	FONT-SIZE: 12px; COLOR: #666; TEXT-DECORATION: none
+}
+.icp A:visited {
+	FONT-SIZE: 12px; COLOR: #666; TEXT-DECORATION: none
+}
+.icp A:hover {
+	TEXT-DECORATION: underline
+}
+.graybox {
+	PADDING-RIGHT: 10px; BORDER-TOP: #666 1px dotted; PADDING-LEFT: 10px; =
+PADDING-BOTTOM: 10px; MARGIN: 10px 0px; PADDING-TOP: 10px; =
+BORDER-BOTTOM: #666 1px dotted; BACKGROUND-COLOR: #eee
+}
+.cleangrid {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: =
+0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: =
+0px; BORDER-BOTTOM: 0px
+}
+.cleangrid TD {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 5px; BORDER-TOP: 0px; PADDING-LEFT: =
+15px; PADDING-BOTTOM: 5px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: =
+3px; BORDER-BOTTOM: 0px
+}
+.label {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 15px; BACKGROUND: #ccc; =
+PADDING-BOTTOM: 1px; PADDING-TOP: 1px; TEXT-ALIGN: center
+}
+.label TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 15px; BACKGROUND: #ccc; =
+PADDING-BOTTOM: 1px; PADDING-TOP: 1px; TEXT-ALIGN: center
+}
+.graphicdev2dev {
+	LEFT: 0px; POSITION: absolute; TOP: 26px
+}
+.graphicbea {
+	LEFT: 596px; POSITION: absolute; TOP: 26px
+}
+.slogan {
+	LEFT: 8px; POSITION: absolute; TOP: 11px
+}
+.title_line {
+	MARGIN-TOP: 3px; BACKGROUND-IMAGE: url(/images/title_line.gif); =
+MARGIN-BOTTOM: 10px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 4px
+}
+.rule {
+	MARGIN-TOP: 1px; BACKGROUND-IMAGE: url(/images/dotted_line.gif); =
+MARGIN-BOTTOM: 10px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 1px
+}
+.bottomdots {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND-IMAGE: =
+url(/images/twodots.gif); PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100%; =
+PADDING-TOP: 0px; BORDER-BOTTOM: #9f160e 3px solid; BACKGROUND-REPEAT: =
+repeat; HEIGHT: 3px
+}
+.footertext {
+	FONT-SIZE: 10px; COLOR: #818181; TEXT-ALIGN: right
+}
+.footertext A:link {
+	FONT-SIZE: 10px; COLOR: #818181; TEXT-ALIGN: right
+}
+.footertext A:visited {
+	FONT-SIZE: 10px; COLOR: #818181; TEXT-ALIGN: right
+}
+P {
+	MARGIN: 10px 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.colC1C1C1 {
+	BACKGROUND-COLOR: #c1c1c1
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+0px 5px 25px; PADDING-TOP: 0px
+}
+.liline15 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+0px 15px 25px; PADDING-TOP: 0px
+}
+.liline8 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px =
+0px 8px 25px; PADDING-TOP: 0px
+}
+.liline00 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#colLeft {
+	PADDING-LEFT: 15px; WIDTH: 363px; TEXT-ALIGN: left
+}
+#colRight {
+	PADDING-LEFT: 25px; WIDTH: 363px; TEXT-ALIGN: left
+}
+#summary {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 15px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#summary_fixed {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px 15px; WIDTH: 640px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#content #summary {
+	MARGIN: 5px 0px 0px
+}
+#content {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #fff 1px =
+solid; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+5px 0px 0px 15px; BORDER-LEFT: #fff 1px solid; BOTTOM: 0px; PADDING-TOP: =
+0px; BORDER-BOTTOM: #fff 1px solid; TOP: 0px; TEXT-ALIGN: left
+}
+#searchresults {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #fff 1px =
+solid; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 12px; =
+PADDING-BOTTOM: 0px; MARGIN: 5px 0px 0px 15px; BORDER-LEFT: #fff 1px =
+solid; BOTTOM: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: #fff 1px solid; =
+FONT-FAMILY: Verdana, Arial, sans-serif; TOP: 0px; TEXT-ALIGN: left
+}
+DIV .footertext {
+	MARGIN-BOTTOM: 3px
+}
+#maintable {
+	WIDTH: 100%; PADDING-TOP: 0px
+}
+.leftnav_list LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: =
+url(/images/bullet_orange.gif); PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px =
+15px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.more {
+	DISPLAY: block; BACKGROUND: url(/images/arrow_red.gif) no-repeat left =
+bottom; OVERFLOW: hidden; WIDTH: 140px; TEXT-INDENT: 20px; HEIGHT: 18px
+}
+.more:hover {
+	BACKGROUND-POSITION: left top; TEXT-DECORATION: none
+}
+.kg24 {
+	TEXT-INDENT: 24px
+}
+.beasnew {
+	MARGIN-TOP: 5px; MARGIN-LEFT: 0px
+}
+.p20 {
+	PADDING-LEFT: 20px
+}
+.login-title-bg {
+	BACKGROUND-POSITION: 50% bottom; BACKGROUND-IMAGE: =
+url(../images/dev2dev-title-bg-img.gif); PADDING-BOTTOM: 5px; =
+BACKGROUND-REPEAT: repeat-x
+}
+.login-table {
+	MARGIN: 8px auto
+}
+.login-table TD {
+	HEIGHT: 24px
+}
+.login-table TD INPUT {
+	BORDER-RIGHT: #d5d5d5 1px solid; BORDER-TOP: #d5d5d5 1px solid; =
+VERTICAL-ALIGN: middle; BORDER-LEFT: #d5d5d5 1px solid; WIDTH: 99px; =
+BORDER-BOTTOM: #d5d5d5 1px solid; HEIGHT: 17px
+}
+.login-table TD IMG {
+	MARGIN: 4px 10px
+}
+.login-btn {
+	MARGIN: 3px auto; WIDTH: 156px
+}
+.login-btn IMG {
+	MARGIN: 0px 10px
+}
+.login-plan {
+	MARGIN: 0px
+}
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: text/css;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/css/custom.css
+
+.rbox {
+	MARGIN-TOP: 2em; COLOR: #000; LINE-HEIGHT: 14px; PADDING-TOP: 0px; =
+BACKGROUND-COLOR: #ccc
+}
+.rbcontent {
+	MARGIN: 0px 6px; COLOR: #000; BACKGROUND-COLOR: #ccc
+}
+.rboxtop DIV {
+	BACKGROUND: url(/images/gray_tl.gif) no-repeat left top
+}
+.rboxtop {
+	BACKGROUND: url(/images/gray_tr.gif) no-repeat right top
+}
+.rboxbot DIV {
+	BACKGROUND: url(/images/gray_bl.gif) no-repeat left top
+}
+.rboxbot {
+	BACKGROUND: url(/images/gray_br.gif) no-repeat right top
+}
+.rboxtop {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 6px
+}
+.rboxtop DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 6px
+}
+.rboxbot {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 6px
+}
+.rboxbot DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 6px
+}
+.tb_left {
+	FLOAT: left; WIDTH: 30%
+}
+.tb_right {
+	FLOAT: right; WIDTH: 60%; TEXT-ALIGN: right
+}
+DIV.feedback {
+	MARGIN-TOP: 1em
+}
+.feedback UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 1em; PADDING-BOTTOM: 0px; MARGIN: 0px =
+0px 0px 1em; PADDING-TOP: 0px
+}
+.feedback LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: =
+url(/images/bullet-post.gif); PADDING-BOTTOM: 1em; MARGIN-LEFT: 0px; =
+PADDING-TOP: 0px
+}
+.feedback UL UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: =
+url(/images/bullet-reply.gif); PADDING-BOTTOM: 1em; MARGIN-LEFT: 0px; =
+PADDING-TOP: 0px
+}
+LI.trackback {
+	LIST-STYLE-IMAGE: url(/images/icons/trackback_18.gif)
+}
+.clear {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: visible; WIDTH: 100%; HEIGHT: =
+1px
+}
+H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px
+}
+DIV.midcolumn {
+	LINE-HEIGHT: 1.2
+}
+DIV.midcolumn LI {
+	PADDING-LEFT: 14px; BACKGROUND: url(/images/button1.gif) no-repeat 0px =
+2px; MARGIN: 0px; LIST-STYLE-TYPE: none
+}
+.clear {
+	CLEAR: both; DISPLAY: block; FONT-SIZE: 1px; WIDTH: 100%; HEIGHT: 3px
+}
+.grayline {
+	CLEAR: both; MARGIN: 0px 0px 15px; WIDTH: 100%; BORDER-BOTTOM: #ddd 1px =
+solid; HEIGHT: 2px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1em; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+H2.headerbar {
+	PADDING-RIGHT: 2px; BORDER-TOP: #c00 2px solid; PADDING-LEFT: 2px; =
+FONT-WEIGHT: normal; FONT-SIZE: 10px; BACKGROUND: #f4f2ea; =
+PADDING-BOTTOM: 0.2em; MARGIN: 0px 0px 0.2em; TEXT-TRANSFORM: uppercase; =
+COLOR: #000; PADDING-TOP: 0.2em; BORDER-BOTTOM: #ccc 1px solid; =
+LETTER-SPACING: 0.1em
+}
+H2.headerbar A {
+	PADDING-RIGHT: 2px; BORDER-TOP: #c00 2px solid; PADDING-LEFT: 2px; =
+FONT-WEIGHT: normal; FONT-SIZE: 10px; BACKGROUND: #f4f2ea; =
+PADDING-BOTTOM: 0.2em; MARGIN: 0px 0px 0.2em; TEXT-TRANSFORM: uppercase; =
+COLOR: #000; PADDING-TOP: 0.2em; BORDER-BOTTOM: #ccc 1px solid; =
+LETTER-SPACING: 0.1em
+}
+.more {
+	MARGIN-TOP: 6px
+}
+DIV.highlight {
+	BORDER-RIGHT: #f4f2ea 4px solid; BORDER-TOP: #f4f2ea 4px solid; =
+BACKGROUND: #f4f2ea; BORDER-LEFT: #f4f2ea 4px solid; BORDER-BOTTOM: =
+#f4f2ea 4px solid
+}
+DIV.d2dlive {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; BACKGROUND: =
+url(/images/icons/dev2dev_live.gif) no-repeat left 3px; PADDING-BOTTOM: =
+2px; TEXT-INDENT: -9999px; PADDING-TOP: 2px; HEIGHT: 31px
+}
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/bbs/style.jsp
+
+BODY {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 160%; FONT-FAMILY: =
+=FD=FD=FD=FD
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 160%; FONT-FAMILY: =
+=FD=FD=FD=FD
+}
+TH {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 160%; FONT-FAMILY: =
+=FD=FD=FD=FD
+}
+SELECT {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 160%; FONT-FAMILY: =
+=FD=FD=FD=FD
+}
+INPUT {
+	FONT-SIZE: 12px; PADDING-TOP: 2px; FONT-FAMILY: =FD=FD=FD=FD; =
+BACKGROUND-COLOR: #eeeeee
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+PRE {
+	FONT-SIZE: 12px
+}
+A {
+	COLOR: #00235d; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #00235d
+}
+A:visited {
+	COLOR: #00235d
+}
+A:hover {
+	COLOR: #ff0000
+}
+A:active {
+	COLOR: #4e4e6e
+}
+.bright-header TABLE {
+	BORDER-RIGHT: #d8d8d8 1px solid; BORDER-TOP: #d8d8d8 1px solid; =
+BORDER-LEFT: #d8d8d8 1px solid; BORDER-BOTTOM: #d8d8d8 1px solid; =
+BACKGROUND-COLOR: #d8d8d8
+}
+.bright-breadcrumbs {
+	FONT-WEIGHT: bold; COLOR: #00235d! important
+}
+.bright-breadcrumbs A {
+	FONT-WEIGHT: bold; COLOR: #00235d! important
+}
+.bright-breadcrumbs A:hover {
+	COLOR: #ff0000! important
+}
+.bright-list {
+	BORDER-RIGHT: #9c9a9c 0px solid; BORDER-TOP: #9c9a9c 0px solid; =
+BORDER-LEFT: #9c9a9c 0px solid; BORDER-BOTTOM: #9c9a9c 0px solid
+}
+.bright-list TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8
+}
+#bright-cat-forum-list .bright-category-name {
+	BACKGROUND-COLOR: #eee
+}
+#bright-cat-forum-list TH {
+	WHITE-SPACE: nowrap
+}
+.bright-list .bright-date {
+	WHITE-SPACE: nowrap
+}
+.bright-list .bright-author {
+	WHITE-SPACE: nowrap
+}
+#bright-reply-tree .bright-author {
+	WHITE-SPACE: nowrap
+}
+#bright-cat-forum-list TH {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px
+}
+.bright-list .bright-counts {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px
+}
+.bright-list .bright-date {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px
+}
+.bright-list .bright-author {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px
+}
+#bright-reply-tree .bright-author {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px
+}
+#bright-cat-forum-list .bright-even {
+	BACKGROUND-COLOR: #ffffff
+}
+#bright-cat-forum-list .bright-odd {
+	BACKGROUND-COLOR: #ffffff
+}
+#bright-reply-tree .bright-bullet {
+	PADDING-RIGHT: 5px
+}
+.bright-category-name {
+	FONT-WEIGHT: bold
+}
+.bright-list .bright-counts {
+	TEXT-ALIGN: center
+}
+.bright-description {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; FONT-FAMILY: =FD=FD=FD=FD
+}
+.bright-odd {
+	BACKGROUND-COLOR: #eeeeee
+}
+.bright-even {
+	BACKGROUND-COLOR: #ffffff
+}
+.bright-page-title {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+.bright-bullet {
+	TEXT-ALIGN: center
+}
+#bright-footer TD {
+	BORDER-TOP: #9c9a9c 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; =
+PADDING-TOP: 5px; TEXT-ALIGN: center
+}
+#bright-footer TD A {
+	COLOR: #666; TEXT-DECORATION: none
+}
+#bright-footer TD A:hover {
+	TEXT-DECORATION: underline
+}
+.bright-error-text {
+	COLOR: #f00
+}
+.bright-label {
+	TEXT-ALIGN: left
+}
+.bright-subject {
+	FONT-WEIGHT: bold
+}
+.bright-box {
+	BORDER-RIGHT: #9c9a9c 1px solid; BORDER-TOP: #9c9a9c 1px solid; =
+BORDER-LEFT: #9c9a9c 1px solid; BORDER-BOTTOM: #9c9a9c 1px solid
+}
+.bright-message-list TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8; TEXT-ALIGN: left
+}
+.bright-message TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8; TEXT-ALIGN: left
+}
+.bright-message-list .bright-odd {
+	BACKGROUND-COLOR: #eeeeee
+}
+.bright-message {
+	BACKGROUND-COLOR: #eeeeee
+}
+.bright-message-list .bright-even {
+	BACKGROUND-COLOR: #ffffff
+}
+.bright-button .bright-button-label {
+	PADDING-RIGHT: 5px
+}
+.bright-sidebar .bright-box TH {
+	BORDER-BOTTOM: #9c9a9c 1px solid; BACKGROUND-COLOR: #eee; TEXT-ALIGN: =
+left; left-padding: 6px
+}
+.bright-sidebar .bright-box {
+	BORDER-RIGHT: #9c9a9c 1px solid; BORDER-TOP: #9c9a9c 1px solid; =
+BORDER-LEFT: #9c9a9c 1px solid; BORDER-BOTTOM: #9c9a9c 1px solid
+}
+.bright-account-box .bright-box {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: =
+0px
+}
+.bright-account-box .bright-box TD {
+	PADDING-BOTTOM: 6px
+}
+.bright-account-box .bright-box TH {
+	BORDER-BOTTOM: #9c9a9c 1px solid; TEXT-ALIGN: left
+}
+.bright-account-box .sub-box {
+	FONT-SIZE: 12px
+}
+.bright-account-form .bright-required {
+	FONT-WEIGHT: bold
+}
+.bright-account-form .bright-label {
+	TEXT-ALIGN: left
+}
+.bright-last-post {
+=09
+}
+.bright-info-text {
+	COLOR: #060
+}
+.bright-selected-tab {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-BOTTOM-WIDTH: =
+0px; BACKGROUND-COLOR: #fff; BORDER-RIGHT-WIDTH: 1px
+}
+.bright-tab {
+	BORDER-TOP-WIDTH: 2px; BORDER-LEFT-WIDTH: 1px; BORDER-BOTTOM-WIDTH: =
+1px; BORDER-RIGHT-WIDTH: 1px
+}
+.bright-tab:hover {
+	BORDER-TOP: #999 2px solid; BACKGROUND-COLOR: #eee
+}
+.bright-tab A:hover {
+	TEXT-DECORATION: none! important
+}
+.bright-selected-tab A:hover {
+	TEXT-DECORATION: none! important
+}
+.bright-tab-spacer {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+1px; BORDER-RIGHT-WIDTH: 0px
+}
+.bright-tab-spring {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+1px; BORDER-RIGHT-WIDTH: 0px
+}
+.bright-tab-bar {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 1px; BORDER-BOTTOM-WIDTH: =
+1px; BACKGROUND-COLOR: #fff; BORDER-RIGHT-WIDTH: 1px
+}
+.bright-selected-tab {
+	BORDER-LEFT-COLOR: #bbb; BORDER-BOTTOM-COLOR: #bbb; BORDER-TOP-STYLE: =
+solid; BORDER-TOP-COLOR: #bbb; BORDER-RIGHT-STYLE: solid; =
+BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: #bbb; BORDER-BOTTOM-STYLE: =
+solid
+}
+.bright-tab {
+	BORDER-LEFT-COLOR: #bbb; BORDER-BOTTOM-COLOR: #bbb; BORDER-TOP-STYLE: =
+solid; BORDER-TOP-COLOR: #bbb; BORDER-RIGHT-STYLE: solid; =
+BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: #bbb; BORDER-BOTTOM-STYLE: =
+solid
+}
+.bright-tab-spacer {
+	BORDER-LEFT-COLOR: #bbb; BORDER-BOTTOM-COLOR: #bbb; BORDER-TOP-STYLE: =
+solid; BORDER-TOP-COLOR: #bbb; BORDER-RIGHT-STYLE: solid; =
+BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: #bbb; BORDER-BOTTOM-STYLE: =
+solid
+}
+.bright-tab-spring {
+	BORDER-LEFT-COLOR: #bbb; BORDER-BOTTOM-COLOR: #bbb; BORDER-TOP-STYLE: =
+solid; BORDER-TOP-COLOR: #bbb; BORDER-RIGHT-STYLE: solid; =
+BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: #bbb; BORDER-BOTTOM-STYLE: =
+solid
+}
+.bright-tab-bar {
+	BORDER-LEFT-COLOR: #bbb; BORDER-BOTTOM-COLOR: #bbb; BORDER-TOP-STYLE: =
+solid; BORDER-TOP-COLOR: #bbb; BORDER-RIGHT-STYLE: solid; =
+BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: #bbb; BORDER-BOTTOM-STYLE: =
+solid
+}
+.bright-tab {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px
+}
+.bright-selected-tab {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px
+}
+.bright-selected-tab A {
+	FONT-WEIGHT: bold; COLOR: #000! important; TEXT-DECORATION: none
+}
+.bright-tab A {
+	FONT-WEIGHT: bold; COLOR: #333! important; TEXT-DECORATION: none
+}
+.bright-tab A:hover {
+	TEXT-DECORATION: underline
+}
+.bright-selected-tab A:hover {
+	TEXT-DECORATION: underline
+}
+.bright-tab {
+	BACKGROUND-COLOR: #ddd
+}
+.bright-tab-bar TD {
+	FONT-WEIGHT: bold; FONT-FAMILY: =FD=FD=FD=FD
+}
+.bright-tab-bar A {
+	COLOR: #000; TEXT-DECORATION: none
+}
+.bright-tab-bar A:hover {
+	TEXT-DECORATION: underline
+}
+.bright-tab-section TD {
+=09
+}
+.bright-tab-section A {
+	PADDING-RIGHT: 6px; FONT-WEIGHT: normal; COLOR: #333! important
+}
+.bright-tab-spring {
+=09
+}
+.bright-tab-logout {
+=09
+}
+#bright-reply-tree .bright-odd {
+	BACKGROUND-COLOR: #eeeeee
+}
+#bright-reply-tree .bright-even {
+	BACKGROUND-COLOR: #ffffff
+}
+#bright-reply-tree .bright-current {
+	BACKGROUND-COLOR: #ffffcc
+}
+#bright-reply-tree .bright-list {
+	BORDER-RIGHT: #9c9a9c 1px solid; BORDER-TOP: #9c9a9c 1px solid; =
+BORDER-LEFT: #9c9a9c 1px solid; BORDER-BOTTOM: #9c9a9c 1px solid
+}
+#bright-reply-tree TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8
+}
+.bright-message .bright-box {
+	BORDER-RIGHT: #9c9a9c 1px solid; BORDER-TOP: #9c9a9c 1px solid; =
+BORDER-LEFT: #9c9a9c 1px solid; BORDER-BOTTOM: #9c9a9c 1px solid
+}
+.bright-message .bright-box TD {
+	BACKGROUND-COLOR: #eee
+}
+.bright-message-content .bright-subject-row {
+	BORDER-BOTTOM: #9c9a9c 1px solid
+}
+.bright-search-form TH {
+	BORDER-BOTTOM: #9c9a9c 1px solid; TEXT-ALIGN: left
+}
+.bright-search-result .bright-info {
+	PADDING-LEFT: 6px; COLOR: #999
+}
+.bright-search-result .bright-body {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 6px; =
+PADDING-TOP: 6px
+}
+.bright-search-result .bright-hilite {
+	FONT-WEIGHT: bold; BACKGROUND-COLOR: #ff0
+}
+bright-topic-list .bright-last-post {
+	PADDING-LEFT: 4px
+}
+.bright-cp-formbox TABLE {
+	PADDING-LEFT: 25px
+}
+.bright-cp-header {
+	FONT-WEIGHT: bold
+}
+.bright-cp-formbox .bright-label {
+	PADDING-TOP: 5px; TEXT-ALIGN: left
+}
+.bright-paginator .bright-current {
+	FONT-WEIGHT: bold; COLOR: #000! important; BACKGROUND-COLOR: #eee; =
+TEXT-DECORATION: none
+}
+.bright-message-list .bright-paginator A {
+	COLOR: #fff
+}
+.bright-footer .bright-paginator .bright-current {
+	FONT-WEIGHT: bold; COLOR: #000! important; BACKGROUND-COLOR: #eee; =
+TEXT-DECORATION: none
+}
+.bright-message-list .bright-footer .bright-paginator A {
+	COLOR: #000
+}
+.bright-paginator-bottom .bright-paginator .bright-current {
+	FONT-WEIGHT: bold; COLOR: #000! important; BACKGROUND-COLOR: #eee; =
+TEXT-DECORATION: none
+}
+.bright-paginator-bottom .bright-paginator A {
+	COLOR: #000! important
+}
+.bright-post-form .bright-font-buttons INPUT {
+	BORDER-TOP-WIDTH: 2px; BORDER-LEFT-WIDTH: 2px; FONT-SIZE: 12px; =
+BORDER-LEFT-COLOR: #ddd; BORDER-BOTTOM-WIDTH: 2px; BORDER-BOTTOM-COLOR: =
+#ccc; BORDER-TOP-COLOR: #ddd; FONT-FAMILY: =FD=FD=FD=FD; HEIGHT: 22px; =
+BACKGROUND-COLOR: #eee; BORDER-RIGHT-WIDTH: 2px; BORDER-RIGHT-COLOR: =
+#ccc
+}
+.bright-profile TH {
+	BORDER-BOTTOM: #9c9a9c 1px solid; TEXT-ALIGN: left
+}
+.bright-profile .bright-label {
+	TEXT-ALIGN: left
+}
+.bright-watch-list TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8
+}
+.bright-watch-list .bright-name {
+	TEXT-ALIGN: left
+}
+.bright-watch-list .bright-delete {
+	BACKGROUND-COLOR: #eee
+}
+.bright-watch-list .bright-delete-button {
+	BACKGROUND-COLOR: #eee
+}
+.bright-watch-list .bright-even {
+	BACKGROUND-COLOR: #eee
+}
+.bright-send-list TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8
+}
+.bright-send-list .bright-name {
+	TEXT-ALIGN: left
+}
+.bright-send-list .bright-delete {
+	BACKGROUND-COLOR: #eee
+}
+.bright-gift-list .bright-delete-button {
+	BACKGROUND-COLOR: #eee
+}
+.bright-send-list .bright-even {
+	BACKGROUND-COLOR: #eee
+}
+.bright-send-list .bright-odd {
+	BACKGROUND-COLOR: #fff
+}
+.bright-send-list .message_content {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 12px; COLOR: =
+#333333; LINE-HEIGHT: 1.5em; PADDING-TOP: 10px; FONT-FAMILY: =
+=FD=FD=FD=FD
+}
+.maintitle {
+	FONT-WEIGHT: bold; COLOR: #ffffff; BACKGROUND-COLOR: #0065c9
+}
+.bright-gift-list TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8
+}
+.bright-gift-list .bright-name {
+	TEXT-ALIGN: left
+}
+.bright-gift-list .bright-delete {
+	BACKGROUND-COLOR: #eee
+}
+.bright-gift-list .bright-delete-button {
+	BACKGROUND-COLOR: #eee
+}
+.bright-gift-list .bright-even {
+	BACKGROUND-COLOR: #eee
+}
+.bright-gift-list .bright-odd {
+	BACKGROUND-COLOR: #fff
+}
+.bright-activity-list TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8
+}
+.bright-activity-list .bright-name {
+	TEXT-ALIGN: left
+}
+.bright-activity-list .bright-delete {
+	BACKGROUND-COLOR: #eee
+}
+.bright-activity-list .bright-delete-button {
+	BACKGROUND-COLOR: #eee
+}
+.bright-activity-list .bright-even {
+	BACKGROUND-COLOR: #eee
+}
+.bright-activity-list .bright-odd {
+	BACKGROUND-COLOR: #fff
+}
+.bright-article-list TH {
+	COLOR: #333333; BACKGROUND-COLOR: #d8d8d8
+}
+.bright-article-list .bright-name {
+	TEXT-ALIGN: left
+}
+.bright-article-list .bright-delete {
+	BACKGROUND-COLOR: #eee
+}
+.bright-article-list .bright-delete-button {
+	BACKGROUND-COLOR: #eee
+}
+.bright-article-list .bright-even {
+	BACKGROUND-COLOR: #eee
+}
+.bright-article-list .bright-odd {
+	BACKGROUND-COLOR: #fff
+}
+.bright-faq-answer {
+	FONT-WEIGHT: bold
+}
+.bright-attachment-list TD {
+	FONT-SIZE: 12px! important
+}
+.bright-edit-attach-list TH {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; COLOR: #333333; =
+BACKGROUND-COLOR: #d8d8d8
+}
+.bright-guest {
+	FONT-STYLE: italic! important
+}
+.z {
+	FONT-WEIGHT: bold
+}
+A.bright-category-name {
+	TEXT-DECORATION: none
+}
+A.bright-category-name:link {
+	COLOR: #000066
+}
+A.bright-category-name:visited {
+	COLOR: #000066
+}
+A.embed_link {
+	FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.embed_link:link {
+	COLOR: #000066
+}
+A.embed_link:visited {
+	COLOR: #000066
+}
+A.embed_link:hover {
+	COLOR: #0000ff
+}
+.bgcg9 {
+	BACKGROUND-COLOR: #000000
+}
+.bgcg3 {
+	BACKGROUND-COLOR: #cccccc
+}
+.bgcb7 {
+	BACKGROUND-COLOR: #006699
+}
+.bgcb5 {
+	BACKGROUND-COLOR: #6699cc
+}
+.bgcb3 {
+	BACKGROUND-COLOR: #99ccff
+}
+.titleOn {
+	FONT-WEIGHT: bold; COLOR: #ffcc66
+}
+.titleOff {
+	FONT-WEIGHT: bold; COLOR: #eeeeee
+}
+.footer {
+	FONT-WEIGHT: bold; COLOR: #eeeeee; BACKGROUND-COLOR: #ff0000
+}
+A.title {
+	FONT-WEIGHT: bold; COLOR: #eeeeee
+}
+A.title:link {
+	COLOR: #333333
+}
+A.title:visited {
+	COLOR: #333333
+}
+A.cr {
+	COLOR: #ffffff
+}
+A.cr:link {
+	COLOR: #ffffff
+}
+A.cr:visited {
+	COLOR: #ffffff
+}
+.bright-threads-top {
+	BACKGROUND-COLOR: #fef1e2
+}
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/content/scripts/dev2dev_searchform.js
+
+function outputsearchform(){
+document.write("<div class=3D'searchbox'><form name=3D'gs' =
+method=3D'get' target=3D'_blank' action=3D'http://seeker.bea.com/search' =
+class=3D'formspace' onsubmit=3D'return dochecksearchinput(this);'>");
+document.write("<input type=3D'text' name=3D'q' value =3D'Search' =
+class=3D'search' onClick=3D\"this.value=3D'';\" />");
+document.write("<input type=3D'image' =
+src=3D'http://dev2dev.bea.com.cn/images/Searchgo.gif' alt=3D'Search' =
+border=3D'0' width=3D17 height=3D18 =
+style=3D'vertical-align:middle;margin-bottom:5px;margin-left:2px;' />");
+document.write("<input type=3D'hidden' name=3D'ie' value=3D'gb2312' =
+/>");
+document.write("<input type=3D'hidden' name=3D'site' value=3D'cn' />");
+document.write("<input type=3D'hidden' name=3D'output' =
+value=3D'xml_no_dtd' />");
+document.write("<input type=3D'hidden' name=3D'client' =
+value=3D'dev2dev_cn' />");
+document.write("<input type=3D'hidden' name=3D'lr' value=3D'lang_zh-CH' =
+/>");
+document.write("<input type=3D'hidden' name=3D'proxystylesheet' =
+value=3D'dev2dev_cn' />");
+document.write("<input type=3D'hidden' name=3D'oe' value=3D'gb2312' =
+/>");
+document.write("<input type=3D'hidden' name=3D'restrict' value=3D'' =
+/>");
+document.write("<input type=3D'hidden' name=3D'filter' value=3D'p' />");
+document.write("<input type=3D'hidden' name=3D'numgm' value=3D'5' />");
+document.write("<input type=3D'hidden' name=3D'num' value=3D'10' />");
+document.write("<input type=3D'hidden' name=3D'source' =
+value=3D'dev2dev_cn' />");
+document.write("</form></div>");
+}
+function outputdev2devheader()
+{
+document.write("<div id=3D'headergraphic'>");
+document.write("<table width=3D'100%'  border=3D'0' cellspacing=3D'0' =
+cellpadding=3D'0'><tr>");
+document.write("<td width=3D'775'><a =
+href=3D'http://dev2dev.bea.com.cn'><img src=3D'/images/topmain.jpg' =
+alt=3D'' width=3D'775' height=3D'85' border=3D'0' /></a></td>");
+document.write("<td class=3D'toptd'><img src=3D'/images/_.gif' =
+width=3D'1' height=3D'1'  alt=3D'' /></td></tr>");
+document.write("</table></div>");
+document.write("<div class=3D'blueline'><img src=3D'/images/_.gif' =
+width=3D'1' height=3D'1' alt=3D'' /></div>");
+document.write("<div id=3D'graybar'><div class=3D'topnav'>");
+document.write("<a =
+href=3D'/'>=CA=D7=D2=B3</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+document.write("<a =
+href=3D'/resource/index.html'>=D7=CA=D4=B4=D6=D0=D0=C4</a>&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;");
+document.write("<a =
+href=3D'/bbs/school/index.html'>dev2dev=D1=A7=CC=C3</a>&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;");
+document.write("<a =
+href=3D'/bbs/index.jsp'>=D4=DA=CF=DF=BC=BC=CA=F5=C2=DB=CC=B3</a>&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;");
+document.write("<a href=3D'/usergroup/index.html'>User =
+Group</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+document.write("<a href=3D'https://www.projects.dev2dev.bea.com/' =
+target=3D'_blank'>CodeShare</a>");
+document.write("</div></div>");
+document.write("<div id=3D'dotdouble001'><img src=3D'/images/_.gif' =
+width=3D'1' height=3D'3' alt=3D'' /></div>");
+}
+function dochecksearchinput(thisform){
+	if(thisform.q.value=3D=3D""){
+		alert("=C7=EB=CA=E4=C8=EB=CB=D1=CB=F7=B9=D8=BC=FC=D7=D6!");
+		thisform.q.focus();
+		return false;
+	}
+	return true;
+}
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/bbs/userlg.jsp
+
+=0A=
+=0A=
+   =0A=
+document.write('      <a href=3D"/bbs/login!default.jspa"><font =
+style=3D"color:#FF0000">=B5=C7=C2=BC</font></a>&nbsp;|&nbsp;<a =
+href=3D"/bbs/account!default.jspa">=D7=A2=B2=E1</a>&nbsp;|&nbsp;<a =
+href=3D"/bbs/gift!default.jspa">=CE=D2=B5=C4dev2dev</a>&nbsp;|&nbsp;<a =
+href=3D"/doccenter/soft.html">=CF=C2=D4=D8</a>&nbsp;|&nbsp;<a =
+href=3D"http://edocs.bea.com.cn">=CE=C4=B5=B5</a>&nbsp;|&nbsp;<a =
+href=3D"http://www.bea.com.cn/services/custsupp/index.jsp">=D6=A7=B3=D6</=
+a>&nbsp;|&nbsp;<a href=3D"/help.html">=B0=EF=D6=FA</a>');=0A=
+=0A=
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/bbs/utils.js
+
+<!--=0A=
+var pc =3D navigator.userAgent.toLowerCase();=0A=
+var ie4_win =3D (pc.indexOf("win")!=3D-1) && (pc.indexOf("msie") !=3D -1)=0A=
+    && (parseInt(navigator.appVersion) >=3D 4);=0A=
+var checked =3D false;=0A=
+function checkPost() {=0A=
+    if (!checked) {=0A=
+        checked =3D true;=0A=
+        return true;=0A=
+    }=0A=
+    return false;=0A=
+}=0A=
+function checkSend() {=0A=
+    if (!checked) {=0A=
+        checked =3D true;=0A=
+        return true;=0A=
+    }=0A=
+    return false;=0A=
+}=0A=
+function styleTag(tag, ta) {=0A=
+    var tagOpen =3D '[' + tag.toLowerCase() + ']';=0A=
+    var tagClose =3D '[/' + tag.toLowerCase() + ']';=0A=
+    if (ie4_win) {=0A=
+        var selected =3D document.selection.createRange().text;=0A=
+        if (selected) {=0A=
+            var addSpace =3D false;=0A=
+            if (selected.charAt(selected.length-1) =3D=3D ' ') {=0A=
+                selected =3D selected.substring(0, selected.length-1);=0A=
+                addSpace =3D true;=0A=
+            }=0A=
+            document.selection.createRange().text=0A=
+                    =3D tagOpen + selected + tagClose + ((addSpace)?" =
+":"");=0A=
+        } else {=0A=
+            ta.value +=3D tagOpen + tagClose;=0A=
+        }=0A=
+    } else {=0A=
+        ta.value +=3D tagOpen + tagClose;=0A=
+    }=0A=
+    ta.focus();=0A=
+    return;=0A=
+}=0A=
+function emotionTag(tag, ta) {=0A=
+    ta.value +=3D tag;=0A=
+    ta.focus();=0A=
+    return;=0A=
+}=0A=
+function caret(ta) {=0A=
+    if (ie4_win && ta.createTextRange) {=0A=
+        ta.caretPos =3D document.selection.createRange().duplicate();=0A=
+    }=0A=
+}=0A=
+=0A=
+function sendMessage(id) {=0A=
+    window.open("send!default.jspa?destID=3D" + =
+id,"Messenger","width=3D500,height=3D350,scrollbars=3Dno");=0A=
+}=0A=
+function sendMessage1() {=0A=
+    =
+window.open("send!default.jspa","Messenger","width=3D500,height=3D350,scr=
+ollbars=3Dyes,resizable=3Dyes");=0A=
+}=0A=
+function sendMessage2(id,subject) {=0A=
+    window.open("send!default.jspa?destID=3D" + id + "&subject=3D" + =
+subject,"Messenger","width=3D500,height=3D350,scrollbars=3Dno");=0A=
+}=0A=
+function sendMessage3(subject,body) {=0A=
+    alert(body);=0A=
+    window.open("send!default.jspa?subject=3D" + subject + "&body=3D" + =
+body ,"Messenger","width=3D500,height=3D350,scrollbars=3Dno");=0A=
+}=0A=
+function openMessenger() {=0A=
+    =
+window.open("","Messenger","width=3D500,height=3D350,scrollbars=3Dno");=0A=
+}=0A=
+function closeAndReloadParent() {=0A=
+    window.opener.location.reload(true);=0A=
+    window.close()=0A=
+}=0A=
+//-->
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/adv/bbsadv.js
+
+document.write(" <table class=3D\"bright-info-message\" cellpadding=3D3 =
+cellspacing=3D0 border=3D0 height=3D50><tr>");=0A=
+document.write("<td align=3D'left'><a =
+href=3D'http://dev2dev.bea.com.cn/minisite/dev2devtechdays2008/index.html=
+' target=3D'_blank' /><img src=3D'/adv/bea_teachdays2008_small001.GIF' =
+border=3D'0' /></a></td>");=0A=
+document.write("</tr></table>");
+------=_NextPart_000_0000_01C8CCB5.074C0AB0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev2dev.bea.com.cn/adv/sdc_tracking_code.js
+
+
+var gService =3D true;
+var gTimeZone =3D -8;
+// Code section for Enable First-Party Cookie Tracking
+function dcsCookie(){
+	if (typeof(dcsOther)=3D=3D"function"){
+		dcsOther();
+	}
+	else if (typeof(dcsPlugin)=3D=3D"function"){
+		dcsPlugin();
+	}
+	else if (typeof(dcsFPC)=3D=3D"function"){
+		dcsFPC(gTimeZone);
+	}
+}
+function dcsGetCookie(name){
+	var pos=3Ddocument.cookie.indexOf(name+"=3D");
+	if (pos!=3D-1){
+		var start=3Dpos+name.length+1;
+		var end=3Ddocument.cookie.indexOf(";",start);
+		if (end=3D=3D-1){
+			end=3Ddocument.cookie.length;
+		}
+		return unescape(document.cookie.substring(start,end));
+	}
+	return null;
+}
+function dcsGetCrumb(name,crumb){
+	var aCookie=3DdcsGetCookie(name).split(":");
+	for (var i=3D0;i<aCookie.length;i++){
+		var aCrumb=3DaCookie[i].split("=3D");
+		if (crumb=3D=3DaCrumb[0]){
+			return aCrumb[1];
+		}
+	}
+	return null;
+}
+function dcsGetIdCrumb(name,crumb){
+	var cookie=3DdcsGetCookie(name);
+	var id=3Dcookie.substring(0,cookie.indexOf(":lv=3D"));
+	var aCrumb=3Did.split("=3D");
+	for (var i=3D0;i<aCrumb.length;i++){
+		if (crumb=3D=3DaCrumb[0]){
+			return aCrumb[1];
+		}
+	}
+	return null;
+}
+function dcsFPC(offset){
+	if (typeof(offset)=3D=3D"undefined"){
+		return;
+	}
+	if (document.cookie.indexOf("WTLOPTOUT=3D")!=3D-1){
+		return;
+	}
+	var name=3DgFpc;
+	var dCur=3Dnew Date();
+	var adj=3D(dCur.getTimezoneOffset()*60000)+(offset*3600000);
+	dCur.setTime(dCur.getTime()+adj);
+	var dExp=3Dnew Date(dCur.getTime()+315360000000);
+	var dSes=3Dnew Date(dCur.getTime());
+	if (document.cookie.indexOf(name+"=3D")=3D=3D-1){
+		if ((typeof(gWtId)!=3D"undefined")&&(gWtId!=3D"")){
+			WT.co_f=3DgWtId;
+		}
+		else if ((typeof(gTempWtId)!=3D"undefined")&&(gTempWtId!=3D"")){
+			WT.co_f=3DgTempWtId;
+			WT.vt_f=3D"1";
+		}
+		else{
+			WT.co_f=3D"2";
+			var cur=3DdCur.getTime().toString();
+			for (var i=3D2;i<=3D(32-cur.length);i++){
+				WT.co_f+=3DMath.floor(Math.random()*16.0).toString(16);
+			}
+			WT.co_f+=3Dcur;
+			WT.vt_f=3D"1";
+		}
+		if (typeof(gWtAccountRollup)=3D=3D"undefined"){
+			WT.vt_f_a=3D"1";
+		}
+		WT.vt_f_s=3D"1";
+		WT.vt_f_d=3D"1";
+	}
+	else{
+		var id=3DdcsGetIdCrumb(name,"id");
+		var lv=3DparseInt(dcsGetCrumb(name,"lv"));
+		var ss=3DparseInt(dcsGetCrumb(name,"ss"));
+		if ((id=3D=3Dnull)||(id=3D=3D"null")||isNaN(lv)||isNaN(ss)){
+			return;
+		}
+		WT.co_f=3Did;
+		var dLst=3Dnew Date(lv);
+		dSes.setTime(ss);
+		if =
+((dCur.getTime()>(dLst.getTime()+1800000))||(dCur.getTime()>(dSes.getTime=
+()+28800000))){
+			dSes.setTime(dCur.getTime());
+			WT.vt_f_s=3D"1";
+		}
+		if =
+((dCur.getDay()!=3DdLst.getDay())||(dCur.getMonth()!=3DdLst.getMonth())||=
+(dCur.getYear()!=3DdLst.getYear())){
+			WT.vt_f_d=3D"1";
+		}
+	}
+	WT.co_f=3Descape(WT.co_f);
+	WT.vt_sid=3DWT.co_f+"."+(dSes.getTime()-adj);
+	var expiry=3D"; expires=3D"+dExp.toGMTString();
+	=
+document.cookie=3Dname+"=3D"+"id=3D"+WT.co_f+":lv=3D"+dCur.getTime().toSt=
+ring()+":ss=3D"+dSes.getTime().toString()+expiry+"; =
+path=3D/"+(((typeof(gFpcDom)!=3D"undefined")&&(gFpcDom!=3D""))?("; =
+domain=3D"+gFpcDom):(""));
+	if (document.cookie.indexOf(name+"=3D")=3D=3D-1){
+		WT.co_f=3DWT.vt_sid=3DWT.vt_f_s=3DWT.vt_f_d=3D"";
+		WT.vt_f=3DWT.vt_f_a=3D"2";
+	}
+}
+
+
+var gHref=3D"";
+function dcsIsHttp(e){
+	return =
+(e.href&&e.protocol&&(e.protocol.indexOf("http")!=3D-1))?true:false;
+}
+function dcsSaveHref(evt){
+	if (evt.preventDefault&&evt.target.href){
+		evt.preventDefault();
+		gHref=3Devt.target.href;
+	}
+}
+function dcsLoadHref(evt){
+	if (gHref.length>0){
+		window.location=3DgHref;
+		gHref=3D"";
+	}
+}
+function dcsEvt(evt){
+	var e=3Devt.target||evt.srcElement;
+	if (e.tagName&&(e.tagName=3D=3D"IMG")){
+		e=3De.parentElement||e.parentNode;
+	}
+	return e;
+}
+
+function dcsBind(event,func){
+	if (typeof (window[func]) =3D=3D "function"){
+		for (i =3D 0; i < document.links.length; i++){
+			if (document.links[i].pathname.match(/\.pdf/)){
+				if (document.body.addEventListener){
+					document.links[i].addEventListener(event,window[func],true);
+				} else if (document.body.attachEvent){
+					document.links[i].attachEvent("on"+event,window[func]);
+				}
+			}
+
+			if (document.links[i].pathname.match(/\.exe/)){
+				if (document.body.addEventListener){
+					document.links[i].addEventListener(event,window[func],true);
+				} else if (document.body.attachEvent){
+					document.links[i].attachEvent("on"+event,window[func]);
+				}
+			}
+
+			if (document.links[i].pathname.match(/\.zip/)){
+				if (document.body.addEventListener){
+					document.links[i].addEventListener(event,window[func],true);
+				} else if (document.body.attachEvent){
+					document.links[i].attachEvent("on"+event,window[func]);
+				}
+			}
+
+			if (document.links[i].pathname.match(/\.tar/)){
+				if (document.body.addEventListener){
+					document.links[i].addEventListener(event,window[func],true);
+				} else if (document.body.attachEvent){
+					document.links[i].attachEvent("on"+event,window[func]);
+				}
+			}
+
+			if (document.links[i].pathname.match(/\.gz/)){
+				if (document.body.addEventListener){
+					document.links[i].addEventListener(event,window[func],true);
+				} else if (document.body.attachEvent){
+					document.links[i].attachEvent("on"+event,window[func]);
+				}
+			}
+
+
+		}
+	}
+
+}
+
+function dcsET(){
+	dcsBind("click","dcsDownload");
+}
+
+function dcsMultiTrack(){
+	for (var i=3D0;i<arguments.length;i++){
+		if (arguments[i].indexOf('WT.')=3D=3D0){
+			WT[arguments[i].substring(3)]=3Darguments[i+1];
+			i++;
+		}
+		if (arguments[i].indexOf('DCS.')=3D=3D0){
+			DCS[arguments[i].substring(4)]=3Darguments[i+1];
+			i++;
+		}
+		if (arguments[i].indexOf('DCSext.')=3D=3D0){
+			DCSext[arguments[i].substring(7)]=3Darguments[i+1];
+			i++;
+		}
+	}
+	var dCurrent=3Dnew Date();
+	DCS.dcsdat=3DdCurrent.getTime();
+	dcsTag();
+}
+
+
+// Code section for Use the new first-party cookie generated with this =
+tag.
+var gFpc=3D"WT_FPC";
+var gConvert=3Dtrue;
+
+function dcsDownload(evt){
+	evt=3Devt||(window.event||"");
+	if (evt){
+		var e=3DdcsEvt(evt);
+		var path=3D(e.pathname.indexOf("/")!=3D0)?"/"+e.pathname:e.pathname;
+		dcsSaveHref(evt);
+		=
+dcsMultiTrack("DCS.dcssip",e.hostname,"DCS.dcsuri",path,"WT.ti","Download=
+:"+path,"WT.dl","1");
+		DCS.dcssip=3DDCS.dcsuri=3DWT.ti=3DWT.dl=3D"";
+	}
+}
+
+function dcsAdv(){
+	dcsFunc("dcsET");
+	dcsFunc("dcsCookie");
+	dcsFunc("dcsAdSearch");
+	dcsFunc("dcsTP");
+}
+
+
+
+var gDomain=3D"statse.webtrendslive.com";
+var gDcsId=3D"dcsflcozc00000g81ny6qzyj9_8w7s";
+
+if =
+((typeof(gConvert)!=3D"undefined")&&gConvert&&(document.cookie.indexOf(gF=
+pc+"=3D")=3D=3D-1)&&(document.cookie.indexOf("WTLOPTOUT=3D")=3D=3D-1)){
+	document.write("<SCR"+"IPT TYPE=3D'text/javascript' =
+SRC=3D'"+"http"+(window.location.protocol.indexOf('https:')=3D=3D0?'s':''=
+)+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");
+}
+
+
+
+var gImages=3Dnew Array;
+var gIndex=3D0;
+var DCS=3Dnew Object();
+var WT=3Dnew Object();
+var DCSext=3Dnew Object();
+var gQP=3Dnew Array();
+var gI18n=3Dfalse;
+if (window.RegExp){
+	var RE=3D{"%09":/\t/g,"%20":/ =
+/g,"%23":/\#/g,"%26":/\&/g,"%2B":/\+/g,"%3F":/\?/g,"%5C":/\\/g};
+	var I18NRE=3D{"%25":/\%/g};
+}
+
+// Add customizations here
+
+function dcsVar(){
+	var dCurrent=3Dnew Date();
+	WT.tz=3DdCurrent.getTimezoneOffset()/60*-1;
+	if (WT.tz=3D=3D0){
+		WT.tz=3D"0";
+	}
+	WT.bh=3DdCurrent.getHours();
+	=
+WT.ul=3Dnavigator.appName=3D=3D"Netscape"?navigator.language:navigator.us=
+erLanguage;
+	if (typeof(screen)=3D=3D"object"){
+		=
+WT.cd=3Dnavigator.appName=3D=3D"Netscape"?screen.pixelDepth:screen.colorD=
+epth;
+		WT.sr=3Dscreen.width+"x"+screen.height;
+	}
+	if (typeof(navigator.javaEnabled())=3D=3D"boolean"){
+		WT.jo=3Dnavigator.javaEnabled()?"Yes":"No";
+	}
+	if (document.title){
+		=
+WT.ti=3DgI18n?dcsEscape(dcsEncode(document.title),I18NRE):document.title;=
+
+	}
+	WT.js=3D"Yes";
+	WT.jv=3DdcsJV();
+	if (document.body&&document.body.addBehavior){
+		document.body.addBehavior("#default#clientCaps");
+		if (document.body.connectionType){
+			WT.ct=3Ddocument.body.connectionType;
+		}
+		document.body.addBehavior("#default#homePage");
+		WT.hp=3Ddocument.body.isHomePage(location.href)?"1":"0";
+	}
+	if (parseInt(navigator.appVersion)>3){
+		if ((navigator.appName=3D=3D"Microsoft Internet =
+Explorer")&&document.body){
+			WT.bs=3Ddocument.body.offsetWidth+"x"+document.body.offsetHeight;
+		}
+		else if (navigator.appName=3D=3D"Netscape"){
+			WT.bs=3Dwindow.innerWidth+"x"+window.innerHeight;
+		}
+	}
+	WT.fi=3D"No";
+	if (window.ActiveXObject){
+		for(var i=3D10;i>0;i--){
+			try{
+				var flash =3D new ActiveXObject("ShockwaveFlash.ShockwaveFlash."+i);
+				WT.fi=3D"Yes";
+				WT.fv=3Di+".0";
+				break;
+			}
+			catch(e){
+			}
+		}
+	}
+	else if (navigator.plugins&&navigator.plugins.length){
+		for (var i=3D0;i<navigator.plugins.length;i++){
+			if (navigator.plugins[i].name.indexOf('Shockwave Flash')!=3D-1){
+				WT.fi=3D"Yes";
+				WT.fv=3Dnavigator.plugins[i].description.split(" ")[2];
+				break;
+			}
+		}
+	}
+	if (gI18n){
+		WT.em=3D(typeof(encodeURIComponent)=3D=3D"function")?"uri":"esc";
+		if (typeof(document.defaultCharset)=3D=3D"string"){
+			WT.le=3Ddocument.defaultCharset;
+		}
+		else if (typeof(document.characterSet)=3D=3D"string"){
+			WT.le=3Ddocument.characterSet;
+		}
+	}
+	WT.sp=3D"@@SPLITVALUE@@";
+
+
+
+	DCS.dcsdat=3DdCurrent.getTime();
+	DCS.dcssip=3Dwindow.location.hostname;
+	DCS.dcsuri=3Dwindow.location.pathname;
+	if (window.location.search){
+		DCS.dcsqry=3Dwindow.location.search;
+		if (gQP.length>0){
+			for (var i=3D0;i<gQP.length;i++){
+				var pos=3DDCS.dcsqry.indexOf(gQP[i]);
+				if (pos!=3D-1){
+					var front=3DDCS.dcsqry.substring(0,pos);
+					var =
+end=3DDCS.dcsqry.substring(pos+gQP[i].length,DCS.dcsqry.length);
+					DCS.dcsqry=3Dfront+end;
+				}
+			}
+		}
+	}
+	if =
+((window.document.referrer!=3D"")&&(window.document.referrer!=3D"-")){
+		if (!(navigator.appName=3D=3D"Microsoft Internet =
+Explorer"&&parseInt(navigator.appVersion)<4)){
+			DCS.dcsref=3DgI18n?dcsEscape(window.document.referrer, =
+I18NRE):window.document.referrer;
+		}
+	}
+}
+
+function dcsA(N,V){
+	return "&"+N+"=3D"+dcsEscape(V, RE);
+}
+
+function dcsEscape(S, REL){
+	if (typeof(REL)!=3D"undefined"){
+		var retStr =3D new String(S);
+		for (R in REL){
+			retStr =3D retStr.replace(REL[R],R);
+		}
+		return retStr;
+	}
+	else{
+		return escape(S);
+	}
+}
+
+function dcsEncode(S){
+	return =
+(typeof(encodeURIComponent)=3D=3D"function")?encodeURIComponent(S):escape=
+(S);
+}
+
+function dcsCreateImage(dcsSrc){
+	if (document.images){
+		gImages[gIndex]=3Dnew Image;
+		if ((typeof(gHref)!=3D"undefined")&&(gHref.length>0)){
+			gImages[gIndex].onload=3DgImages[gIndex].onerror=3DdcsLoadHref;
+		}
+		gImages[gIndex].src=3DdcsSrc;
+		gIndex++;
+	}
+	else{
+		document.write('<IMG ALT=3D"" BORDER=3D"0" NAME=3D"DCSIMG" WIDTH=3D"1" =
+HEIGHT=3D"1" SRC=3D"'+dcsSrc+'">');
+	}
+}
+
+function dcsMeta(){
+	var elems;
+	if (document.all){
+		elems=3Ddocument.all.tags("meta");
+	}
+	else if (document.documentElement){
+		elems=3Ddocument.getElementsByTagName("meta");
+	}
+	if (typeof(elems)!=3D"undefined"){
+		for (var i=3D1;i<=3Delems.length;i++){
+			var meta=3Delems.item(i-1);
+			if (meta.name){
+				if (meta.name.indexOf('WT.')=3D=3D0){
+					=
+WT[meta.name.substring(3)]=3D(gI18n&&(meta.name.indexOf('WT.ti')=3D=3D0))=
+?dcsEscape(dcsEncode(meta.content),I18NRE):meta.content;
+				}
+				else if (meta.name.indexOf('DCSext.')=3D=3D0){
+					DCSext[meta.name.substring(7)]=3Dmeta.content;
+				}
+				else if (meta.name.indexOf('DCS.')=3D=3D0){
+					=
+DCS[meta.name.substring(4)]=3D(gI18n&&(meta.name.indexOf('DCS.dcsref')=3D=
+=3D0))?dcsEscape(meta.content,I18NRE):meta.content;
+				}
+			}
+		}
+	}
+}
+
+function dcsTag(){
+	if (document.cookie.indexOf("WTLOPTOUT=3D")!=3D-1){
+		return;
+	}
+	var =
+P=3D"http"+(window.location.protocol.indexOf('https:')=3D=3D0?'s':'')+":/=
+/"+gDomain+(gDcsId=3D=3D""?'':'/'+gDcsId)+"/dcs.gif?";
+	for (N in DCS){
+		if (DCS[N]) {
+			P+=3DdcsA(N,DCS[N]);
+		}
+	}
+	for (N in WT){
+		if (WT[N]) {
+			P+=3DdcsA("WT."+N,WT[N]);
+		}
+	}
+	for (N in DCSext){
+		if (DCSext[N]) {
+			P+=3DdcsA(N,DCSext[N]);
+		}
+	}
+	if (P.length>2048&&navigator.userAgent.indexOf('MSIE')>=3D0){
+		P=3DP.substring(0,2040)+"&WT.tu=3D1";
+	}
+	dcsCreateImage(P);
+}
+
+function dcsJV(){
+	var agt=3Dnavigator.userAgent.toLowerCase();
+	var major=3DparseInt(navigator.appVersion);
+	var mac=3D(agt.indexOf("mac")!=3D-1);
+	var =
+nn=3D((agt.indexOf("mozilla")!=3D-1)&&(agt.indexOf("compatible")=3D=3D-1)=
+);
+	var nn4=3D(nn&&(major=3D=3D4));
+	var nn6up=3D(nn&&(major>=3D5));
+	var ie=3D((agt.indexOf("msie")!=3D-1)&&(agt.indexOf("opera")=3D=3D-1));
+	var ie4=3D(ie&&(major=3D=3D4)&&(agt.indexOf("msie 4")!=3D-1));
+	var ie5up=3D(ie&&!ie4);
+	var op=3D(agt.indexOf("opera")!=3D-1);
+	var op5=3D(agt.indexOf("opera 5")!=3D-1||agt.indexOf("opera/5")!=3D-1);
+	var op6=3D(agt.indexOf("opera 6")!=3D-1||agt.indexOf("opera/6")!=3D-1);
+	var op7up=3D(op&&!op5&&!op6);
+	var jv=3D"1.1";
+	if (nn6up||op7up){
+		jv=3D"1.5";
+	}
+	else if ((mac&&ie5up)||op6){
+		jv=3D"1.4";
+	}
+	else if (ie5up||nn4||op5){
+		jv=3D"1.3";
+	}
+	else if (ie4){
+		jv=3D"1.2";
+	}
+	return jv;
+}
+
+function dcsFunc(func){
+	if (typeof(window[func])=3D=3D"function"){
+		window[func]();
+	}
+}
+
+dcsVar();
+dcsMeta();
+dcsFunc("dcsAdv");
+dcsTag();
+//-->
+
+
+------=_NextPart_000_0000_01C8CCB5.074C0AB0--

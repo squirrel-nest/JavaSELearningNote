@@ -1,0 +1,4 @@
+http://stackoverflow.com/questions/4594955/how-to-make-a-database-listener-with-java
+
+
+How to make a database listener with java

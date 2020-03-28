@@ -1,0 +1,230 @@
+<ATTACH   EVENT="onmouseleave" HANDLER="MouseLeave" />
+<ATTACH   EVENT="onmouseenter" HANDLER="MouseEnter" />
+<ATTACH   EVENT="onmousedown" HANDLER="MouseDown" />
+<ATTACH   EVENT="onmouseup" HANDLER="MouseUp" />
+
+<PUBLIC:METHOD NAME="getTable"/>
+<PUBLIC:METHOD NAME="changeData"/>
+<PUBLIC:METHOD NAME="getMyRow"/>
+<PUBLIC:METHOD NAME="setData"/>
+<PUBLIC:METHOD NAME="setText"/>
+
+//Evnet Handle
+<script language="javascript">
+	var oTable;
+	var oTR;
+	
+	function setData(data){
+		this.value = data;
+		if(this.edittype=="select"){
+			var text = getOptionsText(data);
+			setText(text);
+		}
+	}
+	
+	function setText(text){
+		if(this.children[0] != null && this.children[0].tagName=="A"){
+		
+			this.children[0].innerText = text;
+		}else{
+		
+		this.innerText = text;
+		
+		}
+	}
+
+String.prototype.trim = function()
+{
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+		
+	function changeData(value){
+		var tmpValue="";
+		var tmpText="";
+		var newValue = value;
+		switch(this.datatype){
+			case "MONEY" :
+				this.align="right";
+				if(	newValue ==null || newValue =="" || isNaN(newValue))
+				{
+				    newValue=0;					
+				}
+				var numValue = parseFloat(newValue , 10);					
+				var precision = 2;
+				numValue = Math.round(numValue*Math.pow(10,precision))/Math.pow(10,precision);
+				tmpValue = formatDecimal(numValue,precision);
+				tmpText = formatInteger(tmpValue);
+				break;	
+				
+			case "NUMBER": 
+				this.align="right";			
+				if(	newValue ==null || newValue =="" || isNaN(newValue) || newValue.length == 0 || newValue.charAt(0)==' ')
+				{
+				    newValue=0;					
+				}				
+				var numValue = parseFloat(newValue);
+				var precision = 0;
+				if(this.precision != null && !isNaN(this.precision)){
+					precision = parseFloat(this.precision, 10);
+				}
+				numValue = Math.round(numValue*Math.pow(10,precision))/Math.pow(10,precision);
+				tmpValue = formatDecimal(numValue,precision);
+				tmpText = tmpValue;
+				break;
+				
+			case "CHAR"	 :
+			case "DATE"  :
+			default :
+				tmpValue =newValue;
+				tmpText = newValue;
+				break;	
+		}
+		this.value = tmpValue;
+		this.innerText = tmpText;
+		if(this.sum != "ALL"){
+			getTable().doStatist(this);
+		}
+	}
+	
+	function MouseLeave(){
+		if(this.edittype == "button"){
+			this.className = "TD";
+			return;
+		}
+	}
+
+
+	function MouseEnter(){
+		if(this.edittype == "button"){
+			this.className = "cellbtover";
+			return;
+		}
+	}
+	
+	
+	function MouseUp(){
+		if(this.edittype=="button"){
+			this.className = "cellbtover";
+			return;
+		}
+	}
+	
+	function MouseDown(){
+		if(this.edittype=="button"){
+			this.className = "cellbtdown";
+			return;
+		}
+	}
+
+	
+	
+	function formatDecimal(numValue,precision){
+		var strValue = new String(numValue);
+		if(precision > 0){
+			var dotpos = strValue.indexOf(".");
+	
+			if(dotpos > 0){
+				var decimal = strValue.substr(dotpos + 1);
+				if(decimal.length < precision){
+					for(var i = 0 ; i < precision - decimal.length ; i++){
+						strValue = strValue.concat("0");
+					}
+				}
+			}else{
+				strValue = strValue.concat(".");
+				for(var i = 0 ; i < precision; i++){
+					strValue = strValue.concat("0");
+				}
+			}
+		}
+		return strValue;
+	}
+	
+	function formatInteger(strValue){
+		var dotpos = strValue.indexOf(".");
+		var intPart;
+		var deciPartStr;
+		var formatted="";
+		var minus=false;
+		
+		if(dotpos > 0){
+			intPart = parseInt(strValue.substring(0 , dotpos));
+			deciPartStr = strValue.substr(dotpos+1);
+		}else{
+			intPart = parseInt(strValue);
+		}
+		if(intPart<0){
+			minus = true;
+			intPart = Math.abs(intPart);
+		}
+		
+		var formatText = new Array();
+		var count=0;
+		if(intPart == 0){
+			formatText[count] = 0;
+		}else{
+			while(intPart > 0){
+				formatText[count] = intPart % 1000;
+				intPart = Math.floor(intPart/1000);
+				count ++;
+			}
+		}
+		for(var i = formatText.length - 1; i >= 0 ; i--){
+			var tmpStr = new String(formatText[i]);
+			if(tmpStr.length < 3 && i!= formatText.length - 1){
+				for(var z=0 ; z < 3 - tmpStr.length ; z++){
+					formatted=formatted.concat("0");
+				}
+				formatted=formatted.concat(formatText[i]);
+			}else{
+				formatted=formatted.concat(formatText[i]);
+			}
+			if(i != 0){
+				formatted = formatted.concat(",");
+			}
+		}
+		
+		if(deciPartStr != null){
+			formatted = formatted.concat("." , deciPartStr);
+		}
+		if(minus){
+			formatted = "-".concat(formatted);
+		}
+		return formatted;
+	}
+
+
+	function getMyRow(){
+		
+		if(oTR == null){
+			var oTmp = this.parentElement;
+			while(oTmp.tagName != "TR"){
+				oTmp = oTmp.parentElement;
+			}	
+			oTR = oTmp;	
+		}
+		return oTR;
+	}
+	
+	function getTable(){
+		if(oTable == null){
+			var oTmp = this.parentElement;
+			while(oTmp.tagName != "TABLE"){
+				oTmp = oTmp.parentElement;
+			}	
+			oTable = oTmp;	
+		}
+		return oTable;
+	}
+	
+	
+	
+	function cancleEvent(){
+	
+		window.event.cancelBubble=true;
+		window.event.returnValue=false;
+	}
+	
+		
+	
+</script>

@@ -1,0 +1,197 @@
+<SCRIPT language=javascript>
+<!--
+// public_description object used to declare scriplet
+var public_description = new AttachView();// general object description
+var bCanDelete = true;
+var cellCount = 3;
+var kCell = 0;
+var newTR;
+
+function AttachView()
+{
+	this.version = "1.0";
+	this.AddFile = mAddFile;
+	this.get_Title = readTitle;
+	this.put_Title = writeTitle;
+	this.get_CanDelete = readCanDelete;
+	this.put_CanDelete = writeCanDelete;
+}
+
+function readCanDelete()
+{
+	return(bCanDelete);
+}
+
+function writeCanDelete(CanDelete)
+{
+	bCanDelete = CanDelete;
+}
+
+function writeTitle(titletext)
+{
+	document.title = titletext;
+}
+
+function readTitle()
+{
+	return(document.title);
+}
+
+function mAddFile(FileId,FileName,FileType,FileSize)
+{
+	//alert(kCell);
+	if(kCell%5==0) newTR = TBD.insertRow();
+    //if(kCell%3==0)  {  if(kCell==0) TRow = TBD.insertRow(); if(kCell==3) TRow2 = TBD.insertRow();}   
+	//var newTD = TBar.insertCell();
+	var newTD = newTR.insertCell();
+	//if(kCell<3) newTD = TRow.insertCell();
+	//if(kCell>=3) { newTD = TRow2.insertCell(); alert('111'); } 	
+	var kzm = FileName;
+	var tbmp = 'unknown.bmp';
+        kzm = kzm.substring(kzm.lastIndexOf('.') + 1,kzm.length);
+	if(kzm=='ppt')tbmp='powerpoint.bmp';
+	if(kzm=='txt')tbmp='txt.bmp';
+	if(kzm=='doc')tbmp='word.bmp';
+	if(kzm=='pdf')tbmp='acrord.bmp';
+	if(kzm=='mp3'||kzm=='wma')tbmp='winamp.bmp';
+	if(kzm=='bmp')tbmp='bmp.bmp';
+	if(kzm=='gif')tbmp='gif.bmp';
+	if(kzm=='jpg')tbmp='jpg.bmp';
+	if(kzm=='rar')tbmp='winrar.bmp';
+	if(kzm=='xls')tbmp='excel.bmp';
+	if(kzm=='mdb')tbmp='access.bmp';
+	if(kzm=='html'||kzm=='htm')tbmp='frontpage.bmp';
+	
+	innerStr = '<A onclick="DoOpen()"><IMG border=0 src="..\\icos\\' + tbmp + '">&nbsp;' + FileName + '</A>';
+	newTD.filesize = FileSize;
+	newTD.vAlign = 'center';
+	newTD.style.fontFamily = "宋体";
+	newTD.style.fontSize = "9pt";
+	newTD.name = FileName;
+	newTD.id = FileId;
+	newTD.noWrap = true;
+	newTD.innerHTML = innerStr;
+	kCell++;
+}
+
+function DoOpen()
+{
+	var srcE = document.activeElement;
+	for(;(srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() != 'BODY');srcE = srcE.parentElement);
+	if(srcE.tagName.toUpperCase() != 'TD') return(0);
+	window.external.raiseEvent('FileOpen', srcE.id + "#" + srcE.name);
+	return(0);
+}
+
+function DoDel()
+{
+	var srcE = document.activeElement;
+	for(;(srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() != 'BODY');srcE = srcE.parentElement);
+	if(srcE.tagName.toUpperCase() != 'TD') return(0);
+	window.external.raiseEvent('FileDelete', srcE.id);
+	return(0);
+}
+
+function showPreperty()
+{
+	var srcE = document.activeElement;	
+	for(;(srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() != 'BODY');srcE = srcE.parentElement);
+	if(srcE.tagName.toUpperCase() != 'TD') return(0);
+	strMessage = '名称：\t%name\n\n\n大小：\t%size';
+	strMessage = strMessage.replace('%name', srcE.name);
+	if(srcE.className == 'UnUpdate')
+	{
+		strMessage = strMessage.replace('%size','未知');
+	}
+	else
+	{
+		lFileSize = new Number(srcE.filesize);
+		if(lFileSize > 1024)
+		{
+			var strSize = (Math.round(lFileSize / 1024)).toString() + 'KB';
+		}
+		else
+		{
+			var strSize = lFileSize.toString() + 'Bytes';
+		}
+		strMessage = strMessage.replace('%size',strSize);
+	}
+	window.alert(strMessage);
+}
+function DoRename()
+{
+	var srcE = document.activeElement;
+	for(;(srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() != 'BODY');srcE = srcE.parentElement);
+	if(srcE.tagName.toUpperCase() != 'TD') return(0);
+	window.external.raiseEvent('Rename', srcE.id + "#" + srcE.name);
+	return(0);
+}
+
+document.onmousedown = mDown;
+function mDown()
+{
+	var srcE = event.srcElement;
+	var menuItems = new Array(8);
+	for(;(srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() != 'BODY');srcE = srcE.parentElement);
+	if(srcE.tagName.toUpperCase() != 'TD') return(0);
+	if(srcE.className == 'UnUpdate')
+	{
+		menuItems[0] = '删除(&Delete)';
+		menuItems[1] = 'DoDel';
+		menuItems[2] = '';
+		menuItems[3] = '';
+		menuItems[4] = '属性(&Preperty)';
+		menuItems[5] = 'showPreperty';
+		window.external.setContextMenu(menuItems);
+	}
+	else if(srcE.className == 'EmbedMsg')
+	{
+		menuItems[0] = '打开(&Open)';
+		menuItems[1] = 'DoOpenMsg';
+		menuItems[2] = '删除(&Delete)';
+		menuItems[3] = 'DoDel';
+		menuItems[4] = '';
+		menuItems[5] = '';
+		menuItems[6] = '属性(&Preperty)';
+		menuItems[7] = 'showPreperty';
+		if(!bCanDelete)
+		{
+			for(var i=2;i<=5;i++)
+				menuItems[i] = menuItems[i + 2];
+			menuItems[7] = '';
+		}
+		window.external.setContextMenu(menuItems);
+	}
+	else
+	{
+		menuItems[0] = '打开(&Open)';
+		menuItems[1] = 'DoOpen';
+		menuItems[2] = '删除(&Delete)';
+		menuItems[3] = 'DoDel';
+		menuItems[4] = '';
+		menuItems[5] = '';
+		menuItems[6] = '属性(&Preperty)';
+		menuItems[7] = 'showPreperty';
+		menuItems[8] = '重命名(&Rename)';
+		menuItems[9] = 'DoRename';
+		if(!bCanDelete)
+		{
+			for(var i=2;i<=5;i++)
+				menuItems[i] = menuItems[i + 2];
+			menuItems[7] = '';
+		}
+		window.external.setContextMenu(menuItems);
+	}
+}
+-->
+</SCRIPT>
+<STYLE>
+<!--
+A {cursor:hand;text-decoration:underline;color:blue;}
+-->
+</STYLE>
+<BODY bottommargin=0 leftmargin=0 rightmargin=0 topmargin=0>
+	<TABLE border=0 style="position:absolute;left:0;top:0;" cellspacing=0 cellpadding=0>
+	   <TBODY id=TBD name=TBD></TBODY>
+	</TABLE>
+</BODY>

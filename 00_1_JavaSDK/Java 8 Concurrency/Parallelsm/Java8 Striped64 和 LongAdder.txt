@@ -1,0 +1,2 @@
+Java8 Striped64 ºÍ LongAdder
+http://ifeve.com/java8-striped64-and-longadder/

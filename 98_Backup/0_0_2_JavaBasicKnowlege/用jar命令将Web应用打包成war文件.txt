@@ -1,0 +1,85 @@
+用jar命令将Web应用打包成war文件
+http://junfengwang060905.blog.163.com/blog/static/9422333020097196518584/
+
+
+假定有一个Web应用：C:\myHome
+
+myHome/WEB-INF/……
+myHome/files/……
+myHome/image/……
+myHome/src/……
+myHome/index.jsp
+
+在命令行窗口下执行如下命令：
+
+C:\>cd myHome
+
+C:\myHome\>jar   cvf   myhome.war   */  .
+
+解释：jar   cvf   [A=》war包名].war   [B=》资源文件及文件夹]   [C=》将要生成war包的目标文件夹]
+
+“*/”（B=》）代表当前目录（C:\myHome）下的所有文件及文件夹。
+
+“.” （C=》）表明将要在当前目录中生成war包。
+
+ 
+
+操作完成后，找到C:\myHome下新生成的myhome.war，将其拷入TOMCAT_HOME/webapps/下。然后启动Tomcat即可。
+
+
+
+
+
+-==============
+将Web应用打包成WAR文件的方法:
+
+(1)在命令行中运用Jar命令
+
+假定有一个Web应用：C:/myHome
+
+myHome/WEB-INF/……
+myHome/files/……
+myHome/image/……
+myHome/src/……
+myHome/index.jsp
+
+在命令行窗口下执行如下命令：
+
+C:/>cd myHome
+
+C:/myHome/>jar      cvf      myhome.war      *.*/     .
+
+解释：jar      cvf      [A->war包名].war   [B->资源文件及文件夹]      [C->将要生成war包的目标文件夹]
+
+“*.*/”（B->）代表当前目录（C:/myHome）下的所有文件及文件夹。
+
+“.”    （C->）表明将要在当前目录中生成war包。
+
+操作完成后，找到C:/myHome下新生成的myhome.war，将其拷入TOMCAT_HOME/webapps/下。然后启动Tomcat即可。
+
+(2)利用IDE工具打包,如Eclipse
+
+右键点击你想打包的文件或者项目，选择“export”,然后是选择J2EE，在弹出的对话框中选择“WAR文件” ，上面有许多选项，还可以选“EAR”，“JAR”，个人觉得这个很方便的！
+
+(3)利用ANT工具打包
+
+首先配置好build.xml文件，然后dos下输入ant ...war
+
+(4)用Eclipse的lomboz插件
+
+选中你的web工程，lomboz J2ee---Deploy Module,就可以把Web工程发布并打包了！
+
+
+
+
+
+
+
+
+
+
+
+
+
+可以用的名令：
+jar -cvf helloservice.war *.*/

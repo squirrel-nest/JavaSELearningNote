@@ -1,0 +1,72 @@
+jndi
+
+rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/ &
+
+java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/ -Djava.rmi.server.hostname=192.168.0.9 -Djava.security.policy=client.policy RemoteRefTest
+
+--增加debug
+java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/ -Djava.rmi.server.hostname=192.168.0.9 -Djava.security.policy=client.policy -Djava.security.debug=access,failure RemoteRefTest
+
+
+-----
+javac -classpath E:\AppRmi\rmitest\src -cp E:\AppRmi\rmitest\lib\compute.jar client/ComputeImpl.java
+
+javac -classpath E:\AppRmi\rmitest\src;E:\AppRmi\rmitest\src\client client/RemoteRef.java
+
+java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/ -Djava.rmi.server.hostname=192.168.0.9 RemoteRef
+
+
+java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/ -Djava.rmi.server.hostname=192.168.0.9 RemoteRef
+
+java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/ -Djava.rmi.server.hostname=192.168.0.9 RemoteRefTest
+
+ 
+
+
+-Djava.rmi.server.useCodebaseOnly=false
+-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar
+-Djava.rmi.server.hostname=192.168.0.9
+-Djava.security.policy=file:/${workspace_loc:rmitest/bin/client.policy}
+
+
+-Djava.security.policy=file:/${workspace_loc:lzdata-JndiTest/bin/client.policy}
+-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/
+-Djava.rmi.server.hostname=192.168.0.9
+
+
+
+
+
+
+
+
+
+
+start rmiregistry
+
+start rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/ &
+
+java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classe
+
+java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/ -Djava.rmi.server.hostname=192.168.0.9 CalcClient
+
+
+
+
+
+---===============
+cd /javadev/jndi/jnditutorial/objects/storing/src
+
+javac ...
+cp Hello.class HelloImpl.class /usr/local/webapps/javaweb/lzjndi/classes/
+
+
+1.在linux服务端，先执行：rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.78:8080/lzjndi/classes/ &
+                加入-J-Djava.rmi.server.hostname选项：rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.79:8080/lzjndi/classes/ -J-Djava.rmi.server.hostname=192.168.0.79 &
+
+2.在linux服务端，先启动一个实例：java -Djava.rmi.server.codebase=http://192.168.0.78:8080/lzjndi/classes/ -Djava.rmi.server.hostname=192.168.0.78 RemoteRef &
+3.在window客户端，执行：java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjndi/classes/ -Djava.rmi.server.hostname=192.168.0.9 CalcClient
+  其中的代码只需：
+      Hello c=(Hello)Naming.lookup("rmi://192.168.0.9:1099/hello");
+      System.out.println(c.sayHello());
+  执行的是服务端的 sayHello() 代码.

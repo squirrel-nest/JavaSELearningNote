@@ -1,0 +1,101 @@
+
+<ATTACH   EVENT="onclick" HANDLER="MouseOnClick" />
+<ATTACH   EVENT="ondblclick" HANDLER="MouseOnDBLClick" />
+<ATTACH   EVENT="onmousemove"  HANDLER="MouseMove">
+<ATTACH   EVENT="onkeypress" HANDLER="KeyPress" />
+<ATTACH   EVENT="onmousedown" HANDLER = "MouseDown"/>
+<ATTACH   EVENT="onmouseup" HANDLER = "MouseUp"/>
+<ATTACH   EVENT="onmouseleave" HANDLER = "MouseLeave"/>
+
+
+<public:method name="getGridData" />
+<public:method name="getRowData" />
+<public:method name="getCellData" />
+<public:method name="getSelectedRecordID" />
+
+
+
+<PUBLIC:METHOD NAME="getTBody"/>
+<PUBLIC:METHOD NAME="getTHead"/>
+<PUBLIC:METHOD NAME="getRows"/>
+<PUBLIC:METHOD NAME="getRow"/>
+<PUBLIC:METHOD NAME="getCell"/>
+<PUBLIC:METHOD NAME="getCellData"/>
+<PUBLIC:METHOD NAME="getRowData"/>
+<PUBLIC:METHOD NAME="getGridData"/>
+<PUBLIC:METHOD NAME="addRow"/>
+
+<script language="javascript">
+	var oTable;	
+
+	function addRow(){
+		return getTable().addRow();
+	}
+	
+	function getTBody(){
+		return getTable().getTBody();
+	}
+	
+	function getTHead(){
+		return getTable().getTHead();
+	}
+	
+	function getRows(){
+		return getTable().getRows();
+	}
+	
+	function getRow(rowNum){
+		return getTable().getRow(rowNum);
+	}
+	
+	function getCell(rowNum , colNum){
+		return getTable().getCell(rowNum , colNum);
+	}
+	
+	function getGridData(){
+		return getTable().getGridData();
+	}
+	
+	function getRowData(rowNum){
+		return getTable().getRowData(rowNum);
+	}
+	
+	function getCellData(rowNum , colNum){
+		return getTable().getCellData(rowNum , colNum);
+	}
+	
+	function KeyPress(){
+		var oSrcElement = event.srcElement;
+		switch(event.keyCode){
+		
+			case 13 : 
+					break;
+		
+		}
+	
+	}
+
+	function getTable(){
+	
+		if(null == oTable){
+			oTable = this.getElementsByTagName("TABLE")[0];
+		}
+		return oTable;
+	}
+
+	 
+	function cancleEvent(){
+	
+		window.event.cancelBubble=true;
+		window.event.returnValue=false;
+	}
+	
+	
+	function resumeEvent(){
+		window.event.cancelBubble=false;
+		window.event.returnValue=true;
+	}
+	
+
+</script>
+	

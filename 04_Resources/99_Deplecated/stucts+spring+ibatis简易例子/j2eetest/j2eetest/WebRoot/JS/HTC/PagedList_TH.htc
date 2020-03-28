@@ -1,0 +1,39 @@
+
+<ATTACH   EVENT="onclick" HANDLER="MouseOnClick" />
+
+<script language="javascript">
+
+	var sortOrder = false;	
+	var sortCol;
+	var oMainContainer;
+
+	function MouseOnClick(){
+
+		if(this.bClickAftResize){
+			this.bClickAftResize = false;
+			return;
+		}
+
+		var colNum = this.colNum;
+		if(null != colNum && !isNaN(colNum)){
+			if(sortCol == colNum){
+				sortOrder = !sortOrder;
+			}else{
+				sortOrder = false;
+			}
+			getMainContainer().sortTable(colNum , sortOrder);
+			sortCol = colNum;
+		}
+	}
+	
+	function getMainContainer(){
+		if(oMainContainer == null){
+			var oTmp = this.parentElement;
+			while(oTmp.container != "MAIN"){
+				oTmp = oTmp.parentElement;
+			}	
+			oMainContainer = oTmp;	
+		}
+		return oMainContainer;
+	}	
+</script>

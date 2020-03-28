@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE validation-config SYSTEM "validation-config.dtd">
+<validation-config lang="auto">
+	<form id="orderForm" show-error="alert" show-type="all">
+		<field name="name" display-name="工程名称" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+</validation-config>

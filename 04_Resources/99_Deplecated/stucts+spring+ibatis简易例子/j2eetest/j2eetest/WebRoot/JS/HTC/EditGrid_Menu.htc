@@ -1,0 +1,54 @@
+<!---------------------------------------------------------------------------------------------
+//   
+//  @Author : linliangyi in Team of Miracle
+//  @Date   : 08/12/2005 
+//
+----------------------------------------------------------------------------------------------->
+
+//Event Declaration
+
+<ATTACH   EVENT="onmouseover" HANDLER="MouseOver" />
+<ATTACH   EVENT="onmouseout" HANDLER="MouseOut" />
+<ATTACH   EVENT="onclick" HANDLER="MouseClick" />
+<script language="javascript">
+
+	function MouseOver(){
+		highlightItem();
+	} 
+	
+	function MouseOut(){
+		lowlightItem();
+	}
+	
+	function MouseClick(){
+		doAction(event.srcElement.action);
+		this.style.visibility = "hidden";
+	}
+	
+	function highlightItem() {
+		if (event.srcElement.className == "menuitems") {
+			event.srcElement.style.backgroundColor = "highlight";
+			event.srcElement.style.color = "white";
+		}
+	}
+	
+	function lowlightItem() {
+		if (event.srcElement.className == "menuitems") {
+			event.srcElement.style.backgroundColor = "";
+			event.srcElement.style.color = "black";
+		}
+	}
+	
+	function doAction(actionString){
+		if(actionString.indexOf("COMMAND:")==0){
+			switch(actionString){
+				case "COMMAND:DELETEROW" : this.eventSrc.Delete();break;
+			}
+		}else{
+			eval(actionString + "(this.eventSrc)");
+		}
+		
+	}
+		
+	
+</script>	

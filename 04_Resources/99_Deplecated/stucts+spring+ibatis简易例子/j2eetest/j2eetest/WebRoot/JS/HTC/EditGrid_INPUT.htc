@@ -1,0 +1,160 @@
+<!---------------------------------------------------------------------------------------------
+//   
+//  @Author : linliangyi in Team of Miracle
+//  @Date   : 07/10/2005 
+//
+----------------------------------------------------------------------------------------------->
+
+//Event Declaration
+<ATTACH   EVENT="onblur"     HANDLER="OnBlur"/>
+<ATTACH   EVENT="onmouseenter" HANDLER="MouseEnter"/>
+<ATTACH   EVENT="onchange"     HANDLER="OnChange"/>
+<ATTACH   EVENT="onkeypress" HANDLER="KeyPress" />
+<ATTACH   EVENT="onkeydown" HANDLER="KeyDown" />
+<ATTACH   EVENT="onkeyup" HANDLER="KeyUp" />
+<ATTACH   EVENT="onbeforepaste" HANDLER="BeforePaste" />
+<ATTACH   EVENT="onpaste" HANDLER="Paste" />
+
+<PUBLIC:METHOD NAME="release"/>
+
+//Evnet Handle
+<script language="javascript">
+	function release(){
+		writeValue();
+		this.removeNode(true);
+	}
+	
+	function BeforePaste(){
+		//event.returnValue=false; 
+	}
+
+	function Paste(){
+		var pasteData = window.clipboardData.getData("Text");
+		switch(this.parentElement.datatype){
+			case "MONEY" :
+			case "NUMBER":
+				pasteData = pasteData.replace(",",'');
+				if(isNaN(pasteData)){
+					cancleEvent();
+				}else{
+					cancleEvent();
+					this.value = pasteData;
+					//clipboardData.setData('text',pasteData);
+				}
+				break;
+			case "CHAR"	 : 
+				if(this.parentElement.charcase=="UP"){
+				
+					cancleEvent();
+					this.value = pasteData.toUpperCase();
+					//clipboardData.setData('text',pasteData);
+					
+				}else if(this.parentElement.charcase=="LOW"){
+				
+					cancleEvent();
+					this.value = pasteData.toLowerCase();
+				}
+				break;
+			case "DATE" :
+				cancleEvent();
+				break;
+					
+			default :
+		}
+	}
+	
+	function OnBlur(){
+		this.override = false;
+		try{
+			CB_Input_OnBlur(this);
+			if(this.override){
+				return;
+			}
+		}catch(e){
+		}
+		if(this.use == "grid" && this.parentElement.datatype != "DATE"){
+			release();
+		}
+		return;
+	}
+	
+	
+	
+	function writeValue(){
+		var oTD = this.parentElement;
+		oTD.getTable().bInputTurnOn = false;
+		oTD.changeData(this.value);
+	}
+	
+
+
+	
+	function MouseEnter(){
+
+	}
+	
+	function OnChange(){
+		this.override = false;
+		try{
+			CB_Input_OnChange(this);
+			if(this.override){
+				return;
+			}
+		}catch(e){
+		}
+	}
+	
+	
+	function KeyPress(){
+		if(event.keyCode == 13 || event.keyCode==27){
+			release()
+			return;
+		}
+	
+		switch(this.parentElement.datatype){
+			case "MONEY" :
+			case "NUMBER": checkForNumber(event);break;
+			case "CHAR"	 : checkForChar(event);break;
+			case "DATE"	 : cancleEvent();break;
+			default :
+		}
+	}
+	
+	function checkForNumber(event){
+		if(event.keyCode < 48 || event.keyCode> 57){
+			//alert(event.keyCode);
+			if(event.keyCode == 45 && this.value.length < 1){
+				return;
+			}
+			if(event.keyCode == 46 && this.value.indexOf(".") < 0){
+				return;
+			}
+			cancleEvent();
+		}
+	}
+
+
+	function checkForChar(event){
+		if(this.parentElement.charcase=="UP" && event.keyCode >= 97 && event.keyCode <= 122 ){
+			event.keyCode = event.keyCode - 32;
+		}
+
+		if(this.parentElement.charcase=="LOW" && event.keyCode >= 65 && event.keyCode <= 90){
+			event.keyCode = event.keyCode + 32;
+		}
+		
+	}
+	
+	function cancleEvent(){
+	
+		window.event.cancelBubble=true;
+		window.event.returnValue=false;
+	}
+	
+	
+	function resumeEvent(){
+		window.event.cancelBubble=false;
+		window.event.returnValue=true;
+	}
+	
+</script>

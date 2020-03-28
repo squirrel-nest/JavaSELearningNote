@@ -1,0 +1,158 @@
+<PUBLIC:COMPONENT>
+<PROPERTY NAME=xmlsrc/>
+
+<METHOD NAME="menuListMove"/>
+<METHOD NAME="menuListStop"/>
+
+<PUBLIC:ATTACH EVENT="oncontentready" ONEVENT="menuIni()" />
+
+<SCRIPT LANGUAGE="JScript">
+	
+	var xmlhttp	            = new ActiveXObject("Microsoft.XMLHTTP");
+	var menuXML             = null;
+	var menuDIV             = null;
+	var menuLable           = null;
+	var menuIco       		= null;
+	var menuItem			= null;
+	var menuItemC			= null;
+	var menuItemLable 		= null;
+	var menuItemIco   		= null;
+	var menuItemUrl			= null;
+	var menuItemCLable		= null;
+	var menuItemCIco		= null;
+	var menuItemCUrl		= null;
+	var MenuDIVHTML			= null;
+	var MenuItemHTML		= null;
+	var MenuDocument 		= window.document.body;
+	var oElement			= null;
+	var menuItemCcount		= 0;
+	var ItemId;
+	var ifGetXMLSuccess		= true;
+	
+	function menuIni()
+	{
+		window.document.bgColor = bgCol;
+		window.document.body.style.marginLeft = "0px";
+		window.document.body.style.marginTop = "0px";
+		getMenuXML();
+		if (!ifGetXMLSuccess) return;
+		menuMaxHeight = menuHeight + 1;
+		menuDIV = menuXML.selectNodes("//XpMenu");
+		menuCount = menuDIV.length;
+		for(var i=0;i<menuDIV.length;i++)
+		{
+			menuLable    = menuDIV[i].getAttribute("label");
+			MenuDIVHTML += '<tr onclick="moveMenu('+i+')"><td class=bartitle background="'+imgPath+bgImg+'" height='+barHeight+' width='+menuWidth+'>'+menuLable+'</td></tr>';
+			MenuDIVHTML += '<tr class=MeunList id=MeunList'+i+'><td>';
+			MenuDIVHTML += 		'<table border=0 width="100%" cellspacing="0" cellpadding="0" id="MenuT" background='+imgPath+barImg+'><tr>';
+			MenuDIVHTML +=			'<td width='+menuDivLeft+'px></td>';
+			MenuDIVHTML += 			'<td valign=top><div id=menuDiv'+i+' style="Height:'+menuHeight+'px;overflow-y:hidden;background-color:'+menubgCol+'"></div></td>';
+			MenuDIVHTML +=			'<td valign=top width='+ctrlDivWidth+'px><div id=CtrlMenuDiv'+i+' style="Height:'+menuHeight+'px;overflow-y:hidden;background-color:'+menubgCol+'">';
+			MenuDIVHTML += 				'<table border=0 width="100%" cellspacing="0" cellpadding="0" height='+menuHeight+'px>';
+			MenuDIVHTML += 					'<tr><td onmousedown=menuListMove("down","menuDiv'+i+'") onmouseup=menuListStop() valign=bottom><img src="'+imgPath+uImg+'"></td></tr>';
+			MenuDIVHTML += 					'<tr><td height=90%></td></tr>';
+			MenuDIVHTML += 					'<tr><td onmousedown=menuListMove("up","menuDiv'+i+'") onmouseup=menuListStop() valign=top><img src="'+imgPath+dImg+'"></td></tr>';
+			MenuDIVHTML +=				'</table>';
+			MenuDIVHTML +=			'</div></td><td width='+menuDivLeft+'px></td></tr>';		
+			MenuDIVHTML +=		'</table>';	
+			MenuDIVHTML += '</td></tr>';
+		}
+		MenuDIVHTML += "</table>";
+		MenuDIVHTML += '<div><img src="'+imgPath+menuDownImg+'"></div>';
+		MenuDocument.innerHTML = MenuDIVHTML;
+		AddMenuItem();
+		iniMenuItemHeight();
+		MenuShow();
+	}
+	
+	function getMenuXML()
+	{
+		try
+		{
+			xmlhttp.Open("POST",xmlsrc,false);
+			xmlhttp.send("");
+			menuXML = xmlhttp.responseXML;
+			MenuDIVHTML = '<table cellspacing=0 cellpadding=0 width='+menuWidth+' id=sysMenu style="margin-left:'+menuLeft+'px;margin-top:'+menuTop+'px">';
+		}
+		catch(e)
+		{
+			alert("≤Àµ•µƒxml≈‰÷√¥ÌŒÛ");
+			ifGetXMLSuccess = false;
+			return;
+		}
+	}
+	
+	function AddMenuItem()
+	{
+		for(var i=0;i<menuDIV.length;i++)
+		{
+			oElement = eval("menuDiv"+i);
+			MenuItemHTML = '<table border="0" width="100%" cellspacing="1" cellpadding="1">';
+			menuItem = menuDIV[i].childNodes;
+			for(var j=0;j<menuItem.length;j++)
+			{
+				ItemId = "Item_"+i+"_"+j;
+				menuItemLable = menuItem[j].getAttribute("label");
+				menuItemIco   = menuItem[j].getAttribute("icon");
+				menuItemIco   = (menuItemIco==null)?itemDefaultIco:menuItemIco;
+				menuItemUrl   = menuItem[j].text;
+				menuItemC     = menuItem[j].childNodes; 
+				MenuItemHTML += '<tr><td><div>';
+				MenuItemHTML += 	'<table border=0 width="100%" cellpadding="0" cellpadding="0">';
+				var tmpHTML = (menuItemC.length > 1)?'<tr onclick=ctrlMeunItem("'+menuItemCcount+'","'+ItemId+'")>':'<tr onclick=itemClick("'+menuItemUrl+'")>';
+				menuItemIco   = (menuItemC.length > 1)?itemFatherIco:menuItemIco;
+				MenuItemHTML += 	tmpHTML;
+				MenuItemHTML +=			'<td width='+imgWidth+' align=center><img id="'+ItemId+'Img" src="'+imgPath+menuItemIco+'"></td>';
+				MenuItemHTML +=			'<td class=menuItem id='+ItemId+' onmousemove=itemMove("'+ItemId+'") onmouseout=itemOut("'+ItemId+'") style="color:'+itemFontCol+'">'+menuItemLable+'</td></tr>';
+				MenuItemHTML +=		'</table>';
+				MenuItemHTML +=	'</div></td></tr>';
+				if (menuItemC.length > 1)
+				{
+					MenuItemHTML += '<tr><td>';
+					MenuItemHTML += 	'<div id=MenuItemC'+menuItemCcount+'D style="overflow-y:hidden">';
+					MenuItemHTML += 		'<table id=MenuItemC'+menuItemCcount+'T border=0 width="100%" cellpadding="0" cellpadding="0" style="filter:Alpha(opacity=0);">';
+					for(var x=0;x<menuItemC.length;x++)
+						{
+							ItemId = "Item_"+i+"_"+j+"_"+x;
+							menuItemCLable = menuItemC[x].getAttribute("label");
+							menuItemCIco = menuItemC[x].getAttribute("icon");
+							menuItemCIco   = (menuItemCIco==null)?itemDefaultIco:menuItemCIco;
+							menuItemCUrl = menuItemC[x].text;
+							MenuItemHTML += '<tr onclick=itemClick("'+menuItemCUrl+'")><td width='+(imgWidth*2-menuDivLeft)+' align=center><img src="'+imgPath+menuItemCIco+'"></td>';
+							MenuItemHTML += 	'<td class=menuItem id='+ItemId+' onmousemove=itemMove("'+ItemId+'") onmouseout=itemOut("'+ItemId+'") style="color:'+itemFontCol+'">'+menuItemCLable+'</td>';
+							MenuItemHTML += '<tr>';					
+						}
+					MenuItemHTML +=	'</table>';
+					menuItemCcount++;
+				}
+			}
+			MenuItemHTML += '</table>';
+			oElement.innerHTML = MenuItemHTML;
+		}
+	}
+	
+	function iniMenuItemHeight()
+	{
+		MenuItemCHeight.length = menuItemCcount;
+		for(var i=0;i<menuItemCcount;i++)
+		{
+			oElement = eval("MenuItemC"+i+"D") ;
+			MenuItemCHeight[i] = oElement.offsetHeight;
+			oElement.style.display = "none";
+			oElement.style.height = "1px";
+		}
+	}
+	
+	function MenuShow()
+	{
+		for(var i=1;i<menuDIV.length;i++)
+		{
+			oElement = eval("menuDiv"+i);
+			oElement.style.height = "1px";
+			oElement = eval("CtrlMenuDiv"+i);
+			oElement.style.height = "1px";
+		}
+	}
+</SCRIPT>
+
+</PUBLIC:COMPONENT>

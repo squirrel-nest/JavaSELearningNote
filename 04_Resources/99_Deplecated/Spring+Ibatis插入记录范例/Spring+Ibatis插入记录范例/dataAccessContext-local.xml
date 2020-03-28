@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- ========================= RESOURCE DEFINITIONS ========================= -->
+    <!-- Local DataSource that refers to a combined database -->
+    <!-- (see dataAccessContext-jta.xml for an alternative) -->
+    <!-- The placeholders are resolved from jdbc.properties through -->
+    <!-- the PropertyPlaceholderConfigurer in applicationContext.xml -->
+    <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName"><value>oracle.jdbc.driver.OracleDriver</value></property>
+        <property name="url"><value>jdbc:oracle:thin:@localhost:1521:fjdx2</value></property>
+        <property name="username"><value>cnms</value></property>
+        <property name="password"><value>cnms</value></property>
+    </bean>-->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName"><value>${jdbc.driverClassName}</value></property>
+        <property name="url"><value>${jdbc.url}</value></property>
+        <property name="username"><value>${jdbc.username}</value></property>
+        <property name="password"><value>${jdbc.password}</value></property>
+    </bean>
+    <!--<bean id="dataSource2" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">-->
+        <!--<property name="driverClassName"><value>oracle.jdbc.driver.OracleDriver</value></property>
+        <property name="url"><value>jdbc:oracle:thin:@localhost:1521:fjdx</value></property>
+        <property name="username"><value>hib</value></property>
+        <property name="password"><value>hib</value></property>-->
+        <!--<property name="driverClassName"><value>${jdbc2.driverClassName}</value></property>
+        <property name="url"><value>${jdbc2.url}</value></property>
+        <property name="username"><value>${jdbc2.username}</value></property>
+        <property name="password"><value>${jdbc2.password}</value></property>
+    </bean>-->
+    <!--<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName"><value>java:comp/env/jdbc/dbpool</value></property>
+	</bean>-->
+    <!-- Transaction manager for a single JDBC DataSource -->
+    <!-- (see dataAccessContext-jta.xml for an alternative) -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource"><ref local="dataSource"/></property>
+    </bean>
+    
+    <!--<bean id="transactionManager2" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource"><ref local="dataSource2"/></property>
+    </bean>-->
+    
+    <!-- SqlMap setup for iBATIS Database Layer -->
+    <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation"><value>classpath:/com/ffcs/util/config/sql-map-config.xml</value></property>
+    </bean>
+    
+    <!-- ========================= DAO DEFINITIONS: IBATIS IMPLEMENTATIONS ========================= -->
+    <!--
+    -ID
+	-->
+    <bean id="sequenceDao" class="com.ffcs.util.dao.DbSequenceDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  TradeCls
+	-->
+    <bean id="tradeClsDao" class="com.ffcs.util.dao.alarmwatch.DbTradeClsDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--<bean id="tradeClsDaoTest" class="com.ffcs.util.dao.alarmwatch.DbTradeClsDao">
+        <property name="dataSource"><ref local="dataSource2"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>-->
+    <!--
+	  Customer
+	-->
+    <bean id="customerDao" class="com.ffcs.util.dao.alarmwatch.DbCustomerDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+        <property name="sequenceDao"><ref local="sequenceDao"/></property>
+    </bean>
+    <!--
+	  LogInfo
+	-->
+    <bean id="logInfoDao" class="com.ffcs.util.dao.system.DbLogInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>    
+    <!--
+	  UserInfo
+	-->
+    <bean id="userInfoDao" class="com.ffcs.util.dao.system.DbUserInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>       
+    <!--
+	  RoleInfo
+	-->
+    <bean id="roleInfoDao" class="com.ffcs.util.dao.system.DbRoleInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+        <property name="sequenceDao"><ref local="sequenceDao"/></property>
+    </bean>       
+    <!--
+	  RightInfo
+	-->
+    <bean id="rightInfoDao" class="com.ffcs.util.dao.system.DbRightInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>     
+    <!--
+	  RoleRight
+	-->
+    <bean id="roleRightDao" class="com.ffcs.util.dao.system.DbRoleRightDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>      
+    <!--
+	  UserGroup
+	-->
+    <bean id="userGroupDao" class="com.ffcs.util.dao.system.DbUserGroupDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>       
+    <!--
+	  RegionInfo
+	-->
+    <bean id="regionInfoDao" class="com.ffcs.util.dao.system.DbRegionInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>         
+    <!--
+	  UserRole
+	-->
+    <bean id="userRoleDao" class="com.ffcs.util.dao.system.DbUserRoleDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>        
+    <!--
+	  LogCfg
+	-->
+    <bean id="logCfgDao" class="com.ffcs.util.dao.system.DbLogCfgDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>         
+    <!--
+	  LogArch
+	-->
+    <bean id="logArchDao" class="com.ffcs.util.dao.system.DbLogArchDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>        
+    <!--
+	  TradeInfo
+	-->
+    <bean id="tradeInfoDao" class="com.ffcs.util.dao.system.DbTradeInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>        
+    <!--
+	  CstmInfo
+	-->
+    <bean id="cstmInfoDao" class="com.ffcs.util.dao.system.DbCstmInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>         
+    <!--
+	  RoleCstm
+	-->
+    <bean id="roleCstmDao" class="com.ffcs.util.dao.system.DbRoleCstmDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>         
+    <!--
+	  SlaFaultRecoverCount
+	-->
+    <bean id="slaFaultRecoverCountDao" class="com.ffcs.util.dao.servicemanage.DbSlaFaultRecoverCountDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    <!--
+	  SlaFaultRecover
+	-->
+    <bean id="slaFaultRecoverDao" class="com.ffcs.util.dao.servicemanage.DbSlaFaultRecoverDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean> 
+    <!--
+	  HireCircuitCount
+	-->
+    <bean id="hireCircuitCountDao" class="com.ffcs.util.dao.servicemanage.DbHireCircuitCountDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean> 
+    <!--
+	  HireCircuit
+	-->
+    <bean id="hireCircuitDao" class="com.ffcs.util.dao.servicemanage.DbHireCircuitDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean> 
+    <!--
+	  ToneStsCount
+	-->
+    <bean id="toneStsCountDao" class="com.ffcs.util.dao.servicemanage.DbToneStsCountDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>    
+        <!--
+	  CirAlarmCount
+	-->
+    <bean id="cirAlarmCountDao" class="com.ffcs.util.dao.servicemanage.DbCirAlarmCountDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>  
+            <!--
+	  CirAlarm
+	-->
+    <bean id="cirAlarmDao" class="com.ffcs.util.dao.servicemanage.DbCirAlarmDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>  
+            <!--
+	  AlarmNote
+	-->
+    <bean id="alarmNoteDao" class="com.ffcs.util.dao.servicemanage.DbAlarmNoteDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>  
+    <!--
+	  Circuit
+	-->
+    <bean id="circuitDao" class="com.ffcs.util.dao.alarmwatch.DbCircuitDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  Cirroute
+	-->
+    <bean id="cirrouteDao" class="com.ffcs.util.dao.alarmwatch.DbCirrouteDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  Port
+	-->
+    <bean id="portDao" class="com.ffcs.util.dao.alarmwatch.DbPortDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  Indicate
+	-->
+    <bean id="indicateDao" class="com.ffcs.util.dao.performance.DbIndicateDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>    
+    <!--
+	  Indicate
+        -->
+    <bean id="indDataEntityDao" class="com.ffcs.util.dao.performance.DbIndDataEntityDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    <!--
+	  ViewCircuitPort
+        -->
+    <bean id="viewCircuitPortDao" class="com.ffcs.util.dao.performance.DbViewCircuitPortDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean> 
+    <!--
+	  CircuitPort
+        -->    
+    <bean id="circuitPortDao" class="com.ffcs.util.dao.performance.DbCircuitPortDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>    
+    <!--
+	  TradeClsInfo
+	-->
+    <bean id="tradeClsInfoDao" class="com.ffcs.util.dao.customerinfomgr.TradeClsInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <bean id="customerInfoDao" class="com.ffcs.util.dao.customerinfomgr.CustomerInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>    
+    
+    <bean id="regionQueryDao" class="com.ffcs.util.dao.customerinfomgr.RegionInfoDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  -Page 
+	-->
+    <bean id="pageStatementDao" class="com.ffcs.util.dao.DbPagedStatement">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+   
+    <!--
+	  FaultTbl
+	-->
+    <bean id="faultDao" class="com.ffcs.util.dao.faultmanage.DbFaultDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+        <!--<property name="sequenceDao"><ref local="sequenceDao"/></property>-->
+    </bean>
+    
+    <!--
+	  TypeMst
+	-->
+    <bean id="typeMstDao" class="com.ffcs.util.dao.faultmanage.DbTypeMstDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  TypeDtl
+	-->
+    <bean id="typeDtlDao" class="com.ffcs.util.dao.faultmanage.DbTypeDtlDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  Status
+	-->
+    <bean id="statusDao" class="com.ffcs.util.dao.faultmanage.DbStatusDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  TTTicket
+	-->
+    <bean id="ticketDao" class="com.ffcs.util.dao.faultmanage.DbTicketDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  OperationLST
+	-->
+    
+    <bean id="operationLSTDao" class="com.ffcs.util.dao.faultmanage.DbOperationLSTDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+	  Appeal
+	-->
+    <bean id="appealDao" class="com.ffcs.util.dao.faultmanage.DbAppealDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+      ThresCfg
+    -->
+    <bean id="thresCfgDAO" class="com.ffcs.util.dao.pmthrescfg.DbPMThrescfgDAO">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+      PMind
+    -->
+    <bean id="mindDAO" class="com.ffcs.util.dao.pmthrescfg.DbPmindDAO">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+      Code
+    -->
+    <bean id="codeDAO" class="com.ffcs.util.dao.pmthrescfg.DbCodeDAO">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+      FuncReportDao
+    -->
+    <bean id="FuncReportDao" class="com.ffcs.util.dao.servicemanage.FuncReportDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+      CusIndTemplet
+    -->
+    <bean id="cusIndTmpletDAO" class="com.ffcs.util.dao.pmthrescfg.DbCusIndTmpletDAO">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+      PMThresTpCfg
+    -->
+    <bean id="thresTpCfgDAO" class="com.ffcs.util.dao.pmthrescfg.DbPMThresTpCfgDAO">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+        IPmindFldDAO
+    -->
+    <bean id="pmindFldDAO" class="com.ffcs.util.dao.pmthrescfg.DbPmindFldDAO">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    
+    <!--
+        dataSynchronizationDao
+    -->
+    <bean id="dataSynchronizationDao" class="com.ffcs.util.dao.datasynchronization.DbDataSynchronizationDao">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+    <!--
+        CustVoiceAlarmDAO
+    -->
+    <bean id="custVADAO" class="com.ffcs.util.dao.custvoicealarmcfg.CustVoiceAlarmDAO">
+        <property name="dataSource"><ref local="dataSource"/></property>
+        <property name="sqlMapClient"><ref local="sqlMapClient"/></property>
+    </bean>
+</beans>

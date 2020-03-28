@@ -1,0 +1,2 @@
+JVM gc参数设置与分析
+http://xstarcd.github.io/wiki/Java/JVM_GC.html

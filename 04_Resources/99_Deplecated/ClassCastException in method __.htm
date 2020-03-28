@@ -1,0 +1,1159 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0059)http://forums.oracle.com/forums/thread.jspa?threadID=279238 -->
+<HTML><HEAD><TITLE>ClassCastException in method ...</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><LINK 
+href="http://www.oracle.com/admin/template/forums/forums_style.css" 
+type=text/css rel=stylesheet><LINK 
+href="http://www.oracle.com/admin/otn_new.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>.jive-table THEAD TH {
+	BORDER-TOP: #666 1px solid; BORDER-BOTTOM: #666 1px solid
+}
+.jive-breadcrumbs {
+	COLOR: #000
+}
+#jive-oracle-wrapper {
+	PADDING-LEFT: 0px
+}
+#jive-oracle-wrapper TD {
+	FONT-SIZE: 10pt; FONT-FAMILY: arial, helvetica, sans-serif
+}
+#jive-oracle-wrapper TH {
+	FONT-SIZE: 10pt; FONT-FAMILY: arial, helvetica, sans-serif
+}
+#jive-oracle-wrapper P {
+	FONT-SIZE: 10pt; FONT-FAMILY: arial, helvetica, sans-serif
+}
+#jive-oracle-wrapper DIV {
+	FONT-SIZE: 10pt; FONT-FAMILY: arial, helvetica, sans-serif
+}
+#jive-oracle-wrapper A {
+	COLOR: #000! important
+}
+#jive-oracle-wrapper A:visited {
+	COLOR: #000! important
+}
+#jive-oracle-wrapper TH A {
+	FONT-WEIGHT: bold
+}
+#jive-oracle-wrapper THEAD TH {
+	BORDER-BOTTOM: #999 1px solid
+}
+</STYLE>
+
+<META content="MSHTML 6.00.6001.18099" name=GENERATOR></HEAD>
+<BODY topMargin=0>
+<P><LINK title=RSS 
+href="http://forums.oracle.com/forums/rss/rssmessages.jspa?threadID=279238" 
+type=application/rss+xml rel=alternate>
+<P>
+<SCRIPT language=javascript>
+
+
+</SCRIPT>
+<NOSCRIPT></NOSCRIPT></P>
+<DIV id=banner-forum>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center noWrap rowSpan=2><BR><BR><A 
+      href="http://www.oracle.com/technology/index.html"><IMG 
+      alt="Oracle Technology Network" hspace=10 src="" border=0></A></TD>
+    <TD class=padMid vAlign=top noWrap align=right width="70%"></TD>
+    <TD noWrap width="30%"><BR><IMG height=8 alt="" 
+      src="ClassCastException%20in%20method%20___files/spacer.gif" width=1 
+      border=0></TD></TR>
+  <TR>
+    <TD class=padMid vAlign=bottom noWrap align=right></TD>
+    <TD vAlign=bottom noWrap align=left width="30%"></TD></TR></TBODY></TABLE></DIV>
+<P>
+<DIV id=jive-oracle-wrapper>
+<DIV id=jive-flatpage>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width="99%">
+      <P class=jive-breadcrumbs><A 
+      href="http://forums.oracle.com/forums/categoryHome.jspa?categoryID=84">Community 
+      Discussion Forums</A> <!-- Do not show category link if the category is the home category -->» 
+      <A 
+      href="http://forums.oracle.com/forums/category.jspa?categoryID=24">Java</A> 
+      » <A 
+      href="http://forums.oracle.com/forums/forum.jspa?forumID=99&amp;start=0">SQLJ/JDBC</A> 
+      </P>
+      <P class=jive-page-title>Thread: ClassCastException in method 
+      CLOB.createTemporary </P></TD>
+    <TD width="1%">
+      <DIV class=jive-accountbox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+      summary="Jive Forums Accountbox" border=0>
+        <THEAD>
+        <TR>
+          <TH colSpan=2>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TH 
+                style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" 
+                width="99%">Welcome, Guest </TH></TR></TBODY></TABLE></TH></TR></THEAD>
+        <TBODY>
+        <TR>
+          <TD class=jive-icon width="1%"><A 
+            href="http://forums.oracle.com/forums/login.jspa"><IMG height=16 
+            alt=Login 
+            src="ClassCastException%20in%20method%20___files/key-16x16.gif" 
+            width=16 border=0></A></TD>
+          <TD class=jive-icon-label width="99%"><A 
+            href="http://forums.oracle.com/forums/login.jspa">Sign In </A>/ <A 
+            href="https://profile.oracle.com/jsp/reg/createUser.jsp?act=5&amp;src=1180588&amp;language=en&amp;tid=262&amp;owner=3&amp;nexturl=http://forums.oracle.com">Register</A> 
+          </TD></TR>
+        <TR>
+          <TD class=jive-icon width="1%"><A 
+            href="http://forums.oracle.com/forums/guestsettings!default.jspa"><IMG 
+            height=16 alt="Guest Settings" 
+            src="ClassCastException%20in%20method%20___files/preferences-16x16.gif" 
+            width=16 border=0></A> </TD>
+          <TD class=jive-icon-label width="99%"><A 
+            href="http://forums.oracle.com/forums/guestsettings!default.jspa">Guest 
+            Settings</A> </TD></TR>
+        <TR>
+          <TD class=jive-icon width="1%"><A 
+            href="http://forums.oracle.com/forums/search!default.jspa"><IMG 
+            height=16 alt=faq 
+            src="ClassCastException%20in%20method%20___files/search-16x16.gif" 
+            width=16 border=0></A></TD>
+          <TD class=jive-icon-label width="99%"><A 
+            href="http://forums.oracle.com/forums/search!default.jspa">Search</A></TD></TR>
+        <TR>
+          <TD class=jive-icon width="1%"><A 
+            href="http://forums.oracle.com/forums/help.jspa"><IMG height=16 
+            alt=faq 
+            src="ClassCastException%20in%20method%20___files/help-16x16.gif" 
+            width=16 border=0></A></TD>
+          <TD class=jive-icon-label width="99%"><A 
+            href="http://forums.oracle.com/forums/help.jspa">FAQ</A></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+<DIV class=jive-buttons>
+<TABLE cellSpacing=0 cellPadding=0 summary=Buttons border=0>
+  <TBODY>
+  <TR>
+    <TD class=jive-icon><A 
+      href="http://forums.oracle.com/forums/post!reply.jspa?threadID=279238"><IMG 
+      height=16 alt="Reply to this Thread" 
+      src="ClassCastException%20in%20method%20___files/reply-16x16.gif" width=16 
+      border=0></A></TD>
+    <TD class=jive-icon-label><A id=jive-reply-thread 
+      href="http://forums.oracle.com/forums/post!reply.jspa?threadID=279238">Reply 
+      to this Thread</A> </TD>
+    <TD class=jive-icon><A 
+      href="http://forums.oracle.com/forums/search!default.jspa?objID=f99"><IMG 
+      height=16 alt="Search Forum" 
+      src="ClassCastException%20in%20method%20___files/search-16x16.gif" 
+      width=16 border=0></A></TD>
+    <TD class=jive-icon-label><A 
+      href="http://forums.oracle.com/forums/search!default.jspa?objID=f99">Search 
+      Forum</A> </TD>
+    <TD class=jive-icon><A 
+      href="http://forums.oracle.com/forums/forum.jspa?forumID=99"><IMG 
+      height=16 alt="Back to Thread List" 
+      src="ClassCastException%20in%20method%20___files/arrow-left-16x16.gif" 
+      width=16 border=0></A> </TD>
+    <TD class=jive-icon-label><A 
+      href="http://forums.oracle.com/forums/forum.jspa?forumID=99">Back to 
+      Thread List</A> </TD></TR></TBODY></TABLE></DIV><BR>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width="99%">
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <THEAD>
+        <TR>
+          <TH class=jive-first-last>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <THEAD>
+              <TR>
+                <TH width="1%"><A title=Permlink 
+                  href="http://forums.oracle.com/forums/thread.jspa?threadID=279238"><IMG 
+                  height=16 alt=Permlink 
+                  src="ClassCastException%20in%20method%20___files/permlink-16x16.gif" 
+                  width=16 border=0></A> </TH>
+                <TH width="97%"><NOBR>Replies: 10 </NOBR>- <NOBR>Pages: 1 
+                  </NOBR>- <NOBR><A title="by: user457406" 
+                  href="http://forums.oracle.com/forums/thread.jspa?threadID=279238&amp;tstart=0&amp;messageID=1085186#1085186">Last 
+                  Post</A>: Oct 15, 2005 5:14 AM by: user457406 </NOBR></TH>
+                <TH noWrap width="1%"></TH></TR></THEAD>
+              <TBODY></TBODY></TABLE></TH></TR></THEAD>
+        <TBODY></TBODY></TABLE></DIV></DIV>
+      <DIV id=jive-message-holder>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-even vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=jesper3 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=431613">jesper3</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 3 <BR>Registered: 3/12/01 
+                </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=855275></A>ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Dec 13, 2004 7:12 AM </SPAN></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=855275"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=855275">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" 
+                  colSpan=3><BR>Hello,<BR><BR>I am trying to insert a CLOB into 
+                  an Oracle table with the following code:<BR><BR>String data = 
+                  ...;<BR>Connection conn = ...;<BR><BR>PreparedStatement ps = 
+                  conn.prepareStatement("INSERT INTO BULK_REQUEST 
+                  (BR_ID,NAAM,FILENAAM,REQUEST) VALUES 
+                  (?,?,?,?)");<BR><BR>ps.setLong(1, brId);<BR>ps.setString(2, 
+                  requestName);<BR>ps.setString(3, filename);<BR><BR>CLOB clob = 
+                  CLOB.createTemporary(conn, true, CLOB.DURATION_SESSION); // 
+                  Throws 
+                  ClassCastException<BR>clob.open(CLOB.MODE_READWRITE);<BR><BR>Writer 
+                  clobWriter = 
+                  clob.getCharacterOutputStream();<BR>clobWriter.write(data);<BR>clobWriter.flush();<BR>clobWriter.close();<BR>clob.close();<BR><BR>ps.setObject(4, 
+                  clob);<BR><BR>ps.executeUpdate();<BR><BR><BR>When I create the 
+                  temporary CLOB object using CLOB.createTemporary, I get a 
+                  ClassCastException. This is what the stack trace 
+                  shows:<BR><BR>java.lang.ClassCastException<BR>at 
+                  oracle.jdbc.driver.OracleConnection.physicalConnectionWithin(OracleConnection.java:5141)<BR>at 
+                  oracle.sql.CLOB.createTemporary(CLOB.java:1009)<BR>at 
+                  oracle.sql.CLOB.createTemporary(CLOB.java:956)<BR>at 
+                  com.nuon.ict.ari.bulkconnection.DocumentUpload.doPost(DocumentUpload.java:109)<BR>at 
+                  javax.servlet.http.HttpServlet.service(HttpServlet.java:760)<BR><BR><BR>The 
+                  code runs inside a servlet that runs in Tomcat. The database 
+                  connection is retrieved via JNDI, using a data 
+                  source:<BR><BR>Contect context = new 
+                  InitialContext();<BR>Connection conn = 
+                  ((DataSource)context.lookup("java:comp/env/jdbc/ari")).getConnection();<BR><BR><BR>I've 
+                  searched the forum and found that others had a similar error, 
+                  but I didn't find a solution that works.<BR><BR>Why does this 
+                  error occur; does it have anything to do with getting the 
+                  database connection via the JNDI lookup? Is the actual 
+                  Connection object of a different type than what 
+                  CLOB.createTemporary expects? What is the solution to the 
+                  problem?<BR><BR>I'm using Oracle version 9 with ojdbc14.jar, 
+                  the thin driver. 
+      <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-odd vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=jesper3 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=431613">jesper3</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 3 <BR>Registered: 3/12/01 
+                </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=855366></A>Re: ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Dec 13, 2004 8:49 AM &nbsp; 
+                  <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855275#855275"><IMG 
+                  height=10 alt="in response to: jesper3" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855275#855275">jesper3</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=855366"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=855366">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>I have 
+                  found the answer myself, and it indeed is what I 
+                  suspected:<BR><BR>Despite the fact that method 
+                  CLOB.createTemporary takes a java.sql.Connection object as a 
+                  parameter, it ONLY works if the Connection is an 
+                  oracle.jdbc.driver.OracleConnection object. If it's not an 
+                  oracle.jdbc.driver.OracleConnection, you get a 
+                  ClassCastException.<BR><BR>That is a BUG in the method 
+                  CLOB.createTemporary !! (If only an OracleConnection object is 
+                  allowed, the argument should be of type OracleConnection, not 
+                  of type java.sql.Connection).<BR><BR>The problem happens 
+                  because when I run my code in Tomcat and get the database 
+                  connection via a DataSource object that I lookup via JNDI, the 
+                  connection is not a real OracleConnection object, but an 
+                  object that wraps the real OracleConnection.<BR><BR>In more 
+                  detail:<BR><BR>Tomcat uses the Apache Commons DBCP package 
+                  (see <A 
+                  href="http://jakarta.apache.org/commons/dbcp/">http://jakarta.apache.org/commons/dbcp/</A>) 
+                  for database connection pooling. When you lookup a DataSource 
+                  object using JNDI, like this:<BR><BR>Context context = new 
+                  InitialContext();<BR>DataSource ds = 
+                  (DataSource)context.lookup("java:comp/env/jdbc/ari");<BR><BR>the 
+                  object that you get is an instance of class 
+                  org.apache.commons.dbcp.BasicDataSource. When you call 
+                  getConnection on this object, you get an instance of class 
+                  org.apache.commons.dbcp.PoolingDataSource$PoolGuardConnectionWrapper 
+                  (which obviously implements java.sql.Connection, and wraps the 
+                  OracleConnection object).<BR><BR>To be able to call 
+                  CLOB.createTemporary successfully, we need to find the wrapped 
+                  OracleConnection object. A number of steps are necessary to 
+                  reach this:<BR><BR>First of all, by default the 
+                  PoolingDataSource$PoolGuardConnectionWrapper does not allow 
+                  access to the wrapped Connection object (don't ask me why, but 
+                  that's how the Apache developers decided it should be). You 
+                  must enable access by configuring it in the &lt;Context&gt; of 
+                  the web application (in Tomcat's server.xml configuration 
+                  file), for example:<BR><BR>&lt;Context path="/ariweb" 
+                  docBase="ariweb.war"&gt;<BR>&lt;Resource name="jdbc/ari" 
+                  auth="Container" 
+                  type="javax.sql.DataSource"/&gt;<BR>&lt;ResourceParams 
+                  name="jdbc/ari"&gt;<BR>&lt;parameter&gt;<BR>&lt;name&gt;driverClassName&lt;/name&gt;<BR>&lt;value&gt;oracle.jdbc.driver.OracleDriver&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;parameter&gt;<BR>&lt;!-- 
+                  NOTE: This is necessary to enable access to the Oracle 
+                  connection object 
+                  --&gt;<BR>&lt;name&gt;accessToUnderlyingConnectionAllowed&lt;/name&gt;<BR>&lt;value&gt;true&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;!-- 
+                  Other configuration parameters 
+                  --&gt;<BR>...<BR>&lt;/ResourceParams&gt;<BR>&lt;/Context&gt;<BR><BR>The 
+                  PoolingDataSource$PoolGuardConnectionWrapper extends class 
+                  org.apache.commons.dbcp.DelegatingConnection, which has a 
+                  getDelegate method. We can call this method to get the wrapped 
+                  connection.<BR><BR>Unfortunately, the story is not yet 
+                  finished. The getDelegate method of the 
+                  PoolingDataSource$PoolGuardConnectionWrapper does not return 
+                  the OracleConnection object - it returns an instance of class 
+                  org.apache.commons.dbcp.PoolableConnection, which is a second 
+                  wrapper around the OracleConnection object.<BR><BR>The 
+                  PoolableConnection class also extends DelegatingConnection, so 
+                  we can call getDelegate again and finally we have the 
+                  OracleConnection object.<BR><BR>So here is the final 
+                  code:<BR><BR>// conn is the Connection I got from the 
+                  DataSource<BR>Connection oracleConnection = conn;<BR><BR>if 
+                  (conn instanceof org.apache.commons.dbcp.DelegatingConnection) 
+                  {<BR>// This returns a 
+                  org.apache.commons.dbcp.PoolableConnection<BR>Connection pc = 
+                  ((org.apache.commons.dbcp.DelegatingConnection)conn).getDelegate();<BR><BR>// 
+                  The PoolableConnection is a DelegatingConnection itself - get 
+                  the delegate (the Oracle connection)<BR>oracleConnection = 
+                  ((org.apache.commons.dbcp.DelegatingConnection)pc).getDelegate();<BR>}<BR><BR>CLOB 
+                  clob = CLOB.createTemporary(oracleConnection, true, 
+                  CLOB.DURATION_SESSION);<BR>clob.open(CLOB.MODE_READWRITE);<BR>...<BR><BR>I 
+                  hope this helps when you get into the same trouble!<BR><BR>Is 
+                  there a place on this website where I can file a bug in 
+                  Oracle's 
+      driver?<BR><BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-even vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=jesper3 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=431613">jesper3</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 3 <BR>Registered: 3/12/01 
+                </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=856061></A>Re: ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Dec 14, 2004 6:55 AM &nbsp; 
+                  <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855366#855366"><IMG 
+                  height=10 alt="in response to: jesper3" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855366#855366">jesper3</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=856061"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=856061">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>I noticed 
+                  that class org.apache.commons.dbcp.DelegatingConnection has a 
+                  method called getInnermostDelegate, which returns the 
+                  innermost wrapped connection, so you could also use the 
+                  following code:<BR><BR>// conn is the Connection I got from 
+                  the DataSource<BR>Connection oracleConnection = 
+                  conn;<BR><BR>if (conn instanceof 
+                  org.apache.commons.dbcp.DelegatingConnection) 
+                  {<BR>oracleConnection = 
+                  ((org.apache.commons.dbcp.DelegatingConnection)conn).getInnermostDelegate();<BR>}<BR><BR>CLOB 
+                  clob = CLOB.createTemporary(oracleConnection, true, 
+                  CLOB.DURATION_SESSION);<BR>clob.open(CLOB.MODE_READWRITE);<BR>...<BR><BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-odd vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=aristim1 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=432994">aristim1</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 1 <BR>Registered: 2/12/02 
+                </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=869634></A>Re: ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Jan 7, 2005 12:17 PM &nbsp; 
+                  <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=856061#856061"><IMG 
+                  height=10 alt="in response to: jesper3" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=856061#856061">jesper3</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=869634"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=869634">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>Hello 
+                  ****:<BR><BR>Thanks for posting the answer to your own 
+                  question. Unfortunately I'm still a little stuck and I thought 
+                  you might know something we don't. The thing is, i need to get 
+                  the actual Oracle connection or statement, because I'm trying 
+                  to use an oracle-specific feature 
+                  (registerIndexTableOutParameter()), but I cannot cast the 
+                  underlying connection even after the 
+                  getInnermostDelegate().<BR><BR>This is what I'm 
+                  doing:<BR>OracleConnection oc = (OracleConnection) 
+                  ((DelegatingConnection) c).getInnermostDelegate(); <BR><BR>If 
+                  i break on that line my debugger shows the previous statement 
+                  to 
+                  return:<BR>oracle.jdbc.driver.OracleConnection@185e90f<BR><BR>but 
+                  I still get this exception when I 
+                  continue:<BR>java.lang.ClassCastException: 
+                  oracle.jdbc.driver.OracleConnection<BR><BR><BR>I've also tried 
+                  to get innermost and cast statement 
+                  itself:<BR>(oracle.jdbc.driver.OracleCallableStatement)((DelegatingCallableStatement) 
+                  stmt).getInnermostDelegate()<BR><BR>and again, debugger 
+                  indicate I have what i 
+                  want:<BR>oracle.jdbc.driver.OracleCallableStatement@16e1782<BR><BR>but 
+                  still exception is thrown:<BR>java.lang.ClassCastException: 
+                  oracle.jdbc.driver.OracleCallableStatement<BR><BR><BR>This is 
+                  what I want to do with the OracleStatement (works fine on 
+                  Weblogic):<BR>ostmt.registerIndexTableOutParameter(3,1000, 
+                  Types.VARCHAR, 300);<BR><BR>Here's my context 
+                  setup:<BR>&lt;Context path="/OfferCode" 
+                  docBase="OfferCode"<BR>debug="5" reloadable="true" 
+                  crossContext="true"&gt;<BR><BR>&lt;Resource 
+                  name="jdbc/devdb1b" 
+                  auth="Container"<BR>type="javax.sql.DataSource" 
+                  driverClassName="oracle.jdbc.OracleDriver"<BR>url="jdbc:oracle:thin:@10.176.50.65:1521:SERV"<BR>username="asdfasdf" 
+                  password="asdf" maxActive="20" maxIdle="10"<BR>maxWait="-1" 
+                  accessToUnderlyingConnectionAllowed="true"/&gt;<BR>&lt;ResourceParams 
+                  name="jdbc/devdb1b"&gt;<BR>&lt;parameter&gt;<BR>&lt;name&gt;accessToUnderlyingConnectionAllowed&lt;/name&gt;<BR>&lt;value&gt;true&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;/ResourceParams&gt;<BR>&lt;/Context&gt;<BR><BR>Thanks 
+                  in advance for lending us a hand.<BR><BR>-Mauricio 
+              <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-even vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=daramcg 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=389569">daramcg</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 13 <BR>Registered: 4/30/99 
+                  </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=870348></A>Re: ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Jan 10, 2005 12:29 AM &nbsp; 
+                  <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855275#855275"><IMG 
+                  height=10 alt="in response to: jesper3" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855275#855275">jesper3</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=870348"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=870348">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>Hi 
+                  ****,<BR><BR>looks like we've got the same problem (although 
+                  mine is with BLOB - <A 
+                  href="http://forums.oracle.com/forums/thread.jsp?forum=99&amp;thread=282602&amp;tstart=0&amp;trange=15">http://forums.oracle.com/forums/thread.jsp?forum=99&amp;thread=282602&amp;tstart=0&amp;trange=15</A>). 
+                  It's exactly as you say - even though the method accepts the 
+                  java.sql.Connection interface as an input parameter it seems 
+                  to try to cast it to an Oracle specific connection at some 
+                  point. Of course this then doesn't work if used with a 
+                  datasource (ironically not even with the Orion datasource 
+                  shipped with OracleIAS!) I'll have a look on other forums and 
+                  post here if I manage to crack it.<BR><BR>regards,<BR>Dara 
+                  <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-odd vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=petereindeer 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=191566">petereindeer</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 1 <BR>Registered: 11/22/01 
+                  </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=894337></A>Re: ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Feb 10, 2005 3:12 AM &nbsp; 
+                  <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855275#855275"><IMG 
+                  height=10 alt="in response to: jesper3" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855275#855275">jesper3</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=894337"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=894337">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>sorry my 
+                  english :) hope it help!!<BR><BR>..to obtain a oracle 
+                  connection object from jndi you should use an oracle data 
+                  source. in this case, the method getConnection directly 
+                  instantiate an oracle connection on which you can call oracle 
+                  methods via cast.<BR>i think is incorrect to try to unwrap a 
+                  wrapper.<BR><BR>code example that works:<BR><BR><BR>...to 
+                  obtain jndi oracle connection from code java <BR>try { 
+                  <BR>Context initContext = new InitialContext();<BR>Context 
+                  envContext = (Context) 
+                  initContext.lookup("java:/comp/env");<BR>oracle.jdbc.pool.OracleDataSource 
+                  ds = (oracle.jdbc.pool.OracleDataSource) 
+                  envContext.lookup("jdbc/Montagna");<BR>conn = 
+                  ds.getConnection();<BR>}<BR>catch (Exception ex) 
+                  {<BR>ex.printStackTrace();<BR>}<BR>.............<BR><BR>...configure 
+                  web.xml<BR>&lt;resource-ref&gt;<BR>&lt;description&gt;Oracle 
+                  Datasource 
+                  example&lt;/description&gt;<BR>&lt;res-ref-name&gt;jdbc/mydatasource&lt;/res-ref-name&gt;<BR>&lt;res-type&gt;oracle.jdbc.pool.OracleDataSource&lt;/res-type&gt;<BR>&lt;res-auth&gt;Container&lt;/res-auth&gt;<BR>&lt;/resource-ref&gt;<BR>...configure 
+                  del web.xml <BR><BR>...configure context<BR>&lt;Context 
+                  displayName="..." docBase="..." path="/..." 
+                  workDir="work\Catalina\localhost\..."&gt;<BR><BR>&lt;Resource 
+                  name="jdbc/mydatasource" auth="Container" scope="Shareable" 
+                  type="oracle.jdbc.pool.OracleDataSource"/&gt;<BR>&lt;ResourceParams 
+                  name="jdbc/mydatasource"&gt;<BR><BR>&lt;parameter&gt;<BR>&lt;name&gt;factory&lt;/name&gt;<BR>&lt;value&gt;oracle.jdbc.pool.OracleDataSourceFactory&lt;/value&gt;<BR>&lt;/parameter&gt;<BR><BR>&lt;parameter&gt;<BR>&lt;name&gt;maxWait&lt;/name&gt;<BR>&lt;value&gt;5000&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;parameter&gt;<BR>&lt;name&gt;maxActive&lt;/name&gt;<BR>&lt;value&gt;20&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;parameter&gt;<BR>&lt;name&gt;password&lt;/name&gt;<BR>&lt;value&gt;dgm&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;parameter&gt;<BR>&lt;name&gt;url&lt;/name&gt;<BR>&lt;value&gt;jdbc:oracle:thin:@...:1521:...&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;parameter&gt;<BR>&lt;name&gt;driverClassName&lt;/name&gt;<BR>&lt;value&gt;oracle.jdbc.driver.OracleDriver&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;parameter&gt;<BR>&lt;name&gt;maxIdle&lt;/name&gt;<BR>&lt;value&gt;2&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;parameter&gt;<BR>&lt;name&gt;user&lt;/name&gt;<BR>&lt;value&gt;dgm&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>&lt;/ResourceParams&gt;<BR>&lt;/Context&gt;<BR>... 
+                  configurazione del context<BR><BR>piero/antonio 
+              <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-even vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=user448012 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=448012">user448012</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 2 <BR>Registered: 8/23/05 
+                </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=1038619></A>Re: ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Aug 23, 2005 1:38 AM &nbsp; 
+                  <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=894337#894337"><IMG 
+                  height=10 alt="in response to: petereindeer" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=894337#894337">petereindeer</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1038619"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1038619">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>我顶! 
+                  <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-odd vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=user448012 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=448012">user448012</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 2 <BR>Registered: 8/23/05 
+                </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=1038621></A>Re: ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Aug 23, 2005 1:41 AM &nbsp; 
+                  <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=1038619#1038619"><IMG 
+                  height=10 alt="in response to: user448012" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=1038619#1038619">user448012</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1038621"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1038621">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>It is a 
+                  good solution.But please note the following 
+                  :<BR>&lt;name&gt;url&lt;/name&gt;<BR>&lt;value&gt;jdbc:oracle:thin:@...:1521:...&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>shuld 
+                  be 
+                  <BR>&lt;name&gt;url&lt;/name&gt;<BR>&lt;value&gt;jdbc:oracle:thin:yourusename/yourpassword@...:1521:...&lt;/value&gt;<BR>&lt;/parameter&gt;<BR>Otherwise 
+                  when excute "conn = ds.getConnection();",error occurs. 
+                <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-even vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=arifbutt 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=107566">arifbutt</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 1 <BR>Registered: 8/8/00 
+                </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=1080722></A>Re: ClassCastException in method 
+                  CLOB.createTemporary </SPAN><BR><SPAN 
+                  class=jive-description>Posted: Oct 10, 2005 10:43 AM &nbsp; 
+                  <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855275#855275"><IMG 
+                  height=10 alt="in response to: jesper3" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855275#855275">jesper3</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1080722"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1080722">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>Just in 
+                  case the last solution doesn't work for everyone, the first 
+                  solution does work but be sure to remove the oracle jar from 
+                  your web app lib if you have it also defined in Tomcat. If 
+                  that is the case you will get the class cast exception - it's 
+                  a class loader issue. 
+        <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-odd vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=user457406 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=457406">user457406</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 2 <BR>Registered: 10/15/05 
+                  </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=1085184></A>Re: ClassCastException in while dealing with 
+                  BLOBs JBOSS </SPAN><BR><SPAN class=jive-description>Posted: 
+                  Oct 15, 2005 5:12 AM &nbsp; <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855366#855366"><IMG 
+                  height=10 alt="in response to: jesper3" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=855366#855366">jesper3</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1085184"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1085184">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>jesper3 
+                  thx for posting your solution (while to trying to use BLOB's) 
+                  I got inspired and found my solution for JBOSS with your 
+                  solution<BR><BR>My problem was the same and I am using 
+                  JBOSS,<BR>For those who are using JBOSS to connect to Oracle 
+                  here is the solution to get a working 
+                  OracleConnection<BR><BR>///////////////////////Code 
+                  Snippet<BR>DataSource auroraDataSource = (DataSource) 
+                  context.lookup(DATA_SOURCE_NAME);<BR>Connection 
+                  conn=auroraDataSource.getConnection();<BR><BR>//depending on 
+                  the type of Connection <BR>//(this is very platform dependant 
+                  JBOSS,SunOne...) because of the <BR>//OracleConnection when 
+                  using BLOB's <BR><BR>//get the wrapped JBOSS connection 
+                  <BR>if(conn instanceof 
+                  org.jboss.resource.adapter.jdbc.WrappedConnection){<BR>WrappedConnection 
+                  wc=(WrappedConnection)conn;<BR>//with getUnderlying connection 
+                  method , cast it to Oracle Connection<BR>Connection 
+                  oracleConnection=wc.getUnderlyingConnection();<BR>}<BR><BR>//Do 
+                  your BLOB operation<BR><BR>//create an empty blob (this is 
+                  must)<BR>stmt = conn.prepareStatement("INSERT INTO 
+                  INFRA.UTL_OUTER_SYS_RAW_FILE VALUES ('myFile', 
+                  empty_blob())");<BR>stmt.execute(); <BR><BR>//select the 
+                  previously added blob for update (SELECT FOR UPDATE)<BR>stmt = 
+                  conn.prepareStatement("SELECT FILE_CONTENT FROM 
+                  INFRA.UTL_OUTER_SYS_RAW_FILE WHERE FILE_ID = 'myFile' FOR 
+                  UPDATE"); <BR>rs = stmt.executeQuery();<BR><BR>//write to BLOB 
+                  <BR>if(rs.next()) {<BR>OracleResultSet resultSet = 
+                  (OracleResultSet) rs;<BR>fout = 
+                  resultSet.getBLOB("FILE_CONTENT").getBinaryOutputStream();<BR>fout.write(content); 
+                  <BR>}<BR><BR>//close 
+                  connections...<BR>//////////////////////////////End of Code 
+                  Snippet 
+      <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list>
+      <DIV class=jive-table>
+      <DIV class=jive-messagebox>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" summary=Message 
+        border=0><TBODY>
+        <TR class=jive-even vAlign=top>
+          <TD class=jive-first width="1%">
+            <TABLE cellSpacing=0 cellPadding=0 width=150 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR vAlign=top>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="1%"><NOBR><A title=user457406 
+                        href="http://forums.oracle.com/forums/profile.jspa?userID=457406">user457406</A> 
+                        </NOBR></TD>
+                      <TD 
+                      style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+                      width="99%"></TD></TR></TBODY></TABLE><BR><SPAN 
+                  class=jive-description>Posts: 2 <BR>Registered: 10/15/05 
+                  </SPAN></TD></TR></TBODY></TABLE></TD>
+          <TD class=jive-last width="99%">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR vAlign=top>
+                <TD width="1%"></TD>
+                <TD width="98%"><SPAN class=jive-subject><A 
+                  name=1085186></A>Re: ClassCastException in while dealing with 
+                  BLOBs JBOSS </SPAN><BR><SPAN class=jive-description>Posted: 
+                  Oct 15, 2005 5:14 AM &nbsp; <NOBR><A title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=1085184#1085184"><IMG 
+                  height=10 alt="in response to: user457406" 
+                  src="ClassCastException%20in%20method%20___files/up-10x10.gif" 
+                  width=10 border=0></A> in response to: <A 
+                  title="Go to message" 
+                  href="http://forums.oracle.com/forums/message.jspa?messageID=1085184#1085184">user457406</A> 
+                  <NOBR></SPAN></NOBR></TD>
+                <TD width="1%">
+                  <DIV class=jive-buttons>
+                  <TABLE cellSpacing=0 cellPadding=0 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD>
+                      <TD class=jive-icon><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1085186"><IMG 
+                        height=16 alt="Click to reply to this thread" 
+                        src="ClassCastException%20in%20method%20___files/reply-16x16.gif" 
+                        width=16 border=0></A> </TD>
+                      <TD class=jive-icon-label><A 
+                        title="Click to reply to this thread" 
+                        href="http://forums.oracle.com/forums/post!reply.jspa?messageID=1085186">Reply</A> 
+                      </TD></TR></TBODY></TABLE></DIV></TD></TR>
+              <TR>
+                <TD style="BORDER-TOP: #ccc 1px solid" colSpan=3><BR>There is 
+                  missings in the code forgive me about that,<BR>we are using 
+                  the connection that we obtained after .getUnderlyingConnection 
+                  method. 
+      <BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+      <DIV class=jive-message-list-footer>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD noWrap width="1%"><SPAN class=jive-paginator-bottom><NOBR>Pages: 
+            1 </NOBR></SPAN></TD>
+          <TD align=middle width="98%">
+            <TABLE cellSpacing=0 cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD><A 
+                  href="http://forums.oracle.com/forums/forum.jspa?forumID=99"><IMG 
+                  height=16 alt="Back to Thread List" hspace=6 
+                  src="ClassCastException%20in%20method%20___files/arrow-left-16x16.gif" 
+                  width=16 border=0></A> </TD>
+                <TD><A 
+                  href="http://forums.oracle.com/forums/forum.jspa?forumID=99">Back 
+                  to Thread List</A> </TD></TR></TBODY></TABLE></TD>
+          <TD noWrap width="1%"></TD></TR></TBODY></TABLE></DIV></DIV></TD>
+    <TD width="1%">
+      <DIV class=jive-portlet-box>
+      <TABLE cellSpacing=0 cellPadding=0 width=200 border=0>
+        <THEAD>
+        <TR>
+          <TH colSpan=2><A 
+            href="http://forums.oracle.com/forums/help.jspa#questions"><IMG 
+            height=16 alt="" 
+            src="ClassCastException%20in%20method%20___files/help-16x16.gif" 
+            width=16 align=right border=0></A> Legend </TH></TR></THEAD>
+        <TBODY class=jive-status-legend-points>
+        <TR>
+          <TD width="1%"><IMG title="Active Member" alt="" 
+            src="ClassCastException%20in%20method%20___files/05-gold.gif" 
+            border=0> </TD>
+          <TD width="99%">Active Member: 151 - 10000 pts </TD></TR>
+        <TR>
+          <TD width="1%"><IMG title=Member alt="" 
+            src="ClassCastException%20in%20method%20___files/03-silver.gif" 
+            border=0> </TD>
+          <TD width="99%">Member: 50 - 150 pts </TD></TR></TBODY>
+        <TBODY class=jive-status-legend-groups>
+        <TR>
+          <TD class=jive-first-row width="1%"><IMG title="Oracle ACE Director" 
+            alt="" 
+            src="ClassCastException%20in%20method%20___files/ace_crown.gif" 
+            border=0> </TD>
+          <TD class=jive-first-row width="99%">Oracle ACE Director </TD></TR>
+        <TR>
+          <TD class="" width="1%"><IMG title="Oracle ACE Member" alt="" 
+            src="ClassCastException%20in%20method%20___files/ace_2.gif" 
+            border=0> </TD>
+          <TD class="" width="99%">Oracle ACE Member 
+      </TD></TR></TBODY></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR><A 
+title="Point your RSS reader here for a feed of the latest messages in this thread" 
+href="http://forums.oracle.com/forums/rss.jspa?feed=rss/rssmessages.jspa?threadID=279238"><IMG 
+height=14 alt="" src="ClassCastException%20in%20method%20___files/rss-24x16.gif" 
+width=24 border=0></A> <BR><BR></DIV></DIV><!-- FOOTER -->
+<DIV class=greybarhomebot><!--footer--></DIV>
+<TABLE cellSpacing=0 cellPadding=10 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="46%"><A href="http://www.oracle.com/corporate/index.html"><IMG 
+      height=11 alt="Oracle Is The Information Company" 
+      src="ClassCastException%20in%20method%20___files/info_company.gif" 
+      width=234 border=0></A></TD>
+    <TD align=right width="54%"><A class=legalese 
+      href="http://www.oracle.com/corporate/index.html">About Oracle</A> <SPAN 
+      class=legalese>|</SPAN> <A 
+      href="http://www.oracle.com/rss/index.html"><IMG 
+      style="MARGIN-BOTTOM: 1px" height=14 alt="Oracle RSS Feeds" 
+      src="ClassCastException%20in%20method%20___files/feed-icon-14x14.jpg" 
+      width=14 align=absMiddle border=0></A> <SPAN class=legalese>|</SPAN> <A 
+      class=legalese 
+      href="http://www.oracle.com/corporate/employment/index.html">Careers</A> 
+      <SPAN class=legalese>|</SPAN> <A class=legalese 
+      href="http://www.oracle.com/corporate/contact/index.html">Contact Us</A> 
+      <SPAN class=legalese>|</SPAN> <A class=legalese 
+      href="http://www.oracle.com/sitemaps/sitemaps.html">Site Maps</A> <SPAN 
+      class=legalese>|</SPAN> <A class=legalese 
+      href="http://www.oracle.com/html/copyright.html">Legal Notices</A> <SPAN 
+      class=legalese>|</SPAN> <A class=legalese 
+      href="http://www.oracle.com/html/terms.html">Terms of Use</A> <SPAN 
+      class=legalese>|</SPAN> <A class=legalese 
+      href="http://www.oracle.com/html/privacy.html">Your Privacy 
+  Rights</A></TD></TR>
+  <TR>
+    <TD colSpan=2></TD></TR></TBODY></TABLE><!--/Footer--><!-- SiteCatalyst code version: G -->
+<SCRIPT language=JavaScript 
+src="ClassCastException%20in%20method%20___files/s_code_forums.js"></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="ClassCastException%20in%20method%20___files/s_code_forumrs.js"></SCRIPT>
+<!-- End SiteCatalyst code version: G --><!--Compress Removed--><!-- Template file is from PORTAL prod with Template Tag--></BODY></HTML>

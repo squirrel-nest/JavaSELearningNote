@@ -1,0 +1,147 @@
+.tablecolor2 {
+
+	font:12px "宋体";
+	BORDER-RIGHT: #7d7d7d 1px solid; BORDER-TOP: #7d7d7d 1px solid; BORDER-LEFT: #7d7d7d 1px solid; BORDER-BOTTOM: #7d7d7d 1px solid; BORDER-COLLAPSE: collapse; 
+}
+
+.tablecolor2 TD {
+	BORDER: #bdc0c8 1px solid; HEIGHT: 23px;
+}
+.title2{
+	font-family: "新宋体";
+	color:#ffffff;
+	font-weight: bold;
+
+}
+.shadow { 
+	filter: Shadow(Color=black, Direction=135); position: absolut
+	font-size: 14pt; color:#FFFFFF; font-weight: bolder; top: 200px; clip: rect( ); left: 20pxe;
+}
+.condition2 {
+
+	font:12px "宋体";
+	BORDER-RIGHT: #7d7d7d 1px solid; BORDER-TOP: #7d7d7d 1px solid; BORDER-LEFT: #7d7d7d 1px solid; BORDER-BOTTOM: #7d7d7d 1px solid; BORDER-COLLAPSE: collapse;
+	background-color: #a0bdee;
+}
+
+.condition2 TD {
+	BORDER: #547ab9 1px solid;
+}
+
+.loginform{
+	font:16px "宋体";
+	color:#ffffff;
+}
+
+.loginbottom{
+	font:18px "宋体";
+	color:#ffffff;
+}
+
+.loginzy{
+	font:12px "宋体";
+	color:#333333;
+}
+
+.formtable {
+	font:12px "宋体";
+	BORDER-RIGHT: #7d7d7d 1px solid; BORDER-TOP: #7d7d7d 1px solid; BORDER-LEFT: #7d7d7d 1px solid; BORDER-BOTTOM: #7d7d7d 1px solid; BORDER-COLLAPSE: collapse; 
+}
+
+.formtable TD {
+	BORDER: #bdc0c8 1px solid;
+}
+.sort-table {
+    font:12px "宋体";
+    color:#3d3d3d;
+    text-decoration: none;	
+	border: 1px solid #777568;
+}
+
+.sort-table thead {
+	padding:3px 0 0 5px;
+	border-bottom: 1px solid #bfbfbf;
+	border-right: 1px solid #bfbfbf;
+	
+}
+
+.sort-table td {
+	padding:3px 0 0 5px;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-bottom: 1px solid #bfbfbf;
+	border-right: 1px solid #bfbfbf;
+	
+}
+.sor-table td .hold{
+	padding:0 0 0 0;
+}
+.sort-table thead td {
+	cursor:	default;
+}
+
+.sort-table thead td:active {
+	padding:3px 4px 1px 6px;
+}
+
+.sort-table thead td[_sortType=None]:active {
+	padding:2px 5px;
+}
+
+.sort-arrow {
+	width:0;
+	height:0;
+	background-repeat:no-repeat;
+	margin:2px;
+}
+
+.sort-arrow.descending {
+	width:8px;
+	height:7px;
+	marginwidth:3px;	
+	background-image:url("../images/downsimple.png");
+}
+
+.sort-arrow.ascending {
+	width:8px;
+	height:7px;
+	marginwidth:3px;	
+	background-image:url("../images/upsimple.png");
+}
+
+.hold-table{
+	border:0;
+    font:12px "宋体";
+    color:#3d3d3d;
+}
+
+.hold-table thead {
+	padding:3px 0 0 5px;
+	border-bottom: 1px solid #bfbfbf;
+	border-right: 1px solid #bfbfbf;
+	height:25px;
+}
+
+.hold-table td {
+	padding:3px 0 0 5px;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-bottom: 1px solid #bfbfbf;
+	border-right: 1px solid #bfbfbf;
+	height:25px;
+}
+
+.hold-table thead td {
+	cursor:	default;
+}
+
+.hold-table thead td:active {
+	padding:3px 4px 1px 6px;
+}
+
+.hold-table thead td[_sortType=None]:active {
+	padding:2px 5px;
+}
+.rInput {
+	background-color: #E0E0E0;
+}

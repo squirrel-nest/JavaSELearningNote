@@ -1,0 +1,83 @@
+<ATTACH   EVENT="onmouseleave" HANDLER="MouseLeave" />
+<ATTACH   EVENT="onmouseenter" HANDLER="MouseEnter" />
+<ATTACH   EVENT="oncontextmenu" HANDLER = "MouseRightClick"/>
+
+<PUBLIC:METHOD NAME="Delete"/>
+<PUBLIC:METHOD NAME="getCellsAsArray">
+
+//Evnet Handle
+<script language="javascript">
+
+	var oTable;
+	var orgTRColor;
+	
+	function getCellsAsArray(){
+		return this.getElementsByTagName("TD");
+	}
+	
+	function MouseLeave(){
+		if(null == this.selected || !this.selected){
+			this.bgColor = orgTRColor;
+		}
+	}
+
+
+	function MouseEnter(){
+		if(null == this.selected || !this.selected){
+			orgTRColor = this.bgColor;
+			this.bgColor = "#CADDFC";
+		}
+	}
+	
+		
+	function MouseRightClick(){
+		this.override = false;
+		try{
+			CB_Row_RightClick(this);
+			if(this.override){
+				return;
+			}
+		}catch(e){
+		
+		}
+		if(getTable()!=null)
+		{
+	    	getTable().addContextMenuItem(0,'Delete Row' ,'COMMAND:DELETEROW');
+	    	getTable().showContextMenu(this);
+	    	cancleEvent();
+		}
+	}
+	
+	
+	function Delete(){
+		this.override = false;
+		try{
+			CB_Row_Delete(this);
+			if(this.override){
+				return;
+			}
+		}catch(e){
+		
+		}
+		this.removeNode(true);
+	}
+	
+	function getTable(){
+		if(oTable == null){
+			var oTmp = this.parentElement;
+			while(oTmp.tagName != "TABLE"){
+				oTmp = oTmp.parentElement;
+			}	
+			oTable = oTmp;	
+		}
+		return oTable;
+	}
+	
+	
+	function cancleEvent(){
+	
+		window.event.cancelBubble=true;
+		window.event.returnValue=false;
+	}	
+	
+</script>

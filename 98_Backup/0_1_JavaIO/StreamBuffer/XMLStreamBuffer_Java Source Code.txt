@@ -1,0 +1,3 @@
+http://www.javadocexamples.com/java_source/com/sun/xml/stream/buffer/XMLStreamBuffer.java.html
+
+Java Source Code: com.sun.xml.stream.buffer.XMLStreamBuffer

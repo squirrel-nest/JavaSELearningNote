@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE validation-config SYSTEM "validation-config.dtd">
+<validation-config lang="auto">
+	<form id="receiveForm" show-error="alert" show-type="all">
+		<field name="title" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="amount" display-name="份数">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="dispatchForm" show-error="alert" show-type="all">
+		<field name="title" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="amount" display-name="份数">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="dispatchLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="receiveLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="datadictForm" show-error="alert" show-type="all">
+		<field name="dictname" display-name="字典类别" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="datadictLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="companyForm" show-error="alert" show-type="all">
+		<field name="companyName" display-name="单位名称">
+			<depend name="required" />
+		</field>
+		<field name="companyTel" display-name="单位电话">
+			<depend name="commonChar" />
+		</field>
+		<field name="companyFax" display-name="单位传真">
+			<depend name="commonChar" />
+		</field>
+		<field name="companyMail" display-name="单位邮箱">
+			<depend name="email"/>		
+		</field>
+		<field name="companyAdminRepPassword" display-name="确认密码">
+			<depend name="equalsField" param0="companyAdminNewPassword" param1="新密码"/>
+		</field>
+		<field name="companyAdminNewPassword" display-name="新密码">
+			<depend name="commonChar" />
+		</field>
+	</form>
+	<form id="departForm" show-error="alert" show-type="all">
+		<field name="departmentName" display-name="部门名称">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="dutyForm" show-error="alert" show-type="all">
+		<field name="dutyName" display-name="职务级别名称">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="roleForm" show-error="alert" show-type="all">
+		<field name="roleName" display-name="角色名称">
+			<depend name="required" />
+		</field>
+	</form>	
+	<form id="lawtypeForm" show-error="alert" show-type="all">
+		<field name="lawName" display-name="类别名称">
+			<depend name="required" />
+		</field>
+	</form>	
+	<form id="boardroom_managementForm" show-error="alert" show-type="all">
+		<field name="br_name" display-name="会议室名称" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="br_seat" display-name="座位号">
+			<depend name="required" />
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="car_manageForm" show-error="alert" show-type="all">
+		<field name="car_type" display-name="车辆类型" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="use_year" display-name="使用年限" onfail="">
+			<depend name="integer" />
+		</field>
+		<field name="hold_man" display-name="车载人数" onfail="">
+			<depend name="integer" />
+		</field>
+		<field name="hold_amount" display-name="车载数量" onfail="">
+			<depend name="integer" />
+		</field>		
+	</form>
+	<form id="driver_manageForm" show-error="alert" show-type="all">
+		<field name="driver_name" display-name="驾驶员名称" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="driver_year" display-name="驾驶年限" onfail="">
+			<depend name="integer" />
+		</field>				
+	</form>
+	<form id="bulletinForm" show-error="alert" show-type="all">
+		<field name="title" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="timelimit_day" display-name="时限" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="timelimit_day" display-name="时限">
+			  <depend name="integer" />
+		</field>
+	</form>
+	
+	  <form id="newnoticeForm" show-error="alert" show-type="all">
+		<field name="title" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="timelimit_day" display-name="时限" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="timelimit_day" display-name="时限">
+			  <depend name="integer" />
+		</field>
+	</form>
+	  <form id="lawForm" show-error="alert" show-type="all">
+		<field name="policyname" display-name="名称" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="issuanceman" display-name="发布人">
+			 <depend name="required" />
+		</field>
+		<field name="issuancedept" display-name="发布单位">
+			 <depend name="required" />
+		</field>	 
+	</form>
+	 <form id="unitaddrForm" show-error="alert" show-type="all">
+		<field name="deptname" display-name="单位" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="name" display-name="姓名">
+			 	<depend name="required" />
+		</field>
+	</form>	
+	 <form id="postcodeForm" show-error="alert" show-type="all">
+		<field name="province" display-name="省份" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="county" display-name="国家">
+			 	<depend name="required" />
+		</field>
+		<field name="city" display-name="城市" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="town" display-name="地区">
+			 	<depend name="required" />
+		</field>
+		<field name="postcode" display-name="邮编" onfail="">
+			<depend name="required" />
+		</field>		 
+	</form>	
+	<form id="accountForm" show-error="alert" show-type="all">
+		<field name="loginname" display-name="登录名称">
+			<depend name="required" />
+			<depend name="commonChar" />
+			<depend name="maxLength" param0="20" />
+		</field>
+		<field name="username" display-name="真实名称">
+			<depend name="required" />
+			<depend name="maxLength" param0="20" />
+		</field>
+		<field name="departname" display-name="所属部门">
+			<depend name="required" />
+		</field>
+		<field name="dutyname" display-name="职务级别">
+			<depend name="required" />
+		</field>
+		<field name="rolename" display-name="用户角色">
+			<depend name="required" />
+		</field>
+		<field name="repPassword" display-name="确认密码">
+			<depend name="required" />
+			<depend name="equalsField" param0="password" param1="登录密码"/>
+		</field>
+		<field name="password" display-name="登录密码">
+			<depend name="required" />
+			<depend name="minLength" param0="1" />
+			<depend name="maxLength" param0="8" />
+			<depend name="commonChar" />
+		</field>
+		<field name="securityid" display-name="身份证号">
+			<depend name="security" />
+		</field>
+		<field name="email" display-name="电子邮箱">
+			<depend name="email" />
+		</field>
+		<field name="officetel" display-name="办公电话">
+			<depend name="commonChar" />
+		</field>
+		<field name="hometel" display-name="家庭电话">
+			<depend name="commonChar" />
+		</field>
+		<field name="mobiletel" display-name="移动电话">
+			<depend name="commonChar" />
+		</field>		
+		<field name="describe" display-name="描述信息">
+			<depend name="maxLength" param0="100" />
+		</field>
+	</form>
+    <form id="govaffairLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="cardLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="worklogLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="workplanLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+        <form id="govaffairForm" show-error="alert" show-type="all">
+		<field name="govaffairtitle" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+                <field name="govaffairdate" display-name="日期" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+        <form id="cardForm" show-error="alert" show-type="all">
+		<field name="attributecompany" display-name="所属公司" onfail="">
+			<depend name="required" />
+		</field>
+                <field name="cardname" display-name="姓名" onfail="">
+			<depend name="required" />
+		</field>
+                <field name="companytel" display-name="公司电话" onfail="">
+			<depend name="required" />
+		</field>
+                <field name="email" display-name="电子邮箱" onfail="">
+			<depend name="email" />
+		</field>
+	</form>
+        <form id="worklogForm" show-error="alert" show-type="all">
+		<field name="logtitle" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+        <form id="workplanForm" show-error="alert" show-type="all">
+		<field name="plantitle" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+    <form id="userMailboxForm" show-error="alert" show-type="all">
+		<field name="mailboxName" display-name="邮箱名称" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="email" display-name="E-mail" onfail="">
+			<depend name="email" />
+		</field>
+		<field name="smtp" display-name="SMTP" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="pop3" display-name="POP3" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="mailName" display-name="登录名" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="mailPassword" display-name="登录密码" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="boardroom_managementForm" show-error="alert" show-type="all">
+		<field name="br_name" display-name="会议室名称" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="br_seat" display-name="座位号">
+			<depend name="required" />
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="car_manageForm" show-error="alert" show-type="all">
+		<field name="car_type" display-name="车辆类型" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="use_year" display-name="使用年限" onfail="">
+			<depend name="integer" />
+		</field>
+		<field name="hold_man" display-name="车载人数" onfail="">
+			<depend name="integer" />
+		</field>
+		<field name="hold_amount" display-name="车载数量" onfail="">
+			<depend name="integer" />
+		</field>		
+	</form>
+	<form id="cal_arrangeForm" show-error="alert" show-type="all">
+		<field name="topic" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="begin_date" display-name="开始日期" onfail="">
+			<depend name="required" />
+		</field>				
+		<field name="end_date" display-name="结束日期" onfail="">
+			<depend name="required" />
+		</field>					
+	</form>
+	<form id="driver_manageForm" show-error="alert" show-type="all">
+		<field name="driver_name" display-name="驾驶员名称" onfail="">
+			<depend name="required" />
+		</field>		
+		<field name="driver_year" display-name="驾驶年限" onfail="">
+			<depend name="integer" />
+		</field>				
+	</form>	
+	<form id="meetForm" show-error="alert" show-type="all">
+		<field name="meeting_topic" display-name="会议主题" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="meeting_date" display-name="会议日期" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="attend_dept" display-name="与会部门" onfail="">
+			<depend name="required" />
+		</field>						
+	</form>
+	<form id="meetListForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="跳转页" onfail="">
+			<depend name="integer" />
+		</field>				
+	</form>
+	<form id="driver_manageListForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="跳转页" onfail="">
+			<depend name="integer" />
+		</field>				
+	</form>
+	<form id="car_manageListForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="跳转页" onfail="">
+			<depend name="integer" />
+		</field>				
+	</form>
+	<form id="boardroom_managementListForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="跳转页" onfail="">
+			<depend name="integer" />
+		</field>				
+	</form>
+	<form id="cooperateForm" show-error="alert" show-type="all">
+		<field name="co_title" display-name="标题" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="co_receiver" display-name="收件人" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="fill_date" display-name="填写时间" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+    <form id="cooperateListForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+    <form id="instantForm" show-error="alert" show-type="all">
+		<field name="groupName" display-name="组别名称" onfail="">
+			<depend name="required" />
+		</field>
+	</form>	
+       <form id="docTemplateForm" show-error="alert" show-type="all">
+		<field name="name" display-name="模板名称" onfail="">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="docTemplateLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="handnodeForm" show-error="alert" show-type="all">
+	        <field name="user_name" display-name="选择处理人" onfail="">
+		        <depend name="required" />
+		</field>
+		<field name="duration" display-name="间隔时间" onfail="">
+		        <depend name="required" />
+			<depend name="integer" />
+		</field>
+	</form>	
+	<form id="workFlowLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="跳转页" onfail="">
+			<depend name="integer" />
+		</field>				
+	</form>
+	<form id="updtPerinforForm" show-error="alert" show-type="all">
+		<field name="security_id" display-name="身份证号">
+			<depend name="security" />
+		</field>
+		<field name="email" display-name="电子邮箱">
+			<depend name="email" />
+		</field>
+		<field name="office_tel" display-name="办公电话">
+			<depend name="commonChar" />
+		</field>
+		<field name="home_tel" display-name="家庭电话">
+			<depend name="commonChar" />
+		</field>
+		<field name="mobile_tel" display-name="移动电话">
+			<depend name="commonChar" />
+		</field>		
+		<field name="describe" display-name="描述信息">
+			<depend name="maxLength" param0="100" />
+		</field>
+	</form>
+	<form id="filesForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+	<form id="tForm" show-error="alert" show-type="all">
+		<field name="newname" display-name="新名称">
+			<depend name="required" />
+		</field>
+	</form>	
+	<form id="resourceObjLstForm" show-error="alert" show-type="all">
+		<field name="jumpPage" display-name="页码" onfail="">
+			<depend name="integer" />
+		</field>
+	</form>
+</validation-config>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <import resource="dataAccessContext-local.xml" />
+    <bean id="propertyConfigurer" class="com.ffcs.util.config.SpringInitDBConfig"> <!--org.springframework.beans.factory.config.PropertyPlaceholderConfigurer-->
+        <property name="locations">
+            <list>
+                <value>com/ffcs/util/config/jdbc.properties</value><!--classpath:-->
+                <!--<value>com/ffcs/util/config/jdbc2.properties</value>-->
+            </list>
+        </property>
+    </bean>
+    <!--<bean id="propertyConfigurer2" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>com/ffcs/util/config/jdbc2.properties</value>
+            </list>
+        </property>
+    </bean>-->
+    <!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+    <!-- Advisor encapsulating email advice -->
+    <!--
+	  - A parent bean definition which is a base definition for transaction proxies.
+		- It is markes as abstract, since it is never supposed to be instantiated itself.
+		- We set shared transaction attributes here, following our naming patterns.
+		- The attributes can still be overridden in child bean definitions.
+                <import resource="dataAccessContext-local.xml" />-->
+  
+    <bean id="baseTransactionProxy" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" abstract="true">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="insert*">PROPAGATION_REQUIRED</prop>
+                <prop key="update*">PROPAGATION_REQUIRED</prop>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <bean id="tradeClsWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.alarmwatch.TradeClsWFImpl">
+                <property name="tradeClsDao"><ref bean="tradeClsDao"/></property>
+                <!--<property name="tradeClsDaoTest"><ref bean="tradeClsDaoTest"/></property>-->
+            </bean>
+        </property>
+    </bean>
+    <!--此处BO调用含有存储过程的方法DAO层接口，BO实现依赖注入BO接口-->
+    <bean id="customerWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.alarmwatch.CustomerWFImpl">
+                <property name="customerDao"><ref bean="customerDao"/></property>
+                <property name="pageStatementDao"><ref bean="pageStatementDao"/></property>
+                <property name="dataSynchronizationDao"><ref bean="dataSynchronizationDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="iTradeClsInfoMgrImpl" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.customerinfomgr.TradeClsInfoMgrImpl">
+                <property name="dao"><ref bean="tradeClsInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>   
+    
+    <bean id="iCustomerInfoMgrFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.customerinfomgr.CustomerInfoMgr">
+                <property name="dao"><ref bean="customerInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="iRegionInfoMgrFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.customerinfomgr.RegionInfoMgr">
+                <property name="dao"><ref bean="regionQueryDao"/></property>
+            </bean>
+        </property>
+    </bean>     
+    
+    
+    <bean id="cirrouteWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.alarmwatch.CirrouteWFImpl">
+                <property name="cirrouteDao"><ref bean="cirrouteDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="portWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.alarmwatch.PortWFImpl">
+                <property name="portDao"><ref bean="portDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="loginfoWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.LogInfoWFImpl">
+                <property name="logInfoDao"><ref bean="logInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>    
+    
+    <bean id="userinfoWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.UserInfoWFImpl">
+                <property name="userInfoDao"><ref bean="userInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>       
+    
+    <bean id="roleinfoWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.RoleInfoWFImpl">
+                <property name="roleInfoDao"><ref bean="roleInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>        
+    
+    <bean id="rightinfoWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.RightInfoWFImpl">
+                <property name="rightInfoDao"><ref bean="rightInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>          
+    
+    <bean id="rolerightWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.RoleRightWFImpl">
+                <property name="roleRightDao"><ref bean="roleRightDao"/></property>
+            </bean>
+        </property>
+    </bean>   
+    
+    <bean id="usergroupWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.UserGroupWFImpl">
+                <property name="userGroupDao"><ref bean="userGroupDao"/></property>
+            </bean>
+        </property>
+    </bean>   
+    
+    <bean id="regioninfoWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.RegionInfoWFImpl">
+                <property name="regionInfoDao"><ref bean="regionInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>      
+    
+    <bean id="userroleWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.UserRoleWFImpl">
+                <property name="userRoleDao"><ref bean="userRoleDao"/></property>
+            </bean>
+        </property>
+    </bean>          
+    
+    <bean id="logcfgWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.LogCfgWFImpl">
+                <property name="logCfgDao"><ref bean="logCfgDao"/></property>
+            </bean>
+        </property>
+    </bean>          
+    
+    <bean id="logarchWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.LogArchWFImpl">
+                <property name="logArchDao"><ref bean="logArchDao"/></property>
+            </bean>
+        </property>
+    </bean>      
+    
+    <bean id="tradeinfoWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.TradeInfoWFImpl">
+                <property name="tradeInfoDao"><ref bean="tradeInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>         
+    
+    <bean id="cstminfoWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.CstmInfoWFImpl">
+                <property name="cstmInfoDao"><ref bean="cstmInfoDao"/></property>
+            </bean>
+        </property>
+    </bean>     
+    
+    <bean id="rolecstmWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.system.RoleCstmWFImpl">
+                <property name="roleCstmDao"><ref bean="roleCstmDao"/></property>
+            </bean>
+        </property>
+    </bean>       
+    
+    <bean id="slaFaultRecoverCountWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.SlaFaultRecoverCountWFImpl">
+                <property name="slaFaultRecoverCountDao"><ref bean="slaFaultRecoverCountDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="slaFaultRecoverWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.SlaFaultRecoverWFImpl">
+                <property name="slaFaultRecoverDao"><ref bean="slaFaultRecoverDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="hireCircuitCountWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.HireCircuitCountWFImpl">
+                <property name="hireCircuitCountDao"><ref bean="hireCircuitCountDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="hireCircuitWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.HireCircuitWFImpl">
+                <property name="hireCircuitDao"><ref bean="hireCircuitDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="toneStsCountWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.ToneStsCountWFImpl">
+                <property name="toneStsCountDao"><ref bean="toneStsCountDao"/></property>
+            </bean>
+        </property>
+    </bean>   
+     <bean id="cirAlarmCountWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.CirAlarmCountWFImpl">
+                <property name="cirAlarmCountDao"><ref bean="cirAlarmCountDao"/></property>
+            </bean>
+        </property>
+    </bean>   
+       <bean id="cirAlarmWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.CirAlarmWFImpl">
+                <property name="cirAlarmDao"><ref bean="cirAlarmDao"/></property>
+            </bean>
+        </property>
+    </bean>   
+         <bean id="alarmNoteWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.AlarmNoteWFImpl">
+                <property name="alarmNoteDao"><ref bean="alarmNoteDao"/></property>
+            </bean>
+        </property>
+    </bean>  
+    
+    <bean id="circuitWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.alarmwatch.CircuitWFImpl">
+                <property name="circuitDao"><ref bean="circuitDao"/></property>
+                <property name="pageStatementDao"><ref bean="pageStatementDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="indicateWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.performance.IndicateWFImpl">
+                <property name="indicateDao"><ref bean="indicateDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="indDataEntityWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.performance.IndDataEntityWFImpl">
+                <property name="indDataEntityDao"><ref bean="indDataEntityDao"/></property>
+            </bean>
+        </property>
+    </bean>    
+    
+    <bean id="viewCircuitPortWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.performance.ViewCircuitPortWFImpl">
+                <property name="viewCircuitPortDao"><ref bean="viewCircuitPortDao"/></property>
+            </bean>
+        </property>
+    </bean>    
+    
+    <bean id="circuitPortWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.performance.CircuitPortWFImpl">
+                <property name="circuitPortDao"><ref bean="circuitPortDao"/></property>
+            </bean>
+        </property>
+    </bean>    
+    
+    <bean id="faultWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.faultmanage.FaultWFImpl">
+                <property name="faultDao"><ref bean="faultDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="typeMstWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.faultmanage.TypeMstWFImpl">
+                <property name="typeMstDao"><ref bean="typeMstDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="typeDtlWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.faultmanage.TypeDtlWFImpl">
+                <property name="typeDtlDao"><ref bean="typeDtlDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="statusWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.faultmanage.StatusWFImpl">
+                <property name="statusDao"><ref bean="statusDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="ticketWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.faultmanage.TicketWFImpl">
+                <property name="ticketDao"><ref bean="ticketDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="operationLSTWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.faultmanage.OperationLSTWFImpl">
+                <property name="operationLSTDao"><ref bean="operationLSTDao"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="appealWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.faultmanage.AppealWFImpl">
+                <property name="appealDao"><ref bean="appealDao"/></property>
+            </bean>
+        </property>
+    </bean> 
+    
+    <bean id="thresWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.pmthrescfg.ThresWFImpl">
+                <property name="thresCfgDAO"><ref bean="thresCfgDAO"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="pMindWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.pmthrescfg.PmindWFImpl">
+                <property name="mindDAO"><ref bean="mindDAO"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="codeWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.pmthrescfg.CodeWFImpl">
+                <property name="codeDAO"><ref bean="codeDAO"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="funcReportBOFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.servicemanage.FuncReportBOImpl">
+                <property name="dao"><ref bean="FuncReportDao"/></property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="cusIndTmpletWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.pmthrescfg.CusIndTmpletWFImpl">
+                <property name="cusIndTmpletDAO"><ref bean="cusIndTmpletDAO"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="thresTpWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.pmthrescfg.ThresTpWFImpl">
+                <property name="thresTpCfgDAO"><ref bean="thresTpCfgDAO"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="pmindFldWFFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.pmthrescfg.PmindFldWFImpl">
+                <property name="pmindFldDAO"><ref bean="pmindFldDAO"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <bean id="custVoiceAlarmCfgFacade" parent="baseTransactionProxy">
+        <property name="target">
+            <bean class="com.ffcs.util.bo.custvoicealarmcfg.CustVoiceAlarmCfgImpl">
+                <property name="custVADAO"><ref bean="custVADAO"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+</beans>

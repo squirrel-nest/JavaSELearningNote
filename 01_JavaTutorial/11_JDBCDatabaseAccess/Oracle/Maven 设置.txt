@@ -1,0 +1,34 @@
+http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html
+
+http://www.oracle.com/webfolder/application/maven/index.html
+
+
+Technical information about how to use the Oracle Maven Repository is available here.
+https://maven.oracle.com/doc.html
+
+http://docs.oracle.com/middleware/1213/core/MAVEN/config_maven_repo.htm#MAVEN9010
+6 Configuring the Oracle Maven Repository
+
+http://docs.oracle.com/middleware/1213/core/MAVEN/config_maven_repo.htm#MAVEN9014
+6.3 Adding the Oracle Maven Repository to Your Project POM
+
+Get Oracle JDBC drivers and UCP from Oracle Maven Repository 
+
+
+
+
+http://maven.apache.org/guides/mini/guide-encryption.html
+Password Encryption
+
+
+http://docs.oracle.com/middleware/1213/core/MAVEN/config_hudson.htm#MAVEN8854
+7 Installing and Configuring Hudson for Continuous Integration
+
+
+
+https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc
+Get Oracle JDBC drivers and UCP from Oracle Maven Repository  ---非常有用
+
+
+http://www.hhutzler.de/blog/integrate-oracle-jdbc-driver-ucp-pool-ons-and-jsf-with-maven/
+Integrate Oracle JDBC driver, UCP Pool, ONS and JSF with Maven  --重要

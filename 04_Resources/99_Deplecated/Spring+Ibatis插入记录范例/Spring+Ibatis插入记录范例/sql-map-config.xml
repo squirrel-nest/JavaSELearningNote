@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+    <sqlMap resource="maps/customerinfomgr/TradeClsInfo.xml"/>
+    <sqlMap resource="maps/customerinfomgr/Customer.xml"/>
+    <sqlMap resource="maps/customerinfomgr/RegionInfo.xml"/>
+    <sqlMap resource="maps/customerinfomgr/Sysdata.xml"/>
+    <sqlMap resource="maps/customerinfomgr/Codetbl.xml"/>
+    <sqlMap resource="maps/performance/IndDataEntity.xml"/>
+    <sqlMap resource="maps/performance/Indicate.xml"/>
+    <sqlMap resource="maps/performance/ViewCircuitPort.xml"/>
+    <sqlMap resource="maps/performance/CircuitPort.xml"/>
+    <sqlMap resource="maps/alarmwatch/TradeCls.xml"/>
+    <sqlMap resource="maps/alarmwatch/Customer.xml"/>
+    <sqlMap resource="maps/system/LogInfo.xml"/>
+    <sqlMap resource="maps/system/UserInfo.xml"/>
+    <sqlMap resource="maps/system/UserRole.xml"/>
+    <sqlMap resource="maps/system/RoleInfo.xml"/>
+    <sqlMap resource="maps/system/RightInfo.xml"/>
+    <sqlMap resource="maps/system/RoleRight.xml"/>
+    <sqlMap resource="maps/system/UserGroup.xml"/>
+    <sqlMap resource="maps/system/LogCfg.xml"/>
+    <sqlMap resource="maps/system/LogArch.xml"/>
+    <sqlMap resource="maps/system/RegionInfo.xml"/>
+    <sqlMap resource="maps/system/TradeInfo.xml"/>
+    <sqlMap resource="maps/system/CstmInfo.xml"/>
+    <sqlMap resource="maps/system/RoleCstm.xml"/>
+    <sqlMap resource="maps/alarmwatch/Circuit.xml"/>
+    <sqlMap resource="maps/servicemanage/SlaFaultRecoverCount.xml"/>
+    <sqlMap resource="maps/servicemanage/SlaFaultRecover.xml"/>
+    <sqlMap resource="maps/servicemanage/HireCircuitCount.xml"/>
+    <sqlMap resource="maps/servicemanage/HireCircuit.xml"/>
+    <sqlMap resource="maps/servicemanage/ToneStsCount.xml"/>
+    <sqlMap resource="maps/servicemanage/CirAlarmCount.xml"/>
+    <sqlMap resource="maps/servicemanage/CirAlarm.xml"/>
+    <sqlMap resource="maps/servicemanage/AlarmNote.xml"/>
+    <sqlMap resource="maps/custvoicealarmcfg/CustVoiceAlarm.xml"/>
+    <!--调用存储过程-->
+    <sqlMap resource="maps/servicemanage/FuncReport.xml"/>
+    <sqlMap resource="maps/alarmwatch/Cirroute.xml"/>
+    <sqlMap resource="maps/alarmwatch/Port.xml"/>
+    <sqlMap resource="maps/faultmanage/Fault.xml"/>
+    <sqlMap resource="maps/faultmanage/TypeMst.xml"/>
+    <sqlMap resource="maps/faultmanage/TypeDtl.xml"/>
+    <sqlMap resource="maps/faultmanage/Status.xml"/>
+    <sqlMap resource="maps/faultmanage/Ticket.xml"/>
+    <sqlMap resource="maps/faultmanage/OperationLST.xml"/>
+    <sqlMap resource="maps/faultmanage/Appeal.xml"/>
+    <sqlMap resource="maps/Sequence.xml"/>
+    <sqlMap resource="maps/alarmwatch/Code.xml"/>
+    <sqlMap resource="maps/pmthrescfg/PMThres.xml"/>
+    <sqlMap resource="maps/pmthrescfg/PMind.xml"/>
+    <sqlMap resource="maps/pmthrescfg/Code.xml"/>
+    <sqlMap resource="maps/pmthrescfg/CusIndTmpl.xml"/>
+    <sqlMap resource="maps/pmthrescfg/PMThresTemplet.xml"/>
+    <sqlMap resource="maps/pmthrescfg/PmindFld.xml"/>
+    <sqlMap resource="maps/datasynchronization/DataSynchronization.xml"/>
+    <sqlMap resource="maps/alarmwatch/filtercontbl.xml"/>
+</sqlMapConfig>

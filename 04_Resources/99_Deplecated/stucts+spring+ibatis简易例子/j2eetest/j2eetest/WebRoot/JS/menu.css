@@ -1,0 +1,27 @@
+.menu
+{
+	behavior:url(JS/menu.htc);
+}
+
+.ccsmenu
+{
+	behavior:url(JS/ccs_menu.htc);
+}
+
+
+.bartitle
+{
+	text-align:center;
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:bold;
+	cursor:hand;
+}
+
+.menuItem
+{
+	font-family:Arial;
+	font-size:9pt;
+	font-style:normal;
+	cursor:hand;
+}

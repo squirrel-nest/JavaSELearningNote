@@ -1,0 +1,652 @@
+http://www.massapi.com/class/javax/naming/Reference.java.html
+
+Code Examples of javax.naming.Reference
+
+
+
+
+
+
+*/
+public final Reference getReference() throws NamingException 
+{
+    // These fields will be set by the JNDI server when it decides to
+    // materialize a data source.
+    Reference ref = new Reference(this.getClass().getName(),
+                                  "org.apache.derby.jdbc.ReferenceableDataSource",
+                                  null);
+ 
+ 
+    // Look for all the getXXX methods in the class that take no arguments.
+    Method[] methods = this.getClass().getMethods();
+ 
+    for (int i = 0; i < methods.length; i++) {
+ 
+        Method m = methods[i];
+ 
+        // only look for simple getter methods.
+        if (m.getParameterTypes().length != 0)
+            continue;
+ 
+        // only non-static methods
+        if (Modifier.isStatic(m.getModifiers()))
+            continue;
+ 
+        // Only getXXX methods
+        String methodName = m.getName();
+        if ((methodName.length() < 5) || !methodName.startsWith("get"))
+            continue;
+ 
+ 
+ 
+        Class returnType = m.getReturnType();
+ 
+        if (Integer.TYPE.equals(returnType) || STRING_ARG[0].equals(returnType) || Boolean.TYPE.equals(returnType)) {
+ 
+            // setSomeProperty
+            // 01234
+ 
+            String propertyName = methodName.substring(3,4).toLowerCase(java.util.Locale.ENGLISH).concat(methodName.substring(4));
+ 
+            try {
+                Object ov = m.invoke(this, null);
+ 
+                //Need to check for nullability for all the properties, otherwise
+                //rather than null, "null" string gets stored in jndi.
+                if (ov != null) {
+                    ref.add(new StringRefAddr(propertyName, ov.toString()));
+                }
+            } catch (IllegalAccessException iae) {
+            } catch (InvocationTargetException ite) {
+            }
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+1046
+1047
+1048
+1049
+1050
+1051
+1052
+1053
+1054
+1055
+1056
+1057
+1058
+1059
+1060
+1061
+1062
+1063
+1064
+1065
+1066
+1067
+1068
+1069
+1070
+1071
+1072
+1073
+1074
+1075
+1076
+1077
+1078
+1079
+1080
+1081
+1082
+ 
+* @exception NamingException If a naming exception was encountered while
+ *            retrieving the reference.
+ */
+public Reference getReference() throws NamingException {
+ 
+    Reference ref = new Reference(this.getClass().getName(), DataSourceFactory.class.getName(), null);
+    // These values are used by ObjectFactory (see DataSourceFactory.java)
+    ref.add(new StringRefAddr("datasource.name", getDSName()));
+    ref.add(new StringRefAddr("datasource.url", getUrl()));
+    ref.add(new StringRefAddr("datasource.classname", getClassName()));
+    ref.add(new StringRefAddr("datasource.username", getUserName()));
+    ref.add(new StringRefAddr("datasource.password", getPassword()));
+    ref.add(new StringRefAddr("datasource.isolationlevel", getTransactionIsolation()));
+    Integer checklevel = Integer.valueOf(getCheckLevel());
+    ref.add(new StringRefAddr("connchecklevel", checklevel.toString()));
+    Integer maxage = Integer.valueOf(getMaxAge());
+    ref.add(new StringRefAddr("connmaxage", maxage.toString()));
+    Integer maxopentime = Integer.valueOf(getMaxOpenTime());
+    ref.add(new StringRefAddr("maxopentime", maxopentime.toString()));
+    ref.add(new StringRefAddr("connteststmt", getTestStatement()));
+    Integer pstmtmax = Integer.valueOf(getPstmtMax());
+    ref.add(new StringRefAddr("pstmtmax", pstmtmax.toString()));
+    Integer minpool = Integer.valueOf(getPoolMin());
+    ref.add(new StringRefAddr("minconpool", minpool.toString()));
+    Integer maxpool = Integer.valueOf(getPoolMax());
+    ref.add(new StringRefAddr("maxconpool", maxpool.toString()));
+    Integer maxwaittime = Integer.valueOf(getMaxWaitTime());
+    ref.add(new StringRefAddr("maxwaittime", maxwaittime.toString()));
+    Integer maxwaiters = Integer.valueOf(getMaxWaiters());
+    ref.add(new StringRefAddr("maxwaiters", maxwaiters.toString()));
+    Integer samplingperiod = Integer.valueOf(getSamplingPeriod());
+    ref.add(new StringRefAddr("samplingperiod", samplingperiod.toString()));
+    return ref;
+}
+ 
+/**
+ * Notifies this <code>ConnectionEventListener</code> that the application
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+ 
+            .load(evt
+                    .getServletContext()
+                    .getResourceAsStream(
+                            "/WEB-INF/classes/org/jresearch/gossip/resources/db.properties"));
+    // Construct BasicDataSource reference
+    Reference ref = new Reference("javax.sql.DataSource",
+            "org.apache.commons.dbcp.BasicDataSourceFactory", null);
+    ref.add(new StringRefAddr("driverClassName", dbconf
+            .getProperty("driverClassName")));
+    ref.add(new StringRefAddr("url", dbconf.getProperty("url")));
+    ref.add(new StringRefAddr("password", dbconf
+            .getProperty("password")));
+    ref.add(new StringRefAddr("username", dbconf
+            .getProperty("username")));
+    ref.add(new StringRefAddr("maxActive", dbconf
+            .getProperty("maxActive")));
+    ref
+            .add(new StringRefAddr("maxWait", dbconf
+                    .getProperty("maxWait")));
+    ref.add(new StringRefAddr("initialSize", dbconf
+            .getProperty("initialSize")));
+    ref.add(new StringRefAddr("defaultAutoCommit", dbconf
+            .getProperty("defaultAutoCommit")));
+    ref.add(new StringRefAddr("defaultReadOnly", dbconf
+            .getProperty("defaultReadOnly")));
+    ref.add(new StringRefAddr("poolPreparedStatements", dbconf
+            .getProperty("poolPreparedStatements")));
+    ref.add(new StringRefAddr("maxOpenPreparedStatements", dbconf
+            .getProperty("maxOpenPreparedStatements")));
+ 
+    ic.rebind("jgossip_db", ref);
+} catch (NamingException e) {
+    e.printStackTrace();
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+ 
+*/
+public Reference getReference() throws NamingException {
+    // this class implements its own factory
+    String factory = getClass().getName();
+     
+    Reference ref = new Reference(getClass().getName(), factory, null);
+ 
+    ref.add(new StringRefAddr("description", getDescription()));
+    ref.add(new StringRefAddr("driver", getDriver()));
+    ref.add(new StringRefAddr("loginTimeout", 
+                              String.valueOf(getLoginTimeout())));
+    ref.add(new StringRefAddr("password", getPassword()));
+    ref.add(new StringRefAddr("user", getUser()));
+    ref.add(new StringRefAddr("url", getUrl()));
+ 
+    ref.add(new StringRefAddr("poolPreparedStatements", 
+                              String.valueOf(isPoolPreparedStatements())));
+    ref.add(new StringRefAddr("maxActive", 
+                              String.valueOf(getMaxActive())));
+    ref.add(new StringRefAddr("maxIdle", 
+                              String.valueOf(getMaxIdle())));
+    ref.add(new StringRefAddr("timeBetweenEvictionRunsMillis", 
+        String.valueOf(getTimeBetweenEvictionRunsMillis())));
+    ref.add(new StringRefAddr("numTestsPerEvictionRun", 
+        String.valueOf(getNumTestsPerEvictionRun())));
+    ref.add(new StringRefAddr("minEvictableIdleTimeMillis", 
+        String.valueOf(getMinEvictableIdleTimeMillis())));
+    ref.add(new StringRefAddr("maxPreparedStatements",
+        String.valueOf(getMaxPreparedStatements())));
+ 
+    return ref;
+}
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+ 
+*/
+@Override
+public Reference getReference() throws NamingException {
+ 
+    // Build the reference for the JavaMailSession factory
+    Reference reference = new Reference(getType(), JavaMailMimePartDataSourceFactory.class.getName(), null);
+ 
+    // Add the recipients
+    // TO
+    putObject(reference, JavaMailMimePartDataSourceFactory.TO_RECIPIENTS, this.toRecipients);
+ 
+    // CC
+    putObject(reference, JavaMailMimePartDataSourceFactory.CC_RECIPIENTS, this.ccRecipients);
+ 
+    // BCC
+    putObject(reference, JavaMailMimePartDataSourceFactory.BCC_RECIPIENTS, this.bccRecipients);
+ 
+    // Add subject
+    reference.add(new StringRefAddr(JavaMailMimePartDataSourceFactory.SUBJECT, this.subject));
+ 
+    // Update the reference
+    updateRefAddr(reference);
+ 
+    return reference;
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+ 
+   final byte[] proxyBytes = baos.toByteArray();
+   final BinaryRefAddr dsAddr = new BinaryRefAddr("ProxyData", proxyBytes);
+   final String remoteFactoryName = RemoteConnectionFactoryHelper.class.getName();
+   final String localFactoryName = cf.getClass().getName();
+ 
+   final Reference dsRef = new Reference(localFactoryName, dsAddr, remoteFactoryName, null);
+   referenceable.setReference(dsRef);
+ 
+   baos.reset();
+   final ObjectOutputStream oos2 = new ObjectOutputStream(baos);
+   oos2.writeObject(RemoteConnectionFactoryHelper.vmID);
+   oos2.close();
+   final byte[] id = baos.toByteArray();
+   final BinaryRefAddr localAddr = new BinaryRefAddr("VMID", id);
+   dsRef.add(localAddr);
+ 
+   final StringRefAddr jndiRef = new StringRefAddr("JndiName", bindName);
+   dsRef.add(jndiRef);
+   Util.rebind(initCtx, bindName, cf);
+ 
+   log.info("Bound ConnectionManager '" + serviceName + "' to JNDI name '" + bindName + "'");
+}
+catch (NamingException e)
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+ 
+   final byte[] proxyBytes = baos.toByteArray();
+   final BinaryRefAddr dsAddr = new BinaryRefAddr("ProxyData", proxyBytes);
+   final String remoteFactoryName = RemoteConnectionFactoryHelper.class.getName();
+   final String localFactoryName = cf.getClass().getName();
+ 
+   final Reference dsRef = new Reference(localFactoryName, dsAddr, remoteFactoryName, null);
+   referenceable.setReference(dsRef);
+ 
+   baos.reset();
+   final ObjectOutputStream oos2 = new ObjectOutputStream(baos);
+   oos2.writeObject(RemoteConnectionFactoryHelper.vmID);
+   oos2.close();
+   final byte[] id = baos.toByteArray();
+   final BinaryRefAddr localAddr = new BinaryRefAddr("VMID", id);
+   dsRef.add(localAddr);
+ 
+   final StringRefAddr jndiRef = new StringRefAddr("JndiName", bindName);
+   dsRef.add(jndiRef);
+   Util.rebind(initCtx, bindName, cf);
+ 
+   log.info("Bound ConnectionManager '" + serviceName + "' to JNDI name '" + bindName + "'");
+}
+catch (NamingException e)
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+ 
+* Retrieves the reference of this object.
+ *
+ * @return the reference of this object
+ */
+public Reference getReference() {
+    Reference reference = new Reference(getClass().getName(),
+                                        new StringRefAddr("serverClass",
+                                                          _className),
+                                        JmsConnectionFactoryBuilder.class.getName(),
+                                        null);
+ 
+    // all properties are strings so add them to the reference
+    Iterator iterator = _properties.entrySet().iterator();
+    while (iterator.hasNext()) {
+        Map.Entry entry = (Map.Entry) iterator.next();
+        String key = (String) entry.getKey();
+        String value = (String) entry.getValue();
+        reference.add(new StringRefAddr(key, value));
+    }
+ 
+    return reference;
+}
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+ 
+  OutboundConnectionFactory factory =
+    new OutboundConnectionFactory(this, null);
+   
+  Reference ref =
+    new Reference(factory.getClass().getName(),
+                  "org.objectweb.joram.client.connector.ObjectFactoryImpl",
+                  null);
+  ref.add(new StringRefAddr("hostName", hostName));
+  ref.add(new StringRefAddr("serverPort", "" + serverPort));
+  ref.add(new StringRefAddr("userName", userName));
+  ref.add(new StringRefAddr("password", password));
+  ref.add(new StringRefAddr("identityClass", identityClass));
+ 
+  factory.setReference(ref);
+  return factory;
+}
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+ 
+*/
+public void testFactoryConfiguredDataSource() throws Exception {
+    String alias = "factoryConfiguredDataSourceTest";
+    String jndiName = "jdbc/factoryConfiguredTestDB";
+ 
+    Reference reference = new Reference(ProxoolDataSource.class.getName(), ProxoolDataSource.class.getName(), null);
+    reference.add(new StringRefAddr(ProxoolConstants.ALIAS_PROPERTY, alias));
+    reference.add(new StringRefAddr(ProxoolConstants.DRIVER_CLASS_PROPERTY, TestConstants.HYPERSONIC_DRIVER));
+    reference.add(new StringRefAddr(ProxoolConstants.DRIVER_URL_PROPERTY, TestConstants.HYPERSONIC_TEST_URL));
+    reference.add(new StringRefAddr(ProxoolConstants.USER_PROPERTY, TestConstants.HYPERSONIC_USER));
+    reference.add(new StringRefAddr(ProxoolConstants.PASSWORD_PROPERTY, TestConstants.HYPERSONIC_PASSWORD));
+    reference.add(new StringRefAddr("dummy", "foo"));
+    reference.add(new StringRefAddr("anotherDummy", "bar"));
+ 
+    // pretend to be a JNDI aware container that builds the DataSource
+    // using its factory
+    Hashtable env = new Hashtable();
+    env.put(Context.INITIAL_CONTEXT_FACTORY, MemoryContextFactory.class.getName());
+ 
+
+ View Full Code Here
+
+
+
+
+
+
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+ 
+  OutboundConnectionFactory factory =
+    new OutboundQueueConnectionFactory(this,
+                                       DefaultConnectionManager.getRef());
+ 
+  Reference ref =
+    new Reference(factory.getClass().getName(),
+                  "org.objectweb.joram.client.connector.ObjectFactoryImpl",
+                  null);
+  ref.add(new StringRefAddr("hostName", hostName));
+  ref.add(new StringRefAddr("serverPort", "" + serverPort));
+  ref.add(new StringRefAddr("userName", userName));
+  ref.add(new StringRefAddr("password", password));
+  ref.add(new StringRefAddr("identityClass", identityClass));
+ 
+  factory.setReference(ref);
+  return factory;
+}
+ 

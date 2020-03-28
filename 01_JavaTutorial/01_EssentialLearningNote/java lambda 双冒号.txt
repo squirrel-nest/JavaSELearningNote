@@ -1,0 +1,50 @@
+Java 8 Lambda Expressions Tutorial
+http://howtodoinjava.com/java-8/complete-lambda-expressions-tutorial-in-java/
+
+google search:java 双冒号
+
+
+java 双冒号是什么操作符?
+https://www.zhihu.com/question/28565691
+
+这个::是java 8里引入lambda后的一种用法，表示引用，比如静态方法的引用String::valueOf;
+比如构造器的引用，ArrayList::new。
+
+更多请参考：Everything about Java 8
+
+
+简单来讲，就是构造一个该方法的闭包。比如：Math::max等效于(a, b)->Math.max(a, b)String::startWith等效于(s1, s2)->s1.startWith(s2)s::isEmpty等效于()->s.isEmpty()
+
+作者：飞龙
+链接：https://www.zhihu.com/question/28565691/answer/53362564
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+
+这是Java8随Lambda新增的语法符号，叫做方法引用（Method references），。我推荐你看这篇文章，如果你对Lambda已经有初步认识，可以直接从第8点开始看。深入理解Java 8 Lambda（语言篇——lambda，方法引用，目标类型和默认方法）
+
+作者：知乎用户
+链接：https://www.zhihu.com/question/28565691/answer/41339332
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+深入理解Java 8 Lambda（语言篇——lambda，方法引用，目标类型和默认方法）
+http://zh.lucida.me/blog/java-8-lambdas-insideout-language-features/
+
+	
+March 26, 2013
+Everything about Java 8
+http://www.techempower.com/blog/2013/03/26/everything-about-java-8/
+
+
+ Java8中的[方法引用]“双冒号”——走进Java Lambda(四)
+http://blog.csdn.net/lsmsrc/article/details/41747159
+
+Java 8 Method Reference: How to Use it
+https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
+
+
+Lambda Expressions in Java 8
+http://www.drdobbs.com/jvm/lambda-expressions-in-java-8/240166764?pgno=2

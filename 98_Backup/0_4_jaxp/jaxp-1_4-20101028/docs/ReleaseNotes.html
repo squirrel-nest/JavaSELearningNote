@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head> 
+  <!-- $Id: ReleaseNotes.html,v 1.1 2010/01/26 01:41:41 joehw Exp $ -->
+  <title>JAXP 1.4.3 Release  Notes</title>
+  <link rel="stylesheet" type="text/css" href="style/default.css">
+	<style type="text/css" media="all">
+  <!--
+     a:link    { color:blue; } 
+     a:hover   { color:red;text-decoration:none;} 
+     a:visited { color:purple; }
+     .TBD {
+	     font-style: italic;
+       font-weight: bold;
+	     color: #FF0000;
+     }
+     .Fixed {
+	     font-family: "Courier New", Courier, mono;
+	     font-size: smaller;
+     }
+    .def {
+		  font-style: italic;
+		 }
+     -->
+  </style>
+</head>
+
+
+<body bgcolor="#FFFFFF">
+    <center>
+      <h2><font color="#000099">Java<sup><font size="-2">TM</font></sup> API for XML 
+        Processing Release Notes</font></h2>
+    </center>
+
+    <center>
+      <b>Specification Version:</b> 1.4<br />
+      <b>Reference Implementation (RI) Version:</b> 1.4.3
+      <br>Jan. 25, 2010
+    </center>
+
+    <p>
+       In this release, we have included 77 changes, improvement and bug fixes for JAXP and SJSXP.
+       Most of the fixes went into JDK6 update 18 and OpenJDK7 M5. A few more recent fixes would
+       go into future JDK6 update release and OpenJDK7 M6.
+    </p>
+    
+    <p><b>Important changes and improvement</b>
+        <p>
+            Changes and bug fixes are listed in the <a href="changelog.html">JAXP 1.4.3 Change Log</a>.
+            The followings are some important changes and improvement.
+        </p>
+    <ol>
+        <li>Secure processing<br>
+        The <a href="https://jaxp.dev.java.net/1.4/JAXP-Compatibility.html#JAXP_security">Feature for Secure Processing</a>
+        in JAXP has been enhanced and several issues have been resolved to improve security in XML processing in the JDK.
+        Refer to <a href="http://blogs.sun.com/security/category/news">Sun Security Blog</a> for Advance notification of
+        Security Updates for Java SE.<br><br></br>
+
+        </li>
+        <li>Performance improvement<br>
+        There have been several performance improvement in XML parsing, validation and transformation reflected in the SPECjvm2007 and
+        SPECjvm2008 benchmark tests. The biggest improvement was made against early JDK6 release when a 87% gain was
+        registered in the overall XML score. Other than that, there have also been single percentage improvement in various
+        areas. <br><br>
+
+        <br><br>
+        </li>
+        <li>Conformance<br>
+        There have been some conformant improvement, especially in the StAX component <a href="http://sjsxp.dev.java.net">SJSXP</a>
+        where many conformant requests have been fixed. In July, 2009, <a href="http://jcp.org/en/jsr/detail?id=173">JSR 173: Streaming API for XML</a>
+        passed and finalized <a href="http://jcp.org/aboutJava/communityprocess/maintenance/jsr173/index4.html">Maintenance Review 3</a>.
+        The JAXP standalone was then updated to the resulting StAX 1.2 in Oct. 2009.
+
+        The StAX implementation (<a href="https://sjsxp.dev.java.net">SJSXP) in this release has been upgraded to
+        <a href="http://jcp.org/en/jsr/detail?id=173">JSR 173: Streaming API for XML</a>
+        <a href="http://jcp.org/aboutJava/communityprocess/maintenance/jsr173/index4.html">Maintenance Review 3</a>, that is,
+        StAX 1.2.
+        <br><br>
+
+
+        <li>For all changes and fixes made in the JAXP 1.4.3 release,
+            please refer to:<br><br>
+            <a href="changelog.html">The JAXP 1.4.3 Change Log</a>
+        </li>
+    </p>
+
+
+</body>
+</html>

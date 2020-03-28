@@ -1,0 +1,384 @@
+http://hi.baidu.com/ablazejobs/item/6fa86dc478fc34e6984aa01e
+
+用Registry对rmi远程对象rebind时的AccessException（下）
+
+
+
+用Registry对rmi远程对象rebind时的AccessException（下）
+
+三、为使用这个远程服务，编写如下这个样子的客户端的代码
+
+1、客户端代理类JOBSClient
+
+package com.ablaze.jobs.client;
+
+import java.util.Hashtable;
+import java.rmi.RemoteException;
+import java.rmi.NotBoundException;
+import java.rmi.registry.Registry;
+import java.rmi.registry.LocateRegistry;
+import com.ablaze.jobs.rmi.JOBS;
+import com.ablaze.jobs.rmi.IObjectBrokerSession;
+
+public class JOBSClient {
+    protected static String _host = null;
+    protected static int _port = 0;
+    protected static Registry _registry = null;
+    protected static JOBS _server = null;
+    protected static IObjectDictionary _dic = null;
+    protected static Hashtable<String, IObjectBrokerSession> _repository = null;
+
+    public static void init(String host, int port) {
+        try {
+            if ( _host.equals(host) && _port == port ) return;
+
+            _host = host;
+            _port = port;
+
+            if ( _repository == null ) _repository = new Hashtable<String, IObjectBrokerSession>();
+            else _repository.clear();
+
+            if ( _registry != null ) {
+                _registry = null;
+                _server = null;
+            }
+
+            _registry = LocateRegistry.getRegistry(_host, _port);
+            _server = (JOBS)_registry.lookup("JOBS");
+       }
+        catch ( RemoteException e ) {
+            System.err.println("Remote method call error.");
+            e.printStackTrace(System.err);
+            _registry = null;
+            _server = null;
+        }
+        catch ( NotBoundException e ) {
+            System.err.println("Server JOBS does not been bound in remote host.");
+            e.printStackTrace(System.err);
+            _registry = null;
+            _server = null;
+        }
+    }
+
+    public static IObjectBrokerSession createSession(String uid) {
+        IObjectBrokerSession session = null;
+
+        if ( _server == null ) {
+            System.err.println("Error: JOBS Client must be initiate first.");
+            return null;
+        }
+
+        String sid = null;
+        try {
+            sid = _server.createSession(subject);
+        }
+        catch ( RemoteException ex ) {
+            System.err.println("Error: request a JOBS session failed.");
+            System.err.println("Detail: "+ex.getLocalizedMessage());
+            ex.printStackTrace(System.err);
+            return null;
+        }
+
+        if ( sid != null ) {
+            try {
+                session = (IObjectBrokerSession)_registry.lookup(sid);
+                if ( session != null ) _repository.put(sid, session);
+                return session;
+            }
+            catch ( RemoteException e ) {
+                System.err.println("Remote method call error.");
+                e.printStackTrace(System.err);
+            }
+            catch ( NotBoundException e ) {
+                System.err.println("Session does not been bound in remote host.");
+                System.err.println("Session ID: "+sid);
+                e.printStackTrace(System.err);
+            }
+        }
+        else System.err.println("Can not create a jobs session, unknown error.");
+
+        return null;
+    }
+
+    public static IObjectBrokerSession querySession(String sessionID) {
+        IObjectBrokerSession session = null;
+
+        if ( sessionID == null ) {
+            System.err.println("Error: invalid session id.");
+            return null;
+        }
+
+        session = _repository.get(sessionID);
+        if ( session == null ) {
+            try {
+                session = (IObjectBrokerSession)_registry.lookup(sessionID);
+                if ( session != null ) _repository.put(sessionID, session);
+                return session;
+            }
+            catch ( RemoteException e ) {
+                System.err.println("Remote method call error.");
+                e.printStackTrace(System.err);
+            }
+            catch ( NotBoundException e ) {
+                System.err.println("Session does not been bound in remote host.");
+                System.err.println("Session ID: "+sessionID);
+                e.printStackTrace(System.err);
+            }
+        }
+        else System.err.println("Can not get a jobs session, unknown error.");
+
+        return null;
+    }
+
+    public static void releaseSession(IObjectBrokerSession session) {
+        if ( session == null ) return;
+        if ( _server == null || _repository == null ) {
+            System.err.println("Error: jobs client must be init first.");
+            return;
+        }
+
+        try {
+            String sid = session.getSessionID();
+            _repository.remove(sid);
+            _server.releaseSession(sid);
+        }
+        catch ( RemoteException e ) {
+            System.err.println("Error: can not get session id from remote object.");
+            e.printStackTrace(System.err);
+        }
+    }
+}
+
+2、客户端程序
+
+package demo;
+
+import com.ablaze.jobs.client.JOBSClient;
+import com.ablaze.jobs.rmi.IObjectBrokerSession;
+import java.rmi.RemoteException;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            JOBSClient.init("192.168.56.101", 9911);
+            IObjectBrokerSession cs1 = JOBSClient.createSession("ablaze");
+            if ( cs1 != null ) {
+                System.out.println("Create JOBS session successful, session id is "+cs1.getSessionID());
+            }
+            else return;
+            
+            IObjectBrokerSession querySession = JOBSClient.querySession(cs1.getSessionID());
+            if ( querySession != null ) {
+                System.out.println("Obtain a JOBS session successful, session id is "+querySession.getSessionID());
+            }
+            JOBSClient.releaseSession(cs1);
+        }
+        catch ( RemoteException e ) {
+            System.err.println("Remote Method call failed.");
+            e.printStackTrace(System.err);
+        }
+    }
+
+}
+
+四，分别编译两组代码，第一组为JOBS.java、IObjectBrokerSession.java、JObjectBrokerSession.java和JServer.java，这是服务端代码，第二组为JOBS.java、IObjectBrokerSession.java、JOBSClient.java和Main.java，这是客户端代码，为方便在客户端部署，还可以生成两个对应的jar包，然后运行：
+
+启动服务端
+$ java com.ablaze.jobs.JServer
+
+启动客户端
+$ java demo.Main
+
+注意无论是客户端还是服务端，都要正确设置CLASSPATH环境变量。
+
+可以看到，如果服务端和客户端在同一台主机上运行，此程序运行正常，但若在不同的主机上运行，则服务端会报告异常如下：
+
+Error: create JOBS session for user ablaze failed.
+Error: JObjectBrokerSession
+java.rmi.AccessException: Registry.Registry.rebind disallowed; origin /192.168.94.1 is non-local host
+        at sun.rmi.registry.RegistryImpl.checkAccess(Unknown Source)
+        at sun.rmi.registry.RegistryImpl.rebind(Unknown Source)
+        at com.ablaze.jobs.JServer.createSession(JServer.java:83)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+        at sun.rmi.transport.Transport$1.run(Unknown Source)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at sun.rmi.transport.Transport.serviceCall(Unknown Source)
+        at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+        at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+        at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+
+从报错信息可以看到，这个错误产生于客户端调用createSession之时，是由服务端的createSession中的rebind方法引起的，并且异常的调用堆栈就是由catch语句捕捉到的RemoteException打印的。此方法在Registry接口中定义。翻看JDK随机文档中关于Registry中rebind的方法，可以看到这个方法会抛出RemoteException、AccessException和NullPointerException三个异常，其中关于RemoteException异常的说明说到：此异常表示与Registry的远程通信失败，同时，如果异常包含了AccessException的服务端异常，则表示Registry拒绝调用方对执行此操作（rebind）的访问，文档中进一步给出了一个例子，即：若发起的操作来自非本地主机，则rebind操作被拒绝。
+
+综合分析前面的JServer代码，可以看到，客户端访问名为JOBS的远程对象是没有问题的，也就是rmi机制不会因为服务端和客户端工作在不同的主机而无法工作，但是，JServer中对JObjectBrokerSession的rebind操作是定义在远程方法createSession中的，这正好符合文档中“若发起的操作来自非本地主机，则rebind操作被拒绝”的描述。了解到这一点后，可以对JServer进行改造以避开这个rebind限制，即可以在服务端单独启动一个线程来执行本地发起的rebind操作，远程方法createSession的处理逻辑仅仅是当客户端发起操作时，就把一个rebind请求及其所需要的参数放到一个rebind请求队列里，当这个请求被前面的处理线程从队列中移除后，createSession才在服务端返回。
+
+与上面遇到同样问题的还有releaseSession方法，因为unbind方法也有同样的限制，所以也可以按照同样的方式处理，此时，JServer的代码被修改成下面这个样子：
+
+package com.ablaze.jobs;
+
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.util.Hashtable;
+import java.util.Date;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.rmi.AccessException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.rmi.registry.Registry;
+import java.rmi.registry.LocateRegistry;
+import com.ablaze.jobs.rmi.JOBS;
+
+public class JServer extends UnicastRemoteObject implements JOBS, Runnable {
+    private static final long serialVersionUID = 1L;
+
+    protected class JSessionRequest {
+        public JSessionRequest(String uid, String sesID) {
+            _uid = uid;
+            _sessionid = sesID;
+        }
+
+        public String _uid;
+        public String _sessionid;
+    }
+
+    public void run() {
+        JSessionRequest request = null;
+        String uid = null;
+        String sesID = null;
+
+        for ( ; ; ) {
+            if ( !_reqQueue.isEmpty() ) {
+                request = _reqQueue.poll();
+                uid = request._uid;
+                sesID = request._sessionid;
+
+                try {
+                    JObjectBrokerSession jses = new JObjectBrokerSession(uid, sesID);
+
+                    _sesRegistry.put(jses.getSessionID(), jses);
+                    _rmtObjRegistry.rebind(jses.getSessionID(), jses);
+                    System.out.println("JOBS Session created for user "+uid+" since "+(new Date()).toString());
+                }
+                catch ( RemoteException e ) {
+                    System.err.println("Error: create JOBS session for user "+uid+" failed.");
+                    System.err.println("Error: JObjectBrokerSession");
+                    e.printStackTrace(System.err);
+                }
+            }
+
+            if ( !_releaseQueue.isEmpty() ) {
+                sesID = _releaseQueue.poll();
+                JObjectBrokerSession jses = _sesRegistry.get(sesID);
+
+                if ( jses != null ) {
+                    _sesRegistry.remove(sesID);
+                    try {
+                        _rmtObjRegistry.unbind(sesID);
+                    }
+                    catch ( AccessException e ) {
+                        System.err.println("Error: illegal remote object access.");
+                        e.printStackTrace(System.err);
+                    }
+                    catch ( RemoteException e ) {
+                        System.err.println("Error: remote operation failed.");
+                        e.printStackTrace(System.err);
+                    }
+                    catch ( NotBoundException e ) {
+                        System.err.println("Error: specified remote object does not exist.");
+                        e.printStackTrace(System.err);
+                    }
+                    System.out.println("Session released successful, session id "+sesID);
+                }
+                else System.err.println("Error: session you specified does not exist.");
+            }
+
+            try {
+                Thread.sleep(200);
+            }
+            catch ( InterruptedException e ) {
+                System.err.println("Wait for next request has been interrupted.");
+                e.printStackTrace(System.err);
+            }
+        }
+    }
+
+    public JServer(String[] args) throws RemoteException {
+        _reqQueue = new ConcurrentLinkedQueue<JSessionRequest>();
+        _releaseQueue = new ConcurrentLinkedQueue<String>();
+        _sesRegistry = new Hashtable<String, JObjectBrokerSession>();
+    }
+
+    public void start(int port) {
+        _svrPort = port;
+        try {
+            _rmtObjRegistry = LocateRegistry.createRegistry(_svrPort);
+            _rmtObjRegistry.rebind("JOBS", this);
+            System.out.println("Java JOBS Server started successful.");
+        }
+        catch ( RemoteException e ) {
+            System.err.println("Fatal error: start JServer(Java JOBS Server) failed.");
+            e.printStackTrace(System.err);
+            System.exit(-1);
+        }
+    }
+
+    @Override
+    public String createSession(String uid) throws RemoteException {
+        String sesID = UUID.randomUUID().toString();
+        JSessionRequest request = new JSessionRequest(uid, sesID);
+        _reqQueue.add(request);
+
+        try {
+            for ( ; ; ) {
+                if ( !_reqQueue.contains(request) ) break;
+                Thread.sleep(200);
+            }
+        }
+        catch ( InterruptedException e ) {
+            System.err.println("Wait for next request has been interrupted.");
+            e.printStackTrace(System.err);
+            return null;
+        }
+
+        return sesID;
+    }
+
+    @Override
+    public void releaseSession(String sessionID) throws RemoteException {
+        if ( sessionID == null ) {
+            System.err.println("Error: you must specify a session id.");
+            return;
+        }
+
+        _releaseQueue.add(sessionID);
+    }
+
+    public static void main(String[] args) {
+        int port = 9912;
+        JServer server = new JServer(args);
+        server.start(port);
+
+        Thread t = new Thread(server);
+        t.start();
+    }
+
+    private int _svrPort;
+    private Registry _rmtObjRegistry;
+    private Hashtable<String, JObjectBrokerSession> _sesRegistry;
+    private ConcurrentLinkedQueue<JSessionRequest> _reqQueue;
+    private ConcurrentLinkedQueue<String> _releaseQueue;
+}
+
+新的JServer中定义了一个专门的线程来处理createSession和releaseSession请求，这些请求被放置在两个ConcurrentLinkedQueue队列里，createSession请求用一个内部类JSessionRequest封装，而releaseSession请求用一个String类代表。在JServer的run方法中启动了一个无限循环，不断从两个队列中取出对象来处理，在这里的rebind和unbind操作都将从本地发起，从而避开这两个方法的限制。
+
+重新编译运行上述代码，此时在两台主机上分别运行客户端和服务端，运行正常。

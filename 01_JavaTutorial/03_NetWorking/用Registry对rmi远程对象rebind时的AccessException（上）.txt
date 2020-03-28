@@ -1,0 +1,185 @@
+http://hi.baidu.com/ablazejobs/item/0c65134ae0bcf78fdf2a9f1e
+
+用Registry对rmi远程对象rebind时的AccessException（上）
+
+
+
+用Registry对rmi远程对象rebind时的AccessException（上）
+
+
+最近的项目中用到了rmi远程对象，基本原理很简单：在服务器上创建一个服务对象并且通过Registry绑定，然后客户端通过调用该服务对象的createSession远程方法创建一个会话，这个会话也被作为一个远程对象在Registry中绑定，于是客户端就可以调用会话远程对象上的远程方法了。按照这个思路，Java实现代码就如下面这个样子：
+
+一、首先编写远程对象的接口定义，这是服务端和客户端共用的代码
+
+1、远程会话对象接口定义IObjectBrokerSession
+
+package com.ablaze.jobs.rmi;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface IObjectBrokerSession extends Remote {
+    public static final int JOBS_SUCCESS = 0;
+    public static final int JOBS_ERROR = -1;
+
+    public String getSessionID() throws RemoteException;
+    public String getSessionUID() throws RemoteException;
+    
+    // ... other methods
+}
+
+2、远程服务对象接口定义JOBS
+
+package com.ablaze.jobs.rmi;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface JOBS extends Remote {
+    public String createSession(String uid) throws RemoteException;
+    public void releaseSession(String sessionID) throws RemoteException;
+}
+
+二、第二步编写服务端的实现代码
+
+1、远程会话对象的实现类JObjectBrokerSession
+
+package com.ablaze.jobs;
+
+import java.util.Set;
+import java.util.Iterator;
+import java.util.UUID;
+import java.util.Properties;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+// ... import other packages
+import com.ablaze.jobs.rmi.*;
+
+public class JObjectBrokerSession extends UnicastRemoteObject implements IObjectBrokerSession {
+    private static final long serialVersionUID = 1L;
+
+    public JObjectBrokerSession(String uid, String sesID)
+    throws RemoteException {
+        _sessionid = sesID;
+        _uid = uid;
+    }
+
+    @Override
+    public String getSessionID() throws RemoteException {
+        return _sessionid;
+    }
+
+    @Override
+    public String getSessionUID() throws RemoteException {
+        return _uid;
+    }
+    
+    // ... other method defined in IObjectBrokerSession
+
+    private String _sessionid;
+    private String _uid;
+}
+
+2、远程服务对象的实现类JServer
+
+package com.ablaze.jobs;
+
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Set;
+import java.rmi.AccessException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.rmi.registry.Registry;
+import java.rmi.registry.LocateRegistry;
+import com.ablaze.jobs.rmi.JOBS;
+
+public class JServer extends UnicastRemoteObject implements JOBS {
+    private static final long serialVersionUID = 1L;
+
+    public JServer(String[] args) throws RemoteException {
+        _sesRegistry = new Hashtable<String, JObjectBrokerSession>();
+    }
+
+    public void start(int port) {
+        _svrPort = port;
+        try {
+            _rmtObjRegistry = LocateRegistry.createRegistry(_svrPort);
+            _rmtObjRegistry.rebind("JOBS", this);
+
+            System.out.println("Java JOBS Server started successful.");
+        }
+        catch ( RemoteException e ) {
+            System.err.println("Fatal error: start JServer(Java JOBS Server) failed.");
+            e.printStackTrace(System.err);
+            System.exit(-1);
+        }
+    }
+
+    @Override
+    public String createSession(String uid) throws RemoteException {
+        try {
+            JObjectBrokerSession jses = new JObjectBrokerSession(uid, UUID.randomUUID().toString());
+
+            _sesRegistry.put(jses.getSessionID(), jses);
+            _rmtObjRegistry.rebind(jses.getSessionID(), jses);
+            System.out.println("JOBS Session created for user "+uid+" since "+(new Date()).toString());
+
+            return jses.getSessionID();
+        }
+        catch ( RemoteException e ) {
+            System.err.println("Error: create JOBS session for user "+uid+" failed.");
+            System.err.println("Error: JObjectBrokerSession");
+            e.printStackTrace(System.err);
+        }
+
+        return null;
+    }
+
+    @Override
+    public void releaseSession(String sessionID) throws RemoteException {
+        if ( sessionID == null ) {
+            System.err.println("Error: you must specify a session id.");
+            return;
+        }
+
+        JObjectBrokerSession jses = _sesRegistry.get(sessionID);
+        if ( jses != null ) {
+            _sesRegistry.remove(sessionID);
+
+            try {
+                _rmtObjRegistry.unbind(sessionID);
+            }
+            catch ( AccessException e ) {
+                System.err.println("Error: illegal remote object access.");
+                e.printStackTrace(System.err);
+            }
+            catch ( RemoteException e ) {
+                System.err.println("Error: remote operation failed.");
+                e.printStackTrace(System.err);
+            }
+            catch ( NotBoundException e ) {
+                System.err.println("Error: specified remote object does not exist.");
+                e.printStackTrace(System.err);
+            }
+        }
+        else System.err.println("Error: session you specified does not exist.");
+    }
+
+    public static void main(String[] args) {
+        int port = 9911;
+        JServer server = new JServer(args);
+        server.start(port);
+    }
+
+    private int _svrPort;
+    private Registry _rmtObjRegistry;
+    private JOBSServer _server = null;
+    private Hashtable<String, JObjectBrokerSession> _sesRegistry;
+}

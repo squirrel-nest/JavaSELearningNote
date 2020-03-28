@@ -1,0 +1,590 @@
+Java分布式处理技术(RMI、JNDI) 
+
+http://blog.csdn.net/liushuai_ly/article/details/8634957
+
+Java分布式处理技术
+
+ 1.1 RMI的基本概念
+
+ 1.1.1 什么是RMI
+
+RMI(Remote Method Invocation)远程方法调用是一种计算机之间对象互相调用对方函数，启动对方进程的一种机制，使用这种机制，某一台计算机上的对象在调用另外一台计算机上的方法时，使用的程序语法规则和在本地机上对象间的方法调用的语法规则一样。
+
+ 1.1.2 RMI的用途
+
+1、 分布式体系结构
+
+我们为什么要使用分布式计算呢？
+
+?        当我们想与多个用户或客户机共享一个中央资源（如一个数据库）时，就会使用分布式计算。
+
+?        分布式计算用来利用多个系统的组合计算能力，以便比在单个系统上更有效或更快地解决问题。
+
+可以用多种方法配置多个计算机系统以共享处理，包括共享内存、共享磁盘或只是共享一条公共通信通道。最新的技术允许物理上相隔很远的系统能够在处理计算问题时协同工作。
+
+关于利用计算能力这一主题，因特网及伴随的通信协议 TCP/IP 的出现已使无数的计算机系统史无前例地连接起来。对一些应用程序来说，能够利用如此多的计算功能来解决问题是令人满意的。甚至更吸引人的是，大多数计算机系统都有充足的空闲时间，可以帮助解决其它问题。将来，网格计算会利用分布式计算能力进行出售，这与电力行业出售电能非常相似。
+
+2、 Java分布式对象编程技术
+
+RMI是Enterprise JavaBeans的支柱，是建立分布式Java应用程序的方便途径。只要按照RMI规则设计程序，可以不必再过问在RMI之下的网络细节了，如：TCP和Socket等等。任意两台计算机之间的通讯完全由RMI负责。调用远程计算机上的对象就像本地对象一样方便。
+
+ 1.1.3 RMI应用程序分类
+
+依据RMI应用程序各部分职责，可对应用程序进行如下分类：
+
+?        服务器程序：服务器程序将创建多个远程对象，并使每个对象能够被引用。等待客户端调用创建好的远程对象上的方法。
+
+?        客户端程序：从服务端程序中得到一个或多个远程对象的引用。客户端能用此引用调用远程对象上的方法。
+
+?        对等计算程序：双方地位相等，互为对方的服务器和客户端。
+
+ 1.2 创建RMI应用程序步骤
+
+1、 定义远程接口
+
+在 Java 中，远程对象是实现远程接口的类的实例, 远程接口声明每个要远程调用的方法。在需要创建一个远程对象的时候，我们通过传递一个接口来隐藏基层的实施细节，客户通过接口句柄发送消息即可。远程接口具有如下特点：
+
+?        远程接口必须为public属性。如果不这样，除非客户端与远程接口在同一个包内，否则当试图装入实现该远程接口的远程对象时，调用会得到错误结果。
+
+?        远程接口必须扩展接口java.rmi.Remote。
+
+?        除与应用程序本身特定的例外之外，远程接口中的每个方法都必须在自己的throws从句中声明java.rmi.RemoteException。（或 RemoteException 的父类）。
+
+代码范例1
+
+
+package  com.itjob;
+
+import  java.rmi.*;
+
+
+public interface RmiSample extends  Remote{
+
+       public  int sum(int a,int b) throws RemoteException;
+
+      
+
+}
+ 
+
+
+
+2、 实现远程接口
+
+远程对象实现类必须扩展远程对象java.rmi.UnicastRemoteObject类，并实现所定义的远程接口。远程对象的实现类中包含实现每个远程接口所指定的远程方法的代码。这个类也可以含有附加的方法，但客户只能使用远程接口中的方法。因为客户是指向接口的一个句柄，而不是它的哪个类。必须为远程对象定义构造函数，即使只准备定义一个默认构造函数，用它调用基础类构造函数。因为基础类构造函数可能会抛出 java.rmi.RemoteException，所以即使别无它用必须抛出java.rmi.RemoteException例外。
+
+代码范例2
+
+
+package  com.itjob.rmi;
+
+import  java.rmi.*;
+
+import  java.rmi.server.*;
+
+import  com.itjob.RmiSample ;
+
+/**
+
+远程接口实现类，继承了UnicastRemoteObject并实现了RmiSample远程接口
+
+*/
+
+public class  RmiSampleImpl extends UnicastRemoteObject implements RmiSample{
+
+    //覆盖默认构造函数并抛出RemoteException
+
+       public RmiSampleImpl() throws  RemoteException{
+
+              super();
+
+       }
+
+    //所有远程实现方法必须抛出RemoteException
+
+       public int sum(int a,int b) throws  RemoteException{
+
+              return a+b;
+
+       }
+
+}
+ 
+
+
+
+3、 编写服务器类
+
+包含 main 方法的类可以是实现类自身，也可以完全是另一个类。下面通过RmiSampleServer来创建一个远程对象的实例，并通过java.rmi.registry.LocateRegistry类的createRegistry 方法从指定端口号启动注册服务程序，也可以通过执行 rmiregistry 命令启动注册服务程序，注册服务程序的缺省运行端口为 1099。
+
+代码范例3
+
+
+package  com.itjob.rmi;
+
+
+import  java.rmi.*;
+
+import java.rmi.registry.*;
+
+
+public class RmiSampleServer{
+
+       public  static void main(String[] args){
+
+               /*创建和安装一个安全管理器，令其支持RMI.作为Java开发包的一部分
+
+            *适用于RMI唯一一个是RMISecurityManager.
+
+            *
+
+           if(System.getSecurityManager() == null) {
+
+              System.setSecurityManager(new  RMISecurityManager());
+
+            }
+
+            */
+
+              try{
+
+                     LocateRegistry.createRegistry(8808);
+
+                     RmiSampleImpl server=new  RmiSampleImpl();
+
+                     Naming.rebind("//localhost:8808/SAMPLE-SERVER",server);
+
+                     System.out.println  ("远程对象注册成功，RMI服务已经启动，等待客户端调用....");
+
+              }catch(java.net.MalformedURLException  me){
+
+                     System.out.println  ("Malformed URL:"+me.toString());
+
+              }catch(RemoteException  re){
+
+                     System.out.println  ("Remote exception:"+re.toString());
+
+              }catch(AlreadyBoundException abe){
+
+            System.out.println  ("(AlreadyBound exception:"+ abe.toString());
+
+}
+
+       }
+
+}
+ 
+
+ 
+
+?        代码范例3中将将远程对象名字绑定到对远程对象的引用上：
+
+LocateRegistry.createRegistry(8808);指定本RMI服务程序不使用默认端口1099,而是使用自己指定的端口8808。
+
+Naming.rebind("//localhost:8808/SAMPLE-SERVER" , Server);将远程对象在服务器上注册并指定了将查找远程对象引用的URL，URL格式为//host:port/name。其中 host 是注册表所在的主机（远程或本地），port 是注册表接受调用的端口号，name 是未经注册表解释的简单字符串。host 和 port 两者都是可选项。如果省略了 host，则主机默认为本地主机。如果省略了 port，则端口默认为 1099，该端口是 RMI 的注册表 rmiregistry 使用的“著名”端口。
+
+代码范例3的运行结果如图所示：
+
+
+
+图 14.1代码范例3运行结果
+
+
+
+4、 编写使用远程服务的客户机类
+
+客户机类的主要功能有两个，一是通过Naming.lookup方法来构造注册服务程序 stub 程序实例，二是调用服务器远程对象上的远程方法。
+
+代码范例4
+
+
+package  com.itjob.rmi;
+
+import  java.rmi.*;
+
+import  java.rmi.server.*;
+
+public class RmiSampleClient {
+
+      public static void main(String[] args)
+
+      {
+
+          try {
+
+             String url =  "//localhost:8808/SAMPLE-SERVER";
+
+            RmiSample RmiObject =  (RmiSample)Naming.lookup(url);
+
+            System.out.println(" 1 + 2 =  " + RmiObject.sum(1,2) );
+
+          } catch (RemoteException exc) {
+
+             System.out.println("Error  in lookup: " + exc.toString());
+
+          } catch (java.net.MalformedURLException exc) {
+
+              System.out.println("Malformed URL: " + exc.toString());
+
+          } catch (java.rmi.NotBoundException exc) {
+
+             System.out.println("NotBound:  " + exc.toString());
+
+          }
+
+      }
+
+}
+ 
+
+
+
+5、 为远程对象实现创建根和干
+
+客户端是通过Naming.lookup方法来构造注册服务程序 stub 程序实例，通过该实例的引用来发起对远程对象方法调用的，所以在运行运行客户端应用前必须为远程对象实现创建根(stub)和干(Skeleton)。要创建存根程序和骨架文件，应以包含远程对象实现的已编译类包全名运行 rmic 编译器。存根（Stub）是远程对象在客户端的代理，它将RMI调用传递给服务器端的骨架（Skeleton），后者负责将该调用传递给实际的远程方法。在命令行模块下运行RMIC调用：
+
+
+
+图 14.2 RMIC命令
+
+调用RMIC命令运行结果如图所示：
+
+
+
+图14.3 RMIC运行结果
+
+?        我们可以看系统帮我们生成了存根(stub)RmiSampleImpl_Stub.class但系统并没有帮我们生成骨架（Skeleton）RmiSampleImpl_ Skeleton.class。这与JDK的版本有关：
+
+采用JDK1.4版本运行rmic com.itjob.rmi. RmiSampleImpl命令系统将会生成存根(stub)RmiSampleImpl_Stub.class和骨架（Skeleton）RmiSampleImpl_ Skeleton.class两个类文件；
+
+采用JDK1.5版本运行rmic com.itjob.rmi. RmiSampleImpl命令系统将只会生成存根(stub)RmiSampleImpl_Stub.class，骨架（Skeleton）RmiSampleImpl_ Skeleton.class的功能将通反射技术由系统在运行时自动实现；
+
+6、 运行程序
+
+依次做完上述步骤后，我们现在来运行一下我们的RMI应用。先运行服务端程序，运行结果如图14.1所示。
+
+接下来我们运行客户端程序（代码范例4），运行结果如图所示：
+
+
+
+图14.4 客户端程序运行结果
+
+看到上面结果说明我们客户端程序进行RMI远程调用已经成功了。
+
+ 1.3 RMI接口和类简介
+
+负责指定rmi系统远程对象行为的接口和类在java.rmi包中定义的，接下来我们了解一下几个核心接口和类：
+
+1、 Java.rmi.Remote接口
+
+在rmi中，远程接口声明了可从远程java虚拟机中调用的方法集，远程接口必须满足下列条件：
+
+?        远程接口必须至少直接或间接的扩展java.rmi.Remote接口。
+
+?        远程接口中的方法申明必须满足：远程方法申明在其throws子句中除了要包含与应用程序有关的异常之外，还必须包括RemoteException异常(或她的父类)；在远程方法申明中，作为参数或返回值申明的远程对象必须申明为远程接口，而非该接口的实现类。
+
+2、 Java.rmi.RemoteException类
+
+RemoteException类是在远程方法调用期间由RMI运行所抛出的异常，在使用了rmi系统的应用程序中，远程接口中申明的远程方法在其throws子句中必须指定RemoteException或者其超类。
+
+?        当远程方法调用由于某种原因失败时，将抛出RemoteException异常。
+
+?        RemoteException类是一个已检验的异常，而不是RuntimeException。
+
+3、 Java.rmi.server.RemoteObject类
+
+?        RMI服务器函数由RemoteObject类及其子类RemoteServer,UnicastRemoteObject和Activatabble提供。
+
+?        RemoteObject为远程对象敏感的Object方法,hashCode,equals和toString方法提供实现。
+
+?        创建远程对象并将其导出，所需的方法由类UnicastRemoteObject和Activatable提供，子类可以识别远程方法。
+
+?        UnicastRemoteObject定义了单个调用的远程对象，其引用只有在服务器进程运行时才有效。
+
+?        类Activatable是抽象类，它定义的activatable远程对象在其远程方法被调用时开始执行，并在必要时自己关闭。
+
+4、 Java.rmi.registry.LocateRegistry类
+
+LocateRegistry类用于获得对特定主机的引导远程对象注册服务程序的引用(创建stub),或者创建能在特定端口接受调用的远程对象注册服务程序，注册服务程序实现将远程对象名与远程对象引用关联的简单命名语法，服务器重新启动不会记住这些名字和远程对象之间的绑定。
+
+LocateRegistry类中的方法：
+
+public static Registry getRegistry() throws RemoteException
+
+Public static Registry getRegistry(int port ) throws RemoteException
+
+Public static Registry getRegistry(String host ) throws RemoteException
+
+Public static Registry getRegistry(String host , int port) throws RemoteException
+
+Public static Registry getRegistry(String host, int port ,RMIClientSocketFactory csf ) throws RemoteException
+
+Public static Registry createRegistry(int port )throws RemoteException
+
+Public static Registry createRegistry(int port, RMIClientSocketFactory csf, RMIServerSocketFactory ssf) throws RemoteException
+
+5、 Java.rmi.Naming类
+
+Naming类提供了存储和获得远程对象注册服务程序中的远程对象进行引用的方法
+
+?        Naming类中的方法以url的形式作为其中的一个参数，//host:port/name
+
+?        当远程对象使用rmi注册服务程序在本地主机上进行过注册后，远程主机上的调用程序就可以按名称查询远程对象，获得其引用，然后在对象上调用远程方法。
+
+Public static Remote lookup(String name) throws NotBoundException, MalformedURException, RemoteException
+
+Public static void bind(String name, Remote obj) throws AlreadyBoundException, MalforedURException, RemoteException
+
+Public static void unbind (String name) throws RemoteException, NotBoundException,MalformedURLException
+
+Public static void rebind(String name, Remote obj) throws RemoteException, MalformedURLException
+
+6、 Java.rmi.server.UnicastRemoteObject类
+
+类UnicastRemoteObject创建并导出远程对象，该类实现的远程服务具有以下特点：
+
+?        将这种对象的引用至多仅在创建该远程对象的进程生命周期内有效。
+
+?        通过TCP传输与远程对象通信调用，参数和结果使用流协议在客户端和服务器之间进行通信。
+
+7、 Stub 和skeleton
+
+在远程对象的通信过程中，rmi使用标准机制：stub和skeleton
+
+
+
+图14.5 Stub和Skeleton
+
+?        Stub的功能
+
+初始化与包含远程对象的远程机器的连接。
+
+对远程机器参数进行编组（写入并传输）。
+
+等待方法调用结果。
+
+读取返回值或返回的异常。
+
+将值返回给调用程序。
+
+?        Skeleton的功能
+
+在远程机器中，每个远程对象都可以有相应的skeleton，skeleton负责将调用分配给实际的远程对象实现，他的主要功能如下：
+
+读取远程方法的参数。
+
+调用实际远程对象实现上的方法。
+
+将结果（返回值或异常）编组（写入并传输）给调用程序。
+
+ 1.4 JNDI基本概念
+
+JNDI诞生的理由似乎很简单。随着分布式应用的发展，远程访问对象访问成为常用的方法。虽然说通过Socket等编程手段仍然可实现远程通信，但按照模式的理论来说，仍是有其局限性的。RMI技术，RMI-IIOP技术的产生，使远程对象的查找成为了技术焦点。JNDI技术就应运而生。JNDI技术产生后，就可方便的查找远程或是本地对象。
+
+1、 JNDI 是什么?
+
+JNDI(The Java Naming and Directory Interface，Java 命名和目录接口) 是一组在Java 应用中访问命名和目录服务的API。为开发人员提供了查找和访问各种命名和目录服务的通用、统一的方式。借助于JNDI 提供的接口，能够通过名字定位用户、机器、网络、对象服务等。
+
+?        命名服务：就像DNS 一样，通过命名服务器提供服务，大部分的J2EE 服务器都含有命名服务器。
+
+?        目录服务：一种简化的RDBMS 系统，通过目录具有的属性保存一些简单的信息。目录服务通过目录服务器实现，比如微软ACTIVE DIRECTORY 等。
+
+2、 JNDI 的好处:
+
+?        包含大量命名和目录服务，可以使用相同API 调用访问任何命名或目录服务。
+
+?        可以同时连接多个命名和目录服务。
+
+?        允许把名称同JAVA 对象或资源关联起来，不必知道对象或资源的物理ID。
+
+?        使用通用接口访问不同种类的目录服务
+
+?        使得开发人员能够集中使用和实现一种类型的命名或目录服务客户API 上。
+
+ 1.5 JNDI应用程序结构
+
+JNDI的结构由一个API和一个SPI组成，Java应用程序实用JNDI API访问各种各样的命名和目录服务。
+
+
+
+图14.6 JNDI应用程序结构
+
+1、 JNDI 上下文
+
+前面提到命名服务是将名称与对象相关联。这种关联被称为绑定。一组这样的绑定被称为上下文，Jndi上下文可以用来查找，捆绑/解除捆绑，创建或者破坏绑定名称操作在JNDI中，上下文是使用javax.naming.Context 接口来表示的，而这个接口也正是与命名服务进行交互的主要接口。
+
+Context 接口中的每个命名方法都有两种重载的形式：
+
+lookup(String name): 接受一个字符串名称参数，查找绑定远程对象。
+
+lookup(javax.naming.Name): 接受一个结构化的名称，查找绑定远程对象。
+
+2、 初始化上下文
+
+InitialContext 是一个实现了 Context接口的类。使用这个类作为您到命名服务的入口点 。创建一个InitialContext 对象构造器需要采用一组属性，形式为java.util.Hashtable 或其子类之一，比如：
+
+代码范例5
+
+
+Properties props = new Properties();
+
+props.setProperty("java.naming.factory.initial",  "org.jnp.interfaces.NamingContextFactory");
+
+props.setProperty("java.naming.provider.url",  "localhost:1099");
+
+InitialContext  = new InitialContext(props);
+ 
+
+要通过JNDI 进行资源访问，我们必须设置初始化上下文的参数，主要是设置JNDI 驱动的类名(java.naming.factory.initial)和提供命名服务的URL(java.naming.provider.url)。因为Jndi 的实现产品有很多。所以java.naming.factory.initial 的值因提供JNDI 服务器的不同而不同，java.naming.provider.url 的值包括提供命名服务的主机地址和端口号。
+
+下表列出了用于所支持的服务提供程序的工厂类。
+
+表 : Context.INITIAL_CONTEXT_FACTORY的值
+
+
+名称
+ 
+服务提供程序工厂
+ 
+
+文件系统
+ 
+com.sun.jndi.fscontext.RefFSContextFactory
+ 
+
+LDAP
+ 
+com.sun.jndi.ldap.LdapCtxFactory
+ 
+
+RMI
+ 
+com.sun.jndi.rmi.registry.  RegistryContextFactory
+ 
+
+CORBA
+ 
+com.sun.jndi.cosnaming.CNCtxFactory
+ 
+
+DNS
+ 
+com.sun.jndi.dns.DnsContextFactory
+ 
+
+
+
+ 1.6 RMI与JNDI集成
+
+通过上面对JNDI的了解我们可以利用JNDI来管理RMI远程对象的注册服务，我们将代码范例3进行如下改写：
+
+代码范例6
+
+
+package  com.itjob.rmi;
+
+
+import  java.rmi.*;
+
+import java.rmi.registry.*;
+
+import javax.naming.*;
+
+
+public class RmiSampleServerJndi{
+
+       public  static void main(String[] args) throws Exception{
+
+             
+
+              LocateRegistry.createRegistry(8808);
+
+              RmiSampleImpl  server=new RmiSampleImpl();          System.setProperty(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.rmi.registry.RegistryContextFactory");
+
+              System.setProperty(Context.PROVIDER_URL,"rmi://localhost:8808");
+
+              InitialContext  ctx=new InitialContext();
+
+              ctx.bind("java:comp/env/SampleDemo",server);
+
+              ctx.close();
+
+      
+
+       }
+
+}
+ 
+
+启动服务端程序如图所示：
+
+
+
+图14.7 JNDI服务程序启动
+
+表示服务端程序已经将远程对象在JNDI是进行了注册，等待客户端进行调用。
+
+接下来我们改写客户端程序采用JNDI方式来调用远程对象
+
+代码范例7
+
+
+package  com.itjob.rmi;
+
+import  java.rmi.*;
+
+import  java.rmi.server.*;
+
+import  javax.naming.*;
+
+public class  RmiSampleClientJndi {
+
+      public static void main(String[] args) throws Exception
+
+      {         
+
+             System.setProperty(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.rmi.registry.RegistryContextFactory");
+
+              System.setProperty(Context.PROVIDER_URL,"rmi://localhost:8808");
+
+              InitialContext  ctx=new InitialContext();
+
+
+         String url =  "java:comp/env/SampleDemo";
+
+         RmiSample RmiObject  = (RmiSample)ctx.lookup(url);
+
+        System.out.println("  1 + 2 = " + RmiObject.sum(1,2) );
+
+        
+
+       }
+
+    }
+ 
+
+运行客户端程序如图所示：
+
+
+
+图14.8 客户端JNDI程序运行结果
+
+表示客户端已经通过JNDI调用服务端远程对象成功。
+
+ 1.7 学习总结
+
+?        RMI运行在一个java虚拟机上的对象调用运行在另一个java虚拟机上的对象的方法.。RMI的用途就是为java程序之间的远程通信提供服务。
+
+?        RMI的编程思想
+
+n        对客户端：需要一些特定的代码来引用远程对象，一旦客户端的代码拥有对远程对象的引用，对远程对象上的调用与对本地对象方法的调用除了速度以外没什么区别。
+
+n        对服务端：必须定义类并实例化类的远程对象，服务器的代码必须能够登记对象并向客户端导出它们的方法，这样，这些方法就能够被远程调用了。
+
+n        客户端和服务端的代码都必须定义或能够访问一个接口，该接口中申明了可以远程调用的方法，并且两者还可以设置一个安全管理器。
+
+n        当调用远程对象上的方法时，客户端可以将对象作为参数来传递，并且，远程对象上的方法可以返回对象，这些是通过序列化来实现的。
+
+?        JNDI为开发人员提供了查找和访问各种命名和目录服务的通用、统一的方式。
+
+?        JNDI的结构由一个API和一个SPI组成，Java应用程序实用JNDI API访问各种各样的命名和目录服务。

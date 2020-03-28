@@ -1,0 +1,292 @@
+----------------------------
+From JDK 7 Update 21, the RMI property java.rmi.server.useCodebaseOnly is set to true by default. In earlier releases, the default value was false.
+
+设置为 false 的方法：
+start rmiregistry -J-Djava.rmi.server.useCodebaseOnly=false
+
+如果设置为 true，则 start rmiregistry 需要在 rms server 程序启动的目录下 启动。
+
+或者用下面的带参数的命令：
+rmiregistry -J-Djava.rmi.server.codebase=file:///E:\AppRmi\rmitest\bin\
+
+linux
+
+rmiregistry -J-Djava.rmi.server.useCodebaseOnly=false &
+
+rmiregistry -J-Djava.rmi.server.codebase=file:///E:\AppRmi\rmitest\bin/
+
+-codebase指定为http模式
+-Djava.rmi.server.codebase="http://webfront/myStuff.jar http://webwave/myOtherStuff.jar"
+---参考
+http://docs.oracle.com/javase/8/docs/technotes/guides/rmi/codebase.html
+Dynamic code downloading using Java? RMI
+ (Using the java.rmi.server.codebase Property)
+
+linux 启动方式
+
+rmiregistry &
+
+
+/sbin/iptables -I INPUT -p tcp --dport 1099 -j ACCEPT
+
+
+java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://192.168.1.8:8080/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=192.168.1.8 example.hello.Server
+
+java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello  Server
+
+
+java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file://usr/local/webapps/javaweb/lzrmi/classes/sayhello/ -Djava.rmi.server.hostname=localhost example.hello.Server
+
+java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=file:///usr/local/webapps/javaweb/lzrmi/classes/sayhello/ Server
+
+
+-Djava.rmi.server.codebase=http://localhost:8080/lzrmi/classes/sayhello/Hello.class
+
+
+java -classpath /usr/local/webapps/javaweb/lzrmi/classes/sayhello -Djava.rmi.server.codebase=http://localhost:8080/lzrmi/classes/sayhello/ -Djava.security.policy=server.policy Server &
+  
+
+--总结：
+服务端：
+1.编译方法：
+a.在 compute/Compute.java 和 compute/Task.java 的 工作目录下执行
+ cd /usr/local/webapps/javaweb/lzrmi/classes
+ javac compute/Compute.java compute/Task.java
+ jar cvf compute.jar compute/*.class
+
+b.在 engine/ComputeEngine.java 的 工作目录下执行
+cd /home/lzrmi/src
+ javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar engine/ComputeEngine.java
+
+2.rmiregistry 的启动：
+需要加的codebase 为 执行java 所在的目录 本例中为 /home/lzrmi/src/：
+rmiregistry -J-Djava.rmi.server.codebase=file:/home/lzrmi/src/ &
+
+使用http的模式
+rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.78:8080/lzrmi/classes/ &
+
+
+3.server.policy：
+需要与 rmiregistry 一致
+
+grant codeBase "file:/home/lzrmi/src/" {
+    permission java.security.AllPermission;
+};
+
+
+4.执行:
+java -Djava.rmi.server.useCodebaseOnly=false \
+     -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ \
+     -Djava.security.policy=server.policy \
+     engine.ComputeEngine
+--以下面使用 Codebase 更好
+也可以：-Djava.rmi.server.useCodebaseOnly=true \ 默认为true可以不写
+
+java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ \
+     -Djava.security.policy=server.policy \
+     engine.ComputeEngine
+
+--增加 java.rmi.server.hostname，以便不同客户端可以调用正确 需要加-cp
+
+java -cp /home/ann/src:/usr/local/webapps/javaweb/lzrmi/ann/classes/compute.jar \
+     -Djava.rmi.server.codebase=http://192.168.0.78:8080/lzrmi/classes/ \
+     -Djava.security.policy=server.policy \
+     -Djava.rmi.server.hostname=192.168.0.78 \
+     engine.ComputeEngine &
+
+
+--window下
+服务端
+javac -cp E:\AppRmi\rmitest\src\compute.jar    engine\ComputeEngine.java
+
+java -cp E:\AppRmi\rmitest\src;E:\AppRmi\rmitest\src\compute.jar -Djava.rmi.server.codebase=file:/e:/AppRmi/rmitest/src/-     -Djava.rmi.server.hostname=192.168.0.104     -Djava.security.policy=server.policy        engine.ComputeEngine
+
+客户端
+java -cp E:\AppRmi\rmitest\src;E:\AppRmi\rmitest\src\compute.jar     -Djava.rmi.server.codebase=file:/e:/AppRmi/rmitest/src/-  -Djava.rmi.server.hostname=192.168.0.104   -Djava.security.policy=client.policy   -Djava.security.debug=access,failure     client.ComputePi 192.168.0.104 45
+
+
+--------------------===================================
+客户端：
+在linux下：在 client.ComputePi.class 的工作目录下：(rmiregistry 用服务器端的，也可不同机子另起一个）
+cd /home/lzrmi/src
+javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar \
+    client/ComputePi.java client/Pi.java
+mkdir /usr/local/webapps/javaweb/lzrmi/classes/client
+cp client/Pi.class
+    /usr/local/webapps/javaweb/lzrmi/classes/client （只要Pi.class即可)
+
+java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ \
+     -Djava.security.policy=client.policy \
+        client.ComputePi 192.168.0.104 45
+
+--window下：
+
+1.编译方法：
+
+cd E:\AppRmi\rmitest\src
+javac -cp E:\AppRmi\rmitest\lib\compute.jar client\ComputePi.java client\Pi.java
+mkdir c:\home\jones\public_html\classes\client
+cp client\Pi.class
+    c:\home\jones\public_html\classes\client
+
+javac -classpath E:\AppRmi\rmitest\src -cp E:\AppRmi\rmitest\lib\compute.jar client\ComputePi.java client\Pi.java
+
+
+2.rmiregistry 的启动：
+需要加的codebase 为 执行java 所在的目录 本例中为 /home/lzrmi/src/：
+start rmiregistry -J-Djava.rmi.server.codebase=file:/E:/AppRmi/rmitest/bin/
+
+start rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/
+
+3.client.policy：
+需要与 rmiregistry 一致
+
+
+
+
+-----在window客户端（客户端在window系统下）
+4.执行
+
+java -cp E:\AppRmi\rmitest\src;c:\home\jones\public_html\classes\compute.jar
+     -Djava.rmi.server.codebase=file:/c:/home/jones/public_html/classes/
+     -Djava.security.policy=client.policy
+        client.ComputePi mycomputer.example.com 45
+
+-Djava.rmi.server.useCodebaseOnly=false
+-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzrmi/classes/compute.jar
+-Djava.rmi.server.hostname=192.168.0.9
+-Djava.security.policy=file:/${workspace_loc:rmitest/bin/client.policy}
+
+--不用有问题：java -cp E:\AppRmi\rmitest\src;E:\AppRmi\rmitest\lib\compute.jar     -Djava.rmi.server.codebase=file:/E:/AppRmi/rmitest/src/     -Djava.security.policy=client.policy        client.ComputePi 192.168.0.9 45
+
+以下四句都可以，需要处理防火墙
+java -cp E:\AppRmi\rmitest\src;E:\AppRmi\rmitest\lib\compute.jar     -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/  -Djava.rmi.server.hostname=192.168.0.104   -Djava.security.policy=client.policy   -Djava.security.debug=access,failure     client.ComputePi 192.168.0.104 45
+java -cp E:\AppRmi\rmitest\src;E:\AppRmi\rmitest\lib\compute.jar     -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/-  -Djava.rmi.server.hostname=192.168.0.104   -Djava.security.policy=client.policy   -Djava.security.debug=access,failure     client.ComputePi 192.168.0.104 45
+----------
+java -cp E:\AppRmi\rmitest\src;E:\AppRmi\rmitest\lib\compute.jar     -Djava.rmi.server.codebase=file:/e:/AppRmi/rmitest/src/-  -Djava.rmi.server.hostname=192.168.0.104  -Djava.security.policy=client.policy   -Djava.security.debug=access,failure     client.ComputePi 192.168.0.104 45
+java -cp E:\AppRmi\rmitest\src;E:\AppRmi\rmitest\src\compute.jar     -Djava.rmi.server.codebase=file:/e:/AppRmi/rmitest/src/-  -Djava.rmi.server.hostname=192.168.0.104  -Djava.security.policy=client.policy   -Djava.security.debug=access,failure     client.ComputePi 192.168.0.104 45
+
+--下面不用加-cp也可以
+java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ -Djava.rmi.server.hostname=192.168.0.104 -Djava.security.policy=client.policy -Djava.security.debug=access,failure client.ComputePi 192.168.0.104 45
+
+
+错误解决：
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is:
+        java.net.ConnectException: Connection refused: connect
+
+
+SectionWorkerManagerInterface manager = (SectionWorkerManagerInterface) Naming.lookup("//192.168.1.118:1099/SectionWorkerManager"); 
+漏加rmi了？ 
+("rmi://192.168.1.118:1099/SectionWorkerManager"); 
+--说明：在lookup中写完整的路径
+
+解决问题方法如下： 
+
+在服务端的 Naming.rebind("SectionWorkerManager", manager );没有指定ip，(这个语句在Windows下没问题)linux系统自己使用localhost 
+解析为IP 127.0.0.1,当客户端向服务器Lookup时，服务端就会把解析出来的地址发给客户端，让客户端再根据这个地址去 
+连接，客户端收到127.0.0.1这个地址去连接，实际连接的是自己本身，当然也就不行了。 
+
+更正办法：把Naming.rebind("SectionWorkerManager", manager); 
+改成Naming.rebind("rmi://10.1.5.xxx:1099/SectionWorkerManager", manager);，直接用IP地址（10.1.5.xxx:1099为服务器本身IP），这样就没问题了； 
+或者是用机器名，该服务器的名字为RHELTEST，把它加到服务器的hosts文件中，并放在127.0.0.1之前，以让该服务能正确解析出来机器 
+名所对应的IP；要么用域名解析也行，这种方法比较适合大规模场合。 
+
+
+start rmiregistry -J-Djava.rmi.useLocalHostName=true -J-Djava.rmi.server.hostname=127.0.0.1
+start rmiregistry -J-Djava.rmi.server.hostname=localhost
+
+start java -Xms64m -Xmx1024m -Djava.security.policy=client.policy -Djava.rmi.server.hostname=localhost -Djava.rmi.server.disableHttp=true -Djava.rmi.server.codebase=file:/c:/guarana/libs/guarana-dsl-1.0b.jar -jar eai-solution.jar  
+
+
+A.1 Why do I get an exception for an unexpected hostname and/or port number when I call Naming.lookup?
+The hostname and port number you see in the exception trace represent the address on which the looked-up server believes it is listening. While the Java Remote Method Invocation (Java RMI) server can theoretically be on any host, it is usually the same host as that on which the registry is running, and on a different port. 
+Even if the server is mistaken about its hostname or IP address (or has a hostname that simply isn't resolvable by clients), it will still export all of its objects using that mistaken hostname, but you will see an exception every time you try to receive one of those objects.
+
+The hostname which you specified in Naming.lookup to locate the registry has no effect on the hostname which is already embedded in the remote reference to the server.
+
+Usually, the mysterious hostname is the unqualified hostname of the server, or a private name unknown to the client's nameservice, or (in the case of Windows platforms) the server's Network->Identification->Machine Name.
+
+The appropriate workaround is to set the system property java.rmi.server.hostname when starting the server. The value of the property should be the externally reachable hostname (or IP address) of the server -- whatever works when specified as the host-part in Naming.lookup is good enough.
+
+
+防火墙处理
+ service iptables stop
+ 
+ service iptables start
+
+正解：
+http://www.coderanch.com/t/210044/java/java/RMI-fails-connect-XP-Linux
+
+The problem is that you have only opened port 1099 - this is the port that the registry runs on - but your server runs on another port - which usually is randomly assigned. You can specify a port number in the UnicastRemoteObject constructor call in your server's constructor, or make a special RMIServerSocketFactory/RMIClientSocketFactory pair that uses a specified port (or range of ports). The first solution is probably a lot easier in your case, so specify a port in the super() call in your server's constructor, and open that port in your firewall, and you shouldn't get the exception. 
+
+方法1
+直接在 iptables 中处理
+/sbin/iptables -I INPUT -p tcp --dport 40286 -j ACCEPT
+/etc/rc.d/init.d/iptables save
+service iptables restart
+--------------
+在ComputeEngine.java中：
+Compute stub =
+                (Compute) UnicastRemoteObject.exportObject(engine, 0);
+更改为：
+
+Compute stub =
+                (Compute) UnicastRemoteObject.exportObject(engine, 40286);
+
+
+javac -cp /usr/local/webapps/javaweb/lzrmi/classes/compute.jar engine/ComputeEngine.java
+
+java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/      -Djava.security.policy=server.policy      -Djava.rmi.server.hostname=192.168.0.104      engine.ComputeEngine &
+搞定！
+
+
+方法2
+http://docs.oracle.com/javase/7/docs/technotes/guides/rmi/socketfactory/index.html
+http://docs.oracle.com/javase/7/docs/technotes/guides/rmi/socketfactory/SSLInfo.html
+
+
+javac -cp .:/usr/local/webapps/javaweb/lzrmi/classes/compute.jar:/usr/local/webapps/javaweb/lzrmi/classes/engine_new engine_new/ComputeEngine.java
+
+java -Djava.rmi.server.codebase=http://192.168.0.78:8080/lzrmi/ann/classes/ \
+     -Djava.security.policy=server.policy \
+     -Djava.rmi.server.hostname=192.168.0.78 \
+     engine_new.ComputeEngine &
+--==========================================================================
+在linux服务器端：
+[root@localhost classes]# pwd
+/usr/local/webapps/javaweb/lzrmi/classes
+---------------------------------------
+rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ &
+
+java -Djava.rmi.server.codebase=http://192.168.0.104:8080/lzrmi/classes/ -Djava.security.policy=server.policy -Djava.rmi.server.hostname=192.168.0.104 engine.ComputeEngine &
+--------------------------------------------------------------------------
+在linux客户端
+[root@db src]# pwd
+/home/lzrmi/src
+------------------------------
+java -Djava.rmi.server.codebase=http://192.168.0.78:8080/lzrmi/classes/ \
+     -Djava.security.policy=client.policy \
+        client.ComputePi 192.168.0.78 45
+在windows客户端
+
+E:\AppRmi\rmitest\src>java     -Djava.security.policy=client.policy        client.ComputePi 192.168.0.104 45
+3.141592653589793238462643383279502884197169399
+--==========================================================================
+
+
+4.3.4. Securing rpcbind
+
+4.3.4.2. Protect rpcbind With f irewalld
+To further restrict access to the rpcbind service, it is a good idea to add firewalld rules
+to the server and restrict access to specific networks.
+Below are two example firewalld rich language commands. The first allows TCP
+connections to the port 111 (used by the rpcbind service) from the 192.168.0.0/24
+network. The second allows TCP connections to the same port from the localhost. All other
+packets are dropped.
+~]# firewall-cmd --add-rich-rule='rule family="ipv4" port port="111"
+protocol="tcp" source address="192.168.0.0/24" invert="True" drop'
+~]# firewall-cmd --add-rich-rule='rule family="ipv4" port port="111"
+protocol="tcp" source address="127.0.0.1" accept'
+To similarly limit UDP traffic, use the following command:
+~]# firewall-cmd --add-rich-rule='rule family="ipv4" port port="111"
+protocol="udp" source address="192.168.0.0/24" invert="True" drop'

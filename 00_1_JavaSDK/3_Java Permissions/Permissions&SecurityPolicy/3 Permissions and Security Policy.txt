@@ -1,0 +1,45 @@
+http://docs.oracle.com/javase/7/docs/technotes/guides/security/spec/security-spec.doc3.html
+
+3 Permissions and Security Policy
+
+3.1 The Permission Classes
+
+3.3.1 Policy File Format
+
+
+The following grants two permissions to code that is signed by both Li and Roland: 
+
+grant signedBy "Roland,Li" {
+  permission java.io.FilePermission "/tmp/*", "read";
+  permission java.util.PropertyPermission "user.*";
+};
+
+
+The following grants two permissions to code that is signed by Li and that comes from http://www.example.com: 
+
+grant codeBase "http://www.example.com/*", signedBy "Li" {
+    permission java.io.FilePermission "/tmp/*", "read";
+    permission java.io.SocketPermission "*", "connect";
+};
+
+
+
+3.3.4 Assigning Permissions
+
+
+The exact meaning of a policy entry codeBase URL value depends on the characters at the end. A codeBase with a trailing "/" matches all class files (not JAR files) in the specified directory. A codeBase with a trailing "/*" matches all files (both class and JAR files) contained in that directory. A codeBase with a trailing "/-" matches all files (both class and JAR files) in the directory and recursively all files in subdirectories contained in that directory. 
+ As an example, given "http://www.example.com/-" in the policy, then any code base that is on this web site matches the policy entry. Matching code bases include "http://www.example.com/j2se/sdk/" and "http://www.example.com/people/gong/appl.jar".
+
+If multiple entries are matched, then all the permissions given in those entries are granted. In other words, permission assignment is additive. For example, if code signed with key A gets permission X and code signed by key B gets permission Y and no particular codebase is specified, then code signed by both A and B gets permissions X and Y. Similarly, if code with codeBase "http://www.example.com/-" is given permission X, and "http://www.example.com/people/*" is given permission Y, and no particular signers are specified, then an applet from "http://www.example.com/people/applet.jar" gets both X and Y.
+
+ Note that URL matching here is purely syntactic. For example, a policy can give an entry that specifies a URL "ftp://ftp.sun.com". Such an entry is useful only when one can obtain Java code directly from ftp for execution.
+
+ To specify URLs for the local file system, a file URL can be used. For example, to specify files in the /home/cathy/temp directory in a Solaris system, you'd use
+"file:/home/cathy/temp/*"
+
+ To specify files in the "temp" directory on the C drive in a Windows system, use "file:/c:/temp/*"
+
+ Note: code base URLs always use slashes (no backlashes), regardless of the platform they apply to. 
+ You can also use an absolute path name such as
+"/home/gong/bin/MyWonderfulJava"
+

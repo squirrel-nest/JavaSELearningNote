@@ -1,0 +1,309 @@
+<SCRIPT language=javascript>
+<!--
+// public_description object used to declare scriplet
+var public_description = new CoolbarObject();// general object description
+
+function CoolbarObject()
+{
+	this.version = "1.0";
+	this.AddButton = mAddButton;
+	this.AddToggerButton = mAddToggerButton;
+	this.ResetButton = mResetButton;
+	this.ResetToggerButton = mResetToggerButton;
+	this.RemoveItem = mRemoveItem;
+	this.DisableButton = mDisableButton;
+	this.EnableButton = mEnableButton;
+	this.get_Title = readTitle;
+	this.put_Title = writeTitle;
+}
+
+function writeTitle(titletext)
+{
+	document.title = titletext;
+}
+
+function readTitle()
+{
+	return(document.title);
+}
+
+function mAddButton(id,ImgStr,TextStr,ToolTip)
+{
+//Find insert Index
+	Index = TBar.cells.length;
+	if(id == 'spliter')
+	{
+		var innerStr = '<IMG src=../images/buttdivider.gif>';
+		var newTD = TBar.insertCell(Index - 1);
+		newTD.vAlign = 'center';
+		newTD.name = id;
+		newTD.width = 5;
+		newTD.noWrap = true;
+		newTD.className = 'off';
+		newTD.innerHTML = innerStr;
+		return(0);
+	}
+	if(ImgStr != '') innerStr = '<NOBR><IMG height=16 width=16 src="' + ImgStr + '">&nbsp;' + TextStr + '</NOBR>';
+	else  innerStr = '<NOBR>' + TextStr + '</NOBR>';
+	var newTD = TBar.insertCell(Index - 1);
+	newTD.vAlign = 'bottom';
+	newTD.style.fontFamily = "ËÎÌו";
+	newTD.style.fontSize = "9pt";
+	newTD.name = id;
+	newTD.width = 15;
+	newTD.noWrap = true;
+	newTD.className = 'off';
+	if(ToolTip != '') newTD.title = ToolTip;
+	newTD.innerHTML = innerStr;
+}
+
+function mAddToggerButton(id,Status,ImgStr1,TextStr1,ToolTip1,ImgStr2,TextStr2,ToolTip2)
+{
+//Find insert Index
+	if((Status != 0) && (Status != 1)) return(0);
+	Index = TBar.cells.length;
+	var innerStr = new Array(2);
+	if(ImgStr1 != '') innerStr[0] = '<NOBR><IMG src="' + ImgStr1 + '">&nbsp;' + TextStr1 + '</NOBR>';
+	else  innerStr[0] = '<NOBR>' + TextStr1 + '</NOBR>';
+	if(ImgStr2 != '') innerStr[1] = '<NOBR><IMG src="' + ImgStr2 + '">&nbsp;' + TextStr2 + '</NOBR>';
+	else  innerStr[1] = '<NOBR>' + TextStr2 + '</NOBR>';
+	var newTD = TBar.insertCell(Index - 1);
+	newTD.vAlign = 'bottom';
+	newTD.style.fontFamily = "ËÎÌו";
+	newTD.style.fontSize = "9pt";
+	newTD.name = id;
+	newTD.width = 15;
+	newTD.noWrap = true;
+	newTD.className = 'Toggeroff' + Status;
+	if(Status == 0)
+	{
+		if(ToolTip1 != '') newTD.title = ToolTip1;
+		newTD.innerHTML = innerStr[0];
+		newTD.hideToolTip = ToolTip2;
+		newTD.hideHTML = innerStr[1];
+	}
+	else
+	{
+		if(ToolTip2 != '') newTD.title = ToolTip2;
+		newTD.innerHTML = innerStr[1];
+		newTD.hideToolTip = ToolTip1;
+		newTD.hideHTML = innerStr[0];
+	}
+}
+
+function mRemoveItem(id)
+{
+	for(i=0;i<TBar.cells.length;i++)
+	{
+		if(TBar.cells(i).name ==id) TBar.deleteCell(i);
+	}
+}
+
+function mResetButton(id,newID,ImgStr,TextStr,ToolTip)
+{
+	var TCell = FindCellByID(id);
+	if(TCell != null)
+	{
+		if(ImgStr != '') innerStr =  '<NOBR><IMG src="' + ImgStr + '">' + TextStr + '</NOBR>';
+		else  innerStr = '<NOBR>' + TextStr + '</NOBR>';
+		TCell.className = 'off';
+		TCell.name = newID;
+		TCell.style.fontFamily = "ËÎÌו";
+		TCell.style.fontSize = "9pt";
+		TCell.title = ToolTip;
+		TCell.innerHTML = innerStr;
+	}
+}
+
+function mResetToggerButton(id,Status)
+{
+	var TCell = FindCellByID(id);
+	if((TCell != null) && (TCell.className.search(/Togger/gi) != -1))
+	{
+			var oldStatus = new Number(TCell.className.charAt(TCell.className.length-1));
+			if(oldStatus == Status) return(0);
+			TCell.className = TCell.className.replace(oldStatus.toString(),Status.toString());
+			var tmpstr = TCell.hideHTML;
+			TCell.hideHTML = TCell.innerHTML;
+			TCell.innerHTML = tmpstr;
+			tmpstr = TCell.hideToolTip;
+			TCell.hideToolTip = TCell.title;
+			TCell.title = tmpstr;
+	}
+}
+
+function mDisableButton(id)
+{
+	var TCell = FindCellByID(id);
+	if((TCell != null) && (TCell.className != 'UnAvailable'))
+	{
+		TCell.className = 'UnAvailable';
+	}
+}
+//ButtonType Value:
+//""indicates normal button
+//"0" Or "1" indicates Togger button
+function mEnableButton(id,ButtonType)
+{
+	var TCell = FindCellByID(id);
+	if((TCell != null) && (TCell.className == 'UnAvailable'))
+	{
+		if(ButtonType != '') //Togger Button
+			TCell.className = 'ToggerOff' + ButtonType;
+		else
+			TCell.className = 'Off';
+	}
+}
+
+//Find Cell By Id
+function FindCellByID(id)
+{
+	var tbCell = null;
+	for(i=0;i<TBar.cells.length;i++)
+	{
+		if(TBar.cells(i).name ==id)
+		{
+			tbCell = TBar.cells(i);
+			break;
+		}
+	}
+	return(tbCell);
+}
+-->
+</SCRIPT>
+<STYLE>
+<!--
+TD.down				{border-bottom:threedhighlight solid 1px;border-left:threedshadow solid 1px;
+					border-right:threedhighlight solid 1px;border-top:threedshadow solid 1px}
+
+TD.on				{border-bottom:threedshadow solid 1px;border-left:threedhighlight solid 1px;
+					border-right:threedshadow solid 1px;border-top:threedhighlight solid 1px}
+
+TD.UnAvailable		{color:threedhighlight;border-style:none;filter:Mask(Color=threedshadow) Mask(Color=threedshadow)
+					DropShadow(Color=threedhighlight, OffX=1, OffY=1, Positive=1);}
+
+TD.off				{border: 1px none;
+}
+
+TD.Toggerdown0		{border-bottom:threedhighlight solid 1px;border-left:threedshadow solid 1px;
+					border-right:threedhighlight solid 1px;border-top:threedshadow solid 1px}
+
+TD.Toggeron0		{border-bottom:threedshadow solid 1px;border-left:threedhighlight solid 1px;
+					border-right:threedshadow solid 1px;border-top:threedhighlight solid 1px}
+
+TD.Toggeroff0		{border-width:1px;border-style:solid;border-color:#b7c9d0;filter:Gray;}
+
+TD.Toggerdown1		{border-bottom:threedhighlight solid 1px;border-left:threedshadow solid 1px;
+					border-right:threedhighlight solid 1px;border-top:threedshadow solid 1px}
+
+TD.Toggeron1		{border-bottom:threedhighlight solid 1px;border-left:threedshadow solid 1px;
+					border-right:threedhighlight solid 1px;border-top:threedshadow solid 1px;}
+
+TD.Toggeroff1		{border-bottom:threedhighlight solid 1px;border-left:threedshadow solid 1px;
+					border-right:threedhighlight solid 1px;border-top:threedshadow solid 1px;background-color:threedhighlight;filter:Gray;}
+
+TD.static			{border-style:none;border-color:#b7c9d0;}
+
+.outset-table
+{
+	BORDER-RIGHT: 1px outset;
+	BORDER-TOP: 1px outset;
+	FONT-SIZE: 10pt;
+	BORDER-LEFT: 1px outset;
+	BORDER-BOTTOM: 1px outset;
+    TEXT-DECORATION: blink;
+	background:url(../images/w_toobarbk.gif);
+}
+-->
+</STYLE>
+<SCRIPT language=javascript>
+<!--
+	document.onmouseover = mOver;
+	document.onmouseout = mOut;
+	document.onclick = mClick;
+	document.onmousedown = mDown;
+	document.onmouseup = mUp;
+	document.ondragstart = dStart;
+
+function dStart()
+{
+	event.returnValue = false;
+}
+function mOver()
+{
+	var srcE = event.srcElement;
+	while((srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() !='BODY')) srcE = srcE.parentElement;
+	if((srcE.tagName.toUpperCase() =='TD') && (srcE.className != 'static') && (srcE.className != 'UnAvailable'))
+	{
+		srcE.className = srcE.className.replace('off','on');
+	}
+}
+function mOut()
+{
+	var srcE = event.srcElement;
+	while((srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() !='BODY')) srcE = srcE.parentElement;
+	if((srcE.tagName.toUpperCase() =='TD') && (srcE.className != 'static') && (srcE.className != 'UnAvailable'))
+	{
+		srcE.className =  srcE.className.replace('on','off');
+	}
+}
+
+function mDown()
+{
+	var srcE = event.srcElement;
+	while((srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() !='BODY')) srcE = srcE.parentElement;
+	if((srcE.tagName.toUpperCase() =='TD') && (srcE.className != 'static') && (srcE.className != 'UnAvailable'))
+	{
+		srcE.className = srcE.className.replace('on','down');
+	}
+}
+
+function mUp()
+{
+	var srcE = event.srcElement;
+	while((srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() !='BODY')) srcE = srcE.parentElement;
+	if((srcE.tagName.toUpperCase() =='TD') && (srcE.className != 'static') && (srcE.className != 'UnAvailable'))
+	{
+		srcE.className = srcE.className.replace('down','on');
+	}
+}
+
+function mClick()
+{
+	var srcE = event.srcElement;
+	while((srcE.tagName.toUpperCase() != 'TD') && (srcE.tagName.toUpperCase() !='BODY')) srcE = srcE.parentElement;
+	if((srcE.tagName.toUpperCase() =='TD') && (srcE.className != 'static') && (srcE.className != 'UnAvailable'))
+	{
+		if(srcE.className.search(/Togger/gi) != -1)
+		{
+			var Status = new Number(srcE.className.charAt(srcE.className.length-1));
+			newStatus = Math.abs(Status - 1);
+			srcE.className = srcE.className.replace(Status.toString(),newStatus.toString());
+
+			var tmpstr = srcE.hideHTML;
+			srcE.hideHTML = srcE.innerHTML;
+			srcE.innerHTML = tmpstr;
+
+			tmpstr = srcE.hideToolTip;
+			srcE.hideToolTip = srcE.title;
+			srcE.title = tmpstr;
+
+			window.external.raiseEvent('OnButtonClick',srcE.name + newStatus);
+		}
+		else if(srcE.name != 'spliter')
+		{
+			window.external.raiseEvent('OnButtonClick',srcE.name);
+		}
+	}
+}
+-->
+</SCRIPT>
+<BODY>
+	<TABLE width="120%" class="outset-table" style="position:absolute;left:0;top:0;">
+		<TR id=TBar name=TBar>
+			<TD name="spliter" class=off align=center height="28" width="5">
+            <IMG src="../images/buttdivider.gif"></TD>
+			<TD id=End width=* class="static"><IFRAME src="KeepAlive.htm" border="0" height="0" width="0" style="display:none;"></iframe></TD>
+		</TR>
+</TABLE>	
+</BODY>

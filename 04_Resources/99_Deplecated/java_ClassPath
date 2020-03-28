@@ -1,0 +1,9 @@
+.;C:\Program Files\Java\jdk1.6.0_13\bin;%ORACLE_HOME%\jdbc\lib\ojdbc6.jar;%ORACLE_HOME%\jdbc\lib\orai18n.jar;%ORACLE_HOME%\sqlj\lib\translator.jar;%ORACLE_HOME%\sqlj\lib\runtime12.jar;%ORACLE_HOME%\sqlj\lib\runtime12ee.jar;%ORACLE_HOME%\ord\jlib\jai_codec.jar;%ORACLE_HOME%\ord\jlib\jai_core.jar;%ORACLE_HOME%\rdbms\jlib\xdb.jar;%ORACLE_HOME%\lib\xmlparserv2.jar;%ORACLE_HOME%\lib\xmlcomp.jar;%ORACLE_HOME%\lib\xschema.jar;%ORACLE_HOME%\jlib\jewt4.jar;%ORACLE_HOME%\md\jlib\sdoapi.jar;%ORACLE_HOME%\md\jlib\sdoutl.jar;%ORACLE_HOME%\dbjava\lib\nls_charset12.jar;%ORACLE_HOME%\md\demo\georaster\java\georaster_tools.jar;C:\Program Files\Java\jre6\lib\ext\QTJava.zip
+
+C:\Program Files\JavaFX\javafx-sdk1.1\bin;C:\Program Files\JavaFX\javafx-sdk1.1\emulator\bin;D:\app\Administrator\product\11.1.0\client_1\bin;D:\app\Administrator\product\11.1.0\db_1\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.6.0_13;C:\Program Files\QuickTime\QTSystem\
+
+java oracle.spatial.georaster.tools.GeoRasterLoader "wanglai-GXLU" "lzsdh" "1521" "load8" "load8" "thin" "32" "T" "imageTableName" "georColName" "storageParams" "pathToImageFile1,rasterid1,rdtName1[,worldFileName1[,SRID1]]" "pathToImageFile2,rasterid2,rdtName2[,worldFileName2[,SRID2]]" ... "pathToImageFileN,rasteridN,rdtNameN[,worldFileNameN[,SRIDN]"
+
+java oracle.spatial.georaster.tools.GeoRasterLoader "wanglai-GXLU" "lzsdh" "1521" "load8" "load8" "thin" "32" "T" "images" "image" "" "E:\image.jpg,21,RDT1"
+
+java oracle.spatial.georaster.tools.GeoRasterTool

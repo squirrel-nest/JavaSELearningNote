@@ -1,0 +1,31 @@
+如何在程序异常或正常退出JVM时执行特定代码
+
+发表日期：2008-1-5
+
+新浪微博 QQ空间 QQ微博 百度搜藏 腾讯朋友 QQ收藏 百度空间 人人网 开心网  
+
+-
+
+　　作者：jackliu
+e-mail:suntoday@eyou.com
+
+通常情况下，我们一般调用System.exit()方法来退出JVM，查看System.exit()的设计可以发现这个方法调用了Runtime.getRuntime()的exit()方法，参考Runtime类结构我们可以得到关于系统退出时有关更多的方法。
+exit()方法会使java JVM退出，在Jdk1.3中，假如使用addShutdownHook()方法注册了一个线程，当通过调用exit()或通过用户中断（CTRL C)被关闭后，该线程将被激活调用，可以利用这一功能来在系统退出或异常退出捕捉这一时刻，做一些必要的退出操作。
+shutdownhook(关机钩)的主要目的是在系统中断后进行必要的清除，例如进行网络关闭、关闭打开的文件等操作，可以通过addShutdownHook()方法注册了一个这样的关机钩，并且答应你注册多个关机钩。在JVM退出之前，它会启动所有已注册的关机钩，并让这些关机钩线程同步执行。在一个关机钩执行之前可以使用removeShutdownHook()来删除一个已注册的关机钩，也可以调用halt()不调用关机钩线程直接退出JVM。
+
+下面是注册关机钩的例子，在addShutdownHook方法里构造了一个局部类，这个局部类实现了在系统中断退出时要执行的一些必要操作。在例子里，同时注册了两个关机钩。
+
+
+
+
+
+import java.lang.*;public class TestExit{        public static void main(String[] args){                System.out.PRintln("my java process");                //注册一个关机钩，当系统被退出或被异常中断时，启动这个关机钩线程                Runtime.getRuntime().addShutdownHook(new Thread(){                                                                                public void run(){                                                 //添入你想在退出JVM之前要处理的必要操作代码                                                System.out.println("T1");}                                });                //注册第二个关机钩                                Runtime.getRuntime().addShutdownHook(new Thread(){                                        public void run(){ System.out.println("T2");}                                });                System.exit(0);        }                }
+
+当测试这段代码时，系统可能输出结果如下：
+
+
+
+
+my java processT2T1
+
+原来，这两个关机钩线程在程序退出被JVM并行执行，假如你设置了线程优先级，将先执行一个高优先级的钩子线程，否则将被随机并行执行。 

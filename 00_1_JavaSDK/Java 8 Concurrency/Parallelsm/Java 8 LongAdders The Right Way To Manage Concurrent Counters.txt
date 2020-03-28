@@ -1,0 +1,3 @@
+Java 8 LongAdders The Right Way To Manage Concurrent Counters
+
+http://blog.takipi.com/java-8-longadders-the-fastest-way-to-add-numbers-concurrently/

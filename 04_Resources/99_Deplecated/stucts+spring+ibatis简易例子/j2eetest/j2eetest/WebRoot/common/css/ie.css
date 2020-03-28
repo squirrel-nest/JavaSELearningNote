@@ -1,0 +1,148 @@
+input {
+	BORDER: #7f9db9 1px solid;height:20
+}
+.checkbox2{
+	BORDER:0px ;
+}
+
+.select2 {
+	BORDER: #000000 1px solid;  BACKGROUND-COLOR: #ffffff ; height:20
+} 
+.title
+{
+border:none;
+font: bold 12px Tahoma, Verdana;
+color:#000;
+margin:0px 0px 0px 10px;
+}
+.tdsaturate {
+	text-decoration: none;
+	background-color: #F9F9F9;
+	border-top: 1px solid #CDCDCD;
+	border-right: 1px solid #CDCDCD;
+	border-bottom:1px solid #CDCDCD;
+	border-left: 1px solid #CDCDCD;
+}
+.tdsaturate2 {
+	text-decoration: none;
+	background-color: #CDCDCD;
+	border-right: 1px solid #CDCDCD;
+	border-left: 1px solid #CDCDCD;
+}
+/*  ↑有边框的深色单元格的表格样式  */
+
+.tdtint {
+	text-decoration: none;
+	background-color: #ffffff;
+	border-top: 1px solid #CDCDCD;
+	border-right: 1px solid #CDCDCD;
+	border-bottom:1px solid #CDCDCD;
+	border-left: 1px solid #CDCDCD;
+}
+.buttoncom1
+{
+	font-size:12px;
+	color: #FFFFFF;
+	background-image: url(..\images\common_bg1.gif);
+	height: 21px;
+	width: 45px;
+	border: 1px none;  
+	cursor: hand;            
+	background-color: transparent;           
+}
+
+.buttoncom2
+{
+	font-size:12px;
+	color: #ffffff;
+	background-image: url(..\images\common_bg2.gif);
+	height: 21px;
+	width: 64px;
+	border: 1px none;  
+	cursor: hand;         
+	background-color: transparent;
+}
+.buttoncom4
+{
+	font-size:12px;
+	color: #FFFFFF;
+	background-image: url(..\images\common_bg4.gif);
+	height: 21px;
+	width: 83px;
+	border: 1px none;  
+	cursor: hand;      
+	background-color: transparent;
+}
+
+.buttoncom6
+{
+	font-size: 12px;
+	color: #FFFFFF;
+	background-image: url(..\images\common_bg6.gif);
+	height: 21px;
+	width: 110px;
+	border: 1px none;  
+	cursor: hand;      
+	background-color: transparent;
+}
+.buttoncom1_dis
+{
+	font-size:12px;
+	background-image: url(..\images\common_bg1_dis.gif);
+	height: 22px;
+	width: 32px;
+	border: 1px none;  
+	cursor: hand;            
+	background-color: transparent;           
+}
+
+.buttoncom2_dis
+{
+	font-size:12px;
+	background-image: url(..\images\common_bg2_dis.gif);
+	height: 22px;
+	width: 60px;
+	border: 1px none;  
+	cursor: hand;         
+	background-color: transparent;              
+}
+.buttoncom4_dis
+{
+	font-size:12px;
+	background-image: url(..\common\images\common_bg4_dis.gif);
+	height: 22px;
+	width: 70px;
+	border: 1px none;  
+	cursor: hand;      
+	background-color: transparent;
+}
+
+.buttoncom6_dis
+{
+	font-size: 12px;
+	background-image: url(..\images\common_bg6_dis.gif);
+	height: 22px;
+	width: 90px;
+	border: 1px none;  
+	cursor: hand;      
+	background-color: transparent;
+}
+tr.listClick {
+font-weight: bold;color:0000ff;
+}
+
+.button2
+{
+	font-size:12px;
+	color: #000000;
+	background-image: url(..\images\button_2.gif);
+	height: 22px;
+	width: 60px;
+	border: 1px none;  
+	cursor: hand;         
+	background-color: transparent;              
+}
+.table2 {
+
+	font:12px "宋体";
+}

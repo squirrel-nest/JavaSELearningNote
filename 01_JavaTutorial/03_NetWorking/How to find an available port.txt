@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/2675362/how-to-find-an-available-port
+
+Java 获取可用 UDP 端口号的方法
+http://blog.csdn.net/defonds/article/details/8733123

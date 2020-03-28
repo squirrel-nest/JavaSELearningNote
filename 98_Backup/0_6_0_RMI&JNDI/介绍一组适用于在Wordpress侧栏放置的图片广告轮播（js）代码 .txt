@@ -1,0 +1,2962 @@
+http://www.blogjava.net/cangshi004/archive/2012/02/02.html
+
+介绍一组适用于在Wordpress侧栏放置的图片广告轮播（js）代码 
+
+
+
+
+适合Linux系统使用的常用命令总结 
+
+     摘要: 适合Linux系统使用的命令，本文以亚马逊的Amazon Linux 为用例，希望对朋友们有点帮助！切换至root用户    sudo su  安装screen    yum install screen       yum update  安装Apache，MySQL...  阅读全文 
+
+posted @ 2014-01-10 10:45 cangshi 阅读(75) | 评论 (0) | 编辑 收藏 
+
+
+
+介绍一组适用于在Wordpress侧栏放置的图片广告轮播（js）代码 
+
+
+
+希望WP爱好者能够喜欢并尝试一下‘
+
+
+1.样式表
+
+1./*SidebarTabsAd*/  
+2.#cwpad_box{width:100%;text-align:center}   
+3.#cwpad_box ul, #cwpad_box dd, #cwpad_box tt{   
+4.    margin:0px;   
+5.    padding:0px;   
+6.    float:left;   
+7.    list-style: none;   
+8.}   
+9.#cwpad_box{   
+10.    width:313px;/*250px+(n-1)*21px*/  
+11.    height:250px;   
+12.    border-left: 1px solid #740a20;   
+13.}   
+14.#cwpad_box dd{   
+15.    width:21px;   
+16.    height:250px;   
+17.    overflow:hidden;   
+18.    position:relative;   
+19.}   
+20.#cwpad_box dd.hove{   
+21.    width:250px;   
+22.    text-align:rightright;   
+23.}   
+24.#cwpad_box dd tt{   
+25.    width:20px;   
+26.    height:250px;   
+27.    top:0px;   
+28.    left:0px;   
+29.    color:#fff;   
+30.    cursor:pointer;   
+31.    text-align:center;   
+32.    padding:20px 0 0 0;   
+33.    background:#b9000d;   
+34.    position:absolute;   
+35.    border-right:1px solid #740a20;   
+36.}   
+37.#cwpad_box dd tt.hove{   
+38.    background:#620317;   
+39.}  
+
+在上面的样式表中，假设放置的是四个250px*250px的图片广告，所以250+（4-1）*21=313px。
+
+2.javascript代码
+
+1.<script type="text/javascript">   
+2.function myAddEvent(obj, sEvent, fn){   
+3.    return obj.attachEvent ? obj.attachEvent('on' + sEvent, fn) : obj.addEventListener(sEvent, fn, false);   
+4.}   
+5.function Class(oParent, sClass){   
+6.    var aElem = oParent.getElementsByTagName('*');   
+7.    var aClass = [];   
+8.    var i = 0;   
+9.    for(i=0;i<aElem.length;i++)if(aElem[i].className == sClass)aClass.push(aElem[i]);   
+10.    return aClass;   
+11.};   
+12.function css(obj, attr, value){   
+13.    if(arguments.length == 2){   
+14.        var style = obj.style,   
+15.            currentStyle = obj.currentStyle;   
+16.        if(typeof attr === 'string')return currentStyle ? currentStyle[attr] : getComputedStyle(obj, false)[attr];   
+17.        for(var propName in attr)propName == 'opacity' ? (style.filter = "alpha(opacity=" + attr[propName] + ")", style.opacity = attr[propName] / 100) : style[propName] = attr[propName];    
+18.    }else if(arguments.length == 3){   
+19.        switch(attr){   
+20.            case "width":   
+21.            case "height":   
+22.            case "paddingTop":   
+23.            case "paddingRight":   
+24.            case "paddingBottom":   
+25.            case "paddingLeft":   
+26.            case "top":   
+27.            case "right":   
+28.            case "bottom":   
+29.            case "left":   
+30.            case "marginTop":   
+31.            case "marginRigth":   
+32.            case "marginBottom":   
+33.            case "marginLeft":   
+34.                obj.style[attr] = value + "px";   
+35.                break;   
+36.            case "opacity":   
+37.                obj.style.filter = "alpha(opacity=" + value + ")";   
+38.                obj.style.opacity = value / 100;   
+39.                break;   
+40.            default:   
+41.                obj.style[attr] = value   
+42.        }   
+43.    }   
+44.};   
+45.function extend(destination, source){   
+46.    for (var propName in source) destination[propName] = source[propName];   
+47.    return destination   
+48.};   
+49.function doMove(obj, json, fnEnd){   
+50.    clearInterval(obj.timer);   
+51.    obj.iSpeed = 0;   
+52.    fnEnd = extend({   
+53.        type: "buffer",   
+54.        callback: function() {}   
+55.    }, fnEnd);   
+56.    obj.timer = setInterval(function(){   
+57.        var iCur = 0,   
+58.            iStop = true;   
+59.        for(var propName in json){   
+60.            iCur = parseFloat(css(obj, propName));   
+61.            propName == 'opacity' && (iCur = Math.round(iCur * 100));   
+62.            switch(fnEnd.type){   
+63.                case 'buffer':   
+64.                    obj.iSpeed = (json[propName] - iCur) / 5;   
+65.                    obj.iSpeed = obj.iSpeed > 0 ? Math.ceil(obj.iSpeed) : Math.floor(obj.iSpeed);   
+66.                    json[propName] == iCur || (iStop = false, css(obj, propName, iCur + obj.iSpeed));   
+67.                    break;   
+68.                case 'elasticity':   
+69.                    obj.iSpeed += (json[propName] - iCur) / 5;   
+70.                    obj.iSpeed *= 0.75;   
+71.                    Math.abs(json[propName] - iCur) <= 1 &&  Math.abs(obj.iSpeed) <= 1 ? css(obj, propName, json[propName]) : css(obj, propName, json[propName]) || (iStop = false, css(obj, propName, iCur + obj.iSpeed));   
+72.                    break;   
+73.                case 'accelerate':   
+74.                    obj.iSpeed = obj.iSpeed + 5;   
+75.                    iCur >= json[propName] ? css(obj, propName, json[propName]) : css(obj, propName, json[propName]) || (iStop = false, css(obj, propName, iCur + obj.iSpeed));   
+76.                break;   
+77.            }   
+78.        }   
+79.        if(iStop){   
+80.            clearInterval(obj.timer);   
+81.            obj.timer = null;   
+82.            obj.iSpeed = 0;   
+83.            fnEnd.callback();   
+84.        }   
+85.    },30);   
+86.};   
+87.  
+88.window.onload = function(){   
+89.    var oBox = document.getElementById('cwpad_box')   
+90.    var aSpan = document.getElementsByTagName('tt');   
+91.    var aLi = document.getElementsByTagName('dd');   
+92.    var playtime = null;   
+93.    var iNow = 0;   
+94.    for(i=0;i<aSpan.length;i++){   
+95.        aSpan[i].index = i;   
+96.        aSpan[i].onclick = function(){   
+97.            for(var len=aLi.length,i=0;i<len;i++)doMove(aLi[i], {width:21});   
+98.            for(var len=aSpan.length,i=0;i<len;i++)aSpan[i].className = '';   
+99.            this.className = 'hove';   
+100.            doMove(this.parentNode, {width:250});   
+101.            iNow = this.index;   
+102.        };   
+103.    }   
+104.    playtime = setInterval(tab,3500);   
+105.    oBox.onmouseover = function(){   
+106.        clearInterval(playtime);   
+107.    }   
+108.    oBox.onmouseout = function(){   
+109.        playtime = setInterval(tab,3500);   
+110.    }   
+111.    function tab(){   
+112.        iNow == aLi.length-1 ? iNow = 0 : iNow++;   
+113.        aSpan[iNow].onclick();   
+114.    }   
+115.};   
+116. </script>    
+
+ 
+
+
+
+3.示例的HTML代码
+
+1.<div id="cwpad_box">  
+2.    <ul>  
+3.        <dd  class="hove">  
+4.        <tt class="hove">网站设计及培训</tt>  
+5.        <a href="http://suoling.net/" target=_blank title="网站设计及培训"><img src="http://fakeimg.pl/250x250/?text=Hello,A!"></a>  
+6.        </dd>  
+7.        <dd>  
+8.        <tt>网站优化及培训</tt>  
+9.        <a href="http://suoling.net/" target=_blank title="网站优化及培训"><img src="http://fakeimg.pl/250x250/?text=Hello,B!"></a>  
+10.        </dd>  
+11.        <dd>  
+12.        <tt>网站诊断</tt>  
+13.        <a href="http://suoling.net/" target=_blank title="网站诊断"><img src="http://fakeimg.pl/250x250/?text=Hello,C!"></a>  
+14.        </dd>  
+15.        <dd>  
+16.        <tt>电子商务培训</tt>  
+17.        <a href="http://suoling.net/" target=_blank title="电子商务培训"><img src="http://fakeimg.pl/250x250/?text=Hello,D!"></a>  
+18.        </dd>  
+19.    </ul>  
+20.</div>  
+
+使用的是索凌网络前面介绍过的"假图"生成网站fakeimg.pl生成的"假图"。
+
+这组代码的一个显著缺点是：不适合移动设备显示。
+
+posted @ 2014-01-08 11:20 cangshi 阅读(23) | 评论 (0) | 编辑 收藏 
+
+
+
+WP后台表格代码示例 
+
+
+1.if(is_admin())   
+
+2.{   
+
+3.    new Cool_Wp_List_Table();   
+
+4.}   
+
+5.  
+
+6./**  
+
+7. * Cool_Wp_List_Table class will create the page to load the table  
+
+8. */  
+
+9.class Cool_Wp_List_Table   
+
+10.{   
+
+11.    /**  
+
+12.     * Constructor will create the menu item  
+
+13.     */  
+
+14.    public function __construct()   
+
+15.    {   
+
+16.        add_action( 'admin_menu', array($this, 'add_menu_example_list_table_page' ));   
+
+17.    }   
+
+18.  
+
+19.    /**  
+
+20.     * Menu item will allow us to load the page to display the table  
+
+21.     */  
+
+22.    public function add_menu_example_list_table_page()   
+
+23.    {   
+
+24.        add_menu_page( 'Coowp示例表格', 'Coowp示例表格', 'manage_options', 'coolwp-list-table.php', array($this, 'list_table_page') );   
+
+25.    }   
+
+26.  
+
+27.    /**  
+
+28.     * Display the list table page  
+
+29.     *  
+
+30.     * @return Void  
+
+31.     */  
+
+32.    public function list_table_page()   
+
+33.    {   
+
+34.        $exampleListTable = new Example_List_Table();   
+
+35.        $exampleListTable->prepare_items();   
+
+36.        ?>   
+
+37.            <div class="wrap">   
+
+38.                <div id="icon-users" class="icon32"></div>   
+
+39.                <h2>Coowp示例表格-页面标题</h2>   
+
+40.                <?php $exampleListTable->display(); ?>   
+
+41.            </div>   
+
+42.        <?php   
+
+43.    }   
+
+44.}   
+
+45.  
+
+46.// WP_List_Table is not loaded automatically so we need to load it in our application   
+
+47.if( ! class_exists( 'WP_List_Table' ) ) {   
+
+48.    require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );   
+
+49.}   
+
+50.  
+
+51./**  
+
+52. * Create a new table class that will extend the WP_List_Table  
+
+53. */  
+
+54.class Example_List_Table extends WP_List_Table   
+
+55.{   
+
+56.    /**  
+
+57.     * Prepare the items for the table to process  
+
+58.     *  
+
+59.     * @return Void  
+
+60.     */  
+
+61.    public function prepare_items()   
+
+62.    {   
+
+63.        $columns = $this->get_columns();   
+
+64.        $hidden = $this->get_hidden_columns();   
+
+65.        $sortable = $this->get_sortable_columns();   
+
+66.  
+
+67.        $data = $this->table_data();   
+
+68.        usort( $data, array( &$this, 'sort_data' ) );   
+
+69.  
+
+70.        $perPage = 2;   
+
+71.        $currentPage = $this->get_pagenum();   
+
+72.        $totalItems = count($data);   
+
+73.  
+
+74.        $this->set_pagination_args( array(   
+
+75.            'total_items' => $totalItems,   
+
+76.            'per_page'    => $perPage  
+
+77.        ) );   
+
+78.  
+
+79.        $data = array_slice($data,(($currentPage-1)*$perPage),$perPage);   
+
+80.  
+
+81.        $this->_column_headers = array($columns, $hidden, $sortable);   
+
+82.        $this->items = $data;   
+
+83.    }   
+
+84.  
+
+85.    /**  
+
+86.     * Override the parent columns method. Defines the columns to use in your listing table  
+
+87.     *  
+
+88.     * @return Array  
+
+89.     */  
+
+90.    public function get_columns()   
+
+91.    {   
+
+92.        $columns = array(   
+
+93.            'id'          => __('ID'),   
+
+94.            'title'       => __('Title'),   
+
+95.            'description' => __('描述'),   
+
+96.            //__('Description'),怎么被Wordpress翻译为“图像描述”了？   
+
+97.            'date'        => __('Date'),   
+
+98.            'price'    => __('价格'),//__('Price'),   
+
+99.            'rating'      => __('Rating')   
+
+100.        );   
+
+101.  
+
+102.        return $columns;   
+
+103.    }   
+
+104.  
+
+105.    /**  
+
+106.     * Define which columns are hidden  
+
+107.     *  
+
+108.     * @return Array  
+
+109.     */  
+
+110.    public function get_hidden_columns()   
+
+111.    {   
+
+112.        return array();   
+
+113.    }   
+
+114.  
+
+115.    /**  
+
+116.     * Define the sortable columns  
+
+117.     *  
+
+118.     * @return Array  
+
+119.     */  
+
+120.    public function get_sortable_columns()   
+
+121.    {   
+
+122.        return array('title' => array('title', false));   
+
+123.    }   
+
+124.  
+
+125.    /**  
+
+126.     * Get the table data  
+
+127.     *  
+
+128.     * @return Array  
+
+129.     */  
+
+130.    private function table_data()   
+
+131.    {   
+
+132.        $data = array();   
+
+133.  
+
+134.        $data[] = array(   
+
+135.                    'id'          => 1,   
+
+136.                    'title'       => '某IT设备租赁公司：杨先生',   
+
+137.                    'description' => '上海，需求描述',   
+
+138.                    'date'        => '2013.01.01',   
+
+139.                    'price'       => '---',   
+
+140.                    'rating'      => '7.3'   
+
+141.                    );   
+
+142.  
+
+143.        $data[] = array(   
+
+144.                    'id'          => 2,   
+
+145.                    'title'       => '某婚摄团队：李先生',   
+
+146.                    'description' => '台湾，台北',   
+
+147.                    'date'        => '2013.12.15',   
+
+148.                    'price'       => '---',   
+
+149.                    'rating'      => '7.2'   
+
+150.                    );   
+
+151.  
+
+152.        $data[] = array(   
+
+153.                    'id'          => 3,   
+
+154.                    'title'       => '在校研究生：梁小姐',   
+
+155.                    'description' => '墨尔本大学：艺术设计',   
+
+156.                    'date'        => '2013.12.03',   
+
+157.                    'price'       => '---',   
+
+158.                    'rating'      => '7.0'   
+
+159.                    );   
+
+160.  
+
+161.        $data[] = array(   
+
+162.                    'id'          => 4,   
+
+163.                    'title'       => '某私人航空公司',   
+
+164.                    'description' => '仅前端交互：何小姐',   
+
+165.                    'date'        => '2014.01.01',   
+
+166.                     'price'      => '---',   
+
+167.                    'rating'      => '7.0'   
+
+168.                    );   
+
+169.        return $data;   
+
+170.    }   
+
+171.  
+
+172.    /**  
+
+173.     * Define what data to show on each column of the table  
+
+174.     *  
+
+175.     * @param  Array $item        Data  
+
+176.     * @param  String $column_name - Current column name  
+
+177.     *  
+
+178.     * @return Mixed  
+
+179.     */  
+
+180.    public function column_default( $item, $column_name )   
+
+181.    {   
+
+182.        switch( $column_name ) {   
+
+183.            case 'id':   
+
+184.            case 'title':   
+
+185.            case 'description':   
+
+186.            case 'date':   
+
+187.            case 'price':   
+
+188.            case 'rating':   
+
+189.                return $item[ $column_name ];   
+
+190.  
+
+191.            default:   
+
+192.                return print_r( $item, true ) ;   
+
+193.        }   
+
+194.    }   
+
+195.  
+
+196.    /**  
+
+197.     * Allows you to sort the data by the variables set in the $_GET  
+
+198.     *  
+
+199.     * @return Mixed  
+
+200.     */  
+
+201.    private function sort_data( $a, $b )   
+
+202.    {   
+
+203.        // Set defaults   
+
+204.        $orderby = 'title';   
+
+205.        $order = 'asc';   
+
+206.  
+
+207.        // If orderby is set, use this as the sort column   
+
+208.        if(!emptyempty($_GET['orderby']))   
+
+209.        {   
+
+210.            $orderby = $_GET['orderby'];   
+
+211.        }   
+
+212.  
+
+213.        // If order is set use this as the order   
+
+214.        if(!emptyempty($_GET['order']))   
+
+215.        {   
+
+216.            $order = $_GET['order'];   
+
+217.        }   
+
+218.  
+
+219.        $result = strcmp( $a[$orderby], $b[$orderby] );   
+
+220.  
+
+221.        if($order === 'asc')   
+
+222.        {   
+
+223.            return $result;   
+
+224.        }   
+
+225.  
+
+226.        return -$result;   
+
+227.    }   
+
+228.}  
+
+ ENJOY IT!
+posted @ 2014-01-06 11:03 cangshi 阅读(35) | 评论 (0) | 编辑 收藏 
+
+
+
+(转载)jQuery插件Lazyload的使用 
+
+
+如果网页包含大量图片，那么，采用Lazyload来延迟图片的载入以加速网页整体在浏览器中的载入是个不错的方法！
+
+上面这句话并不是翻译来的，只是我想一句话说完。
+
+下面开始吧：
+
+1.在页面头部加载jQuery和这个Lazyload插件，如果已经加载过了jQuery，那就不用再次加载了：
+
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>   
+    <script src="jquery.lazyload.js" type="text/javascript"></script>   
+
+是的，我习惯在国内用又拍云的云加速。
+
+对图片的处理：
+
+    <img class="lazy" src="img/grey.gif" data-original="img/true_image.jpg"  width="730" heigh="300">   
+
+上面示例中的grey.gif实际上相当于一个占位符，建议采用1*1px的灰色png或者gif，data-original后面的才是真正的图片链接，class="lazy"是个可以定义的特定class。
+Lazyload基本设置
+
+    <script type="text/javascript" charset="utf-8">   
+        $(function() {   
+            $("img.lazy").lazyload();   
+        });   
+    </script>  
+
+Lazyload基本设置的在线DEMO:Lazyload DEMO1
+对不支持js浏览器的处理
+
+    <img class="lazy" src="img/grey.gif" data-original="img/true_image.jpg"  width="730" heigh="300">   
+    <noscript><img src="img/true_image.jpg" width="730" heigh="300"></noscript>  
+
+用CSS隐藏占位符：
+
+    .lazy {   
+      display: none;   
+    }  
+
+对支持js的浏览器，应该在DOM准备阶段就初始化插件：
+
+    $("img.lazy").show().lazyload();  
+
+当然了，这样处理兼容性更好，不过现在的浏览器大多都是支持js的。
+加载敏感度
+
+默认的情况下，图片将会在出现在屏幕上时显示，如果想提载入图片，可以使用 threshold 进行设置，下例的含义是：在图片距离屏幕180px时提前载入：
+
+    $("img.lazy").lazyload({ threshold :180});  
+
+占位图片
+
+可以自定义一个简单的浅色或灰色系的小图片（越小越好，1*1px最佳，格式推荐采用gif）作为占位图片来触发加载动作。
+事件触发
+
+可以是jQuery的任何事件（如click、mouseover），还可以使用自己定义的事件。
+
+例如：处于等待状态, 直到浏览者滚动到窗口中图片所在位置，在占位图片被点击之前不加载图片, 可以这样做:
+
+    $("img").lazyload({   
+        placeholder : "img/grey.gif",   
+        event : "click"  
+    });  
+
+ 特效的使用
+
+当图片完全加载的时候，默认使用show()方法来显示图片，所以，上面的那个基本设置示例中未写出show(),但是可以照常运行。
+ 图片淡入（FadeIn）效果
+
+    $("img.lazy").lazyload({    
+        effect : "fadeIn"  
+    });  
+
+Lazyload图片淡入效果演示
+将图片放在特定容器中
+
+先看示例：水平滚动演示页面和垂直滚动的演示页面
+
+CSS部分示例
+
+    #container {   
+        height: 600px;   
+        overflow: scroll;   
+    }  
+
+js部分示例
+
+    $("img.lazy").lazyload({            
+         container: $("#container")   
+    });  
+
+ 图片未按顺序排列的情况
+
+滚动页面的时候，Lazyload会按照在HTML代码中的顺序先后可视范围内的加载图片，在第一张不在可视范围内的图片处停止执行，但是在某些页面布局中，这种聪明的假设可能是不成立的，那么可以用failurelimit来控制加载动作：
+
+    $("img.lazy").lazyload({    
+        failure_limit : 10   
+    });  
+
+上面的意思是：在找到10张不在可视范围内的图片时停止执行。额，好吧，如果你的页面布局猥琐到10不足以满足的时候，那就再大一些吧。
+Lazyload定时延迟图片载入
+
+Lazyload的一个并不完备的功能，并不影响使用，但是实际用途并不大！用途描述：在页面和可见图片载入后一定时间内载入图片。Lazyload定时延迟图片载入示例
+
+    $(function() {             
+        $("img:below-the-fold").lazyload({   
+            event : "sporty"  
+        });   
+    });   
+    $(window).bind("load", function() {    
+        var timeout = setTimeout(function() {$("img.lazy").trigger("sporty")}, 5000);   
+    });  
+
+上例中采用的参数或者说定时是5秒。
+ 加载隐藏的图片
+
+你的页面上可能隐藏了很多不可见的图片用作特殊用途，Lazyload默认是忽略这些图片的，如果不想忽略掉，可以这样：
+
+    $("img.lazy").lazyload({    
+        skip_invisible : false   
+    });  
+
+ 
+ Lazyload下载与兼容性
+
+最新的未压缩版 source与压缩版 minified。
+
+你看到这篇文章时可能有更新的版本了，请点击Lazyload了解更多！
+
+兼容于：
+
+OSX平台： Safari 5.1, Safari 6, Chrome 20, Firefox 12
+
+WIN平台：Chrome 20, IE 8 and IE 9 on Windows
+
+iPhone和 iPad上：Safari 5.1
+
+posted @ 2014-01-02 11:16 cangshi 阅读(187) | 评论 (0) | 编辑 收藏 
+
+
+
+可以用在WordPress侧栏的一组图片广告轮播的代码 
+
+
+本文介绍一组适用于在Wordpress侧栏放置的图片广告轮播（js）代码：可自动播放，同时响应访客的点击
+
+
+1.样式表
+
+1./*SidebarTabsAd*/  
+2.#cwpad_box{width:100%;text-align:center}   
+3.#cwpad_box ul, #cwpad_box dd, #cwpad_box tt{   
+4.    margin:0px;   
+5.    padding:0px;   
+6.    float:left;   
+7.    list-style: none;   
+8.}   
+9.#cwpad_box{   
+10.    width:313px;/*250px+(n-1)*21px*/  
+11.    height:250px;   
+12.    border-left: 1px solid #740a20;   
+13.}   
+14.#cwpad_box dd{   
+15.    width:21px;   
+16.    height:250px;   
+17.    overflow:hidden;   
+18.    position:relative;   
+19.}   
+20.#cwpad_box dd.hove{   
+21.    width:250px;   
+22.    text-align:rightright;   
+23.}   
+24.#cwpad_box dd tt{   
+25.    width:20px;   
+26.    height:250px;   
+27.    top:0px;   
+28.    left:0px;   
+29.    color:#fff;   
+30.    cursor:pointer;   
+31.    text-align:center;   
+32.    padding:20px 0 0 0;   
+33.    background:#b9000d;   
+34.    position:absolute;   
+35.    border-right:1px solid #740a20;   
+36.}   
+37.#cwpad_box dd tt.hove{   
+38.    background:#620317;   
+39.}  
+
+在上面的样式表中，假设放置的是四个250px*250px的图片广告，所以250+（4-1）*21=313px。
+
+2.javascript代码
+
+1.<script type="text/javascript">   
+2.function myAddEvent(obj, sEvent, fn){   
+3.    return obj.attachEvent ? obj.attachEvent('on' + sEvent, fn) : obj.addEventListener(sEvent, fn, false);   
+4.}   
+5.function Class(oParent, sClass){   
+6.    var aElem = oParent.getElementsByTagName('*');   
+7.    var aClass = [];   
+8.    var i = 0;   
+9.    for(i=0;i<aElem.length;i++)if(aElem[i].className == sClass)aClass.push(aElem[i]);   
+10.    return aClass;   
+11.};   
+12.function css(obj, attr, value){   
+13.    if(arguments.length == 2){   
+14.        var style = obj.style,   
+15.            currentStyle = obj.currentStyle;   
+16.        if(typeof attr === 'string')return currentStyle ? currentStyle[attr] : getComputedStyle(obj, false)[attr];   
+17.        for(var propName in attr)propName == 'opacity' ? (style.filter = "alpha(opacity=" + attr[propName] + ")", style.opacity = attr[propName] / 100) : style[propName] = attr[propName];    
+18.    }else if(arguments.length == 3){   
+19.        switch(attr){   
+20.            case "width":   
+21.            case "height":   
+22.            case "paddingTop":   
+23.            case "paddingRight":   
+24.            case "paddingBottom":   
+25.            case "paddingLeft":   
+26.            case "top":   
+27.            case "right":   
+28.            case "bottom":   
+29.            case "left":   
+30.            case "marginTop":   
+31.            case "marginRigth":   
+32.            case "marginBottom":   
+33.            case "marginLeft":   
+34.                obj.style[attr] = value + "px";   
+35.                break;   
+36.            case "opacity":   
+37.                obj.style.filter = "alpha(opacity=" + value + ")";   
+38.                obj.style.opacity = value / 100;   
+39.                break;   
+40.            default:   
+41.                obj.style[attr] = value   
+42.        }   
+43.    }   
+44.};   
+45.function extend(destination, source){   
+46.    for (var propName in source) destination[propName] = source[propName];   
+47.    return destination   
+48.};   
+49.function doMove(obj, json, fnEnd){   
+50.    clearInterval(obj.timer);   
+51.    obj.iSpeed = 0;   
+52.    fnEnd = extend({   
+53.        type: "buffer",   
+54.        callback: function() {}   
+55.    }, fnEnd);   
+56.    obj.timer = setInterval(function(){   
+57.        var iCur = 0,   
+58.            iStop = true;   
+59.        for(var propName in json){   
+60.            iCur = parseFloat(css(obj, propName));   
+61.            propName == 'opacity' && (iCur = Math.round(iCur * 100));   
+62.            switch(fnEnd.type){   
+63.                case 'buffer':   
+64.                    obj.iSpeed = (json[propName] - iCur) / 5;   
+65.                    obj.iSpeed = obj.iSpeed > 0 ? Math.ceil(obj.iSpeed) : Math.floor(obj.iSpeed);   
+66.                    json[propName] == iCur || (iStop = false, css(obj, propName, iCur + obj.iSpeed));   
+67.                    break;   
+68.                case 'elasticity':   
+69.                    obj.iSpeed += (json[propName] - iCur) / 5;   
+70.                    obj.iSpeed *= 0.75;   
+71.                    Math.abs(json[propName] - iCur) <= 1 &&  Math.abs(obj.iSpeed) <= 1 ? css(obj, propName, json[propName]) : css(obj, propName, json[propName]) || (iStop = false, css(obj, propName, iCur + obj.iSpeed));   
+72.                    break;   
+73.                case 'accelerate':   
+74.                    obj.iSpeed = obj.iSpeed + 5;   
+75.                    iCur >= json[propName] ? css(obj, propName, json[propName]) : css(obj, propName, json[propName]) || (iStop = false, css(obj, propName, iCur + obj.iSpeed));   
+76.                break;   
+77.            }   
+78.        }   
+79.        if(iStop){   
+80.            clearInterval(obj.timer);   
+81.            obj.timer = null;   
+82.            obj.iSpeed = 0;   
+83.            fnEnd.callback();   
+84.        }   
+85.    },30);   
+86.};   
+87.  
+88.window.onload = function(){   
+89.    var oBox = document.getElementById('cwpad_box')   
+90.    var aSpan = document.getElementsByTagName('tt');   
+91.    var aLi = document.getElementsByTagName('dd');   
+92.    var playtime = null;   
+93.    var iNow = 0;   
+94.    for(i=0;i<aSpan.length;i++){   
+95.        aSpan[i].index = i;   
+96.        aSpan[i].onclick = function(){   
+97.            for(var len=aLi.length,i=0;i<len;i++)doMove(aLi[i], {width:21});   
+98.            for(var len=aSpan.length,i=0;i<len;i++)aSpan[i].className = '';   
+99.            this.className = 'hove';   
+100.            doMove(this.parentNode, {width:250});   
+101.            iNow = this.index;   
+102.        };   
+103.    }   
+104.    playtime = setInterval(tab,3500);   
+105.    oBox.onmouseover = function(){   
+106.        clearInterval(playtime);   
+107.    }   
+108.    oBox.onmouseout = function(){   
+109.        playtime = setInterval(tab,3500);   
+110.    }   
+111.    function tab(){   
+112.        iNow == aLi.length-1 ? iNow = 0 : iNow++;   
+113.        aSpan[iNow].onclick();   
+114.    }   
+115.};   
+116. </script>    
+
+ 
+
+
+
+3.示例的HTML代码
+
+1.<div id="cwpad_box">  
+2.    <ul>  
+3.        <dd  class="hove">  
+4.        <tt class="hove">网站设计及培训</tt>  
+5.        <a href="http://suoling.net/" target=_blank title="网站设计及培训"><img src="http://fakeimg.pl/250x250/?text=Hello,A!"></a>  
+6.        </dd>  
+7.        <dd>  
+8.        <tt>网站优化及培训</tt>  
+9.        <a href="http://suoling.net/" target=_blank title="网站优化及培训"><img src="http://fakeimg.pl/250x250/?text=Hello,B!"></a>  
+10.        </dd>  
+11.        <dd>  
+12.        <tt>网站诊断</tt>  
+13.        <a href="http://suoling.net/" target=_blank title="网站诊断"><img src="http://fakeimg.pl/250x250/?text=Hello,C!"></a>  
+14.        </dd>  
+15.        <dd>  
+16.        <tt>电子商务培训</tt>  
+17.        <a href="http://suoling.net/" target=_blank title="电子商务培训"><img src="http://fakeimg.pl/250x250/?text=Hello,D!"></a>  
+18.        </dd>  
+19.    </ul>  
+20.</div>  
+
+使用的是索凌网络前面介绍过的"假图"生成网站fakeimg.pl生成的"假图"。
+
+这组代码的一个显著缺点是：不适合移动设备显示。
+
+posted @ 2013-12-31 11:30 cangshi 阅读(43) | 评论 (0) | 编辑 收藏 
+
+
+
+WordPress查询文章作者的文章数及WordPress用户角色/权限 
+
+
+本文详细介绍了如何查询Wordpress某一篇文章作者的文章以及其权限，附带介绍了Wordpress的用户权限系统，指出了网上到处复制的某些文章存在的问题。
+
+
+一、查询Wordpress某篇文章作者的全部文章或部分最新文章
+
+1.获取当前文章作者的ID
+
+1.get_post($id)->post_author  
+
+这才是获取Wordpress当前文章作者ID的正确方式，网上到处乱传的那篇名叫“WordPress 通过文章ID获取文章标题、内容等信息”的文章里的说法是错误的，虽然是错误的，但是却被广泛的Ctrl+C然后Ctrl+V，以讹传讹，不可思议啊。
+
+另外get_post($id)->可以获取与文章有关的许多信息，转述如下：
+
+1.post_author：(整数）文章作者的编号    
+2.post_data：(字符）文章发表的日期和时间（YYYY-MM-DD HH-MM-SS)    
+3.post_data_gmt：（字符）文章发表的格林尼治标准时间（GMT） （YYYY-MM-DD HH-MM-SS)    
+4.post_content：（字符）文章内容    
+5.post_title：（字符）文章标题    
+6.post_category：（整数）文章类别的编号。注意：该值在WordPress 2.1之后的版本总为0。定义文章的类别时可使用 get_the_category()函数。    
+7.post_excerpt：（字符）文章摘要    
+8.post_status：(字符）文章状态（publish|pending|draft|private|static|object|attachment|inherit|future）    
+9.comment_status：（字符）评论状态（open|closed|registered_only）    
+10.ping_status：（字符）pingback/trackback状态（open|closed）    
+11.post_password：(字符）文章密码    
+12.post_name：(字符）文章的URL嵌套    
+13.to_ping：(字符）要引用的URL链接    
+14.pinged：（字符）引用过的链接    
+15.post_modified：(字符）文章最后修改时间（YYYY-MM-DD HH-MM-SS)    
+16.post_modified_gmt：(字符）文章最后修改GMT时间（YYYY-MM-DD HH-MM-SS)    
+17.post_parent：(整数）父级文章编号（供附件等）    
+18.guid：（字符）文章的一个链接。注意：不能将GUID作为永久链接（虽然在2.5之前的版本中它的确被当作永久链接），也不能将它作为文章的可用链接。GUID是一种独有的标识符，只是目前恰巧成为文章的一个链接。    
+19.post_type：（字符）（日志 | 页面 | 附件）    
+20.post_mime_type：(字符）Mime类型（供附件等）    
+21.comment_count：（整数）评论总数  
+
+ 
+
+2.Wordpress查询文章作者的全部文章/部分文章的主要函数及输出
+
+1.<?php   
+2.global $wpdb;   
+3.//$current_user->ID的话，查询的就是当前登录的用户，所以是不对的;   
+4.$author_id = get_post($id)->post_author;   
+5.$sql =  "SELECT * FROM $wpdb->posts WHERE post_status IN ('publish','static') AND post_author = '$author_id' AND post_type ='post'LIMIT 5" ; //查询作者文章数量   
+6.$posts= $wpdb->get_results($sql);   
+7.    foreach ($posts as $post) {   
+8.  
+9.echo'<li><a href="';the_permalink();echo '" rel="twipsy" title="';the_title();echo '">'. mb_strimwidth(get_the_title(), 0, 20,"...").'</a></li>';   
+10.}   
+11.?>  
+
+只在无序列表ul里输出一个列表，格式是截断的标题加上链接，查询了仅仅5篇，多了的话，没什么用，这里仅仅是测试。
+
+二、Wordpress用户角色与权限
+
+WordPress用户角色或者Wordpress用户权限说是从Wordpress2.0开始，逐渐的完善起来的，默认分以下几种的：
+
+1.Super Admin超级管理员-针对Wordpress多站点环境，一般人很少接触，所以很少有人提及；   
+2.Administrator管理员 -拥有特定的某一个站点的所有管理权限；   
+3.Editor编辑 -发表文章、编辑文章、并能编辑其他人的文章等等；   
+4.Author作者-能够发布和编辑自己的文章；   
+5.Contributor贡献者或者叫投稿者 -能够撰写和编辑自己的文章、但不能发布；   
+6.Subscriber订阅者 -能够查看评论/添加评论/查看文章，等等。  
+
+ 
+
+当新用户在你的Wordpress站点上注册了的时候（假设已经开启注册），他的默认角色可以在Wordpress后台-->设置-->常规页面设置。
+
+下面的用户角色以及对应的权限能力等级对照表翻译自Wordpress官方网站，所在页面：
+
+http://codex.wordpress.org/Roles_and_Capabilities#Capabilities
+
+ 
+
+
+
+
+角色
+
+超级管理员
+
+管理员（单个站点）
+
+编辑
+
+作者
+
+贡献者（投稿者）
+
+订阅者
+
+manage_network 是 
+ 
+ 
+ 
+ 
+ 
+manage_sites 是 
+ 
+ 
+ 
+ 
+ 
+manage_network_users 是 
+ 
+ 
+ 
+ 
+ 
+manage_network_plugins 是 
+ 
+ 
+ 
+ 
+ 
+manage_network_themes 是 
+ 
+ 
+ 
+ 
+ 
+manage_network_options 是 
+ 
+ 
+ 
+ 
+ 
+unfiltered_html 是 
+ 
+ 
+ 
+ 
+ 
+
+角色
+
+超级管理员
+
+管理员（单个站点）
+
+编辑
+
+作者
+
+贡献者（投稿者）
+
+订阅者
+
+activate_plugins 是 是 
+ 
+ 
+ 
+ 
+create_users 是 仅单个站点 
+ 
+ 
+ 
+ 
+delete_plugins 是 是 
+ 
+ 
+ 
+ 
+delete_themes 是 仅单个站点 
+ 
+ 
+ 
+ 
+delete_users 是 是 
+ 
+ 
+ 
+ 
+edit_files 是 是 
+ 
+ 
+ 
+ 
+edit_plugins 是 仅单个站点 
+ 
+ 
+ 
+ 
+edit_theme_options 是 是 
+ 
+ 
+ 
+ 
+edit_themes 是 仅单个站点 
+ 
+ 
+ 
+ 
+edit_users 是 仅单个站点 
+ 
+ 
+ 
+ 
+export 是 是 
+ 
+ 
+ 
+ 
+import 是 是 
+ 
+ 
+ 
+ 
+
+角色
+
+超级管理员
+
+管理员（单个站点）
+
+编辑
+
+作者
+
+贡献者（投稿者）
+
+订阅者
+
+install_plugins 是 仅单个站点 
+ 
+ 
+ 
+ 
+install_themes 是 仅单个站点 
+ 
+ 
+ 
+ 
+list_users 是 是 
+ 
+ 
+ 
+ 
+manage_options 是 是 
+ 
+ 
+ 
+ 
+promote_users 是 是 
+ 
+ 
+ 
+ 
+remove_users 是 是 
+ 
+ 
+ 
+ 
+switch_themes 是 是 
+ 
+ 
+ 
+ 
+update_core 是 仅单个站点 
+ 
+ 
+ 
+ 
+update_plugins 是 仅单个站点 
+ 
+ 
+ 
+ 
+update_themes 是 仅单个站点 
+ 
+ 
+ 
+ 
+edit_dashboard 是 是 
+ 
+ 
+ 
+ 
+
+角色
+
+超级管理员
+
+管理员（单个站点）
+
+编辑
+
+作者
+
+贡献者（投稿者）
+
+订阅者
+
+moderate_comments 是 是 是 
+ 
+ 
+ 
+manage_categories 是 是 是 
+ 
+ 
+ 
+manage_links 是 是 是 
+ 
+ 
+ 
+edit_others_posts 是 是 是 
+ 
+ 
+ 
+edit_pages 是 是 是 
+ 
+ 
+ 
+edit_others_pages 是 是 是 
+ 
+ 
+ 
+edit_published_pages 是 是 是 
+ 
+ 
+ 
+publish_pages 是 是 是 
+ 
+ 
+ 
+delete_pages 是 是 是 
+ 
+ 
+ 
+delete_others_pages 是 是 是 
+ 
+ 
+ 
+delete_published_pages 是 是 是 
+ 
+ 
+ 
+delete_others_posts 是 是 是 
+ 
+ 
+ 
+delete_private_posts 是 是 是 
+ 
+ 
+ 
+edit_private_posts 是 是 是 
+ 
+ 
+ 
+阅读_private_posts 是 是 是 
+ 
+ 
+ 
+delete_private_pages 是 是 是 
+ 
+ 
+ 
+edit_private_pages 是 是 是 
+ 
+ 
+ 
+阅读_private_pages 是 是 是 
+ 
+ 
+ 
+
+角色
+
+超级管理员
+
+管理员（单个站点）
+
+编辑
+
+作者
+
+贡献者（投稿者）
+
+订阅者
+
+edit_published_posts 是 是 是 是 
+ 
+ 
+upload_files 是 是 是 是 
+ 
+ 
+create_product 是 是 是 是 
+ 
+ 
+publish_posts 是 是 是 是 
+ 
+ 
+delete_published_posts 是 是 是 是 
+ 
+ 
+edit_posts 是 是 是 是 是 
+ 
+delete_posts 是 是 是 是 是 
+ 
+阅读 是 是 是 是 是 是 
+
+角色
+
+超级管理员
+
+管理员（单个站点）
+
+编辑
+
+作者
+
+贡献者（投稿者）
+
+订阅者
+
+
+ 
+
+1.查询Wordpress文章作者的角色
+
+在本文的开头，我们已经知道如何获取Wordpress某一篇文章的作者ID了，现在就来获取其角色：
+
+1.$user_id=get_post($id)->post_author;   
+2.if(user_can($user_id,'install_plugins')){echo'管理员';}   
+3.elseif(user_can($user_id,'edit_others_posts')){echo'管理编辑';}elseif(user_can($user_id,'publish_posts')){echo'作者';}elseif(user_can($user_id,'delete_posts')){echo'贡献者';}elseif(user_can($user_id,'read')){echo'订阅者';}   
+
+管理员和编辑都能publish_posts，但是这里的判断有先后顺序，所以不用担心这个问题，这个判断是不错的！
+
+WordPress某篇文章的作者是否有某权限的推荐函数：
+
+1.if ( author_can( $post, $capability ) ) {      
+2.// 如果文章 $post 的作者拥有 $capability 时执行的动作      
+3.}    
+
+这个相对简单一些，可以直接去判断，所以我再某个项目中最终使用了这个函数。参数中的$post可以是文章自身，也可以是文章ID，使用起来很方便！
+
+1.if(author_can($post->ID,'install_plugins'))   
+2.{echo'<span class="label label-warning role">管理员</span>';}elseif(author_can($post->ID,'edit_others_posts')){echo'管理编辑';}elseif(author_can($post->ID,'publish_posts')){echo'作者';}elseif(author_can($post->ID,'delete_posts')){echo'投稿者';}elseif(author_can($post->ID,'read')){echo'订阅者';}  
+
+2.Wordpress当前登录者的权限/权限等级
+
+这个函数是经常被使用的，使用的是权限等级，Wordpress官方已经声明：从Wordpress3.0，已经废弃了对这个权限等级制度的支持，所以，网上到处乱飞的复制文章，谨慎对待吧！
+
+1.<?php if(current_user_can('level_10')){ echo '管理员';}elseif(current_user_can('level_7')){ echo '管理编辑';}elseif(current_user_can('level_4')){ echo '作者';}elseif(current_user_can('level_4')){ echo '贡献者';}elseif(current_user_can('level_0')){ echo '订阅者';}   
+2.    ?>  
+
+ 
+
+posted @ 2013-12-05 10:49 cangshi 阅读(348) | 评论 (0) | 编辑 收藏 
+
+
+
+最近还在为一件事情烦恼结果终于告一段落平时 
+
+平时思想工作考虑问题倒是蛮周全的，我现在最大的难处就是经济条件太差了，想做点什么事情总是缩手缩脚的，就好像是被束缚一样。不过我感觉像现在这样其实也蛮好和合适的。最无奈的事情是我接了别人的烂摊子导致我没有为老大做出什么特殊的贡献吧，既然现在要从头开始了，那么一定要好好的规划好一切，先把开头做好一点，后面才会有下文要不然可以的话我的路线就到头了。真正算起来的黄金时间确实就是那么一点点，如果说再不好好利用，那真的是对不起这个行业的理解力了。有时候可以就是这样，百分之二十的时间确实可以产生百分之八十的效率这就看你会不会时间管理工作。把一些细节发挥到极致每天就可以非常的轻松的。我只不过是还没有达到那个境界或者说没有机会好好展示自己价值的平台吧，有时候真的觉得英雄会不会是没有用武之地了呢。不用担心多一点耐心多点积累，事情总是会出现转机的，继续保持稳定的正常的工作面能力图文混排就行了。老白最后肯定是会看好你的，因为现在心急已经没有立足之地了。 
+
+posted @ 2013-11-20 11:32 cangshi 阅读(31) | 评论 (0) | 编辑 收藏 
+
+
+
+公司总裁实际需要的成本核算要求太高难度 
+
+一转眼，国庆一放假又有几天的融合期间，所以一下子半个月很快就过去了我竟然一篇目信息都没有发表，这着实是有点让人难以置信的现象特别是想要讨好老白的情况汇报下。这种现象是不能容忍的。本来对策我是想过要多对一模式又不能太多，关键词太多，又分配不公，操作不好又被放到人为操作的可能性了，我目前的善哉只能是权宜之计，好让我争取一点点时间，希望这一个月里能够有点睛之笔吧无论如何我都已经是我的大局了。一个链接也能够发接力赛作用，老大对我有点不相信能力只是感叹能够证明我的时间监察部实在是太短了，跟一年两年才更新换代的老白，三个月算什么呢？根本就是九牛一毛吧很不经意的一点信息说不定就事论事。没有什么是绝对真理和公平竞争的，当前情况下做不起的事情实在是太多了，不管生效与否，先做了再说嘛毕竟这是最自然的方式了验收后再做流行度其实倒是还可以的，没有利用一下就被否定了，结果是很不甘心情愿。 
+
+posted @ 2013-10-18 17:07 cangshi 阅读(27) | 评论 (0) | 编辑 收藏 
+
+
+
+转载一篇今天正好遇到的动态转化为静态问题方法 
+
+其实之前早就存在这样一个问题，只是没有时间去考虑是否会影响到整个网站结构的内部优化。忙里偷闲之中我无意找到了解决方案在网上找到的，程序是PHP的，在这里转载分享一下，也希望在以后能够利用方便一点。
+
+
+首先设置.htaccess文件，将动态调用的参数转换为静态的HTML的URL地址，例如将在post目录下的文件，转发到根目录的wp- post.php文件中，加入的语句类似：RewriteRule ^post/([a-z0-9\-]+\.html)$ wp-post.php?$1$2
+
+然后修改wp-post.php文件，在文件的开头加入以下PHP代码：
+
+以下为引用的内容：
+
+ob_start();
+
+$qstring = isset($_SERVER["QUERY_STRING"]) ? $_SERVER["QUERY_STRING"] : "";
+
+define("HTML_FILE", $_SERVER['DOCUMENT_ROOT']."/post/".$qstring);
+
+if (file_exists(HTML_FILE))
+
+{
+
+$lcft = filemtime(HTML_FILE);
+
+if (($lcft + 3600) > time()) //判断上次生成HTML文件是否超过1小时，若没有才直接输出文件内容
+
+{
+
+echo(file_get_contents(HTML_FILE));
+
+exit(0);
+
+}
+
+}
+
+之后是现有的PHP的代码，然后在当前代码的最后面加上如下的PHP代码：
+
+以下为引用的内容：
+
+define("HTMLMETA","");
+
+$buffer = ob_get_flush();
+
+$fp = fopen(HTML_FILE, "w");
+
+if ($fp)
+
+{
+
+fwrite($fp, $buffer.HTMLMETA);
+
+fclose($fp);
+
+}
+
+好了，然后查看你的静态HTML页面，如果页面尾部出现了注释行，说明已经成功的创建了静态HTML文件。
+
+这个方法的一个应用就是我先前写的那个“WordPress年度博客统计插件”，这个统计插件由于查询十多次数据库，很多人访问的时候会有很大性能问题，使用我介绍的这种动态生成HTML技术后，一天就查询一次，生成一次统计排行，完美解决了查询数据库的性能问题。
+
+posted @ 2013-09-27 11:14 cangshi 阅读(28) | 评论 (0) | 编辑 收藏 
+
+
+
+我得改变面貌的主要思维能力是纠正平均和公正主义 
+
+也不知道为什么，在我的心理上对待事情我老是想要做公平主义和平均主义，为此我也付出了不小的代价我在想为什么不改变一下方向呢。就是像先人邓小平一样先富一部分人，然后先富带动后富。也许我应该就是明白这个道理，世界上没有绝对的公平和平均，那些都是直拨虚拟的东西，每个个人的实际情况都是不一样。每个人的境遇和背景也不一样，绝对不能放到同样一个水平面上相提并论有些规则虽然说起来不那么好听但是却是千古不变的真理，天下也没有绝对公平和平均。这样的想法纯熟是简单的个人意愿而已并且已经落后很多年了，有这样的想法也只能说明没有创新纪录意识形态纠正以后才会慢慢发现这个世界不是只有白与黑，而绝大区域都是灰色地带。如果说还不能习惯这样的潜规则那么以后要慢慢适应性了，不去适应环境的人迟早是要被这个社会所淘汰掉的。你想做什么样的人中，你想成为什么样的人呢？ 
+
+posted @ 2013-09-26 11:01 cangshi 阅读(24) | 评论 (0) | 编辑 收藏 
+
+
+
+人生有太多的事情都是未知数所以把握当下生活足够了 
+
+这个世界每天都在发生着这样或者那样千奇百怪的事情每个人的人生都有着太多的未知数，谁也不知道自己的明天会怎样大多数的情况下都是走一步算一步，所以我们都是应该做的就是活在当下。做政局自己能够把握机遇的事情就可以了，有着太多的奢望到最后或许你什么也没捞到，所有的一切都是空想这样的结果才会让事实说话，虽然说有些事情我们可以掌握但是毕竟是那么的微小，在大自然面前我常常觉得我个人的力量对比是如此的有限，努力提高自己的个人能力，把配合默契本分做好就已经是非常的不错了。相信传动轴命运的转化总会有实现的那么天。常常写一些心得日记本能够放松一下心情舒畅也算是很好的调节器吧，经常保持一个平常心的状态你会活得更加现实意义一点，在稳定增长以后再慢慢的为理想目标管理方向努力奋斗加油。 
+
+posted @ 2013-09-25 11:21 cangshi 阅读(64) | 评论 (0) | 编辑 收藏 
+
+
+
+老大最近缺勤还有好多项式难题需要讲求指示精神 
+
+中秋还没有放假之前老大就已经出差了，但是他已经给我布置了任务书我想希望在计划好的时间内执行任务吧，有可能之前时间太紧也没有来得及看清楚所以导致细节没有讲清楚，现在倒好，没有能够按照国际惯例时间完成任务算了吧，先按照统筹安排的方法做其他的工作，等待他回来再做那些工作也是可以的，没有什么东西是死而不僵的，必须要灵活机动才能保证时刻都在运转之中吧中。所以一不定期要加强自知的修养多给自己充电，由于拒绝链接这一步之前没有弄过，害得我损失了很多的周期性我想我可能犯下错误观点了，于是赶紧在昨天把还没有生效的链接全部还原了。现在剩下的就是等待老白的更新了，老白这几天倒是没有发生什么异样的举动我想保持原状我就没有什么更多的担心了，老大一直在等待着我的结果呢只要效果，过程没有人管你，所以我的压力还是蛮大的，这一关能不能过就要看近期内的变化了，我是会坚持每天都会观察员的，以后还应该是做个排名更新的记录吧这样对把握时间管理会心里有底一点。加油 
+
+posted @ 2013-09-23 11:29 cangshi 阅读(34) | 评论 (0) | 编辑 收藏 
+
+
+
+间隔更新换代时间太久我日益失宠了 
+
+上帝对每个人最公平的是只有时间，他每天给任何一个人的时间都只有二十四小时。把日常工作中的事情按捺不住完了以后我几乎没有多少时间了，所以我也慢慢腾腾失去了更新换代的时间了。间隔了这么久，我实在是挤不出成果而我目前的状况还只是试用期。我所有的努力奋斗还没有达到一个明显的效果，我在跟时间赛跑相对来说我有资源的情况下也才这样，如果说没有资源那么我是否生活不下去了呢，算了吧我最大的愿望就是在最后的一个月里努力把排名推广应用，给老板一个满意的答案吧说太多的废话过日子都是无用的我只是想多做事少说话。这样专心一点心里面的印象会更加深刻一点。好吧今天的作业成绩就至此为止，有机会再慢慢研究工作吧加油。 
+
+posted @ 2013-09-17 11:20 cangshi 阅读(37) | 评论 (0) | 编辑 收藏 
+
+
+
+人生有太多的无奈只能默默一个人承受！ 
+
+我的人生过了二十多个春秋，我觉得我的人生有太多的无奈，很多时候只能一个人默默的去承受，
+不敢告诉别人，其实也没必要告诉别人，也无济于事。家里很困难。来自农村，读书高中的时候就已经很紧了。生活老是不及其余表，青黄不接，家里没有经济来源，所有的一切就是几亩地，一年到头也没买到几憏钱。几兄弟都没有读完初中，只有我读大学，但是我为什么就是个好面子的人呢，所有的这些苦涩不想让人知道，穷人的命，没有一楔丁点的人际关系，真是穷得无法形容了。我只想对的时间做对的事过滤器台。
+过去的事就让他地[去吧]。下层阶级的局姢性随时晓雾出来。
+好了，希望老白对我友好我就感到安慰了，我会把磁力泵的电磁阀修好的，以后的生活就有一点点保障吧
+也算是有了个依靠，让老爸老妈放心就行了。
+
+
+
+
+
+
+
+
+posted @ 2012-11-05 11:03 cangshi 阅读(108) | 评论 (0) | 编辑 收藏 
+
+
+
+JAVA编程之安全配置Struts 2应用程序详解 
+
+
+      当你在配置Struts 2这个应用程序时，安全功能是一个最关键的问题，本文章详细介绍一下这方面的内容，希望对大家有所帮助吧。呵呵，当然，如果有不当之处，也请朋友们指正啊！配置Struts 2应用程序是基于servlet技术的，所以Struts 2的安全策略也可以使用配置文件进行灵活的配置。 
+配置安全策略时，有两个概念需要清楚的区分 ，用户和角色，简单的说用户为使用计算机的人，可以是个人或组织。角色是一个抽象的概念，泛指职务或者权限。例如，张三，李四，王五三个人，有职员、主管和经理三个职务（权限），张三是用户，张三可以是主管职务，代表张三这个用户含有主管的权利。
+
+不同的servlet容器所提供的用户和角色管理机制是不相同的。我使用的是Tomcat服务器，它提供的用户和角色管理机制文件是在其安装目录下的conf目录中的tomcat-users.xml文件，可以在这个文件里完成对用户和角色的编辑。例如：
+1.<tomcat-users> 
+2.    <role rolename="tomcat"/> 
+3.    <role rolename="role1"/> 
+4.    <user username="tomcat" password="tomcat" roles="tomcat"/> 
+5.    <user username="both" password="tomcat" roles="tomcat,role1"/> 
+6.    <user username="role1" password="tomcat" roles="role1"/> 
+7.</tomcat-users> 
+
+
+这个文件定义了2个角色(tomcat和role1)和3名用户(tomcat、both和role1)。你可以在tomcat-users.xml文件里定义任意多个用户和角色。
+
+使用Struts 2保护应用程序的资源
+
+Struts 2应用程序的安全策略是通过部署web.xml文件中的security-constraint元素实现的，该元素的语法定义：
+1.<!ELEMENT security-constraint (display-name?, web-resource-collection+, auth-constraint?, user-data-constraint?)>  
+2.<!ELEMENT display-name (#PCDATA)>  
+3.<!ELEMENT web-resource-collection (web-resource-name, description?, url-pattern*, http-method*)>  
+4.<!ELEMENT auth-constraint (description?, role-name*)>  
+5.<!ELEMENT user-data-constraint (description?, transport-guarantee)> 
+
+
+该语法说明了，security-constraint元素可以有一个可选的display-name子元素，至少一个web-resource-collection子元素，一个可选的auth-constraint子元素和一个可选的user-data-constraint子元素。
+
+web-resource-collection子元素是用来列出打算保护的Web资源，具体的做法是为这些资源设置URL限制，它是通过设置web-resource-collection元素包含的子元素实现的：
+
+◆  web-resource-name：是与受保护资源相关联的名称。该子元素为必须元素。
+
+◆  description：对给定资源的描述。这个子元素为可选元素。
+
+◆  url-pattern：用来设置URL表达式，与这个URL表达式相匹配的URL地址指向的资源将受到保护。该子元素为至少有一个，为必须元素。
+
+◆  http-method：用来表明哪些HTTP方法将受到限制，例如设置为GET那么所有的GET请求就将受到限制。该元素为可选元素。
+
+auth-constraint元素用于指定可以访问该资源用户角色集合。如果没有指定auth-constraint元素，就将安全约束应用于所有角色。它包含下面几个子元素：
+
+◆  description：描述。该元素是可选元素。
+
+◆  role-name：可以访问保护资源的用户角色。该元素可以有多个。
+
+◆  user-data-constraint元素用来设置怎样保护在客户端和Web容器之间传递的数据。
+
+◆  description： 描述。可选元素。
+
+◆  transport-guarantee ：该元素有以下几个值
+
+1. NONE，这意味着应用不需要传输保证。
+
+2. INTEGRAL，意味着服务器和客户端之间的数据必须以某种方式发送，而且在传送中数据不能被篡改。
+
+3. CONFIDENTIAL，这意味着传输的数据必须加密。
+
+配置完毕security-constraint元素的基本信息，大致为下面的格式：
+1.<security-constraint> 
+2.    <web-resource-collection> 
+3.        <web-resource-name>Admin Arew</web-resource-name> 
+4.        <url-pattern>*.action</url-pattern> 
+5.    </web-resource-collection> 
+6.    <auth-constraint> 
+7.        <role-name>myeclipseWeb</role-name> 
+8.    </auth-constraint> 
+9.</security-constraint> 
+
+
+这个security-constraint元素的效果为：只要与表达式"*.action"匹配的请求不是来自拥有"myeclipseWeb"权限的用户，Web容器就会阻断它。在这里还可以使用http-method元素，阻断特定方法的请求，因为没有使用会阻断所有方法提交的请求。
+
+设置完安全策略后，还需要设置让用户有机会提供证明，证明自己有权限访问这个受限资源的登陆方法。允许使用的登陆方法使用login-config元素设置，下面为login-config元素的语法定义：
+1.<!ELEMENT login-config (auth-method?, realm-name?, form-login-config?)>  
+2.<!ELEMENT auth-method (#PCDATA)>  
+3.<!ELEMENT realm-name (#PCDATA)>  
+4.<!ELEMENT form-login-config (form-login-page, form-error-page)> 
+
+
+login-config子元素的描述如下： 
+◆  auth-method指定用来验证用户身份的方法。它的值为下面的一个：BASIC、DIGEST、FORM或 CLIENT-CERT 
+◆  realm-name指定HTTP Basic验证中在标准登陆框中显示的一条提示。 
+◆  form-login-config元素是在<auth-method>元素值为"FORM"时使用的。它是指定基于表单的登录中应该使用的登录页面和出错页面。如果没有使用基于表单的验证，则忽略这些元素。这个元素的定义如下，其中form-login-page用于指定显示登录页面的资源路径， form-error-page则用于指定用户登录失败时显示出错页面的资源路径。
+1.<!ELEMENT form-login-config (form-login-page, form-error-page)>  
+2.<!ELEMENT form-login-page (#PCDATA)>  
+3.<!ELEMENT form-error-page (#PCDATA)> 
+
+
+设置完登陆方法后，还应该使用security-role元素，注册允许用来访问受保护资源所有角色。在该元素内部使用一个role-name子元素来注册一个角色。例如：
+1.<security-role> 
+2.    <role-name>myeclipseWeb</role-name> 
+3.</security-role> 
+
+
+注册了一个"myeclipseWeb"的角色。
+
+演示示例：使用BASIC登陆方法验证用户身份
+
+1.我使用的Servlet容器是Tomcat，找到它的目录下conf目录中的tomcat-users.xml文件打开内容如下：
+1.<?xml version='1.0' encoding='utf-8'?> 
+2.<tomcat-users> 
+3.    <role rolename="myeclipseWeb"/> 
+4.    <role rolename="myeclipseWebservices"/> 
+5.    <user username="webservices" password="webservices-pwd" roles="myeclipseWebservices"/> 
+6.    <user username="admin" password="admin-pwd" roles="myeclipseWeb,myeclipseWebservices"/> 
+7.    <user username="web" password="web-pwd" roles="myeclipseWeb"/> 
+8.</tomcat-users> 
+
+
+我使用的IDE是myEclipse9.0，它配置好Tomcat下的tomcat-users.xml文件内容如上，我直接使用它了，你也可以添加自己的角色和用户。该文件定义了2个角色和3个用户，每一个用户都由自己的角色(或者说权限，可以有多重权限)。
+
+2.创建Web项目，找到web.xml，配置它，使它支持Struts 2并且启动Struts 2的安全策略
+1.<?xml version="1.0" encoding="UTF-8"?> 
+2.<web-app id="WebApp_9" version="2.4"  
+3.         xmlns="http://java.sun.com/xml/ns/j2ee"  
+4.         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+5.         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"> 
+6.    <display-name>Struts Blank</display-name> 
+7.    <filter> 
+8.        <filter-name>struts2</filter-name> 
+9.        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class> 
+10.    </filter> 
+11.    <filter-mapping> 
+12.        <filter-name>struts2</filter-name> 
+13.        <url-pattern>/*</url-pattern> 
+14.    </filter-mapping> 
+15.    <welcome-file-list> 
+16.        <welcome-file>index.html</welcome-file> 
+17.    </welcome-file-list> 
+18.    <!--  配置应用程序需要保护的资源与什么角色才可以访问它   --> 
+19.    <security-constraint> 
+20.        <web-resource-collection> 
+21.            <web-resource-name>Admin Arew</web-resource-name> 
+22.            <url-pattern>*.action</url-pattern> 
+23.        </web-resource-collection> 
+24.        <auth-constraint> 
+25.            <role-name>myeclipseWeb</role-name> 
+26.        </auth-constraint> 
+27.    </security-constraint> 
+28.    <!-- 注册可以访问保护资源的角色  --> 
+29.    <security-role> 
+30.        <role-name>myeclipseWeb</role-name> 
+31.    </security-role> 
+32.    <security-role> 
+33.        <role-name>myeclipseWebservices</role-name> 
+34.    </security-role> 
+35.    <!--  设置登录方法  --> 
+36.    <login-config> 
+37.        <auth-method>BASIC</auth-method> 
+38.        <realm-name>User Basic Authentication</realm-name> 
+39.    </login-config> 
+40.</web-app> 
+
+
+3. 创建接收一个字段信息的动作类：
+1.public class SecureAction extends ActionSupport { 
+2.    private static final long serialVersionUID = 1961430702313132722L; 
+3.    private String username; 
+4.    public String getUsername() { 
+5.        return username; 
+6.    } 
+7.    public void setUsername(String username) { 
+8.        this.username = username; 
+9.    } 
+10.    @Override 
+11.    public String execute() 
+12.    { 
+13.        return SUCCESS; 
+14.    } 
+15.} 
+
+
+4. 创建struts.xml配置文件，声明动作
+1.<?xml version="1.0" encoding="UTF-8" ?> 
+2.<!DOCTYPE struts PUBLIC 
+3.    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+4.    "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+5.<struts> 
+6.    <package name="securePackage" extends="struts-default"> 
+7.        <action name="secure" class="struts2.action.SecureAction"> 
+8.            <result name="success">/index.jsp</result> 
+9.        </action> 
+10.    </package> 
+11.</struts> 
+
+
+5. 创建输入页面input.jsp和结果页面index.jsp
+
+input.jsp:
+1.<body> 
+2.    <s:form action="secure"> 
+3.        <s:textfield name="username" label="Enter your name"></s:textfield> 
+4.        <s:submit value="submit"></s:submit> 
+5.    </s:form> 
+6.</body> 
+
+
+index.jsp
+1.<body> 
+2.    <s:property value="username"/>,Welcome 
+3.</body> 
+
+
+6.测试效果，在浏览器输入：http://localhost:8081/SecureTest/input.jsp，得到如下自力式温度调节阀界面：输入"Tom"，点击"submit"按钮，查看效果：
+
+
+看到了登陆框了吧，此时我们要访问的资源是一个受限资源所以要求权限验证顶装式球阀，还记得我们的用户表吧，查看用户表输入用户信息查看结果：
+
+ 
+
+输入"webservices"与"webservices-pwd"的用户信息：
+
+ 
+
+提示了一个"403"错误，这是因为虽然用户信息正确，但是"webservices"用户的没有"myeclipseWeb"权限。
+
+这次输入一个不存在的用户信息：
+
+这次获得了一个"401"错误，这是登陆失败的提示结果，这里会因浏览器的不同而需要不同次数的失败登陆才会得到这个结果。
+
+接下来输入一个正确的用户，并且拥有"webservices"权限的用户信息：
+
+点击"确定"，获得如下结果：
+
+可以看到，我们成功的访问了受保护的资源。若要传中文字，解决方案我已经在前面"配置Struts2"时介绍过了，需要修改Struts 2默认的编码方式还需要修改页面的编码方式，都改为"GBK"。
+
+ 
+
+自吸磁力泵18 旋涡磁力泵17 不锈钢磁力泵33 工程塑料磁力泵
+
+
+posted @ 2012-03-22 11:21 cangshi 阅读(126) | 评论 (0) | 编辑 收藏 
+
+
+
+Java虚拟机技术参数应用详解 
+
+Java虚拟机技术参数应用详解
+      JAVA虚拟机参数主要分为基本和扩展两类，在命令行中输入JAVA_HOME\bin\java 就可得到基本参数列表，在命令行输入JAVA_HOME\bin\java –X 就可得到扩展参数列表。 
+　　基本参数说明：
+
+　　-client，-server
+
+　　这两个参数用于设置虚拟机使用何种运行模式，client模式启动比较快，但运行时性能和内存管理效率不如server模式，通常用于客户端应用程序。相反，server模式启动比client慢，但可获得更高的运行性能。
+
+　　在 windows上，缺省的虚拟机类型为client模式，如果要使用server模式，就需要在启动虚拟机时加-server参数，以获得更高性能，对服务器端应用，推荐采用server模式，尤其是多个CPU的系统。在Linux，Solaris上缺省采用server模式。
+
+　　-hotspot
+
+　　含义与client相同，jdk1.4以前使用的参数，jdk1.4开始不再使用，代之以client.
+
+　　-classpath，-cp
+
+　　虚拟机在运行一个类时，需要将其装入内存，虚拟机搜索类的方式和顺序如下：
+
+　　Bootstrap classes，Extension classes，User classes.
+
+　　Bootstrap 中的路径是虚拟机自带的jar或zip文件，虚拟机首先搜索这些包文件，用System.getProperty（"sun.boot.class.path"）可得到虚拟机搜索的包名。
+
+　　Extension是位于jre\lib\ext目录下的jar文件，虚拟机在搜索完Bootstrap后就搜索该目录下的jar文件。用System. getProperty（"java.ext.dirs“）可得到虚拟机使用Extension搜索路径。
+
+　　User classes搜索顺序为当前目录、环境变量 CLASSPATH、-classpath.
+
+　　-classpath告知虚拟机搜索目录名、jar文档名、zip文档名，之间用分号；分隔。
+
+　　例如当你自己开发了公共类并包装成一个common.jar包，在使用common.jar中的类时，就需要用-classpath common.jar 告诉虚拟机从common.jar中查找该类，否则虚拟机就会抛出java.lang.NoClassDefFoundError异常，表明未找到类定义。
+
+　　在运行时可用System.getProperty（“java.class.path”）得到虚拟机查找类的路径。
+
+　　使用-classpath后虚拟机将不再使用CLASSPATH中的类搜索路径，如果-classpath和CLASSPATH都没有设置，则虚拟机使用当前路径（。）作为类搜索路径。
+
+　　推荐使用-classpath来定义虚拟机要搜索的类路径，而不要使用环境变量 CLASSPATH的搜索路径，以减少多个项目同时使用CLASSPATH时存在的潜在冲突。例如应用1要使用a1.0.jar中的类G，应用2要使用 a2.0.jar中的类G，a2.0.jar是a1.0.jar的升级包，当a1.0.jar，a2.0.jar都在CLASSPATH中，虚拟机搜索到第一个包中的类G时就停止搜索，如果应用1应用2的虚拟机都从CLASSPATH中搜索，就会有一个应用得不到正确版本的类G.
+
+　　-D<propertyName>=value
+
+　　在虚拟机的系统属性中设置属性名/值对，运行在此虚拟机之上的应用程序可用System.getProperty（“propertyName”）得到value的值。
+
+　　如果value中有空格，则需要用双引号将该值括起来，如-Dname=“space string”。
+
+　　该参数通常用于设置系统级全局变量值，如配置文件路径，应为该属性在程序中任何地方都可访问。
+
+　　-verbose[：class|gc|jni]
+
+　　在输出设备上显示虚拟机运行信息。
+
+　　verbose和verbose：class含义相同，输出虚拟机装入的类的信息，显示的信息格式如下：
+
+　　[Loaded java.io.FilePermission$1 from shared objects file]
+
+　　当虚拟机报告类找不到或类冲突时可用此参数来诊断来查看虚拟机从装入类的情况。
+
+　　-verbose：gc在虚拟机发生内存回收时在输出设备显示信息，格式如下：
+
+　　[Full GC 268K->168K（1984K）， 0.0187390 secs]
+
+　　该参数用来监视虚拟机内存回收的情况。
+
+　　-verbose：jni在虚拟机调用native方法时输出设备显示信息，格式如下：
+
+　　[Dynamic-linking native method HelloNative.sum …… JNI]
+
+　　该参数用来监视虚拟机调用本地方法的情况，在发生jni错误时可为诊断提供便利。
+
+　　-version
+
+　　显示可运行的虚拟机版本信息然后退出。一台机器上装有不同版本的JDK时
+
+　　-showversion
+
+　　显示版本信息以及帮助信息。
+
+　　-ea[：<packagename>……|：<classname>]
+
+　　-enableassertions[：<packagename>……|：<classname>]
+
+　　从JDK1.4开始，java可支持断言机制，用于诊断运行时问题。通常在测试阶段使断言有效，在正式运行时不需要运行断言。断言后的表达式的值是一个逻辑值，为true时断言不运行，为false时断言运行，抛出java.lang.AssertionError错误。
+
+　　上述参数就用来设置虚拟机是否启动断言机制，缺省时虚拟机关闭断言机制，用-ea可打开断言机制，不加<packagename>和 classname时运行所有包和类中的断言，如果希望只运行某些包或类中的断言，可将包名或类名加到-ea之后。例如要启动包com.foo.util 中的断言，可用命令 –ea：com.foo.util .
+
+　　-da[：<packagename>……|：<classname>]
+
+　　-disableassertions[：<packagename>……|：<classname>]
+
+　　用来设置虚拟机关闭断言处理，packagename和classname的使用方法和-ea相同。
+
+　　-esa | -enablesystemassertions
+
+　　设置虚拟机显示系统类的断言。
+
+　　-dsa | -disablesystemassertions
+
+　　设置虚拟机关闭系统类的断言。
+
+　　-agentlib：<libname>[=<options>]
+
+　　该参数是JDK5新引入的，用于虚拟机装载本地代理库。
+
+　　Libname为本地代理库文件名，虚拟机的搜索路径为环境变量PATH中的路径，options为传给本地库启动时的参数，多个参数之间用逗号分隔。在Windows平台上虚拟机搜索本地库名为libname.dll的文件，在 Unix上虚拟机搜索本地库名为libname.so的文件，搜索路径环境变量在不同系统上有所不同，Linux、SunOS、IRIX上为 LD_LIBRARY_PATH，AIX上为LIBPATH，HP-UX上为SHLIB_PATH.
+
+　　例如可使用-agentlib：hprof来获取虚拟机的运行情况，包括CPU、内存、线程等的运行数据，并可输出到指定文件中，可用-agentlib：hprof=help来得到使用帮助列表。在jre\bin目录下可发现hprof.dll文件。
+
+　　-agentpath：<pathname>[=<options>]
+
+　　设置虚拟机按全路径装载本地库，不再搜索PATH中的路径。其他功能和agentlib相同。
+
+　　-javaagent：<jarpath>[=<options>]
+
+　　虚拟机启动时装入java语言设备代理。Jarpath文件中的mainfest文件必须有Agent-Class属性。代理类要实现public static void premain（String agentArgs， Instrumentation inst）方法。当虚拟机初始化时，将按代理类的说明顺序调用premain方法。
+
+　　参见：java.lang.instrument
+
+　　扩展参数说明
+
+　　-Xmixed
+
+　　设置-client模式虚拟机对使用频率高的方式进行Just-In-Time编译和执行，对其他方法使用解释方式执行。该方式是虚拟机缺省模式。
+
+　　-Xint
+
+　　设置-client模式下运行的虚拟机以解释方式执行类的字节码，不将字节码编译为本机码。
+
+　　-Xbootclasspath：path
+
+　　-Xbootclasspath/a：path
+
+　　-Xbootclasspath/p：path
+
+　　改变虚拟机装载缺省系统运行包rt.jar而从-Xbootclasspath中设定的搜索路径中装载系统运行类。除非你自己能写一个运行时，否则不会用到该参数。
+
+　　/a：将在缺省搜索路径后加上path 中的搜索路径。
+
+　　/p：在缺省搜索路径前先搜索path中的搜索路径。
+
+　　-Xnoclassgc
+
+　　关闭虚拟机对class的垃圾回收功能。
+
+　　-Xincgc
+
+　　启动增量垃圾收集器，缺省是关闭的。增量垃圾收集器能减少偶然发生的长时间的垃圾回收造成的暂停时间。但浓浆泵增量垃圾收集器和应用程序并发执行，因此会占用部分CPU在应用程序上的功能。
+
+　　-Xloggc：<file>
+
+　　将虚拟机每次垃圾回收的信息写到日志文件中，文件名由file指定，文件格式是平文件，内容和-verbose：gc输出内容相同。
+
+　　-Xbatch
+
+　　虚拟机的缺省运行方式是在后台编译类代码，然后在前台执行代码，使用-Xbatch参数将关闭虚拟机后台编译，在前台编译完成后再执行。
+
+　　-Xms<size>
+
+　　设置虚拟机可用内存堆的初始大小，缺省单位为字节，该大小为1024的整数倍并且要大于1MB，可用k（K）或m（M）为单位来设置较大的内存数。初始堆大小为2MB.
+
+　　例如：-Xms6400K，-Xms256M
+
+　　-Xmx<size>
+
+　　设置虚拟机内存堆的最大可用大小，缺省单位为字节。该值必须为1024整数倍，并且要大于2MB.可用k（K）或m（M）为单位来设置较大的内存数。缺省堆最大值为64MB.
+
+　　例如：-Xmx81920K，-Xmx80M
+
+　　当应用程序申请了大内存运行时虚拟机抛出java.lang.OutOfMemoryError： Java heap space错误，就需要使用-Xmx设置较大的可用内存堆泵。
+
+　　-Xss<size>
+
+　　设置线程栈的大小，缺省单位为字节。与-Xmx类似，也可用K或M来设置较大的值。通常操作系统分配给线程栈的缺省大小为1MB.
+
+　　另外也可在java中创建线程对象时设置栈的大小，构造函数原型为Thread（ThreadGroup group， Runnable target， String name， long stackSize）。
+
+　　-Xprof
+
+　　输出CPU运行时的诊断信息。
+
+　　-Xfuture
+
+　　对类文件进行严格格式检查，以保证类代码符合类代码规范。为保持向后兼容，虚拟机缺省不进行严格的格式检查。
+
+　　-Xrs
+
+　　减少虚拟机中操作系统的信号（singals）的使用。该参数通常用在虚拟机以后台服务方式运行时使用（如Servlet）。
+
+　　-Xcheck：jni
+
+　　调用JNI函数时进行附加的检查，特别地虚拟机将校验传递给JNI函数参数的合法性，在本地代码中遇到非法数据时，虚拟机将报一个致命错误而终止。使用该阀参数后将造成性能下降。
+
+ 
+
+单螺杆泵183 不锈钢螺杆泵30 容积泵27 防爆油泵
+
+
+posted @ 2012-03-06 10:50 cangshi 阅读(183) | 评论 (0) | 编辑 收藏 
+
+
+
+JAVA之JDK在64位系统默认开启压缩指针分析 
+
+   JAVA之JDK在64位系统默认开启压缩指针分析（请多多指正！）
+      Sun的HotSpot VM从JDK5开始会根据运行环境来自动设定VM的一些参数（ergonomics）。其中大家最熟悉的可能是它会自动选择client与server模式、堆的初始和最大大小等。事实上ergonomics会设置非常多的内部参数，包括自动选择GC算法、并行GC的线程数、GC的工作区分块大小、对象晋升阈值等等。 
+　　Ergonomics相关的逻辑大都在hotspot/src/share/vm/runtime/arguments.cpp中，值得留意的是使用了FLAG_SET_ERGO（）的地方。
+
+　　于是我们可以留意一下几个版本的HotSpot对UseCompressedOops参数的处理的差异：
+
+　　HotSpot 16：
+
+　　C++代码
+
+
+
+?#ifdef _LP64     
+?  // Check that UseCompressedOops can be set with 
+the max heap size allocated     
+?  // by ergonomics.     
+?  if (MaxHeapSize <= max_heap_for_compressed_oops()) {     
+?    if (FLAG_IS_DEFAULT(UseCompressedOops)) {     
+?      // Turn off until bug is fixed.     
+?      // the following line to return it to default status.     
+?      // FLAG_SET_ERGO(bool, UseCompressedOops, true);     
+?    }     
+?    // ...     
+?  }     
+?#endif // _LP64
+ 
+　　HotSpot 17:
+
+　　C++代码
+
+
+
+?#ifndef ZERO     
+?#ifdef _LP64     
+?  // Check that UseCompressedOops can be set with 
+the max heap size allocated     
+?  // by ergonomics.     
+?  if (MaxHeapSize <= max_heap_for_compressed_oops()) {     
+?#ifndef COMPILER1     
+?    if (FLAG_IS_DEFAULT(UseCompressedOops) && !UseG1GC) {     
+?      // Disable Compressed Oops by default. Uncomment 
+next line to enable it.     
+?      // FLAG_SET_ERGO(bool, UseCompressedOops, true);     
+?    }     
+?  }     
+?#endif     
+?  // ...     
+?#endif // _LP64     
+?#endif // !ZERO    
+ 
+　　HotSpot 19 / HotSpot 20:
+
+　　C++代码
+
+
+
+?#ifndef ZERO     
+?#ifdef _LP64     
+?  // Check that UseCompressedOops can be set with 
+the max heap size allocated     
+?  // by ergonomics.     
+?  if (MaxHeapSize <= max_heap_for_compressed_oops()) {     
+?#ifndef COMPILER1     
+?    if (FLAG_IS_DEFAULT(UseCompressedOops) && !UseG1GC) {     
+?      FLAG_SET_ERGO(bool, UseCompressedOops, true);     
+?    }     
+?#endif     
+?  }     
+?  // ...     
+?#endif // _LP64     
+?#endif // !ZERO
+ 
+　　（注：HotSpot VM的版本号与JDK的版本号之间的关系，请参考另一篇笔记：Sun/Oracle JDK、OpenJDK、HotSpot VM版本之间的对应关系）
+
+　　可以看到，UseCompressedOops参数从HotSpot 19开始终于开始受ergonomics控制，会在下述条件满足的时候默认开启管道磁力泵：
+
+　　1、是64位系统（#ifdef _LP64）并且不是client VM（#ifndef COMPILER1）；
+
+　　2、Java堆的最大大小不大于一个阈值（MaxHeapSize <= max_heap_for_compressed_oops（））；
+
+　　3、没有通过。hotspotrc或命令行参数手动设定过UseCompressedOops参数的值；
+
+　　4、没有使用Garbage-First （G1） GC.
+
+第1、3、4点都很直观，于是第2点就是个关键点了：阈值是多大？ 
+　　还是看回代码，HotSpot 20：
+
+　　C++代码
+
+
+
+?void set_object_alignment() {     
+?  // Object alignment.     
+?  assert(is_power_of_2(ObjectAlignmentInBytes), "ObjectAlignmentInBytes must be power of 2");     
+?  MinObjAlignmentInBytes     = ObjectAlignmentInBytes;     
+?  assert(MinObjAlignmentInBytes >= HeapWordsPerLong * HeapWordSize, 
+"ObjectAlignmentInBytes value is too small");     
+?  MinObjAlignment         = MinObjAlignmentInBytes / HeapWordSize;     
+?  assert(MinObjAlignmentInBytes == MinObjAlignment * HeapWordSize, 
+"ObjectAlignmentInBytes value is incorrect");     
+?  MinObjAlignmentInBytesMask = MinObjAlignmentInBytes - 1;     
+?    
+?  LogMinObjAlignmentInBytes  = exact_log2(ObjectAlignmentInBytes);     
+?  LogMinObjAlignment         = LogMinObjAlignmentInBytes - LogHeapWordSize;     
+?    
+?  // Oop encoding heap max     
+?  OopEncodingHeapMax = (uint64_t(max_juint) + 1) << LogMinObjAlignmentInBytes;     
+?}     
+?    
+?inline uintx max_heap_for_compressed_oops() {     
+?  // Avoid sign flip.     
+?  if (OopEncodingHeapMax < MaxPermSize + os::vm_page_size()) {     
+?    return 0;     
+?  }     
+?  LP64_ONLY(return OopEncodingHeapMax - MaxPermSize - os::vm_page_size());     
+?  NOT_LP64(ShouldNotReachHere(); return 0);     
+?}
+ 
+　　（注：其中 （uint64_t（max_juint） + 1） 的值也被称为NarrowOopHeapMax，也就是2的32次方，0x100000000；
+
+　　ObjectAlignmentInBytes在64位HotSpot上默认为8；
+
+　　HeapWord在globalDefinitions.hpp里定义，大小跟一个char*一样；
+
+　　HeapWordSize在同一个文件里定义，等于sizeof（HeapWord），在64位系统上值为8；
+
+　　LogHeapWordSize也在同一文件里，在64位系统上定义为3）
+
+　　跟踪一下里面几个参数的计算，在64位HotSpot上有，
+
+　　C++代码
+
+
+
+1.ObjectAlignmentInBytes = 8     
+2.MinObjAlignmentInBytes = 8     
+3.HeapWordSize = 8     
+4.MinObjAlignment = 1     
+5.MinObjAlignmentInBytesMask = 0x0111     
+6.LogMinObjAlignmentInBytes = 3     
+7.LogHeapWordSize = 3 // _LP64     
+8.LogMinObjAlignment = 0     
+1.OopEncodingHeapMax = 0x800000000 // 32GB    
+ 
+　　于是，前面提到的第2个条件在64位HotSpot VM上默认是：
+
+　　C++代码
+
+
+
+?MaxHeapSize + MaxPermSize + os::vm_page_size() <= 32GB
+ 
+　　os：：vm_page_size（）是操作系统的虚拟内存的分页大小，在Linux上等于sysconf（_SC_PAGESIZE）的值；在x86_64上的Linux默认分页大小为4KB.
+
+　　MaxHeapSize的值基本上等于-Xmx参数设置的值（会根据分页大小、对齐等因素做调整）。
+
+　　MaxPermSize就是perm gen设置的最大大小。
+
+　　这下可以确认，在我现在用的环境里，当包括perm gen在内的GC堆大小在32GB - 4KB以下的时候，使用64位的JDK 6 update 23或更高版本就会自动开启UseCompressedOops功能
+
+浓硫酸液下泵17 长轴液下泵17 氟塑料液下泵。潜水电泵54 深井潜水泵23 耐腐蚀液下泵
+
+
+
+
+
+posted @ 2012-03-02 11:07 cangshi 阅读(434) | 评论 (0) | 编辑 收藏 
+
+
+
+深入解析Java核心内容：JVM中的栈和局部变量 
+
+
+深入解析Java核心内容：JVM中的栈和局部变量
+        总的来说，深入Java核心其实最主要包含个方面的内容：JVM中的栈和局部变量 Java内存分配原理  Java垃圾回收机制  Java中多态的实现机制 
+
+Java中的栈
+
+每当启用一个线程时，JVM就为他分配一个Java栈，栈是以帧为单位保存当前线程的运行状态。某个线程正在执行的方法称为当前方法，当前方法使用的栈帧称为当前帧，当前方法所属的类称为当前类，当前类的常量池称为当前常量池。当线程执行一个方法时，它会跟踪当前常量池。
+
+每当线程调用一个Java方法时，JVM就会在该线程对应的栈中压入一个帧，这个帧自然就成了当前帧。当执行这个方法时，它使用这个帧来存储参数、局部变量、中间运算结果等等。
+
+Java栈上的所有数据都是私有的。任何线程都不能访问另一个线程的栈数据。所以我们不用考虑多线程情况下栈数据访问同步的情况。
+
+像方法区和堆一样，Java栈和帧在内存中也不必是连续的,帧可以分布在连续的栈里，也可以分布在堆里
+
+Java栈的组成元素——栈帧
+
+栈帧由三部分组成：局部变量区、操作数栈、帧数据区。局部变量区和操作数栈的大小要视对应的方法而定，他们是按字长计算的。但调用一个方法时，它从类型信息中得到此方法局部变量区和操作数栈大小，并据此分配栈内存，然后压入Java栈。
+
+局部变量区 局部变量区被组织为以一个字长为单位、从0开始计数的数组，类型为short、byte和char的值在存入数组前要被转换成int值，而long和 double在数组中占据连续的两项，在访问局部变量中的long或double时，只需取出连续两项的第一项的索引值即可,如某个long值在局部变量区中占据的索引时3、4项，取值时，指令只需取索引为3的long值即可。
+
+下面就看个例子，好让大家对局部变量区有更深刻的认识。这个图来自《深入JVM》：
+1.public static int runClassMethod(int i,long l,float f,double d,Object o,byte b) {     
+2.        return 0;     
+3.    }     
+4.         
+5.    public int runInstanceMethod(char c,double d,short s,boolean b) {     
+6.        return 0;     
+7.    }    
+
+
+上面代码片的方法参数和局部变量在局部变量区中的存储结构如下图：
+
+局部变量区的存储结构
+
+上面这个图没什么好说的，大家看看就会懂。但是，在这个图里，有一点需要注意：
+
+runInstanceMethod的局部变量区第一项是个reference（引用），它指定的就是对象本身的引用，也就是我们常用的this,但是在runClassMethod方法中，没这个引用，那是因为runClassMethod是个静态方法。 
+
+
+操作数栈和局部变量区一样，操作数栈也被组织成一个以字长为单位的数组。但和前者不同的是，它不是通过索引来访问的，而是通过入栈和出栈来访问的。可把操作数栈理解为存储计算时，临时数据的存储区域。下面我们通过一段简短的程序片段外加一幅图片来了解下操作数栈的作用。
+
+int a = 100;
+
+int b = 98;
+
+int c = a+b;
+
+操作数栈的结构
+
+从图中可以得出：操作数栈其实就是个临时数据存储区域，它是通过入栈和出栈来进行操作的。
+
+帧数据区除了局部变量区和操作数栈外，Java栈帧还需要一些数据来支持常量池解析、正常方法返回以及异常派发机制。这些数据都保存在Java栈帧的帧数据区中。
+当JVM执行到需要常量池数据的指令时，它都会通过帧数据区中指向常量池的指针来访问它。
+
+除了处理常量池解析外，帧里的数据还要处理Java方法的正常结束和异常终止。如果是通过return正常结束，则当前栈帧从Java栈中弹出，恢复玻璃钢液下泵发起调用的方法的栈。如果方法又返回值，JVM会把返回值压入到发起调用方法的操作数栈。
+
+为了处理Java方法中的异常情况，帧数据区还必须保存一个对此方法异常引用表的引用。当异常抛出时，JVM给catch块中的代码。如果没发现，方法立即终止，然后JVM用帧区数据的信息恢复发起调用的方法的帧。然后再发起调用方法的上下文重新抛出同样的异常。
+
+栈的整个结构
+
+在前面就描述过：栈是由栈帧组成，每当线程调用一个Java方法时，JVM就会在该线程对应的栈中压入一个帧，而帧是由局部变量区、操作数栈和帧数据区组成。那在一个代码块中，栈到底是什么形式呢？下面是我从《深入JVM》中摘抄的一个例子，大家可以看看：
+
+代码片段：
+
+栈的整个结构代码示例
+
+ 
+
+执行过程中的三个快照：
+
+
+
+ 
+
+上面所给的图，只想说明两件事情，我们也可用此来理解Java中的栈：
+
+1、只有在调用一个方法时，才为当前栈分配一个帧，然后将该帧压入栈。
+
+2、帧中存储了对应方法的局部数据，方法执行完，对应的帧则从栈中弹出，并把返回结果存储在调用方法的帧的操作数栈中。
+
+
+立式多级泵34 卧式多级泵24 多级离心泵41 不锈钢多级泵31 水环真空泵32 旋片真空泵
+
+
+
+posted @ 2012-02-29 10:52 cangshi 阅读(262) | 评论 (0) | 编辑 收藏 
+
+
+
+利用DES加密Java源码的原因应用分析 
+
+
+　   加密利用：DES加密Java源码的原因应用分析
+　　Java源代码经过编译以后在JVM中执行。由于JVM界面是完全透明的，Java类文件能够很容易通过反编译器重新转换成源代码。因此，所有的算法、类文件等都可以以源代码的形式被公开，使得软件不能受到保护，为了保护产权，一般可以有以下几种方法：
+
+　　（1）"模糊"类文件，加大反编译器反编译源代码文件的难度。然而，可以修改反编译器，使之能够处理这些模糊类文件。所以仅仅依赖"模糊类文件"来保证代码的安全是不够的。
+
+　　（2）流行的加密工具对源文件进行加密，比如PGP（Pretty Good Privacy）或GPG（GNU Privacy Guard）。这时，最终用户在运行应用之前必须先进行解密。但解密之后，最终用户就有了一份不加密的类文件，这和事先不进行加密没有什么差别。
+
+　　（3）加密类文件，在运行中JVM用定制的类装载器（Class Loader）解密类文件。Java运行时装入字节码的机制隐含地意味着可以对字节码进行修改。JVM每次装入类文件时都需要一个称为ClassLoader的对象，这个对象负责把新的类装入正在运行的JVM。JVM给ClassLoader一个包含了待装入类（例如java.lang.Object）名字的字符串，然后由ClassLoader负责找到类文件，装入原始数据，并把它转换成一个Class对象。
+
+　　用户下载的是加密过的类文件，在加密类文件装入之时进行解密，因此可以看成是一种即时解密器。由于解密后的字节码文件永远不会保存到文件系统，所以窃密者很难得到解密后的代码。
+
+　　由于把原始字节码转换成Class对象的过程完全由系统负责，所以创建定制ClassLoader对象其实并不困难，只需先获得原始数据，接着就可以进行包含解密在内的任何转换。
+
+　　Java密码体系和Java密码扩展
+
+　　Java密码体系(JCA)和Java密码扩展(JCE)的设计目的是为Java提供与实现无关的加密函数API。它们都用factory方法来创建类的例程，然后把实际的加密函数委托给提供者指定的底层引擎,引擎中为类提供了服务提供者接口在Java中实现数据的加密/解密，是使用其内置的JCE(Java加密扩展)来实现的。Java开发工具集1.1为实现包括数字签名和信息摘要在内的加密功能，推出了一种基于供应商的新型灵活应用编程接口。Java密码体系结构支持供应商的互操作,同时支持硬件和软件实现。
+
+　　Java密码学结构设计遵循两个原则:
+
+　　(1)算法的独立性和可靠性。
+
+　　(2)实现的独立性和相互作用性。
+
+　　算法的独立性是通过定义密码服务类来获得。用户只需了解密码算法的概念,而不用去关心如何实现这些概念。实现的独立性和相互作用性通过密码服务提供器来实现。密码服务提供器是实现一个或多个密码服务的一个或多个程序包。软件开发商根据一定接口,将各种算法实现后,打包成一个提供器,用户可以安装不同的提供器。安装和配置提供器,可将包含提供器的ZIP和JAR文件放在CLASSPATH下,再编辑Java安全属性文件来设置定义一个提供器。Java运行环境Sun版本时, 提供一个缺省的提供器Sun。
+
+　　下面介绍DES算法及如何利用DES算法加密和解密类文件的步骤。
+
+　　DES算法简介
+
+　　DES（Data Encryption Standard）是发明最早的最广泛使用的分组对称加密算法。DES算法的入口参数有三个：Key、Data、Mode。其中Key为8个字节共64位，是DES算法的工作密钥；Data也为8个字节64位，是要被加密或被解密的数据；Mode为DES的工作方式，有两种：加密或解密。
+
+　　DES算法工作流程如下：若Mode为加密模式，则利用Key 对数据Data进行加密， 生成Data的密码形式（64位）作为DES的输出结果；如Mode为解密模式，则利用Key对密码形式的数据Data进行解密，还原为Data的明码形式（64位）作为DES的输出结果。在上海针型阀通信网络的两端，双方约定一致的Key，在通信的源点用Key对核心数据进行DES加密，然后以密码形式在公共通信网（如电话网）中传输到通信网络的终点，数据到达目的地后，用同样的Key对密码数据进行解密，便再现了明码形式的核心数据。这样，便保证了核心数据在公共通信网中传输的安全性和可靠性。
+
+　　也可以通过定期在通信网络的源端和目的端同时改用新的Key，便能更进一步提高数据的保密性。
+　　利用DES算法加密的步骤
+
+　　（1）生成一个安全密钥。在加密或解密任何数据之前需要有一个密钥。密钥是随同被加密的应用程序一起发布的一段数据，密钥代码如下所示。
+
+　　【生成一个密钥代码】
+
+view plaincopy to clipboardprint?
+// 生成一个可信任的随机数源
+SecureRandom sr = new SecureRandom();
+// 为我们选择的DES算法生成一个KeyGenerator对象
+KeyGenerator kg = KeyGenerator.getInstance ("DES" );
+Kg.init (sr);
+// 生成密钥
+Secret Key key = kg.generateKey();
+// 将密钥数据保存为文件供以后使用，其中key Filename为保存的文件名
+Util.writeFile (key Filename, key.getEncoded () );
+// 生成一个可信任的随机数源
+SecureRandom sr = new SecureRandom();
+// 为我们选择的DES算法生成一个KeyGenerator对象
+KeyGenerator kg = KeyGenerator.getInstance ("DES" );
+Kg.init (sr);
+// 生成密钥
+Secret Key key = kg.generateKey();
+// 将密钥数据保存为文件供以后使用，其中key Filename为保存的文件名
+Util.writeFile (key Filename, key.getEncoded () );
+
+　　（2）加密数据。得到密钥之后，接下来就可以用它加密数据。如下所示。
+
+　　【用密钥加密原始数据】
+
+ 
+
+view plaincopy to clipboardprint?
+// 产生一个可信任的随机数源
+SecureRandom sr = new SecureRandom();
+//从密钥文件key Filename中得到密钥数据
+Byte rawKeyData = Util.readFile (key Filename);
+// 从原始密钥数据创建DESKeySpec对象
+DESKeySpec dks = new DESKeySpec (rawKeyData);
+// 创建一个密钥工厂，然后用它把DESKeySpec转换成Secret Key对象
+SecretKeyFactory key Factory = SecretKeyFactory.getInstance("DES" );
+Secret Key key = keyFactory.generateSecret( dks );
+// Cipher对象实际完成加密操作
+Cipher cipher = Cipher.getInstance( "DES" );
+// 用密钥初始化Cipher对象
+cipher.init( Cipher.ENCRYPT_MODE, key, sr );
+// 通过读类文件获取需要加密的数据
+Byte data = Util.readFile (filename);
+// 执行加密操作
+Byte encryptedClassData = cipher.doFinal(data );
+// 保存加密后的文件，覆盖原有的类文件。
+Util.writeFile( filename, encryptedClassData );
+// 产生一个可信任的随机数源
+SecureRandom sr = new SecureRandom();
+//从密钥文件key Filename中得到密钥数据
+Byte rawKeyData = Util.readFile (key Filename);
+// 从原始密钥数据创建DESKeySpec对象
+DESKeySpec dks = new DESKeySpec (rawKeyData);
+// 创建一个密钥工厂，然后用它把DESKeySpec转换成Secret Key对象
+SecretKeyFactory key Factory = SecretKeyFactory.getInstance("DES" );
+Secret Key key = keyFactory.generateSecret( dks );
+// Cipher对象实际完成加密操作
+Cipher cipher = Cipher.getInstance( "DES" );
+// 用密钥初始化Cipher对象
+cipher.init( Cipher.ENCRYPT_MODE, key, sr );
+// 通过读类文件获取需要加密的数据
+Byte data = Util.readFile (filename);
+// 执行加密操作
+Byte encryptedClassData = cipher.doFinal(data );
+// 保存加密后的文件，覆盖原有的类文件。
+Util.writeFile( filename, encryptedClassData );
+
+ 
+
+　　（3）解密数据。运行经过加密的程序时，ClassLoader分析并解密类文件。操作步骤如下所示。
+
+　　【用密钥解密数据】
+
+view plaincopy to clipboardprint?
+// 生成一个可信任的随机数源
+SecureRandom sr = new SecureRandom();
+// 从密钥文件中获取原始密钥数据
+Byte rawKeyData = Util.readFile( keyFilename );
+// 创建一个DESKeySpec对象
+DESKeySpec dks = new DESKeySpec (rawKeyData);
+// 创建一个密钥工厂，然后用它把DESKeySpec对象转换成Secret Key对象
+SecretKeyFactory key Factory = SecretKeyFactory.getInstance( "DES" );
+SecretKey key = keyFactory.generateSecret( dks );
+// Cipher对象实际完成解密操作
+Cipher cipher = Cipher.getInstance( "DES" );
+// 用密钥初始化Cipher对象
+Cipher.init( Cipher.DECRYPT_MODE, key, sr );
+// 获得经过加密的数据
+Byte encrypted Data = Util.readFile (Filename);
+//执行解密操作
+Byte decryptedData = cipher.doFinal( encryptedData );
+// 然后将解密后的数据转化成原来的类文件。
+// 生成一个可信任的随机数源
+SecureRandom sr = new SecureRandom();
+// 从密钥文件中获取原始密钥数据
+Byte rawKeyData = Util.readFile( keyFilename );
+// 创建一个DESKeySpec对象
+DESKeySpec dks = new DESKeySpec (rawKeyData);
+// 创建一个密钥工厂，然后用它把DESKeySpec对象转换成Secret Key对象
+SecretKeyFactory key Factory = SecretKeyFactory.getInstance( "DES" );
+SecretKey key = keyFactory.generateSecret( dks );
+// Cipher对象实际完成解密操作
+Cipher cipher = Cipher.getInstance( "DES" );
+// 用密钥初始化Cipher对象
+Cipher.init( Cipher.DECRYPT_MODE, key, sr );
+// 获得经过加密的数据
+Byte encrypted Data = Util.readFile (Filename);
+//执行解密操作
+Byte decryptedData = cipher.doFinal( encryptedData );
+// 然后将解密后的数据转化成原来的类文件。
+
+　　将上述代码与自定义的类装载器结合就可以做到边解密边运行，从而起到保护源代码的作用。
+
+　　结束语
+
+　　加密/解密是数据传输中保证数据安全性和完整性的常用方法，Java语言因其平台无关性，在Internet上的应用非常之广泛。使用DES算法加密Java源码在一定程度上能保护软件的产权。
+
+ 
+
+posted @ 2012-02-09 13:34 cangshi 阅读(172) | 评论 (0) | 编辑 收藏 
+
+
+
+Java如何通过远程方法调用RMI 
+
+公司做web service的时候，看了一下资料，当时看见一个叫rmi的东西（远程方法调用）,最近闲着，所以看了一下 ，感觉挺简单的！所以写了一个例子提供给大家把！ 
+rmi的服务端，必须要使用接口，同时还有接口的实现类！所以下面的两个文件是接口类和接口的实现类！
+
+UserDao 接口：
+1./**  
+2. * 远程接口     必须继承与Remote对象  
+3. * @author spring sky  
+4. * date: 2012年2月7日 10:55:05  
+5. * Email:vipa1888@163.com  
+6. * QQ:840950105  
+7. */ 
+8.public interface UserDao extends Remote{  
+9.    /**  
+10.     * 简单的测试方法  
+11.     * @param name  
+12.     */ 
+13.    public void sayName(String name) throws RemoteException;   
+14. 
+15. 
+16.} 
+
+
+UserDaoImpl实现类
+1./**  
+2. *   
+3. *  接口的实现类    必须继承UnicastRemoteObject(单一远程对象)   实现UserDao自己的接口  
+4. * @author spring sky  
+5. * date: 2012年2月7日 10:56:05  
+6. * Email:vipa1888@163.com  
+7. * QQ:840950105  
+8. */ 
+9.public class UserDaoImpl extends UnicastRemoteObject implements UserDao {  
+10. 
+11.    public UserDaoImpl() throws RemoteException {  
+12.    }  
+13.    @Override 
+14.    public void sayName(String name) {  
+15.        if(name!=null&&!name.equals(""))  
+16.        {  
+17.            System.out.println("我的名字是："+name);  
+18.        }else{  
+19.            System.err.println("名字不为空....");  
+20.        }  
+21.    }  
+22. 
+23.} 
+
+
+对外的提供一个服务，服务中已经共享了url给外界访问
+1./**  
+2. * 使用main方法启动一个服务，用于外界环境访问  
+3. * @author spring sky  
+4. * date:2012年2月7日 10:57:37  
+5. * Email:vipa1888@163.com  
+6. * QQ:840950105  
+7. */ 
+8.public class StartService {  
+9.    private static final String IP = "127.0.0.1";  
+10.    private static final int PORT = 9999;  
+11.    private static final String REMOTE_NAME = "userDao";  
+12.    private static final String REMOTE_URL = "rmi://"+IP+":"+PORT+"/"+REMOTE_NAME;  
+13.    public static void main(String[] args) {  
+14.        try {  
+15.            UserDao userDao = new UserDaoImpl();    //实例化对象  
+16.            LocateRegistry.createRegistry(PORT);    //注册端口  
+17.            Naming.bind(REMOTE_URL, userDao);       //绑定远程服务对象  
+18.            System.out.println("远程"+REMOTE_NAME+"启动成功....");  
+19.        } catch (RemoteException e) {  
+20.            System.err.println("远程对象出错");  
+21.            e.printStackTrace();  
+22.        } catch (MalformedURLException e) {  
+23.            System.err.println("URL出错了");  
+24.            e.printStackTrace();  
+25.        } catch (AlreadyBoundException e) {  
+26.            System.err.println("绑定的对象已经存在了");  
+27.            e.printStackTrace();  
+28.        }  
+29.    }  
+30.} 
+
+
+上面是服务端的代码，如果启动没有任何问题，就可以做客户端访问了，其实上海旋塞阀客户端的访问更加的简单，只需要远程的接口类和查询rmi中的url就可以了！
+
+代码如下：
+1./**  
+2. * 远程方法调用测试  
+3. * @author spring sky  
+4. * date:2012年2月7日 11:12:46  
+5. * Email:vipa1888@163.com  
+6. * QQ:840950105  
+7. * name:石明政  
+8. */ 
+9.public class TestRemote {  
+10.    public static void main(String[] args) {  
+11.        try {  
+12.            //在rmi服务中查询userdao的对象  
+13.            UserDao userDao = (UserDao) Naming.lookup("rmi://127.0.0.1:9999/userDao");     
+14.            //调用远程服务的方法  
+15.            userDao.sayName("spring sky");  
+16.        } catch (MalformedURLException e) {  
+17.            System.err.println("URL出错");  
+18.            e.printStackTrace();  
+19.        } catch (RemoteException e) {  
+20.            System.err.println("远程对象出错");  
+21.            e.printStackTrace();  
+22.        } catch (NotBoundException e) {  
+23.            System.err.println("没有找到绑定的对象");  
+24.            e.printStackTrace();  
+25.        }  
+26.    }  
+27.} 
+
+
+以上就是所有的rmi远程调用代码了！运行结果如下：
+
+
+
+好了，本人也只是简单的了解了rmi，如果以后有项目做rmi就可以深入了！ 呵呵  ，在这里我突然感觉，想web service也应该和他一样的原理的把！
+
+
+卧式自吸泵43 不锈钢转子泵 
+
+立式排污泵12 管道排污泵26 液下排污泵
+
+
+
+
+posted @ 2012-02-09 10:53 cangshi 阅读(118) | 评论 (0) | 编辑 收藏 
+
+
+
+JAVA J2ME编程 横竖屏切换知识总结 
+
+
+随着手机的功能越来越丰富，支持横竖屏切换的手机越来越多，在手机软件开发中也必须要处理这个功能了。下面对于使用J2ME技术进行编程时对于横竖屏(转屏)切换时的相关知识进行一下小结。
+
+1、如何判断横竖屏切换
+
+横竖屏切换由手机系统自动完成的，在J2ME中只能检测到这种变换，判断横竖屏切换的方法有2种：
+
+A)线程中每次检测法(轮询方式)
+
+这种方式是在程序的线程中每隔一定的时间间隔，就获得一次屏幕的宽度和高度，然后判断宽度和高度是否变化，如果宽度和高度和已有的宽度和高度相比发生了变化，至于是变化成横屏还是竖屏则只需要比较宽高就可以实现。在判断到横竖屏切换时，执行逻辑代码即可。
+
+使用这种方式由于每次线程循环都需要检测，所以执行效率不高，但是由于一些转屏手机不支持sizeChanged的方法回调，所以使用这种方式的通用性是最高的，是经常被使用的方法。
+
+B)sizeChanged法(中断方式)
+
+这种方式是指如果转屏手机对于MIDP支持比较规范，则当横竖屏切换时会自动调用Canvas类中的sizeChanged方法，这样就需要在Canvas的子类中覆盖该方法即可，在该方法内部书写横竖屏切换的逻辑处理代码即可。
+
+使用这种方式由于是系统自动调用，所以执行效率很好，但是由于部分手机实现的不规范，所以通用性没有第一种方式高。
+
+说明：高级用户界面自动切换，不需要书写处理的代码。
+
+2、如何处理横竖屏切换
+
+在检测到横竖屏切换以后，就需要对于横竖屏切换进行处理了，处理的方式一般有也有两种：
+
+A)简单提示法
+
+这种处理方式时指只实现一种屏幕模式下的逻辑，而在另外一种屏幕方式下显示提示。例如只实现竖屏模式的界面，在横屏模式下，只出现提示：“请在竖屏模式下使用本程序”。
+
+使用这种方式程序实现比较简单，只需要实现一套界面即可，适合于比较简单的程序。
+
+B)实现两套UI法
+
+这种处理方式时指在一个程序中实现两套界面：一套横屏一套竖屏。可以在程序中设置一个screenType的参数，在每个节目的绘制上海电磁阀方法中根据该参数判断是横屏还是竖屏，然后执行不同的绘制代码即可。
+
+使用这种方式程序实现比较友好，但是程序开发和测试的工作量都要稍微大一点，而且横竖屏切换时数据的变换也比较麻烦。
+
+3、其它说明
+
+在实现横竖屏切换时，有些知识会帮助你实现一些很实用的功能：
+
+在Nokia手机上禁止横竖屏切换：
+
+在S60 5th 及以上版本中，可以通过在jad或manifest文件中通过指定如下属性来指定程序运行时的屏幕类型：
+
+竖屏：Nokia-MIDlet-App-Orientation：portrait
+
+横屏：Nokia-MIDlet-App-Orientation：landscape
+
+不足之处希望大家积极指正、交流和完善！
+
+
+加药计量泵25 隔膜计量泵35 电磁隔膜计量泵51 液压隔膜计量泵24 机械隔膜计量泵18 柱塞计量泵
+
+
+
+posted @ 2012-02-07 10:53 cangshi 阅读(89) | 评论 (0) | 编辑 收藏 
+
+
+
+在NetBeans Java ME polish环境下开发BlackBerry应用 
+
+
+　　在网上广为流传的一份BlackBerry应用程序开发者指南里边详细介绍如何用BlackBerry API开发BlackBerry application的各方面内容。
+
+　　但是我们一般都是用Java ME开发，开发出来的程序是jar格式，可以运行在大部分型号的手机上。可是BlackBerry是不支持jar的，它支持的是cod格式。所以如果你想你开发的Java ME程序运行在BlackBerry上，就必须先把它转为cod格式。
+
+　　要把一般Java ME程序转为cod可以在程序开发编译过程序中转，也可以对打包好的jar转。
+
+　　◆对已经打包好的jar文件转为BlackBerrycod格式:进入jar文件所在目录，在cmd(命令行)中进入相应目录，输入下边命令就可以了：引用rapc import="C:\Program Files\Research In Motion\BlackBerry JDE 4.2.1\lib\net_rim_api.jar" codename=TestBB jad=TestBB.jad TestBB.jar
+
+　　(注：这里rapc 是 C:\Program Files\Research In Motion\BlackBerry JDE 4.2.1\bin\ 目录里的 rapc.exe, 如果环境变量没有设置，这里就要用绝对路径：C:\Program Files\Research In Motion\BlackBerry JDE 4.2.1\bin\rapc, 当然你可以把它写成一个.bat文件来执行。而网上你可以搜索到一个名为Java2Cod.exe的小程序可以直接转换。)
+
+　　◆在JDE中编译程序:无论你是用BlackBerry API或者Java ME/midp API来开发Java ME程序，都可以在JDE上编译。最终他会自动打包成cod文件。
+
+　　◆在其IDE中编译打包：因为我是用NetBeans来开发的，所以本人只能提供NetBeans开发BlackBerry程序的见解。而本人是在 NetBeans中用Java ME polish来整合开发的。下边介绍Java ME polish中开发BlackBerry程序
+
+　　（可以参考http://www.j2mepolish.org/docs/platform-blackberry.html）
+
+　　一、在Java ME polish安装目录里找到platforms.xml,在里边的BlackBerry部分中，加上<capability name="build.Finalizer" value="jar2cod" />（我用的是Preview 2.0版本，里边这一句是注释掉，所以要把它activate，也可以在devices.xml中在你想用的emulator 属性里加上这一句。如果没有这一句编译时就不会自动把jar转换为cod文件的.）
+
+　　polish里支持的版本最新系4.2.0,如果你安装BlackBerry版本最新的如4.2.1/4.3.0,哪么你要把${BlackBerry目录}/lib/net_rim_API.jar copy到${Java MEpolish}/import里，在platforms.xml的BlackBerry中修改<capability name="build.BootClassPath" value="net_rim_API.jar" />
+
+　　二、在工程的build.xml中添加blackberry.home属性（你安装的BlackBerry JDE目录）
+
+　　Java代码
+
+
+
+1.<property        name="blackberry.home" 
+2. location="C:/Program Files/Research In Motion/BlackBerry JDE 4.2.1" /> 
+
+　　三、如果你编译后打包的jad文件中缺少MicroEdition-Configuration和MicroEdition-Profile两个属性是不能成功转成cod文件的。这可以在工程的build.xml中的<build>属性里的<jad>元素中添加：
+
+　　Java代码
+
+
+
+?<jad>     <attribute target="jad" name="
+MicroEdition-Configuration" value="CLDC-1.1" 
+?if="polish.cldc11"/>     <attribute target="jad" 
+name="MicroEdition-Profile" value="MIDP-2.0"/>    
+?</jad>
+
+
+
+　　四、如果你用了混淆器的（obfuscator），要把它unactivate,不要用它，因为BlackBerry中的rapc转换过程中会对程序混淆的。
+
+　　Java代码
+
+
+?<obfuscator name="ProGuard" unless="test or polish.blackberry" >    
+?</obfuscator>
+
+
+　　五、在工程的build.xml中的<Java MEpolish>属性requirements用你想编译的BlackBerryemulator,如：
+
+　　Java代码
+
+
+
+?<deviceRequirements>      
+<requirement name="Identifier" value="BlackBerry/8800" />              
+?</deviceRequirements>
+
+
+　　如果你的程序是一般的Java ME程序，那么就可以编译运行了。但如果你是用BlackBerry API开发的上海柱塞阀，就要就把build.xml里<build>元素中的<midlet>,改为<main>，同时要添加polish.classes.midlet-1的variable。如：
+
+　　Java代码
+
+
+?<!-- midlets definition -->   
+<main class="com.protel.BlackBerryim.ui.BlackBerryIMMidlet" />     
+?<!-- project-wide variables - used for preprocessing  -->   
+<variables> <variable name="polish.classes.midlet-1" value=" " />    
+?</variables>
+
+
+　　(注：polish.classes.midlet-1的value是" "，中间有一个空格的，我试过了，如果没有这个定义变量或者这个值中间没有空格，jar是不能转为cod格式。)
+
+　　这是我初接触BlackBerry时的一点心得。我用BlackBerry API在NetBeans+Java ME polish的环境下写过一个test app，是能成功运行的，希望对初接触BlackBerry的朋友有帮助。
+
+ 
+
+塑料离心泵83 卧式化工泵15 不锈钢化工泵45 化工流程泵26 化工离心泵
+
+
+ 
+
+posted @ 2012-02-03 22:32 cangshi 阅读(115) | 评论 (0) | 编辑 收藏 
+
+
+
+如何通过Java调用C/C++编写第三方dll动态链接库解决方案分析 
+
+
+如何通过Java调用C/C++编写第三方dll动态链接库解决方案分析。
+最近在用weka做一个数据挖掘相关的项目，不得不说，weka还是一个不错的开放源代码库，提供了很多最常用的分类和聚类算法。
+
+在我的项目中要用到一个聚类算法，Affinity Propagation（AP），由多伦多大学的Brendan J. Frey发表于2007年。相比其他的聚类算法，AP算法的聚类结果更加准确。
+
+在AP的官方网站公布了AP算法的动态链接库，我的目标就是实现在Java工程中调用这个动态链接库。
+
+在网上查了资料，发现，如果仅仅是想调用Windows的Native API还是比较省事的，这里我主要针对第三方dll的调用。
+
+下面进入正题。
+
+这里主要用的方法是JNI。在网上查资料时看到很多人说用JNI非常的复杂，不仅要看很多的文档，而且要非常熟悉C/C++编程。恐怕有很多人在看到诸如此类的评论时已经决定绕道用其他方法了。但是，假如你要实现的功能并不复杂（简单的参数传递，获取返回值等等），我还是支持使用这个方法的。
+
+Java Native Interface，简称JNI，是Java平台的一部分，可用于让Java和其他语言编写的代码进行交互。下面是从网上摘取的JNI工作示意图。
+
+
+图1 JNI的工作模式
+
+下面就举具体的例子说明一下使用步骤：
+
+1） 编写一个类，声明native方法
+1.public class APCluster {   
+2.    public native int[] CallAPClusterDll( int         arg_Int,   
+3.                                          double[]    arg_DoubleArray,   
+4.                                          boolean     arg_boolean);  
+5.    static 
+6.    {  
+7.        System.loadLibrary("APClusterDllMedium");  
+8.    }  
+9.} 
+
+
+上面是APCluster.java文件，定义了一个APCluster类，其中有一个方法CallAPClusterDll()，需要传递三种不同类型的参数，并且返回一个整型数组。
+
+注意，这里只需要声明这个方法，并不需要实现，具体实现就在APClusterDllMedium中。
+
+APClusterDllMedium就像中介一样，Java通过调用这个中介Dll中的CallAPClusterDll方法，间接调用真正的第三方Dll。
+
+2）编译生成.h文件
+
+第一步：
+
+javac APCluster.java 生成APCluster.class
+
+第二步：
+
+javah APCluster 生成APCluster.h头文件，内容如下：
+1./* DO NOT EDIT THIS FILE - it is machine generated */ 
+2.#include <jni.h>  
+3./* Header for class APCluster */ 
+4.#ifndef _Included_APCluster  
+5.#define _Included_APCluster  
+6.#ifdef __cplusplus  
+7.extern "C" {  
+8.#endif10 /*  
+9. * Class:     APCluster  
+10. * Method:    CallAPClusterDll  
+11. * Signature: (I[DZ)[I  
+12. */ 
+13.JNIEXPORT jintArray JNICALL Java_APCluster_CallAPClusterDll  
+14.  (JNIEnv *, jobject, jint, jdoubleArray, jboolean);  
+15.#ifdef __cplusplus  
+16.}  
+17.#endif21
+18.#endif 
+
+
+注意，APCluster.h这个头文件的内容是不能修改的，否则JNI会找不到相对应的CallAPClusterDll()的实现。
+
+
+3）创建C/C++工程，实现CallAPClusterDll()方法。
+
+创建一个C/C++工程，工程名为APClusterDllMedium（其实，生成的dll名为APClusterDllMedium即可），导入APCluster.h这个头文件，并创建一个CPP文件，实现.h文件中的方法。
+
+ 
+图2 新建工程结构
+
+由于我创建的工程是win32控制台程序，所以最后默认生成的是.exe文件，所以还要做一步工程属性修改，让它生成.dll后缀文件。
+
+打开Project Property ->General，做以下修改：
+
+ 
+图3 修改工程属性
+
+下面就是实现 JNIEXPORT jintArray JNICALL Java_APCluster_CallAPClusterDll (JNIEnv *, jobject, jint, jdoubleArray, jboolean); 这个方法了。先贴代码再慢慢解释吧。
+1.#include "APCluster.h"   
+2.#include <stdio.h>   
+3.#include <windows.h>  
+4.#ifdef __cplusplus   
+5.extern "C" {  
+6.#endif  
+7.typedef int*  (__stdcall *APCLUSTER32)(double*, unsigned int, bool);  
+8.JNIEXPORT jintArray JNICALL Java_APCluster_CallAPClusterDll  
+9.  (JNIEnv *env, jobject _obj, jint _arg_int, jdoubleArray _arg_doublearray, jboolean _arg_boolean)  
+10.{  
+11.    HMODULE dlh = NULL;  
+12.    APCLUSTER32 apcluster32;  
+13.    if (!(dlh=LoadLibrary("apclusterwin.dll")))        //第三方DLL位置  
+14.    {  
+15.        printf("LoadLibrary() failed: %d\n", GetLastError());   
+16.    }  
+17.    if (!(apcluster32 = (APCLUSTER32)GetProcAddress(dlh, "apcluster32")))    //具体调用apcluster32方法  
+18.    {  
+19.        printf("GetProcAddress() failed: %d\n", GetLastError());   
+20.    }  
+21.    int        m_int = _arg_int;  //类型转换  
+22.    double*    m_doublearray = env->GetDoubleArrayElements(_arg_doublearray, NULL);  
+23.    bool       m_boolean = _arg_boolean;  
+24.    int* ret = (*apcluster32)(m_doublearray, m_int, m_boolean); /* actual function call */ 
+25.    jintArray result = env->NewIntArray(_arg_int);  
+26.    env->SetIntArrayRegion(result, 0, _arg_int, (const jint*)ret);  
+27.    FreeLibrary(dlh); /* unload DLL and free memory */ 
+28.    if(ret)   
+29.    {  
+30.         free(ret);   
+31.    }  
+32.    return result;  
+33.}  
+34.#ifdef __cplusplus  
+35.}  
+36.#endif 
+
+
+a）首先为了#include <jni.h>，必须添加JNI所在的目录。
+
+打开Project Property -> C/C++ -> General -> Additional Include Directories添加相应目录：
+
+ 
+图4 添加JNI目录
+
+b）在APCluster.h文件中自动生成的函数，只标识了函数参数类型，为了引用这些参数，自己起一个相应的名字：
+
+JNIEXPORT jintArray JNICALL Java_APCluster_CallAPClusterDll
+(JNIEnv *env, jobject _obj, jint _arg_int, jdoubleArray _arg_doublearray, jboolean _arg_boolean) ......
+
+c）声明函数指针，就是你要调用的第三方dll中函数的类型。
+
+d）LoadLibrary，导入真正的第三方Dll，并找到要调用的方法的函数地址。
+
+把这个函数地址赋值给函数指针，接下来就可以通过这个函数指针调用真正的apcluster函数了！
+
+e）类型转换：
+
+读读jni.h文件就知道jdouble和double其实是一个东西，jboolean就是unsigned char类型，jni.h中是这么声明的：
+1.typedef unsigned char    jboolean;  
+2.typedef unsigned short   jchar;  
+3.typedef short            jshort;  
+4.typedef float            jfloat;  
+5.typedef double           jdouble; 
+
+
+但是数组类型就没有这么简单，获取数组要使用类型相对应的env->GetTypeArrayElement(jTypeArray...)。
+
+最后，要返回一个jint类型的数组，就要新创建一个此类型的数组，再为其赋值：
+1.jintArray result = env->NewIntArray(_arg_int);  
+2.env->SetIntArrayRegion(result, 0, _arg_int, (const jint*)ret); 
+
+
+其中，_arg_int代表的是创建数组的长度。
+
+最后return result。
+
+4）Build这个工程。
+
+Build，生成相应的APCluster.dll文件，将这个dll放到java工程目录下。
+
+ 
+图5 将生成的dll放到java工程下
+
+5）编写测试java程序，调用dll库。
+
+以下为测试程序，Test.java：
+1.public class Test    
+2.{  
+3.    public static void main(String[] args)   
+4.    {   
+5.        double     arg_doublearray[] = {0.1, 0.2, 0.3};   
+6.        int        arg_int = 3;   
+7.        boolean    arg_boolean = true;   
+8.        int[]  result = new APCluster().CallAPClusterDll(arg_int, arg_doublearray, arg_boolean);  
+9.        .....  
+10.    }  
+11.} 
+
+
+到此，java调用第三方dll就基本完成了。
+
+本文也主要是介绍大概的操作流程，至于具体应该使用哪些API就只有去研究官方文档了。
+
+另外还有一些需要注意的问题，比如64位的程序去调用32位的dll会报错啊等等...这些都是细节问题了。
+
+最后，个人认为，自己动手实践还是很重要，网上都说这个复杂那个难，但是至于难还是不难，还是要实践了才知道...不能不去尝试...
+

@@ -1,0 +1,9 @@
+此范例是从海南大客户系统中截取出来的，有一些命名和做法不是很规范，描述中有提到，请注意
+1、CustomerInfoEditorJDialog.java录入界面，保存按钮方法private void btnOKMouseClicked(java.awt.event.MouseEvent evt) {  此保存操作包括insert和update
+2、CustomerInfoMgr.java和ICustomerInfoMgrFacade.java是更新插入记录的BO实现和接口（此处CustomerInfoMgr.java命名不规范，对于实现，我们一般命名为CustomerInfoMgrWFImpl.java,而接口我们就命名为CustomerInfoMgrWFFacade.java，请尽量按规范）
+3、CustomerInfoDao.java是更新插入记录的DAO，（此处DAO并没有做成实现和接口的形式，按我们开发规范最好做成实现和接口的形式）
+4、Customer.xml为ibatis map文件
+5、sql-map-config.xml
+applicationContext.xml
+dataAccessContext-local.xml为相关spring和ibatis配置文件
+6、Customer.java为domain实体对象类

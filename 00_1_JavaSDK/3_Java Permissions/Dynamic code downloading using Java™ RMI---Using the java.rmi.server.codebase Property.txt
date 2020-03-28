@@ -1,0 +1,59 @@
+http://docs.oracle.com/javase/7/docs/technotes/guides/rmi/codebase.html
+
+Dynamic code downloading using Java? RMI
+ (Using the java.rmi.server.codebase Property)
+
+
+
+
+Examples
+
+If the location of your downloadable classes is on an HTTP server named "webvector", in the directory "export" (under the web root), your codebase property setting might look like this:
+        -Djava.rmi.server.codebase=http://webvector/export/
+
+
+If the location of your downloadable classes is on an HTTP server named "webline", in a JAR file named "mystuff.jar", in the directory "public" (under the web root), your codebase property setting might look like this:
+        -Djava.rmi.server.codebase=http://webline/public/mystuff.jar
+
+
+Now let's suppose that the location of your downloadable classes has been split between two JAR files, "myStuff.jar" and "myOtherStuff.jar". If these JAR files are located on different servers (named "webfront" and "webwave"), your codebase property setting might look like this:
+        -Djava.rmi.server.codebase="http://webfront/myStuff.jar http://webwave/myOtherStuff.jar"
+
+
+
+
+6.1 If you encounter a problem running your Java RMI server
+
+The first problem you might encounter is the receipt of a ClassNotFoundException when attempting to bind or rebind a remote object to a name in the registry. This exception is usually due to a malformed codebase property, resulting in the registry not being able to locate the remote object's stubs or other classes needed by the stub.
+
+It is important to note that the remote object's stub implements all the same interfaces as the remote object itself, so those interfaces, as well as any other custom classes declared as method parameters or return values, must also be available for download from the specified codebase.
+
+Most frequently, this exception is thrown as a result of omitting the trailing slash from the URL value of the property. Other reasons would include: the value of the property is not a URL; the path to the classes specified in the URL is incorrect or misspelled; the stub class or any other necessary classes are not all available from the specified URL.
+
+The exception that you may encounter in such a case would look like this:
+java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+        java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is:
+        java.lang.ClassNotFoundException: examples.callback.MessageReceiverImpl_Stub
+java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is:
+        java.lang.ClassNotFoundException: examples.callback.MessageReceiverImpl_Stub
+java.lang.ClassNotFoundException: examples.callback.MessageReceiverImpl_Stub
+        at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(Compiled Code)
+        at sun.rmi.transport.StreamRemoteCall.executeCall(Compiled Code)
+        at sun.rmi.server.UnicastRef.invoke(Compiled Code)
+        at sun.rmi.registry.RegistryImpl_Stub.rebind(Compiled Code)
+        at java.rmi.Naming.rebind(Compiled Code)
+        at examples.callback.MessageReceiverImpl.main(Compiled Code)
+RemoteException occurred in server thread; nested exception is:
+        java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: 
+        java.lang.ClassNotFoundException: examples.callback.MessageReceiverImpl_Stub
+
+
+6.2 If you encounter a problem running your Java RMI client
+
+The second problem you could encounter is the receipt of a ClassNotFoundException when attempting to lookup a remote object in the registry. If you receive this exception in a stacktrace resulting from an attempt to run your Java RMI client code, then your problem is the CLASSPATH with which your Java RMI registry was started. See requirement C in section 6.0. Here is what the exception will look like:
+java.rmi.UnmarshalException: Return value class not found; nested exception is:
+        java.lang.ClassNotFoundException: MyImpl_Stub
+        at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:109
+        at java.rmi.Naming.lookup(Naming.java:60)
+        at RmiClient.main(MyClient.java:28)
+

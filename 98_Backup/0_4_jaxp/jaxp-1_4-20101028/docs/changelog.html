@@ -1,0 +1,493 @@
+<html>
+    <head><title>Changes Made and Bugs Fixed in JAXP 1.4.3</title>
+    </head>
+    <body>
+        
+        <h2 align="center">Changes Made and Bugs Fixed in JAXP 1.4.3</h2><br>
+        <table border="1">
+            <tr>
+                <th>Nr</th>
+                <th>Category</th>
+                <th>ID</th>
+                <th>Synopsis/Description</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6917454">6917454</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=53">sjsxp issue 53</a>: StartDocument.encodingSet() returns false even when set</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6472982">6472982</a></td>
+                <td>javax.xml.namespace.NamespaceContext.getPrefix("") should not throw IllegalArgumentException</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>JAXP/StAX/GF</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6909759">6909759</a></td>
+                <td>using JDK 1.6.0_18-ea does not work with GlassFish v3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6333993">6333993</a></td>
+                <td>NodeList.item() returns null in 1.5.0_02</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>JAXP/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6900779">6900779</a></td>
+                <td>Use HashMap instead of Hashtable in CharInfo, Encodings, NamespaceMapping, XMLReaderManager</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>JAXP/DOM/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6900773">6900773</a></td>
+                <td>elide (unnecessary) catching of NumberFormatException in NodeCounter.setFormatting(...)</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>JAXP/DOM/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6900249">6900249</a></td>
+                <td>Use StringBuilder instead of StringBuffer to avoid locking</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6675332">6675332</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=49">sjsxp issue 49</a>: Repairing XMLStreamWriter tries to use default namespace for attributes</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>JAXP/SAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6889649">6889649</a></td>
+                <td>SAXException.toString() implementation considered harmful</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>JAXP/SAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6889654">6889654</a></td>
+                <td>SAXParseException should have a better toString method</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6890987">6890987</a></td>
+                <td>StAX v1.2 incorrect method signature</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>JAXP/XSLT</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6872353">6872353</a></td>
+                <td>6872353: Call initCause() to record complete stack trace</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6861589">6861589</a></td>
+                <td>Upgrade JAXP/SJSXP to JSR-173 StAX v1.2</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>JAXP/Security</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6565260">6863312</a>
+                /<a href="https://jaxp.dev.java.net/1.4/JAXP-Compatibility.html#JAXP_security">Feature for Secure Processing</a></td>
+                <td>Keep JAXP Secure Processing Feature consistent with Java Secure Mode</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>JAXP/Localization</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6869477">6869477</a></td>
+                <td>Localization of the two messages added for fixing 6863312</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6879614">6879614</a></td>
+                <td>com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl failing to parse xml document</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>JAXP/XSLT/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6883209">6883209</a></td>
+                <td><a href="https://bugs.openjdk.java.net/show_bug.cgi?id=100017">OpenJDK Bug 100017</a>
+                    - XML encoder can cause a StackOverflowError</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6710741">6710741</a></td>
+                <td>DOMSerializerImpl.writeToString swallows nested exceptions</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6846133">6846133</a></td>
+                <td>StAX XMLEventReader DTD issues</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>JAXP/StAX/GF</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6840541">6840541</a></td>
+                <td>GlassFish: SJSXP: XML streaming parser spins indefinitely if input stream is broken prematurely</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6846132">6846132</a></td>
+                <td>StAX XMLOutputFactory createXMLStreamWriter() only supports Stream Results</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>JAXP/Validation/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6859210">6859210</a></td>
+                <td>OOM in xml validator when maxOccurs is large</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6862770">6862770</a></td>
+                <td>Add a capability to disable XML DOM ancestor checking</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>JAXP/Security</td>
+                <td><!--<a href="http://bugs.sun.com/view_bug.do?bug_id=6845701">6845701</a>/-->
+                    <a href="http://sunsolve.sun.com/search/document.do?assetkey=1-66-263489-1">Sun Alert #263489</a></td>
+                <td>Xerces2 Java XML library infinite loop with malformed XML input</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6794483">6794483</a></td>
+                <td>Parsing of xml fails if included from one xml to another using xinclude tag</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6849942">6849942</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=58">Jaxp Issue 58</a>: XML processing instruction parsing error</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6847819">6847819</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=56">sjsxp issue 56</a>
+                    : XNIException not caught, passed on to app, for invalid xml decl</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>JAXP/XSLT</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6840742"></a>6840742</td>
+                <td>URL encoding/decoding causes jaxp-test to fail on Windows when the path contains space</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6840792">6840792</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=70">sjsxp issue 70</a> XmlStreamReaderImpl.getAttributeValue namespace arg. not interpreted properly</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>JAXP/XSLT/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6583301">6583301</a></td>
+                <td>Reduce allocation overhead in JAXP XML XSLT translation</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>JAXP/Windows</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6506304">6506304</a></td>
+                <td>java.net.MalformedURLException: unknown protocol: c</td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>JAXP/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6767959">6767959</a></td>
+                <td>Catalog resolver transient memory usage high</td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td>JAXP/XSLT/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6652519">6652519</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=48">JAXP issue 48</a> : Performance Issue with Xalan Transformer</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>JAXP/Windows</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6506304">6506304</a></td>
+                <td>java.net.MalformedURLException: unknown protocol: c</td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td>JAXP/SAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6809409">6809409</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=56">jaxp Issue 56</a> SAXException doesn't do the exception chaining properly</td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>JAXP/Validation</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6467424">6467424</a></td>
+                <td>javax.xml.validation.Validator does not augment.</td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td>JAXP/DOM/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6660724">6660724</a></td>
+                <td>Lock Contention in SAX2DOM()</td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6740048">6740048</a></td>
+                <td>Validating JAXP DocumentBuilder instance can only be used once</td>
+            </tr>
+            <tr>
+                <td>39</td>
+                <td>JAXP/SAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6536111">6536111</a></td>
+                <td>SAX parser throws OutOfMemoryError</td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>JAXP/Validation</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6708840">6708840</a></td>
+                <td>JAXP validation throws null pointer exception with StAXSource</td>
+            </tr>
+            <tr>
+                <td>41</td>
+                <td>JAXP/DOM/GF</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6700018">6700018</a></td>
+                <td>web service requests lose data under load</td>
+            </tr>
+            <tr>
+                <td>42</td>
+                <td>JAXP/XSLT/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6682459">6682459</a></td>
+                <td>Lock contention due to debug print</td>
+            </tr>
+            <tr>
+                <td>43</td>
+                <td>JAXP/Validation</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6684227">6684227</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=49">JAXP issue 49</a> : Support dom/current-element-node property</td>
+            </tr>
+            <tr>
+                <td>44</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6671723">6671723</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=58">sjsxp issue 58</a>: XMLEvent.getLocation() returns a volatile Location</td>
+            </tr>
+            <tr>
+                <td>45</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6668115">6668115</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=57"> issue 57</a>: XMLEventReaderImpl.getElementText() and nextTag() fail to update last event</td>
+            </tr>
+            <tr>
+                <td>46</td>
+                <td>JAXP/StAX/Security</td>
+                <td><!--<a href="http://bugs.sun.com/view_bug.do?bug_id=6542088">6542088</a>/-->
+                <a href="http://sunsolve.sun.com/search/document.do?assetkey=1-66-238628-1">Sun Alert #238628</a></td>
+                <td>JAX-WS server allows XXE attacks</td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td>JAXP/XSLT</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6243824">6243824</a></td>
+                <td>Use of File.toURL in com/sun/org/apache/xalan/internal/xsltc - toURL known to return invalid URLs</td>
+            </tr>
+            <tr>
+                <td>48</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6200723">6200723</a></td>
+                <td>Typos at javadoc for org.w3c.dom.bootstrap.DOMImplementationRegistry.newInstance()</td>
+            </tr>
+            <tr>
+                <td>49</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6631265">6631265</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=47">sjsxp issue 47</a>
+                    : XMLStreamReader.standaloneSet() implemented wrong</td>
+            </tr>
+
+            <tr>
+                <td>50</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6631262">6631264</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=45">sjsxp issue 45</a>
+                    : XMLStreamReader.hasName() should return false for ENTITY_REFERENCE</td>
+            </tr>
+            <tr>
+                <td>51</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6631262">6631262</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=44">sjsxp issue 44</a>
+                    : XMLStreamReader.getName() should throw IllegalStateException, not IllegalArg</td>
+            </tr>
+            <tr>
+                <td>52</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6631268">6631268</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=41">sjsxp issue 41</a>
+                    : XMLEvent.writeAsEncodedUnicode(Writer) not implemented</td>
+            </tr
+            <tr>
+                <td>53</td>
+                <td>JAXP/XSLT</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6631168">6631168</a></td>
+                <td>StAXSource & StAXResult support in JavaSE6</td>
+            </tr>
+            <tr>
+                <td>54</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6620632">6620632</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=48">sjsxp issue 48</a>: DTD event is missing entity and notation information</td>
+            </tr>
+            <tr>
+                <td>55</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6620624">6620624</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=40">sjsxp issue 40</a>: XMLEventReader.getElementText() leads to infinite loop if there's a peeked event</td>
+            </tr>
+            <tr>
+                <td>56</td>
+                <td>JAXP/SAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6573268">6573268</a></td>
+                <td>Four JCK-devtools-6a tests report OOM: Java Heap space since JDK7 b14</td>
+            </tr>
+            <tr>
+                <td>57</td>
+                <td>JAXP/XSLT/Security</td>
+                <td><!--<a href="http://bugs.sun.com/view_bug.do?bug_id=6607339">6607339</a>/-->
+                <a href="http://sunsolve.sun.com/search/document.do?assetkey=1-66-238628-1">Sun Alert #238628</a></td>
+                <td>IncrementalSAXSource_Filter still allows reading of local files</td>
+            </tr>
+            <tr>
+                <td>58</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6586466">6586466</a></td>
+                <td>XMLEventReaderImpl.nextTag() does not update fLastEvent</td>
+            </tr>
+            <tr>
+                <td>59</td>
+                <td>JAXP/XSLT/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6613328">6613328</a></td>
+                <td>Suggested changes to improve scalability of the JAXP XML transform</td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>JAXP/XSLT</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6631318">6631318</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=43">jaxp issue 43</a> : Exception while creating Schema object as it doesn't take care of inscope namespaces</td>
+            </tr>
+            <tr>
+                <td>61</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6613059">6613059</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=42">sjsxp issue 42</a>: Same code runs fine on 1.6.0_01 but gives XMLStreamException on 1.6.0_02</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>JAXP/Validation/Performance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6614283">6614283</a></td>
+                <td>Suggested changes to improve scalability of the JAXP XML Validation</td>
+            </tr>
+            <tr>
+                <td>63</td>
+                <td>JAXP/SAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6631310">6631310</a></td>
+                <td><a href="https://jaxp.dev.java.net/issues/show_bug.cgi?id=42">jaxp issue 42</a> : dysfunctional hyperlink in package org.xml.sax</td>
+            </tr>
+            <tr>
+                <td>64</td>
+                <td>JAXP/StAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6610034">6610034</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=50">sjsxp issue 50</a>: Support the mode that doesn't load external DTD</td>
+            </tr>
+            <tr>
+                <td>65</td>
+                <td>JAXP/SAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6608841">6608841</a></td>
+                <td>SAX error parsing dtd in jdk 1.6: "The replacement text of parameter entity...."</td>
+            </tr>
+            <tr>
+                <td>66</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6600882">6600882</a></td>
+                <td>toString(), hashCode() throw Exception</td>
+            </tr>
+            <tr>
+                <td>67</td>
+                <td>JAXP/StAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6631274">6631274</a></td>
+                <td><a href="https://sjsxp.dev.java.net/issues/show_bug.cgi?id=38">sjsxp issue 38</a> : createXMLEventReader fails with DOMSource input</td>
+            </tr>
+            <tr>
+                <td>68</td>
+                <td>JAXP/SAX/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6573268">6573268</a></td>
+                <td>Four JCK-devtools-6a tests report OOM: Java Heap space since JDK7 b14</td>
+            </tr>
+            <tr>
+                <td>69</td>
+                <td>JAXP/SAX</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6545684">6545684</a></td>
+                <td>Java 6: ValidationHandler does not invoke ContentHandler.ignorableWhitespace()</td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>JAXP/XSLT</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6577667">6577667</a></td>
+                <td>wrong javax.xml.transform.TransformerConfigurationException</td>
+            </tr>
+            <tr>
+                <td>71</td>
+                <td>JAXP/Validation/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6579365">6579365</a></td>
+                <td>XSD: Validation errors on valid schema</td>
+            </tr>
+            <tr>
+                <td>72</td>
+                <td>JAXP/Other</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6573786">6573786</a></td>
+                <td>No formatting for an parser error messages</td>
+            </tr>
+            <tr>
+                <td>73</td>
+                <td>JAXP/XSLT</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6216226">6216226</a></td>
+                <td>StreamResult(File) does not close File after transform()</td>
+            </tr>
+            <tr>
+                <td>74</td>
+                <td>JAXP/XSLT/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6548592">6548592</a></td>
+                <td>Wrong behaviour of the "xsl:number" element</td>
+            </tr>
+            <tr>
+                <td>75</td>
+                <td>JAXP/DOM</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6200737">6200737</a></td>
+                <td>Typos at javadoc for org.w3c.dom.TypeInfo.isDerivedFrom</td>
+            </tr>
+            <tr>
+                <td>76</td>
+                <td>JAXP/XSLT/Conformance</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6565260">6565260</a></td>
+                <td>XSLT: "use-attribute-sets" attribute is processed when current node is root </td>
+            </tr>
+            <tr>
+                <td>77</td>
+                <td>JAXP/XSLT</td>
+                <td><a href="http://bugs.sun.com/view_bug.do?bug_id=6505031">6505031</a></td>
+                <td>javax.xml.transform.Transformer spews "http://www.w3.org/XML/1998/namespace" out</td>
+            </tr>
+            
+
+        </table>
+    </body>
+</html>

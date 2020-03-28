@@ -1,0 +1,13 @@
+https://opends.dfki.de/
+
+Old : https://java.net/projects/opends/pages/2_2_AdministrationGuide
+
+Download
+https://opends.dev.java.net/public/downloads_index.html
+
+
+https://backstage.forgerock.com/knowledge/kb/article/a23071400
+Starting DS/OpenDJ (All versions) server fails after upgrade
+
+
+https://umtl.cs.uni-saarland.de/lectures/AutomotiveUISeminar19/OpenDS_Tutorial.pdf

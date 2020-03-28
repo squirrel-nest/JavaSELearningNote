@@ -1,0 +1,2991 @@
+From: =?gb2312?B?08kgV2luZG93cyBJbnRlcm5ldCBFeHBsb3JlciA3ILGjtOY=?=
+Subject: =?gb2312?B?U3ByaW5nILX308NPUkFDTEW05rSiuf2zzLXEveG5+7yvX0phdmHOxNWqXw==?=
+	=?gb2312?B?v6q3os7E1apfyO28/r+qt6JfzOzQws34?=
+Date: Thu, 12 Jun 2008 20:40:08 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_004E_01C8CCCC.80CD9310"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6001.18000
+
+这是 MIME 格式的多方邮件。
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://dev.21tx.com/2004/11/24/13656.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Spring =
+=B5=F7=D3=C3ORACLE=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4=BD=E1=B9=FB=BC=AF_Java=CE=
+=C4=D5=AA_=BF=AA=B7=A2=CE=C4=D5=AA_=C8=ED=BC=FE=BF=AA=B7=A2_=CC=EC=D0=C2=CD=
+=F8</TITLE>
+<SCRIPT language=3DJavaScript>
+var txsite_pagekey =3D 'TX-2-2-20041124-13656';
+var txsite_pageurl =3D 'http://dev.21tx.com/2004/11/24/13656.html';
+var txsite_pagetitle =3D 'Spring =
+=B5=F7=D3=C3ORACLE=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4=BD=E1=B9=FB=BC=AF';
+var txsite_athcount =3D '0';
+</SCRIPT>
+
+<META content=3D"Spring =
+=B5=F7=D3=C3ORACLE=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4=BD=E1=B9=FB=BC=AF" =
+name=3Dkeywords>
+<META content=3D"oracle =
+=B6=D4=D3=DA=B8=DF=BC=B6=CC=D8=D0=D4=D7=DC=CA=C7=D3=EB=D6=DA=B2=BB=CD=AC(=
+=CE=D2=BC=AB=C1=A6=CC=D6=D1=E1=D5=E2=D2=BB=B5=E3,=C8=E7=B9=FB=CA=B9=D3=C3=
+=CB=FC=B5=C4=B2=FA=C6=B7=BE=CD=D2=AA=B6=D4=D5=E2=D6=D6=B2=FA=C6=B7=BD=F8=D0=
+=D0=CC=D8=B6=A8=B5=C4=B1=E0=B3=CC,=D5=E2=D2=B2=CA=C7 ..."=20
+name=3Ddescription>
+<META http-equiv=3Dpragma content=3Dno-cache>
+<META content=3Dall name=3Drobots>
+<META http-equiv=3Dcontent-type content=3D"text/html; charset=3Dgb2312">
+<META content=3D"MSHTML 6.00.6001.18063" name=3DGENERATOR>
+<STYLE type=3Dtext/css>BODY {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: =CB=CE=CC=E5
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: =CB=CE=CC=E5
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+A:link {
+	COLOR: #3366cc; FONT-FAMILY: =CB=CE=CC=E5; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #3366cc; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #6699ff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff4400; TEXT-DECORATION: none
+}
+A.whitehref:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.whitehref:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.whitehref:active {
+	COLOR: #6699ff; TEXT-DECORATION: none
+}
+A.whitehref:hover {
+	COLOR: #ff4400; TEXT-DECORATION: none
+}
+A.blackhref {
+	COLOR: #000000
+}
+A.blackhref:visited {
+	COLOR: #000000
+}
+A.blackhref:hover {
+	COLOR: #ff4400
+}
+A.blackhref:active {
+	COLOR: #ff6600
+}
+A.menuhref:link {
+	FONT-SIZE: 12px; COLOR: #a5cbf8; TEXT-DECORATION: none
+}
+A.menuhref:visited {
+	FONT-SIZE: 12px; COLOR: #a5cbf8; TEXT-DECORATION: none
+}
+A.menuhref:hover {
+	FONT-SIZE: 12px; COLOR: red; TEXT-DECORATION: underline
+}
+A.bthref:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.sfont {
+	LINE-HEIGHT: 20px
+}
+.btd {
+	FONT-SIZE: 14px
+}
+.mainbgcolor {
+	BACKGROUND-COLOR: #ffa200
+}
+.bodybgcolor {
+	BACKGROUND-COLOR: #303880
+}
+.btfont {
+	COLOR: #ffffff
+}
+.pstart {
+	TEXT-INDENT: 28px
+}
+.f18 {
+	FONT-SIZE: 20px
+}
+.f14 {
+	FONT-SIZE: 14px
+}
+.f14a {
+	FONT-SIZE: 14px; LINE-HEIGHT: 150%
+}
+.f14b {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: 150%
+}
+.txps {
+	TEXT-INDENT: 2em
+}
+.content {
+	FONT-SIZE: 14px; LINE-HEIGHT: 150%
+}
+XMP {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+#999999 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 9pt; PADDING-BOTTOM: =
+10px; BORDER-LEFT: #999999 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: =
+#999999 1px solid; BACKGROUND-COLOR: #eeeeee
+}
+.txcode {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: =
+#999999 1px solid; PADDING-LEFT: 4px; FONT-SIZE: x-small; =
+PADDING-BOTTOM: 4px; BORDER-LEFT: #999999 1px solid; WIDTH: 95%; COLOR: =
+black; PADDING-TOP: 4px; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: =
+'Courier New',Monospace; BACKGROUND-COLOR: #eeeeee
+}
+</STYLE>
+</HEAD>
+<BODY class=3Dbodybgcolor leftMargin=3D0 topMargin=3D0 marginwidth=3D"0" =
+
+marginheight=3D"0"><A name=3Dpagetop></A>
+<DIV id=3Dtxsite_ad_couplet1_left=20
+style=3D"LEFT: 10px; VISIBILITY: visible; POSITION: absolute; TOP: =
+270px"=20
+width=3D"100"></DIV>
+<DIV id=3Dtxsite_ad_couplet1_right=20
+style=3D"RIGHT: 10px; VISIBILITY: visible; POSITION: absolute; TOP: =
+270px"=20
+width=3D"100"></DIV>
+<DIV id=3Dtxsite_ad_couplet2_left=20
+style=3D"LEFT: 10px; VISIBILITY: visible; POSITION: absolute; TOP: =
+480px"=20
+width=3D"100"></DIV>
+<DIV id=3Dtxsite_ad_couplet2_right=20
+style=3D"RIGHT: 10px; VISIBILITY: visible; POSITION: absolute; TOP: =
+480px"=20
+width=3D"100"></DIV>
+<DIV id=3Dtxsite_ad_couplet3_left=20
+style=3D"LEFT: 10px; VISIBILITY: visible; POSITION: absolute; TOP: =
+720px"=20
+width=3D"100"></DIV>
+<DIV id=3Dtxsite_ad_couplet3_right=20
+style=3D"RIGHT: 10px; VISIBILITY: visible; POSITION: absolute; TOP: =
+720px"=20
+width=3D"100"></DIV><SPAN id=3Dtxsite_mainmenu>
+<TABLE class=3Dbodybgcolor cellSpacing=3D0 cellPadding=3D0 width=3D760 =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD width=3D230><IMG src=3D"http://www.21tx.com/images/logo.gif"=20
+    boarder=3D"0"></TD>
+    <TD align=3Dright width=3D*>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD width=3D"100%" height=3D8></TD></TR>
+        <TR>
+          <TD width=3D"100%" height=3D15><FONT color=3D#a5cbf8><A =
+class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/">=CA=D7=A1=A1=A1=A1=D2=B3</A> | =
+<A class=3Dmenuhref=20
+            href=3D"http://news.21tx.com/">=D7=CA=D1=B6=D6=D0=D0=C4</A> =
+| <A class=3Dmenuhref=20
+            =
+href=3D"http://school.21tx.com/">=CD=F8=C2=E7=D1=A7=D4=BA</A> | <A =
+class=3Dmenuhref=20
+            href=3D"http://auto.21tx.com/">=CC=EC=D0=C2=C6=FB=B3=B5</A> =
+| <A class=3Dmenuhref=20
+            =
+href=3D"http://mobile.21tx.com/">=CC=EC=D0=C2=CA=D6=BB=FA</A> | <A =
+class=3Dmenuhref=20
+            href=3D"http://games.21tx.com/">=CC=EC=D0=C2=D3=CE=CF=B7</A> =
+| <A class=3Dmenuhref=20
+            href=3D"http://dev.21tx.com/">=C8=ED=BC=FE=BF=AA=B7=A2</A> | =
+<A class=3Dmenuhref=20
+            =
+href=3D"http://exam.21tx.com/">=BF=BC=CA=D4=C8=CF=D6=A4</A></FONT></TD></=
+TR>
+        <TR>
+          <TD width=3D"100%" height=3D15><FONT color=3D#a5cbf8><A =
+class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/deskpc/">=C6=B7 =C5=C6 =
+=BB=FA</A> | <A class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/notebook/">=B1=CA =BC=C7 =
+=B1=BE</A> | <A class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/server/">=B7=FE =CE=F1 =
+=C6=F7</A> | <A class=3Dmenuhref=20
+            href=3D"http://digi.21tx.com/">=CC=EC=D0=C2=CA=FD=C2=EB</A> =
+- <A class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/dc/">DC</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/dv/">DV</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/mp3/">MP3</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://digi.21tx.com/mp4/">MP4</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://digi.21tx.com/gps/">GPS</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/digihome/tv/">TV</A> | <A =
+class=3Dmenuhref=20
+            =
+href=3D"http://www.21tx.com/digihome/">=CA=FD=D7=D6=BC=D2=CD=A5</A></FONT=
+></TD></TR>
+        <TR>
+          <TD width=3D"100%" height=3D15><FONT color=3D#a5cbf8><A =
+class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/">=D3=B2=BC=FE DIY</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/mainboard/">=D6=F7=B0=E5</A> - =
+<A class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/cpu/">CPU</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/memory/">=C4=DA =B4=E6</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/hdd/">=D3=B2 =C5=CC</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/vga/">=CF=D4=CA=BE=C6=F7</A> - =
+<A class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/display/">=CF=D4=BF=A8</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/dvd/">=B9=E2=C7=FD</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/case/">=BB=FA=CF=E4</A> - <A =
+class=3Dmenuhref=20
+            href=3D"http://diy.21tx.com/mouse/">=BC=FC=CA=F3</A> - <A =
+class=3Dmenuhref=20
+            =
+href=3D"http://diy.21tx.com/net/">=CD=F8=C2=E7=C9=E8=B1=B8</A></FONT></TD=
+></TR>
+        <TR>
+          <TD width=3D"100%" height=3D15><FONT color=3D#a5cbf8><A =
+class=3Dmenuhref=20
+            =
+href=3D"http://www.21tx.com/oa/">=B0=EC=B9=AB=C9=E8=B1=B8</A> | <A =
+class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/oa/print/">=B4=F2 =D3=A1 =
+=BB=FA</A> | <A class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/oa/scanner/">=C9=A8 =C3=E8 =
+=D2=C7</A> | <A class=3Dmenuhref=20
+            href=3D"http://www.21tx.com/oa/projector/">=CD=B6 =D3=B0 =
+=D2=C7</A> | <A=20
+            class=3Dmenuhref href=3D"http://www.21tx.com/oa/ytj/">=D2=BB =
+=CC=E5 =BB=FA</A> | <A=20
+            class=3Dmenuhref href=3D"http://www.21tx.com/oa/fax/">=B4=AB =
+=D5=E6 =BB=FA</A> | <A=20
+            class=3Dmenuhref href=3D"http://diy.21tx.com/router/">=C2=B7 =
+=D3=C9 =C6=F7</A> | <A=20
+            class=3Dmenuhref =
+href=3D"http://diy.21tx.com/switchboard/">=BD=BB =BB=BB=20
+            =BB=FA</A></FONT></TD></TR>
+        <TR>
+          <TD width=3D"100%" height=3D15><FONT color=3D#a5cbf8><A =
+class=3Dmenuhref=20
+            href=3D"http://dl.21tx.com/">=C8=ED=BC=FE=CF=C2=D4=D8</A> | =
+<A class=3Dmenuhref=20
+            =
+href=3D"http://drivers.21tx.com/">=C7=FD=B6=AF=CF=C2=D4=D8</A> | <A =
+class=3Dmenuhref=20
+            =
+href=3D"http://dl.21tx.com/game/">=D3=CE=CF=B7=CF=C2=D4=D8</A> | <A =
+class=3Dmenuhref=20
+            href=3D"http://codes.21tx.com/">=D4=B4=C2=EB=CF=C2=D4=D8</A> =
+| <A class=3Dmenuhref=20
+            =
+href=3D"http://zz.21tx.com/ebook/">=BD=CC=B3=CC=CF=C2=D4=D8</A> | <A =
+class=3Dmenuhref=20
+            href=3D"http://zz.21tx.com/">=D5=BE=B3=A4=D4=DA=CF=DF</A> | =
+<A class=3Dmenuhref=20
+            href=3D"http://prod.21tx.com/" =
+target=3D_blank>=B2=FA=C6=B7=D6=D0=D0=C4</A> | <A=20
+            class=3Dmenuhref href=3D"http://prod.21tx.com/"=20
+            =
+target=3D_blank>=B1=A8=BC=DB=D6=D0=D0=C4</A></FONT></TD></TR>
+        <TR>
+          <TD width=3D"100%"=20
+height=3D5></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></SPAN>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D760 align=3Dcenter =
+bgColor=3D#ffffff=20
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D760 align=3Dcenter =
+bgColor=3D#ffffff=20
+      border=3D0>
+        <TBODY>
+        <TR>
+          <TD>
+            <SCRIPT type=3Dtext/javascript><!--
+google_ad_client =3D "pub-8537598168120506";
+google_alternate_color =3D "FFFFFF";
+google_ad_width =3D 728;
+google_ad_height =3D 90;
+google_ad_format =3D "728x90_as";
+google_ad_type =3D "image";
+//2007-11-18: =CA=D7=D2=B3=CD=BC=C6=AC=BA=E1=B7=F9
+google_ad_channel =3D "0979501092";
+//-->
+</SCRIPT>
+
+            <SCRIPT=20
+            =
+src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js"=20
+            type=3Dtext/javascript>
+</SCRIPT>
+          </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE class=3Dbodybgcolor cellSpacing=3D0 cellPadding=3D0 width=3D760 =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD height=3D3></TD></TR></TBODY></TABLE><SPAN =
+id=3Dtxsite_columnmenu>
+<TABLE style=3D"LINE-HEIGHT: 16px" cellSpacing=3D0 cellPadding=3D0 =
+width=3D760=20
+align=3Dcenter =
+background=3Dhttp://www.21tx.com/images/txsite/menu/main_bg.gif=20
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD width=3D7 height=3D33><IMG height=3D38=20
+      src=3D"http://www.21tx.com/images/txsite/menu/main_l.gif" =
+width=3D7></TD>
+    <TD width=3D8 height=3D33></TD>
+    <TD vAlign=3Dcenter height=3D33><A =
+href=3D"http://dev.21tx.com/"><FONT=20
+      color=3D#ffcc00>=BF=AA=B7=A2=CA=D7=D2=B3</FONT></A><FONT =
+color=3D#ffffff> | </FONT><A=20
+      href=3D"http://dev.21tx.com/language/"><FONT=20
+      color=3D#ffffff>=BF=AA=B7=A2=D3=EF=D1=D4</FONT></A><FONT =
+color=3D#ffffff> | </FONT><A=20
+      href=3D"http://dev.21tx.com/dotnet/"><FONT=20
+      color=3D#ffffff>.Net=BF=AA=B7=A2</FONT></A><FONT color=3D#ffffff> =
+| </FONT><A=20
+      href=3D"http://dev.21tx.com/java/"><FONT=20
+      color=3D#ffffff>Java=BF=AA=B7=A2</FONT></A><FONT color=3D#ffffff> =
+| </FONT><A=20
+      href=3D"http://dev.21tx.com/web/"><FONT =
+color=3D#ffffff>Web=BF=AA=B7=A2</FONT></A><FONT=20
+      color=3D#ffffff> | </FONT><A =
+href=3D"http://dev.21tx.com/mobile/"><FONT=20
+      color=3D#ffffff>=D2=C6=B6=AF=BF=AA=B7=A2</FONT></A><FONT =
+color=3D#ffffff> | </FONT><A=20
+      href=3D"http://dev.21tx.com/game/"><FONT =
+color=3D#ffffff>=D3=CE=CF=B7=BF=AA=B7=A2</FONT></A><FONT=20
+      color=3D#ffffff> | </FONT><A =
+href=3D"http://dev.21tx.com/database/"><FONT=20
+      color=3D#ffffff>=CA=FD=BE=DD=BF=E2=BF=AA=B7=A2</FONT></A><FONT =
+color=3D#ffffff> | </FONT><A=20
+      href=3D"http://dev.21tx.com/corp/"><FONT =
+color=3D#ffffff>=C6=F3=D2=B5=BF=AA=B7=A2</FONT></A><FONT=20
+      color=3D#ffffff> | </FONT><A =
+href=3D"http://dev.21tx.com/os/"><FONT=20
+      color=3D#ffffff>=B2=D9=D7=F7=CF=B5=CD=B3</FONT></A><FONT =
+color=3D#ffffff> | </FONT><A=20
+      href=3D"http://dev.21tx.com/softengine/"><FONT =
+color=3D#ffffff>=C8=ED=BC=FE=B9=A4=B3=CC</FONT></A>=20
+      <BR><A href=3D"http://dev.21tx.com/language/vb/"><FONT=20
+      color=3D#ffffff>VB</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/language/vc/"><FONT =
+color=3D#ffffff>VC</FONT></A>=20
+      <A href=3D"http://dev.21tx.com/language/delphi/"><FONT=20
+      color=3D#ffffff>Delphi</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/language/pb/"><FONT =
+color=3D#ffffff>PB</FONT></A>=20
+      <A href=3D"http://dev.21tx.com/language/bcb/"><FONT=20
+      color=3D#ffffff>BCB</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/language/c/"><FONT=20
+      color=3D#ffffff>C++</FONT></A><FONT color=3D#ffffff> - </FONT><A=20
+      href=3D"http://dev.21tx.com/dotnet/aspnet/"><FONT=20
+      color=3D#ffffff>ASP.net</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/dotnet/csharp/"><FONT=20
+      color=3D#ffffff>C#</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/dotnet/vbnet/"><FONT=20
+      color=3D#ffffff>VB.net</FONT></A><FONT color=3D#ffffff> - =
+</FONT><A=20
+      href=3D"http://dev.21tx.com/java/j2ee/"><FONT =
+color=3D#ffffff>J2EE</FONT></A>=20
+      <A href=3D"http://dev.21tx.com/java/j2se/"><FONT=20
+      color=3D#ffffff>J2SE</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/java/j2me/"><FONT =
+color=3D#ffffff>J2ME</FONT></A>=20
+      <A href=3D"http://dev.21tx.com/java/ejb/"><FONT=20
+      color=3D#ffffff>EJB</FONT></A><FONT color=3D#ffffff> - </FONT><A=20
+      href=3D"http://dev.21tx.com/web/asp/"><FONT =
+color=3D#ffffff>ASP</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/web/php/"><FONT =
+color=3D#ffffff>PHP</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/java/jsp/"><FONT =
+color=3D#ffffff>JSP</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/web/cgi/"><FONT=20
+      color=3D#ffffff>CGI</FONT></A><FONT color=3D#ffffff> - </FONT><A=20
+      href=3D"http://dev.21tx.com/database/mssql/"><FONT=20
+      color=3D#ffffff>MSSQL</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/database/oracle/"><FONT=20
+      color=3D#ffffff>Oracle</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/database/db2/"><FONT=20
+      color=3D#ffffff>DB2</FONT></A> <A=20
+      href=3D"http://dev.21tx.com/database/mysql/"><FONT=20
+      color=3D#ffffff>MySQL</FONT></A><FONT color=3D#ffffff> - </FONT><A =
+
+      href=3D"http://dev.21tx.com/codinglife/"><FONT=20
+      color=3D#ffffff>CodingLife</FONT></A></TD>
+    <TD width=3D8 height=3D33></TD>
+    <TD align=3Dright width=3D8 height=3D33><IMG height=3D38=20
+      src=3D"http://www.21tx.com/images/txsite/menu/main_r.gif"=20
+  width=3D8></TD></TR></TBODY></TABLE></SPAN><SPAN id=3Dtxsite_search>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D760 align=3Dcenter =
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD width=3D10=20
+    background=3Dhttp://www.21tx.com/images/txsite/function/menubg.gif=20
+    height=3D25></TD>
+    <TD width=3D45=20
+    background=3Dhttp://www.21tx.com/images/txsite/function/menubg.gif=20
+      height=3D25><IMG height=3D25=20
+      src=3D"http://www.21tx.com/images/txsite/function/search4.gif" =
+width=3D45></TD>
+    <TD =
+background=3Dhttp://www.21tx.com/images/txsite/function/menubg.gif=20
+    height=3D25>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 border=3D0>
+        <FORM name=3Dtxsite_searchform=20
+        action=3Dhttp://txsite.21tx.com/script/TXSiteSearch.aspx =
+method=3Dpost=20
+        target=3D_blank>
+        <TBODY>
+        <TR>
+          <TD vAlign=3Dcenter=20
+          =
+background=3Dhttp://www.21tx.com/images/txsite/function/menubg.gif=20
+          height=3D25><INPUT size=3D12 name=3Dk> <INPUT type=3Dhidden =
+value=3D2 name=3Ds>=20
+            <INPUT type=3Dhidden value=3Ddev.21tx.com name=3Dd> <SELECT=20
+            style=3D"HEIGHT: 10pt" name=3Dck> <OPTION value=3D469=20
+              selected>=C8=ED=BC=FE=BF=AA=B7=A2</OPTION><OPTION =
+value=3D275>=BF=AA=B7=A2=D3=EF=D1=D4</OPTION><OPTION=20
+              value=3D144>.Net=BF=AA=B7=A2</OPTION><OPTION =
+value=3D145>Java=BF=AA=B7=A2</OPTION><OPTION=20
+              value=3D274>Web=BF=AA=B7=A2</OPTION><OPTION =
+value=3D1261>=D2=C6=B6=AF=BF=AA=B7=A2</OPTION><OPTION=20
+              value=3D91690>=D3=CE=CF=B7=BF=AA=B7=A2</OPTION><OPTION =
+value=3D95>=CA=FD=BE=DD=BF=E2=BF=AA=B7=A2</OPTION><OPTION=20
+              value=3D1176>=C6=F3=D2=B5=BF=AA=B7=A2</OPTION><OPTION =
+value=3D1205>=B2=D9=D7=F7=CF=B5=CD=B3</OPTION><OPTION=20
+              value=3D150>=C8=ED=BC=FE=B9=A4=B3=CC</OPTION><OPTION =
+value=3D91566>=B3=CC=D0=F2=C8=CB=C9=FA</OPTION><OPTION=20
+              value=3D91768>=BF=AA=B7=A2=CE=C4=D5=AA</OPTION></SELECT> =
+</TD>
+          <TD vAlign=3Dbottom align=3Dmiddle width=3D40=20
+          =
+background=3Dhttp://www.21tx.com/images/txsite/function/menubg.gif=20
+          height=3D25><INPUT type=3Dimage=20
+            =
+src=3D"http://www.21tx.com/images/txsite/function/search5.gif"=20
+            border=3D0> </TD></TR></FORM></TBODY></TABLE></TD>
+    <TD =
+background=3Dhttp://www.21tx.com/images/txsite/function/menubg.gif=20
+    height=3D25>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD align=3Dmiddle height=3D2></TD></TR>
+        <TR>
+          <TD align=3Dmiddle><SPAN=20
+    =
+id=3Dad_search_right></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY><=
+/TABLE></SPAN>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D760 align=3Dcenter =
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD class=3Dmainbgcolor align=3Dmiddle =
+height=3D2></TD></TR></TBODY></TABLE><SPAN=20
+id=3Dtxsite_smallcolumnmenu></SPAN>
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D760 align=3Dcenter =
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD class=3Dmainbgcolor width=3D6></TD>
+    <TD style=3D"BORDER-LEFT: #cccccc 1px solid" vAlign=3Dtop =
+align=3Dmiddle=20
+    bgColor=3D#ffffff>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+        <TBODY>
+        <TR>
+          <TD colSpan=3D2 height=3D3></TD></TR>
+        <TR>
+          <TD width=3D"2%"><IMG height=3D22=20
+            src=3D"http://www.21tx.com/images/txsite/function/dline.gif" =
+
+          width=3D19></TD>
+          <TD width=3D"98%"=20
+          =
+background=3Dhttp://www.21tx.com/images/txsite/function/dline02.gif>&nbsp=
+;=20
+            =C4=FA=CF=D6=D4=DA=B5=C4=CE=BB=D6=C3=A3=BA<A =
+href=3D"http://www.21tx.com/">=CC=EC=D0=C2=CD=F8</A> &gt; <A=20
+            href=3D"http://dev.21tx.com/">=C8=ED=BC=FE=BF=AA=B7=A2</A> =
+&gt; <A=20
+            =
+href=3D"http://dev.21tx.com/wz/">=BF=AA=B7=A2=CE=C4=D5=AA</A> &gt; <A=20
+            =
+href=3D"http://dev.21tx.com/java/adv/wz/">Java=CE=C4=D5=AA</A>=20
+      </TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=3D0 cellPadding=3D6 width=3D"98%"=20
+      background=3Dhttp://www.21tx.com/images/data_title_bg.gif =
+border=3D0>
+        <TBODY>
+        <TR>
+          <TD align=3Dmiddle><FONT class=3Df18 color=3D#339900><B>Spring =
+
+            =
+=B5=F7=D3=C3ORACLE=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4=BD=E1=B9=FB=BC=AF</B></F=
+ONT></TD></TR>
+        <TR>
+          <TD align=3Dmiddle>http://dev.21tx.com =
+2004=C4=EA11=D4=C224=C8=D5 <FONT=20
+            color=3D#a20010>Blog axman</FONT></TD></TR></TBODY></TABLE>
+      <P align=3Dcenter><SPAN id=3Dtxsite_ad_cnt_top1></SPAN><SPAN=20
+      id=3Dtxsite_ad_cnt_top2>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D468 align=3Dcenter =
+border=3D0>
+        <TBODY>
+        <TR>
+          <TD height=3D6></TD></TR>
+        <TR>
+          <TD>
+            <P align=3Dcenter>
+            <SCRIPT type=3Dtext/javascript><!--
+google_ad_client =3D "pub-8537598168120506";
+google_ad_width =3D 468;
+google_ad_height =3D 60;
+google_ad_format =3D "468x60_as";
+google_ad_type =3D "text_image";
+//2007-11-15: =CE=C4=D5=C2=C4=DA=C8=DD=C9=CF=B2=BF
+google_ad_channel =3D "8051432807";
+google_color_border =3D "336699";
+google_color_bg =3D "FFFFFF";
+google_color_link =3D "0000FF";
+google_color_text =3D "000000";
+google_color_url =3D "008000";
+google_ui_features =3D "rc:10";
+//-->
+</SCRIPT>
+
+            <SCRIPT=20
+            =
+src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js"=20
+            type=3Dtext/javascript>
+</SCRIPT>
+            </P></TD></TR>
+        <TR>
+          <TD height=3D6></TD></TR>
+        <TR>
+          <TD align=3Dmiddle width=3D468><SPAN=20
+        =
+id=3Dtxsite_ad_cnt_top2b></SPAN></TD></TR></TBODY></TABLE></SPAN><SPAN=20
+      id=3Dtxsite_ad_cnt_top3></SPAN></P><SPAN id=3Dtxsite_day_commend>
+      <TABLE cellSpacing=3D1 cellPadding=3D3 width=3D540 align=3Dcenter =
+bgColor=3D#1250ab=20
+      border=3D0>
+        <TBODY>
+        <TR>
+          <TD align=3Dmiddle bgColor=3D#e3ecf9 =
+colSpan=3D2><B>=C3=BF=C8=D5=CE=C4=D5=C2=BE=AB=DD=CD</B></TD></TR>
+        <TR>
+          <TD width=3D"50%" bgColor=3D#ffffff><A=20
+            href=3D"http://dev.21tx.com/dotnet/csharp/" =
+target=3D_blank><FONT=20
+            color=3D#000000><B>.Net=A3=BA</B></FONT></A><A =
+title=3DVC#2005=BF=EC=CB=D9=C8=EB=C3=C5=D6=AE=B8=B4=BA=CF=B8=B3=D6=B5=B2=D9=
+=D7=F7=B7=FB=20
+            href=3D"http://dev.21tx.com/2006/07/08/10562.html"=20
+            =
+target=3D_blank><B>VC#2005=BF=EC=CB=D9=C8=EB=C3=C5=D6=AE=B8=B4=BA=CF=B8=B3=
+=D6=B5=B2=D9=D7=F7=B7=FB</B></A></TD>
+          <TD width=3D"50%" bgColor=3D#ffffff><A=20
+            href=3D"http://dev.21tx.com/java/base/jdk/" =
+target=3D_blank><FONT=20
+            color=3D#000000><B>Java=A3=BA</B></FONT></A><A=20
+            =
+title=3DJAVA=D2=BB=B2=BD=D2=BB=B2=BD=B5=C4WEB=B1=E0=B3=CC=B9=D8=D3=DAJSP=D3=
+=EBJavaBean=20
+            href=3D"http://dev.21tx.com/2002/08/01/10069.html"=20
+            =
+target=3D_blank><B>JAVA=D2=BB=B2=BD=D2=BB=B2=BD=B5=C4WEB=B1=E0=B3=CC=B9=D8=
+=D3=DAJSP=D3=EBJa</B></A></TD></TR>
+        <TR>
+          <TD width=3D"50%" bgColor=3D#ffffff><A=20
+            href=3D"http://dev.21tx.com/web/asp/" target=3D_blank><FONT=20
+            color=3D#000000><B>ASP=A3=BA</B></FONT></A><A =
+title=3D=D2=BB=B8=F6=D0=C2=B5=C4JMail=A3=A84.3=B0=E6=B1=BE=A3=A9=B7=A2=CB=
+=CD=B4=FA=C2=EB=20
+            href=3D"http://dev.21tx.com/2004/06/16/10745.html"=20
+            =
+target=3D_blank><B>=D2=BB=B8=F6=D0=C2=B5=C4JMail=A3=A84.3=B0=E6=B1=BE=A3=A9=
+=B7=A2=CB=CD=B4=FA=C2=EB</B></A></TD>
+          <TD width=3D"50%" bgColor=3D#ffffff><A=20
+            href=3D"http://dev.21tx.com/web/php/" target=3D_blank><FONT=20
+            color=3D#000000><B>PHP=A3=BA</B></FONT></A><A =
+title=3DPHP=BD=C5=B1=BE=B5=C48=B8=F6=BC=BC=C7=C9(5)=B2=C9=D3=C3PHP=B5=C4=D3=
+=C3=BB=A7=C8=CF=D6=A4=20
+            href=3D"http://dev.21tx.com/2004/02/14/13085.html"=20
+            =
+target=3D_blank><B>PHP=BD=C5=B1=BE=B5=C48=B8=F6=BC=BC=C7=C9(5)=B2=C9=D3=C3=
+PHP=B5=C4=D3=C3=BB=A7=C8=CF</B></A></TD></TR>
+        <TR>
+          <TD width=3D"50%" bgColor=3D#ffffff><A=20
+            href=3D"http://dev.21tx.com/java/jsp/" target=3D_blank><FONT =
+
+            color=3D#000000><B>JSP=A3=BA</B></FONT></A><A =
+title=3D=C5=E4=D6=C3=D7=D4=D2=D1=B5=C4JAVA=BB=B7=BE=B3=20
+            href=3D"http://dev.21tx.com/2002/05/29/10057.html"=20
+            =
+target=3D_blank><B>=C5=E4=D6=C3=D7=D4=D2=D1=B5=C4JAVA=BB=B7=BE=B3</B></A>=
+</TD>
+          <TD width=3D"50%" bgColor=3D#ffffff><A=20
+            href=3D"http://dev.21tx.com/web/cgi/" target=3D_blank><FONT=20
+            color=3D#000000><B>CGI=A3=BA</B></FONT></A><A =
+title=3DCGI=BD=CC=B3=CC(7)=20
+            href=3D"http://dev.21tx.com/2005/04/11/14947.html"=20
+            target=3D_blank><B>CGI=BD=CC=B3=CC(7)</B></A></TD></TR>
+        <TR>
+          <TD width=3D"50%" bgColor=3D#ffffff><A=20
+            href=3D"http://dev.21tx.com/language/vb/" =
+target=3D_blank><FONT=20
+            color=3D#000000><B>VB=A3=BA</B></FONT></A><A =
+title=3DVB=C8=A1=B4=C5=C5=CC=D0=F2=C1=D0=BA=C5=BE=ED=B1=EA=BA=CD=CE=C4=BC=
+=FE=CF=B5=CD=B3=C0=E0=D0=CD=20
+            href=3D"http://dev.21tx.com/2005/05/02/11871.html"=20
+            =
+target=3D_blank><B>VB=C8=A1=B4=C5=C5=CC=D0=F2=C1=D0=BA=C5=BE=ED=B1=EA=BA=CD=
+=CE=C4=BC=FE=CF=B5=CD=B3=C0=E0=D0=CD</B></A></TD>
+          <TD width=3D"50%" bgColor=3D#ffffff><A=20
+            href=3D"http://dev.21tx.com/language/vc/" =
+target=3D_blank><FONT=20
+            color=3D#000000><B>VC=A3=BA</B></FONT></A><A =
+title=3D=B8=DF=D6=CA=C1=BFC++=B1=E0=B3=CC=B5=E3=B5=CE(=D2=BB)=20
+            href=3D"http://dev.21tx.com/2004/07/05/10593.html"=20
+            =
+target=3D_blank><B>=B8=DF=D6=CA=C1=BFC++=B1=E0=B3=CC=B5=E3=B5=CE(=D2=BB)<=
+/B></A></TD></TR></TBODY></TABLE>
+      <P></P></SPAN>
+      <TABLE id=3Dtxsite_content cellSpacing=3D0 cellPadding=3D0 =
+width=3D"98%"=20
+        border=3D0><TBODY>
+        <TR>
+          <TD class=3Dcontent><SPAN id=3Dtxsite_ad_cnt_start></SPAN>
+            <P><A href=3D"http://dev.21tx.com/database/oracle/"=20
+            target=3D_blank>Oracle</A>=20
+            =
+=B6=D4=D3=DA=B8=DF=BC=B6=CC=D8=D0=D4=D7=DC=CA=C7=D3=EB=D6=DA=B2=BB=CD=AC(=
+=CE=D2=BC=AB=C1=A6=CC=D6=D1=E1=D5=E2=D2=BB=B5=E3,=C8=E7=B9=FB=CA=B9=D3=C3=
+=CB=FC=B5=C4=B2=FA=C6=B7=BE=CD=D2=AA=B6=D4=D5=E2=D6=D6=B2=FA=C6=B7<BR>=BD=
+=F8=D0=D0=CC=D8=B6=A8=B5=C4=B1=E0=B3=CC,=D5=E2=D2=B2=CA=C7=CE=D2=B4=D3=B2=
+=BB=BF=B4=BA=C3<A=20
+            href=3D"http://dev.21tx.com/web/"=20
+            =
+target=3D_blank>Web</A>logic=D6=AE=C0=E0=B5=C4=C6=BD=CC=A8=B5=C4=D4=AD=D2=
+=F2),=B4=F3=B6=D4=CF=F3=B4=E6=C8=A1=D2=BB=D2=AA=B6=A8=D3=C3=CB=FC=D7=D4=BC=
+=BA<BR>=B5=C4LOB=B6=D4=CF=F3,=CB=F9=D0=D2=CE=D2=BB=B9=C4=DC=CD=A8=B9=FDLO=
+NG=20
+            =
+RAW=C0=B4=B4=FA=CC=E6.=D2=D4=B1=E3=C4=DC=CA=B9=B3=CC=D0=F2=B2=BB=D0=E8=D2=
+=AA=CC=D8=B6=A8=B5=C4=B1=E0=C2=EB.=B5=AB=B6=D4=D3=DA=B4=E6=B4=A2=B9=FD=B3=
+=CC<BR>(=CE=D2=CA=C7=CB=B5=B7=B5=BB=D8=BD=E1=B9=FB=BC=AF=B5=C4=B4=E6=B4=A2=
+=B9=FD=B3=CC),=CE=D2=BB=B9=C3=BB=D3=D0=CA=B2=C3=B4=B7=BD=B7=A8=C4=DC=D3=C3=
+=D2=BB=B8=F6=CD=A8=D3=C3=B5=C4=B3=CC=D0=F2=C0=B4=B4=A6=C0=EDORACLE.=CC=AB=
+=B6=E0=B5=C4<BR>=BD=CC=B2=C4=BB=F2=CE=C4=D5=C2=D4=DA=BD=B2=B4=E6=B4=A2=B9=
+=FD=B3=CC=B5=C4=B5=F7=D3=C3=D6=BB=CA=C7=B2=BB=B8=BA=D4=F0=C8=CE=B5=D8=BC=F2=
+=B5=A5=D6=B4=D0=D0=D2=BB=D0=A9=BA=AD=CA=FD=BB=F2=CE=DE=BD=E1=B9=FB=B7=B5=BB=
+=D8=B5=C4=B4=E6=B4=A2=B9=FD=B3=CC,<BR>=CA=B9=B4=F3=B6=E0=CA=FD=B6=C1=D5=DF=
+=B8=F9=B1=BE=B2=BB=D6=AA=B5=C0=B5=BD=B5=D7=C8=E7=BA=CE=B5=F7=D3=C3=B4=E6=B4=
+=A2=B9=FD=B3=CC=B5=C4=BD=E1=B9=FB=BC=AF.=B6=F8=D4=DASpring=D6=D0,=B8=F9=B1=
+=BE=BE=CD=C3=BB=D3=D0=D5=E6=D5=FD=CD=EA=C8=AB<BR>=B5=D8=BD=E9=C9=DC=B6=D4=
+=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4=BD=E1=B9=FB=BC=AF=B5=C4=B4=A6=C0=ED,=B8=FC=
+=B1=F0=CB=B5=CF=F3oracle=D5=E2=D6=D6"=CC=D8=B1=F0"=B5=C4=B4=E6=B4=A2=B9=FD=
+=B3=CC=B5=C4=BD=E1=B9=FB=BC=AF=B4=A6=C0=ED.</P>
+            =
+<P>=CF=C8=C0=B4=BC=F2=B5=A5=BF=B4=D2=BB=CF=C2=CE=D2=C3=C7=C8=E7=BA=CE=D4=DA=
+<A href=3D"http://dev.21tx.com/java/adv/jdbc/"=20
+            =
+target=3D_blank>JDBC</A>=D6=D0=B4=A6=C0=ED=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4=BD=
+=E1=B9=FB=BC=AF=B5=C4=CD=A8=D3=C3=C1=F7=B3=CC:</P>
+            <P>1.=BB=F1=C8=A1CallableStatement=D3=EF=BE=E4:</P>
+            <P>CallableStatement cs =3D conn.prepareCall("{call=20
+            spName(?,?,?)}");</P>
+            =
+<P>2.=B4=AB=C8=EB=CA=E4=C8=EB=B2=CE=CA=FD=BA=CD=D7=A2=B2=E1=CA=E4=B3=F6=B2=
+=CE=CA=FD</P>
+            =
+<P>cs.setXXX(index,value);//=CA=E4=C8=EB=B2=CE=CA=FD<BR>cs.re<A=20
+            href=3D"http://dev.21tx.com/corp/gis/"=20
+            =
+target=3D_blank>GIS</A>terOutParameter(index,type);//=CA=E4=B3=F6=B2=CE=CA=
+=FD</P>
+            <P>3.=D6=B4=D0=D0=B4=E6=B4=A2=B9=FD=B3=CC:</P>
+            <P>cs.execute();</P>
+            =
+<P>=B6=D4=D3=DA=D2=BB=B8=F6=B4=E6=D6=EE=B9=FD=B3=CC,=C8=E7=B9=FB=B7=B5=BB=
+=D8=B5=C4=BD=E1=B9=FB=CA=C7=CE=D2=C3=C7=D4=A4=CF=C8=D6=AA=B5=C0=B5=C4,=C4=
+=C7=C3=B4=BF=C9=D2=D4=B8=F9=BE=DD=B4=E6=B4=A2=B9=FD=B3=CC=B6=A8=D2=E5=B5=C4=
+=CB=B3=D0=F2=C0=B4=BD=F8=D0=D0<BR>=B4=A6=C0=ED(=CA=C2=CA=B5=C9=CF=D2=BB=B0=
+=E3=B2=BB=BB=E1=D5=E2=D1=F9),=B5=AB=B6=D4=D3=DA=B8=B4=D4=D3=B5=C4=B6=E0=BD=
+=E1=B9=FB=BC=AF=B5=C4=B4=A6=C0=ED,=C8=E7=BA=CE=B6=A8=D2=E5=D2=BB=B8=F6=CD=
+=A8=D3=C3=B5=C4=C1=F7=B3=CC?</P>
+            =
+<P>=CE=D2=C3=C7=CF=C8=BF=B4=D2=BB=CF=C2JDBC=B1=BE=C9=ED=C4=DC=CE=AA=CE=D2=
+=C3=C7=CC=E1=B9=A9=CA=B2=C3=B4?<BR>=D2=BB=B8=F6=B4=E6=B4=A2=B9=FD=B3=CC=D6=
+=B4=D0=D0=BA=F3=B7=B5=BB=D8=B5=C4=CA=C7boolean=D0=CD:<BR>boolean flag =
+=3D=20
+            =
+callableStatement.execute();<BR>=C8=E7=B9=FBflag=CE=AAtrue,=C4=C7=C3=B4=CB=
+=B5=C3=F7=B7=B5=BB=D8=C1=CB=D2=BB=B8=F6=BD=E1=B9=FB=BC=AF(ResultSet)=C0=E0=
+=D0=CD,=C4=E3=BF=C9=D2=D4=D3=C3getResultSet()=B5=C3=B5=BD=B5=B1=C7=B0=D0=D0=
+=CB=F9=D4=DA<BR>=B5=C4=BD=E1=B9=FB,=B6=F8=C8=E7=B9=FB=B7=B5=BB=D8=CE=AAfl=
+ase,=CB=B5=C3=F7=CA=B2=C3=B4=C4=D8?</P>
+            =
+<P>=C8=E7=B9=FB=C4=E3=B2=BB=BD=F8=D0=D0=B4=A6=C0=ED,=CA=B2=C3=B4=D2=B2=B2=
+=BB=C4=DC=CB=B5=C3=F7,=D6=BB=C4=DC=CB=B5=C3=F7=B5=B1=C7=B0=D6=B8=D5=EB=B2=
+=BB=CA=C7ResultSet,=D3=D0=BF=C9=C4=DC=CA=C7=B8=FC=D0=C2=BC=C6=CA=FD(updat=
+eCount)<BR>=D2=B2=BF=C9=C4=DC=CA=B2=C3=B4=D2=B2=C3=BB=D3=D0=B7=B4=D2=F2.<=
+/P>
+            =
+<P>=C4=C7=C3=B4=C8=E7=B9=FB=B5=B1=C7=B0=D6=B8=D5=EB=CE=AAflase=CA=B1=C8=E7=
+=BA=CE=B4=A6=C0=ED?=CE=D2=C3=C7=D3=A6=B8=C3=CF=C8getUpdateCount();=C8=E7=B9=
+=FB=B7=B5=BB=D8-1,=BC=C8=B2=BB=CA=C7=BD=E1=B9=FB=BC=AF,=D3=D6<BR>=B2=BB=CA=
+=C7=B8=FC=D0=C2=BC=C6=CA=FD=C1=CB.=CB=B5=C3=F7=C3=BB=B5=C4=B7=B5=BB=D8=C1=
+=CB.=B6=F8=C8=E7=B9=FBgetUpdateCount()=B7=B5=BB=D80=BB=F2=B4=F3=D3=DA0,=D4=
+=F2=CB=B5=C3=F7=B5=B1=C7=B0=D6=B8=D5=EB=CA=C7=B8=FC=D0=C2=BC=C6=CA=FD(<BR=
+>0=B5=C4=CA=B1=BA=F2=D3=D0=BF=C9=C4=DC=CA=C7DDL=D6=B8=C1=EE).=CE=DE=C2=DB=
+=CA=C7=B7=B5=BB=D8=BD=E1=B9=FB=BC=AF=BB=F2=CA=C7=B8=FC=D0=C2=BC=C6=CA=FD,=
+=C4=C7=C3=B4=D4=F2=BF=C9=C4=DC=BB=B9=BC=CC=D0=F8=D3=D0=C6=E4=CB=FC=B7=B5=BB=
+=D8.=D6=BB=D3=D0=D4=DA=B5=B1=C7=B0<BR>=D6=B8=D6=B8=D5=EBgetResultSet()=3D=
+=3Dnull=20
+            &amp;&amp; getUpdateCount() =3D=3D =
+-1=B2=C5=CB=B5=C3=F7=C3=BB=D3=D0=D4=D9=B6=E0=B5=C4=B7=B5=BB=D8.</P>
+            =
+<P>=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4=B7=B5=BB=D8=BA=CDResultSet=C0=E0=CB=C6,=
+=C3=BF=B4=CE=B4=A6=C0=ED=B5=C4=B7=B5=BB=D8=BD=E1=B9=FB=CF=E0=B5=B1=D3=DA=CA=
+=C7ResultSet=B5=C4Row,=D6=BB=B2=BB=B9=FD=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4Row=
+<BR>=D7=EE=CF=C8=D4=DA=B5=DA=D2=BB=D0=D0=B6=F8=B2=BB=CA=C7=CF=F3ResultSet=
+=D2=AA=CF=C8next=B2=C5=B5=BD=B5=DA=D2=BB=D0=D0,=B4=E6=B4=A2=B9=FD=B3=CC=CF=
+=F2=CF=C2=D2=C6=B6=AF=D2=BB=D0=D0=D3=C3getMoreResults(),=CF=E0<BR>=B5=B1=D3=
+=DAResultSet=B5=C4next().=CD=AC=D1=F9=CB=FC=B7=B5=BB=D8boolean=BA=CD=C9=CF=
+=C3=E6=B5=C4flag=D2=BB=D1=F9,=D6=BB=CA=C7=CB=B5=C3=F7=B5=B1=C7=B0=D0=D0=CA=
+=C7=B2=BB=CA=C7ResultSet,=C8=E7=B9=FB=CA=C7<BR>flase,=C4=E3=BB=B9=CA=C7=D2=
+=AA=C5=D0=B6=CF=CA=C7=B2=BB=CA=C7updateCount,=D4=DA=C3=BF=D2=BB=D0=D0,=B6=
+=BC=D2=AA=CF=C8=CD=AC=CA=B1=C5=D0=B6=CF=CA=C7=B7=F1=CE=AAResultSet=BB=B9=CA=
+=C7UpdateCount,=C8=E7<BR>=B9=FB=CA=C7=C6=E4=D6=D0=D2=BB=D6=D6=D4=F2=D2=AA=
+=BC=CC=D0=F8getMoreResults(),=B5=B1=B2=BB=CA=C7ResultSet=D2=B2=B2=BB=CA=C7=
+updateCount=CA=B1,=CB=B5=C3=F7=C3=BB=D3=D0=B7=B5=BB=D8=BD=E1=B9=FB=C1=CB,=
+<BR>=D5=E2=CA=B1=D4=D9=BB=F1=C8=A1=CA=E4=B3=F6=B2=CE=CA=FD.</P>
+            <P>=BF=B4=C3=F7=B0=D7=C1=CB=C2=F0?</P>
+            =
+<P>=C4=C7=CE=D2=C3=C7=BE=CD=B8=F9=BE=DD=C9=CF=C3=E6=B5=C4=B9=E6=D4=F2=C0=B4=
+=D0=B4=D2=BB=B8=F6=CD=A8=D3=C3=B5=C4=C1=F7=B3=CC=B0=C9:</P>
+            =
+<P>=CA=D7=CF=C8,=CE=D2=C3=C7=D2=AA=C8=B7=B6=A8=CA=B2=C3=B4=CA=B1=BA=F2=C3=
+=BB=CB=B5=BD=E1=B9=FB=BC=AF=C1=CB:<BR>if(cs.getResultSet() =3D=3D null =
+&amp;&amp;=20
+            cs.getUpdateCount() =3D=3D =
+-1)<BR>=CF=D6=D4=DA=CE=D2=C3=C7=D7=F6=D2=BB=B8=F6=D1=AD=BB=B7:<BR>ResultS=
+et rs =3D=20
+            null;<BR>int updateCount =3D -1;<BR>flag =3D=20
+            cs.execute();<BR>do{<BR>&nbsp;&nbsp;&nbsp; updateCount =3D=20
+            cs.getUpdateCount();<BR>&nbsp;&nbsp;&nbsp; if(updateCount =
+!=3D=20
+            =
+-1){//=CB=B5=C3=F7=B5=B1=C7=B0=D0=D0=CA=C7=D2=BB=B8=F6=B8=FC=D0=C2=BC=C6=CA=
+=FD<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+//=B4=A6=C0=ED.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+cs.getMoreResults();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+continue;//=D2=D1=BE=AD=CA=C7=B8=FC=D0=C2=BC=C6=CA=FD=C1=CB,=B4=A6=C0=ED=CD=
+=EA=B3=C9=BA=F3=D3=A6=B8=C3=D2=C6=B6=AF=B5=BD=CF=C2=D2=BB=D0=D0<BR>&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+//=B2=BB=D4=D9=C5=D0=B6=CF=CA=C7=B7=F1=CA=C7ResultSet<BR>&nbsp;&nbsp;&nbs=
+p; }<BR>&nbsp;&nbsp;&nbsp; rs=20
+            =3D cs.getResultSet();<BR>&nbsp;&nbsp;&nbsp; if(rs !=3D=20
+            =
+null){//=C8=E7=B9=FB=B5=BD=C1=CB=D5=E2=C0=EF,=CB=B5=C3=F7updateCount =
+=3D=3D=20
+            -1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+//=B4=A6=C0=EDrs<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+cs.getMoreResults();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+continue;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;=20
+            =
+//=CA=C7=BD=E1=B9=FB=BC=AF,=B4=A6=C0=ED=CD=EA=B3=C9=BA=F3=D3=A6=B8=C3=D2=C6=
+=B6=AF=B5=BD=CF=C2=D2=BB=D0=D0<BR>&nbsp;&nbsp;&nbsp; =
+}<BR>&nbsp;&nbsp;&nbsp;=20
+            =
+//=C8=E7=B9=FB=B5=BD=C1=CB=D5=E2=C0=EF,=CB=B5=C3=F7updateCount =3D=3D -1 =
+&amp;&amp; rs =3D=3D=20
+            =
+null,=CA=B2=C3=B4=D2=B2=C3=BB=B5=C4=C1=CB<BR>&nbsp;&nbsp;&nbsp; =
+<BR>}while(!(updateCount =3D=3D -1=20
+            &amp;&amp; rs =3D=3D =
+null));<BR>cs.getXXX(int);//=BB=F1=C8=A1=CA=E4=B3=F6=B2=CE=CA=FD </P>
+            =
+<P><BR>=D2=D4=C9=CF=CA=C7=B6=D4=D3=DA=CD=A8=D3=C3=B5=C4=B4=E6=B4=A2=B9=FD=
+=B3=CC=B7=B5=BB=D8=B5=C4=BD=E1=B9=FB=BC=AF=B5=C4=B4=A6=C0=ED,=B6=F8oracle=
+,=CB=FC=B2=BB=C4=DC=B7=B5=BB=D8=BD=E1=B9=FB=BC=AF,=D6=BB=C4=DC=D4=DA=CA=E4=
+=B3=F6=B2=CE=CA=FD=D6=D0<BR>=B7=B5=BB=D8=D2=BB=B8=F6cursor,=CB=F9=D2=D4=CD=
+=A8=D3=C3=B5=C4=C1=F7=B3=CC=D6=D0=C4=E3=BB=F1=C8=A1=B2=BB=B5=BD=C8=CE=BA=CE=
+=BD=E1=B9=FB:</P>
+            <P>package PK_AREA_PUBLIC is<BR>&nbsp; TYPE serarch_result =
+IS REF=20
+            CURSOR;<BR>&nbsp; PROCEDURE&nbsp; area_search(vTarget_in IN =
+VARCHAR2=20
+            ,cur_result_out OUT serarch_result) ;<BR>end =
+PK_AREA_PUBLIC;</P>
+            <P>package body PK_AREA_PUBLIC is<BR>&nbsp; PROCEDURE&nbsp;=20
+            area_search(vTarget_in IN VARCHAR2 ,cur_result_out OUT=20
+            serarch_result)<BR>&nbsp; IS<BR>&nbsp; sqlstr=20
+            VARCHAR2(1000);<BR>&nbsp;=20
+            BEGIN<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+sqlstr:=3D'select=20
+            =
+.................................';<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;=20
+            OPEN cur_result_out FOR sqlstr USING vTarget_in;<BR>&nbsp; =
+END=20
+            area_search;<BR>end PK_AREA_PUBLIC;</P>
+            =
+<P><BR>=B6=D4=D3=DA=C9=CF=C3=E6=B5=C4=C0=FD=D7=D3,=B4=E6=B4=A2=B9=FD=B3=CC=
+=D3=D0=D2=BB=B8=F6=CA=E4=C8=EB=B2=CE=CA=FD,=D2=BB=B8=F6=CA=E4=B3=F6=B2=CE=
+=CA=FD,=CE=D2=C3=C7=D2=AA=BD=D3=CA=DC=CA=E4=B3=F6=B2=CE=CA=FD=D7=F7=CE=AA=
+=BD=E1=B9=FB=BC=AF=B4=A6=C0=ED.=CB=F9<BR>=D2=D4=D7=A2=B2=E1=B5=C4=CA=B1=BA=
+=F2=D3=A6=B8=C3=D7=A2=B2=E1=CE=AA:</P>
+            =
+<P>cs.registerOutParameter(2,oracle.jdbc.OracleTypes.CURSOR);//=CA=E4=B3=F6=
+=B2=CE=CA=FD</P>
+            =
+<P>=D5=E2=D1=F9=D4=DA=B4=E6=B4=A2=B9=FD=B3=CC=D6=B4=D0=D0=BA=F3,=BB=F1=C8=
+=A1=CA=E4=B3=F6=CA=FD=D4=EC=D0=CD=CE=AAResultSet=BE=CD=BF=C9=D2=D4=B4=A6=C0=
+=ED:</P>
+            <P>ResultSet rs =3D (ResultSet)cs.getObject(2);</P>
+            =
+<P>=C8=E7=B9=FB=D3=D0=B6=E0=B8=F6=BD=E1=B9=FB=BC=AF=BE=CD=D3=C3=B6=E0=B8=F6=
+=CA=E4=B3=F6=B2=CE=CA=FD.</P>
+            =
+<P><BR>=C3=F7=B0=D7=C1=CBORACLE=B5=C4=CC=D8=CA=E2=D0=D4,=CE=D2=C3=C7=D4=D9=
+=BF=B4=BF=B4=D4=DAspring=D6=D0=C8=E7=B9=FB=B4=A6=C0=ED=CB=FC=B5=C4=B4=E6=B4=
+=A2=B9=FD=B3=CC=B5=C4=BD=E1=B9=FB=BC=AF:<BR>spring=D4=DA=B4=A6=C0=ED=B8=B4=
+=D4=D3=B6=D4=CF=F3=B5=C4=CA=B1=BA=F2,=B4=F3=B6=BC=B2=C9=D3=C3=BB=D8=B5=F7=
+=B5=C4=B7=BD=B7=A8,=D2=AA=C7=F3=B3=CC=D0=F2=D4=B1=D7=D4=BC=BA=CA=B5=CF=D6=
+=BD=D3=BF=DA=B7=BD=B7=A8.=D2=B2=BE=CD=CA=C7=CB=FC=CC=E1=B9=A9=C1=CB<BR>=B3=
+=CC=D0=F2=D4=CB=D0=D0=CA=B1=B5=C4=B2=CE=CA=FD,=D2=AA=C7=F3=C4=E3=D7=D4=BC=
+=BA=B6=D4=D5=E2=D0=A9=B2=CE=CA=FD=BD=F8=D0=D0=B4=A6=C0=ED.=B6=D4=D3=DAJdb=
+cTemplate,=CB=FC=D4=DA=BA=DC=B6=E0=B5=D8=B7=BD=CC=E1=B9=A9=C1=CBResultSet=
+<BR>=B2=CE=CA=FD=B9=A9=B3=CC=D0=F2=D4=B1=B4=A6=C0=ED.=D4=DASpring=CE=C4=B5=
+=B5=D6=D0=CC=E1=B9=A9=C1=CB=B6=D4=D3=DA=CD=A8=D3=C3=C1=F7=B3=CC,=D2=B2=BE=
+=CD=CA=C7=B4=D3=B4=E6=B4=A2=B9=FD=B3=CC=D6=B4=D0=D0=BD=E1=B9=FB=D6=D0=BB=F1=
+=C8=A1=BD=E1=B9=FB=BC=AF=B5=C4<BR>=C0=FD=B3=CC:</P>
+            <P>Map out =3D execute(new=20
+            =
+HashMap());<BR>=C6=E4=CA=B5=CB=FC=CA=C7=C4=AC=C8=CF=CA=B5=CF=D6=C1=CB=C9=CF=
+=C3=E6JDBC=CD=A8=D3=C3=C1=F7=B3=CC=D6=D0=B6=D4ResuleSet=B5=BDMap=B5=C4=B7=
+=E2=D7=B0.=B6=F8=B6=D4=D3=DAOracle,=CE=D2=C3=C7=BE=CD=B1=D8=D0=EB=D7=D4=BC=
+=BA=CA=D6<BR>=CA=B5=CF=D6=B6=D4=CA=E4=B3=F6=B2=CE=CA=FD=D6=D0ResultSet=B5=
+=C4=BB=D8=B5=F7:</P>
+            <P>public class SpringStoredProcedure<BR>&nbsp;&nbsp;&nbsp; =
+extends=20
+            StoredProcedure {<BR>&nbsp; public ArrayList&lt;HashMap&gt; =
+set =3D=20
+            new ArrayList&lt;HashMap&gt;();<BR>&nbsp;=20
+            =
+//=C9=F9=C3=F7=D2=BB=B8=F6=D3=C3=D3=DA=BD=D3=CA=D5=BD=E1=B9=FB=BC=AF=B5=C4=
+=CA=FD=BE=DD=BD=E1=B9=B9,=C6=E4=D6=D0=B5=C4=D4=AA=CB=D8=CE=AArow,=D3=C3ma=
+p=B4=E6=B7=C5</P>
+            <P>&nbsp; private Map =
+inParam;//=CA=E4=C8=EB=B2=CE=CA=FD<BR>&nbsp; private RowMapper rm=20
+            =3D new RowMapper(){<BR>&nbsp;&nbsp;&nbsp; public Object=20
+            mapRow(ResultSet rs,int rowNum) throws=20
+            SQLException{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return=20
+            =
+null;//=B2=BB=D3=C3=B4=D3=B4=E6=B4=A2=B9=FD=B3=CC=B1=BE=C9=ED=BB=F1=C8=A1=
+=BD=E1=B9=FB<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp; };</P>
+            <P>&nbsp; private RowMapperResultReader callback =3D new=20
+            RowMapperResultReader(rm ){<BR>&nbsp;&nbsp;&nbsp; public =
+void=20
+            processRow(ResultSet rs)=20
+            =
+//=BB=D8=B5=F7=B4=A6=C0=ED<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            throws SQLException{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int =
+count =3D=20
+            =
+rs.getMetaData().getColumnCount();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            String[] header =3D new=20
+            String[count];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for(int=20
+            =
+i=3D0;i&lt;count;i++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            header[i] =3D=20
+            =
+rs.getMetaData().getColumnName(i+1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+while(rs.next()){<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            HashMap&lt;String,String&gt; row =3D new=20
+            =
+HashMap(count+7);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            for(int=20
+            =
+i=3D0;i&lt;count;i++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;=20
+            =
+row.put(header[i],rs.getString(i+1));<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;=20
+            set.add(row);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            }<BR>&nbsp;&nbsp;&nbsp; }<BR>&nbsp; };=20
+            =
+//RowMapperResultReader=D7=F7=CE=AA=CA=E4=B3=F6=B2=CE=CA=FD=B5=C4=BB=D8=B5=
+=F7=BE=E4=B1=FA<BR>&nbsp; public=20
+            SpringStoredProcedure(DataSource ds, String SQL)=20
+            {<BR>&nbsp;&nbsp;&nbsp; =
+setDataSource(ds);<BR>&nbsp;&nbsp;&nbsp;=20
+            setSql(SQL);<BR>&nbsp; }</P>
+            <P>&nbsp; public void setOutParameter(String column,int=20
+            type){<BR>&nbsp;&nbsp;&nbsp; declareParameter(new=20
+            SqlOutParameter(column,=20
+            =
+type,callback));<BR>&nbsp;&nbsp;&nbsp;&nbsp;//=C0=FB=D3=C3=BB=D8=B5=F7=BE=
+=E4=B1=FA=D7=A2=B2=E1=CA=E4=B3=F6=B2=CE=CA=FD<BR>&nbsp;=20
+            }<BR>&nbsp; public void setParameter(String column,int=20
+            type){<BR>&nbsp;&nbsp;&nbsp; declareParameter(new=20
+            SqlParameter(column, type));<BR>&nbsp; }<BR>&nbsp; =
+<BR>&nbsp; public=20
+            void SetInParam(Map inParam){<BR>&nbsp;&nbsp;&nbsp; =
+this.inParam =3D=20
+            inParam;<BR>&nbsp; }</P>
+            <P>&nbsp; public Map execute() {<BR>&nbsp;&nbsp;&nbsp;=20
+            compile();<BR>&nbsp;&nbsp;&nbsp; return=20
+            execute(this.inParam);<BR>&nbsp; }<BR>}</P>
+            =
+<P>=CF=C2=C3=E6=CE=D2=C3=C7=BF=B4=D2=BB=CF=C2=B5=F7=D3=C3=B9=FD=B3=CC:</P=
+>
+            <P>&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp; =
+DriverManagerDataSource=20
+            ds =3D .......;</P>
+            <P>&nbsp;&nbsp;&nbsp; SpringStoredProcedure sp =3D new=20
+            =
+SpringStoredProcedure(ds,"PK_AREA_PUBLIC.area_search");<BR>&nbsp;&nbsp;&n=
+bsp;=20
+            <BR>&nbsp;&nbsp;&nbsp;=20
+            =
+//=D7=A2=B2=E1=B2=CE=CA=FD=C0=E0=D0=CD,=CA=E4=C8=EB=B2=CE=CA=FD=BA=CD=CA=E4=
+=B3=F6=B2=CE=CA=FD=CD=AC=CA=B1=D7=A2=B2=E1,=B7=F1=D4=F2=B2=BB=C4=DC=D5=FD=
+=C8=B7=B1=E0=D2=EB=B4=E6=B4=A2=B9=FD=B3=CC<BR>&nbsp;&nbsp;&nbsp;=20
+            sp.setParameter("vTarget_in",<A =
+href=3D"http://dev.21tx.com/java/"=20
+            =
+target=3D_blank>Java</A>.sql.Types.VARCHAR);<BR>&nbsp;&nbsp;&nbsp;=20
+            =
+sp.setOutParameter("cur_result_out",oracle.jdbc.OracleTypes.CURSOR);<BR>&=
+nbsp;&nbsp;&nbsp;=20
+            sp.compile();<BR>&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;=20
+            =
+//=B4=AB=C8=EB=CA=E4=C8=EB=B2=CE=CA=FD=D6=B5<BR>&nbsp;&nbsp;&nbsp; Map =
+in =3D new=20
+            HashMap();<BR>&nbsp;&nbsp;&nbsp;=20
+            =
+in.put("vTarget_in","=D2=BB=B8=F6=C4=DA=C8=DD");<BR>&nbsp;&nbsp;&nbsp;=20
+            sp.SetInParam(in);<BR>&nbsp;&nbsp;&nbsp; =
+<BR>&nbsp;&nbsp;&nbsp;=20
+            //=D6=B4=D0=D0=B4=E6=B4=A2=B9=FD=B3=CC<BR>&nbsp;&nbsp;&nbsp; =
+sp.execute();</P>
+            <P>&nbsp;&nbsp;&nbsp; Map m =3D=20
+            =
+sp.set.get(0);//ReultSet=B5=C4=B5=DA=D2=BB=CC=F5=BC=C7=C2=BC<BR>&nbsp;&nb=
+sp;&nbsp;&nbsp;=20
+            =
+//set=B6=A8=D2=E5=CE=AASpringStoredProcedure=B5=C4=CA=F4=D0=D4=D3=C3=D3=DA=
+=BD=D3=CA=D5=BB=D8=B5=F7=CA=B1=B5=C4=CA=FD=BE=DD<BR>&nbsp;&nbsp;&nbsp;&nb=
+sp;=20
+            =
+//=C8=E7=B9=FB=D3=D0=B6=E0=B8=F6=CA=E4=B3=F6=B2=CE=CA=FD,=D3=A6=B8=C3=D4=DA=
+=C3=BF=B8=F6=CA=E4=B3=F6=B2=CE=CA=FD=B5=C4=BB=D8=B5=F7=B7=BD=B7=A8=D6=D0=C9=
+=FA=B3=C9=B8=C3=CA=E4=B3=F6<BR>&nbsp;&nbsp;&nbsp;&nbsp;=20
+            =
+//=B2=CE=CA=FD=B6=D4=D3=A6=B5=C4ArrayList,=C8=BB=BA=F3=BC=D3=B5=BD=D2=BB=B8=
+=F6=B3=C9=D4=B1=B1=E4=C1=BF=B5=C4=CA=FD=BE=DD=BD=E1=B9=B9=D6=D0.<BR>&nbsp=
+;&nbsp;&nbsp; Iterator i=20
+            =3D m.keySet().iterator();<BR>&nbsp;&nbsp;&nbsp;=20
+            while(i.hasNext()){<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String =
+key =3D=20
+            i.next().toString();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+            System.out.println(key + "=3D&gt;" +=20
+            m.get(key));<BR>&nbsp;&nbsp;&nbsp; }</P>
+            <P>&nbsp; =
+=D7=DC=D6=AE,=C9=CF=C3=E6=B5=C4=B7=BD=B7=A8=CB=E4=C8=BB=BD=E2=BE=F6=C1=CB=
+Spring=D6=D0=B6=D4Oracle=B4=E6=B4=A2=B9=FD=B3=CC=B5=C4=B5=F7=D3=C3,=B5=AB=
+=CE=D2=BC=AB=C1=A6=B2=BB=CD=C6=BC=F6=D5=E2=B3=CC=B8=B4=D4=D3=B5=C4=B4=A6=C0=
+=ED</P>
+            <P><A =
+href=3D"http://dev.21tx.com/2004/11/24/13651.html">=C9=CF=D2=BB=C6=AA=A3=BA=
+=20
+            Log4j=C5=E4=D6=C3=CE=C4=BC=FE</A><BR><A=20
+            =
+href=3D"http://dev.21tx.com/2004/11/24/13644.html">=CF=C2=D2=BB=C6=AA=A3=BA=
+=20
+          =
+=C7=B3=CC=B8DAO=C4=A3=CA=BD</A></P></TD></TR></TBODY></TABLE><SPAN =
+id=3Dtxsite_comment></SPAN>
+      <P></P>
+      <P align=3Dcenter><SPAN id=3Dtxsite_ad_cnt_btm_txt></SPAN>
+      <P align=3Dcenter></P>
+      <P style=3D"TEXT-INDENT: 20px" align=3Dleft>
+      <SCRIPT type=3Dtext/javascript>=20
+cpro_client=3D'txadcpr';
+cpro_cbd=3D'#trans';=20
+cpro_cbg=3D'#trans';=20
+cpro_ctitle=3D'#0000ff';=20
+cpro_cdesc=3D'#444444';=20
+cpro_curl=3D'#008000';=20
+cpro_cflush=3D'#e10900';=20
+cpro_at=3D'text_image';=20
+cpro_161=3D4;=20
+cpro_flush=3D2;=20
+cpro_uap=3D1;=20
+cpro_w=3D500;=20
+cpro_h=3D200;=20
+cpro_template=3D'text_default_500_200';=20
+cpro_channel=3D919;
+</SCRIPT>
+
+      <SCRIPT language=3DJavaScript =
+src=3D"http://cpro.baidu.com/cpro/ui/cp.js"=20
+      type=3Dtext/javascript></SCRIPT>
+      </P>
+      <P></P>
+      <P></P><SPAN id=3Dtxsite_cp></SPAN>
+      <TABLE=20
+      style=3D"BORDER-TOP: #303880 1px solid; BORDER-BOTTOM: #303880 1px =
+solid"=20
+      height=3D30 cellSpacing=3D0 cellPadding=3D0 width=3D"98%" =
+border=3D0>
+        <TBODY>
+        <TR align=3Dmiddle>
+          <TD width=3D"9%"></TD>
+          <SCRIPT language=3DJavaScript>
+document.write(" <TD noWrap width=3D18%><IMG height=3D17 =
+src=3D'http://www.21tx.com/images/data_cmd2.gif' width=3D17 =
+align=3DabsMiddle nowrap> ");
+document.write(" <A =
+href=3D'http://txsite.21tx.com/script/contact.aspx?subject=3D=CE=C4=D5=C2=
+=B4=ED=CE=F3:" + txsite_pagetitle + "(" + txsite_pagekey + ")' =
+target=3D'_blank'>=CE=C4=D5=C2=BE=BE=B4=ED</A></TD> ");
+document.write(" <TD noWrap width=3D'19%'><IMG height=3D17 =
+src=3D'http://www.21tx.com/images/data_cmd3.gif' width=3D17 =
+align=3DabsMiddle nowrap> ");
+document.write(" <A =
+href=3D'http://txsite.21tx.com/script/contact.aspx?subject=3D=CE=D2=D2=AA=
+=CD=B6=B8=E5' target=3D'_blank'>=CE=D2=D2=AA=CD=B6=B8=E5</A></TD> ");
+document.write(" <TD noWrap width=3D'14%'><IMG height=3D17 =
+src=3D'http://www.21tx.com/images/data_cmd4.gif' width=3D17 =
+align=3DabsMiddle nowrap> ");
+document.write(" <A href=3D\"javascript:window.external.AddFavorite('" + =
+txsite_pageurl + "', '" +  txsite_pagetitle + =
+"')\">=BC=D3=C8=EB=CA=D5=B2=D8</A></TD> ");
+document.write(" <TD width=3D'14%' height=3D24><IMG height=3D17 =
+src=3D'http://www.21tx.com/images/data_cmd5.gif' width=3D17 =
+align=3DabsMiddle> ");
+document.write(" <A href=3D'#pagetop'>=B7=B5=BB=D8=B6=A5=B2=BF</A></TD> =
+");
+</SCRIPT>
+
+          <TD width=3D"11%" height=3D24></TD></TR></TBODY></TABLE>
+      <P></P>
+      <P></P><SPAN id=3Dtxsite_artbottom_top10_1></SPAN>
+      <SCRIPT language=3DJavaScript>
+if (typeof(txsite_cp) !=3D 'undefined') {
+  txsite_cp.innerHTML =3D " <table border=3D0 cellspacing=3D0 =
+cellpadding=3D0 width=3D98%> " +=20
+    " <tr><td height=3D20></td></tr> " +=20
+    " <tr><td class=3Dcontent> " +=20
+    " =
+<P><B>=A1=BE=D6=D8=D2=AA=C9=F9=C3=F7=A1=BF=A3=BA</B>=CC=EC=D0=C2=CD=F8=BF=
+=AF=D4=D8=B4=CB=CE=C4=BD=F6=CE=AA=CC=E1=B9=A9=B8=FC=B6=E0=D0=C5=CF=A2=C4=BF=
+=B5=C4=A3=AC=B2=A2=B2=BB=B4=FA=B1=ED=CC=EC=D0=C2=CD=F8=CD=AC=D2=E2=CE=C4=D5=
+=C2=B5=C4=CB=B5=B7=A8=BB=F2=C3=E8=CA=F6=A3=AC=D2=B2=B2=BB=B9=B9=B3=C9=C8=CE=
+=BA=CE=BD=A8=D2=E9=A3=AC=B6=D4=B1=BE=CE=C4=D3=D0=C8=CE=BA=CE=D2=EC=D2=E9=A3=
+=AC=C7=EB<A =
+href=3D'http://txsite.21tx.com/script/contact.aspx?subject=3D=CE=C4=D5=C2=
+=B0=E6=C8=A8=C1=AA=CF=B5:" + txsite_pagetitle + "(" + txsite_pagekey + =
+")' target=3D'_blank'>=C1=AA=CF=B5=CE=D2=C3=C7</A>=A1=A3</P> " +=20
+    " </td></tr> " +=20
+    " </table> <p></p>";
+}
+</SCRIPT>
+      <SPAN id=3Dtxsite_artbottom_top10>
+      <TABLE=20
+      style=3D"BORDER-TOP: #000000 1px solid; BORDER-BOTTOM: #000000 1px =
+solid"=20
+      cellSpacing=3D0 cellPadding=3D0 width=3D"98%"=20
+      background=3Dhttp://www.21tx.com/images/list_title_bg1.gif =
+border=3D0>
+        <TBODY>
+        <TR>
+          <TD width=3D40><IMG height=3D23=20
+            src=3D"http://www.21tx.com/images/list_title1.gif" =
+width=3D40></TD>
+          <TD width=3D251>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+border=3D0>
+              <TBODY>
+              <TR>
+                =
+<TD><STRONG>=B1=E0=BC=AD=CD=C6=BC=F6</STRONG></TD></TR></TBODY></TABLE></=
+TD>
+          <TD style=3D"BORDER-LEFT: #000000 1px solid" width=3D40><IMG =
+height=3D23=20
+            src=3D"http://www.21tx.com/images/list_title1.gif" =
+width=3D40></TD>
+          <TD width=3D250>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+border=3D0>
+              <TBODY>
+              <TR>
+                =
+<TD><STRONG>=CF=E0=B9=D8=C4=DA=C8=DD</STRONG></TD></TR></TBODY></TABLE></=
+TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD vAlign=3Dtop align=3Dmiddle width=3D291 bgColor=3D#f7f8f9>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"95%" =
+border=3D0>
+              <TBODY>
+              <TR>
+                <TD class=3Dsfont>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2005/06/26/10877.html"=20
+                  =
+target=3D_blank>readAppfuse-Ant=C8=CE=CE=F1</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2005/06/26/10873.html"=20
+                  =
+target=3D_blank>readAppfuse-Ant=C8=CE=CE=F1=D0=F8</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2005/06/26/10868.html"=20
+                  =
+target=3D_blank>=C7=EB=BD=CC=D2=BB=B8=F6jsp=BE=F8=B6=D4=C2=B7=BE=B6=BA=CD=
+=CF=E0=B6=D4=C2=B7=BE=B6=B5=C4=CE=CA=CC=E2</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2005/06/26/10860.html"=20
+                  =
+target=3D_blank>readAppfuse-3-=C8=A8=CF=DE=C8=CF=D6=A4=D0=F8</A><BR>=A1=A4=
+<A=20
+                  href=3D"http://dev.21tx.com/2005/06/23/11462.html"=20
+                  target=3D_blank>java =
+=B5=C4jdom=CA=B9=D3=C3=C0=E0=A3=A8=D7=D4=BC=D2=D3=C3=A3=A9</A><BR>=A1=A4<=
+A=20
+                  href=3D"http://dev.21tx.com/2005/06/23/11457.html"=20
+                  =
+target=3D_blank>SSL=B1=BB=B7=C3=CE=CA=B5=C4=B7=FE=CE=F1=C6=F7=B6=CB=B1=E0=
+=B3=CC</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2005/06/22/12417.html"=20
+                  =
+target=3D_blank>=CA=B9=D3=C3jsmsengine=B7=A2=CB=CD=B6=CC=D0=C5=CF=A2=A3=A8=
+SMS=A3=A9=CA=B9=D3=C3=D0=C4=B5=C3</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2005/06/21/13570.html"=20
+                  =
+target=3D_blank>Apache=D0=B9=C2=B6=D6=D8=D0=B4=B5=C4=C8=CE=D2=E2=CE=C4=BC=
+=FE=C2=A9=B6=B4</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2005/06/21/13543.html"=20
+                  =
+target=3D_blank>JSTL=B8=C4=BD=F8JSP=C0=B4=BC=F2=BB=AF=CD=F8=D2=B3=B5=C4=CA=
+=B5=CF=D6=B9=FD=B3=CC(2)</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2005/06/21/13514.html"=20
+                  =
+target=3D_blank>=BF=D8=D6=C6=B6=AF=CC=ACservlet=CD=BC=D0=CE=B4=A6=C0=ED(2=
+)</A><BR></TD></TR></TBODY></TABLE></TD>
+          <TD style=3D"BORDER-LEFT: #ffffff 1px solid" vAlign=3Dtop =
+align=3Dmiddle=20
+          width=3D291 bgColor=3D#f7f8f9>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"95%" =
+border=3D0>
+              <TBODY>
+              <TR>
+                <TD class=3Dsfont>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/15/13325.html"=20
+                  target=3D_blank>spring + hibernate =
+=CA=FD=BE=DD=BB=B0=B3=D6=BE=C3=B2=E3=A3=A8=D7=AA=A3=A9</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/15/13261.html"=20
+                  target=3D_blank>Webwork =BA=CD spring =
+=B5=C4=D5=FB=BA=CF</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/09/12842.html"=20
+                  target=3D_blank>hivemind, pico, spring =
+ioc</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/10/31/11808.html"=20
+                  target=3D_blank>Introducing to Spring =
+Framework</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/10/25/12017.html"=20
+                  target=3D_blank>Spring Reference =
+1.1=B5=DA=CA=AE=D2=BB=D5=C2-=CA=B9=D3=C3ORM=B9=A4=BE=DF</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/10/21/13457.html"=20
+                  target=3D_blank>Spring AOP=D6=AEHello =
+World</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/10/09/11916.html"=20
+                  target=3D_blank>Tapestry + Spring + Hibernate =
+=D5=FB=BA=CF=B9=A4=D7=F7=BC=B0</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/10/05/11448.html"=20
+                  target=3D_blank>Spring=C6=F0=B2=BD=C0=FD=D7=D3 =
+=A1=B0Developing a Spring Fra</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/10/05/11439.html"=20
+                  target=3D_blank>Spring=C6=F0=B2=BD=C0=FD=D7=D3 =
+=A1=B0Developing a Spring Fra</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/10/05/11427.html"=20
+                  target=3D_blank>Spring=C6=F0=B2=BD=C0=FD=D7=D3 =
+=A1=B0Developing a Spring=20
+              =
+Fra</A><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+      <TABLE=20
+      style=3D"BORDER-TOP: #000000 1px solid; BORDER-BOTTOM: #000000 1px =
+solid"=20
+      cellSpacing=3D0 cellPadding=3D0 width=3D"98%"=20
+      background=3Dhttp://www.21tx.com/images/list_title_bg1.gif =
+border=3D0>
+        <TBODY>
+        <TR>
+          <TD width=3D40><IMG height=3D23=20
+            src=3D"http://www.21tx.com/images/list_title1.gif" =
+width=3D40></TD>
+          <TD width=3D251>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+border=3D0>
+              <TBODY>
+              <TR>
+                =
+<TD><STRONG>=D7=EE=BD=FC=B8=FC=D0=C2</STRONG></TD></TR></TBODY></TABLE></=
+TD>
+          <TD style=3D"BORDER-LEFT: #000000 1px solid" width=3D40><IMG =
+height=3D23=20
+            src=3D"http://www.21tx.com/images/list_title1.gif" =
+width=3D40></TD>
+          <TD width=3D250>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+border=3D0>
+              <TBODY>
+              <TR>
+                =
+<TD><STRONG>=C8=CB=C6=F8=D7=EE=C8=C8</STRONG></TD></TR></TBODY></TABLE></=
+TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD vAlign=3Dtop align=3Dmiddle width=3D291 bgColor=3D#f7f8f9>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"95%" =
+border=3D0>
+              <TBODY>
+              <TR>
+                <TD class=3Dsfont>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/24/13651.html"=20
+                  =
+target=3D_blank>Log4j=C5=E4=D6=C3=CE=C4=BC=FE</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/24/13644.html"=20
+                  =
+target=3D_blank>=C7=B3=CC=B8DAO=C4=A3=CA=BD</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/24/13636.html"=20
+                  target=3D_blank>JDOM in the Real World, Part =
+3</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/24/11733.html"=20
+                  =
+target=3D_blank>=C0=FB=D3=C3Java=CA=B5=CF=D6zip=D1=B9=CB=F5/=BD=E2=D1=B9=CB=
+=F5</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/24/11677.html"=20
+                  =
+target=3D_blank>Java=D6=D0=C0=FB=D3=C3JMF=B1=E0=D0=B4=C9=E3=CF=F1=CD=B7=C5=
+=C4=D5=D5=B3=CC=D0=F2</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/23/12762.html"=20
+                  =
+target=3D_blank>=C0=FB=D3=C3Java=B5=F7=D3=C3=BF=C9=D6=B4=D0=D0=C3=FC=C1=EE=
+=CA=B5=C0=FD</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/23/12760.html"=20
+                  =
+target=3D_blank>java=D6=D0=B5=C4=B6=D4=CF=F3=D2=FD=D3=C3=CE=CA=CC=E2=B5=C4=
+=D4=D9=B4=CE=C0=ED=BD=E2</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/23/12756.html"=20
+                  =
+target=3D_blank>=CA=D4=CE=F6J2EE=D3=EB.NET=CA=B1=B4=FA=B5=C4=C9=CC=D2=B5=C0=
+=FB=C8=F3</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/23/12498.html"=20
+                  target=3D_blank>=CA=B9=D3=C3 Rational XDE Data Modeler =
+=BD=A8=C4=A3=BA=CD=C9=E8</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/23/12494.html"=20
+                  target=3D_blank>=D3=A6=D3=C3IBM Rational XDE =BA=CD =
+WebSphere=20
+              Studio</A><BR></TD></TR></TBODY></TABLE></TD>
+          <TD style=3D"BORDER-LEFT: #ffffff 1px solid" vAlign=3Dtop =
+align=3Dmiddle=20
+          width=3D291 bgColor=3D#f7f8f9>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"95%" =
+border=3D0>
+              <TBODY>
+              <TR>
+                <TD class=3Dsfont>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2003/07/26/15299.html"=20
+                  =
+target=3D_blank>=BB=D8=B4=F0=A3=BA=CE=AA=CA=B2=C3=B4=D6=B4=D0=D0JAVA=B3=CC=
+=D0=F2=CA=B1=A3=AC=BB=E1=B3=F6=CF=D6Except</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/09/11/11079.html"=20
+                  target=3D_blank>java=B1=CA=CA=D4=CC=E2</A><BR>=A1=A4<A =
+
+                  href=3D"http://dev.21tx.com/2004/10/21/13485.html"=20
+                  =
+target=3D_blank>=B0=B2=D7=B0Eclipse=BA=CDLomboz=C5=F6=B5=BD=B5=C4=D2=BB=D0=
+=A9=CE=CA=CC=E2</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/04/05/10223.html"=20
+                  =
+target=3D_blank>Java=CA=B5=CF=D6ftp=B9=A6=C4=DC</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/09/15/11835.html"=20
+                  =
+target=3D_blank>AXIS=BC=F2=B5=A5=CA=B5=CF=D6=C8=EB=C3=C5</A><BR>=A1=A4<A =
+
+                  href=3D"http://dev.21tx.com/2004/11/15/13178.html"=20
+                  target=3D_blank>Tapestry=C8=EB=C3=C5</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/02/14/19372.html"=20
+                  =
+target=3D_blank>=D3=C3Java=B9=B9=D4=EC=D7=D4=BC=BA=B5=C4=C3=BD=CC=E5=B2=A5=
+=B7=C5=C6=F7</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/15/13151.html"=20
+                  target=3D_blank>Maven =
+=D7=A8=CC=E2=D6=AE=D2=BB</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2004/11/01/13197.html"=20
+                  =
+target=3D_blank>=D2=BB=B8=F6=BF=C9=D2=D4=D7=F6=B2=E2=CA=D4=D3=C3=B5=C4=C3=
+=E2=B7=D1JSP=BF=D5=BC=E4</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2003/07/26/14888.html"=20
+                  target=3D_blank>=D4=DAwindows2000 =
+server=D6=D0=CE=C4=B0=E6=C9=CF=B0=B2=D7=B0apache=20
+              =
+&lt;</A><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></SPAN><S=
+PAN=20
+      id=3Dtxsite_site_commend_top></SPAN><SPAN =
+id=3Dtxsite_site_commend>
+      <P></P>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"98%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD width=3D16><IMG height=3D20=20
+            src=3D"http://www.21tx.com/images/list_title2_top_left.gif"=20
+          width=3D16></TD>
+          <TD=20
+          =
+background=3Dhttp://www.21tx.com/images/list_title2_top_bg.gif>&nbsp;</TD=
+>
+          <TD align=3Dright width=3D16><IMG height=3D20=20
+            src=3D"http://www.21tx.com/images/list_title2_top_right.gif" =
+
+          width=3D16></TD></TR>
+        <TR>
+          <TD width=3D16=20
+          =
+background=3Dhttp://www.21tx.com/images/list_title2_center_left.gif><IMG =
+
+            height=3D20=20
+            =
+src=3D"http://www.21tx.com/images/list_title2_center_left.gif"=20
+            width=3D16></TD>
+          <TD bgColor=3D#ffffff height=3D50>
+            <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+align=3Dcenter=20
+            border=3D0>
+              <TBODY>
+              <TR>
+                <TD class=3Dsfont width=3D270>=A1=A4<A=20
+                  =
+href=3D"http://diy.21tx.com/vga/product/1722401/index.html"=20
+                  =
+target=3D_blank>[=D3=B2=BC=FE]=B1=A6=C0=F6(Polyview)</A><BR>=A1=A4<A=20
+                  href=3D"http://www.21tx.com/mp3/2005/12/16/10403.html" =
+
+                  =
+target=3D_blank>[=CA=FD=C2=EB]=C8=B7=CA=B5=D6=B5=B5=C3=D2=BB=BF=B4 =
+=CA=B1=C9=D0=C8=CB=C8=BA=D4=F5=C3=B4=CD=E6=CB=F7=C4=E1A1000</A><BR>=A1=A4=
+<A=20
+                  href=3D"http://auto.21tx.com/2005/08/11/11214.html"=20
+                  =
+target=3D_blank>[=C6=FB=B3=B5]=B1=B1=BE=A9=A3=BA=C5=C1=C8=F8=CC=D81.8T=D7=
+=D4=B6=AF=CC=EC=B4=B0=B0=E6=D4=D9=D3=C5=BB=DD7500</A><BR>=A1=A4<A=20
+                  href=3D"http://dev.21tx.com/2000/08/31/10073.html"=20
+                  =
+target=3D_blank>[=BF=AA=B7=A2]VB7=D0=C2=CC=D8=D0=D4=D4=A4=C0=C0</A><BR>=A1=
+=A4<A=20
+                  href=3D"http://news.21tx.com/2005/07/22/12039.html"=20
+                  =
+target=3D_blank>[=D7=CA=D1=B6]=D6=D0=B9=FA=B5=E7=BB=B0=D3=C3=BB=A7=BF=E7=D4=
+=BD=CA=BD=B7=A2=D5=B9 =
+=C9=CF=B0=EB=C4=EA=D3=C3=BB=A7=CD=BB</A><BR>=A1=A4<A=20
+                  href=3D"http://games.21tx.com/2005/01/29/12167.html"=20
+                  =
+target=3D_blank>[=D3=CE=CF=B7]=B7=FE=CE=F1=C6=F7=BA=AE=BC=D9=BD=AB=CE=C8=B6=
+=A8=D4=CB=D0=D0</A><BR></TD>
+                <TD class=3Dsfont width=3D270>=A1=A4<A=20
+                  =
+href=3D"http://www.21tx.com/notebook/2006/04/07/10505.html"=20
+                  =
+target=3D_blank>[=B1=BE=B1=BE]=CB=F7=C4=E1BX=B1=BE=B1=BE=CA=DB10500=D4=AA=
+ =C0=DB=BC=C6=BD=B5=BC=DB=B4=EF4000</A><BR>=A1=A4<A=20
+                  =
+href=3D"http://www.21tx.com/oa/ytj/product/1680309/index.html"=20
+                  =
+target=3D_blank>[=B0=EC=B9=AB]=D2=BB=CC=E5=BB=FA=C6=B7=C5=C6=B4=F3=C8=AB =
+- =B0=AE=C6=D5=C9=FA(EPSON)</A><BR>=A1=A4<A=20
+                  href=3D"http://mobile.21tx.com/2006/04/29/11495.html"=20
+                  =
+target=3D_blank>[=CA=D6=BB=FA]=CE=E5=D2=BB=B4=D9=CF=FA=D5=E6=B7=E8=BF=F1 =
+=C8=FD=D0=C7=B8=DF=B6=CB=C8=AB=CF=B5=C1=D0=CA=D6=BB=FA=C3=CD</A><BR>=A1=A4=
+<A=20
+                  href=3D"http://exam.21tx.com/2004/10/01/11129.html"=20
+                  =
+target=3D_blank>[=BF=BC=CA=D4]=D5=DC=D1=A7=A3=A8=BB=F9=B4=A1=BF=C6=B6=CE=A3=
+=A9=D7=A8=D2=B5=BB=F9=B1=BE=B9=E6=B7=B6</A><BR>=A1=A4<A=20
+                  href=3D"http://school.21tx.com/2005/03/13/15103.html"=20
+                  target=3D_blank>[=D1=A7=D4=BA]FreeBSD =
+=CF=B5=CD=B3=B0=B2=D7=B0=C8=AB=B9=FD=B3=CC</A><BR>=A1=A4<A=20
+                  href=3D"http://flash.21tx.com/flashgame/80255.html"=20
+                  =
+target=3D_blank>[=D3=E9=C0=D6]=CF=FB=B5=B0</A><BR></TD></TR></TBODY></TAB=
+LE></TD>
+          <TD align=3Dright width=3D16=20
+          =
+background=3Dhttp://www.21tx.com/images/list_title2_center_right.gif><IMG=
+=20
+            height=3D7=20
+            =
+src=3D"http://www.21tx.com/images/list_title2_center_right.gif"=20
+            width=3D16></TD></TR>
+        <TR>
+          <TD width=3D16><IMG height=3D20=20
+            =
+src=3D"http://www.21tx.com/images/list_title2_bottom_left.gif"=20
+            width=3D16></TD>
+          <TD=20
+          =
+background=3Dhttp://www.21tx.com/images/list_title2_bottom_bg.gif>&nbsp;<=
+/TD>
+          <TD align=3Dright width=3D16><IMG height=3D20=20
+            =
+src=3D"http://www.21tx.com/images/list_title2_bottom_right.gif"=20
+            width=3D16></TD></TR></TBODY></TABLE>
+      <P></P></SPAN><SPAN id=3Dtxsite_site_commend_bottom></SPAN>
+      <P></P></TD>
+    <TD style=3D"BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc =
+1px solid"=20
+    vAlign=3Dtop align=3Dmiddle width=3D172 bgColor=3D#f7f9fd><SPAN=20
+      id=3Dtxsite_left_nav></SPAN>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD height=3D5></TD></TR>
+        <TR>
+          <TD align=3Dmiddle><SPAN id=3Dtxsite_left_toppicad></SPAN>
+            <SCRIPT type=3Dtext/javascript><!--
+google_ad_client =3D "pub-8537598168120506";
+google_alternate_ad_url =3D =
+"http://www.21tx.com/images/ad/default160x600.html";
+google_ad_width =3D 160;
+google_ad_height =3D 600;
+google_ad_format =3D "160x600_as";
+google_ad_type =3D "image";
+//2007-07-06: =C4=A6=CC=EC=B4=F3=C2=A5=CD=BC=C6=AC
+google_ad_channel =3D "1331642576";
+//-->
+</SCRIPT>
+
+            <SCRIPT=20
+            =
+src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js"=20
+            type=3Dtext/javascript>
+</SCRIPT>
+          </TD>
+        <TR></TR></TBODY></TABLE>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+align=3Dcenter border=3D0>
+        <TBODY>
+        <TR>
+          <TD align=3Dmiddle>
+            <SCRIPT type=3Dtext/javascript>=20
+cpro_client=3D'txadcpr';
+cpro_cbd=3D'#trans';=20
+cpro_cbg=3D'#trans';=20
+cpro_ctitle=3D'#0000ff';=20
+cpro_cdesc=3D'#444444';=20
+cpro_curl=3D'#008000';=20
+cpro_cflush=3D'#e10900';=20
+cpro_at=3D'text_image';=20
+cpro_161=3D4;=20
+cpro_flush=3D2;=20
+cpro_uap=3D1;=20
+cpro_w=3D160;=20
+cpro_h=3D600;=20
+cpro_template=3D'text_newest_160_600';=20
+cpro_channel=3D913;
+</SCRIPT>
+
+            <SCRIPT language=3DJavaScript=20
+            src=3D"http://cpro.baidu.com/cpro/ui/cp.js"=20
+            type=3Dtext/javascript></SCRIPT>
+          </TD></TR>
+        <TR>
+          <TD height=3D6></TD></TR>
+        <TR>
+          <TD><SPAN id=3Dtxsite_left_textad></SPAN></TD></TR>
+        <TR>
+          <TD height=3D8></TD></TR></TBODY></TABLE><SPAN=20
+      id=3Dtxsite_left_hot_article></SPAN></TD>
+    <TD class=3Dmainbgcolor width=3D6></TD></TR></TBODY></TABLE>
+<TABLE class=3Dmainbgcolor cellSpacing=3D0 cellPadding=3D0 width=3D760 =
+align=3Dcenter=20
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD height=3D8></TD></TR></TBODY></TABLE>
+<TABLE class=3Dbodybgcolor cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%" align=3Dcenter=20
+bgColor=3D#ffffff border=3D0>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dbottom align=3Dmiddle height=3D40><SPAN =
+class=3Dbtfont><A=20
+      class=3Dwhitehref href=3D"http://www.21tx.com/about/aboutus.html"=20
+      target=3D_blank>=B9=D8=D3=DA=CE=D2=C3=C7</A> | <A =
+class=3Dwhitehref=20
+      href=3D"http://txsite.21tx.com/script/contact.aspx" =
+target=3D_blank>=C1=AA=CF=B5=CE=D2=C3=C7</A> |=20
+      <A class=3Dwhitehref href=3D"http://www.21tx.com/ad/" =
+target=3D_blank>=B9=E3=B8=E6=B7=FE=CE=F1</A> |=20
+      <A class=3Dwhitehref href=3D"http://www.21tx.com/about/job.html"=20
+      target=3D_blank>=B9=A4=D7=F7=BB=FA=BB=E1</A> | <A =
+class=3Dwhitehref=20
+      href=3D"http://www.21tx.com/about/copyright.html" =
+target=3D_blank>=B0=E6=C8=A8=C9=F9=C3=F7</A> |=20
+      <A class=3Dwhitehref=20
+      =
+href=3D"http://txsite.21tx.com/script/contact.aspx?subject=3D=CD=B6=B8=E5=
+:"=20
+      target=3D_blank>=BB=B6=D3=AD=CD=B6=B8=E5</A> | <A =
+class=3Dwhitehref id=3Dtxsite_count_text=20
+      href=3D"http://www.21tx.com/about/sitemap.html" =
+target=3D_blank>=CD=F8=D5=BE=B5=D8=CD=BC</A>=20
+      </SPAN></TD></TR>
+  <TR>
+    <TD align=3Dmiddle height=3D25><SPAN class=3Dbtfont><FONT =
+face=3DVerdana, size=3D1=20
+      sans-serif Helvetica, Arial,>Copyright &copy; 2000-2008 , <FONT=20
+      color=3D#cc0000><B>www.21tx.com</B></FONT> , All Rights Reserved=20
+      .</FONT></SPAN> </TD></TR>
+  <TR>
+    <TD vAlign=3Dtop align=3Dmiddle height=3D25><SPAN =
+class=3Dbtfont>&copy; =B3=BF=D0=C2=BF=C6=BC=BC =B0=E6=C8=A8=CB=F9=D3=D0=20
+      Created by TXSite.net</SPAN></TD></TR>
+  <TR>
+    <TD vAlign=3Dtop align=3Dmiddle height=3D50><SPAN=20
+  class=3Dbtfont></SPAN></TD></TR></TBODY></TABLE><SPAN =
+id=3Dtxsite_ad_hzh_a=20
+style=3D"DISPLAY: none">
+<DIV id=3Dtxsite_ad_hzh_a1=20
+style=3D"FLOAT: left; MARGIN: 3px; WIDTH: 310px; HEIGHT: 260px">
+<TABLE cellSpacing=3D0 cellPadding=3D0 width=3D310 align=3Dcenter =
+border=3D0>
+  <TBODY>
+  <TR>
+    <TD align=3Dmiddle width=3D300>
+      <SCRIPT type=3Dtext/javascript>=20
+cpro_client=3D'txadcpr';
+cpro_cbd=3D'#trans';=20
+cpro_cbg=3D'#trans';=20
+cpro_ctitle=3D'#0000ff';=20
+cpro_cdesc=3D'#444444';=20
+cpro_curl=3D'#008000';=20
+cpro_cflush=3D'#e10900';=20
+cpro_at=3D'text_image';=20
+cpro_161=3D9;=20
+cpro_flush=3D2;=20
+cpro_81=3D0;=20
+cpro_uap=3D1;=20
+cpro_w=3D300;=20
+cpro_h=3D250;=20
+cpro_template=3D'text_pages_300_250';=20
+cpro_channel=3D915;
+</SCRIPT>
+
+      <SCRIPT language=3DJavaScript =
+src=3D"http://cpro.baidu.com/cpro/ui/cp.js"=20
+      type=3Dtext/javascript></SCRIPT>
+    </TD>
+    <TD width=3D10></TD></TR>
+  <TR>
+    <TD colSpan=3D2 height=3D10></TD></TR></TBODY></TABLE></DIV></SPAN>
+<SCRIPT language=3DJavaScript>
+if (typeof(txsite_ad_hzh) !=3D 'undefined' && typeof(txsite_ad_hzh_a) =
+!=3D 'undefined') {
+  if (typeof(document.all("txsite_ad_hzh").length) !=3D 'undefined') {
+    document.all("txsite_ad_hzh")[0].innerHTML =3D =
+txsite_ad_hzh_a.innerHTML;
+  } else {
+    if (typeof(txsite_ad_hzh_a1) !=3D 'undefined') {
+      txsite_ad_hzh.innerHTML =3D txsite_ad_hzh_a1.innerHTML;
+    } else {
+      txsite_ad_hzh.innerHTML =3D txsite_ad_hzh_a.innerHTML;
+    }
+  }
+}
+else if (typeof(txsite_ad_cnt_start) !=3D 'undefined') {
+  txsite_ad_cnt_start.innerHTML =3D txsite_ad_hzh_a.innerHTML;
+}
+</SCRIPT>
+<SPAN id=3Dtxsite_ad_sitecommend_bottom style=3D"DISPLAY: none"></SPAN>
+<SCRIPT language=3DJavaScript>
+if (typeof(txsite_left_top10) !=3D 'undefined') {
+txsite_left_top10.style.display =3D "none";
+}
+
+if (typeof(txsite_site_commend_bottom) !=3D 'undefined') {
+  if (txsite_site_commend_bottom.innerHTML =3D=3D '') {
+    txsite_site_commend_bottom.innerHTML =3D =
+txsite_ad_sitecommend_bottom.innerHTML;
+  }
+} else {  //=CE=C4=D5=C2=B5=D7=B2=BF=B9=E3=B8=E6,=BE=C9=B8=F1=CA=BD
+if (typeof(txsite_artbottom_top10) !=3D 'undefined' && =
+typeof(txsite_artbottom_top10_1) !=3D 'undefined') {
+  //txsite_artbottom_top10.style.display =3D "none";
+  txsite_artbottom_top10_1.innerHTML =3D =
+txsite_artbottom_top10.innerHTML;
+  txsite_artbottom_top10.innerHTML =3D =
+txsite_ad_sitecommend_bottom.innerHTML;
+}
+}
+
+</SCRIPT>
+<SPAN id=3Dtxsite_ad_search_right_a style=3D"DISPLAY: none"><STRONG>
+<SCRIPT type=3Dtext/javascript><!--
+google_ad_client =3D "pub-8537598168120506";
+google_ad_output =3D "textlink";
+google_ad_format =3D "ref_text";
+google_cpa_choice =3D "CAAQscq1_wEaCBNqZAOURbkgKOm84YcBMAA";
+google_ad_channel =3D "";
+//-->
+</SCRIPT>
+
+<SCRIPT src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js"=20
+type=3Dtext/javascript>
+</SCRIPT>
+</STRONG></SPAN>
+<SCRIPT language=3DJavaScript>
+if (typeof(ad_search_right) !=3D 'undefined') {
+  if (ad_search_right.innerHTML =3D=3D '') {
+    ad_search_right.innerHTML =3D txsite_ad_search_right_a.innerHTML;
+  }
+}
+</SCRIPT>
+
+<DIV id=3DCount style=3D"DISPLAY: none">
+<SCRIPT type=3Dtext/javascript><!--
+tx_page_key =3D txsite_pagekey;
+tx_page_location =3D escape(document.location);
+tx_page_referrer =3D escape(document.referrer);
+//--></SCRIPT>
+
+<SCRIPT src=3D"http://txsite.21tx.com/Count/Count.js" =
+type=3Dtext/javascript>
+</SCRIPT>
+</DIV>
+<SCRIPT src=3D"http://www230.clickeye.cn/common/clickeye.js"></SCRIPT>
+<!-- =
+TXSiteTag:DoNPfFHhAAm2K5L0GdU7b/aRK7v5wTKET3/UXLdo731xFqKo2kVpTY10/eCl4M8=
+Pu5r0yiYX07AewLz9EjuI24kY4MsJR0Gab7N9mhpwmOkJ3RNSGadRsw=3D=3D =
+--></BODY></HTML>
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/logo.gif
+
+R0lGODlh2QBJAPcAALK00b7A2J2hxDpBibW401henDA3hcbK3crN3s7Q39bZ5URKjqGkxc3O4HV6
+qnd6rWRpo1hemqSlyDM5iHh7rJqdwzE3g2twpa2xzWhtpUhOkqioypGVvc3O4o2Su7Gzzi83goCC
+stHQ4mFmobm81YaLtKSoxsTG2sDC2XJ1q7u92TI4hDE4hkZNkMnM21ZdmmxxqH6CsZOYvdDP4cLF
+2s3O5M/Q4oiMtrq71oGEsVVamXyCrnl8sDxBijI4hkZKkM/Q5EBHjaapzc3P3lNZltDP31BUlTU8
+hj1EjMTH3by+1mFnnn6CsMnL4F1inU5SldDO45OWwK6z0DA4gbm8001VlczL3bi60tnY5pWVvX6B
+tMvR4ZaawMrN3HuCsIaLuNHO5JCVu6qtzNfZ6Jqewzg+iX2EsayuzaeqyVZenEJJkDpBhzI4gk1S
+ks/R4ICEtF5koKmtysfM4J2fxXx/r3yCsmtvqDQ5hTpBjIiMu6eqy8/N4s3M3lJYmL/D101Ukz1E
+ilJWmHN4qYiKuDI6hUpQkUpQlDxDjIiMucnK33+CtTQ3hczK4JCSvcjL3Juev62uysrQ3piawTc/
+h3Z8rTI3iKioy36AscfN3aasyaWqyjQ4gs3M2m91pzA6gs3P3EdOlJ6cwYSHtKSnyX+As0hNj6mn
+zcrP4sjN4KSoy4yOu4CErnN3q4uPuX2EtERHj6Kox4mMvD9IjMjG3DdDis7P4crN4M7P4zE5gsrL
+38vM4M3Q4cnM38nM3crL3YqNus3Q4zA5hKapyoqNuM/O4ImOuKapyM/O3nyDsTI6g8rM4aWqyMvM
+4TM7hdDN4KipyFhdl9HQ3zI5gcvO33V7qlpbmszN4czN4svO3cjO3M3M3NrY58PF3DtDiYyQu8zS
+4svO4c7M4czL2zE6hZCTutbW5cDD2jtFjFtenbe41MzS4DY9ha+wz1tcnFtfm76718fI3URLkYiP
+u8vQ48nL2i85gdHT5EdPkU9Ul2hwpktTk0xUl6qq0DE6fzA4gzE5hCH5BAAAAAAALAAAAADZAEkA
+AAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3PnRH65//gz4MGDA34qjFv6xYDGFjQV/S3EZmALVH1SG/gYa+HfHwIqsRnmK
+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
+CAA7
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/txsite/menu/main_l.gif
+
+R0lGODlhBwAmAMQAAGFnanR3eWpucfX19X1/gPPz84WFhfHx8bOzs+/v74eHh4aGhoqKitHR0YiH
+h4SFhWdsb+Tk5JeXl9ra2t/f3+7u7ri4uKamprm5uV5kaIKDg3d5e4iIiF1jZwAAAAAAACH5BAAA
+AAAALAAAAAAHACYAAAVL4CCKEVacieUsx9FcnKIkFLcYeIVoRE9Mj4BQiNgIjkcJBMBkMjKdaJQj
+lVKrnWtVa8VmvdwpeIwNf8vkbbqLbqvd7Lc8ThfD7dUQADs=
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/txsite/menu/main_r.gif
+
+R0lGODlhCAAmANUAAGpucXR3eWFnavX19X1/gIWFhfPz84eHh4aGhvHx8e/v74aFhaampo6OjoWF
+hmBladHR0bS0tODg4OTk5IiHh56entzc3Gdsb3d6e7m5ubOzs5iYmIKDhLi4uO7u7oiIiF1jZwAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAIACYAAAZXwEpm
+MigWFwhKR2FoHp4fBiSRKFgLiI9EQeh2ORpPYEx2WADoNCYiaLsvG5B8/mjM75/7PK8H8fV/eH1+
+g4F7hYh9hnKLhIqJgJCCj5SRlZOWmZibh4pBADs=
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/txsite/function/search4.gif
+
+R0lGODlhMQAZAMQAAP9sAP9xAP93AP9lAEAXAEAhAEAZAEAYAEAbAEAgAEAcAEAeAP9gAP+FAP9+
+AP+PEf/Nof97FP+DI/+va/9yBv+WHf+xXv+NMv+XIP9tAP9bAP///wAAAAAAAAAAAAAAACH5BAAA
+AAAALAAAAAAxABkAAAX/ICSOZGmeaEpObOu+cCzPrmXfeK7vfI9fwKBwSCwaj8KKcslsOp/QKFND
+rVqv2Kx2a814v+CweEwug7nWTXqrRmfN4A1is8nQ6d67Hg//uvcEBBuBg1SBgoeBV3RvfXNzdXqQ
+e3phdAhiblR3hJ2DnYiIV4pXAaanqKd0CpQbCgGserCmr6m2AQy5uru5GwwbBwwHB8DDwbnDxb68
+zLsCz9DR0Asb1HvQrXTSAtrbA9/g4eEbBgPkBufg6Ovn5ePk4gMO8/T19RsJ83QO+fQb/Pgc/LM3
+L0G/egASKlyY8A4kAJMA0IF4qSHDiwsbaNzIcWOBjw1AhgQpUmTIjig3QFJYybKly5cwY8ps+aCm
+zZs4c+rcyfNmhJ9AgwodSrSo0aAYkipdyrSp06dQl0qYSrWq1atYs2qtGrWr169KQwAAOw==
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/txsite/function/dline.gif
+
+R0lGODlhEwAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4O
+Dg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEh
+ISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0
+NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdH
+R0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpa
+WltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1t
+bW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CA
+gIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOT
+k5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaam
+pqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5
+ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zM
+zM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f
+3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy
+8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAAEwAWAAAIUAD/CRxI
+sKDBgwgTKlzIcGGmTA0JPnQIMaLAiRgrMsyIcKLFfxwHekw4EqTGjx0hciwpUaVLkygVrnx5cCbM
+mAYf6tzJU6fAZkCDCh0KFGdAADs=
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title1.gif
+
+R0lGODlhKAAXANUAAPb29vLy8v39/fv7++vr6+/v7+Tk5NPT0+Dg4Obm5vf39/Pz8/T09PX19fr6
++vDw8Pn5+eLi4u3t7dnZ2dvb29/f39HR0c7Ozt3d3dXV1dfX1/j4+NjY2N7e3uHh4eXl5ejo6OPj
+4/Hx8dzc3Orq6u7u7uzs7Ofn5+np6f///8LCwgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAoABcAAAb/QJFw
+SCwaj0WAY9kQlp7QqHRKjTIg2EWp8DB5v+CwePxdbM4ik+RJarvf8Li8HVDYHyTCF8Tv+/+AgSAP
+dgolIChvH4uMjY6PkCUAkyYfJyiYmCGbnJ2en58SDaMEIQknqKkeq6ytrq+uJgyzKB4Gqbgduru8
+vb68JAvCJx2mCcfICSPLzM3Oz8woAdPKEbjXKtna29zd2RyZByoXHOXm597p3uCY4hbQzery3+Eq
+Bwj4+fr48+rsKOIyGBhIsCDBfuvqabjGMBVCbv/ETSBAsaLFiw+1RVRBoYDHjyBDFsioYiOGaShT
+qkSZcWOFSTBjyoz5cCOCMzhz6tSJcGOEHgFAgwodOrTfxhACkipdyrTpvI0GUkidSrWq1RRBAAA7
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title2_top_left.gif
+
+R0lGODlhEAAUALMAAOXl5ZmZmf///+3t7ff39/Ly8vz8/Onp6f39/QAAAAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAAAAAAALAAAAAAQABQAAAQ+MMhJa0A4642M/2BoEGRpnkShrmxbDHAsz8Nh33h+AHzv
+/8CgcEgsGo9IYOAoERgDgmgRGnUSqdIhNivcCiIAOw==
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title2_top_right.gif
+
+R0lGODlhEAAUALMAAOXl5f///5mZmenp6fLy8vf39/z8/O3t7f39/QAAAAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAAAAAAALAAAAAAQABQAAAQ+UMhJq0A4642M/2BoFGRpngWhrmxLHHAsz8dg33g+AHzv
+/8CgcEgsGo8/CTIQUBaZTMET2iRSq8MrNqiVCiMAOw==
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title2_center_left.gif
+
+R0lGODlhEAAUAJEAAOXl5f///5mZmQAAACH5BAAAAAAALAAAAAAQABQAAAIohI8Su+igWHhJTmoi
+w9ly6HFaI4bYeJ0mhX5tKbnr86oxvOGknfNLAQA7
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title2_center_right.gif
+
+R0lGODlhEAAHAJEAAOXl5f///5mZmQAAACH5BAAAAAAALAAAAAAQAAcAAAIUjC+gu4cMnUmwSVqB
+DLjuHl2ZUgAAOw==
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title2_bottom_left.gif
+
+R0lGODlhEAAUAJEAAOXl5f///5mZmQAAACH5BAAAAAAALAAAAAAQABQAAAIihI8Su+igWHguNnrs
+xJnxfn2QIibliabqyrbuKwryTNdCAQA7
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title2_bottom_right.gif
+
+R0lGODlhEAAUAJEAAOXl5f///5mZmQAAACH5BAAAAAAALAAAAAAQABQAAAIjjC+gu4cMnUmwSVrB
+zfZx7X0T9gnkh6bqyrbuC8euSde2WQAAOw==
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/txsite/function/search5.gif
+
+R0lGODlhGwATANUAAPn5+VxbXOHh4e3q7VlYWdTV1NTU1P+NMv97FODh4FdWV8rHysXGxWJhYlta
+W/+WHV5dXubj5lNSU/+PEVdaV+Dg4Ozs7MXFxWBfYFZVVsDBwN/g383NzVJRUsbHxsTExObn5lJV
+Ul9eX8bExlteW+Xi5dTR1PPz89/f3+De4NHO0cC9wP/8/2JlYlhbWFRTVOXl5cfHx2FgYVpZWv/N
+of+DI/+va/+xXv+XIAAAAP////n2+QAAAAAAAAAAAAAAACwAAAAAGwATAAAGtsDDoUEKQCAimXLJ
+bGIowkdDR61ar1hWhPJoYb9gKiDicgCou7R6zWYPDAQzuk1vvwmBs67OV79neXN9dX+Bezs5iYlp
+ijlqizsDBYB6iI5rkJmXkpRoi4qWjJeQnIahoZp2Bp2HjaOgommllYOEk6a1dLOCuWsgtxY7J712
+HAQhKiUwKBsVFQLQ0QnT0dEpJhoEEx0LCx8XDAwx4+Qe5OcxIyvaCAgSEi8ZCgoz9fYEBPb6+O1B
+ADs=
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/txsite/menu/main_bg.gif
+
+R0lGODlhCAAmALMAAHR3eYeHh2Fnan1/gGpucYiIiIWFhYWEhF1jZwAAAAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAAAAAAALAAAAAAIACYAAAQpsMgpj7026K2N/94gjiJgniahrqrgvi4iz3Rt33iu73zv
+/8CgcEgs5iIAOw==
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/data_title_bg.gif
+
+R0lGODlhAQACAIAAAP///+7u7iwAAAAAAQACAAACAkQKADs=
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title_bg1.gif
+
+R0lGODlhCwAXAMQAAOrq6uDg4P39/eTk5O7u7vv7++vr6/j4+NjY2O/v7+zs7Nzc3Onp6fb29ubm
+5vDw8PLy8ufn5////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAA
+AAAALAAAAAALABcAAAVZICSOJPScaPoQbOsSSizPCmDfOMDsfM9EwKBwSIw4jsikoyhEOJ9QxGJK
+rS4C2Kw2MOh6vwNm0EAumw2JtHqdKLkb8Li8cajb74eCfs8vCP6AgQIShIWGEiEAOw==
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/txsite/function/menubg.gif
+
+R0lGODlhAwAaAMQAAAAAAP////+GAf+PEf+XHv6XIP+YIf9+AP+xX/93Af+OMv6vbP/Nov9tAP5x
+AP9yBv97FP+DI/9hAP9lAP9bAf9cAZmZmf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEA
+ABcALAAAAAADABoAAAUqICMuJGIqKKFSbONWsNvAlcxSTi7tST/9h6BMQHwYB0iI0sCMOAtQizQE
+ADs=
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/txsite/function/dline02.gif
+
+R0lGODlhCAAWAPcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4O
+Dg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEh
+ISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0
+NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdH
+R0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpa
+WltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1t
+bW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CA
+gIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOT
+k5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaam
+pqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5
+ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zM
+zM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f
+3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy
+8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///ywAAAAACAAWAAAIIAD/CRxI
+sKDBgwgTKlzIsKHDhxAhZppIcWKzixgvIgwIADs=
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title2_top_bg.gif
+
+R0lGODlhOwAUALMAAOXl5f///5mZmenp6fLy8vf39+3t7fz8/P39/QAAAAAAAAAAAAAAAAAAAAAA
+AAAAACH5BAAAAAAALAAAAAA7ABQAAAR0UMhJq704a4q6/2AojmT5HWiqrmzrvrBazHRt33iu7zXh
+/8CgcEgsGoGGpHLJbDqf0OhyQK1ar9isdsu1Ar7gsHhMLpvP6LR6zW673/C4fE6v2+/gjX7PzwT+
+gIGCg4SFhoeIiYqLjI2Oj5CRkpOUlZaXgBEAOw==
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.21tx.com/images/list_title2_bottom_bg.gif
+
+R0lGODlhFwAUAJEAAOXl5f///5mZmQAAACH5BAAAAAAALAAAAAAXABQAAAIijI+py+0Po5y02iiy
+3rxnAIbiSJbmiabqyrbuC8ey7NV1AQA7
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pagead2.googlesyndication.com/pagead/show_ads.js
+
+(function(){=0A=
+var g=3Ddocument,j=3Dnavigator,m=3Dwindow;function aa(){var =
+a=3Dg.cookie,c=3DMath.round((new =
+Date).getTime()/1000),b=3Dm.google_analytics_domain_name,d=3Dtypeof =
+b=3D=3D"undefined"?s("auto"):s(b),e=3Da.indexOf("__utma=3D"+d+".")>-1,f=3D=
+a.indexOf("__utmb=3D"+d)>-1,i=3Da.indexOf("__utmc=3D"+d)>-1,k,n=3D{};if(e=
+){k=3Da.split("__utma=3D"+d+".")[1].split(";")[0].split(".");n.sid=3Df&&i=
+?k[3]+"":(m&&m.gaGlobal&&m.gaGlobal.sid?m.gaGlobal.sid:c+"");n.vid=3Dk[0]=
++"."+k[1];n.from_cookie=3Dtrue;n.dh=3Dd}else{n.sid=3Dm&&m.gaGlobal&&m.gaG=
+lobal.sid?m.gaGlobal.sid:=0A=
+c+"";n.vid=3Dm&&m.gaGlobal&&m.gaGlobal.vid?m.gaGlobal.vid:(u()^ba())*2147=
+483647+"."+c;n.from_cookie=3Dfalse}n.hid=3Dm&&m.gaGlobal&&m.gaGlobal.hid?=
+m.gaGlobal.hid:u();m.gaGlobal=3Dn;return n}function u(){return =
+Math.round(Math.random()*2147483647)}function ba(){var =
+a=3Dg.cookie?g.cookie:"",c=3Dm.history.length,b,d,e=3D[j.appName,j.versio=
+n,j.language?j.language:j.browserLanguage,j.platform,j.userAgent,j.javaEn=
+abled()?1:0].join("");if(m.screen)e+=3Dm.screen.width+"x"+m.screen.height=
++m.screen.colorDepth;else if(m.java){d=3D=0A=
+java.awt.Toolkit.getDefaultToolkit().getScreenSize();e+=3Dd.screen.width+=
+"x"+d.screen.height}e+=3Da;e+=3Dg.referrer?g.referrer:"";b=3De.length;whi=
+le(c>0)e+=3Dc--^b++;return w(e)}function w(a){var =
+c=3D1,b=3D0,d,e;if(!(a=3D=3Dundefined||a=3D=3D"")){c=3D0;for(d=3Da.length=
+-1;d>=3D0;d--){e=3Da.charCodeAt(d);c=3D(c<<6&268435455)+e+(e<<14);b=3Dc&2=
+66338304;c=3Db!=3D0?c^b>>21:c}}return c}function =
+s(a){if(!a||a=3D=3D""||a=3D=3D"none")return =
+1;if("auto"=3D=3Da){a=3Dg.domain;if("www."=3D=3Da.substring(0,4))a=3Da.su=
+bstring(4,a.length)}return w(a)};var =
+ga=3D{google_ad_channel:"channel",google_ad_host:"host",google_ad_host_ti=
+er_id:"ht_id",google_ad_region:"region",google_ad_section:"region",google=
+_ad_type:"ad_type",google_adtest:"adtest",google_alternate_ad_url:"altern=
+ate_ad_url",google_alternate_color:"alt_color",google_bid:"bid",google_ci=
+ty:"gcs",google_color_bg:"color_bg",google_color_border:"color_border",go=
+ogle_color_line:"color_line",google_color_link:"color_link",google_color_=
+text:"color_text",google_color_url:"color_url",google_contents:"contents"=
+,=0A=
+google_country:"gl",google_cust_age:"cust_age",google_cust_ch:"cust_ch",g=
+oogle_cust_gender:"cust_gender",google_cust_id:"cust_id",google_cust_inte=
+rests:"cust_interests",google_cust_job:"cust_job",google_cust_l:"cust_l",=
+google_cust_lh:"cust_lh",google_cust_u_url:"cust_u_url",google_disable_vi=
+deo_autoplay:"disable_video_autoplay",google_ed:"ed",google_encoding:"oe"=
+,google_feedback:"feedback_link",google_flash_version:"flash",google_gl:"=
+gl",google_hints:"hints",google_kw:"kw",google_kw_type:"kw_type",=0A=
+google_language:"hl",google_referrer_url:"ref",google_region:"gr",google_=
+reuse_colors:"reuse_colors",google_safe:"adsafe",google_targeting:"target=
+ing",google_ui_features:"ui"},ha=3D{google_ad_format:"format",google_ad_o=
+utput:"output",google_ad_callback:"callback",google_ad_override:"google_a=
+d_override",google_ad_slot:"slotname",google_analytics_uacct:"ga_wpids",g=
+oogle_correlator:"correlator",google_cpa_choice:"cpa_choice",google_image=
+_size:"image_size",google_last_modified_time:"lmt",google_max_num_ads:"nu=
+m_ads",=0A=
+google_max_radlink_len:"max_radlink_len",google_num_radlinks:"num_radlink=
+s",google_num_radlinks_per_unit:"num_radlinks_per_unit",google_only_ads_w=
+ith_video:"only_ads_with_video",google_page_location:"loc",google_page_ur=
+l:"url",google_rl_dest_url:"rl_dest_url",google_rl_filtering:"rl_filterin=
+g",google_rl_mode:"rl_mode",google_rt:"rt",google_skip:"skip"};function =
+A(a){return ga[a]||ha[a]||null};function =
+E(){}E.prototype.c=3Dfunction(){};E.prototype.e=3Dfunction(){};E.prototyp=
+e.o=3Dfunction(){};var H=3Dnull;function =
+I(){this.b=3Dthis.m();this.g=3Dfalse;if(!this.b){this.g=3Dthis.i();if(!th=
+is.g)H.e("Browser does not allow =
+cookies")}}I.prototype.f=3D"__gads=3D";I.prototype.d=3D"GoogleAdServingTe=
+st=3D";I.prototype.l=3Dfunction(){return =
+this.b};I.prototype.setCookieInfo=3Dfunction(a){this.a=3Da._cookies_[0];i=
+f(this.a!=3Dnull){this.b=3Dthis.a._value_;this.n()}};I.prototype.k=3Dfunc=
+tion(a){var c=3D(new Date).valueOf(),b=3Dnew Date;=0A=
+b.setTime(c+a);return =
+b};I.prototype.j=3Dfunction(a){if(this.b!=3Dnull||!this.g){H.c("Skipping =
+fetch cookie call");return}var =
+c=3D"script",b=3Ddocument.domain,d=3D"http://partner.googleadservices.com=
+/gampad/cookie.js?callback=3D_GA_googleCookieHelper.setCookieInfo&client=3D=
+"+J(a)+"&domain=3D"+J(b);H.c("Issuing a fetch cookie call with <a =
+href=3D'"+d+"'>"+d+"</a>");document.write("<"+c+' =
+src=3D"'+d+'"></'+c+">")};I.prototype.i=3Dfunction(){document.cookie=3Dth=
+is.d+"Good";var a=3Dthis.h(this.d),c=3Da=3D=3D"Good";if(c){var =
+b=3Dthis.k(-1);=0A=
+document.cookie=3Dthis.d+"; expires=3D"+b.toGMTString()}return =
+c};I.prototype.m=3Dfunction(){var =
+a=3Dthis.h(this.f);if(a!=3Dnull)H.c("Read first party cookie: "+a);else =
+H.e("No first party cookie found");return =
+a};I.prototype.h=3Dfunction(a){var =
+c=3Ddocument.cookie,b=3Dc.indexOf(a),d=3Dnull;if(b!=3D-1){var =
+e=3Db+a.length,f=3Dc.indexOf(";",e);if(f=3D=3D-1)f=3Dc.length;d=3Dc.subst=
+ring(e,f)}return =
+d};I.prototype.n=3Dfunction(){if(this.a=3D=3Dnull)H.e("Skipping cookie =
+creation: no cookie info");else if(this.b=3D=3Dnull)H.o("Skipping cookie =
+creation: no cookie value");=0A=
+else{var a=3Dnew Date;a.setTime(1000*this.a._expires_);var =
+c=3Dthis.a._domain_,b=3Dthis.f+this.b+"; expires=3D"+a.toGMTString()+"; =
+path=3D"+this.a._path_+"; domain=3D."+c;document.cookie=3Db;H.c("Written =
+cookie: =
+"+b)}};window.IDICommon=3Dwindow.IDICommon||(function(){return{getHash:fu=
+nction(a){var c=3Da.indexOf("#")+1;return =
+c?a.substr(c):""},htmlEscape:function(a){return/[&<>\"]/.test(a)?a.replac=
+e(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\"/g,"=
+&quot;"):a},makeIframeTag:function(a){var c=3D"<iframe";for(var b in =
+a)c+=3D" "+b+'=3D"'+IDICommon.htmlEscape(a[b])+'"';return =
+c+"></iframe>"},getIframe:function(a,c){try{return =
+a.frames[c]}catch(b){return null}},makeIframeNode:function(a){var =
+c=3Ddocument.createElement("iframe");=0A=
+for(var b in a)c.setAttribute(b,a[b]);return =
+c},appendHiddenIframe:function(a,c){setTimeout(function(){document.body.a=
+ppendChild(IDICommon.makeIframeNode({id:a,name:a,src:c,width:0,height:0,f=
+rameBorder:0}))},0)},writeHiddenIframe:function(a,c){document.write(IDICo=
+mmon.makeIframeTag({id:a,name:a,src:c,width:0,height:0,frameBorder:0}))},=
+splitURIComponent:function(a,c){var =
+b=3D[],d=3Da.length,e=3D0;while(e<d){var =
+f=3Da.substr(e,c),i=3Df.length;if(e+i<d)for(var =
+k=3D1;k<3;++k)if(f.charAt(i-k)=3D=3D"%")f=3Df.substr(0,i-=3D=0A=
+k);b.push(f);e+=3Di}return =
+b},MAX_URL_LENGTH:4095,IDI_DEFAULT_POLLING_INTERVAL:1000}})();window.IDIH=
+ost=3Dwindow.IDIHost||(function(){var =
+a=3Dwindow.location.href.replace(/([^:\/])\/.*$/,"$1/robots.txt"),c=3D"",=
+b=3D{},d=3D{},e=3D{},f=3D{},i=3D{};function k(h,o){for(var q in =
+o)h[q]=3Do[q]}function n(h,o){var q=3Dwindow.frames[h];if(q){var =
+B;while(B=3DIDICommon.getIframe(q,h+"_"+b[h])){try{if(B.location.href=3D=3D=
+"about:blank")break}catch(v){break}e[h]+=3DIDICommon.getHash(B.location.h=
+ref);++b[h]}var =
+t=3De[h].split("$"),C=3Dt.length-1;if(C>0){e[h]=3Dt[C];for(var =
+D=3D0;D<C;++D)o(decodeURIComponent(t[D]),h)}}}function p(h){return c||=0A=
+h.replace(/([^:\/]\/).*$/,"$1ig/idi_relay")}function =
+r(h){window.clearInterval(i[h]);i[h]=3D0}function l(h){a=3Dh}function =
+x(h){c=3Dh}function =
+y(h,o,q){r(h);i[h]=3Dwindow.setInterval(function(){n(h,o)},typeof =
+q=3D=3D"object"&&q.pollingInterval||IDICommon.IDI_DEFAULT_POLLING_INTERVA=
+L)}function O(h,o,q){var B;if(typeof =
+q=3D=3D"object")B=3Dq.moduleRelayUrl;var v=3Dd[h];if(isNaN(v))throw new =
+Error("Invalid module id");else{var t=3Dtypeof =
+B=3D=3D"string"?B:p(f[h]),C=3DencodeURIComponent(o)+"$",D=3DIDICommon.MAX=
+_URL_LENGTH-1-t.length,=0A=
+F=3DIDICommon.splitURIComponent(C,D),P=3DF.length;for(var =
+z=3D0;z<P;++z)IDICommon.appendHiddenIframe(h+"_"+(v+z),t+"#"+F[z]);d[h]+=3D=
+P}}function K(h,o,q,B,v){var =
+t=3D{frameBorder:0,scrolling:"no"},C,D,F,P,z;if(typeof =
+v=3D=3D"object"){C=3Dv.iframeAttrs;D=3Dv.callback;F=3Dv.userPrefs;P=3Dv.p=
+ollingInterval;z=3Dv.parentDivId}if(typeof =
+C=3D=3D"object")k(t,C);k(t,{id:o,name:o,src:h,width:q,height:B});b[o]=3D0=
+;d[o]=3D0;e[o]=3D"";f[o]=3Dh;var Q=3D[];if(typeof =
+F=3D=3D"object")for(var G in =
+F)Q.push(encodeURIComponent(G)+"=3D"+encodeURIComponent(F[G]));=0A=
+if(typeof =
+D=3D=3D"function"){Q.push("idi_hr=3D"+encodeURIComponent(a));window.IDIHo=
+st.registerListener(o,D,v)}if(Q.length){var =
+L=3DQ.join("&");if(t.src.length+1+L.length>IDICommon.MAX_URL_LENGTH){L+=3D=
+"$";var =
+ca=3Dp(h),ra=3DIDICommon.MAX_URL_LENGTH-1-ca.length,da=3DIDICommon.splitU=
+RIComponent(L,ra),ea=3Dda.length;for(var G=3D0;G<ea;++G){var =
+V=3Do+"_"+G,fa=3Dca+"#"+da[G];if(z){var =
+W=3Ddocument.getElementById(z);W.innerHTML+=3DIDICommon.makeIframeTag({id=
+:V,name:V,src:fa,width:0,height:0,frameBorder:0})}else =
+IDICommon.writeHiddenIframe(V,=0A=
+fa)}d[o]+=3Dea;L=3D""}t.src+=3D"#"+L}if(z){var =
+W=3Ddocument.getElementById(z);W.innerHTML+=3DIDICommon.makeIframeTag(t)}=
+else =
+document.write(IDICommon.makeIframeTag(t))}return{setHostRelayUrl:l,setMo=
+duleRelayUrl:x,getModuleRelayUrl:p,registerListener:y,unregisterListener:=
+r,postMessageToModule:O,createModule:K}})();var =
+ia=3Dia||{},M=3Dthis;if(Object.prototype.propertyIsEnumerable);if(!Functi=
+on.prototype.apply)Function.prototype.apply=3Dfunction(a,c){var =
+b=3D[],d,e;if(!a)a=3DM;if(!c)c=3D[];for(var =
+f=3D0;f<c.length;f++)b[f]=3D"args["+f+"]";e=3D"oScope.__applyTemp__.peek(=
+).("+b.join(",")+");";if(!a.__applyTemp__)a.__applyTemp__=3D[];a.__applyT=
+emp__.push(this);d=3Deval(e);a.__applyTemp__.pop();return d};;;var =
+ja=3Dfunction(a,c){var b=3Dc.length;for(var d=3D0;d<b;d++){var =
+e=3Db=3D=3D1?c:c.charAt(d);if(a.charAt(0)=3D=3De&&a.charAt(a.length-1)=3D=
+=3De)return a.substring(1,a.length-1)}return a};var =
+ka,la,ma,na,oa,pa,qa,sa,ta,ua,va,wa,xa=3Dfunction(){var =
+a=3Dfalse,c=3Dfalse,b=3Dfalse,d=3Dfalse,e=3Dfalse,f=3Dfalse,i=3Dfalse,k=3D=
+false,n=3Dfalse,p=3D"";if(M.navigator){var =
+r=3DM.navigator,l=3Dr.userAgent;a=3Dl.indexOf("Opera")=3D=3D0;c=3D!a&&l.i=
+ndexOf("MSIE")!=3D-1;b=3D!a&&l.indexOf("WebKit")!=3D-1;n=3Db&&l.indexOf("=
+Mobile")!=3D-1;d=3D!a&&!b&&r.product=3D=3D"Gecko";e=3Dd&&r.vendor=3D=3D"C=
+amino";var =
+x,y;if(a)x=3DM.opera.version();else{if(d)y=3D/rv\:([^\);]+)(\)|;)/;else =
+if(c)y=3D/MSIE\s+([^\);]+)(\)|;)/;else =
+if(b)y=3D/WebKit\/(\S+)/;if(y){y.test(l);x=3DRegExp.$1}}p=3D=0A=
+r.platform||"";f=3Dp.indexOf("Mac")!=3D-1;i=3Dp.indexOf("Win")!=3D-1;k=3D=
+p.indexOf("Linux")!=3D-1}ka=3Da;la=3Dc;ma=3Dd;na=3De;oa=3Db;pa=3Doa;qa=3D=
+x;sa=3Dp;ta=3Df;ua=3Di;va=3Dk;wa=3Dn};xa();;;;var =
+ya=3Dfunction(a){return typeof =
+a=3D=3D"string"?document.getElementById(a):a},za=3Dya;var =
+Aa=3Dfunction(a){return =
+a.nodeType=3D=3D9?a:a.ownerDocument||a.document};;;var =
+Ba=3Dfunction(a,c){var =
+b=3DAa(a);if(b.defaultView&&b.defaultView.getComputedStyle){var =
+d=3Db.defaultView.getComputedStyle(a,"");if(d)return d[c]}return =
+null};var Ca=3Dfunction(a){var =
+c=3DAa(a),b=3D"";if(c.createTextRange){var =
+d=3Dc.body.createTextRange();d.moveToElementText(a);b=3Dd.queryCommandVal=
+ue("FontName")}if(!b){b=3DBa(a,"fontFamily")||(a.currentStyle?a.currentSt=
+yle.fontFamily:null)||a.style.fontFamily;if(ka&&va)b=3Db.replace(/ =
+\[[^\]]*\]/,"")}var e=3Db.split(",");if(e.length>1)b=3De[0];return =
+ja(b,"\"'")};function N(a){return a!=3Dnull?'"'+a+'"':'""'}function =
+J(a){return typeof =
+encodeURIComponent=3D=3D"function"?encodeURIComponent(a):escape(a)}functi=
+on R(a,c){if(a&&c)window.google_ad_url+=3D"&"+a+"=3D"+c}function =
+S(a){var c=3Dwindow,b=3DA(a),d=3Dc[a];R(b,d)}function =
+T(a,c){if(c)R(a,J(c))}function U(a){var =
+c=3Dwindow,b=3DA(a),d=3Dc[a];T(b,d)}function X(a,c){var =
+b=3Dwindow,d=3DA(a),e=3Db[a];if(d&&e&&typeof =
+e=3D=3D"object")e=3De[c%e.length];R(d,e)}function Da(a,c){var =
+b=3Da.screen,d=3Dnavigator.javaEnabled(),e=3D-c.getTimezoneOffset();if(b)=
+{R("u_h",=0A=
+b.height);R("u_w",b.width);R("u_ah",b.availHeight);R("u_aw",b.availWidth)=
+;R("u_cd",b.colorDepth)}R("u_tz",e);R("u_his",history.length);R("u_java",=
+d);if(navigator.plugins)R("u_nplug",navigator.plugins.length);if(navigato=
+r.mimeTypes)R("u_nmime",navigator.mimeTypes.length)}function =
+Ea(a){if(!a.google_enable_first_party_cookie)return;if(H=3D=3Dnull)H=3Dne=
+w E;if(a._GA_googleCookieHelper=3D=3Dnull)a._GA_googleCookieHelper=3Dnew =
+I;if(!a._google_cookie_fetched){a._google_cookie_fetched=3Dtrue;a._GA_goo=
+gleCookieHelper.j(Y(a.google_ad_client))}}=0A=
+function =
+Y(a){if(a){a=3Da.toLowerCase();if(a.substring(0,3)!=3D"ca-")a=3D"ca-"+a}r=
+eturn a}function =
+Fa(a){if(a){a=3Da.toLowerCase();if(a.substring(0,9)!=3D"dist-aff-")a=3D"d=
+ist-aff-"+a}return a}function Ga(a,c){var =
+b=3Ddocument.getElementById(a);b.style.height=3Dc+"px"}function =
+Ha(a,c,b){window.clearTimeout(b);var =
+d=3D/^google_resize_flash_ad_idi\((\d+)\)/,e=3Da.match(d);if(e)Ga(c,e[1])=
+}function =
+Ia(a,c,b,d){b=3Db.substring(0,2000);b=3Db.replace(/%\w?$/,"");var =
+e=3D"script";if((a.google_ad_output=3D=3D"js"||a.google_ad_output=3D=3D=0A=
+"json_html")&&(a.google_ad_request_done||a.google_radlink_request_done))c=
+.write("<"+e+' language=3D"JavaScript1.1" src=3D'+N(b)+"></"+e+">");else =
+if(a.google_ad_output=3D=3D"html"){if(a.name!=3D"google_ads_frame"){if(d!=
+=3Dnull)c.write('<div =
+id=3D"'+d+'">');if(Ja(a.google_ad_output,a.google_ad_client)){IDIHost.set=
+ModuleRelayUrl("http://pagead2.googlesyndication.com/pagead/idi_relay.htm=
+l");var =
+f=3D0;if(a.google_num_0ad_slots)f+=3Da.google_num_0ad_slots;if(a.google_n=
+um_ad_slots)f+=3Da.google_num_ad_slots;if(a.google_num_sdo_slots)f+=3D=0A=
+a.google_num_sdo_slots;var i=3D"google_inline_div"+f,k=3D"<div =
+id=3D"+N(i)+' =
+style=3D"position:relative;width:'+a.google_ad_width+'px"></div><div =
+style=3D"position:relative;width:'+a.google_ad_width+"px;height:"+a.googl=
+e_ad_height+'px;z-index:-1"></div>';c.write(k);var =
+n=3D"google_frame"+f,p=3Da.setTimeout(function(){IDIHost.unregisterListen=
+er(n)},5000);IDIHost.createModule(b,n,a.google_ad_width,a.google_ad_heigh=
+t,{callback:function(r,l){Ha(r,l,p)},pollingInterval:500,iframeAttrs:{sty=
+le:"position: absolute;left:0px",=0A=
+marginWidth:"0",marginHeight:"0",vspace:"0",hspace:"0",allowTransparency:=
+"true"},parentDivId:i})}else{c.write('<iframe name=3D"google_ads_frame" =
+width=3D'+N(a.google_ad_width)+" height=3D"+N(a.google_ad_height)+" =
+frameborder=3D"+N(a.google_ad_frameborder)+" src=3D"+N(b)+' =
+marginwidth=3D"0" marginheight=3D"0" vspace=3D"0" hspace=3D"0" =
+allowtransparency=3D"true" =
+scrolling=3D"no">');c.write("</iframe>")}if(d!=3Dnull)c.write("</div>")}}=
+else if(a.google_ad_output=3D=3D"textlink")c.write("<"+e+' =
+language=3D"JavaScript1.1" src=3D'+N(b)+=0A=
+"></"+e+">")}function Ka(a){for(var c in ga)a[c]=3Dnull;for(var c in =
+ha){if(c=3D=3D"google_correlator")continue;a[c]=3Dnull}}function =
+La(a){if(a.google_ad_format)return =
+a.google_ad_format.indexOf("_0ads")>0;return =
+a.google_ad_output!=3D"html"&&a.google_num_radlinks>0}function =
+Z(a){return a&&a.indexOf("_sdo")!=3D-1}function Ma(a){var =
+c=3Dnull,b=3Dwindow,d=3Ddocument,e=3Dnew =
+Date,f=3De.getTime(),i=3Db.google_ad_format;if(b.google_cpa_choice!=3Dc){=
+b.google_ad_url=3D"http://pagead2.googlesyndication.com/cpa/ads?";b.googl=
+e_ad_url+=3D=0A=
+"client=3D"+escape(Y(b.google_ad_client));b.google_ad_region=3D"_google_c=
+pa_region_";S("google_cpa_choice");if(typeof =
+d.characterSet!=3D"undefined")T("oe",d.characterSet);else if(typeof =
+d.charset!=3D"undefined")T("oe",d.charset)}else =
+if(Z(i)){b.google_ad_url=3D"http://pagead2.googlesyndication.com/pagead/s=
+do?";b.google_ad_url+=3D"client=3D"+escape(Fa(b.google_ad_client))}else{b=
+.google_ad_url=3D"http://pagead2.googlesyndication.com/pagead/ads?";b.goo=
+gle_ad_url+=3D"client=3D"+escape(Y(b.google_ad_client))}S("google_ad_host=
+");=0A=
+S("google_ad_host_tier_id");var =
+k=3Db.google_num_slots_by_client,n=3Db.google_num_slots_by_channel,p=3Db.=
+google_prev_ad_formats_by_region,r=3Db.google_prev_ad_slotnames_by_region=
+;if(b.google_ad_region=3D=3Dc&&b.google_ad_section!=3Dc)b.google_ad_regio=
+n=3Db.google_ad_section;var =
+l=3Db.google_ad_region=3D=3Dc?"":b.google_ad_region;if(Z(i)){b.google_num=
+_sdo_slots=3Db.google_num_sdo_slots?b.google_num_sdo_slots+1:1;if(b.googl=
+e_num_sdo_slots>4)return false}else =
+if(La(b)){b.google_num_0ad_slots=3Db.google_num_0ad_slots?b.google_num_0a=
+d_slots+=0A=
+1:1;if(b.google_num_0ad_slots>3)return false}else =
+if(b.google_cpa_choice=3D=3Dc){b.google_num_ad_slots=3Db.google_num_ad_sl=
+ots?b.google_num_ad_slots+1:1;if(b.google_num_slots_to_rotate){p[l]=3Dc;r=
+[l]=3Dc;if(b.google_num_slot_to_show=3D=3Dc)b.google_num_slot_to_show=3Df=
+%b.google_num_slots_to_rotate+1;if(b.google_num_slot_to_show!=3Db.google_=
+num_ad_slots)return false}else =
+if(b.google_num_ad_slots>6&&l=3D=3D"")return =
+false}R("dt",e.getTime());S("google_language");if(b.google_country)S("goo=
+gle_country");else S("google_gl");=0A=
+S("google_region");U("google_city");U("google_hints");S("google_safe");S(=
+"google_encoding");S("google_last_modified_time");U("google_alternate_ad_=
+url");S("google_alternate_color");S("google_skip");S("google_targeting");=
+var x=3Db.google_ad_client;if(!k[x]){k[x]=3D1;k.length+=3D1}else =
+k[x]+=3D1;if(p[l])if(!Z(i)){T("prev_fmts",p[l].toLowerCase());if(k.length=
+>1)R("slot",k[x])}if(r[l])T("prev_slotnames",r[l].toLowerCase());if(i&&!b=
+.google_ad_slot){T("format",i.toLowerCase());if(!Z(i))p[l]=3Dp[l]?p[l]+",=
+"+i:i}if(b.google_ad_slot)r[l]=3D=0A=
+r[l]?r[l]+","+b.google_ad_slot:b.google_ad_slot;S("google_max_num_ads");R=
+("output",b.google_ad_output);S("google_adtest");S("google_ad_callback");=
+S("google_ad_slot");U("google_correlator");if(b.google_ad_channel){U("goo=
+gle_ad_channel");var y=3D"",O=3Db.google_ad_channel.split(/[+, =
+]/);for(var K=3D0;K<O.length;K++){var h=3DO[K];if(!n[h])n[h]=3D1;else =
+y+=3Dh+"+"}T("pv_ch",y)}if(b.google_enable_first_party_cookie)T("cookie",=
+b._GA_googleCookieHelper.l());U("google_page_url");X("google_color_bg",f)=
+;X("google_color_text",=0A=
+f);X("google_color_link",f);X("google_color_url",f);X("google_color_borde=
+r",f);X("google_color_line",f);if(b.google_reuse_colors)R("reuse_colors",=
+1);else =
+R("reuse_colors",0);S("google_kw_type");U("google_kw");U("google_contents=
+");S("google_num_radlinks");S("google_max_radlink_len");S("google_rl_filt=
+ering");S("google_rl_mode");S("google_rt");U("google_rl_dest_url");S("goo=
+gle_num_radlinks_per_unit");S("google_ad_type");S("google_image_size");S(=
+"google_ad_region");S("google_feedback");U("google_referrer_url");=0A=
+U("google_page_location");R("frm",b.google_iframing);S("google_bid");S("g=
+oogle_cust_age");S("google_cust_gender");S("google_cust_interests");S("go=
+ogle_cust_id");S("google_cust_job");S("google_cust_u_url");S("google_cust=
+_l");S("google_cust_lh");S("google_cust_ch");S("google_ed");U("google_ui_=
+features");U("google_only_ads_with_video");U("google_disable_video_autopl=
+ay");if(a)T("ff",Ca(a));if(Na(b,d)&&d.body){var =
+o=3Dd.body.scrollHeight,q=3Dd.body.clientHeight;if(q&&o)T("cc",Math.round=
+(q*100/o))}aa();R("ga_vid",=0A=
+b.gaGlobal.vid);R("ga_sid",b.gaGlobal.sid);R("ga_hid",b.gaGlobal.hid);R("=
+ga_fc",b.gaGlobal.from_cookie);U("google_analytics_uacct");S("google_ad_o=
+verride");S("google_flash_version");Da(b,e);return true}function =
+Oa(){var a=3Dwindow,c=3Ddocument;Ea(a);var b;if(Math.random()<0.01){var =
+d=3D"google_temp_span";if(!za(d)){c.write("<span =
+id=3D"+d+"></span>");b=3Dza(d)}}var =
+e=3DMa(b);if(b)b&&b.parentNode?b.parentNode.removeChild(b):null;if(!e)ret=
+urn;Ia(a,c,a.google_ad_url,null);Ka(a)}function Pa(){Oa();return =
+true}function Na(a,=0A=
+c){return a.top.location=3D=3Dc.location}function Qa(a,c){var =
+b=3Dc.documentElement;if(Na(a,c))return =
+false;if(a.google_ad_width&&a.google_ad_height){var =
+d=3D1,e=3D1;if(a.innerHeight){d=3Da.innerWidth;e=3Da.innerHeight}else =
+if(b&&b.clientHeight){d=3Db.clientWidth;e=3Db.clientHeight}else =
+if(c.body){d=3Dc.body.clientWidth;e=3Dc.body.clientHeight}if(e>2*a.google=
+_ad_height||d>2*a.google_ad_width)return false}return true}function =
+Ra(a){var =
+c=3Dwindow,b=3Dnull,d=3Dc.onerror;c.onerror=3Da;if(c.google_ad_frameborde=
+r=3D=3Db)c.google_ad_frameborder=3D=0A=
+0;if(c.google_ad_output=3D=3Db)c.google_ad_output=3D"html";if(Z(c.google_=
+ad_format)){var =
+e=3Dc.google_ad_format.match(/^(\d+)x(\d+)_.*/);if(e){c.google_ad_width=3D=
+parseInt(e[1],10);c.google_ad_height=3DparseInt(e[2],10);c.google_ad_outp=
+ut=3D"html"}}if(c.google_ad_format=3D=3Db&&c.google_ad_output=3D=3D"html"=
+)c.google_ad_format=3Dc.google_ad_width+"x"+c.google_ad_height;Sa(c,docum=
+ent);if(c.google_num_slots_by_channel=3D=3Db)c.google_num_slots_by_channe=
+l=3D[];if(c.google_num_slots_by_client=3D=3Db)c.google_num_slots_by_clien=
+t=3D[];if(c.google_prev_ad_formats_by_region=3D=3D=0A=
+b)c.google_prev_ad_formats_by_region=3D[];if(c.google_prev_ad_slotnames_b=
+y_region=3D=3Db)c.google_prev_ad_slotnames_by_region=3D[];if(c.google_cor=
+relator=3D=3Db)c.google_correlator=3D(new =
+Date).getTime();if(c.google_adslot_loaded=3D=3Db)c.google_adslot_loaded=3D=
+{};if(c.google_adContentsBySlot=3D=3Db)c.google_adContentsBySlot=3D{};if(=
+c.google_flash_version=3D=3Db)c.google_flash_version=3DTa();c.onerror=3Dd=
+}function Ua(a){if(a in $)return $[a];return =
+$[a]=3Dnavigator.userAgent.toLowerCase().indexOf(a)!=3D-1}var =
+$=3D{};function Ja(a,c){if(a!=3D=0A=
+"html")return false;var =
+b=3D{};b["ca-pub-7027491298716603"]=3Dtrue;b["ca-pub-8344185808443527"]=3D=
+true;b["ca-google"]=3Dtrue;return b[Y(c)]!=3Dnull}function Va(a){var =
+c=3D{},b=3Da.split("?"),d=3Db[b.length-1].split("&");for(var =
+e=3D0;e<d.length;e++){var =
+f=3Dd[e].split("=3D");if(f[0])try{c[f[0].toLowerCase()]=3Df.length>1?(win=
+dow.decodeURIComponent?decodeURIComponent(f[1].replace(/\+/g," =
+")):unescape(f[1])):""}catch(i){}}return c}function Wa(){var =
+a=3Dwindow,c=3DVa(document.URL);if(c.google_ad_override){a.google_ad_over=
+ride=3D=0A=
+c.google_ad_override;a.google_adtest=3D"on"}}function =
+Ta(){if(navigator.plugins&&navigator.mimeTypes.length){var =
+a=3Dnavigator.plugins["Shockwave Flash"];if(a&&a.description)return =
+a.description.replace(/([a-zA-Z]|\s)+/,"").replace(/(\s)+r/,".")}else =
+if(navigator.userAgent&&navigator.userAgent.indexOf("Windows =
+CE")>=3D0){var c=3D3,b=3D1;while(b)try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash."+(c+1));c++}catch(d){b=3Dnu=
+ll}return c.toString()}else if(Ua("msie")&&!window.opera){var =
+b=3Dnull;try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.7")}catch(d){var c=3D=0A=
+0;try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");c=3D6;b.AllowScriptAcces=
+s=3D"always"}catch(d){if(c=3D=3D6)return c.toString()}try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash")}catch(d){}}if(b!=3Dnull){v=
+ar c=3Db.GetVariable("$version").split(" ")[1];return =
+c.replace(/,/g,".")}}return"0"}function Xa(a,c){for(var b in =
+c)a["google_"+b]=3Dc[b]}function Ya(a,c){if(!c)return a.location;return =
+a.referrer}function =
+Za(a,c){if(!c&&a.google_referrer_url=3D=3Dnull)return"0";else =
+if(c&&a.google_referrer_url=3D=3D=0A=
+null)return"1";else if(!c&&a.google_referrer_url!=3Dnull)return"2";else =
+if(c&&a.google_referrer_url!=3Dnull)return"3";return"4"}function =
+$a(a,c,b,d){a.page_url=3DYa(b,d);a.page_location=3Dnull}function =
+ab(a,c,b,d){a.page_url=3Dc.google_page_url;a.page_location=3DYa(b,d)||"EM=
+PTY"}function bb(a,c){var =
+b=3D{},d=3DQa(a,c);b.iframing=3DZa(a,d);if(!!a.google_page_url)ab(b,a,c,d=
+);else =
+$a(b,a,c,d);b.last_modified_time=3Dc.location=3D=3Db.page_url?Date.parse(=
+c.lastModified)/1000:null;b.referrer_url=3Dd?a.google_referrer_url:(a.goo=
+gle_page_url&&=0A=
+a.google_referrer_url?a.google_referrer_url:c.referrer);return =
+b}function cb(a){var =
+c=3D{},b=3Da.URL.substring(a.URL.lastIndexOf("http"));c.iframing=3Dnull;c=
+.page_url=3Db;c.page_location=3Da.location;c.last_modified_time=3Dnull;c.=
+referrer_url=3Db;return c}function Sa(a,c){var =
+b;b=3Da.google_page_url=3D=3Dnull&&db[c.domain]?cb(c):bb(a,c);Xa(a,b)}var=
+ db=3D{};db["ad.yieldmanager.com"]=3Dtrue;Wa();Ra(Pa);Oa();=0A=
+})()=0A=
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://cpro.baidu.com/cpro/ui/cp.js
+
+(function(){var E=3D"",H=3Dfalse,J=3Ddocument,Q=3Dnew =
+Date();(function(){J.write("<div style=3Ddisplay:none>-</div>");var =
+$=3DF();if(B())return;else J.write("<iframe align=3D\"center,center\" =
+marginwidth=3D0 marginheight=3D0 scrolling=3Dno frameborder=3D0 =
+width=3D"+cpro_w+" height=3D"+cpro_h+" allowtransparency =
+src=3D\""+$+"\"></iframe>")})();function F(){var =
+R,H,P,F,B=3Dscreen,O=3Dnavigator;R=3D["template","client","h","w","a6q8r4=
+","rad","cbd","cbg","ctitle","cdesc","curl","clink","cflush","ts","at","c=
+hannel","cad","aurl","acolor","flush"];H=3D["text_default_125_125","","12=
+5","125",{},"","","","","","","","",1,"text_image_video_flash",0,1,"",""]=
+;for(var A=3D0;A<R.length-1;A++)_("cpro_"+R[A],H[A]);if($(typeof =
+cpro_flush)||(cpro_flush<1)||(cpro_flush>4)||!cpro_flush)cpro_flush=3D4;i=
+f($(typeof cpro_q3r6r4))cpro_q3r6r4=3D1;else =
+cpro_q3r6r4++;I("fv",G());I("tn",cpro_template);I("n",cpro_client);I("rsi=
+1",cpro_h);I("rsi0",cpro_w);I("rad",cpro_rad);L("rss0",cpro_cbd);L("rss1"=
+,cpro_cbg);L("rss2",cpro_ctitle);L("rss3",cpro_cdesc);L("rss4",cpro_curl)=
+;L("rss5",cpro_clink);L("rss6",cpro_cflush);I("rsi5",cpro_flush);I("ts",c=
+pro_ts);I("at",C());I("cn",cpro_q3r6r4);I("if",N());L("word",D());L("refe=
+r",K());I("ev",M());L("ch",cpro_channel);I("lmt",Date.parse(J.lastModifie=
+d)/1000);I("csp",B.width+","+B.height);I("ccd",B.colorDepth);I("chi",hist=
+ory.length);I("cja",O.javaEnabled());I("cpl",O.plugins.length);I("cmi",O.=
+mimeTypes.length);I("cce",O.cookieEnabled);I("csl",O.systemLanguage||O.la=
+nguage);I("rt",new =
+Date()-Q);I("cad",cpro_cad);L("aurl",cpro_aurl);L("rss7",cpro_acolor);for=
+(A=3D5;A<R.length;A++)window["cpro_"+R[A]]=3Dundefined;return"http://cpro=
+.baidu.com/cpro/ui/uijs.php?"+E.slice(1)}function $($){return =
+$=3D=3D"undefined"}function _(A,_){if($(typeof =
+window[A]))window[A]=3D_}function R($){return typeof =
+encodeURIComponent=3D=3D"function"?encodeURIComponent($):escape($)}functi=
+on I($,_){E=3DE.concat("&"+$+"=3D"+_)}function L($,_){I($,R(_))}function =
+O($){return navigator.userAgent.toLowerCase().indexOf($)>=3D0}function =
+S(A,_){var =
+$,B=3DMath.pow(2,A);try{$=3Dwindow.eval("cpro_"+B+_)}catch(C){$=3D0}windo=
+w["cpro_"+B+_]=3D0;if($<0||$>=3DB)$=3D0;return $}function =
+D(){return(P()||H)?location.href:K()}function K(){return =
+J.referrer}function P(){return self=3D=3D=3Dtop}function =
+A(){try{top.location.toString()}catch($){return true}return =
+false}function C(){if(cpro_at!=3D""){var =
+_=3Dcpro_at.split("_"),A=3D0;for(var =
+$=3D0;$<_.length;$++)switch(_[$]){case"text":A|=3D1;break;case"image":A|=3D=
+2;break;case"flash":A|=3D4;break;case"video":A|=3D8;break}return A}else =
+return cpro_at}function M(){var =
+C=3D{4:2,3:3,2:4,1:7},A=3D0,B=3D0,D=3D0;for(var $ in C)for(var =
+_=3DC[$];_>=3D1;_--){var =
+E=3DS($,_);if(B)A=3DA<<$;else{B=3D1;D=3D(E>=3D8)?2147483648:0;E%=3D8}A+=3D=
+E}return A+D}function N(){if(P())return 0;var =
+E=3Dwindow,D=3DJ.body,_=3D1,C=3D1,$=3D1,B=3DJ.documentElement;if(A())$+=3D=
+2;if(E.innerHeight){_=3DE.innerWidth;C=3DE.innerHeight}else =
+if(B&&B.clientHeight){_=3DB.clientWidth;C=3DB.clientHeight}else =
+if(D){_=3DD.clientWidth;C=3DD.clientHeight}if(C<10||_<40)$+=3D4;else =
+if(C<cpro_h||_<cpro_w)$+=3D8;if(C>=3D2*cpro_h||_>=3D2*cpro_w)H=3Dtrue;ret=
+urn $}function B(){var =
+$=3Dcpro_template.slice(0,1);if(!cpro_a6q8r4[$])cpro_a6q8r4[$]=3D1;else =
+cpro_a6q8r4[$]++;return cpro_a6q8r4[$]>3}function G(){var =
+A=3D"ShockwaveFlash.ShockwaveFlash",B=3Dnavigator;if(B.plugins&&B.mimeTyp=
+es.length){var _=3DB.plugins["Shockwave =
+Flash"];if(_&&_.description)return =
+_.description.replace(/[^\d\.]/g,"").split(".")[0]}else if(O("ie")){var =
+$=3DActiveXObject;try{_=3Dnew $(A+".7")}catch(C){try{_=3Dnew =
+$(A+".6");_.AllowScriptAccess=3D"always";return 6}catch(C){}try{_=3Dnew =
+$(A)}catch(C){}}if(_!=3Dnull)return _.GetVariable("$version").split(" =
+")[1].split(",")[0]}return 0}})()
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://txsite.21tx.com/Count/Count.js
+
+
+txcount_uid =3D 1;
+txcount_uh =3D 0;
+txcount_uw =3D 0;
+txcount_uah =3D 0;
+txcount_uaw =3D 0;
+txcount_ucd =3D 0;
+
+if (window.screen) {
+  txcount_uh =3D window.screen.height;
+  txcount_uw =3D window.screen.width;
+  txcount_uah =3D window.screen.availHeight;
+  txcount_uaw =3D window.screen.availWidth;
+  txcount_ucd =3D window.screen.colorDepth;
+}
+
+/*
+if (window.tx_page_referrer =3D=3D null || window.tx_page_referrer =
+=3D=3D "") {
+  window.tx_page_referrer =3D escape(document.location);
+}
+*/
+
+
+url =3D "http://txsite.21tx.com/Count/Count.aspx";
+url =3D url + "?u=3D"+ txcount_uid;
+//url =3D url + "&f=3D" + txcount_f;
+url =3D url + "&k=3D" + window.tx_page_key;
+//url =3D url + "&t=3D" + txcount_t;
+url =3D url + "&l=3D" + window.tx_page_location;
+url =3D url + "&r=3D" + window.tx_page_referrer;
+url =3D url + "&uh=3D" + txcount_uh;
+url =3D url + "&uw=3D" + txcount_uw;
+url =3D url + "&uah=3D" + txcount_uah;
+url =3D url + "&uaw=3D" + txcount_uaw;
+url =3D url + "&ucd=3D" + txcount_ucd;
+
+//document.write("<img src=3D" + url + " width=3D0 height=3D0 =
+border=3D0>");
+document.write("<script src=3D" + url + "><\/script>");
+
+
+document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/171/479/ystat.js"><\/script>');
+
+document.write("<scr" + "ipt sr" + =
+"c=3Dhttp://vip7.1tong.com.cn/link/count.php?id=3D91></scr" + "ipt>");
+
+var txsite_countsitekey =3D txsite_pagekey.substring(0,5)
+if (txsite_countsitekey =3D=3D "TX-6-") {
+  document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/248/201/ystat.js"><\/script>');
+} else if (txsite_countsitekey =3D=3D "TX-12") {
+  document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/172/9/ystat.js"><\/script>');
+} else if (txsite_countsitekey =3D=3D "TX-16" || txsite_countsitekey =
+=3D=3D "TX-17" || txsite_countsitekey =3D=3D "TX-18" || =
+txsite_countsitekey =3D=3D "TX-19") {
+  document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/171/494/ystat.js"><\/script>');
+} else if (txsite_countsitekey =3D=3D "TX-8-" || txsite_countsitekey =
+=3D=3D "TX-20" || txsite_countsitekey =3D=3D "TX-23" || =
+txsite_countsitekey =3D=3D "TX-25" || txsite_countsitekey =3D=3D "TX-21" =
+|| txsite_countsitekey =3D=3D "TX-26") {
+  document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/171/511/ystat.js"><\/script>');
+} else if (txsite_countsitekey =3D=3D "TX-3-" || txsite_countsitekey =
+=3D=3D "TX-4-" || txsite_countsitekey =3D=3D "TX-5-" || =
+txsite_countsitekey =3D=3D "TX-15") {
+  document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/171/482/ystat.js"><\/script>');
+} else if (txsite_countsitekey =3D=3D "TX-2-") {
+  document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/287/480/ystat.js"><\/script>');
+} else if (txsite_countsitekey =3D=3D "TX-9-" || txsite_countsitekey =
+=3D=3D "TX-13" || txsite_countsitekey =3D=3D "TX-14" || =
+txsite_countsitekey =3D=3D "TX-22") {
+  document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/287/492/ystat.js"><\/script>');
+} else{
+  if (txsite_pagekey =3D=3D "TX-1-1-900001") {
+    document.write('<script type=3D"text/javascript" =
+src=3D"http://js.tongji.yahoo.com.cn/0/248/204/ystat.js"><\/script>');
+  }
+}
+
+
+
+------=_NextPart_000_004E_01C8CCCC.80CD9310
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www230.clickeye.cn/common/clickeye.js
+
+eval(function(p,a,c,k,e,r){e=3Dfunction(c){return(c<a?'':e(parseInt(c/a))=
+)+((c=3Dc%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace=
+(/^/,String)){while(c--)r[e(c)]=3Dk[c]||e(c);k=3D[function(e){return =
+r[e]}];e=3Dfunction(){return'\\w+'};c=3D1};while(c--)if(k[c])p=3Dp.replac=
+e(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 =
+3b,4j,3c,3d=3D\'17://4k.1l.18.1g\',1q=3D"17://1r.1l.18.1g",2f=3D"17://5Z.=
+1l.18.1g",4l=3D61,3e,3f,3g;6 =
+62=3D{63:C(i,e){B(i&&F.2g){F.2g()}Q{e=3De||\'\\64\\65\\66\\67\\68\\69\\6a=
+!\';6b(e)}},6c:C(p,i,j,a){6 =
+t=3D$1b,o=3Dt.1h(i,j);B(o){F.2g=3Da;t.4m(\'17://6d.3h.18/6e.6f?6g=3D\'+o.=
+n+\'&6h=3D\'+p+\'&6i=3D\'+1G(o.h))}}};C =
+6j(s,k,i,a,b,c,d,e,f){F.s=3Ds;F.w=3Dk;F.1c=3Di;B(d){F.c=3Da;F.t=3Db;F.m=3D=
+c;F.h=3Dd.1i(/\\$6k/,F.w);F.p=3De;F.n=3Df}Q{F.h=3Da;F.p=3Db;F.6l=3Dc}};C =
+6m(t,m,u){F.t=3Dt;F.m=3Dm;F.u=3Du};C =
+6n(t,a,c,b,d,e,p,f,g,h){F.t=3Dt;F.1S=3Da;F.c=3Dc;F.b=3Db;F.4n=3Dd;F.4o=3D=
+e;F.p=3Dp;F.3i=3Df;F.4p=3Dg;F.6o=3Dh};C =
+6p(t,b,d,m,a,e,c,f){F.t=3Dt;F.1S=3Db;F.6q=3Dd;F.m=3Dm;F.a=3Da;F.4q=3De;F.=
+c=3Dc;F.4r=3Df};C 6r(s,w,c,n){F.s=3Ds;F.w=3Dw;F.1y=3Dc;F.6s=3Dn};C =
+2E(e,i){$1b.s(e,i)};C 4s(e,i,j){$1b.c(e,i,j)};C 3j(){$1b.3k()};C =
+4t(){$1b.2F()};C 6t(a){G(6 =
+i=3D0,D,s=3D[],h=3D2h.1d.2G;D=3Da[i];i++){B(!(D.c&&h.4u(D.c.1i(/,/g,\'|\'=
+))))s.1H(D)}E s};6 $1b=3D1z C(){6 =
+T=3DF,d=3D2h,N=3D2i,w=3D1T,u=3D4v.6u.1U(),1V=3Dd.2H(\'1V\')[0],11=3Dd.1d.=
+12,1m=3D{\'4w\':{V:[-10,6v],K:[0,6w],t:[20,-10],l:[-15,20],19:0},\'3l\':{=
+V:[-22,4x],K:[0,4y],t:[20,-10],l:[-15,20],19:4},\'3m\':{V:[-22,4x],K:[0,4=
+y],t:[20,-10],l:[-15,20],19:4},\'2j\':{V:[-30,2k],K:[0,3n],t:[20,-20],l:[=
+-15,10],19:0},\'4z\':{V:[-30,6x],K:[0,3n],t:[20,-20],l:[-15,10],19:0},\'4=
+A\':{V:[-29,2k],K:[0,3n],t:[20,-20],l:[-15,10],19:0},\'4B\':{V:[5,6y],K:[=
+5,6z],t:[-10,15],l:[-30,10],19:-5},\'4C\':{V:[-10,6A],K:[50,4D],t:[10,0],=
+l:[-85,10],19:-5},\'4E\':{V:[-33,6B],K:[60,60],t:[20,-25],l:[-85,80],19:-=
+5},\'4F\':{V:[-20,6C],K:[20,60],t:[20,-25],l:[-60,80],19:-5},\'3o\':{V:[-=
+2,3p],K:[0,3q],t:[-5,5],l:[-40,55],19:0},\'3r\':{V:[-2,3p],K:[0,3q],t:[-5=
+,5],l:[-40,55],19:0},\'3s\':{V:[-2,3p],K:[0,3q],t:[-5,5],l:[-40,55],19:0}=
+};1s=3DT.1s=3Du.1a("3t")!=3D-1&&u.1a("4G")=3D=3D-1;4H=3Du.1a("4G")=3D=3D-=
+1&&u.1a("3t =
+7")>-1,T.4I=3Dd.6D?1:0;T.O=3DN;T.1I=3DN;T.1S=3D0;T.1J=3D[];T.2l=3D[];T.1t=
+=3D[];T.X=3DN;T.4J=3D{};T.i=3D0;T.1W=3D{n:\'\\6E\\6F\'},T.2m=3D{n:\'\\6G\=
+\6H\'},T.3u=3D{};6 =
+x=3D{\'3r\':{1W:6I,2I:6J},\'3s\':{1W:6K,2I:6L},\'3o\':{1W:6M,2I:6N}};T.6O=
+=3DC(k,t,n){6 =
+a;2J(t){1u\'1W\':a=3D\'17://6P.1l.18.1g/6Q.1X?2n=3D10&11=3D2k.18&6R=3D10&=
+6S=3D\'+1G(k)+\'&1Y=3D\'+t;1e;1u\'2m\':a=3D\'17://6T.42.34.6U/6V/\'+1G(k)=
+.1i(/\\.|%/g,\'\')+\'.2K\';1e}1V.2L(T.1A(\'2o\',{1j:a,1Y:\'1Z/2M\',21:\'2=
+3-8\'}))};T.6W=3DC(k,t){G(6 =
+i=3D0,D,c,n,s=3D\'\';D=3DT[t][k][i];i++){2J(t){1u\'1W\':c=3D"1K=3D\\"$1b.=
+3v(\'"+x[T.2N][t]+"\',\'"+D.u+"\')\\"";s+=3D\'<Z 1k=3D"4K"><L =
+1k=3D"3u">&6X;<a 12=3D"#" \'+c+\' >\'+D.t.1i(k,\'<L J=3D1n:#4L; =
+>\'+k+\'</L>\')+\'</a></L><3w /><a 12=3D"#" \'+c+\'>\'+D.m.1i(k,\'<L =
+J=3D1n:#4L; =
+>\'+k+\'</L>\')+\'</a></Z>\';n=3D3;1e;1u\'2m\':n=3D5;s+=3D\'<Z 1k=3D"4K" =
+\'+(i%2=3D=3D0?\'J=3D"1B-1n:#6Y;"\':\'\')+\'><L 1k=3D"3u"><a =
+12=3D"\'+D.1S+\'" 1L=3D"1M" >\'+D.t.2p(0,9)+\'</a></L><L 1k=3D"6Z" =
+1K=3D"1T.1v(\\\'\'+D.4o+\'\\\',\\\'1M\\\')"><L =
+J=3D"1n:#70;">\'+D.p+\'</L></L>\'+\'<L 1k=3D"4M" =
+1K=3D"1T.1v(\\\'\'+D.3i+\'\\\',\\\'1M\\\')"><L =
+J=3D"1n:#4N;">\'+D.4p+\'</L></L><L 1k=3D"71" =
+1K=3D"1T.1v(\\\'\'+D.3i+\'\\\',\\\'1M\\\')" ><L J=3D"1n:#4N;" =
+>\\72\\73</L></L><3w />\'+\'<a 12=3D"#" 1K=3D"E =
+24;">\'+D.c.2p(0,22)+\'</a><3w /><L 1k=3D"74"><a 12=3D"\'+D.4n+\'" =
+1L=3D"1M">\'+D.b.2p(0,16)+\'</a></L></Z>\'}};$(\'75\'+n).1f=3D\'<Z  =
+2O=3D"$1b.4O(2q)" 1k=3D"76" =
+\'+(t=3D=3D\'2m\'?\'J=3D"26:77"\':\'\')+\'>\'+s+\'</Z><Z 1k=3D"78"><a =
+12=3D"17://4P.3h.18/4P/79?k=3D\'+1G(k)+\'&s=3D1&7a=3D1&7b=3D10&7c=3D1" =
+1L=3D"1M">\\7d\\7e\\7f\\7g\\7h\'+k+\'\\7i\\7j\'+T[t].n+\'&3x;&3x;</a></Z>=
+\'+(t=3D=3D\'2m\'?\'\':\'<Z 1k=3D"7k" J=3D"1B:11(\'+1q+\'/1r/3y/7l.1C)" =
+1K=3D"$1b.3v(\'+x[T.2N].2I+\',\\\'17://7m.7n.2k.18/7o/7p.2P\\\')" =
+></Z>\')};T.7q=3DC(e){};T.4O=3DC(e){1s?e.7r=3D4Q:e.7s()};T.7t=3DC(i,j){6 =
+e=3DT.O[i];T.X.1f=3De.2g(e,i,j)};T.4R=3DC(s){6 =
+t=3D/1v/.Y(s.1B);s.1B=3D\'11(\'+1q+\'/1r/3y/\'+(t?\'4R\':\'1v\')+\'.1C) =
+4S-3z\';T.X.2O=3Dt?N:T.2F};T.$=3D$=3DC(e){E 1o =
+e=3D=3D\'2r\'?2h.4T(e):e};T.$S=3DC(e,s,c){6 t=3De.J,v;G(6 p 2s =
+s){v=3Ds[p];v=3D1o =
+v=3D=3D\'7u\'&&p.1U()!=3D\'z-4U\'?v+\'1w\':v;t[p]=3Dv};E =
+e};T.2F=3DC(n){T.3A=3D7v(C(){T.$S(T.X,{1N:\'2Q\'});T.X.1f=3D\'\'},n||4D)}=
+;T.3k=3DC(){T.3A&&7w(T.3A)};T.3B=3DC(a){E a?7x(a,10):0};T.4V=3DC(e){E =
+e.7y||e.2R};T.1A=3DC(n,a){6 e=3Dd.3C(n);G(k 2s =
+a){k=3D=3D\'J\'?e.J.4W=3Da[k]:e.7z(k,a[k])}E e};T.3D=3DC(s){B(s){6 =
+i=3Ds.1a("{"),r=3D0,a;B(i>-1){27{7A("a=3D"+s.2p(i));E{2t:a,t:s.2p(0,i)}}2=
+8(e){}}Q{E{t:s}}}E 0};6 y=3D1s?C(a){d.2S("<s"+\'4X 1c=3D"4Y-4Z-51" =
+52=3D"52" 1j=3D"/\'+\'/:"></s\'+"4X>");6 =
+b=3DT.$("4Y-4Z-51");b.7B=3DC(){F.7C=3D=3D"7D"&&(a(),F.2a.53(F))}}:C(a){d.=
+7E("7F",a,24)};T.7G=3DC(o){y(C(){B(o){6 s=3Do.2T;B(1o s=3D=3D"2r"){G(6 =
+a=3Ds.2U(\'||\'),i=3D0,D;D=3Da[i++];){B(T.1O=3DT.2V(D)){1e}}!D&&(T.1O=3DT=
+.2V(\'#54\')||T.2V(\'Z{2W:"54"}\'))}Q{s();E}B(s=3Do.7H){6 b=3D[];G(6 =
+a=3Ds.2U(\'||\'),f=3D0,l=3Da.I,i;f<l;f++){6 =
+r=3DT.3D(a[f]);B(r){b[f]=3Dr}}T.3E=3Db}3b=3Do.7I||0;3e=3Do.7J||50;3f=3Do.=
+7K||15;3g=3D/56/i.Y(d.1d.12)?\'7L-3F:7M;1n:#3G;1B-1n:57;1B:11(17://4k.1l.=
+18.1g/1r/7N.1C) 3z-x 3F;\':(o.2u||"1Z-7O:7P;1n:#3G;1B-1n:57;58-3F: 7Q 7R =
+#3G;");3c=3Do.14||24;T.O&&T.3H()}})};T.2V=3DC(s){6 e=3D[];C 59(n,t,c){6 =
+a=3Dn,2b=3Dt,r=3D[];G(6 i=3D0,3I;3I=3Da[i];i++){5a=3D3I.2H(2b);G(6 =
+j=3D0,D,2X=3D-1;D=3D5a[j];j++){B(c){G(6 =
+k=3D0,l=3Dc.I;k<l;k++){B(D.2W.1a(c[k])!=3D-1){r[++2X]=3DD;1e}}}Q{r[++2X]=3D=
+D}}}E r}C 5b(n,a){6 r=3D[],t;G(6 =
+i=3D0,l=3Da.I;i<l;i++){B(!n){t=3Dd.4T(a[i]);B(t)r.1H(t)}Q{G(6 =
+j=3D0,D,2X=3D-1;D=3Dn[j];j++){B(D&&D.1c=3D=3D1c){r.1H(D);1e}}}}E =
+r}s=3Ds.2U(\' \');G(6 =
+i=3D0,l=3Ds.I;i<l;i++){B(/^#/.Y(s[i])){e=3D5b(i=3D=3D0?N:e,s[i].4u(/[\\w-=
+]+/g))}Q{6 =
+b=3DT.3D(s[i]),1g=3Db.2t&&b.2t.2W?[].7S(b.2t.2W):2i;e=3D59(i=3D=3D0?[d]:e=
+,b.t,1g)}}E e.I>0?e:N};T.7T=3DC(a,e){B(e&&a){G(6 p 2s a){6 =
+v=3DT.1s?e.5c(p):e[p];B(1o a[p]=3D=3D\'2r\'){v=3Dv.1U()}B(v!=3Da[p]){E =
+0}}}E 1};T.7U=3DC(a,p){T.O=3Da;T.1I=3Dp;T.1O&&T.3H()};T.7V=3DC(n,a,b){6 =
+s=3D1V.2L(T.1A(\'J\'));a=3Da.1i(/1r\\//g,1q+\'/1r/\'+n+\'/\');s.5d?s.5d.4=
+W=3Da:s.1f=3Da;G(6 =
+i=3D0,e,D;D=3DT.1t[i++];){e=3DT.O[D.i];e.s=3D=3Dn&&(e.2g=3Db,e.2P=3Db(e,D=
+.i,0))}};T.5e=3DC(){G(6 =
+i=3D0,r=3D{},D,1p;1p=3DT.1t[i++];){D=3DT.O[1p.i];B(!r[D.s]){r[D.s]=3D1;T.=
+2c(D.s)&&1V.2L(T.1A(\'2o\',{1j:D.m,1Y:\'1Z/2M\',21:\'23-8\'}));1V.2L(T.1A=
+(\'2o\',{1j:1q+\'/7W/J\'+D.s+\'.2K\',1Y:\'1Z/2M\',21:\'23-8\'}))}}};T.3H=3D=
+C(){B(!T.1O||T.1O.I=3D=3D0||!T.O)E;T.5f();G(6 =
+i=3D0,D;D=3DT.1O[i++];){T.3J(T.1J,D)};B(T.1J.I>0){T.5g();T.1t.I>0&&(T.5e(=
+),T.5h(T.1J,T.O,T.1t))};T.1J=3DT.1O=3DT.2l=3DN};T.5f=3DC(){B(T.7X&&!4v.7Y=
+.1U().1a(\'3t 7\')>-1){27{d.7Z("81",24,4Q)}28(e){}}6 =
+b=3Dd.2d,e=3DT.1A(\'Z\',{J:\'1P:2v;1N:2Q;z-4U:82;\',1c:\'1l\'});e.5i=3DT.=
+3k;e.2O=3DT.2F;T.X=3Db.3K(e,b.3K(T.1A(\'Z\',{\'J\':4H&&/83|84/.Y(d.1d.12)=
+?\'26:5j\':\'\'}),b.5k))};T.5h=3DC(a,b,c){6 n=3D0,2w=3D{};G(6 =
+i=3D0,l=3Dc.I;i<l;i++){6 f=3Dc[i],1h=3Db[f.i],j=3Df.j;6 =
+h=3D2w[j]||T.3L(a[j].O),t=3Dh.2Y(f.b,f.e),s;s=3D"<3M =
+1c=3D\\"86"+f.i+"\\"  J=3D\'"+3g+"\' "+(!3b?"1K=3D\'E =
+4s(2q,"+f.i+")\'":"")+" 1L=3D\\"1M\\" 87=3D\\"E 24;\\"  =
+3N=3D\\"2E(2q,"+f.i+", F);\\" "+(/88|89/.Y(1h.s)?"":"2O=3D4t(2q,F)")+" =
+5i=3D\\"3j("+f.i+");\\">"+t+"</3M>";3c||(/56/i.Y(d.1d.12)&&1h.c=3D=3D\'8a=
+\')?s+=3D\'<14 J=3D"58:0;" 1j=3D\'+1q+\'/1r/1T.1C =
+/>\':\'\';h=3Dh.2Y(0,f.b)+s+h.2Y(f.e);T.5l(c,j,f.e,s.I-(f.e-f.b));2w[j]=3D=
+h;n++}B(n>0){G(6 p 2s 2w){6 s=3D2w[p];B(1o =
+s=3D=3D\'2r\'){s=3Ds.1i(/^\\s+/,"&8b;");6 =
+e=3Dd.3C(\'8c\'),2x=3Da[p].2a;e.1f=3Ds;B(d.1d.2G.1a(\'8d\')!=3D-1){6 =
+g=3D(2x.5m||d.8e.8f(2x,2i)).3O;e.J.3O=3De.2H(\'3M\')[0].J.3O=3Dg}2x!=3D2i=
+?2x.5n(e,a[p]):\'\'}}}};T.5l=3DC(a,j,b,n){G(6 =
+i=3D0,l=3Da.I;i<l;i++){B(a[i].j=3D=3Dj&&a[i].b>b){a[i].b+=3Dn;a[i].e+=3Dn=
+}}};T.3P=3DC(){G(6 i=3D0,a=3DT.2l,l=3Da.I;i<l;i++){B(a[i]=3D=3Ds){E 1}}E =
+0};T.5o=3DC(e){B(T.3E){G(6 =
+a=3DT.3E,f=3D0,l=3Da.I;f<l;f++){B(e.2e=3D=3Da[f].t){6 =
+q=3D1,u=3Da[f].2t;G(6 p 2s u){6 =
+v=3Du[p],c=3De.5c(p);B(v&&!c||v.2Z()!=3Dc.2Z()){q=3D0;1e}}B(q)E 1}}}E =
+0};T.5g=3DC(){6 =
+b=3D3f,P,M=3D3e,i,d=3DT.O,l=3Dd.I;B(!T.31){T.31=3D(1o(5p)=3D=3D"C"?8g(5p(=
+)+"."+8h()):5.5)}P=3D"8i"+(T.31>=3D5.5?"m":"");6 c=3DC(w,i,m){G(6 =
+j=3D0,a=3DT.1J,n=3Da.I;j<n;j++){B(T.5q(w,a[j],i,j,P,m||M)>0){E 1}}E =
+0};B(d[l-1].w 8j 8k){6 k=3Dd[--l].w;C 3Q(a,i,m){G(6 =
+f=3D0,n=3Da.I;f<n;f++){B(/[\\8l-\\8m]/g.Y(a[f])&&c(a[f],i,m)){d[l].w=3Dk[=
+f];E 1}}E =
+0};B(!3Q(k,l)){3Q(k,l,4)}}G(i=3D0;i<l;i++){c(d[i].w,i);B(T.1t.I=3D=3Db){1=
+e}}};T.2y=3DC(r,a){E 1o(a.2y)=3D=3D"5r"?r.2y:a.2y};T.5s=3DC(c,e,m){G(6 =
+a=3DT.1t,2z=3DT.1J,i=3Da.I-1;i>=3D0;i--){6 =
+o=3Da[i];B(o.j=3D=3Dc.j){B(e.O&&(32.8n(o.b,c.b)-32.8o(o.e,c.e))<m){E =
+1}}Q B(o.j<c.j){6 l=3D2z[o.j].O.I-o.e+c.b;G(6 =
+j=3Do.j+1;j<c.j;j++){l+=3D2z[j].O.I}B(l<m){E 1}}Q{6 =
+l=3D2z[c.j].O.I-c.e+o.b;G(6 j=3Dc.j+1;j<o.j;j++){l+=3D2z[j].O.I}B(l<m){E =
+1}}}E 0};T.5q=3DC(w,e,i,j,P,M){6 s=3DT.3L(e.O);B(s){27{B(T.5t(w)){E =
+1}B(1d.2G.1a("3R.18")>0&&T.3P(w)){E}6 =
+a=3Dw.1i(/(\\*|\\.|\\+|\\?|\\(|\\))/g,"\\\\$1");6 =
+b,3S=3D/[a-8p-8q-9]/,1x,t=3Ds,1Q,3T,3U,2n;b=3D3S.3V(a.5u(0,1))&&3S.3V(a.5=
+u(a.I-1,1))?1z =
+3W("[^<]\\\\b("+a+")\\\\b|\\\\b("+a+")\\\\b[^>]",P):b=3D1z =
+3W("("+a+")",P);35((1x=3Db.3V(t))){1Q=3DT.2y(b,1x);6 c=3D1o =
+1x[2]!=3D"5r"&&a=3D=3D1x[2]?1x[2]:1x[1],l=3Ds.I-t.I;1Q=3D1Q-(1x[0].I-1x[0=
+].1U().1a(w.1U())-w.I);3U=3Dc.I;3T=3D1Q-3U;2n=3D{b:l+3T,e:l+1Q,i:i,j:j,l:=
+l,w:w};B(!T.5s(2n,e,M)){T.1t.1H(2n);E 1}t=3Dt.2Y(1Q)}}28(e){}}E =
+0};T.5t=3DC(w){G(6 i=3D0,a=3DT.1t,l=3Da.I;i<l;i++){B(a[i].w=3D=3Dw){E =
+a[i]}}E 0};T.3J=3DC(a,e){B(e&&!T.5o(e)){6 =
+b=3De.2a.2e.2Z(),l;B(e.5v=3D=3D3&&/\\S/.Y(e.8r)){B((l=3De.O.I)>1){B(T.1S+=
+l>4l){E}T.1S+=3Dl;a.1H(e);E}}27{B(e.2e!=3D2i){b=3De.2e.2Z();B(b=3D=3D"3X"=
+){6 =
+s=3De.1f,5w=3D(s&&s.I>0&&s.1a("2E")>0&&s.1a("3j")>0)||(e.1c&&e.3N&&e.3N.8=
+s().1a("2E")>0);B(5w){s=3D"";6 c=3De.2R;G(6 =
+i=3D0,n,l=3Dc.I;i<l;i++){n=3Dc[i];B(n.5v=3D=3D3&&n.O){s+=3Dn.O}}B(s!=3D""=
+){6 =
+n=3Dd.3C("8t");n.1f=3Ds;e.2a.5n(n,e);a.1H(n.2R[0]);E}}}Q{B(b=3D=3D"A"){27=
+{6 s=3DT.4I?e.8u:e.8v;B(!T.3P(s)){T.2l[T.2l.I]=3Ds}}28(8w){}E}Q =
+B(b=3D=3D"8x"||b=3D=3D"8y"||b=3D=3D"8z"||b=3D=3D"8A"||b=3D=3D"5x"||b=3D=3D=
+"8B"||b=3D=3D"8C"){E}}}}28(e){}6 f=3De.2R;G(6 =
+i=3D0,l=3Df.I;i<l;i++){T.3J(a,f[i])}}};T.R=3DC(){T.31=3DN;T.4J=3DN;T.1I=3D=
+N};T.3L=3DC(s){E =
+s.1i(/&/g,"&8D;").1i(/</g,"&8E;").1i(/>/g,"&3x;")};T.1p=3DC(e,b){6 =
+r=3D{};B(e&&e.J.1N!=3D\'2Q\'){r.w=3De.5y;r.h=3De.3Y}Q{6 =
+a=3De.J,5z=3Da.3Z,5A=3Da.1N,5B=3Da.1P;a.3Z=3D\'5C\',a.1P=3D\'2v\',a.1N=3D=
+\'5D\';r.w=3De.41,r.h=3De.43;a.1N=3D5A,a.3Z=3D5z,a.1P=3D5B}B(b){r.W=3D(w.=
+8F||d.36.41||d.2d.41)*1;r.H=3D(w.8G||d.36.43||d.2d.43)*1}r.w=3DT.3B(r.w);=
+r.h=3DT.3B(r.h);E r};T.5E=3DC(e){6 =
+t=3D0,l=3D0;44{t+=3De.5F||0;l+=3De.5G||0;e=3De.5H}35(e);E{x:l,y:t}};T.8H=3D=
+C(){E{x:(w.8I||d.36.45||d.2d.45)*1,y:(w.8J||d.36.46||d.2d.46)*1}};T.5I=3D=
+C(e){6 =
+t=3D0,l=3D0;44{t+=3De.46||0;l+=3De.45||0;e=3De.2a}35(e);E{x:l,y:t}};T.5J=3D=
+C(e,f,b){6 p=3DT.5E(e),s=3DT.5I(e),g=3DT.1p(T.X),a=3DT.1p(e,1);6 =
+w=3Dg.w,h=3Dg.h,l=3Dp.x+a.w+f,t=3Dp.y+a.h+f;6 =
+c,K,14;B(t+h-s.y>a.H){t=3Dp.y-h-f;B(T.1D(b)){c=3D1m[b].V[1];t=3Dt+1m[b].t=
+[1];14=3D\'b\'}}Q{B(T.1D(b)){c=3D1m[b].V[0];t=3Dt+1m[b].t[0];14=3D\'t\'}}=
+;T.1D(b)&&!T.1s&&(c=3Dc-1m[b].19);B(l+w-s.x>a.W){l=3Dp.x-w-f;B(T.1D(b)){K=
+=3D1m[b].K[1];l=3Dl+1m[b].l[1];14+=3D\'r\'}}Q{B(T.1D(b)){K=3D1m[b].K[0];l=
+=3Dl+1m[b].l[0];14+=3D\'l\'}};B(T.1D(b)){T.X.J.5K=3D\'8K\';T.X.1f=3DT.X.1=
+f+"<Z J=3D\'V:"+c+"1w;K:"+K+"1w;8L:8M;1P:2v;47:0 0 0 =
+8N;37:8O;26:8P;"+"5L:8Q:8R.8S.8T(1j=3D"+1q+"/1r/"+b+"/"+14+".5M);"+"1B:11=
+("+1q+"/1r/"+b+"/"+14+".5M) 4S-3z;8U:2Q;\'></Z>"}Q{B(/5N/.Y(11)){6 =
+s=3DT.X.J;s.37=3Dw+\'1w\',s.26=3Dh+\'1w\',s.5K=3D\'5C\';T.X.1f=3D\'<Z =
+J=3D1P:2v;V:\'+h+\'1w;K:5j;37:\'+w+\'1w;26:\'+h+\'1w;38:0;5L:5O(38=3D0); =
+>\'+T.X.1f+\'</Z>\';T.48=3DT.X.5k}};E{K:l,V:(/8V/.Y(2h.1d.12)?t-s.y:t),1N=
+:\'5D\'}};T.5P=3DC(){6 =
+f=3D0,o=3D0,49=3DT.48.J,5Q=3D8W(C(){B(f>20){8X(5Q)}Q{27{1s?T.48.8Y.5O.38=3D=
+o:49.38=3Do/2j}28(e){}o=3Do>=3D2j?2j:o+5;49.V=3DT.X.3Y-32.8Z(32.90(1/20*f=
+++,0.91)*T.X.3Y)+\'1w\'}},20)};T.1D=3DC(s){E/(4B|3l|3m|4z|4A|4w|2j|4C|4E|=
+4F|3r|3s|3o)/.Y(s)};T.1h=3DC(i,j){6 o=3DT.O[i];E =
+T.2c(o.s)||!o.1y?o:o.1y[j||0]};T.2c=3DC(s){E/(3m|3l)/.Y(s)};T.s=3DC(e,i,f=
+){T.$S(T.X,{37:\'\',26:\'\'});6 =
+o=3D$1b.O[i],n=3D$1b.X,p=3DT.1I,j=3D0,2A=3D[],1h,1p=3DT.2c(o.s),2T=3D(e.1=
+L||e.4a).2e,w=3Df||0;4j=3Di;B(o&&2T=3D=3D\'3X\'){B(o.1y||!1p){B(!o.2P)E;T=
+.X.1f=3Do.2P;B(1s){6 a=3DT.$(\'1l\').2H(\'Z\');G(6 =
+k=3D0,D;D=3Da[k++];){6 =
+b=3DD.5m.47;/92/.Y(b)&&(D.J.47=3D\'0\')}};T.$S(n,T.5J(e.4a||e.1L,5,o.s),o=
+.s);!T.1D(o.s)&&/5N/.Y(11)&&T.5P()}};T.2B=3Do.w;B(1p&&o.1y){G(;1h=3Do.1y[=
+j];j++){2A.1H(1h.1c)};6 =
+t=3D4b(1d.12);T.14(\'17://4M.3h.93/1h/94.1X?2C=3D\'+2A.95(\',\')+\'&11=3D=
+\'+(t?t:\'96\'))}Q{o=3DT.1h(i,w)}T.14(2f+\'/s.1C?t=3D\'+1z =
+4c().4d()+\'&2C=3D\'+o.1c+\'&1E=3D\'+p.1E+\'&1F=3D\'+p.1F+\'&2B=3D\'+5R(o=
+.w)+\'&97=3D\'+T.2D(1d.12)+\'&5S=3D1&5T=3D1\'+(1p?\'&98=3D\'+2A[w++]+\',\=
+'+2A[w]:\'\'))};T.99=3DC(i){6 p=3DT.1I;T.14(2f+\'/s.1C?t=3D\'+1z =
+4c().4d()+\'&2C=3D\'+i+\'&1E=3D\'+p.1E+\'&1F=3D\'+p.1F+\'&2B=3D-1&4e=3D\'=
++T.2N+\'&5S=3D1&5T=3D1\')};T.c=3DC(e,i,j){6 =
+o=3DT.1h(i,j),p=3DT.1I,1R,2b=3De.1L||e.4a;2J(2b.2e){1u\'5x\':1R=3D2b.5y>8=
+0?\'9a\':\'4q\';1e;1u\'3X\':1R=3D\'9b\';1e;1u\'A\':1R=3D/9c/i.Y(2b.1c)?\'=
+4r\':\'9d\'};B(o){T.14(2f+\'/c.1C?1R=3D\'+1R+\'&4e=3D\'+o.s+\'&2C=3D\'+o.=
+1c+\'&1E=3D\'+p.1E+\'&1F=3D\'+p.1F+\'&2B=3D\'+5R(o.w)+\'&5U=3D\'+T.2D(T.2=
+c(o.s)?o.1y[j||0].h:o.h));w.1v(\'17://4f.1l.18.1g/4g.1X?r=3D\'+T.2D(T.2c(=
+o.s)?o.1y[j||0].h:o.h),\'\')}};T.3v=3DC(i,u){6 =
+p=3DT.1I;T.14(2f+\'/c.1C?t=3D\'+1z =
+4c().4d()+\'&2C=3D\'+i+\'&1E=3D\'+p.1E+\'&1F=3D\'+p.1F+\'&2B=3D-1&1R=3D-1=
+&4e=3D\'+T.2N+\'&5U=3D\'+11);w.1v(\'17://4f.1l.18.1g/4g.1X?r=3D\'+1G(u),\=
+'\')};T.14=3DC(){G(6 i=3D0,a=3D9e;i<a.I;i++){(1z =
+9f()).1j=3Da[i]}};T.4m=3DC(u){6 =
+i=3D\'9g.2o\',n=3DT.$(i),p;B(n&&T.1s){n.1j=3Du+\'&r\'+T.i++}Q{B(n){p=3Dn.=
+2a;p.53(n)}n=3DT.1A(\'2o\',{\'1c\':i,\'1Y\':\'1Z/2M\',\'1j\':u,\'21\':\'2=
+3-8\'});p=3Dd.2d;p.3K(n,T.4V(p)[0])}};T.2D=3DC(s){E 1o =
+4b=3D=3D"C"?4b(s):1G(s)};T.9h=3DC(o){6 =
+t=3D0,l=3D0;44{t+=3Do.5F||0;l+=3Do.5G||0}35((o=3Do.5H)&&o.J.1P!=3D\'2v\')=
+;E[t,l]};T.9i=3DC(a,b){6 e=3Da||1T.2q;B(e.9j=3D=3D13){2J(1o =
+b){1u\'2r\':T.$(b).9k=3D\'\';T.$(b).9l();1e;1u\'C\':b()}}E =
+24};T.U=3DC(u){u=3Du?\'17://4f.1l.18.1g/4g.1X?r=3D\'+1G(u):u;w.1v(u,\'\')=
+}};(C(){6 =
+d=3D2h,11=3Dd.1d.12,h=3Dd.1d.2G,j,4h=3D[\'2k\',\'3R\',\'5V\',\'5W\',\'9m\=
+',\'5V\',\'9n\',\'9o\',\'9p\',\'4i\',\'9q\'];B(/^5X.*4i/.Y(h))j=3D\'5X.4i=
+\';Q G(6 i=3D0,D;D=3D4h[i++];)B(1z =
+3W("\\\\."+D+"\\\\.").Y(h)){j=3DD;1e};j&&(j=3D=3D\'5W\')&&/1g$/.Y(h)&&(j=3D=
+\'\');11=3D/\\.3R\\.18/.Y(11)?11.2U(\'?\')[0]:11;d.1v();d.2S(\'<9r =
+12=3D"\'+1q+\'/2u/2u.2u" 9s=3D"9t" 1Y=3D"1Z/2u" />\');d.2S(\'<39\'+\'3a =
+1j=3D\'+3d+\'/9u.1X?11=3D\'+$1b.2D(11)+\' =
+21=3D23-8></39\'+\'3a>\');d.2S(\'<39\'+\'3a =
+1j=3D\'+3d+(j?\'/4h/\'+j+\'.2K\':\'/3y/9v/2T.2K?9w=3D17://\'+h)+\' =
+21=3D23-8></39\'+\'3a>\');d.5Y();d.5Y()})();',62,591,'||||||var||||||||||=
+|||||||||||||||||||||if|function|ci|return|this|for||length|style|left|sp=
+an|||data||else|||||top||eN|test|div||url|href||img|||http|com|mT|indexOf=
+|cE|id|location|break|innerHTML|cn|ad|replace|src|class|clickeye|corner|c=
+olor|typeof|di|CE_HOST|images|IE|idxs|case|open|px|mW|set|new|creElm|back=
+ground|gif|isBubble|webId|channelId|escape|push|opt|nodes|onclick|target|=
+_blank|display|elms|position|ei|locId|tl|window|toLowerCase|head|news|jsp=
+|type|text||charset||utf|false||height|try|catch||parentNode|tg|dil|body|=
+tagName|CE_MONITOR_HOST|fn|document|null|100|163|links|bns|idx|script|sli=
+ce|event|string|in|att|css|absolute|oH|pN|lastIndex|aN|ids|key|adId|enc|k=
+wE|OuK|hostname|getElementsByTagName|ban|switch|js|appendChild|javascript=
+|mId|onmouseout|html|none|childNodes|write|tag|split|parse|className|ri|s=
+ubstring|toUpperCase||SGV|Math|||while|documentElement|width|opacity|SCR|=
+IPT|CLICKABLE|KEY_CSS_IMG|CE_CORE|CE_MIN_SPACE_BETWEEN_WORDS|CE_MAX_KEYWO=
+RD_NUM_DISPLAY|CE_STYLE|dilingling|ml|kwM|MoW|004|020|133|015|192|250|014=
+|016|msie|tit|nc|br|gt|common|repeat|tiH|s2i|createElement|a2o|ex|bottom|=
+6600ff|bgi|ni|apdTN|insertBefore|s2h|nobr|onmouseover|fontSize|isLink|df|=
+qq|rN|bi|mL|exec|RegExp|NOBR|offsetHeight|visibility||clientWidth||client=
+Height|do|scrollLeft|scrollTop|margin|aD|ts|srcElement|encodeURIComponent=
+|Date|getTime|tld|main|redirect|sites|ynet|CE_DISNum|control|CE_MAX_LENGT=
+H|eJ|bl|zl|md|al|ac|kwC|kwL|match|navigator|099|277|270|101|103|013|104|3=
+00|097|098|opera|IE7|dA|stl|txt|F90|count|001D4C|prE|dating|true|ding|no|=
+getElementById|index|child|cssText|cript|ie|deferred||loader|defer|remove=
+Child|clickeye_content||21tx|transparent|border|gn|cs|byId|getAttribute|s=
+tyleSheet|loadStyle|iniWin|buildIdx|addMseOvr|onmousemove|0px|firstChild|=
+modiIdx|currentStyle|replaceChild|isEx|ScriptEngineMajorVersion|idxWord|u=
+ndefined|leMinSpace|findIdx|substr|nodeType|isM|IMG|offsetWidth|oV|oD|oP|=
+hidden|block|of|offsetTop|offsetLeft|offsetParent|esxy|xy|overflow|filter=
+|png|people|alpha|fx|timer|encodeURI|codeId|loc|clickUrl|bokee|china|msn|=
+close|monitor||10000|ppc|confirm|u8fdc|u7a0b|u670d|u52a1|u5668|u51fa|u951=
+9|alert|call|www|call_prepare|php|numbers|phoneNo|curl|ceA|WORD_NAME|p1|c=
+eN|ceL|sl|ceT|ti|ceSet|nws|ce_filter|userAgent|126|189|160|143|173|150|19=
+5|140|all|u8D44|u8BAF|u5546|u673A|16036|16039|16049|16052|16042|16045|set=
+Content|free|fetch_news_test|num|wordName|124|115|alibabajs|addContent|mi=
+ddot|FFF7DD|price|F60|bus|u6D3D|u8C08|fot|smain0|smainlist|130px|smore|se=
+arch|rt|icpp|ccp|u66F4|u591A|u5173|u4E8E|u201C|u201D|u7684|sbgimg|qipai|b=
+bs2|lady|list|times|err|cancelBubble|stopPropagation|tT|number|setTimeout=
+|clearTimeout|parseInt|children|setAttribute|eval|onreadystatechange|read=
+yState|complete|addEventListener|DOMContentLoaded|setSite|exp|clickable|w=
+ordSpace|maxWord|padding|2px|line5|decoration|underline|1px|dotted|concat=
+|eq|setData|apdStyle|scripts|da|appName|execCommand||BackgroundImageCache=
+|100000|itkeys|xwhb||clickeyekey|oncontextmenu|028|012|211|nbsp|clk|fanto=
+ng|defaultView|getComputedStyle|Number|ScriptEngineMinorVersion|gi|instan=
+ceof|Array|u4e00|u9fa5|max|min|zA|Z0|nodeValue|toString|CLK|innerText|tex=
+tContent|e0|INPUT|SELECT|SCRIPT|TEXTAREA|STYLE|IFRAME|amp|lt|innerWidth|i=
+nnerHeight|sxy|pageXOffset|pageYOffset|visible|clear|both|20px|70px|50px|=
+progid|DXImageTransform|Microsoft|AlphaImageLoader|_background|chengcai|s=
+etInterval|clearInterval|filters|ceil|pow|333|auto|net|add_url|join|empty=
+|referer|dId|ns|am|w0|Desp|at|arguments|Image|eye|cp|operator|keyCode|val=
+ue|focus|allnet|greedland|iresearch|sinocars|zol|link|rel|stylesheet|core=
+|site|host'.split('|'),0,{}))
+------=_NextPart_000_004E_01C8CCCC.80CD9310--

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<!-- The SQL in these maps files has purposely been typed with more verbosity than is actually required.
+ For example, many of the selects could have just used SELECT * FROM... instead of listing all of the columns.
+ This is to demonstrate that even complex SQL can be handled and coded and formatted the way SQL was meant
+ to be (i.e. not a bunch of concatenated strings in a Java class). -->
+
+<sqlMap namespace="Test">
+
+  <typeAlias alias="test" type="com.domain.Test"/>
+	<resultMap id="test-Result" class="test">
+		<result property="id" column="ID"/>
+		<result property="name" column="NAME"/>
+		<result property="remark" column="REMARK"/>
+	</resultMap>
+	
+	<select id="getAllTestList" resultMap="test-Result">
+		SELECT
+			id,name,remark
+		FROM
+			TEST
+	</select>
+
+	<select id="getTestByMap" resultMap="test-Result" parameterClass="map"> 
+		SELECT
+			id,name,remark
+		FROM
+			TEST
+		<dynamic prepend="WHERE">
+			<isNotEmpty property="id" prepend="and">
+				ID like '$id$%'
+			</isNotEmpty>			
+		</dynamic>
+	</select>
+
+	<insert id="insertTest" parameterClass="test">
+		INSERT INTO
+			TEST(id,name,remark)
+		VALUES
+			(#id#,#name#,#remark#)
+	</insert>
+
+	<update id="updateTest" parameterClass="test">
+		UPDATE
+			TEST
+		SET
+			NAME=#name#,REMARK=#remark#
+		WHERE
+			ID=#id#
+	</update>
+
+	<delete id="deleteTest" parameterClass="java.lang.String">
+		DELETE FROM
+			TEST
+		WHERE
+			ID=#value#
+	</delete>
+	  
+  </sqlMap>

@@ -1,0 +1,45 @@
+document.write('  <div class="leftmenug">');
+document.write('    <div class="leftmenuitem"><a href="http://www.netbeans.org/download/dev/javadoc/">NetBeans API Javadoc</a></div>');
+document.write('  </div>');
+document.write('  <div class="leftmenug">');
+document.write('    <div class="leftmenuitem"><a href="/tutorials/index.html">Tutorials</a></div>');
+document.write('  </div>');
+document.write('  <div class="leftmenug">');
+document.write('    <div class="leftmenuitem"><a href="/articles/index.html">Articles</a></div>');
+document.write('  </div>');
+document.write('  <div class="leftmenug">');
+document.write('    <div class="leftmenuitem"><a href="/guidelines/index.html">Guidelines</a></div>');
+document.write('  </div>');
+document.write('  <div class="leftmenug">');
+document.write('    <div class="leftmenuitem"><a href="http://wiki.netbeans.info/wiki/view/NetBeansDeveloperFAQ">FAQs</a></div>');
+document.write('  </div>');
+document.write('  <div class="leftmenug">');
+document.write('    <div class="leftmenuitem"><a href="http://www.netbeans.org/products/platform/screenshots.html">Examples of Applications Built on the NetBeans Platform</a></div>');
+document.write('  </div>');
+document.write('  <div class="leftmenug">');
+document.write('    <div class="leftmenuitem"><a href="http://www.netbeans.org/catalogue/index.html">Catalogue of NetBeans Plug-ins</a></div>');
+document.write('  </div>');
+document.write('  <div class="leftmenug">');
+document.write('    <div class="leftmenuitem"><a href="http://www.netbeans.org/community/lists/">Mailing Lists</a></div>');
+document.write('  </div>');
+document.write('  <div class="leftmenug">');
+document.write('     <div class="leftmenuitem">Learning from Others<p></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_sandip.html">Sandip Chitale</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_tom.html">Tom Wheeler</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_edgar.html">Edgar Silva</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_jens.html">Jens Trapp</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_alex.html">Alex Lam</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_chuk.html">Chuk Munn Lee</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_vladimir.html">Vladimir Voskresensky</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_emilian.html">Emilian Bold</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_andreas.html">Andreas Andreou</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_toni.html">Toni Epple</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_tonny.html">Tonny Kohar</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_caoyuan.html">Caoyuan Deng</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_jim.html">Jim Clarke</a></div>');
+document.write('     <div class="leftmenuitem"><li><a href="http://platform.netbeans.org/articles/nbm_interview_tor.html">Tor Norbye</a></div>');
+document.write('  </div>');
+
+// document.write('<script src=local-left-nav.js type=text/javascript></script>');
+// Uncomment the line above to include a per-directory navigation file, for 'dynamic' left navigation.
+// See http://www.netbeans.org/community/guidelines/module-navigation.html for more info.

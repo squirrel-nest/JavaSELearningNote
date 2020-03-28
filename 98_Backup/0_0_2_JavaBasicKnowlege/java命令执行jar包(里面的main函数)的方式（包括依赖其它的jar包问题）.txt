@@ -1,0 +1,30 @@
+java命令执行jar包(里面的main函数)的方式（包括依赖其它的jar包问题）
+http://xinklabi.iteye.com/blog/2157591
+
+
+如果单个jar文件，没有引用到其他jar文件，而且指定了Main-Class，可以这样运行：
+    java -jar hello.jar
+如果执行的jar文件引用了其他jar文件，该怎么办？
+这里hello.jar里面用到Log4j的Log
+    java -cp log4j-1.2.14.jar -jar hello.jar
+这个想当然可以执行，实际上执行会出现ClassNotFoundException的
+因为使用了 -jar 选项，环境变量 CLASSPATH 和在命令行中指定的所有类路径都被 JVM 所忽略
+
+正确运行方式如下：
+    1、
+    java -cp lib\log4j-1.2.14.jar;hello.jar com.dhn.Hello    （com.dhn.Hello为主类）
+    在windows下多个jar之间以分号（;）隔开,最后还需要指定运行jar文件中的完整的主类名
+    2、
+    java -jar hello.jar
+    但是需要修改hello.jar中的MANIFEST.MF，通过MANIFEST.MF中的Class-Path 来指定运行时需要用到的其他jar，
+    其他jar可以是当前路径也可以是当前路径下的子目录。多个jar文件之间以空格隔开
+    以下面的MANIFEST.MF文件为例
+    Manifest-Version: 1.0
+    Main-Class: com.ibm.portalnews.entrance.Main
+    Class-Path: lib\commons-collections-3.2.jar lib\commons-configuration-1.5.jar lib\commons-lang-2.3.jar lib\commons-logging.jar lib\dom4j-1.6.1.jar lib\jaxen-1.1-beta-7.jar lib\jdom.jar lib\log4j-1.2.14.jar
+
+    其中Manifest-Version表示版本号，一般由IDE工具（如eclipse）自动生成
+    Main-Class 是jar文件的主类，程序的入口
+    Class-Path 指定需要的jar，多个jar必须要在一行上，多个jar之间以空格隔开，如果引用的jar在当前目录的子目录下，windows下使用\来分割，linux下用/分割
+    文件的冒号后面必须要空一个空格，否则会出错
+    文件的最后一行必须是一个回车换行符，否则也会出错

@@ -1,0 +1,72 @@
+Operation failed: javax.naming.CommunicationException [Root exception is java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: java.lang.ClassNotFoundException: com.lzsoft.lzdata.lzdata_DataAccess.Hello
+
+
+
+java -Djava.rmi.server.useCodebaseOnly=false -Djava.rmi.server.hostname="192.168.1.7" -Djava.rmi.server.codebase=http://192.168.1.7:8080/lzjndi/classes/ RemoteRef
+
+
+
+java -Djava.rmi.server.useCodebaseOnly=false -Djava.rmi.server.codebase=http://192.168.1.7:8080/lzjndi/classes/ -Djava.security.policy=server.policy RemoteRef
+java -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.useCodebaseOnly=false -Djava.rmi.server.codebase=http://192.168.1.7:8080/lzjndi/classes/ -Djava.security.policy=server.policy RemoteRef
+
+ java.rmi.AccessException: Registry.Registry.rebind disallowed; origin is non-local host
+ 
+ 
+ 
+ 
+ 
+ -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.ssl.need.client.auth=false -Dcom.sun.management.jmxremote.
+ ssl=false 
+
+java -cp /usr/local/webapps/javaweb/lzjndi/classes/ \
+     -Djava.rmi.server.useCodebaseOnly=false \
+     -Djava.rmi.server.codebase=http://192.168.1.7:8080/lzjndi/classes/ \
+     -Djava.rmi.server.hostname="localhost" \
+     -Djava.security.policy=server.policy \
+     -Dcom.sun.management.jmxremote.port=1099 \
+     -Dcom.sun.management.jmxremote.authenticate=false \
+     RemoteRef
+
+lzdata-DataAccess/target/classes/com/lzsoft/lzdata/lzdata_DataAccess
+
+
+rmiregistry -J-Djava.rmi.server.codebase=="http://192.168.0.8:8080/lzjndi/classes/" &
+
+
+
+
+---------
+https://community.oracle.com/thread/1176160?tstart=0
+Simple JMX example: Failed to retrieve RMIServer stub...Connection refused 
+
+
+JMXServiceURL url = new JMXServiceURL("service:jmx:rmi:///jndi/rmi://localhost:9999/server"); 
+ JMXConnectorServer cs = JMXConnectorServerFactory.newJMXConnectorServer(url, null, mbs); 
+ cs.start(); 
+
+
+
+Before creating an RMI connector server using a JMXServiceURL of the form:     service:jmx:rmi://[host:port]/jndi/rmi://localhost:rmiregport/somename
+then you need to start the rmi registry at localhost:rmiregport.
+
+ You can start it manually, or programatically using:      LocateRegistry.createRegistry(rmiregport);
+PS: see also [this series of articles|http://blogs.sun.com/jmxetc/tags/firewall] 
+
+ Hope this helps,
+
+ -- daniel
+ [http://blogs.sun.com/jmxetc|http://blogs.sun.com/jmxetc] 
+
+
+
+
+---------
+https://community.jboss.org/thread/230672
+https://community.jboss.org/thread/104721
+
+
+
+java -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzjndi/classes/ RemoteObj --实际与codebase无关
+java -Djava.rmi.server.codebase=http://192.168.0.8:8080/lzjndi/classes/Hello RemoteObj --实际与codebase无关
+java RemoteObj
+以上3句均可用

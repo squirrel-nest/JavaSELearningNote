@@ -1,0 +1,40 @@
+
+<ATTACH   EVENT="onclick" HANDLER="MouseOnClick" />
+
+<script language="javascript">
+
+	var sortOrder = false;	
+	var sortCol;
+	var oTable;
+
+	function MouseOnClick(){
+		if(getTable().bInputTurnOn || this.bClickAftResize){
+			this.bClickAftResize = false;
+			return;
+		}
+		var colNum = this.colNum;
+		if(null != colNum && !isNaN(colNum)){
+			//alert(colNum);
+			if(sortCol == colNum){
+				sortOrder = !sortOrder;
+			}else{
+				sortOrder = false;
+			}
+			getTable().sortTable(colNum , sortOrder);
+			sortCol = colNum;
+		}
+	}
+	
+	
+	function getTable(){
+		if(oTable == null){
+			var oTmp = this.parentElement;
+			while(oTmp.tagName != "TABLE"){
+				oTmp = oTmp.parentElement;
+			}	
+			oTable = oTmp;	
+		}
+		return oTable;
+	}
+	
+</script>

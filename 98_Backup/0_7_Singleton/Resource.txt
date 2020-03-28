@@ -1,0 +1,37 @@
+google search:https://www.google.com/#q=java+singleton%E5%AE%9E%E7%8E%B0
+
+
+http://cnn237111.blog.51cto.com/2359144/1641192
+
+http://www.runoob.com/design-pattern/singleton-pattern.html
+
+http://www.jianshu.com/p/de35041a75b3
+
+http://blog.csdn.net/incyanggan/article/details/9531659
+
+http://blog.csdn.net/u013256816/article/details/50427061
+
+http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/
+
+http://www.cnblogs.com/whgw/archive/2011/10/05/2199535.html
+
+http://coolshell.cn/articles/265.html
+
+http://cantellow.iteye.com/blog/838473
+
+http://www.tekbroaden.com/singleton-java.html
+
+http://stackoverflow.com/questions/70689/what-is-an-efficient-way-to-implement-a-singleton-pattern-in-java
+
+http://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples
+
+https://www.tutorialspoint.com/java/java_using_singleton.htm
+
+https://www.tutorialspoint.com/design_pattern/singleton_pattern.htm   ***
+
+http://www.javaworld.com/article/2073352/core-java/simply-singleton.html
+
+
+-------------------------------------------------------------------------
+https://wiki.eclipse.org/File:Sirius_tuto4_04.png
+https://mina.apache.org/

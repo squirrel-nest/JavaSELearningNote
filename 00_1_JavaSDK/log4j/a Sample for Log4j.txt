@@ -1,0 +1,3 @@
+http://www.moon-soft.com/doc/31755.htm
+
+a Sample for Log4j

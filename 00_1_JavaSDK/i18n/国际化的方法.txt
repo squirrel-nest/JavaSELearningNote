@@ -1,0 +1,4 @@
+1.建文本文件，扩展名txt,如：MessagesBundle_zh_CN.txt   --- 需要回车
+2.E:\AppDev\lzdata-DataAccess\target\classes>native2ascii MessagesBundle_zh_CN.txt MessagesBundle_zh_CN.properties
+
+

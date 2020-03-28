@@ -1,0 +1,80 @@
+java jdbc jndi
+jdbc datasource jndi
+
+jndi 如何设置jdbc datasource ----  jndi 如何设置jdbc datasource
+
+jndi datasource 配置
+datasource type jndi
+
+weblogic jndi datasource
+
+jndi jdbc数据源
+
+
+
+
+http://maikeqiit.blog.sohu.com/87389784.html
+
+http://zhidao.baidu.com/question/56503535.html
+
+http://www.coderanch.com/t/429590/JDBC/databases/JDBC-JNDI-DataSource
+
+http://www.myexception.cn/database/756872.html
+
+http://zhouxl.1231.blog.163.com/blog/static/267518332009324344569/
+
+http://blog.sina.com.cn/s/blog_600c6eec0100nxkx.html
+
+http://blog.sina.com.cn/s/blog_613963d10100stor.html
+
+
+http://www.huomo.cn/developer/article-4773.html
+Tomcat中用JNDI方式加载JDBC DataSource以连接数据库
+
+
+
+http://www.cnblogs.com/cyjch/archive/2012/03/28/2420806.html
+
+http://blog.csdn.net/timesongjie/article/details/7645845
+tomact datasource JNDI 详解 
+
+
+http://yangchao20020.blog.163.com/blog/static/4838224720099291142093/
+Java使用JNDI技术获取DataSource对象
+
+http://www.flatws.cn/article/program/java/2010-08-21/8389.html
+JDBC，JDBC连接池和JNDI
+
+http://www.blogjava.net/sheldonsun/archive/2011/03/22/346767.html
+JAVA事务,JTA,JDBC,JDO,DAO,JNDI概念 
+
+
+http://blog.csdn.net/wangpeijiang/article/details/5480599
+汇总 Hibernate 与 jdbc,jndi+dbcp, proxool ,c3p0 连接池的配置 
+
+http://blog.csdn.net/yttcjj/article/details/6939184
+  JAVA事务,JTA,JDBC,JDO,DAO,JNDI概念 
+
+http://jyaitangbo.blog.163.com/blog/static/538403052008112411052536/
+Spring-JNDI配置  
+
+http://www.davenkin.me/post/2012-10-20/40039814527
+通过JNDI访问Jboss中配置的DataSource                            ---优先
+
+http://www.davenkin.me/post/2012-10-20/40039387976
+外部访问Jboss 5中配置的DataSource                              ---优先
+
+http://wenku.baidu.com/view/5d7897c7aa00b52acfc7cab2.html
+用JNDI绑定DataSource                                           ---优先
+
+http://blog.csdn.net/sun_abc/article/details/5658979
+用JNDI绑定DataSource                                           ---优先 同上
+
+
+http://www.javanb.com/jsp/1/9116.html
+用JNDI绑定tomcat数据源                                         ---优先 重点
+
+
+http://www.knowsky.com/371440.html
+浅析数据源在JDBC中的应用
+资料引用:http://www.knowsky.com/371440.html

@@ -1,0 +1,109 @@
+.coolButton {
+	BORDER-RIGHT: buttonface 0px solid; 
+	PADDING-RIGHT: 5px; 
+	BORDER-TOP: buttonface 0px solid; 
+	PADDING-LEFT: 5px; 
+	FONT-WEIGHT: normal; 
+	PADDING-BOTTOM: 2px; 
+	font:normal 12px "宋体";
+	VERTICAL-ALIGN: middle; 
+	BORDER-LEFT: buttonface 0px solid; 
+	CURSOR: default; 
+	PADDING-TOP: 2px; 
+	BORDER-BOTTOM: buttonface 0px solid; 
+	WHITE-SPACE: nowrap; 
+
+	background:url(../images/but_off.gif) repeat-x
+}
+.coolButtonHover {
+	BORDER-RIGHT: buttonface 0px solid; 
+	PADDING-RIGHT: 5px; 
+	BORDER-TOP: buttonface 0px solid; 
+	PADDING-LEFT: 5px; 
+	FONT-WEIGHT: normal; 
+	PADDING-BOTTOM: 2px; 
+	font:normal 12px "宋体";
+	VERTICAL-ALIGN: middle; 
+	BORDER-LEFT: buttonface 0px solid; 
+	CURSOR: default; 
+	PADDING-TOP: 2px; 
+	BORDER-BOTTOM: buttonface 0px solid; 
+	WHITE-SPACE: nowrap; 
+	BACKGROUND-COLOR: buttonface;
+	background:#fff url(../images/but_hover.gif) repeat-x
+}
+.coolButtonActiveHover {
+	BORDER-RIGHT: buttonface 0px solid; 
+	PADDING-RIGHT: 5px; 
+	BORDER-TOP: buttonface 0px solid; 
+	PADDING-LEFT: 5px; 
+	FONT-WEIGHT: normal; 
+	PADDING-BOTTOM: 2px; 
+	font:normal 12px "宋体";
+	VERTICAL-ALIGN: middle; 
+	BORDER-LEFT: buttonface 0px solid; 
+	CURSOR: default; 
+	PADDING-TOP: 2px; 
+	BORDER-BOTTOM: buttonface 0px solid; 
+	WHITE-SPACE: nowrap; 
+	background:url(../images/but_hover.gif) repeat-x
+}
+.coolButtonActive {
+	BORDER-RIGHT: buttonface 0px solid; 
+	PADDING-RIGHT: 5px; 
+	BORDER-TOP: buttonface 0px solid; 
+	PADDING-LEFT: 5px; 
+	FONT-WEIGHT: normal; 
+	PADDING-BOTTOM: 2px; 
+	font:normal 12px "宋体";
+	VERTICAL-ALIGN: middle; 
+	BORDER-LEFT: buttonface 0px solid; 
+	CURSOR: default; PADDING-TOP: 2px; 
+	BORDER-BOTTOM: buttonface 0px solid; 
+	WHITE-SPACE: nowrap; 
+	background:url(../images/but_hover.gif) repeat-x
+
+}
+.coolButtonActiveDisabled {
+	BORDER-RIGHT: buttonface 0px solid; 
+	PADDING-RIGHT: 5px; 
+	BORDER-TOP: buttonface 0px solid; 
+	PADDING-LEFT: 5px; 
+	FONT-WEIGHT: normal; 
+	PADDING-BOTTOM: 2px; 
+	font:normal 12px "宋体";
+	VERTICAL-ALIGN: middle; 
+	BORDER-LEFT: buttonface 0px solid; 
+	CURSOR: default; 
+	PADDING-TOP: 2px; 
+	BORDER-BOTTOM: buttonface 0px solid; 
+	WHITE-SPACE: nowrap; 
+	background:url(../images/but_off.gif) repeat-x
+}
+.coolButtonDisabled {
+	BORDER-RIGHT: buttonface 0px solid; PADDING-RIGHT: 5px; BORDER-TOP: buttonface 0px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; PADDING-BOTTOM: 2px; FONT: Icon; VERTICAL-ALIGN: middle; BORDER-LEFT: buttonface 0px solid; CURSOR: default; PADDING-TOP: 2px; BORDER-BOTTOM: buttonface 0px solid; WHITE-SPACE: nowrap; background:url(../images/but_on.gif) repeat-x
+}
+.coolButtonUpDisabled {
+	BORDER-RIGHT: buttonface 0px solid; PADDING-RIGHT: 5px; BORDER-TOP: buttonface 0px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; PADDING-BOTTOM: 2px; FONT: Icon; VERTICAL-ALIGN: middle; BORDER-LEFT: buttonface 0px solid; CURSOR: default; PADDING-TOP: 2px; BORDER-BOTTOM: buttonface 0px solid; WHITE-SPACE: nowrap; background:url(../images/but_on.gif) repeat-x
+}
+.coolButton IMG {
+	FILTER: gray()
+}
+.coolButtonHover {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: buttonhighlight; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: buttonshadow; PADDING-BOTTOM: 1px; BORDER-TOP-COLOR: buttonhighlight; PADDING-TOP: 1px; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: buttonshadow; WHITE-SPACE: nowrap; background:url(../images/but_hover.gif) repeat-x
+}
+.coolButtonActiveHover {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 3px; PADDING-LEFT: 5px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: buttonshadow; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: buttonhighlight; PADDING-BOTTOM: 0px; BORDER-TOP-COLOR: buttonshadow; PADDING-TOP: 2px; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: buttonhighlight; WHITE-SPACE: nowrap; background:url(../images/but_on.gif) repeat-x
+}
+.coolButtonActive {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 3px; PADDING-LEFT: 5px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: buttonshadow; BACKGROUND-IMAGE: url(../images/cbback.gif); BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: buttonhighlight; PADDING-BOTTOM: 0px; BORDER-TOP-COLOR: buttonshadow; PADDING-TOP: 2px; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: buttonhighlight; WHITE-SPACE: nowrap; background:url(../images/but_on.gif) repeat-x
+}
+.tablecolor2 {
+	BORDER-RIGHT: #bdc0c8 1px solid; BORDER-TOP: #bdc0c8 1px solid; BORDER-LEFT: #bdc0c8 1px solid; BORDER-BOTTOM: #bdc0c8 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5f5f5
+}
+.tablecolor2 TR {
+	TEXT-ALIGN: right
+}
+.tablecolor2 TD {
+	BORDER-RIGHT: #bdc0c8 1px solid; BORDER-BOTTOM: #bdc0c8 1px solid; HEIGHT: 25px
+}

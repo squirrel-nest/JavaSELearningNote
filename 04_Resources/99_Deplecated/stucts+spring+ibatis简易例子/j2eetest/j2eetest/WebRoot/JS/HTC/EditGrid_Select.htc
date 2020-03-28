@@ -1,0 +1,60 @@
+<!---------------------------------------------------------------------------------------------
+//   
+//  @Author : linliangyi in Team of Miracle
+//  @Date   : 08/17/2005 
+//
+----------------------------------------------------------------------------------------------->
+
+//Event Declaration
+<ATTACH   EVENT="onchange"     HANDLER="OnChange"/>
+<ATTACH   EVENT="onkeypress"   HANDLER="KeyPress"/>
+<ATTACH   EVENT="onblur"       HANDLER="Blur"/>
+//Evnet Handle
+<script language="javascript">
+
+	
+	function OnChange(){
+		this.override = false;
+		try{
+			CB_Select_OnChange(this);
+			if(this.override){
+				return;
+			}
+		}catch(e){
+		}
+		release();
+	}
+
+	function Blur(){
+	
+		release();
+	}	
+
+	function KeyPress()	
+	  {
+	    if (event.keyCode==27){
+	    	release();
+		}
+	  }	
+
+	
+	function release(){
+		if(this.options.length > 0){
+			this.parentElement.value = this.options[this.selectedIndex].value;
+			this.parentElement.innerText = this.options[this.selectedIndex].text;
+		}
+		this.removeNode(true);
+	}
+	function cancleEvent(){
+	
+		window.event.cancelBubble=true;
+		window.event.returnValue=false;
+	}
+	
+	
+	function resumeEvent(){
+		window.event.cancelBubble=false;
+		window.event.returnValue=true;
+	}
+	
+</script>

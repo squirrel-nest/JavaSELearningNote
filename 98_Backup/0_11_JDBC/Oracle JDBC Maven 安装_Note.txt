@@ -1,0 +1,27 @@
+https://gist.github.com/xuan/9281842
+
+1.ÏÂÔØJDBC
+2.cd E:\Softwares\Oracle\JDBC
+3.mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar -Dfile=ojdbc7.jar -DgeneratePom=true
+4.Add to your pom.xml:
+
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>12.1.0.2</version>
+        </dependency>
+
+
+
+
+Download the Oracle jdbc driver and run the following command to add drive to local maven repository:
+
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc7 \
+-Dversion=12.1.0.1 -Dpackaging=jar -Dfile=ojdbc7.jar -DgeneratePom=true
+Add to your pom.xml:
+
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>12.1.0.2</version>
+        </dependency>

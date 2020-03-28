@@ -1,0 +1,856 @@
+<!---------------------------------------------------------------------------------------------
+//   
+//  @Author : linliangyi in Team of Miracle
+//  @Date   : 07/10/2005 
+//
+----------------------------------------------------------------------------------------------->
+
+//Event Declaration
+
+<ATTACH   EVENT="onclick" HANDLER="MouseOnClick" />
+<ATTACH   EVENT="ondblclick" HANDLER="MouseOnDBLClick" />
+<ATTACH   EVENT="onmousemove"  HANDLER="MouseMove">
+<ATTACH   EVENT="onkeypress" HANDLER="KeyPress" />
+<ATTACH   EVENT="onmousedown" HANDLER = "MouseDown"/>
+<ATTACH   EVENT="onmouseup" HANDLER = "MouseUp"/>
+<ATTACH   EVENT="onmouseleave" HANDLER = "MouseLeave"/>
+
+
+<ATTACH   EVENT="ondrag" HANDLER = "Drag"/>
+<ATTACH   EVENT="ondragend" HANDLER = "DragEnd"/>
+<ATTACH   EVENT="ondragenter" HANDLER = "DragEnter"/>
+<ATTACH   EVENT="ondragleave" HANDLER = "DragLeave"/>
+<ATTACH   EVENT="ondragover" HANDLER = "DragOver"/>
+<ATTACH   EVENT="ondrog" HANDLER = "Drog"/>
+
+
+
+<PUBLIC:METHOD NAME="getMainContainer"/>
+<PUBLIC:METHOD NAME="getTBody"/>
+<PUBLIC:METHOD NAME="getTHead"/>
+<PUBLIC:METHOD NAME="getRows"/>
+<PUBLIC:METHOD NAME="getRow"/>
+<PUBLIC:METHOD NAME="getCell"/>
+<PUBLIC:METHOD NAME="getCellData"/>
+<PUBLIC:METHOD NAME="getRowData"/>
+<PUBLIC:METHOD NAME="getGridData"/>
+<PUBLIC:METHOD NAME="sortTable">
+<PUBLIC:METHOD NAME="addRow"/>
+<PUBLIC:METHOD NAME="showContextMenu"/>
+<PUBLIC:METHOD NAME="addContextMenuItem"/>
+
+<PUBLIC:METHOD NAME="doStatist"/>
+
+//Evnet Handle
+<script language="javascript">
+	
+	var whatIdone = "";
+	var ps_X;
+	var bIsMouseDown = false;
+	var bInResize =false;
+	var oResizeObj = null;
+	
+	var oMainContainer = null;
+	var oTBody = null;
+	var oTHead = null;
+	var compID = null;
+	
+	var oResizeLine = null;
+	var oResizeDIV = null;
+	var oMenuDIV = null;
+	var aMenuData = new Array();
+	
+	var aStatistFormula;
+	
+	function StatistFormula(resultColNum , sumReg){
+		this.resultColNum = resultColNum;
+		this.sumReg = sumReg;
+	}
+	
+	function getStatistFormula(){
+		if(aStatistFormula == null){
+			aStatistFormula = new Array();
+			var props  = this.getElementsByTagName("colprop");
+			for(var i=0; i < props.length ; i ++){
+				if(props[i].sum != null && props[i].sum !=""){
+					var parsedFormula=  parseFormula(new StatistFormula(i+1 , props[i].sum));
+					aStatistFormula.push(parsedFormula);
+				}
+			}
+			
+			var rows = getRows();
+			for(var i = 0 ; i < rows.length ; i++){
+				var cells = rows[i].getElementsByTagName("TD");
+				for(var j = 0 ; j < cells.length ; j ++){
+					if(cells[j].calc !=null && cells[j].calc !=""){
+						var calcStr = (i+1)+"#"+(j+1)+"="+cells[j].calc;
+						aStatistFormula.push(calcStr);
+					}
+					
+					if(cells[j].vsum !=null && cells[j].vsum !=""){
+					
+					}
+				}
+			}
+		}
+		return aStatistFormula;	
+	}
+	
+	function parseFormula(formule){
+		var parsedFormula="";
+		
+		if(formule.sumReg == "ALL"){
+			parsedFormula = formule.sumReg + "|";
+		}else if(formule.sumReg.indexOf(",") >= 0){
+			var aRegSegments = formule.sumReg.split(",");
+			for(var i = 0 ; i < aRegSegments.length ; i++){
+				var spos = aRegSegments[i].indexOf("-");
+				if(spos>=0){
+					var beginCol = parseInt(aRegSegments[i].substring(0,spos));
+					var endCol =  parseInt(aRegSegments[i].substr(spos + 1))
+					for(var index = beginCol ; index <= endCol ; index++){
+						parsedFormula += index;
+						parsedFormula += "|";
+					}
+				}else{
+					parsedFormula += aRegSegments[i];
+					parsedFormula += "|";
+				}
+			}
+		}else if(formule.sumReg.indexOf("-") >= 0){
+			var spos = formule.sumReg.indexOf("-");
+			var beginCol = parseInt(formule.sumReg.substring(0,spos));
+			var endCol =  parseInt(formule.sumReg.substr(spos + 1))
+			for(var index = beginCol ; index <= endCol ; index++){
+				parsedFormula += index;
+				parsedFormula += "|";
+			}
+		}else{
+			parsedFormula += aRegSegments[i];
+			parsedFormula += "|";
+		}
+		
+		parsedFormula = formule.resultColNum + "=" + parsedFormula;
+		parsedFormula =  parsedFormula.substring(0, parsedFormula.length-1);
+		return parsedFormula;
+	}	
+	
+	
+	var test = 0;
+	function doStatist(eventObj){
+		/*
+		test++;
+		if(test > 10){
+			return;
+		}else{
+			//alert(eventObj.attachFormulaIndexs + " | "+ eventObj.colNum);
+		}
+		*/
+		
+		if(eventObj.datatype != "NUMBER" && eventObj.datatype != "MONEY"){
+			return;
+		}
+		attachFormula(eventObj);
+		if(eventObj.attachFormulaIndexs == "IGNORE"){
+			return;
+		}
+		var aFormulaIndex = eventObj.attachFormulaIndexs.split("|");
+		for(var i = 0 ; i < aFormulaIndex.length ; i++){
+			var aFormulas = getStatistFormula();
+			var formula = aFormulas[aFormulaIndex[i]];
+			runFormula(eventObj , formula);
+		}
+		
+	} 
+	
+	function attachFormula(eventObj){
+		var attFor="";
+		if(eventObj.sum == "ALL"){
+			eventObj.attachFormulaIndexs = "IGNORE";
+			return;
+		}
+		if(eventObj.attachFormulaIndexs != null){
+			return;
+		}
+		var aFormulas = getStatistFormula();
+		for(var i = 0 ; i < aFormulas.length ; i ++){
+			var formula = aFormulas[i];
+			if(formula.indexOf("#")<0){
+				var formulaRight = formula.substr(formula.indexOf("=")+1);
+				if(formulaRight =="ALL" || formulaRight.indexOf(eventObj.colNum)>=0){
+					attFor += i + "|"
+				}
+			}else{
+				//var formulaLeft = formula.substring(0 , formula.indexOf("="));
+				var formulaRight = formula.substr(formula.indexOf("=")+1);
+				
+				var reg = /[\(\)\+-\/\*]/g;
+				var tmpStr = formulaRight.replace(reg , " "); 
+				var cellcoordinates = tmpStr.split(" ");		
+				for(var j=0 ; j < cellcoordinates.length ; j++){
+					if(cellcoordinates[j] != ""){
+						var coordinate = cellcoordinates[j].split("#");
+						var oTD = getCell(coordinate[0] , coordinate[1]);
+						if(eventObj.getMyRow().rowNum == coordinate[0] && eventObj.colNum == coordinate[1] ){
+							attFor += i + "|";
+						}
+					}
+				}
+			}
+		}
+		if(attFor != ""){
+			eventObj.attachFormulaIndexs = attFor.substring(0 , attFor.length-1);
+		}else{
+			eventObj.attachFormulaIndexs = "IGNORE";
+		}
+		return;
+	}
+	
+	function runFormula(eventObj , formula){
+		var sum = 0;
+		if(formula.indexOf("#") <0 ){
+			var oTDs = eventObj.getMyRow().getElementsByTagName("TD");
+			var formulaRight = formula.substr(formula.indexOf("=") + 1);
+	
+			if(formulaRight == "ALL"){
+				for(var i = 0 ; i < oTDs.length ; i ++){
+					if(oTDs[i].datatype == "NUMBER" || oTDs[i].datatype == "MONEY"){
+						if(oTDs[i].value != null && oTDs[i].value !="" && oTDs[i].sum==null){
+							sum += parseFloat(oTDs[i].value);
+						}
+					}
+				}
+			}else{
+				var aTdIndexs = formulaRight.split("|");
+				for(var i = 0 ; i < aTdIndexs.length ; i ++){
+					if(oTDs[aTdIndexs[i]-1].datatype == "NUMBER" || oTDs[aTdIndexs[i]-1].datatype == "MONEY"){
+						if(oTDs[aTdIndexs[i]-1].value != null && oTDs[aTdIndexs[i]-1].value !=""){
+							sum += parseFloat(oTDs[aTdIndexs[i]-1].value);
+						}
+					}
+				}
+			}
+			var resultColIndex = parseInt(formula.substring(0 , formula.indexOf("=")));
+			oTDs[resultColIndex - 1].changeData(sum);
+		}else{
+			var formulaLeft = formula.substring(0 , formula.indexOf("="));
+			var formulaRight = formula.substr(formula.indexOf("=")+1);
+			
+			var reg = /[\(\)\+-\/\*]/g;
+			var tmpStr = formulaRight.replace(reg , " "); 
+			var cellcoordinates = tmpStr.split(" ");		
+			for(var i=0 ; i < cellcoordinates.length ; i++){
+				var celladdr = cellcoordinates[i];
+				if(celladdr != ""){
+					var coordinate = celladdr.split("#");
+					var pos = formulaRight.indexOf(celladdr);
+					var cellValue = parseFloat(getCellData(coordinate[0] , coordinate[1]));
+					
+					if(!isNaN(cellValue)){
+						formulaRight = formulaRight.substring(0,pos) + cellValue + formulaRight.substr(pos+celladdr.length);
+					}else {
+						var operation="";
+						if(pos > 0){
+							operation = formulaRight.charAt(pos-1);
+						}
+						if(operation=="/"){
+							formulaRight = formulaRight.substring(0,pos) + 1 + formulaRight.substr(pos+celladdr.length);
+						}else{
+							formulaRight = formulaRight.substring(0,pos) + 0 + formulaRight.substr(pos+celladdr.length);
+						}
+					}
+				}
+			}
+			sum = eval(formulaRight);
+			var resultCoord = formulaLeft.split("#");
+			var oResultTD = getCell(resultCoord[0] , resultCoord[1]);
+			oResultTD.changeData(sum);
+		}
+	}
+
+	function addRow(){
+		var tbody = getTBody();
+		var columes = this.getElementsByTagName("Columes")[0];
+		var props  = this.getElementsByTagName("colprop");
+		var oNewRow = document.createElement("TR");
+		oNewRow.addBehavior(columes.BEHAVIOR);
+		oNewRow.height = columes.height;
+		for(var i = 0 ; i < props.length ; i++){
+			var oNewTD = document.createElement("TD");
+			oNewTD.addBehavior(this.basePath + "JS/HTC/EditGrid_TD.htc");
+			oNewTD.colNum = props[i].colNum;
+			oNewTD.align = props[i].align;
+			oNewTD.editable = props[i].editable;
+			oNewTD.edittype = props[i].edittype;
+			oNewTD.datatype = props[i].datatype;
+			oNewTD.precision = props[i].precision;
+			oNewTD.hidden = props[i].hidden;
+			oNewTD.charcase = props[i].charcase;
+			oNewTD.sum = props[i].sum;
+			oNewTD.innerText = " ";
+			oNewRow.insertAdjacentElement("BeforeEnd",oNewTD);
+		}
+		
+		var oRows = getRows();
+		if(oRows.length % 2 == 0){
+			oNewRow.bgColor = tbody.trColor1;
+		}else{
+			oNewRow.bgColor = tbody.trColor2;
+		}
+		
+		tbody.insertAdjacentElement("BeforeEnd",oNewRow);
+		return oNewRow;
+	}
+	
+	
+	function MouseDown(){
+		bIsMouseDown = true;
+		var oSrcElement = event.srcElement;
+
+		if(bInResize && oSrcElement.tagName == "TH" && oSrcElement.colNum != null){
+			ps_X = event.x;
+			oResizeObj=oSrcElement;
+			oResizeObj.setCapture();
+			
+            var y=0;
+            var thead = this.getElementsByTagName("THead")[0];  
+           	var tbody = this.getElementsByTagName("TBody")[0];
+            var c = thead;
+            
+            while (c.offsetParent != null){ 
+			    y += c.offsetTop;
+			    c= c.offsetParent;
+			}
+			
+			
+			createLine(ps_X, y,thead.offsetHeight + tbody.offsetHeight);
+		}
+	}
+	
+	function MouseUp(){
+
+		var oSrcElement = event.srcElement;
+		if(oResizeObj !=null && !isNaN(ps_X) && bInResize){
+			if(parseInt(oResizeObj.width) + event.x - ps_X > 0){
+				changeColWidth(oResizeObj , parseInt(oResizeObj.width) + event.x - ps_X);
+				//oResizeObj.width = parseInt(oResizeObj.width) + event.x - ps_X;
+			}
+
+			if(oSrcElement.colNum == oResizeObj.colNum){
+				oSrcElement.bClickAftResize = true;
+			}
+			oResizeObj.releaseCapture();
+			oResizeObj = null;
+			this.style.cursor="DEFAULT";
+			bInResize =false;
+			removeLine();
+		}
+		bIsMouseDown =false;
+	}
+
+	function changeColWidth(oResizeObj , width){
+		var colNum = oResizeObj.colNum; 	
+		var rows = getRows();
+		for(var i=0 ; i < rows.length ; i++){
+			var td = rows[i].getElementsByTagName("TD")[colNum - 1];
+			td.width = width;
+		}
+		oResizeObj.width = width;
+	}
+	
+	function MouseMove(){
+		if(oResizeObj !=null && bIsMouseDown && bInResize){
+        	oResizeLine.style.left =event.x + element.document.body.scrollLeft;
+		 	return;
+		}
+
+		var oSrcElement = event.srcElement;
+
+		if(oSrcElement.tagName != "TH" && bInResize){
+				this.style.cursor="DEFAULT";
+				bInResize =false;
+				return;
+		}
+		
+		if(oSrcElement.tagName =="TH" && oSrcElement.colNum != null){
+			var bordWidth = oSrcElement.offsetWidth - oSrcElement.clientWidth;
+			var tdWidth = oSrcElement.clientWidth - 2*bordWidth;
+			
+	        if(tdWidth - event.offsetX <=2 ){
+	        	this.style.cursor="col-resize";
+	        	bInResize = true;
+	        	return;  
+			} else {
+				this.style.cursor="DEFAULT";
+				bInResize =false;
+				return;
+        	} 
+		}
+		
+		
+		
+	}
+
+	function MouseOnClick(){
+		//whatIdone += "|Mouse on Click|";
+		var oSrcElement = event.srcElement;
+		var oMenu = getContextMenuInst();
+		if(oMenu.style.visibility == "visible"){
+			hideContextMenu();
+			return;
+		}
+		
+		if(oSrcElement.tagName == "TD" && isEditable(oSrcElement)){
+			
+			switch(getEditType(oSrcElement)){
+				case "button"	: cellBtClick(oSrcElement);break;
+				case "select"   : createSelectInput(oSrcElement); break;
+				case "textarea" : break;
+				case "text"     : 
+				default		    : createTextInput(oSrcElement);break;
+			}
+			return;
+		}
+		
+		
+	}
+	
+	function isEditable(oSrcElement){
+		var result=true;
+		if(oSrcElement.sum != null && oSrcElement.sum != ""){
+			result = false;
+			return result;
+		}
+		if(oSrcElement.calc != null && oSrcElement.calc != ""){
+			result = false;
+			return result;
+		}
+		
+			
+		if(null != oSrcElement.editable){
+			if(oSrcElement.editable != "false"){
+				result = true;
+			}else{
+				result = false;
+			}
+		}
+		
+		/*
+		else{
+			var colProp = getColProp(oSrcElement);
+			if(null != colProp.editable && colProp.editable == "true"){
+				return true;
+			}
+		}
+		*/
+		return result;
+	}
+	
+	function getEditType(oSrcElement){
+		
+		if(null != oSrcElement.edittype){
+			return oSrcElement.edittype;
+		}
+		/*
+		else{
+			var colProp = getColProp(oSrcElement);
+			return 	colProp.edittype;
+		}
+		*/
+		return;
+	}
+
+	function getColProp(oSrcElement){
+		if(oSrcElement.tagName == "TD"){
+			var aColPorps = this.getElementsByTagName("colprop");
+			return aColPorps[oSrcElement.colNum - 1];
+		}	
+	}
+
+	function getMainContainer(){
+		if(oMainContainer == null){
+			var oTmp = this.parentElement;
+			while(oTmp.container != "MAIN"){
+				oTmp = oTmp.parentElement;
+			}	
+			oMainContainer = oTmp;	
+		}
+		return oMainContainer;
+	}
+
+
+	function getTBody(){
+		if(oTBody == null){
+			oTBody = this.getElementsByTagName("TBody")[0];
+		}
+		return oTBody;
+	}
+	
+	function getTHead(){
+		if(oTHead == null){
+			oTHead = this.getElementsByTagName("THead")[0];
+		}
+		return oTHead;
+	}
+
+
+	function getRows(){
+		var aRows = getTBody().getElementsByTagName("TR");
+		return aRows;
+	}
+	
+	
+	function getRow(rowNum){
+		var aRows = getRows();
+		if(isNaN(rowNum) || rowNum < 1 || rowNum > aRows.length){
+			alert("The row is not exist!");
+			return;		
+		}
+		return aRows[rowNum - 1];
+	}
+
+	
+	function getCell(rowNum , colNum){
+		var targetCell = null;
+		var aCells = getRow(rowNum).getElementsByTagName("TD");
+		for(var i = 0 ; i < aCells.length ; i++){
+			if (aCells[i].colNum == colNum){
+				targetCell = aCells[i];
+				break;
+			}
+		}
+		return targetCell;
+	}	
+	
+	
+	function getGridData(){
+		var aRows =  getRows();
+		var gridData = new Array(aRows.length);
+		for(var i = 0 ; i < aRows.length ; i ++){
+			gridData[i] = getRowData(i+1); 
+		}
+		return gridData;
+	}
+
+	function getRowData(rowNum){
+		var theRow = getRow(rowNum);
+		if(theRow != null){
+			var aCells = theRow.getElementsByTagName("TD");
+			var rowData = new Array(aCells.length);
+			for(var i = 0 ; i < aCells.length ; i ++){
+				if(aCells[i].value != null && aCells[i].value!=""){
+					rowData[i] = aCells[i].value;
+				}else{
+					rowData[i] = ""; 
+				}
+			}
+		}
+		return rowData;
+	}
+
+	function getCellData(rowNum , colNum){
+		
+		var oCell =  getCell(rowNum , colNum);
+		if(oCell == null){
+			alert("The cell is not exist!");
+			return;		
+		}
+
+		if(oCell.value != null && oCell.value!=""){
+			return oCell.value;
+		}else{
+			return ""; 
+		}
+	}
+	
+	
+	function getCompID(){
+		if(compID == null){
+			compID = getMainContainer().id;
+		}
+		return compID;
+	}
+	
+	function getColHead(oSrcElement){
+		if(oSrcElement.tagName == "TD"){
+			var aHeadTDs = getTHead().getElementsByTagName("TH");
+			for(var i = 0 ; i < aHeadTDs.length ; i++){
+				if(aHeadTDs[i].colNum == oSrcElement.colNum){
+					return aHeadTDs[i];
+				}
+			}
+		}	
+	}
+
+	function sortTable(colNum , order){
+		
+		var iBeginRowIndex = 0;
+		var iEndRowIndex = getRows().length;
+		
+		var oRows = new Array(iEndRowIndex - iBeginRowIndex);
+		var values = new Array(iEndRowIndex - iBeginRowIndex);
+		var indexs = new Array(iEndRowIndex - iBeginRowIndex);
+		
+		for(var i = iBeginRowIndex ; i < iEndRowIndex ; i++){
+			oRows[i - iBeginRowIndex] = new Array();
+			var oCell = getCell(i + 1 , colNum);
+			if(oCell.datatype == "NUMBER" || oCell.datatype == "MONEY"){
+				values[i - iBeginRowIndex] = parseFloat(oCell.value); 
+				//values[i - iBeginRowIndex] = oCell.innerText; 
+			}else{
+				values[i - iBeginRowIndex] = oCell.innerText; 
+			}
+			indexs[i - iBeginRowIndex] = i - iBeginRowIndex;
+		}
+		
+		for(var i = iBeginRowIndex ; i < iEndRowIndex ; i++){
+			var aTDs = getRow(i - iBeginRowIndex + 1).getElementsByTagName("TD");
+			for(var j = 0 ; j < aTDs.length ; j ++){
+				oRows[i - iBeginRowIndex][j] = new CellData(aTDs[j].innerHTML , aTDs[j].value);
+			}
+			
+		}
+
+		for(var i = 0 ; i < values.length - 1 ; i++){
+			var index = i;
+			for(var j = i+1 ; j < values.length ; j++){
+				if(order){
+					if(values[index] > values[j]){
+						index = j;
+					}
+				}else{
+					if(values[index] < values[j]){
+						index = j;
+					}
+				}
+			}
+			
+			if(index != i){
+				var tmp = values[i];
+				values[i] = values[index];
+				values[index] = tmp;
+				
+				indexs[i] += indexs[index];
+				indexs[index] = indexs[i] - indexs[index];
+				indexs[i] -= indexs[index];
+			}
+		}
+		
+		for(var i = iBeginRowIndex ; i < iEndRowIndex ; i++){
+			var aTDs = getRow(i -iBeginRowIndex + 1).getElementsByTagName("TD");
+			for(var j = 0 ; j < aTDs.length ; j ++){
+				aTDs[j].innerHTML = oRows[indexs[i-iBeginRowIndex]][j].text;
+				aTDs[j].value = oRows[indexs[i-iBeginRowIndex]][j].value;
+			}
+		}
+		
+	}	
+	
+	
+	function createLine(left,top,height){
+	
+		left=left+element.document.body.scrollLeft;
+		oResizeDIV = document.createElement("DIV");
+		oResizeDIV.innerHTML="<TABLE><TR><TD bgColor=black></TD></TR></TABLE>";
+		oResizeLine=oResizeDIV.children[0];
+		oResizeLine.style.bgColor="black"; 
+		oResizeLine.style.border="0px solid #000000";
+		oResizeLine.cellPadding=0; 
+		oResizeLine.cellSpacing=0;  
+		oResizeLine.style.width=1;
+		oResizeLine.style.top =top;
+		oResizeLine.style.left=left;
+		oResizeLine.style.height =height;	
+		oResizeLine.style.position= "absolute";  
+		oResizeLine.style.display ="block"; 
+		oResizeLine.style.zIndex=1000; 
+		//this.parentElement.appendChild(oResizeLine);
+		this.parentElement.insertAdjacentElement("AfterBegin",oResizeLine); 
+	}
+	
+	function removeLine(){
+	   if(oResizeDIV != null){
+	     oResizeLine.removeNode(true);
+	     oResizeDIV.removeNode(true);
+	     oResizeLine=null; 
+	     oResizeDIV=null;
+	  }
+	}
+	
+	function createTextInput(oSrcElement){
+			var oInput = document.createElement("Input");
+			oInput.type="text";
+			oInput.addBehavior(this.basePath + "JS/HTC/EditGrid_INPUT.htc");
+			oInput.className = "INPUT";
+			oInput.use="grid";
+			if(oSrcElement.datatype == "NUMBER" || oSrcElement.datatype == "MONEY"){
+				oInput.style.textAlign="right";
+			}
+			if(oSrcElement.value != null && oSrcElement.value != ""){
+				oInput.value = oSrcElement.value;
+			}else{
+				oInput.value = oSrcElement.innerText;
+			}
+			if(oSrcElement.width != null){
+				//alert(oSrcElement.clientWidth);
+				oInput.style.width = oSrcElement.clientWidth ;
+			}
+			oSrcElement.innerHTML = "";
+			oSrcElement.insertAdjacentElement("AfterBegin",oInput); 
+			oInput.focus();
+			if(oSrcElement.datatype == "DATE"){
+				setday(oInput);
+			}
+			this.bInputTurnOn = true;
+	}
+
+
+	function createSelectInput(oSrcElement){
+			var oSelect = document.createElement("Select");
+			oSelect.addBehavior(this.basePath + "JS/HTC/EditGrid_Select.htc");
+			//oInput.className = "";
+			oSelect.use="grid";
+			
+			var aOpts = this.getElementsByTagName("opt");
+			if(aOpts != null){
+				for(var i = 0 ; i < aOpts.length ; i ++){
+					if(aOpts[i].colNum == oSrcElement.colNum){
+					var oOption = document.createElement("OPTION");
+					oOption.text = aOpts[i].text;
+					oOption.value = aOpts[i].value;
+					oSelect.options.add(oOption);
+					}
+				}
+			}
+			
+			if(oSrcElement.clientWidth != null){
+				oSelect.style.width = oSrcElement.clientWidth ;
+			}
+			oSrcElement.innerHTML = "";
+			oSrcElement.insertAdjacentElement("AfterBegin",oSelect); 
+			oSelect.focus();
+			for(var i = 0 ; i < oSelect.options.length ; i ++){
+				if(oSelect.options[i].value == oSrcElement.value){
+					oSelect.options[i].selected = "true";
+					break;
+				}
+			}
+	}
+
+
+	function cellBtClick(oSrcElement){
+		oSrcElement.override = false;
+		try{
+			CB_CellBtClick(oSrcElement);
+			if(oSrcElement.override){
+				return;
+			}
+		}catch(e){
+		
+		}
+	}
+	
+	//var menuChange = false;
+	function getContextMenuInst(){
+		if(oMenuDIV == null){
+			oMenuDIV = document.createElement("DIV");
+			oMenuDIV.className = "skin0";
+			oMenuDIV.addBehavior(this.basePath + "JS/HTC/EditGrid_Menu.htc");
+			this.parentElement.insertAdjacentElement("BeforeEnd",oMenuDIV);			
+		}
+		return oMenuDIV;
+	}
+	
+	function addContextMenuItem(position , name , action){
+		var oItemData = new MenuItem(name , action); 
+		aMenuData[position] = oItemData;
+	}
+	
+	function showContextMenu(object){
+		
+		var oMenu = getContextMenuInst();
+		oMenu.innerHTML = "";
+		oMenu.eventSrc = object;
+		for(var i = 0 ; i < aMenuData.length ; i++){
+			if(aMenuData[i] != null){
+				var oItem = document.createElement("DIV");
+				if(aMenuData[i].name == "-"){
+					oItem.innerHTML="<HR/>";
+				}else{
+					oItem.className = "menuitems";
+					oItem.innerText = aMenuData[i].name;
+					oItem.action = aMenuData[i].action;
+				}
+				oMenu.insertAdjacentElement("BeforeEnd",oItem); 
+			}
+		}
+	
+		var rightedge = element.document.body.clientWidth-event.clientX;
+		var bottomedge = element.document.body.clientHeight-event.clientY;
+		if (rightedge < oMenu.offsetWidth){
+			oMenu.style.left = element.document.body.scrollLeft + event.clientX -	oMenu.offsetWidth;
+		}
+		else{
+			oMenu.style.left = element.document.body.scrollLeft + event.clientX;
+		}
+		
+		if (bottomedge < oMenu.offsetHeight){
+			oMenu.style.top = element.document.body.scrollTop + event.clientY -	oMenu.offsetHeight;
+		}else{
+			oMenu.style.top = element.document.body.scrollTop + event.clientY;
+		}
+		oMenu.style.visibility = "visible";
+	}
+
+	function hideContextMenu() {
+		var oMenu = getContextMenuInst();
+		oMenu.style.visibility = "hidden";
+	}
+	
+	function cancleEvent(){
+	
+		window.event.cancelBubble=true;
+		window.event.returnValue=false;
+	}
+	
+	
+	function resumeEvent(){
+		window.event.cancelBubble=false;
+		window.event.returnValue=true;
+	}
+	
+	function Drag(){
+		cancleEvent();
+	}
+
+	function DragEnd(){
+		cancleEvent();
+	}
+
+	function DragEnter(){
+		cancleEvent();
+	}
+
+	function DragLeave(){
+		cancleEvent();
+	}
+
+	function DragOver(){
+		cancleEvent();
+	}
+
+	function Drog(){
+		cancleEvent();
+	}
+
+	function MenuItem(name , action){
+		this.name = name;
+		this.action = action;
+	}
+	
+	function CellData(text , value){
+		this.text = text;
+		this.value = value;
+	}
+	
+</script>

@@ -1,0 +1,86 @@
+<ATTACH   EVENT="onmouseleave" HANDLER="MouseLeave" />
+<ATTACH   EVENT="onmouseenter" HANDLER="MouseEnter" />
+<ATTACH   EVENT="ondblclick" HANDLER="MouseOnDBLClick" />
+<ATTACH   EVENT="oncontextmenu" HANDLER = "MouseRightClick"/>
+
+//Evnet Handle
+<script language="javascript">
+
+	var oTBody;
+
+	function MouseLeave(){
+		if(null == this.selected || !this.selected){
+			this.className = "";
+		}
+	}
+
+
+	function MouseEnter(){
+		if(null == this.selected || !this.selected){
+			this.className = "gridTR_over";
+		}
+	}
+	
+	function MouseOnDBLClick(){
+		this.override = false;
+		checkTRSelectState();
+		var oTBody = getTBody();
+		oTBody.selectedRowId = this.rowid;
+		this.selected = true;
+		this.className = "gridTR_selected";
+		
+		try{
+			CB_Row_OnDBLClick(this);
+			if(this.override){
+				return;
+			}
+		}catch(e){
+		
+		}
+	}
+	
+		
+	function MouseRightClick(){
+		this.override = false;
+		try{
+			CB_RightClick(this);
+			if(this.override){
+				return;
+			}
+		}catch(e){
+		
+		}
+		cancleEvent();
+	}
+	
+	
+	
+	function checkTRSelectState(){
+		var oTBody = getTBody();
+		var aTRs = oTBody.getElementsByTagName("TR");
+		if(oTBody.selectedRowId != null){
+			var index = oTBody.selectedRowId - aTRs[0].rowid;
+			aTRs[index].className = "";
+			aTRs[index].selected = false;
+		}
+	}
+	
+	function getTBody(){
+		if(oTBody == null){
+			var oTmp = this.parentElement;
+			while(oTmp.tagName != "TBODY"){
+				oTmp = oTmp.parentElement;
+			}	
+			oTBody = oTmp;	
+		}
+		return oTBody;
+	}
+	
+	
+	function cancleEvent(){
+	
+		window.event.cancelBubble=true;
+		window.event.returnValue=false;
+	}	
+	
+</script>

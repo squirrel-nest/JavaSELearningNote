@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0036)http://wbymvp.bokee.com/2449926.html -->
+<HTML><HEAD><TITLE>用Struts的logic标签--咖啡的诱惑</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK">
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Cache-Control content=no-cache>
+<META http-equiv=Expires content=0>
+<META 
+content="Struts HTML标签库(一)- 用Struts的logic标签通过Struts应用MVC设计模型  博客 博客中国 博客动力 blog blogdriver blogger 中国" 
+name=description>
+<META 
+content="咖啡的诱惑 Struts HTML标签库(一)- 用Struts的logic标签通过Struts应用MVC设计模型 博客 博客中国 博客动力 blog blogdriver blogger 中国" 
+name=keywords><LINK href="用Struts的logic标签--咖啡的诱惑.files/diary.css" type=text/css 
+rel=stylesheet>
+<SCRIPT language=JavaScript src="用Struts的logic标签--咖啡的诱惑.files/UBB.js"></SCRIPT>
+
+<SCRIPT src="用Struts的logic标签--咖啡的诱惑.files/blog.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2873" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=container>
+<DIV id=header>
+<H1 class=title><A 
+href="http://wbymvp.bokee.com/index.html">咖啡的诱惑</A></H1></DIV>
+<DIV id=category><A title=上一篇 href="http://wbymvp.bokee.com/2449522.html">Struts 
+HTML标签库(一)- </A>- -| <A href="http://wbymvp.bokee.com/index.html">回首页</A> | <A 
+href="http://wbymvp.bokee.com/catalog_2005.html">2005年索引</A> | - -<A title=下一篇 
+href="http://wbymvp.bokee.com/2449974.html">通过Struts应用MVC设计模型</A></DIV>
+<DIV class=entity>
+<H2 class=diaryTitle>用Struts的logic标签- 
+-</H2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<P>使用Struts的logic标签，遍历List时使用indeId来自动输出序号并加一<BR>例子如下：<BR>&lt;table&gt;<BR>&lt;tr&gt;<BR>&lt;td&gt;序号&lt;/td&gt;<BR>&lt;td&gt;姓名&lt;/td&gt;<BR>...<BR>&lt;/tr&gt;<BR>&lt;logic:present&nbsp;name="targetbean"&gt;<BR>&lt;logic:iterate&nbsp;name='helperbean'&nbsp;id='helperbean'&nbsp;type='net.echochina.HelperBean'&nbsp;scope='request'&nbsp;indexId="index"&gt;<BR>&lt;tr&gt;<BR>&lt;td&gt;&lt;%=&nbsp;index.intValue()&nbsp;+&nbsp;1&nbsp;%&gt;&lt;/td&gt;<BR>&lt;td&gt;&lt;bean:write&nbsp;name='helperbean'&nbsp;property='name'&nbsp;/&gt;&lt;/td&gt;<BR>.....<BR>&lt;/tr&gt;<BR>&lt;/logic:iterate&gt;<BR>&lt;/logic:present&gt;<BR>&lt;/table&gt;</P>
+<P class=diaryFoot>- 作者： <A 
+onclick="window.open('http://publishblog.blogchina.com/blog/postMessage.b?receiver=1275223','发送短消息','width=520, height=455')" 
+href="javascript:void(0);">瞬间驿站</A> 访问统计：
+<SCRIPT language=JavaScript 
+src="用Struts的logic标签--咖啡的诱惑.files/PageServlet.htm"></SCRIPT>
+　2005年08月1日, 星期一 12:00 <A 
+href="javascript:void(keyit=window.open('http://blogmark.blogchina.com/jsp/key/quickaddkey.jsp?k='+encodeURI('用Struts的logic标签')+'&amp;u='+encodeURI('http://wbymvp.blogchina.com/wbymvp/2449926.html')+'&amp;c='+encodeURI(''),'keyit','scrollbars=no,width=500,height=430,status=no,resizable=yes'));keyit.focus();">加入博采</A> 
+</P></DIV>
+<DIV class=operation><A name=trackback>
+<H3>Trackback</H3></A>
+<P class=trackback>你可以使用这个链接引用该篇文章 
+http://publishblog.blogchina.com/blog/tb.b?diaryID=2449926 </P></DIV>
+<DIV class=operation><A name=comment>
+<H3>回复</H3></A>
+<TABLE cellSpacing=0 cellPadding=0 width=700 border=0>
+  <TBODY></TBODY></TABLE></DIV>
+<DIV class=operation>
+<TABLE class=comment cellSpacing=0 cellPadding=0 width=700 border=0>
+  <FORM id=replyForm method=post><INPUT type=hidden value=1275146 name=blogID> 
+  <INPUT type=hidden value=2449926 name=diaryID> <INPUT type=hidden value=wbymvp 
+  name=blogDomino>
+  <SCRIPT>
+if(getCookie('userID') == null){        
+document.write('<tr><td width="70">发布人：</td>');
+document.write('<td width="150"> <input name="remark.authorNameFUI" type="text" size="20" class="inputStyle" maxlength="20"></td>');
+document.write('<td width="70">邮箱：</td>');
+document.write('<td width="435"> <input name="remark.authorEmail" type="text" size="20" class="inputStyle" maxlength="40"></td>');
+document.write('</tr><tr><td>主　页：</td>');
+document.write('<td colspan="3"> <input name="remark.authorURL" type="text" class="inputStyle" value="HTTP://" size="63" maxlength="40"></td></tr>');
+}else{
+document.write('<input type="hidden" name="remark.authorNameFUI" value="Blogchina网友">');
+}
+</SCRIPT>
+   
+  <TBODY>
+  <TR align=left>
+    <TD colSpan=4>评论内容：<BR><TEXTAREA class=textStyle id=remark name=remark.remarkFUI rows=8 cols=60>          </TEXTAREA> 
+    </TD></TR>
+  <TR align=left>
+    <TD colSpan=4>　　　　　　 　　　　　　 <INPUT onclick=reply() type=button value=提交> 　 
+<INPUT type=reset value=重置> </TD></TR></FORM></TBODY></TABLE></DIV></DIV>
+<SCRIPT src="用Struts的logic标签--咖啡的诱惑.files/extend3.js" 
+type=text/javascript></SCRIPT>
+
+<DIV id=footer><A href="http://blog.blogchina.com/">2003-2004 BlogChina.COM All 
+rights reserved</A><BR><A href="http://www.blogdriver.com/">Powered by 
+BlogDriver 2.1</A> </DIV></BODY></HTML>

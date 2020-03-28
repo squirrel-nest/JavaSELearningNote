@@ -1,0 +1,84 @@
+BODY {
+	FONT-SIZE: 14px; COLOR: #333333; FONT-FAMILY: arial,helvetica; TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 14px; COLOR: #333333; FONT-FAMILY: arial,helvetica; TEXT-DECORATION: none
+}
+A {
+	COLOR: #003399; FONT-FAMILY: arial,helvetica; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #003399
+}
+A:active {
+	COLOR: #003399
+}
+A:hover {
+	COLOR: #993300
+}
+H3 {
+	FONT-SIZE: 14px; COLOR: #000000
+}
+FORM {
+	MARGIN: 0px
+}
+HR {
+	MARGIN: 0px
+}
+.q {
+	COLOR: #0000cc
+}
+H1 {
+	FONT-SIZE: 145%
+}
+.TableHeadingColor {
+	BACKGROUND: #ccccff
+}
+.TableSubHeadingColor {
+	BACKGROUND: #eeeeff
+}
+.TableRowColor {
+	BACKGROUND: #ffffff
+}
+.FrameTitleFont {
+	FONT-SIZE: 100%; FONT-FAMILY: Helvetica, Arial, sans-serif
+}
+.FrameHeadingFont {
+	FONT-SIZE: 90%; FONT-FAMILY: Helvetica, Arial, sans-serif
+}
+.FrameItemFont {
+	FONT-SIZE: 90%; FONT-FAMILY: Helvetica, Arial, sans-serif
+}
+.NavBarCell1 {
+	BACKGROUND-COLOR: #eeeeff
+}
+.NavBarCell1Rev {
+	BACKGROUND-COLOR: #00008b
+}
+.NavBarFont1 {
+	COLOR: #0000ff; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.NavBarFont1Rev {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.NavBarCell2 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+.NavBarCell3 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+.ad1 {
+	FLOAT: right; OVERFLOW: auto; POSITION: relative; TOP: 0px
+}
+.ad1 {
+	BORDER-RIGHT: black 0px dashed; PADDING-RIGHT: 0px; BORDER-TOP: black 0px dashed; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; OVERFLOW: auto; BORDER-LEFT: black 0px dashed; WIDTH: 168px; COLOR: #ffffff; PADDING-TOP: 0px; BORDER-BOTTOM: black 0px dashed; POSITION: relative; TOP: 0px
+}
+.ad2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 960px; PADDING-TOP: 0px
+}
+.ad3 {
+	BORDER-RIGHT: #666699 1px solid; BORDER-TOP: #666699 1px solid; MARGIN-TOP: 30px; PADDING-LEFT: 5px; Z-INDEX: 99; FLOAT: right; BORDER-LEFT: #666699 1px solid; WIDTH: 400px; COLOR: #333333; BORDER-BOTTOM: #666699 1px solid; BACKGROUND-COLOR: #eeeeee
+}
+.mainbody {
+	WIDTH: 980px
+}

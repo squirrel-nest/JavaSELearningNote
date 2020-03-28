@@ -1,0 +1,890 @@
+http://www.programcreek.com/java-api-examples/index.php?api=javax.naming.Reference
+
+Java Code Examples for javax.naming.Reference
+
+
+
+
+The following code examples are extracted from open source projects. You can click  to vote up the examples you like. The votes will be used to predict good API usage examples and more good examples will be extracted based on the votes. 
+
+
+
+Code Example 1:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/testsuite/regression/. 
+
+Source DataSourceRegressionTest.java 
+
+private DataSource lookupDatasourceInJNDI(String jndiName) throws Exception {
+	NameParser nameParser = this.ctx.getNameParser("");
+	Name datasourceName = nameParser.parse(this.tempDir.getAbsolutePath()
+			+ jndiName);
+	Object obj = this.ctx.lookup(datasourceName);
+	DataSource boundDs = null;
+
+	if (obj instanceof DataSource) {
+		boundDs = (DataSource) obj;
+	} else if (obj instanceof Reference) {
+		//
+		// For some reason, this comes back as a Reference
+		// instance under CruiseControl !?
+		//
+		Reference objAsRef = (Reference) obj;
+		ObjectFactory factory = (ObjectFactory) Class.forName(
+				objAsRef.getFactoryClassName()).newInstance();
+		boundDs = (DataSource) factory.getObjectInstance(objAsRef,
+				datasourceName, this.ctx, new Hashtable());
+	}
+
+	return boundDs;
+}
+ 
+
+
+
+
+Code Example 2:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/testsuite/regression/. 
+
+Source DataSourceRegressionTest.java 
+
+public void testBug16791() throws Exception {
+	MysqlDataSource myDs = new MysqlDataSource();
+	myDs.setUrl(dbUrl);
+	Reference asRef = myDs.getReference();
+	System.out.println(asRef);
+	
+	removeFromRef(asRef, "port");
+	removeFromRef(asRef, NonRegisteringDriver.USER_PROPERTY_KEY);
+	removeFromRef(asRef, NonRegisteringDriver.PASSWORD_PROPERTY_KEY);
+	removeFromRef(asRef, "serverName");
+	removeFromRef(asRef, "databaseName");
+	
+	MysqlDataSource newDs = (MysqlDataSource)new MysqlDataSourceFactory().getObjectInstance(asRef, null, null, null);
+}
+ 
+
+
+
+
+Code Example 3:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/testsuite/regression/. 
+
+Source DataSourceRegressionTest.java 
+
+private void removeFromRef(Reference ref, String key) {
+	int size = ref.size();
+	
+	for (int i = 0; i < size; i++) {
+		RefAddr refAddr = ref.get(i);
+		if (refAddr.getType().equals(key)) {
+			ref.remove(i);
+			break;
+		}
+	}
+}
+ 
+
+
+
+
+Code Example 4:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/testsuite/simple/. 
+
+Source DataSourceTest.java 
+
+public void testDataSource() throws Exception {
+	NameParser nameParser = this.ctx.getNameParser("");
+	Name datasourceName = nameParser.parse("_test");
+	Object obj = this.ctx.lookup(datasourceName);
+	DataSource boundDs = null;
+
+	if (obj instanceof DataSource) {
+		boundDs = (DataSource) obj;
+	} else if (obj instanceof Reference) {
+		//
+		// For some reason, this comes back as a Reference
+		// instance under CruiseControl !?
+		//
+		Reference objAsRef = (Reference) obj;
+		ObjectFactory factory = (ObjectFactory) Class.forName(
+				objAsRef.getFactoryClassName()).newInstance();
+		boundDs = (DataSource) factory.getObjectInstance(objAsRef,
+				datasourceName, this.ctx, new Hashtable());
+	}
+
+	assertTrue("Datasource not bound", boundDs != null);
+
+	Connection con = boundDs.getConnection();
+	con.close();
+	assertTrue("Connection can not be obtained from data source",
+			con != null);
+}
+ 
+
+
+
+
+Code Example 5:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/com/mysql/jdbc/. 
+
+Source ConnectionPropertiesImpl.java 
+
+void initializeFrom(Reference ref) throws SQLException {
+	RefAddr refAddr = ref.get(getPropertyName());
+
+	if (refAddr != null) {
+		String refContentAsString = (String) refAddr.getContent();
+
+		initializeFrom(refContentAsString);
+	}
+}
+ 
+
+
+
+
+Code Example 6:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/com/mysql/jdbc/. 
+
+Source ConnectionPropertiesImpl.java 
+
+void storeTo(Reference ref) {
+	if (getValueAsObject() != null) {
+		ref.add(new StringRefAddr(getPropertyName(), getValueAsObject()
+				.toString()));
+	}
+}
+ 
+
+
+
+
+Code Example 7:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/com/mysql/jdbc/. 
+
+Source ConnectionPropertiesImpl.java 
+
+protected void initializeFromRef(Reference ref) throws SQLException {
+	int numPropertiesToSet = PROPERTY_LIST.size();
+
+	for (int i = 0; i < numPropertiesToSet; i++) {
+		java.lang.reflect.Field propertyField = (java.lang.reflect.Field) PROPERTY_LIST
+				.get(i);
+
+		try {
+			ConnectionProperty propToSet = (ConnectionProperty) propertyField
+					.get(this);
+
+			if (ref != null) {
+				propToSet.initializeFrom(ref);
+			}
+		} catch (IllegalAccessException iae) {
+			throw SQLError.createSQLException("Internal properties failure", //$NON-NLS-1$
+					SQLError.SQL_STATE_GENERAL_ERROR, getExceptionInterceptor());
+		}
+	}
+
+	postInitialization();
+}
+ 
+
+
+
+
+Code Example 8:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/com/mysql/jdbc/. 
+
+Source ConnectionPropertiesImpl.java 
+
+protected void storeToRef(Reference ref) throws SQLException {
+	int numPropertiesToSet = PROPERTY_LIST.size();
+
+	for (int i = 0; i < numPropertiesToSet; i++) {
+		java.lang.reflect.Field propertyField = (java.lang.reflect.Field) PROPERTY_LIST
+				.get(i);
+
+		try {
+			ConnectionProperty propToStore = (ConnectionProperty) propertyField
+					.get(this);
+
+			if (ref != null) {
+				propToStore.storeTo(ref);
+			}
+		} catch (IllegalAccessException iae) {
+			throw SQLError.createSQLException(Messages.getString("ConnectionProperties.errorNotExpected"), getExceptionInterceptor()); //$NON-NLS-1$
+		}
+	}
+}
+ 
+
+
+
+
+Code Example 9:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/com/mysql/jdbc/jdbc2/optional/. 
+
+Source MysqlDataSource.java 
+
+public Reference getReference() throws NamingException {
+	String factoryName = "com.mysql.jdbc.jdbc2.optional.MysqlDataSourceFactory";
+	Reference ref = new Reference(getClass().getName(), factoryName, null);
+	ref.add(new StringRefAddr(NonRegisteringDriver.USER_PROPERTY_KEY,
+			getUser()));
+	ref.add(new StringRefAddr(NonRegisteringDriver.PASSWORD_PROPERTY_KEY,
+			this.password));
+	ref.add(new StringRefAddr("serverName", getServerName()));
+	ref.add(new StringRefAddr("port", "" + getPort()));
+	ref.add(new StringRefAddr("databaseName", getDatabaseName()));
+	ref.add(new StringRefAddr("url", getUrl()));
+	ref.add(new StringRefAddr("explicitUrl", String
+			.valueOf(this.explicitUrl)));
+
+	//
+	// Now store all of the 'non-standard' properties...
+	//
+	try {
+		storeToRef(ref);
+	} catch (SQLException sqlEx) {
+		throw new NamingException(sqlEx.getMessage());
+	}
+
+	return ref;
+}
+ 
+
+
+
+
+Code Example 10:
+
+  1  
+
+vote 
+
+From project aramis-build-toolkit, under directory /opt/liquibase/drivers/mysql-connector-java/src/com/mysql/jdbc/jdbc2/optional/. 
+
+Source MysqlDataSourceFactory.java 
+
+private String nullSafeRefAddrStringGet(String referenceName, Reference ref) {
+	RefAddr refAddr = ref.get(referenceName);
+	
+	String asString = refAddr != null ? (String)refAddr.getContent() : null;
+	
+	return asString;
+}
+ 
+
+
+
+
+Code Example 11:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+@Override
+   protected void setUp() {
+	int bufferLen = 50;
+	buffer = new byte[bufferLen];
+	Random random = new Random();
+	for (int i = 0; i < bufferLen; i++) {
+		buffer[i] = (byte) random.nextInt(0x100);
+	}
+
+	String className = "java.util.Hashtable";
+	ref = new Reference(className);
+}
+ 
+
+
+
+
+Code Example 12:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testConstructor_Simple() {
+	String className = "java.util.Hashtable";
+	Reference reference = new Reference(className);
+
+	assertEquals(className, reference.getClassName());
+	assertNull(reference.getFactoryClassName());
+	assertNull(reference.getFactoryClassLocation());
+	assertEquals(0, reference.size());
+}
+ 
+
+
+
+
+Code Example 13:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testConstructor_SimpleNull() {
+	Reference reference = new Reference(null);
+
+	assertNull(reference.getClassName());
+	assertEquals(0, reference.size());
+}
+ 
+
+
+
+
+Code Example 14:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testConstructor_ByRefAddr() {
+	String className = "java.util.Hashtable";
+	String type = "Binary";
+	RefAddr refAddr = new BinaryRefAddr(type, buffer);
+	Reference reference = new Reference(className, refAddr);
+
+	assertEquals(className, reference.getClassName());
+	assertEquals(refAddr, reference.get(0));
+	assertNull(reference.getFactoryClassName());
+	assertNull(reference.getFactoryClassLocation());
+	assertEquals(1, reference.size());
+}
+ 
+
+
+
+
+Code Example 15:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testConstructor_ByRefAddrNull() {
+	Reference reference = new Reference(null, null);
+
+	assertNull(reference.getClassName());
+	assertNull(reference.getFactoryClassName());
+	assertNull(reference.getFactoryClassLocation());
+	assertNull(reference.get(0));
+	assertEquals(1, reference.size());
+}
+ 
+
+
+
+
+Code Example 16:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testConstructor_ByFactory() {
+	String className = "java.util.Hashtable";
+	String factoryName = "factory name";
+	String factoryLocation = "file:///home/";
+	Reference reference = new Reference(className, factoryName,
+			factoryLocation);
+
+	assertEquals(className, reference.getClassName());
+	assertEquals(factoryName, reference.getFactoryClassName());
+	assertEquals(factoryLocation, reference.getFactoryClassLocation());
+	assertEquals(0, reference.size());
+}
+ 
+
+
+
+
+Code Example 17:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testConstructor_ByFactoryNull() {
+	Reference reference = new Reference(null, null, null);
+
+	assertNull(reference.getClassName());
+	assertNull(reference.getFactoryClassName());
+	assertNull(reference.getFactoryClassLocation());
+	assertEquals(0, reference.size());
+}
+ 
+
+
+
+
+Code Example 18:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testConstructor_Full() {
+	String className = "java.util.Hashtable";
+	String factoryName = "factory name";
+	String factoryLocation = "file:///home/";
+
+	String type = "Binary";
+	RefAddr refAddr = new BinaryRefAddr(type, buffer);
+
+	Reference reference = new Reference(className, refAddr, factoryName,
+			factoryLocation);
+
+	assertEquals(className, reference.getClassName());
+	assertEquals(factoryName, reference.getFactoryClassName());
+	assertEquals(factoryLocation, reference.getFactoryClassLocation());
+	assertEquals(1, reference.size());
+	assertEquals(refAddr, reference.get(0));
+}
+ 
+
+
+
+
+Code Example 19:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testConstructor_FullNull() {
+
+	Reference reference = new Reference(null, null, null, null);
+
+	assertNull(reference.getClassName());
+	assertNull(reference.getFactoryClassName());
+	assertNull(reference.getFactoryClassLocation());
+	assertNull(reference.get(0));
+	assertEquals(1, reference.size());
+}
+ 
+
+
+
+
+Code Example 20:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_Simple() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+
+	Reference reference0 = new Reference(className, classFactory, location);
+	Reference reference1 = new Reference(className, classFactory, location);
+	assertTrue(reference0.equals(reference1));
+	assertTrue(reference0.equals(reference0));
+	assertTrue(reference1.equals(reference0));
+	assertFalse(reference0.equals(null));
+}
+ 
+
+
+
+
+Code Example 21:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_SimpleWithStrAddr() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+	StringRefAddr addr = new StringRefAddr("String address",
+			"this is a string");
+	Reference reference0 = new Reference(className, addr, classFactory,
+			location);
+	Reference reference1 = new Reference(className, addr, classFactory,
+			location);
+	assertTrue(reference0.equals(reference1));
+	assertTrue(reference0.equals(reference0));
+	assertTrue(reference1.equals(reference0));
+	assertFalse(reference0.equals(null));
+}
+ 
+
+
+
+
+Code Example 22:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_IgnoreFactory() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+	StringRefAddr addr = new StringRefAddr("String address",
+			"this is a string");
+	Reference reference0 = new Reference(className, addr, classFactory,
+			location);
+	Reference reference1 = new Reference(className, addr, "", location);
+	assertTrue(reference0.equals(reference1));
+}
+ 
+
+
+
+
+Code Example 23:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_IgnoreFactoryLocation() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+	StringRefAddr addr = new StringRefAddr("String address",
+			"this is a string");
+	Reference reference0 = new Reference(className, addr, classFactory,
+			location);
+	Reference reference1 = new Reference(className, addr, classFactory, "");
+	assertTrue(reference0.equals(reference1));
+}
+ 
+
+
+
+
+Code Example 24:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_NotEquals1() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+	StringRefAddr addr = new StringRefAddr("String address",
+			"this is a string");
+	Reference reference0 = new Reference(className, addr, classFactory,
+			location);
+	Reference reference1 = new Reference("java.lang.StringBuffer", addr,
+			classFactory, location);
+	assertFalse(reference0.equals(reference1));
+}
+ 
+
+
+
+
+Code Example 25:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_NotEquals2() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+	StringRefAddr addr = new StringRefAddr("String address",
+			"this is a string");
+	BinaryRefAddr addr1 = new BinaryRefAddr("Binary address", new byte[] {
+			1, 2, 3, 4, 5 });
+	Reference reference0 = new Reference(className, addr, classFactory,
+			location);
+	Reference reference1 = new Reference(className, addr1, classFactory,
+			location);
+	assertFalse(reference0.equals(reference1));
+}
+ 
+
+
+
+
+Code Example 26:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_NotInstance() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+
+	Reference reference0 = new Reference(className, classFactory, location);
+	assertFalse(reference0.equals("reference"));
+}
+ 
+
+
+
+
+Code Example 27:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_NullClassName() {
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+
+	Reference reference0 = new Reference(null, classFactory, location);
+	Reference reference1 = new Reference(null, classFactory, location);
+
+	try {
+		reference0.equals(reference1);
+		fail("Should throw NullPointerException.");
+	} catch (NullPointerException e) {
+	}
+}
+ 
+
+
+
+
+Code Example 28:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_NullClassName2() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+
+	Reference reference0 = new Reference(null, classFactory, location);
+	Reference reference2 = new Reference(className, classFactory, location);
+
+	// try {
+	assertFalse(reference0.equals(reference2));
+	// fail("Should throw NullPointerException.");
+	// } catch (NullPointerException e) {
+	// }
+}
+ 
+
+
+
+
+Code Example 29:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testEquals_NullClassName3() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+
+	Reference reference0 = new Reference(null, classFactory, location);
+	Reference reference2 = new Reference(className, classFactory, location);
+
+	try {
+		reference2.equals(reference0);
+		fail("Should throw NullPointerException.");
+	} catch (NullPointerException e) {
+	}
+}
+ 
+
+
+
+
+Code Example 30:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testHashcode_Simple() {
+	String className = "java.lang.String";
+	String classFactory = "class factory";
+	String location = "/home/neuser";
+	StringRefAddr addr0 = new StringRefAddr("String address",
+			"this is a string");
+	StringRefAddr addr1 = new StringRefAddr("String address",
+			"this is another string");
+	Reference reference = new Reference(className, addr0, classFactory,
+			location);
+	reference.add(addr1);
+	assertEquals(
+			className.hashCode() + addr0.hashCode() + addr1.hashCode(),
+			reference.hashCode());
+}
+ 
+
+
+
+
+Code Example 31:
+
+  1  
+
+vote 
+
+From project harmony-classlib, under directory /modules/jndi/src/test/java/org/apache/harmony/jndi/tests/javax/naming/. 
+
+Source ReferenceTest.java 
+
+public void testToString_Simple() {
+String className = "java.lang.String";
+String classFactory = "class factory";
+String location = "/home/neuser";
+StringRefAddr addr0 = new StringRefAddr("String address",
+		"this is a string");
+StringRefAddr addr1 = new StringRefAddr("String address",
+		"this is another string");
+Reference reference = new Reference(className, addr0, classFactory,
+		location);
+reference.add(addr1);
+
+/*
+ * assertEquals( "Reference class name: " + className + "\nReference
+ * addresses:\n\t" + addr0.toString() + "\n\t" + addr1.toString() +
+ * "\n", reference.toString());
+ */
+assertNotNull(reference.toString());
+      assertEquals("Reference Class Name: " + reference.getClassName() + "\n"
+              + addr0.toString() + addr1.toString(), reference.toString());
+  }
+ 

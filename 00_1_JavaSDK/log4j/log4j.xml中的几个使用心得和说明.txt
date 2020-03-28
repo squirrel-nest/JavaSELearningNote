@@ -1,0 +1,3 @@
+http://blog.sina.com.cn/s/blog_8f99a1640102v3eo.html
+
+log4j.xml中的几个使用心得和说明

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <data-sources />
+  <form-beans >
+	<form-bean name="testForm" type="com.form.TestForm" />
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action path="/jsp/doTestAction" parameter="postMethod" type="com.action.DoTestAction" name="testForm" scope="request" >
+      <forward name="getTestInfList" path="/jsp/test_main.jsp"/>
+      <forward name="openEditWindow" path="/jsp/testmaintain.jsp"/>
+    </action>
+  </action-mappings>
+  <message-resources parameter="j2eetest" />
+</struts-config>
+

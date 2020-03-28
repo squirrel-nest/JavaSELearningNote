@@ -1,0 +1,45 @@
+JAVA实现JNDI连接数据库
+http://blog.csdn.net/oh_mourinho/article/details/7346405
+JNDI Datasource HOW-TO
+http://tomcat.apache.org/tomcat-8.0-doc/jndi-datasource-examples-howto.html
+
+
+javac -cp /usr/local/webapps/javaweb/lzjdbc/classes/lib/ojdbc7.jar RemoteRefJDBC.java
+
+javac -cp /usr/local/webapps/javaweb/lzjdbc/classes/ojdbc7.jar RemoteRefJDBC.java
+
+以下面的为准，统一改为 主目录下的lib
+javac -cp /usr/local/webapps/javaweb/lzjdbc/lib/ojdbc7.jar RemoteRefJDBC.java
+
+javac -cp ../lib/ojdbc7.jar RemoteRefJDBC.java
+
+
+
+rmiregistry -J-Djava.rmi.server.codebase=http://192.168.0.9:8080/lzjdbc/classes/ &
+--不能用
+java -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzdbc/classes/ -Djava.rmi.server.hostname=192.168.0.9 RemoteRefJDBC &
+导致
+Exception in thread "main" java.lang.NoClassDefFoundError: oracle/jdbc/pool/OracleDataSource
+------------
+要用
+java -cp /usr/local/webapps/javaweb/lzjdbc/classes:/usr/local/webapps/javaweb/lzjdbc/classes/ojdbc7.jar -Djava.rmi.server.codebase=http://192.168.1.8:8080/lzdbc/classes/ojdbc7.jar -Djava.rmi.server.hostname=192.168.1.8 RemoteRefJDBC &
+
+java -cp /usr/local/webapps/javaweb/lzjdbc/classes:/usr/local/webapps/javaweb/lzjdbc/lib/ojdbc7.jar -Djava.rmi.server.codebase=http://192.168.0.9:8080/lzdbc/lib/ojdbc7.jar -Djava.rmi.server.hostname=192.168.0.9 RemoteRefJDBC &
+
+
+
+服务端程序
+/usr/local/webapps/javaweb/lzjdbc/classes/RemoteRefJDBC.class
+
+----------------------------------------------
+客户端运行时，出现如下错误：
+
+Operation failed: javax.naming.ServiceUnavailableException [Root exception is java.rmi.ConnectException: Connection refused to host: 192.168.1.8; nested exception is: 
+	java.net.ConnectException: Connection timed out: connect]; remaining name 'cn=RefOracleDataSource'
+
+解决方法：
+1.
+service iptables stop
+可以通过了，说明是某个使用的端口没有打开：
+
+试用：

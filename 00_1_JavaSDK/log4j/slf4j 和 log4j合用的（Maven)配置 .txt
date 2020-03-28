@@ -1,0 +1,4 @@
+http://blog.csdn.net/anialy/article/details/8529188
+
+
+slf4j 和 log4j合用的（Maven)配置 

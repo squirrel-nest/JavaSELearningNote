@@ -1,0 +1,993 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0059)http://platform.netbeans.org/tutorials/60/nbm-paintapp.html -->
+<HTML><HEAD><TITLE>platform: NetBeans Platform 6.0 Paint Application Tutorial</TITLE>
+<SCRIPT src="" type=text/javascript></SCRIPT>
+<LINK 
+href="platform NetBeans Platform 6_0 Paint Application Tutorial.files/netbeans.css" 
+type=text/css rel=stylesheet>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META http-equiv=Content-Style-Type content=text/css>
+<META content=3.5.1.19.10 name=SourceCastVersion><LINK 
+href="http://www.netbeans.org/favicon.ico" type=image/x-icon 
+rel="shortcut icon">
+<META 
+content="java IDE, java editor, java Platform, free, open source, java development, j2ee support, development enviroment, web development, NetBeans, IDE, java" 
+name=keywords>
+<SCRIPT language=JavaScript type=text/javascript>
+<!--
+var username="guest";
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2900.3199" name=GENERATOR></HEAD>
+<BODY class="composite blue-bg"><!-- begin TopTabs  --><!-- static Community tab selected banner -->
+<DIV style="HEIGHT: 50px; BACKGROUND-COLOR: #ccd2e2">
+<DIV id=floating-logo>
+<DIV id=search>
+<FORM style="DISPLAY: inline" action=http://www.google.com/custom method=get>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><A href="http://www.netbeans.org/community/search.html">Search:</A> 
+</TD>
+    <TD><INPUT class=text name=q></TD>
+    <TD><INPUT type=image alt="Search netbeans.org" 
+      src="platform NetBeans Platform 6_0 Paint Application Tutorial.files/search-button.gif" 
+      name=Button> <INPUT type=hidden 
+      value=GIMP:#FF0F12;LW:193;ALC:#FF0F12;L:http://www.netbeans.org/images/logo.gif;GFNT:#8A8DB0;LC:#0E0E76;LH:45;AH:center;VLC:#0E0E76;S:http://www.netbeans.org/;AWFID:a8753e5d03543916; 
+      name=cof><INPUT type=hidden value=netbeans.org name=domains><INPUT 
+      type=hidden value=netbeans.org name=sitesearch> 
+</TD></TR></TBODY></TABLE></FORM></DIV>
+<DIV class=float-left><A href="http://www.netbeans.org/index.html"><IMG 
+class=logo-link title="NetBeans.org - go to the homepage" 
+style="PADDING-TOP: 10px" height=60 alt="netbeans.org - go to homepage" 
+src="platform NetBeans Platform 6_0 Paint Application Tutorial.files/nb-logo2.gif" 
+width=150 border=0></A></DIV></DIV></DIV>
+<DIV id=center-container><!-- layer centering whole page -->
+<DIV id=floating-page><!-- margins for whole page -->
+<DIV id=floating-tabs-container><IMG class=float-left style="MARGIN-LEFT: -3px" 
+height=26 
+src="platform NetBeans Platform 6_0 Paint Application Tutorial.files/corner-left.png" 
+width=11><IMG class=float-right style="MARGIN-RIGHT: -3px" height=26 
+src="platform NetBeans Platform 6_0 Paint Application Tutorial.files/corner-right.png" 
+width=14>
+<DIV id=floating-tabs><A title="" href="http://www.netbeans.org/index.html"><IMG 
+class=iMenu height=26 alt="" 
+src="platform NetBeans Platform 6_0 Paint Application Tutorial.files/home-off.png" 
+width=120 border=0></A><A title=Products 
+href="http://www.netbeans.org/products/index.html"><IMG class=iMenu height=26 
+alt=Products 
+src="platform NetBeans Platform 6_0 Paint Application Tutorial.files/products-off.png" 
+width=120 border=0></A><A title=Plugins 
+href="http://plugins.netbeans.org/PluginPortal/"><IMG class=iMenu height=26 
+alt=Plugins 
+src="platform NetBeans Platform 6_0 Paint Application Tutorial.files/catalogue-off.png" 
+width=120 border=0></A><A title=Docs&nbsp;&amp;&nbsp;Support 
+href="http://www.netbeans.org/kb/index.html"><IMG class=iMenu height=26 
+alt=Docs&nbsp;&amp;&nbsp;Support 
+src="platform NetBeans Platform 6_0 Paint Application Tutorial.files/kb-off.png" 
+width=120 border=0></A><A title=Community 
+href="http://www.netbeans.org/community/index.html"><IMG class=iMenu height=26 
+alt=Community src="" width=120 border=0></A><A title=Partners 
+href="http://www.netbeans.org/community/partners/index.html"><IMG class=iMenu 
+height=26 alt=Partners src="" width=120 border=0></A></DIV></DIV>
+<DIV id=shade-left>
+<DIV id=shade-right>
+<DIV id=navig-breadcrumbs style="MARGIN-LEFT: 3px"><!-- Home - Community - Projects, and module switcher combo --><A 
+href="http://www.netbeans.org/index.html">HOME</A> &gt; <A 
+href="http://www.netbeans.org/community/index.html">Community</A> &gt; <A 
+href="http://www.netbeans.org/community/projects/index.html">Projects</A> &gt; 
+platform </DIV>
+<TABLE class=colapse id=floating-contenttable style="MARGIN-RIGHT: auto">
+  <TBODY>
+  <TR>
+    <TD class="valign-top b-right full-width">
+      <DIV class="f-page-cell bg-white" style="MARGIN-LEFT: 3px">
+      <DIV style="WIDTH: 96%"><!-- NO print link --><!-- end TopTabs --><!-- Servlet-Specific template --><!--Attention: No screenshots have been added yet.  JB --><LINK 
+      href="platform NetBeans Platform 6_0 Paint Application Tutorial.files/netbeans.css" 
+      type=text/css rel=stylesheet><LINK 
+      href="http://www.netbeans.org/favicon.ico" type=image/x-icon 
+      rel="shortcut icon">
+      <META content="NetBeans, IDE, Platform, free, open source, developer" 
+      name=keywords>
+      <H1>NetBeans Platform 6.0 Paint Application Tutorial</H1>
+      <P>This tutorial takes you through the basics of using NetBeans IDE to 
+      develop rich-client applications on top of the NetBeans Platform. When you 
+      develop applications on top of the NetBeans Platform, you are developing 
+      on top of the NetBeans IDE's core. All the modules belonging to the IDE 
+      that are not relevant to your application are excluded, but those that are 
+      useful are kept. By reusing features readily available in IDE's core, you 
+      save yourself a lot of time and energy. 
+      <P>This tutorial is designed to get you going as quickly as possible. You 
+      will create and install a simple application on the NetBeans Platform. The 
+      application allows the user to paint on the screen and save the 
+      results:<BR>
+      <P><A name=sampleImage></A><IMG alt="image of completed application" 
+      src="" border=1> 
+      <P>This initial version is far from a full fledged paint application, but 
+      it demonstrates a very simple case of creating an application on top of 
+      the NetBeans Platform. 
+      <P>Note that the <A 
+      href="http://platform.netbeans.org/tutorials/60/nbm-google.html">NetBeans 
+      Module Quick Start Tutorial</A> is a better tutorial for you if, instead 
+      of rich-client applications, you want to learn about NetBeans plug-in 
+      modules. 
+      <P>The following topics are covered below:</P>
+      <UL>
+        <LI><A 
+        href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#setup">Setting 
+        Up the Paint Application</A> 
+        <UL>
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#creatingModuleSuite">Creating 
+          the Module Suite</A> 
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#creatingLibWrapModule">Creating 
+          the Library Wrapper Module Project</A> 
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#creatingModProj">Creating 
+          the Module Project</A> 
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#specifyingModProjDep">Specifying 
+          the Module Project's Dependencies</A> </LI></UL>
+        <LI><A 
+        href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#impMod">Creating 
+        and Embedding the Paint Canvas</A> 
+        <UL>
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#creatingCanv">Creating 
+          the Canvas</A> 
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#prepTopComp">Preparing 
+          the TopComponent Class</A> 
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#initTopComp">Initializing 
+          the TopComponent Class</A> 
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#fillSkelMeth">Filling 
+          out the Skeleton Methods</A> 
+          <LI><A 
+          href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#savingImage">Saving 
+          the Image to Disk</A> </LI></UL>
+        <LI><A 
+        href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#defNew">Creating 
+        the New Canvas Menu Item</A> 
+        <LI><A 
+        href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#defSave">Creating 
+        the Save Canvas Menu Item</A> 
+        <LI><A 
+        href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#wrappingUp">Wrapping 
+        Up</A> 
+        <LI><A 
+        href="http://platform.netbeans.org/tutorials/60/nbm-paintapp.html#creatingDist">Creating 
+        a Distribution</A> </LI></UL>
+      <P>In this tutorial, we recreate an application that is a sample delivered 
+      with the IDE. To see the final product, or to troubleshoot problems while 
+      working through this tutorial, get the sample from the New Project wizard, 
+      in the location shown below:</P>
+      <P align=left><IMG alt="name and location panel" src="" border=1> 
+      <P>For more information on working with the NetBeans Platform, see the <A 
+      href="http://platform.netbeans.org/index.html">NetBeans Development 
+      Project Home</A> on the NetBeans website. If you have questions, visit the 
+      <A 
+      href="http://wiki.netbeans.info/wiki/view/NetBeansDeveloperFAQ">NetBeans 
+      Developer FAQ</A> or use the feedback link at the bottom of this page.</P>
+      <P><A name=setup></A>
+      <H2>Setting Up the Paint Application</H2>
+      <P>In this section, you create the structure of your application. You 
+      first need to create a module suite project, which will represent your 
+      application. The application depends on a library, so you will create a 
+      library wrapper module project that will contain the library's JAR file. 
+      Finally, you create the module project that will contain your code. 
+      <DIV class=indent>
+      <P><A name=creatingModuleSuite></A>
+      <H3 class=tutorial>Creating the Module Suite</H3>
+      <P>A module suite is the equivalent of an application—it is a set of 
+      modules that work together to create specific results. It also lets you 
+      assign your own splashscreen (branding), application name, and the type 
+      and number of NetBeans modules you want to use. You can also take 
+      advantage of such actions as creating a ZIP distribution and building a 
+      Java WebStart (JNLP) application, which are important tools in making your 
+      application available to other users. 
+      <OL>
+        <LI>Choose File &gt; New Project. Under Categories, select NetBeans 
+        Plug-in Modules. Under projects, select Module Suite Project and click 
+        Next. 
+        <LI>In the Name and Location panel, type <TT>PaintApp</TT> in Project 
+        Name. Change the Project Location to any directory on your computer. 
+        Leave the Set as Main Project checkbox selected:<BR><BR>
+        <P align=left><IMG alt="name and location panel" src="" border=1> 
+        <P>Click Finish. </P></LI></OL>
+      <P>The new module suite project opens in the IDE. It contains one node in 
+      the Project window. This node, the Modules node, is for manually adding 
+      module projects and library wrapper module projects to the module suite 
+      project. When you use the Module Project wizard or the Library Wrapper 
+      Module Project wizard, the module that you create can automatically be 
+      added to the module suite project. 
+      <P>
+      <H3 class=tutorial><A name=creatingLibWrapModule></A>Creating the Library 
+      Wrapper Module Project</H3>
+      <P>A library wrapper module is a module whose JAR file contains no code—it 
+      is just a pointer to a library. It turns the library into a NetBeans 
+      module, so that all the protections of the NetBeans classloader system 
+      apply to it—without modifying the original JAR file. Your application can 
+      then depend on the library just as if the library were just another 
+      NetBeans module. And, if new versions of the library become available, you 
+      can distribute them without needing to distribute anything except a single 
+      NetBeans Module (NBM) file for the wrapper library. 
+      <P><B>Note:</B> One of the benefits of building on the NetBeans Platform 
+      is that its user interface is based on Swing—the standard user interface 
+      toolkit for Java. Since Swing has been around for a long time, there are a 
+      lot of Swing components you can reuse in your application. In this 
+      tutorial, you reuse an existing color chooser JavaBean (you can find the 
+      source for it in NetBeans CVS under <TT>contrib/coloreditor</TT>). The JAR 
+      file is called <TT>ColorChooser.jar</TT>. You can download the library <A 
+      href="https://colorchooser.dev.java.net/">here</A>. Save it anywhere in 
+      your filesystem. Do the following to create a library wrapper module for 
+      the <TT>ColorChooser.jar</TT> file: 
+      <OL>
+        <LI>Choose File &gt; New Project. Under Categories, select NetBeans 
+        Plug-in Modules. Under projects, select Library Wrapper Module Project 
+        and click Next. 
+        <LI>In the Name and Location panel, for the Library text box, either 
+        type in the path to <TT>ColorChooser.jar</TT> or browse to its location. 
+
+        <LI>Leave the License text field empty. If you intend to distribute the 
+        completed product, you should include the external library's license 
+        file. 
+        <LI>Click Next and you should see this:
+        <P></P>
+        <P align=left><IMG alt="name and location panel" src="" border=1> 
+        <P>Click Next again, and then click Finish.</P></LI></OL>
+      <H3 class=tutorial><A name=creatingModProj></A>Creating the Module 
+      Project</H3>
+      <P>Now you need a module to contain the actual code you're going to write. 
+
+      <OL>
+        <LI>Choose File &gt; New Project. Under Categories, select NetBeans 
+        Plug-in Modules. Under projects, select Module Project and click Next. 
+        <LI>In the Name and Location panel, type <TT>Paint</TT> in Project Name. 
+        Change the Project Location to any directory on your computer. Ensure 
+        that the Add to Module Suite radio button is selected and that the 
+        <TT>PaintApp</TT> module suite is selected in the Module Suite drop down 
+        list. Select the Set as Main Project checkbox. Click Next. 
+        <LI>In the Basic Module Configuration panel, change <TT>yourorghere</TT> 
+        in Code Name Base to <TT>netbeans</TT> so that the whole name is 
+        <TT>org.netbeans.paint</TT>. Leave <TT>Paint</TT> as the Module Display 
+        Name. Leave the location of the localizing bundle and XML layer, so that 
+        they will be stored in a package with the name 
+        <TT>org.netbeans.paint</TT>. These files do the following: 
+        <UL>
+          <LI><B>Localizing Bundle.</B> Specifies language-specific strings for 
+          internationalization. 
+          <LI><B>XML Layer.</B> Registers items such as menus and toolbar 
+          buttons in the NetBeans system. </LI></UL>
+        <P>Click Finish.</P></LI></OL>
+      <P>The IDE creates the <TT>Paint</TT> project. The project contains all of 
+      your sources and project metadata, such as the project's Ant build script. 
+      The project opens in the IDE. You can view its logical structure in the 
+      Projects window (Ctrl-1) and its file structure in the Files window 
+      (Ctrl-2). For example, the Projects window should look as follows:</P>
+      <P align=left><IMG alt="logical structure of Projects window" src="" 
+      border=1> 
+      <P>In addition to the localizing bundle and the XML layer, the project 
+      also includes the following important files: 
+      <UL>
+        <LI><B>Module Manifest.</B> Declares that the project is a plug-in 
+        module. In addition, it sets some module-specific settings, such as the 
+        location of the XML layer, the location of the localizing bundle, and 
+        the module version. 
+        <LI><B>Build Script.</B> Provides a place where you can create your own 
+        Ant targets and override those that are specified in 
+        <TT>nbproject/build-impl.xml</TT>. 
+        <LI><B>Project Metadata.</B> Contains information such as the project's 
+        type, contents, platform, classpath, dependencies, and mappings between 
+        project commands and targets in Ant scripts. </LI></UL>
+      <P>You will not need to modify any of these files during this tutorial. 
+      <P>
+      <H3 class=tutorial><A name=specifyingModProjDep></A>Specifying the Module 
+      Project's Dependencies</H3>
+      <P>You will need to subclass several classes that belong to the <A 
+      href="http://www.netbeans.org/download/dev/javadoc/">NetBeans APIs</A>. In 
+      addition, the project depends on the <TT>ColorChooser.jar</TT> file. All 
+      NetBeans APIs are implemented by plug-in modules, so completing both of 
+      these tasks really just means adding some plug-in modules to the list of 
+      plug-in modules that our plug-in module needs in order to run. 
+      <OL>
+        <LI>In the Projects window, right-click the <TT>Paint</TT> project node 
+        and choose Properties. The Project Properties dialog box opens. Under 
+        Categories, click Libraries. 
+        <LI>For each of the API's listed in the table below, click "Add 
+        Dependency..." and then, in the Filter text box, start typing the name 
+        of the class that you want to subclass.<BR><BR>
+        <P>
+        <TABLE width="76%" border=1>
+          <TBODY>
+          <TR>
+            <TD>
+              <DIV align=left><B>Class</B></DIV></TD>
+            <TD>
+              <DIV align=left><B>API</B></DIV></TD>
+            <TD>
+              <DIV align=left><B>Purpose</B></DIV></TD></TR>
+          <TR>
+            <TD><TT>ColorChooser</TT></TD>
+            <TD><TT>ColorChooser</TT></TD>
+            <TD>Library wrapper module for the color chooser component you 
+              created</TD></TR>
+          <TR>
+            <TD><TT>DataObject</TT></TD>
+            <TD><TT>Datasystems API</TT></TD>
+            <TD>The NetBeans module containing the DataObject class</TD></TR>
+          <TR>
+            <TD><TT>DialogDisplayer</TT></TD>
+            <TD><TT>Dialogs API</TT></TD>
+            <TD>This allows the creation of user notification, a dialog's 
+              description and permits it to be displayed</TD></TR>
+          <TR>
+            <TD><TT>AbstractFile</TT></TD>
+            <TD><TT>File System API</TT></TD>
+            <TD>This provides a common API to access files in a uniform 
+            manner</TD></TR>
+          <TR>
+            <TD><TT>AbstractNode</TT></TD>
+            <TD><TT>Nodes API</TT></TD>
+            <TD>This serves as the main aparatus for visualisation of objects 
+              in NetBeans</TD></TR>
+          <TR>
+            <TD><TT>StatusDisplayer</TT></TD>
+            <TD><TT>UI Utilities API</TT></TD>
+            <TD>The StatusDisplayer class used to write the statusbar in the 
+              main window</TD></TR>
+          <TR>
+            <TD><TT>WeakListeners</TT></TD>
+            <TD><TT>Utilities API</TT></TD>
+            <TD>This contains the WeakListeners class</TD></TR>
+          <TR>
+            <TD><TT>TopComponent</TT></TD>
+            <TD><TT>Window System API</TT></TD>
+            <TD>This contains the TopComponent JPanel 
+class</TD></TR></TBODY></TABLE>
+        <P>The first column in the table above lists all the classes that you 
+        will subclass in this tutorial. In each case, start typing the class 
+        name in the Filter and watch the Module list narrow. Use the table's 
+        second column to pick the appropriate API (or, in the case of 
+        <TT>ColorChooser</TT>, the library) from the narrowed Module list and 
+        then click OK to confirm the choice: 
+        <P align=left><IMG alt=initial-proj-window src="" border=1> </P>
+        <LI>Click OK to exit the Project Properties dialog box. 
+        <LI>In the Projects window, expand the Paint module's project node if it 
+        is not already expanded. Then expand the Important Files node and 
+        double-click the Project Metadata node. Note that the API's you selected 
+        have been declared as module dependencies. </LI></OL></DIV><BR>
+      <H2><A name=impMod></A>Creating and Embedding the Paint Canvas</H2>
+      <DIV class=indent>
+      <H3 class=tutorial><A name=creatingCanv></A>Creating the Canvas</H3>
+      <P>The next step is to create the actual component on which the user can 
+      paint. Here, you use a pure Swing component—so, let's skip the details of 
+      its implementation and just provide the final version. The color chooser 
+      bean, which you created the library wrapper module for, is used in the 
+      source code for this panel—when you run the finished application, you will 
+      see it in the toolbar of the panel for editing images.</P>
+      <OL type=1>
+        <LI>In the Projects window, expand the <TT>Paint</TT> node, then expand 
+        the Source Packages node, and then right-click the 
+        <TT>org.netbeans.paint</TT> node. Choose New &gt; Java Class. 
+        <LI>Enter <TT>PaintCanvas</TT> as the Class Name. Ensure that 
+        <TT>org.netbeans.paint</TT> is listed as the Package. Click Finish. 
+        <TT>PaintCanvas.java</TT> opens in the Source editor. 
+        <LI>Replace the default content of the file with the content found <A 
+        href="http://platform.netbeans.org/guide/tutorials/paintTutorial/PaintCanvas.java" 
+        target=source>here</A>. If you named your package something other than 
+        <TT>org.netbeans.paint</TT>, correct the package name in the Source 
+        editor. </LI></OL>
+      <P>
+      <H3 class=tutorial><A name=prepTopComp></A>Preparing the TopComponent 
+      Class</H3>
+      <P>
+      <P>Now you'll write your first class that touches the <A 
+      href="http://www.netbeans.org/download/dev/javadoc/">NetBeans APIs</A>. It 
+      is a <TT><A 
+      href="http://www.netbeans.org/download/dev/javadoc/org-openide-windows/org/openide/windows/TopComponent.html">TopComponent</A></TT> 
+      class. A <TT>TopComponent</TT> class is just a <TT>JPanel</TT> class which 
+      NetBeans' windowing system knows how to talk to—so it can be put inside a 
+      tabbed container inside the main window. 
+      <OL type=1>
+        <LI>In the Projects window, expand the <TT>Paint</TT> node, then expand 
+        the Source Packages node, and then right-click the 
+        <TT>org.netbeans.paint</TT> node. Choose New &gt; Java Class. Enter 
+        <TT>PaintTopComponent</TT> as the Class Name. Ensure that 
+        <TT>org.netbeans.paint</TT> is listed as the Package. Click Finish. 
+        <TT>PaintTopComponent.java</TT> opens in the Source editor. 
+        <LI>Near the top of the file, change the class declaration to the 
+        following: <PRE class=examplecode>    public class PaintTopComponent extends TopComponent implements ActionListener, ChangeListener {</PRE>
+        <LI>Press Alt-Shift-F to fix imports anc click OK in the dialog box. The 
+        IDE makes the necessary import package declarations at the top of the 
+        file.
+        <P></P>
+        <P>Notice the red line under the class declaration that you just 
+        entered. Position the cursor in the line and notice that a light bulb 
+        appears in the left margin. Click the light bulb (or press Alt-Enter), 
+        as shown below: 
+        <P><IMG alt=Lightbulb. src="" border=1> 
+        <P>Select Implement all abstract methods. The IDE generates two method 
+        skeletons—<TT>actionPerformed()</TT> and <TT>stateChanged()</TT>. You 
+        fill these out later in this tutorial. </P>
+        <LI>Add the following three variable declarations to the top of the 
+        <TT>PaintTopComponent</TT> class and then fix the import statements 
+        (Alt-Shift-F). <PRE class=examplecode>    private PaintCanvas canvas = new PaintCanvas(); //The component the user draws on
+    private JComponent preview; //A component in the toolbar that shows the paintbrush size
+    private static int ct = 0; //A counter you use to provide names for new images</PRE>
+        <LI>Now you need to implement two boilerplate methods. The first one 
+        tells the windowing system to disregard open windows when the 
+        application is shut down; the second provides a base string for a unique 
+        string ID for our component. Each <TT>TopComponent</TT> has a unique 
+        string ID that is used when saving the <TT>TopComponent</TT>. Insert the 
+        following two methods into the <TT>PaintTopComponent</TT> class: <PRE class=examplecode>    public int getPersistenceType() {
+        return PERSISTENCE_NEVER;
+    }
+
+    public String preferredID() {
+        return "Image";
+    }</PRE></LI></OL>
+      <P>The class should now look as follows: </P><PRE class=examplecode>public class PaintTopComponent extends TopComponent implements ActionListener, ChangeListener {
+    
+    private PaintCanvas canvas = new PaintCanvas(); //The component the user draws on
+    private JComponent preview; //A component in the toolbar that shows the paintbrush size
+    private static int ct = 0; //A counter you use to provide names for new images
+    
+    public PaintTopComponent() {
+    }
+    
+    public void actionPerformed(ActionEvent arg0) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    
+    public void stateChanged(ChangeEvent arg0) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    
+    public int getPersistenceType() {
+        return PERSISTENCE_NEVER;
+    }
+    
+    public String preferredID() {
+        return "Image";
+    }
+    
+}</PRE>
+      <H3 class=tutorial><A name=initTopComp></A>Initializing the TopComponent 
+      Class</H3>
+      <P>In this section, we add code that initializes the user interface. 
+      <OL type=1>
+        <LI>Fill out the constructor, which the IDE created for you near the top 
+        of the class, and then fix the import statements (Alt-Shift-F): <PRE class=examplecode>    public PaintTopComponent() {
+
+        initComponents();
+
+        String displayName = NbBundle.getMessage(
+                PaintTopComponent.class,
+                "UnsavedImageNameFormat",
+                new Object[] { new Integer(ct++) }
+        );
+
+        setDisplayName(displayName);
+
+    }</PRE>
+        <P>The code here is pretty simple. The first call is to a method you 
+        haven't written yet, <TT>initComponents()</TT>, which will add a toolbar 
+        and a PaintCanvas to your <TT>TopComponent</TT>. Because you haven't 
+        written the method yet, a red line appears underneath it here. As 
+        before, click the light bulb (or press Alt-Enter) and accept the 
+        suggestion: 
+        <P><IMG alt=Lightbulb. src="" border=1> 
+        <P>The <TT>initComponents()</TT> method skeleton is generated for you. 
+        </P>
+        <LI>Expand the <TT>org.netbeans.paint</TT> package in the Projects 
+        window. Double-click the <TT>Bundle.properties</TT> file to open it in 
+        the Source editor. Add the following line to the end: <PRE class=examplecode>    UnsavedImageNameFormat=Image {0}</PRE>
+        <P>This specifies the text that will be used to identify a new image 
+        file in the application prior to being saved by the user. For example, 
+        when a user clicks New Canvas for the first time in your completed 
+        application, a tab will appear above the Source Editor with the label, 
+        'Image 0'. Make sure that you save the file before continuing. 
+      </P></LI></OL>
+      <H3 class=tutorial><A name=fillSkelMeth></A>Filling Out the Skeleton 
+      Methods</H3>
+      <P>In this section, we code the user interface of our application. We 
+      could also use the IDE's GUI Builder to visually design the layout. 
+      <OL>
+        <LI>The <TT>initComponents()</TT> method installs components in your 
+        panel, so that the user has something to interact with. You generated 
+        its skeleton method during the previous section in the 
+        <TT>PaintTopComponent.java</TT> class. Fill it out as follows: <PRE class=examplecode>    private void initComponents() {
+
+        setLayout(new BorderLayout());
+        JToolBar bar = new JToolBar();
+
+        ColorChooser fg = new ColorChooser();
+        preview = canvas.createBrushSizeView();
+
+        //Now build our toolbar:
+
+        //Make sure components don't get squished:
+        Dimension min = new Dimension(32, 32);
+        preview.setMaximumSize(min);
+        fg.setPreferredSize(new Dimension(16, 16));
+        fg.setMinimumSize(min);
+        fg.setMaximumSize(min);
+
+        JButton clear = new JButton(
+          	    NbBundle.getMessage(PaintTopComponent.class, "LBL_Clear"));
+
+        JLabel fore = new JLabel(
+         	    NbBundle.getMessage(PaintTopComponent.class, "LBL_Foreground"));
+
+        fg.addActionListener(this);
+        clear.addActionListener(this);
+
+        JSlider js = new JSlider();
+        js.setMinimum(1);
+        js.setMaximum(24);
+        js.setValue(canvas.getDiam());
+        js.addChangeListener(this);
+
+        fg.setColor(canvas.getColor());
+
+        bar.add(clear);
+        bar.add(fore);
+        bar.add(fg);
+        JLabel bsize = new JLabel(
+     	    NbBundle.getMessage(PaintTopComponent.class, "LBL_BrushSize"));
+
+        bar.add(bsize);
+        bar.add(js);
+        bar.add(preview);
+
+        JLabel spacer = new JLabel("   "); //Just a spacer so the brush preview
+        //isn't stretched to the end of the
+        //toolbar
+
+        spacer.setPreferredSize(new Dimension(400, 24));
+        bar.add(spacer);
+
+        //And install the toolbar and the painting component:
+        add(bar, BorderLayout.NORTH);
+        add(canvas, BorderLayout.CENTER);
+        
+    }</PRE>
+        <P>Press Alt-Shift-F to generate the required import statements. </P>
+        <LI>Fill out the other two methods that you generated. They are used for 
+        listening to the <TT>PaintTopComponent</TT> class: <PRE class=examplecode>    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() instanceof JButton) {
+           canvas.clear();
+        } else if (e.getSource() instanceof ColorChooser) {
+           ColorChooser cc = (ColorChooser) e.getSource();
+           canvas.setPaint (cc.getColor());
+        }
+        
+        preview.paintImmediately(0, 0, preview.getWidth(), preview.getHeight());
+        
+    }</PRE><PRE class=examplecode>    public void stateChanged(ChangeEvent e) {
+
+        JSlider js = (JSlider) e.getSource();
+        canvas.setDiam (js.getValue());
+        preview.paintImmediately(0, 0, preview.getWidth(), preview.getHeight());
+        
+    }</PRE>
+        <LI>In the <TT>Bundle.properties</TT> file, add the following key-value 
+        pairs to the end of the file: <PRE class=examplecode>    LBL_Clear = Clear
+    LBL_Foreground = Foreground 
+    LBL_BrushSize = Brush Size
+</PRE>
+        <P>Make sure that you save the file before continuing. </P></LI></OL>
+      <H3 class=tutorial><A name=savingImage></A>Saving the Image to Disk</H3>
+      <P>In your new application, it would be a good idea to allow users to save 
+      the images they create. By including the following code into the 
+      <TT>PaintTopComponent</TT> class, this functionality will be 
+activated.</P>
+      <OL type=1>
+        <LI>Insert the following code into the <TT>PaintTopComponent</TT> class: 
+<PRE class=examplecode>    public void save() throws IOException {
+
+        if (getDisplayName().endsWith(".png")) {
+	    doSave(new File(getDisplayName()));
+        } else {
+	    saveAs();
+        }
+        
+    }</PRE><PRE class=examplecode>    public void saveAs() throws IOException {
+
+        JFileChooser ch = new JFileChooser();
+        if (ch.showSaveDialog(this) == JFileChooser.APPROVE_OPTION &amp;&amp; ch.getSelectedFile() != null) {
+
+	    File f = ch.getSelectedFile();
+            
+	    if (!f.getPath().endsWith(".png")) {
+	        f = new File(f.getPath() + ".png");
+	    }
+            
+	    if (!f.exists()) {
+            
+	        if (!f.createNewFile()) {
+		    String failMsg = NbBundle.getMessage(
+		             PaintTopComponent.class,
+			    "MSG_SaveFailed", new Object[] { f.getPath() }
+	            );
+		    JOptionPane.showMessageDialog(this, failMsg);
+		    return;
+	        }
+                
+	    } else {
+	        String overwriteMsg = NbBundle.getMessage(
+		    PaintTopComponent.class,
+                    "MSG_Overwrite", new Object[] { f.getPath() }
+	        );
+                
+	        if (JOptionPane.showConfirmDialog(this, overwriteMsg)
+	        != JOptionPane.OK_OPTION) {
+		    return;
+	        }
+                
+	    }
+            
+	    doSave(f);
+            
+        }
+        
+    }</PRE><PRE class=examplecode>    private void doSave(File f) throws IOException {
+
+        BufferedImage img = canvas.getImage();
+        ImageIO.write(img, "png", f);
+        String statusMsg = NbBundle.getMessage(PaintTopComponent.class,
+            "MSG_Saved", new Object[] { f.getPath() });
+        StatusDisplayer.getDefault().setStatusText(statusMsg);
+        setDisplayName(f.getName());
+        
+    }</PRE>
+        <LI>Add the following lines to the <TT>Bundle.properties</TT> file: <PRE class=examplecode>    MSG_SaveFailed = Could not write to file {0}
+    MSG_Overwrite = {0} exists.  Overwrite?
+    MSG_Saved = Saved image to {0}</PRE>
+        <P>Make sure that you save the file before continuing. </P>
+        <LI>Click Alt-Shift-F to fix the import statements. You will notice that 
+        there are two fully qualified names for the <TT>File</TT> class. Choose 
+        the <TT>java.io.File</TT> option. </LI></OL></DIV><BR>
+      <H2><A name=defNew></A>Creating the New Canvas Menu Item</H2>
+      <P>You use the NetBeans plug-in module file templates to create the basis 
+      of the module's functionality. When you use a file template, the IDE 
+      registers the item that you create in the <TT>layer.xml</TT> file. After 
+      using a wizard to create the file template, you use the <A 
+      href="http://www.netbeans.org/download/dev/javadoc/">NetBeans APIs</A> to 
+      continue developing the module. 
+      <OL>
+        <LI>In the Projects window, right-click the Paint module's project node 
+        and choose New &gt; File/Folder. In the New File wizard, choose NetBeans 
+        Module Development under Categories and Action under File Types. Click 
+        Next. 
+        <LI>In the Action Type panel, accept the defaults. Click Next. 
+        <LI>In the GUI Registration panel, select Global Menu Item, and select 
+        Global Toolbar Button. Set the following values: 
+        <P>
+        <UL>
+          <LI><B>Category:</B> Edit 
+          <LI><B>Menu:</B> File 
+          <LI><B>Position:</B> Anywhere you want it to be! 
+          <LI><B>Toolbar:</B> File 
+          <LI><B>Position:</B> Anywhere you want it to be! </LI></UL>
+        <P><B>Note:</B> Where you position the action is not important, as long 
+        as it is in the File menu and in the File toolbar. 
+        <P>You should now see the following: 
+        <P align=left><IMG alt="GUI Registration panel." src=""> 
+        <P>Click Next. </P>
+        <LI>In the Name, Icon, and Location panel, type <TT>NewCanvasAction</TT> 
+        in Class Name and type <TT>New Canvas</TT> in Display Name. 
+        <P>In Icon, paste this icon (right-click it here and then save it in the 
+        <TT>org.netbeans.paint</TT> folder): <IMG alt="New Canvas icon." src=""> 
+        </P>
+        <LI>Click Finish.
+        <P></P>
+        <P>The IDE creates <TT>NewCanvasAction.java</TT> in 
+        <TT>org.netbeans.paint</TT> and opens it in the Source Editor. This is 
+        what you should see (click on the links to see the related NetBeans API 
+        Javadoc): </P><PRE class=examplecode>    package org.netbeans.paint;
+
+    import <A href="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/HelpCtx.html">org.openide.util.HelpCtx</A>;
+    import <A href="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/NbBundle.html">org.openide.util.NbBundle</A>;
+    import <A href="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/actions/CallableSystemAction.html">org.openide.util.actions.CallableSystemAction</A>;
+
+    public final class NewCanvasAction extends CallableSystemAction {
+
+       public void <A href="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/actions/CallableSystemAction.html#performAction()">performAction()</A> {
+   	// TODO implement action body
+       }
+
+       public String <A href="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/actions/SystemAction.html#getName()">getName()</A> {
+       	return NbBundle.getMessage(NewCanvasAction.class, "CTL_NewCanvasAction");
+       }
+    
+       protected String <A href="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/actions/SystemAction.html#iconResource()">iconResource()</A> {
+        return "org/netbeans/paint/new_icon.png";
+       }
+    
+       public HelpCtx <A href="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/actions/SystemAction.html#getHelpCtx()">getHelpCtx()</A> {
+        return HelpCtx.DEFAULT_HELP;
+       }
+
+       protected boolean <A href="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/actions/CallableSystemAction.html#asynchronous()">asynchronous()</A> {
+        return false;
+       }
+       
+    }</PRE>
+        <P>As specified in the GUI Registration panel, the IDE registers the 
+        action class as a menu item and as a toolbar button in the 
+        <TT>layer.xml</TT> file. </P>
+        <LI>In the Source Editor, open <TT>NewCanvasAction.java</TT> and fill 
+        out the <TT>performAction()</TT> method as follows: <PRE class=examplecode>    public void performAction() {
+
+        PaintTopComponent tc = new PaintTopComponent();
+	tc.open();
+	tc.requestActive();       
+        
+    }</PRE>
+        <P>What this does is simply to create a new instance of our image 
+        editing component, open it, so it appears in the main window, and 
+        activate it by sending keyboard focus to it and selecting its tab. 
+        </P></LI></OL>
+      <H2 class=tutorial><A name=defSave></A>Creating the Save Canvas Menu 
+      Item</H2>
+      <P>As in the previous section, we use the New Action wizard to create a 
+      menu item, this time for saving images. 
+      <OL>
+        <LI>In the Projects window, right-click the Paint module's project node 
+        and choose New &gt; File/Folder. In the New File wizard, choose NetBeans 
+        Module Development under Categories and Action under File Types. Click 
+        Next. 
+        <LI>In the Action Type panel, accept the defaults. Click Next. 
+        <LI>In the GUI Registration panel, select Global Menu Item, and select 
+        Global Toolbar Button. Set the following values: 
+        <P>
+        <UL>
+          <LI><B>Category:</B> Edit 
+          <LI><B>Menu:</B> File 
+          <LI><B>Position:</B> Anywhere you want it to be! 
+          <LI><B>Toolbar:</B> File 
+          <LI><B>Position:</B> Anywhere you want it to be! </LI></UL>
+        <P><B>Note:</B> Where you position the action is not important, as long 
+        as it is in the File menu and in the File toolbar. 
+        <P>Click Next. </P>
+        <LI>In the Name, Icon, and Location panel, type 
+        <TT>SaveCanvasAction</TT> in Class Name and type <TT>Save Canvas</TT> in 
+        Display Name. 
+        <P></P>
+        <P>In Icon, paste this icon (right-click it here and then save it in the 
+        <TT>org.netbeans.paint</TT> folder): <IMG alt="Save Canvas icon." 
+        src=""> </P>
+        <LI>Click Finish.
+        <P></P>
+        <P>The IDE creates <TT>SaveCanvasAction.java</TT> in 
+        <TT>org.netbeans.paint</TT> and opens it in the Source Editor. </P>
+        <LI>In the Source Editor, make sure <TT>SaveCanvasAction.java</TT> is 
+        opened and fill out the <TT>performAction()</TT> method as follows: <PRE class=examplecode>    public void performAction() {
+
+        TopComponent tc = TopComponent.getRegistry().getActivated();
+        
+        if (tc instanceof PaintTopComponent) {
+        
+	    try {
+	       	((PaintTopComponent) tc).saveAs();
+            } catch (IOException ioe) {
+                ErrorManager.getDefault().notify (ioe);
+            }
+            
+        } else {
+        
+            //Theoretically the active component could have changed
+            //between the time the menu item or toolbar button was
+            //pressed and when the action was invoked.  Not likely,
+            //but theoretically possible
+            Toolkit.getDefaultToolkit().beep();
+            
+        }               
+        
+    }</PRE>
+        <P>Press Alt-Shift-F to generate the required import statements: 
+        <P><IMG alt="Fix imports." src="" border=1> </P>
+        <LI>Add a property change listener by modifying the class declaration: <PRE class=examplecode>    public final class SaveCanvasAction extends CallableSystemAction implements PropertyChangeListener {</PRE>
+        <P>A red line appears again. Press Alt-Enter to call up the light bulb 
+        and select the suggestion: 
+        <P><IMG alt=lightbulb-listener1 src="" border=1> 
+        <P>Again the red line appears. Repeat the process as before and accept 
+        the suggestion: 
+        <P><IMG alt=lightbulb-listener2 src="" border=1> 
+        <P>Fill out the generated <TT>propertyChange()</TT> method as follows: 
+        </P><PRE class=examplecode>    public void propertyChange(PropertyChangeEvent evt) {
+
+        if (TopComponent.Registry.PROP_ACTIVATED.equals(evt.getPropertyName())){
+	    updateEnablement();
+        }
+        
+    }</PRE>
+        <P>
+        <P>When a red line appears, click Alt + Enter to allow the IDE to create 
+        an <TT>updateEnablement()</TT> method in the <TT>SaveCanvasAction</TT> 
+        class.</P>
+        <P>Next, define the <TT>updateEnablement()</TT> method: </P><PRE class=examplecode>    private void updateEnablement() {
+
+        setEnabled(TopComponent.getRegistry().getActivated()
+        instanceof PaintTopComponent);
+
+    }</PRE>
+        <P>
+        <P>Finally, define the constructor: </P><PRE class=examplecode>    public SaveCanvasAction() {  
+
+        TopComponent.getRegistry().addPropertyChangeListener (
+	    WeakListeners.propertyChange(this,
+	    TopComponent.getRegistry()));
+       
+        updateEnablement();
+        
+    }</PRE>
+        <P>When a red line appears, click Alt + Enter to allow the IDE to import 
+        <TT>org.openide.util.WeakListeners</TT>.</P>
+        <P>The main code of interest is the adding of the property change 
+        listener. <TT>TopComponent.Registry</TT> is a registry of all opened 
+        <TT>TopComponents</TT> in the system—all the opened tabs. What we want 
+        to do is listen on it for changes, and enable and disable the action 
+        depending on what has focus. 
+        <P><B>Note:</B> Rather than directly attaching a property change 
+        listener, you call <TT>WeakListeners.propertyChange()</TT>. What this 
+        does is generate a property change listener that weakly references your 
+        action. While in practice your action will live as long as the 
+        application is open, it's a good practice, and future-proofing, to use a 
+        weak listener if you're attaching a listener and there is no code that 
+        ever detaches it. Otherwise, you've got a potential memory leak—your 
+        action could never be garbage collected because the registry is holding 
+        a reference to it in its list of listeners. </P></LI></OL>
+      <P>This is what you should now see in the Projects window: 
+      <P><IMG alt="final view of Projects window" src="" border=1> 
+      <H2><A name=wrappingUp></A>Wrapping Up</H2>
+      <P>Of course, you want to create an application, not an IDE—so there are a 
+      couple of final steps you can perform to exclude the IDE's modules and 
+      user interface elements that you do not want or need. First you create a 
+      splash screen for your application, then you remove unneeded modules, and 
+      finally you create a ZIP distribution and a JNLP application. 
+      <OL>
+        <LI>Run the <TT>PaintApp</TT> project. After the application starts, 
+        size the main screen fairly small and draw a splash screen. Use the Save 
+        button to save the splash screen. 
+        <LI>In the original project, right-click the <TT>PaintApp</TT> node, 
+        choose Properties, and then click Build in the Project Properties dialog 
+        box. 
+        <LI>Select Create Standalone Application. Now you can specify a branding 
+        name (which will be the name of the launcher that the IDE can generate 
+        for you) and an application title (which will appear in the 
+        application's title bar). By default, you should see the following:
+        <P></P>
+        <P><IMG alt="splash screen" src="" border=1> </P>
+        <LI>Click Splash Screen. Browse to your Splash Screen. If you do not 
+        have one, you can use <A 
+        href="http://platform.netbeans.org/images/tutorials/paintapp/splash.gif">this 
+        one</A>. Click OK to attach it to your application: 
+        <P><IMG alt="splash screen" src="" border=1> </P>
+        <LI>Click Libraries, expand the <TT>platform7</TT> node. This is the 
+        only cluster that contains modules that will be bundled with your Paint 
+        application. Modules that are checked are included, those that are not 
+        are excluded. Notice that many are already excluded. There is one that 
+        you need to exclude manually: <TT>Core UI</TT>. Do so now, by 
+        deselecting it.
+        <P></P>
+        <P>Now, in the Paint module's <TT>layer.xml</TT> file, add the following 
+        tags within the Menu folder. These tags remove the GoTo and View menus, 
+        which your Paint application does not need.</P><PRE class=examplecode>&lt;file name="GoTo_hidden"/&gt;
+&lt;file name="View_hidden"/&gt;</PRE>
+        <P>Alternatively, instead of adding the above tags manually, you can 
+        delete the folders within the <TT>&lt;this layer in context&gt;</TT> 
+        node of the <TT>layer.xml</TT> file. To do this, expand <TT>&lt;this 
+        layer in context&gt;</TT>, then expand the Menu Bar node. Choose Delete 
+        from the right-click menu of both the GoTo and View nodes. </P>
+        <LI>Finally, run the application again and notice the splash screen. 
+        Once the application has started up, notice that the title bar displays 
+        the title that you specified. Also, there are a lot less menu items, 
+        toolbar buttons, and other features:<BR><BR>
+        <P><IMG alt="result without menus" src="" border=1> </P></LI></OL>
+      <H2 class=tutorial><A name=creatingDist></A>Creating a Distribution</H2>
+      <P>Now it's time to choose the distribution medium. Right click the 
+      <TT>PaintApp</TT> node and choose Create ZIP Distribution to package the 
+      entire application, with all needed modules and files, as a zip file. You 
+      can also choose Build JNLP Application to create a JavaWebStart™ version 
+      of the application you can put on a web server and link to directly from a 
+      web page (you will need to set a correct URL—the generated descriptor uses 
+      file: protocol so you can test your web-startable distribution locally). 
+      <P>That's it! Your first complete application built on top of the NetBeans 
+      Platform is finished. Next stop: <A 
+      href="http://platform.netbeans.org/tutorials/60/nbm-feedreader.html">NetBeans 
+      Platform 6.0 Feed Reader Tutorial</A>. <BR></P>
+      <DIV class=feedback-box><A 
+      href="http://www.netbeans.org/about/contact_form.html?to=3&amp;subject=Feedback: NetBeans Platform 6.0 Paint Application Tutorial">Send 
+      Us Your Feedback</A></DIV><BR style="CLEAR: both">
+      <HR>
+<!-- /Servlet-Specific template --><!-- end of right navigation --><!-- servlets and anything not on www or testwww --></DIV></DIV></TD>
+    <TD class=valign-top>
+      <DIV id=floating-col-right>
+      <DIV class="f-page-cell b-bottom bg-bege">
+      <SCRIPT src="" type=text/javascript></SCRIPT>
+
+      <SCRIPT language=JavaScript type=text/javascript>
+<!--
+show_login_form(username,'Login','Logout','top');
+//-->
+</SCRIPT>
+      <NOSCRIPT><SPAN style="FONT-STYLE: italic">Login form requires 
+      Javascript</SPAN></NOSCRIPT> </DIV><!-- start NavCol -->
+      <DIV class="f-page-cell bg-sky b-bottom">
+      <H2>platform</H2><!-- module left nav .inc file -->
+      <SCRIPT src="" type=text/javascript></SCRIPT>
+      <NOSCRIPT>
+      <P><A href="http://platform.netbeans.org/index.html">Project Home</A> 
+      <BR><A 
+      href="http://platform.netbeans.org/servlets/ProjectMemberList">Memebership</A> 
+      <BR><A 
+      href="http://platform.netbeans.org/servlets/ProjectNewsList">Announcements</A> 
+      <BR><A 
+      href="http://platform.netbeans.org/servlets/ProjectForumView">Discussion 
+      Forums</A> <BR><A 
+      href="http://platform.netbeans.org/servlets/ProjectMailingListList">Mailing 
+      Lists</A> <BR><A 
+      href="http://platform.netbeans.org/servlets/ProjectDocumentList">Documentation 
+      &amp; Files</A> <BR><A 
+      href="http://platform.netbeans.org/source/browse/core/">Version 
+      Control</A> <BR><A 
+      href="http://platform.netbeans.org/servlets/ProjectIssues">Issue 
+      Tracker</A> </NOSCRIPT></P></DIV><!-- end NavCol --><!-- right navigation -->
+      <DIV class="f-page-cell bg-bege b-bottom">
+      <H2 
+      style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px">NetBeans.org</H2>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A 
+      href="http://www.netbeans.org/servlets/Join">Join</A></DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A 
+      href="http://www.netbeans.org/community/news/">News</A></DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A class=nav 
+      href="http://www.netbeans.org/community/releases/">Releases &amp; 
+      Planning</A></DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A class=nav 
+      href="http://www.netbeans.org/community/lists/">Mailing 
+      Lists</A></DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A 
+      href="http://www.netbeans.org/community/issues.html">Issuezilla</DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A class=nav 
+      href="http://www.netbeans.org/community/contribute/">Contribute</A></DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A class=nav 
+      href="http://www.netbeans.org/community/sources/">Source 
+      code</A></DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A class=nav 
+      href="http://www.netbeans.org/community/teams/">Teams</A></DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A class=nav 
+      href="http://www.netbeans.org/community/guidelines/">Guidelines</A></DIV></DIV>
+      <DIV class=rrrarticle>
+      <DIV class=rarticletitle><A 
+      href="http://www.netbeans.org/community/projects/">Projects</A></DIV></DIV></DIV><BR></DIV></TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV class=clear id=floating-footer style="MARGIN-LEFT: 0px"><IMG 
+class=float-right style="MARGIN-RIGHT: -3px" height=42 src="" width=13> <IMG 
+class=float-left style="MARGIN-LEFT: -3px" height=42 src="" width=10> 
+<DIV id=footer-text>
+<DIV class="float-left font-12" id=footer-navig><A 
+href="http://www.cafeshops.com/netbeans/">Shop</A> &nbsp; <A 
+href="http://www.netbeans.org/download/sitemaps/platform_map.html">SiteMap</A> 
+&nbsp; <A href="http://www.netbeans.org/about/index.html">About Us</A> &nbsp; <A 
+href="http://www.netbeans.org/about/contact.html">Contact</A> &nbsp; <A 
+href="http://www.netbeans.org/about/legal/index.html">Legal</A> &nbsp; </DIV>
+<DIV class=float-right id=tof>By use of this website, you agree to the <A 
+href="http://www.netbeans.org/about/legal/terms-of-use.html">NetBeans Policies 
+and Terms of Use</A> </DIV></DIV></DIV><!-- Begin SiteCatalyst code -->
+<SCRIPT language=JavaScript src=""></SCRIPT>
+<!-- End SiteCatalyst code --></DIV></DIV></BODY></HTML>

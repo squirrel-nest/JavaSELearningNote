@@ -1,0 +1,4 @@
+http://itdoc.hitachi.co.jp/manuals/3020/30203Y2310e/EY230728.HTM
+
+
+How to create Java objects for data to be sent

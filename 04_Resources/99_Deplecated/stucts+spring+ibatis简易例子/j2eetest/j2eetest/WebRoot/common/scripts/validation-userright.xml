@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!DOCTYPE validation-config SYSTEM "validation-config.dtd">
+<validation-config lang="auto">
+	<form id="userForm" show-error="alert" show-type="all">
+		<field name="workerno" display-name="用户工号">
+			<depend name="required" />
+			<depend name="commonChar" />
+			<depend name="maxLength" param0="20" />
+		</field>
+		<field name="name" display-name="用户姓名">
+			<depend name="required" />
+			<depend name="maxLength" param0="20" />
+		</field>
+		<field name="repassword" display-name="确认密码">
+			<depend name="required" />
+			<depend name="equalsField" param0="password" param1="用户密码"/>
+		</field>
+		<field name="password" display-name="用户密码">
+			<depend name="required" />
+			<depend name="minLength" param0="1" />
+			<depend name="maxLength" param0="8" />
+			<depend name="commonChar" />
+		</field>
+	</form>
+	<form id="enumForm" show-error="alert" show-type="all">
+		<field name="s_code" display-name="本级编码">
+			<depend name="required" />
+			<depend name="commonChar" />
+		</field>
+		<field name="s_name" display-name="名称">
+			<depend name="required" />
+		</field>
+	</form>
+	<form id="enumTableForm" show-error="alert" show-type="all">
+		<field name="s_code" display-name="码表类型编码">
+			<depend name="required" />
+			<depend name="commonChar" />
+		</field>
+		<field name="s_name" display-name="码表类型名称">
+			<depend name="required" />
+		</field>
+	</form>
+</validation-config>

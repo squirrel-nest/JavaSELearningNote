@@ -1,0 +1,2 @@
+Getting Java RMI Working
+http://www.cs.man.ac.uk/~fellowsd/work/usingRMI.html

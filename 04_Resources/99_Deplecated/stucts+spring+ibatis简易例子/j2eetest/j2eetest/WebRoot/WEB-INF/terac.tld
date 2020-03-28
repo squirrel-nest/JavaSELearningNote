@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>terac</short-name>
+    <uri>http://www.zkhx.cn</uri>
+    <display-name>terac tags</display-name>
+    <description></description>
+    <tag>
+        <name>style</name>
+        <tag-class>com.zkhx.work.util.StyleTag</tag-class>
+        <body-content>JSP</body-content>
+        <description></description>
+        <attribute>
+            <name>imageEnabled</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>
