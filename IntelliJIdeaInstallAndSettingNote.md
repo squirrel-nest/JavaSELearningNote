@@ -22,3 +22,8 @@
 ## IntelliJ IDEA. 快捷键
    * 参考
       + [IntelliJ IDEA DEFAULT KEYMAP](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)<br>
+   * 常用键列表
+                >| 操作 | 快捷键 | 操作 | 快捷键 |
+                >| :------: | :------ | :------: | :------ |
+                >| 复制行 | 。。。. | 移动行 | = 14. |
+                >| 删除行 | = 3. | 剪切行 | = 15. |
