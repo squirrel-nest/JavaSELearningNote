@@ -14,7 +14,11 @@
            >Scroll down if needed, and then click on “Add or remove exclusions”<br>
            >For every folder shown in the notification, press the + button, select “Folder” from the menu, and select the folder.<br>
            
-## IntelliJ IDEA. 与 GitHub 集成
+## 
    * 参考
       + Youtube
          - [IntelliJ IDEA. Adding a Project to Git and GitHub - YouTube](https://www.youtube.com/watch?v=mf2-MOl0VXY)<br>
+
+## IntelliJ IDEA. 快捷键
+   * 参考
+      + [IntelliJ IDEA DEFAULT KEYMAP](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)<>
