@@ -56,3 +56,5 @@
    * JAVA 与 Kotlin 的对照学习 - 养成习惯，这样学习Java的同时就能熟悉Kotlin的语法。。。
      + 笔记参考：[Kotlin Learning Note.md](https://github.com/squirrel-nest/KotlinLearningNote/blob/master/KotlinLearningNote.md)
 
+## NetWork知识点
+### 学到 RMI 时候，参考：[谁能用通俗的语言解释一下什么是 RPC 框架？](https://www.zhihu.com/question/25536695) - 粗粗了解即可，有时间看看，可看可不看<>
