@@ -10,6 +10,7 @@
       + [JAVA-TUTORIAL](https://dunwu.github.io/javacore/#%E6%95%99%E7%A8%8B%E5%86%85%E5%AE%B9-%F0%9F%93%96) - 旧人旧思维，蛮放着参考一下<br>
       + [dunwu/java-tutorial](https://github.com/dunwu/java-tutorial) - 与上面一个同一内容<br>
       + [Kurento/kurento-tutorial-java](https://github.com/Kurento/kurento-tutorial-java)<br>
+      + [redhat-developer-demos/istio-tutorial](https://github.com/redhat-developer-demos/istio-tutorial)<br>
 ## 开发环境环境的安装与设置
 ### Eclipse
    * Eclipse的安装与设置参见：[EclipseInstallAndSettingNote](./EclipseInstallAndSettingNote.md)<br>
