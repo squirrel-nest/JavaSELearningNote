@@ -3,8 +3,10 @@
       + [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)
 
    * YouTube
-      + [Java Tutorial for Beginners
-](https://www.youtube.com/channel/UCxoUc7Rar2q90Gu0nT2ffuQ?sub_confirmation=1)<>
+      + [Java Tutorial for Beginners](https://www.youtube.com/channel/UCxoUc7Rar2q90Gu0nT2ffuQ?sub_confirmation=1)<br>
+   * GitHub
+      + [byhieg/JavaTutorial](https://github.com/byhieg/JavaTutorial)<br>
+         - >该Java教程是学习Java过程中对Java知识点进行梳理。每一个包中的代码都有一个ReadMe来说明该包代码的作用以及知识点。 src包里面是Java的源码，test包里面是针对源码的测试
 ## 开发环境环境的安装与设置
 ### Eclipse
    * Eclipse的安装与设置参见：[EclipseInstallAndSettingNote](./EclipseInstallAndSettingNote.md)<br>
