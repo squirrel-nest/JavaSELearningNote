@@ -18,6 +18,15 @@
    * Eclipse的安装与设置参见：[IntelliJIdeaInstallAndSettingNote](IntelliJIdeaInstallAndSettingNote.md)<br>
 
 ## 预备知识
+### Java的编译与运行（Command line tools）
+   * 参考
+      + [Tools and Commands Reference](https://docs.oracle.com/en/java/javase/12/tools/tools-and-command-reference.html)<br>
+         - javac
+            * >You can use the javac tool and its options to read Java class and interface definitions and compile them into bytecode and class files.
+         - java
+            * >You can use the java command to launch a Java application.
+         - jar
+            * > You can use the jar command to create an archive for classes and resources, and to manipulate or restore individual classes or resources from an archive.
 ### 包管理工具
    * Apache Ant™
       + 网址：[Apache Ant™](http://ant.apache.org/)<br>
