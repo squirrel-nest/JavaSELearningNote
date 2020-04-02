@@ -30,11 +30,11 @@
 ## Window 的 Security 设置
    * 参考
       + [Antivirus Impact on Build Speed](https://intellij-support.jetbrains.com/hc/en-us/articles/360006298560)<br>
-         - >If you prefer to perform the necessary configuration manually, you can do so by following these steps:
+         - >If you prefer to perform the necessary configuration manually, you can do so by following these steps:<br>
            >
-           >Click the Start button
-           >Type “Windows Security”
-           >Click on “Virus and threat protection”
-           >Click on “Manage settings” under “Virus & threat protection settings”
-           >Scroll down if needed, and then click on “Add or remove exclusions”
-           >For every folder shown in the notification, press the + button, select “Folder” from the menu, and select the folder.
+           >Click the Start button<br>
+           >Type “Windows Security”<br>
+           >Click on “Virus and threat protection”<br>
+           >Click on “Manage settings” under “Virus & threat protection settings”<br>
+           >Scroll down if needed, and then click on “Add or remove exclusions”<br>
+           >For every folder shown in the notification, press the + button, select “Folder” from the menu, and select the folder.<br>
