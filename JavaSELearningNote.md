@@ -33,6 +33,10 @@
          - jar
             * > You can use the jar command to create an archive for classes and resources, and to manipulate or restore individual classes or resources from an archive.
       + JavaCC 
+         - 参考
+            * [Using JavaCC](https://cs.lmu.edu/~ray/notes/javacc/)<br>
+               + >[JavaCC](http://javacc.java.net/) is a lexer and parser generator for LL(k) grammars. You specify a language's lexical and syntactic description in a JJ file, then run `javacc` on the JJ file. You will get seven java files as output, including a lexer and a parser.
+                 >This page helps you get started using JavaCC. You still need to read the [online documentation](http://javacc.java.net/doc/docindex.html) to do anything really useful with the tool though.
 ### 包管理工具
    * Apache Ant™
       + 网址：[Apache Ant™](http://ant.apache.org/)<br>
