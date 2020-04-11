@@ -11,6 +11,11 @@
       + [dunwu/java-tutorial](https://github.com/dunwu/java-tutorial) - 与上面一个同一内容<br>
       + [Kurento/kurento-tutorial-java](https://github.com/Kurento/kurento-tutorial-java)<br>
       + [redhat-developer-demos/istio-tutorial](https://github.com/redhat-developer-demos/istio-tutorial)<br>
+   * 代码研究
+      + [ActiveMQ Artemis 2.11.0 (January 15, 2020)](https://activemq.apache.org/components/artemis/download/)<br>
+         - [Release Notes](https://activemq.apache.org/components/artemis/download/release-notes-2.11.0) | [Git Report](https://activemq.apache.org/components/artemis/download/commit-report-2.11.0) | [Documentation - Apache ActiveMQ Artemis User Manual](https://activemq.apache.org/components/artemis/documentation/latest)<br>
+         - Source Code - [apache/activemq-artemis](https://github.com/apache/activemq-artemis/find/master)<br>
+
 ## 开发环境环境的安装与设置
 ### Eclipse
    * Eclipse的安装与设置参见：[EclipseInstallAndSettingNote](./EclipseInstallAndSettingNote.md)<br>
