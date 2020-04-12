@@ -70,9 +70,14 @@
          - 高阶
             * [compilation-Destination-At compile time * How can I define the classpath in Gradle?](https://src-bin.com/ja/q/9ec852)<br>
             * [Spring Boot Gradle Plugin](https://www.baeldung.com/spring-boot-gradle-plugin)<br>
-## maven项目创建
 
 
+
+## Gradle 和 Maven项目的创建
+
+## Java 的 Test 基础
+   * 参考的学习资料
+      + [jsonTuples: JSON Parser and Comparator in Java](https://dzone.com/articles/jsontuples-json-parser-and-comparator-in-java) - 这篇文章了解基本的测试方法。。，暂时。。<br>
 
 ## 暂时不学的部分
    * Trails Covering the Basics
