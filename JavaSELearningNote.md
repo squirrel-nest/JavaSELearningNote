@@ -60,9 +60,13 @@
    * Gradle
       + 网址：[Gradle Build Tool](https://gradle.org/)<br>
          - >Gradle is an open-source build automation tool focused on flexibility and performance. Gradle build scripts are written using a Groovy or Kotlin DSL. Read about Gradle features to learn what is possible with Gradle.
+         - 学习优先参考
+            * [Gradle in Action](https://livebook.manning.com/book/gradle-in-action/about-this-book/) - 优先学习参考<br>
+               + [Chapter 3. Building a Gradle project by example](https://livebook.manning.com/book/gradle-in-action/chapter-3/) - 参考其中的图解方式，非常棒！！，同时可以通过例子来学习。能够快速上手。。。<br>
       + 参考
          - 高阶
             * [compilation-Destination-At compile time * How can I define the classpath in Gradle?](https://src-bin.com/ja/q/9ec852)<br>
+            * [Spring Boot Gradle Plugin](https://www.baeldung.com/spring-boot-gradle-plugin)<br>
 ## maven项目创建
 
 
