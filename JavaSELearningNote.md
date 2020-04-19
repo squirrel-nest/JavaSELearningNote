@@ -65,6 +65,8 @@
          - 学习优先参考
             * [Gradle in Action](https://livebook.manning.com/book/gradle-in-action/about-this-book/) - 优先学习参考<br>
                + [Chapter 3. Building a Gradle project by example](https://livebook.manning.com/book/gradle-in-action/chapter-3/) - 参考其中的图解方式，非常棒！！，同时可以通过例子来学习。能够快速上手。。。<br>
+                  - [maven pom文件标签详解](https://cloud.tencent.com/developer/article/1506527)<br>
+                  - [maven中scope标签详解](https://www.voorp.com/a/maven%E4%B8%ADscope%E6%A0%87%E7%AD%BE%E8%AF%A6%E8%A7%A3%E5%9C%A8%E5%8A%AA%E5%8A%9B%E4%B8%B9CSDN%E5%8D%9A%E5%AE%A2)<br>
       + [Building Java Web Applications](https://guides.gradle.org/building-java-web-applications/)<br>
       + 参考
          - 高阶
