@@ -68,6 +68,7 @@
                   - [maven pom文件标签详解](https://cloud.tencent.com/developer/article/1506527)<br>
                   - [maven中scope标签详解](https://www.voorp.com/a/maven%E4%B8%ADscope%E6%A0%87%E7%AD%BE%E8%AF%A6%E8%A7%A3%E5%9C%A8%E5%8A%AA%E5%8A%9B%E4%B8%B9CSDN%E5%8D%9A%E5%AE%A2)<br>
       + [Building Java Web Applications](https://guides.gradle.org/building-java-web-applications/)<br>
+      + [Gradle for Java](https://hmkcode.com/gradle/gradle-for-java/)<br>
       + 参考
          - 高阶
             * [compilation-Destination-At compile time * How can I define the classpath in Gradle?](https://src-bin.com/ja/q/9ec852)<br>
