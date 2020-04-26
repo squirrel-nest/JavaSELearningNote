@@ -5,6 +5,7 @@
    * YouTube
       + [Java Tutorial for Beginners](https://www.youtube.com/channel/UCxoUc7Rar2q90Gu0nT2ffuQ?sub_confirmation=1)<br>
    * GitHub
+      + **如何在Github上浏览源代码：**[Navigating code on GitHub](https://help.github.com/en/github/managing-files-in-a-repository/navigating-code-on-github)<br>
       + [byhieg/JavaTutorial](https://github.com/byhieg/JavaTutorial)<br>
          - >该Java教程是学习Java过程中对Java知识点进行梳理。每一个包中的代码都有一个ReadMe来说明该包代码的作用以及知识点。 src包里面是Java的源码，test包里面是针对源码的测试
       + [JAVA-TUTORIAL](https://dunwu.github.io/javacore/#%E6%95%99%E7%A8%8B%E5%86%85%E5%AE%B9-%F0%9F%93%96) - 旧人旧思维，蛮放着参考一下<br>
