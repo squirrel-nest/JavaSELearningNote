@@ -1,6 +1,6 @@
 # JavaSE Learning Note
    * 参考
-      + [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)
+      + ✨✨✨[The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)
 
    * YouTube
       + [Java Tutorial for Beginners](https://www.youtube.com/channel/UCxoUc7Rar2q90Gu0nT2ffuQ?sub_confirmation=1)<br>
