@@ -83,6 +83,13 @@
    * 参考的学习资料
       + [jsonTuples: JSON Parser and Comparator in Java](https://dzone.com/articles/jsontuples-json-parser-and-comparator-in-java) - 这篇文章了解基本的测试方法。。，暂时。。<br>
 
+
+## Java & Databases
+   * 参考
+      + [Java & Databases: An Overview of Libraries & APIs](https://www.marcobehler.com/guides/java-databases)<br>
+      + Use a JDBC connection (default) - [Database Setup For MySQL](https://confluence.atlassian.com/doc/database-setup-for-mysql-128747.html)<br>
+      + JavaEE的内容 - [Configuring a datasource connection](https://confluence.atlassian.com/doc/configuring-a-datasource-connection-937166084.html) - JNDI datasource<br>
+
 ## 暂时不学的部分
    * Trails Covering the Basics
      + Getting Start<br>
