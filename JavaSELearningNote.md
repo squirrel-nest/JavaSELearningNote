@@ -1,6 +1,11 @@
 # JavaSE Learning Note
    * 参考
       + ✨✨✨[The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)
+      + ✨✨✨[The Java® Language Specification - Java SE 14 Edition](https://docs.oracle.com/javase/specs/jls/se14/jls14.pdf) - **Specification(Technical Standard) of Java Language**<br>
+         - [Specification Homepage - 包含所有版本的规范](https://docs.oracle.com/javase/specs/index.html)<br>
+      + ✨✨✨所有文档 - [JDK 14 Documentation](https://docs.oracle.com/javase/specs/jls/se14/jls14.pdf)<br>
+         - API Specification - Version 14 --> [Java® Platform, Standard Edition & Java Development Kit
+Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html)<br>
 
    * YouTube
       + [Java Tutorial for Beginners](https://www.youtube.com/channel/UCxoUc7Rar2q90Gu0nT2ffuQ?sub_confirmation=1)<br>
