@@ -94,6 +94,10 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
       + [Java & Databases: An Overview of Libraries & APIs](https://www.marcobehler.com/guides/java-databases)<br>
       + Use a JDBC connection (default) - [Database Setup For MySQL](https://confluence.atlassian.com/doc/database-setup-for-mysql-128747.html)<br>
       + JavaEE的内容 - [Configuring a datasource connection](https://confluence.atlassian.com/doc/configuring-a-datasource-connection-937166084.html) - JNDI datasource<br>
+   * JDBC Toturial
+      + 参考 - 基本
+         - 教程参考 - 这个教程步骤比较清晰：[How To Connect To A Database in Java? – JDBC Tutorial](https://www.edureka.co/blog/connect-mysql-database-in-java)<br>
+         - 例子参考 - 这个例子也包含了Servlet和Jsp：[JSP Servlet JDBC MySQL Create Read Update Delete (CRUD) Example](https://www.codejava.net/coding/jsp-servlet-jdbc-mysql-create-read-update-delete-crud-example)<br>
 
 ## 暂时不学的部分
    * Trails Covering the Basics
