@@ -100,9 +100,19 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
 ### Java的安全机制
    * 参考
       + [Trail: Security Features in Java SE](https://docs.oracle.com/javase/tutorial/security/index.html)<br>
+      + 以这个为准，学习 - [Java / Java SE / 14 / Security Developer’s Guide]()<br>
+      + [Secure Coding Guidelines for Java SE](https://www.oracle.com/java/technologies/javase/seccodeguide.html)<br>
+      
+      + [Default Policy Implementation and Policy File Syntax](https://docs.oracle.com/en/java/javase/14/security/permissions-jdk1.html#GUID-789089CA-8557-4017-B8B0-6899AD3BA18D)<br>
+      + [Access Control -> Permissions -> SecurityManager --> Security Policy --> Access Control Enforcement](https://docs.oracle.com/en/java/javase/14/security/java-security-overview1.html)<br>
+      + [Java SE Platform Security Architecture --> The Permission Classes --> 【特别关注】java.net.SocketPermission --> ](https://docs.oracle.com/en/java/javase/14/security/java-se-platform-security-architecture.html#GUID-D6C53B30-01F9-49F1-9F61-35815558422B)<br>
+      + [java.security.Policy --> Policy File Format【仔细看】](https://docs.oracle.com/en/java/javase/14/security/java-se-platform-security-architecture.html#GUID-93B94FD3-599F-4C9F-9479-7EDC34B05D65)<br>
    * Policy File 的机制
       + [Quick Tour of Controlling Applications](https://docs.oracle.com/javase/tutorial/security/tour2/step4.html)<br>
       + [YurieCo/RMI-quick-client-server](https://github.com/YurieCo/RMI-quick-client-server)<br>
+
+
+
 ## Gradle 和 Maven项目的创建
 
 ## Java 的 Test 基础
@@ -138,7 +148,10 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
    * JAVA 与 Kotlin 的对照学习 - 养成习惯，这样学习Java的同时就能熟悉Kotlin的语法。。。
      + 笔记参考：[Kotlin Learning Note.md](https://github.com/squirrel-nest/KotlinLearningNote/blob/master/KotlinLearningNote.md)
 
-## NetWork知识点
+## Java NetWork知识点
+### Java Socket
+   * 参考
+      + [Java Secure Socket Extension (JSSE) Reference Guide](https://docs.oracle.com/en/java/javase/14/security/java-secure-socket-extension-jsse-reference-guide.html#GUID-93DEEE16-0B70-40E5-BBE7-55C3FD432345)<br>
 ### 学到 RMI 时候，参考：[谁能用通俗的语言解释一下什么是 RPC 框架？](https://www.zhihu.com/question/25536695) - 粗粗了解即可，有时间看看，可看可不看<>
    * 参考
       + [YurieCo/RMI-quick-client-server](https://github.com/YurieCo/RMI-quick-client-server)<br>
