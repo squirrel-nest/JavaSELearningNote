@@ -46,15 +46,15 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
    * Practice
       + javac 与 java 的 几点说明
          - classpath的位置 与 package的位置
-            1. 例子
-               a. classpath 为 文件夹： E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java
-               b. 则 java 的运行方式
-                  * ```
+            * 例子
+               1. classpath 为 文件夹： E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java
+               2. 则 java 的运行方式
+                  + ```
                       cd E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java
                       java -cp . com.lzsoft.lzdata.javabase.javabasic.getstarted.examples.HelloWorldApp
                     ```
-               c. 如果要在任何位置运行，则需要指定 classpath
-                  * ```
+               3. 如果要在任何位置运行，则需要指定 classpath
+                  + ```
                       cd E:\
                       java -cp E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java com.lzsoft.lzdata.javabase.javabasic.getstarted.examples.HelloWorldApp
                     ```
