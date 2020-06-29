@@ -53,6 +53,11 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
                       cd E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java
                       java -cp . com.lzsoft.lzdata.javabase.javabasic.getstarted.examples.HelloWorldApp
                     ```
+               c. 如果要在任何位置运行，则需要指定 classpath
+                  * ```
+                      cd E:\
+                      java -cp E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java com.lzsoft.lzdata.javabase.javabasic.getstarted.examples.HelloWorldApp
+                    ```
 ### 包管理工具
    * Apache Ant™
       + 网址：[Apache Ant™](http://ant.apache.org/)<br>
