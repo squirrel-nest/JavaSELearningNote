@@ -97,7 +97,11 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
             * [compilation-Destination-At compile time * How can I define the classpath in Gradle?](https://src-bin.com/ja/q/9ec852)<br>
             * [Spring Boot Gradle Plugin](https://www.baeldung.com/spring-boot-gradle-plugin)<br>
 
-
+### Java的安全机制
+   * 参考
+      + [Trail: Security Features in Java SE](https://docs.oracle.com/javase/tutorial/security/index.html)<br>
+   * Policy File 的机制
+      + [Quick Tour of Controlling Applications](https://docs.oracle.com/javase/tutorial/security/tour2/step4.html)<br>
 
 ## Gradle 和 Maven项目的创建
 
