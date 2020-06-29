@@ -140,3 +140,6 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
 
 ## NetWork知识点
 ### 学到 RMI 时候，参考：[谁能用通俗的语言解释一下什么是 RPC 框架？](https://www.zhihu.com/question/25536695) - 粗粗了解即可，有时间看看，可看可不看<>
+
+## Examples
+   * [adityajain10/IoT-Smart-Vehicle-Safety-Sytem](https://github.com/adityajain10/IoT-Smart-Vehicle-Safety-Sytem/blob/master/ResearchPaper.pdf)<br>
