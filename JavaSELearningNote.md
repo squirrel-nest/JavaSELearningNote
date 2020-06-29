@@ -102,7 +102,7 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
       + [Trail: Security Features in Java SE](https://docs.oracle.com/javase/tutorial/security/index.html)<br>
    * Policy File 的机制
       + [Quick Tour of Controlling Applications](https://docs.oracle.com/javase/tutorial/security/tour2/step4.html)<br>
-
+      + [YurieCo/RMI-quick-client-server](https://github.com/YurieCo/RMI-quick-client-server)<br>
 ## Gradle 和 Maven项目的创建
 
 ## Java 的 Test 基础
@@ -140,6 +140,9 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
 
 ## NetWork知识点
 ### 学到 RMI 时候，参考：[谁能用通俗的语言解释一下什么是 RPC 框架？](https://www.zhihu.com/question/25536695) - 粗粗了解即可，有时间看看，可看可不看<>
-
+   * 参考
+      + [YurieCo/RMI-quick-client-server](https://github.com/YurieCo/RMI-quick-client-server)<br>
 ## Examples
    * [adityajain10/IoT-Smart-Vehicle-Safety-Sytem](https://github.com/adityajain10/IoT-Smart-Vehicle-Safety-Sytem/blob/master/ResearchPaper.pdf)<br>
+   * [adityajain10/Smart-Door-Authentication-System-Kinesis-Rekognition](https://github.com/adityajain10/Smart-Door-Authentication-System-Kinesis-Rekognition)<br>
+   * [YurieCo/RMI-quick-client-server](https://github.com/YurieCo/RMI-quick-client-server)<br>
