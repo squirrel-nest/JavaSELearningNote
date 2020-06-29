@@ -43,6 +43,16 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
             * [Using JavaCC](https://cs.lmu.edu/~ray/notes/javacc/)<br>
                + >[JavaCC](http://javacc.java.net/) is a lexer and parser generator for LL(k) grammars. You specify a language's lexical and syntactic description in a JJ file, then run `javacc` on the JJ file. You will get seven java files as output, including a lexer and a parser.
                  >This page helps you get started using JavaCC. You still need to read the [online documentation](http://javacc.java.net/doc/docindex.html) to do anything really useful with the tool though.
+   * Practice
+      + javac 与 java 的 几点说明
+         - classpath的位置 与 package的位置
+            1. 例子
+               a. classpath 为 文件夹： E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java
+               b. 则 java 的运行方式
+                  * ```
+                      cd E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java
+                      java -cp . com.lzsoft.lzdata.javabase.javabasic.getstarted.examples.HelloWorldApp
+                    ```
 ### 包管理工具
    * Apache Ant™
       + 网址：[Apache Ant™](http://ant.apache.org/)<br>
