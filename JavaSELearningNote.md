@@ -58,6 +58,8 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
                       cd E:\
                       java -cp E:\JavaDev\00_JavaCode\JavaSELearningCode\lzdata-JavaBase\src\main\java com.lzsoft.lzdata.javabase.javabasic.getstarted.examples.HelloWorldApp
                     ```
+         - 其他例子参考
+            * E:\Notes\4_LearningNotes\JavaSELearningNote\01_JavaTutorial\03_NetWorking\0_0_Java_RMI设置_note.txt
 ### 包管理工具
    * Apache Ant™
       + 网址：[Apache Ant™](http://ant.apache.org/)<br>
