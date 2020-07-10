@@ -148,6 +148,9 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
    * JAVA 与 Kotlin 的对照学习 - 养成习惯，这样学习Java的同时就能熟悉Kotlin的语法。。。
      + 笔记参考：[Kotlin Learning Note.md](https://github.com/squirrel-nest/KotlinLearningNote/blob/master/KotlinLearningNote.md)
 
+## Java 的一些有用知识点
+   * 参考
+      + [How to iterate through Java List? Seven (7) ways to Iterate Through Loop in Java](https://crunchify.com/how-to-iterate-through-java-list-4-way-to-iterate-through-loop/)<br>
 ## Java NetWork知识点
 ### Java Socket
    * 参考
