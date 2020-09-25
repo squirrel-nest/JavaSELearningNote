@@ -1,20 +1,43 @@
 # Socket 的 例子 -GitHub
-## 框架级别
+## 框架
    * [react-native-tcp-socket](https://github.com/Rapsssito/react-native-tcp-socket)<br>
       >React Native TCP socket API for Android & iOS with client SSL/TLS support. It allows you to create TCP clients and servers sockets, imitating some of Node's net API functionalities (check the available API for more information).
    * [xuuhaoo/OkSocket](https://github.com/xuuhaoo/OkSocket)<br>
-      >OkSocket is a Java library project designed to solve lightweight Socket communication, in order to enable developers to focus more on business logic, rather than TCP communication principles and some protocols. Make Socket communication more beautiful, suitable for large, medium and small Project, the rapid development of stable, maintainable, reliable Socket connection.
-      >Feature<br>
-      >SocketClient Tcp IPV4 Connect
-      >Socket Standard Protocol
-      >SocketClient Reconnect
-      >SocketClient Heartbeat
-      >Socket Sticky Unpacking
-      >Socket SSL Socket Support
-      >Client Callback In Thread / Main Thread
-      >Socket Client Redirect
-      >SocketServer Support
-
+      + 中文文档 - [OkSocket与Android的简单使用](https://www.jianshu.com/p/8ee3ee766265)<br>
+      + OkSocket Introduce
+         >OkSocket is a Java library project designed to solve lightweight Socket communication, in order to enable developers to focus more on business logic, rather than TCP communication principles and some protocols. Make Socket communication more beautiful, suitable for large, medium and small Project, the rapid development of stable, maintainable, reliable Socket connection.
+      + Feature
+         >SocketClient Tcp IPV4 Connect<br>
+         >Socket Standard Protocol<br>
+         >SocketClient Reconnect<br>
+         >SocketClient Heartbeat<br>
+         >Socket Sticky Unpacking<br>
+         >Socket SSL Socket Support<br>
+         >Client Callback In Thread / Main Thread<br>
+         >Socket Client Redirect<br>
+         >SocketServer Support<br>
+   * [tywo45/t-io](https://github.com/tywo45/t-io)<br>
+      >是百万级网络框架，更是万金油般的网络中台 - 与 netty 同？
+   * [typ0520/bizsocket](https://github.com/typ0520/bizsocket)<br>
+      + About
+         >异步socket，对一些业务场景做了支持 - 结合 RxJava2
+      + Feature
+         >断线重连
+         >一对一请求
+         >通知、粘性通知
+         >串行请求合并
+         >包分片处理(AbstractFragmentRequestQueue)
+         >缓存
+         >拦截器
+         >支持rxjava，提供类似于retrofit的支持
+         >提供rxjava和rxjava2两种使用方式
+   * [fengjiachun/Jupiter](https://github.com/fengjiachun/Jupiter)<br>
+## 应用例子
+   * [KuaiChuan(仿茄子快传)](https://github.com/mayubao/KuaiChuan)<br>
+      >仿茄子快传的一款文件传输应用， 涉及到Socket通信，包括TCP，UDP通信。（喜欢的给一个star, 有帮助的给一个fork， 欢迎Star和Fork ^_^）
+   * [FreddyChen/NettyChat](https://github.com/FreddyChen/NettyChat)<br>
+      >基于Netty+TCP+Protobuf实现的Android IM库，包含Protobuf序列化、TCP拆包与粘包、长连接握手认证、心跳机制、断线重连机制、消息重发机制、读写超时机制、离线消息、线程池等功能。
+   * 
 # 参考的例子
    * [Yusuf-Ziya-Dilek/Socket-Programming](https://github.com/Yusuf-Ziya-Dilek/Socket-Programming)<br>
    * Python - [asafkaganbezgin/simpleSocket](https://github.com/asafkaganbezgin/simpleSocket)<br>
