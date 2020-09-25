@@ -2,6 +2,18 @@
 ## 框架级别
    * [react-native-tcp-socket](https://github.com/Rapsssito/react-native-tcp-socket)<br>
       >React Native TCP socket API for Android & iOS with client SSL/TLS support. It allows you to create TCP clients and servers sockets, imitating some of Node's net API functionalities (check the available API for more information).
+   * [xuuhaoo/OkSocket](https://github.com/xuuhaoo/OkSocket)<br>
+      >OkSocket is a Java library project designed to solve lightweight Socket communication, in order to enable developers to focus more on business logic, rather than TCP communication principles and some protocols. Make Socket communication more beautiful, suitable for large, medium and small Project, the rapid development of stable, maintainable, reliable Socket connection.
+      >Feature<br>
+      >SocketClient Tcp IPV4 Connect
+      >Socket Standard Protocol
+      >SocketClient Reconnect
+      >SocketClient Heartbeat
+      >Socket Sticky Unpacking
+      >Socket SSL Socket Support
+      >Client Callback In Thread / Main Thread
+      >Socket Client Redirect
+      >SocketServer Support
 
 # 参考的例子
    * [Yusuf-Ziya-Dilek/Socket-Programming](https://github.com/Yusuf-Ziya-Dilek/Socket-Programming)<br>
