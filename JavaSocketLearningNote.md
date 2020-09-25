@@ -32,12 +32,36 @@
          >支持rxjava，提供类似于retrofit的支持
          >提供rxjava和rxjava2两种使用方式
    * [fengjiachun/Jupiter](https://github.com/fengjiachun/Jupiter)<br>
+   
+   
+   * [baidu/Jprotobuf-rpc-socket](https://github.com/baidu/Jprotobuf-rpc-socket)<br>
+      + About
+         >Protobuf RPC是一种基于TCP协议的二进制高性能RPC通信协议实现。它以Protobuf作为基本的数据交换格式，支持完全基于POJO的发布方式，极大的简化了开发复杂性。
+      + Features
+   * [smartboot/smart-socket](https://github.com/smartboot/smart-socket)<br>
+      + About
+         >smart-socket是一款国产开源的Java AIO框架，支持 TCP、UDP、SSL/TLS，追求代码量、性能、稳定性、接口设计各方面都达到极致。 如果smart-socket对您有一丝帮助，请Star一下我们的项目并持续关注； 如果您对smart-socket并不满意，那请多一些耐心，smart-socket一直在努力变得更好。
+      + Features
+   * [OpenHFT/Chronicle-Network](https://github.com/OpenHFT/Chronicle-Network)<br>
+      + About
+         >A High Performance Network ( TCP/IP ) Library
 ## 应用例子
    * [KuaiChuan(仿茄子快传)](https://github.com/mayubao/KuaiChuan)<br>
       >仿茄子快传的一款文件传输应用， 涉及到Socket通信，包括TCP，UDP通信。（喜欢的给一个star, 有帮助的给一个fork， 欢迎Star和Fork ^_^）
    * [FreddyChen/NettyChat](https://github.com/FreddyChen/NettyChat)<br>
       >基于Netty+TCP+Protobuf实现的Android IM库，包含Protobuf序列化、TCP拆包与粘包、长连接握手认证、心跳机制、断线重连机制、消息重发机制、读写超时机制、离线消息、线程池等功能。
-   * 
+   * Socket.IO-client Java - [socketio/socket.io-client-java](<br>
+      + About
+         >This is the Socket.IO v1.x Client Library for Java, which is simply ported from the JavaScript client.
+   * [areong/Socket](https://github.com/areong/Socket)<br>
+      + About
+         >Threaded Java socket server and client
+   * [alan-cxh
+/
+socketProxy](https://github.com/alan-cxh/socketProxy)<br>
+      + About
+         >socket代理实现，满足客户端，服务端
+     
 # 参考的例子
    * [Yusuf-Ziya-Dilek/Socket-Programming](https://github.com/Yusuf-Ziya-Dilek/Socket-Programming)<br>
    * Python - [asafkaganbezgin/simpleSocket](https://github.com/asafkaganbezgin/simpleSocket)<br>
@@ -84,3 +108,7 @@ AndroidSocketClient](https://github.com/mareckis/AndroidSocketClient)<br>
    * [mareckis
 /
 AndroidSocketClient](https://github.com/mareckis/AndroidSocketClient)<br>
+
+   * [DNCBA/SimpleCase](https://github.com/DNCBA/SimpleCase)<br>
+      + About
+         >jdbc,socket,serialize等常用样例
