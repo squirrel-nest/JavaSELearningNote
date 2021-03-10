@@ -11,6 +11,6 @@
            <div align="center">
                <img src="./image.png" alt="drawing" height="200" width="190" >
            </div><br>
-           然后点击：Download the latest Java Tutorials bundle. 将 Tutorials 下载下来，放在指定的位置
+           然后点击：Download the latest Java Tutorials bundle. 将 Tutorials 下载下来，放在指定的位置<br>
       4. 项目的创建
          - 
