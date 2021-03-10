@@ -7,7 +7,7 @@
       3. The Java™ Tutorials 的相关步骤
          - 网址：https://docs.oracle.com/javase/tutorial/index.html - 如果找不到：先进入：JDK 15 Documentation -  [https://docs.oracle.com/en/java/javase/15/](https://docs.oracle.com/en/java/javase/15/)<br> 
          - 下载 tutorial， 找到 Tutorial Resources，
-           ![the numbering of the GPIO pins](image.png)<br>
+           ![Tutorial Resources](image.png)<br>
            <div align="center">
                <img src="./image.png" alt="drawing" height="432" width="90" >
            </div><br>
