@@ -1,6 +1,7 @@
 # JavaSE Learning Note
    * 参考
       + ✨✨✨[The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)
+      + Java Language and Virtual Machine Specifications - [https://docs.oracle.com/javase/specs/index.html](https://docs.oracle.com/javase/specs/index.html)<br>
       + ✨✨✨[The Java® Language Specification - Java SE 14 Edition](https://docs.oracle.com/javase/specs/jls/se14/jls14.pdf) - **Specification(Technical Standard) of Java Language**<br>
          - [Specification Homepage - 包含所有版本的规范](https://docs.oracle.com/javase/specs/index.html)<br>
       + ✨✨✨所有文档 - [JDK 14 Documentation](https://docs.oracle.com/javase/specs/jls/se14/jls14.pdf)<br>
@@ -96,7 +97,10 @@ Version 14 API Specification](https://docs.oracle.com/en/java/javase/14/docs/api
          - 高阶
             * [compilation-Destination-At compile time * How can I define the classpath in Gradle?](https://src-bin.com/ja/q/9ec852)<br>
             * [Spring Boot Gradle Plugin](https://www.baeldung.com/spring-boot-gradle-plugin)<br>
-
+### Java 虚拟机 知识点
+   * 参考
+      + Chapter 2. The Structure of the Java Virtual Machine (版本15)--> [https://docs.oracle.com/javase/specs/jvms/se15/html/jvms-2.html#jvms-2.1](https://docs.oracle.com/javase/specs/jvms/se15/html/jvms-2.html#jvms-2.1)<br>
+      + The Java® Virtual Machine Specification (Java SE 16 Edition) --> [https://docs.oracle.com/javase/specs/jvms/se16/jvms16.pdf](https://docs.oracle.com/javase/specs/jvms/se16/jvms16.pdf)<br>
 ### Java的安全机制
    * 参考
       + [Trail: Security Features in Java SE](https://docs.oracle.com/javase/tutorial/security/index.html)<br>
